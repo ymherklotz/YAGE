@@ -1,0 +1,18 @@
+# general directories to ignore
+bin/
+build/
+CMakeFiles/
+
+# extensions to ignore
+*.o
+*.out
+*.a
+
+# general files to ignore
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# specific directories to ignore
+/debug_build/
+/G*
