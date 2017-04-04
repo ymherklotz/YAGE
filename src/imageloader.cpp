@@ -1,8 +1,11 @@
-#include "image_loader.hpp"
-#include "io_manager.hpp"
-#include "pico_png.hpp"
+#include "imageloader.hpp"
+#include "iomanager.hpp"
+#include "picopng.hpp"
 
 #include <stdexcept>
+
+namespace yage
+{
 
 GlTexture ImageLoader::loadPng(const std::string &file_path)
 {
@@ -38,3 +41,5 @@ GlTexture ImageLoader::loadPng(const std::string &file_path)
 
     return texture;
 }
+    
+} // yage

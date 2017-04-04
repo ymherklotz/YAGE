@@ -5,7 +5,11 @@
 
 #include <string>
 
-enum class WindowFlags
+namespace yage
+{
+
+// window flags that can change it's appearance
+enum WindowFlags : unsigned
 {
     SHOWN=0x1,
     HIDDEN=0x2,
@@ -13,18 +17,26 @@ enum class WindowFlags
     BORDERLESS=0x8,
 };
 
+// window wrapper around SDL_Window pointer
 class Window
 {
+public: // member variables
 private:
+    // window handle
     SDL_Window *window_=nullptr;
-    int width_=1280;
-    int height_=720;
     
-public:
+public: // member functions
     Window();
+    // destroys the window handle
     ~Window();
 
-    void create(const std::string &window_name, int width, int height, WindowFlags flags=WindowFlags::SHOWN);
+    // create the window, initialize the handle and update the width and height
+    void create(const std::string &window_name, int width, int height, unsigned flags=WindowFlags::SHOWN);
+    // swap the buffer
+    void swapBuffer();
+private:
 };
+    
+} // yage
 
 #endif

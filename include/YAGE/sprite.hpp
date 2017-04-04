@@ -1,11 +1,14 @@
 #ifndef SPRITE_HPP
 #define SPRITE_HPP
 
-#include "gl_texture.hpp"
+#include "gltexture.hpp"
 
 #include <GL/glew.h>
 
 #include <string>
+
+namespace yage
+{
 
 class Sprite
 {
@@ -23,5 +26,7 @@ public:
     void init(float x, float y, float width, float height, const std::string &texture_path);
     void draw();
 };
+    
+} // yage
 
 #endif

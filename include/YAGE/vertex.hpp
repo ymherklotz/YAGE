@@ -3,6 +3,9 @@
 
 #include <GL/glew.h>
 
+namespace yage
+{
+
 struct Position
 {
     float x;
@@ -49,5 +52,7 @@ struct Vertex
 	uv.v = v;
     }
 };
+    
+} // yage
 
 #endif

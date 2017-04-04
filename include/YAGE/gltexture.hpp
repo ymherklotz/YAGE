@@ -3,11 +3,16 @@
 
 #include <GL/glew.h>
 
+namespace yage
+{
+
 struct GlTexture
 {
     GLuint id;
     int width;
     int height;
 };
+    
+} // yage
 
 #endif

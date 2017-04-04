@@ -1,10 +1,13 @@
 #ifndef RESOURCE_MANAGER_HPP
 #define RESOURCE_MANAGER_HPP
 
-#include "gl_texture.hpp"
-#include "texture_cache.hpp"
+#include "gltexture.hpp"
+#include "texturecache.hpp"
 
 #include <string>
+
+namespace yage
+{
 
 class ResourceManager
 {
@@ -13,6 +16,7 @@ private:
 public:
     static GlTexture getTexture(const std::string &texture_path);
 };
-
+    
+} // yage
 
 #endif

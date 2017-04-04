@@ -1,8 +1,11 @@
 #include "sprite.hpp"
-#include "resource_manager.hpp"
+#include "resourcemanager.hpp"
 #include "vertex.hpp"
 
 #include <cstddef>
+
+namespace yage
+{
 
 Sprite::Sprite()
 {}
@@ -69,3 +72,5 @@ void Sprite::draw()
     glDisableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);    
 }
+    
+} // yage

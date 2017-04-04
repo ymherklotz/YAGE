@@ -4,11 +4,15 @@
 #include <string>
 #include <vector>
 
+namespace yage
+{
+
 class IoManager
 {
 public:
     static bool readFileToBuffer(const std::string &file_path, std::vector<unsigned char> &buffer);
 };
-
+    
+} // yage
 
 #endif

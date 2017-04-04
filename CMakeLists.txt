@@ -1,18 +1,21 @@
 # zedengine library cmakelists.txt
 
-project(yage)
+project(YAGE)
 
 # add sources to library
-set(YAGE_SOURCES ${PROJECT_SOURCE_DIR}/src/glsl_program.cpp
-  ${PROJECT_SOURCE_DIR}/src/image_loader.cpp
-  ${PROJECT_SOURCE_DIR}/src/io_manager.cpp
-  ${PROJECT_SOURCE_DIR}/src/pico_png.cpp
-  ${PROJECT_SOURCE_DIR}/src/resource_manager.cpp
+set(YAGE_SOURCES
+  ${PROJECT_SOURCE_DIR}/src/camera2d.cpp
+  ${PROJECT_SOURCE_DIR}/src/glslprogram.cpp
+  ${PROJECT_SOURCE_DIR}/src/imageloader.cpp
+  ${PROJECT_SOURCE_DIR}/src/iomanager.cpp
+  ${PROJECT_SOURCE_DIR}/src/picopng.cpp
+  ${PROJECT_SOURCE_DIR}/src/resourcemanager.cpp
   ${PROJECT_SOURCE_DIR}/src/sprite.cpp
-  ${PROJECT_SOURCE_DIR}/src/texture_cache.cpp)
+  ${PROJECT_SOURCE_DIR}/src/texturecache.cpp
+  ${PROJECT_SOURCE_DIR}/src/window.cpp)
 
 # set include directory
-include_directories(${YAGE_INCLUDE_DIRS}/yage/)
+include_directories(${YAGE_INCLUDE_DIRS}/YAGE/)
 
 # make it a static library
 add_library(${PROJECT_NAME} ${YAGE_SOURCES})

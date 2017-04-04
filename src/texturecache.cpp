@@ -1,5 +1,8 @@
-#include "image_loader.hpp"
-#include "texture_cache.hpp"
+#include "imageloader.hpp"
+#include "texturecache.hpp"
+
+namespace yage
+{
 
 TextureCache::TextureCache()
 {}
@@ -20,3 +23,5 @@ GlTexture TextureCache::getTexture(const std::string &texture_path)
 
     return itr->second;
 }
+    
+} // yage

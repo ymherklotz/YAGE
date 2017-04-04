@@ -1,8 +1,11 @@
-#include "glsl_program.hpp"
+#include "glslprogram.hpp"
 
 #include <fstream>
 #include <stdexcept>
 #include <vector>
+
+namespace yage
+{
 
 GlslProgram::GlslProgram()
 {}
@@ -136,3 +139,5 @@ void GlslProgram::unuse()
 	glDisableVertexAttribArray(i);
     glUseProgram(0);
 }
+    
+} // yage

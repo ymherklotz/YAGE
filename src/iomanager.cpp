@@ -1,7 +1,10 @@
-#include "io_manager.hpp"
+#include "iomanager.hpp"
 
 #include <fstream>
 #include <stdexcept>
+
+namespace yage
+{
 
 bool IoManager::readFileToBuffer(const std::string &file_path, std::vector<unsigned char> &buffer)
 {
@@ -25,3 +28,5 @@ bool IoManager::readFileToBuffer(const std::string &file_path, std::vector<unsig
 
     return true;
 }
+    
+} // yage

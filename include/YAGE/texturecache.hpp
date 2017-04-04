@@ -1,9 +1,12 @@
 #ifndef TEXTURE_CACHE_HPP
 #define TEXTURE_CACHE_HPP
 
-#include "gl_texture.hpp"
+#include "gltexture.hpp"
 
 #include <unordered_map>
+
+namespace yage
+{
 
 class TextureCache
 {
@@ -15,6 +18,7 @@ public:
 
     GlTexture getTexture(const std::string &texture_path);
 };
-
+    
+} // yage
 
 #endif

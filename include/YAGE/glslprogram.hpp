@@ -5,6 +5,9 @@
 
 #include <string>
 
+namespace yage
+{
+
 class GlslProgram
 {
 private:
@@ -29,5 +32,6 @@ public:
     void unuse();
 };
 
+} // yage
 
 #endif
