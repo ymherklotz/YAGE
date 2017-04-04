@@ -26,4 +26,10 @@ void Camera2D::update()
     }
 }
 
+void Camera2D::move(const glm::vec2 &direction)
+{
+    position_+=direction;
+    matrix_needs_update_=true;
+}
+
 } // yage

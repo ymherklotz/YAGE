@@ -58,13 +58,24 @@ void Window::create(const std::string &window_name, int width, int height, unsig
     // set vsync on instead of custom fps limiting
     SDL_GL_SetSwapInterval(1);
     // set the clear color to black
-    glClearColor(0.f, 0.f, 0.f, 1.f);
+    glClearColor(0.f, 0.5f, 0.f, 1.f);
+    // set alpha blending
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
 void Window::swapBuffer()
 {
     // swap the window buffer
     SDL_GL_SwapWindow(window_);
+}
+
+void Window::clearBuffer()
+{
+    // set the clear depth
+    glClearDepth(1.f);
+    // clears buffer with clear color
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
     
 } // yage

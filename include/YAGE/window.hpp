@@ -34,6 +34,8 @@ public: // member functions
     void create(const std::string &window_name, int width, int height, unsigned flags=WindowFlags::SHOWN);
     // swap the buffer
     void swapBuffer();
+    // clear buffer
+    void clearBuffer();
 private:
 };
     
