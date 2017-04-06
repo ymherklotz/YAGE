@@ -7,9 +7,9 @@
 namespace yage
 {
 
-GlTexture ImageLoader::loadPng(const std::string &file_path)
+Texture ImageLoader::loadPng(const std::string &file_path)
 {
-    GlTexture texture = {};
+    Texture texture = {};
 
     std::vector<unsigned char> in;
     std::vector<unsigned char> out;

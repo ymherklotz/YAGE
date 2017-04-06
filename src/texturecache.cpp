@@ -10,13 +10,13 @@ TextureCache::TextureCache()
 TextureCache::~TextureCache()
 {}
 
-GlTexture TextureCache::getTexture(const std::string &texture_path)
+Texture TextureCache::getTexture(const std::string &texture_path)
 {
     auto itr = texture_map_.find(texture_path);
 
     if(itr == texture_map_.end())
     {
-	GlTexture new_texture = ImageLoader::loadPng(texture_path);
+	Texture new_texture = ImageLoader::loadPng(texture_path);
 	texture_map_.insert(make_pair(texture_path, new_texture));
 	return new_texture;
     }

@@ -1,7 +1,7 @@
 #ifndef SPRITE_HPP
 #define SPRITE_HPP
 
-#include "gltexture.hpp"
+#include "texture.hpp"
 
 #include <GL/glew.h>
 
@@ -18,7 +18,7 @@ private:
     float width_;
     float height_;
     GLuint vbo_id_ = 0;
-    GlTexture texture_;
+    Texture texture_;
 public:
     Sprite();
     ~Sprite();

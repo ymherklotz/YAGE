@@ -10,6 +10,13 @@ struct Position
 {
     float x;
     float y;
+
+    Position()
+    {}
+    
+    Position(float x_, float y_) :
+	x(x_), y(y_)
+    {}
 };
 
 struct Color
@@ -18,12 +25,26 @@ struct Color
     GLubyte g;
     GLubyte b;
     GLubyte a;
+
+    Color()
+    {}
+
+    Color(GLubyte r_, GLubyte g_, GLubyte b_, GLubyte a_) :
+	r(r_), g(g_), b(b_), a(a_)
+    {}
 };
 
 struct UV
 {
     float u;
     float v;
+
+    UV()
+    {}
+
+    UV(float u_, float v_) :
+	u(u_), v(v_)
+    {}
 };
 
 struct Vertex
@@ -31,6 +52,13 @@ struct Vertex
     Position position;
     Color color;
     UV uv;
+
+    Vertex()
+    {}
+
+    Vertex(const Position &position_, const Color &color_, const UV &uv_) :
+	position(position_), color(color_), uv(uv_)
+    {}
 
     void setPosition(float x, float y)
     {

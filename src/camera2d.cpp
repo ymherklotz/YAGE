@@ -1,5 +1,7 @@
 #include "camera2d.hpp"
 
+#include <GL/glew.h>
+
 namespace yage
 {
 
@@ -12,7 +14,7 @@ Camera2D::Camera2D(int screen_width, int screen_height) :
 Camera2D::~Camera2D()
 {}
 
-void Camera2D::update()
+void Camera2D::update(GlslProgram &program)
 {
     if(matrix_needs_update_)
     {
@@ -24,6 +26,9 @@ void Camera2D::update()
 
 	matrix_needs_update_=false;
     }
+
+    GLint matrix_location = program.getUniformLocation("P");
+    glUniformMatrix4fv(matrix_location, 1, GL_FALSE, &(camera_matrix_[0][0]));    
 }
 
 void Camera2D::move(const glm::vec2 &direction)

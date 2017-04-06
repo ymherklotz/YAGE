@@ -6,7 +6,7 @@
 namespace yage
 {
 
-struct GlTexture
+struct Texture
 {
     GLuint id;
     int width;

@@ -1,6 +1,8 @@
 #ifndef CAMERA_2D_HPP
 #define CAMERA_2D_HPP
 
+#include "glslprogram.hpp"
+
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
@@ -23,14 +25,9 @@ public:
     virtual ~Camera2D();
 
     // update camera location
-    void update();
+    void update(GlslProgram &program);
     // camera movement
     void move(const glm::vec2 &direction);
-
-    // getters
-    float getScale() { return scale_; }
-    glm::vec2 getPosition() { return position_; }
-    glm::mat4 getCameraMatrix() { return camera_matrix_; }
 };
 
 } // yage
