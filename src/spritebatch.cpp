@@ -18,8 +18,8 @@ Glyph::Glyph(GLuint texture, float depth, const Vertex &top_left, const Vertex &
 {}
 
 RenderBatch::RenderBatch(GLint offset, GLsizei num_vertices, GLuint texture) :
-    offset_(offset),
     num_vertices_(num_vertices),
+    offset_(offset),    
     texture_(texture)
 {}
 
@@ -129,7 +129,7 @@ void SpriteBatch::createRenderBatches()
     std::vector<Vertex> vertices;
     if(glyph_ptrs_.empty())
 	return;
-
+    
     render_batches_.reserve(glyph_ptrs_.size()*NUM_VERTICES);
 
     for(int i=0; i<(int)glyph_ptrs_.size(); ++i)
@@ -137,7 +137,7 @@ void SpriteBatch::createRenderBatches()
 	if(i==0 || (i>0 && (glyph_ptrs_[i]->texture()!=glyph_ptrs_[i-1]->texture())))
 	    render_batches_.emplace_back(i*NUM_VERTICES, NUM_VERTICES, glyph_ptrs_[i]->texture());
 	else
-	    render_batches_.back().offset_+=NUM_VERTICES;
+	    render_batches_.back().num_vertices_+=NUM_VERTICES;
 
 	vertices.push_back(glyph_ptrs_[i]->bottom_left());
 	vertices.push_back(glyph_ptrs_[i]->top_left());

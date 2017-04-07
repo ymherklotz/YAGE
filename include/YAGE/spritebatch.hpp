@@ -11,6 +11,8 @@
 namespace yage
 {
 
+class SpriteBatch;
+
 class Glyph
 {
     // member variables
@@ -36,11 +38,11 @@ public:
 
 class RenderBatch
 {
+    friend SpriteBatch;
     // member variables
-public:
-    GLint offset_;
 private:
-    GLsizei num_vertices_;
+    GLsizei num_vertices_;    
+    GLint offset_;
     GLuint texture_;
 
     // member functions
