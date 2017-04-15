@@ -3,15 +3,37 @@
 
 #include <glm/glm.hpp>
 
+namespace yage
+{
+
 class Body
 {
-private:
-    glm::vec2 centerOfMass_;
+protected:
+	// current velocity of the object
+	glm::vec2 velocity_;
+
+	// center of mass of the object
+    glm::vec2 center_of_mass_;
+
+	// mass of the object
     double mass_;
+
+	// boolean that defines if gravity can act on the object
+	bool gravity_;
     
 public:
-    virtual ~Body();
-    
+	virtual ~Body() {}
+
+	// apply force to the object and update the velocity
+	virtual void applyForce(const glm::vec2 &force)=0;
+protected:
+	// protected constructor to initialize member variables
+	Body(const glm::vec2 &center_of_mass, double mass, const glm::vec2 &velocity, bool gravity) :
+		velocity_(velocity), center_of_mass_(center_of_mass),
+		mass_(mass), gravity_(gravity)
+	{}
 };
+
+} // yage
 
 #endif

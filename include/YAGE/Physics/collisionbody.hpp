@@ -3,6 +3,11 @@
 
 #include "Physics/body.hpp"
 
+namespace yage
+{
+
+// a collision body will be a body that is static and not affected by gravity,
+// with infinite mass
 class CollisionBody : public Body
 {
 public:
@@ -10,5 +15,6 @@ public:
     virtual ~CollisionBody();
 };
 
+} // yage
 
 #endif

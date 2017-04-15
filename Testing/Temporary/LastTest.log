@@ -1,0 +1,18 @@
+Start testing: Apr 15 14:01 BST
+----------------------------------------------------------
+1/1 Testing: RigidBodyTest
+1/1 Test: RigidBodyTest
+Command: "/home/yannherklotz/Github/Arider/YAGE/bin/rigid_body_test"
+Directory: /home/yannherklotz/Github/Arider/YAGE
+"RigidBodyTest" start time: Apr 15 14:01 BST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"RigidBodyTest" end time: Apr 15 14:01 BST
+"RigidBodyTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 15 14:01 BST
