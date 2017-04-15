@@ -1,3 +1,0 @@
-RigidBodyTest 0 0
----
-RigidBodyTest

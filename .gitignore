@@ -2,15 +2,16 @@
 bin/
 build/
 CMakeFiles/
+Testing/
 
 # extensions to ignore
 *.o
 *.out
 *.a
+*.cmake
 
 # general files to ignore
 CMakeCache.txt
-cmake_install.cmake
 Makefile
 
 # specific directories to ignore
