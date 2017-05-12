@@ -11,6 +11,7 @@ class RigidBody : public Body
 public:
 	RigidBody(const glm::vec2 &center_of_mass,
 	          double mass,
+	          const glm::vec2 &force=glm::vec2(0.f, 0.f),
 	          const glm::vec2 &velocity=glm::vec2(0.f, 0.f),
 	          bool gravity=true);
 

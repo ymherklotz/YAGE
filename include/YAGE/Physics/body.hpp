@@ -9,6 +9,8 @@ namespace yage
 class Body
 {
 protected:
+	// current force acting on object
+	glm::vec2 force_;
 	// current velocity of the object
 	glm::vec2 velocity_;
 
@@ -28,8 +30,8 @@ public:
 	virtual void applyForce(const glm::vec2 &force)=0;
 protected:
 	// protected constructor to initialize member variables
-	Body(const glm::vec2 &center_of_mass, double mass, const glm::vec2 &velocity, bool gravity) :
-		velocity_(velocity), center_of_mass_(center_of_mass),
+	Body(const glm::vec2 &center_of_mass, double mass, const glm::vec2 &force, const glm::vec2 &velocity, bool gravity) :
+		force_(force), velocity_(velocity), center_of_mass_(center_of_mass),
 		mass_(mass), gravity_(gravity)
 	{}
 };
