@@ -1,5 +1,5 @@
-#ifndef YAGE_BODDY_HPP
-#define YAGE_BODDY_HPP
+#ifndef YAGE_BODY_HPP
+#define YAGE_BODY_HPP
 
 #include <glm/glm.hpp>
 
@@ -11,6 +11,10 @@ class Body
 protected:
 	// current force acting on object
 	glm::vec2 force_;
+
+	// current acceleration
+	glm::vec2 acceleration_=glm::vec2(0.f, 0.f);
+	
 	// current velocity of the object
 	glm::vec2 velocity_;
 
@@ -24,16 +28,17 @@ protected:
 	bool gravity_;
     
 public:
-	virtual ~Body() {}
+	virtual ~Body();
 
 	// apply force to the object and update the velocity
 	virtual void applyForce(const glm::vec2 &force)=0;
+	virtual void update()=0;
+
+	float xPosition() const;
+	float yPosition() const;
 protected:
 	// protected constructor to initialize member variables
-	Body(const glm::vec2 &center_of_mass, double mass, const glm::vec2 &force, const glm::vec2 &velocity, bool gravity) :
-		force_(force), velocity_(velocity), center_of_mass_(center_of_mass),
-		mass_(mass), gravity_(gravity)
-	{}
+	Body(const glm::vec2 &center_of_mass, double mass, const glm::vec2 &force, const glm::vec2 &velocity, bool gravity);
 };
 
 } // yage

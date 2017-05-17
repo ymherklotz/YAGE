@@ -1,7 +1,7 @@
 #ifndef YAGE_RIGID_BODY_HPP
 #define YAGE_RIGID_BODY_HPP
 
-#include "Physics/body.hpp"
+#include "body.hpp"
 
 namespace yage
 {
@@ -17,6 +17,7 @@ public:
 
 	// apply a force to the rigid body
 	virtual void applyForce(const glm::vec2 &force);
+	virtual void update();
 };
 
 } // yage
