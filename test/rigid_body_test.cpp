@@ -11,9 +11,9 @@ int main(int, char**)
 		std::cout<<"position: "<<body.xPosition()<<", "<<body.yPosition()<<"\n";
 	}
 
-	double ideal_position=0.5*9.81*3*3;
+	double ideal_position=0.5*-9.81*3*3;
 
-	if(body.yPosition()>ideal_position*0.95 && body.yPosition()<ideal_position*1.05)
+	if(body.yPosition()<ideal_position*0.95 && body.yPosition()>ideal_position*1.05)
 		return 0;
 	return 1;
 }

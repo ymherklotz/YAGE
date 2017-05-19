@@ -70,4 +70,4 @@ target_link_libraries(double_size
 
 enable_testing()
 add_test(RigidBodyTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/rigid_body_test)
-add_test(RigidBodyTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/double_size)
+add_test(DoubleSize ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/double_size)
