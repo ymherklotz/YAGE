@@ -1,4 +1,4 @@
-#include "Math/vector2d.hpp"
+#include "vector2d.hpp"
 
 namespace yage
 {

@@ -1,6 +1,7 @@
 #ifndef YAGE_MATH_VECTOR_HPP
 #define YAGE_MATH_VECTOR_HPP
 
+#include <ostream>
 #include <vector>
 
 namespace yage
@@ -13,7 +14,7 @@ protected:
 
 public:
 	Vector()=delete;
-	virtual ~Vector();
+	virtual ~Vector() {}
 
 	inline long double &operator[](std::size_t index)
 	{
@@ -23,6 +24,12 @@ public:
 	inline const long double &operator[](std::size_t index) const
 	{
 		return members_[index];
+	}
+
+	inline Vector &operator=(const Vector &other)
+	{
+		this->members_=other.members_;
+		return *this;
 	}
 	
 	inline Vector &operator+()
@@ -124,8 +131,19 @@ public:
 		return Vector(mem);
 	}
 
+	friend inline std::ostream &operator<<(std::ostream &os, const Vector &object)
+	{
+		os<<"(";
+		for(std::size_t i=0; i<object.members_.size()-1; ++i)
+		{
+			os<<object.members_[i]<<", ";
+		}
+		os<<object.members_[object.members_.size()-1]<<")";
+		return os;
+	}
+
 protected:
-	Vector(const std::vector<long double> &members);
+	Vector(const std::vector<long double> &members) : members_(members) {}
 };
 
 } // yage

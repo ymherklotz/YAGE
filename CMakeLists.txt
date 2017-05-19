@@ -16,6 +16,7 @@ set(CMAKE_CXX_STANDARD 14)
 # set the test sources
 set(YAGE_SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
 set(YAGE_TEST_DIR ${PROJECT_SOURCE_DIR}/test)
+set(YAGE_LIBRARIES yage)
 
 # add include directory
 set(YAGE_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include/YAGE)
@@ -48,7 +49,9 @@ find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 
 # set include directory
-include_directories(${YAGE_INCLUDE_DIR})
+include_directories(${YAGE_INCLUDE_DIR}
+  ${YAGE_INCLUDE_DIR}/Physics/
+  ${YAGE_INCLUDE_DIR}/Math/)
 
 # make it a static library
 add_library(${PROJECT_NAME} ${YAGE_SOURCES})
@@ -68,6 +71,14 @@ target_link_libraries(double_size
   ${OPENGL_LIBRARIES}
   ${GLEW_LIBRARIES})
 
+add_executable(vector2d_test
+  ${YAGE_TEST_DIR}/vector2d_test.cpp)
+target_link_libraries(vector2d_test
+  ${YAGE_LIBRARIES}
+  ${OPENGL_LIBRARIES}
+  ${GLEW_LIBRARIES})
+
 enable_testing()
 add_test(RigidBodyTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/rigid_body_test)
 add_test(DoubleSize ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/double_size)
+add_test(Vector2DTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/double_size)
