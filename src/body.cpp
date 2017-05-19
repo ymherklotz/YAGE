@@ -3,22 +3,23 @@
 namespace yage
 {
 
-Body::~Body()
-{}
+const double Body::GRAVITY=-9.81;
 
-Body::Body(const glm::vec2 &center_of_mass, double mass, const glm::vec2 &force, const glm::vec2 &velocity, bool gravity) :
-	force_(force), velocity_(velocity), center_of_mass_(center_of_mass),
-	mass_(mass), gravity_(gravity)
+Body::~Body()
 {}
 
 float Body::xPosition() const
 {
-	return center_of_mass_.x;
+	return position_.x;
 }
 
 float Body::yPosition() const
 {
-	return center_of_mass_.y;
+	return position_.y;
 }
+
+Body::Body(const glm::vec2 &position, double mass, const glm::vec2 &velocity, bool gravity) :
+	position_(position), mass_(mass), velocity_(velocity), gravity_(gravity)
+{}
 
 } // yage

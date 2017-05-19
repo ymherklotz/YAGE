@@ -1,10 +1,10 @@
-#include "Physics/rigidbody.hpp"
+#include "Physics/particlebody.hpp"
 
 #include <iostream>
 
 int main(int, char**)
 {
-	yage::RigidBody body(glm::vec2(0.f, 0.f), 1, glm::vec2(0.f, 9.81f));
+	yage::ParticleBody body;
 	for(int i=0; i<60*3; ++i)
 	{
 		body.update();
