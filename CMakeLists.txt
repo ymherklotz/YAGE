@@ -1,12 +1,12 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.0)
 
-# zedengine library cmakelists.txt
+# yage library cmakelists.txt
 project(yage)
 
 # set version numbers
 set(YAGE_MAJOR_VERSION 0)
 set(YAGE_MINOR_VERSION 1)
-set(YAGE_PATCH_VERSION 1)
+set(YAGE_PATCH_VERSION 2)
 set(YAGE_VERSION
   ${YAGE_MAJOR_VERSION}.${YAGE_MINOR_VERSION}${YAGE_PATCH_VERSION})
 
