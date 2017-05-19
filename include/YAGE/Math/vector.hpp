@@ -26,7 +26,7 @@ public:
 		return members_[index];
 	}
 
-	inline Vector &operator=(const Vector &other)
+	inline Vector operator=(Vector other)
 	{
 		this->members_=other.members_;
 		return *this;
@@ -73,7 +73,7 @@ public:
 		return *this;
 	}
 
-	inline Vector operator+(const Vector &other) const
+	inline Vector operator+(Vector other) const
 	{
 		Vector v(members_);
 		return v+=other;
