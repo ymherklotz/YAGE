@@ -40,7 +40,7 @@ set(YAGE_SOURCES
   ${PROJECT_SOURCE_DIR}/src/spritebatch.cpp
   ${PROJECT_SOURCE_DIR}/src/sprite.cpp
   ${PROJECT_SOURCE_DIR}/src/texturecache.cpp
-  ${PROJECT_SOURCE_DIR}/src/vector2d.cpp
+#  ${PROJECT_SOURCE_DIR}/src/vector2d.cpp
   ${PROJECT_SOURCE_DIR}/src/window.cpp)
 
 
@@ -64,21 +64,14 @@ target_link_libraries(rigid_body_test
   ${OPENGL_LIBRARIES}
   ${GLEW_LIBRARIES})
 
-add_executable(double_size
-  ${YAGE_TEST_DIR}/double_size.cpp)
-target_link_libraries(double_size
+add_executable(matrix_test
+  ${YAGE_TEST_DIR}/matrix_test.cpp)
+target_link_libraries(matrix_test
   ${YAGE_LIBRARIES}
   ${OPENGL_LIBRARIES}
   ${GLEW_LIBRARIES})
 
-add_executable(vector2d_test
-  ${YAGE_TEST_DIR}/vector2d_test.cpp)
-target_link_libraries(vector2d_test
-  ${YAGE_LIBRARIES}
-  ${OPENGL_LIBRARIES}
-  ${GLEW_LIBRARIES})
-
+# enable tests
 enable_testing()
 add_test(RigidBodyTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/rigid_body_test)
-add_test(DoubleSize ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/double_size)
-add_test(Vector2DTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/double_size)
+add_test(MatrixTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/matrix_test)
