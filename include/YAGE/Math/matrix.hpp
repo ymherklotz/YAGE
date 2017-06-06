@@ -9,9 +9,11 @@ namespace yage
 
 template<int Rows, int Cols, class Type> class Matrix;
 
+namespace detail
+{
+
 template<int Rows, int Cols, class Type> class Row
 {
-	friend class Matrix<Rows, Cols, Type>;
 private:
 	std::shared_ptr<Matrix<Rows, Cols, Type>> parent_;
 	int index_;
@@ -27,8 +29,11 @@ public:
 	}
 };
 
+} // detail
+
 template<int Rows=4, int Cols=4, class Type=double> class Matrix
 {
+	friend class detail::Row<Rows, Cols, Type>;
 private:
 	std::vector<Type> data_;
 
@@ -36,9 +41,9 @@ public:
 	Matrix<Rows, Cols, Type>() : data_(Rows*Cols) {}
 	Matrix<Rows, Cols, Type>(int rows, int cols) : data_(rows*cols) {}
 
-	Row<Rows, Cols, Type> operator[](int row)
+	detail::Row<Rows, Cols, Type> operator[](int row)
 	{
-		return Row<Rows, Cols, Type>(std::make_shared<Matrix<Rows, Cols, Type>>(*this), row);
+		return detail::Row<Rows, Cols, Type>(std::make_shared<Matrix<Rows, Cols, Type>>(*this), row);
 	}
 };
 
