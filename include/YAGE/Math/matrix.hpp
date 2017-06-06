@@ -1,29 +1,44 @@
 #ifndef YAGE_MATH_MATRIX_HPP
 #define YAGE_MATH_MATRIX_HPP
 
+#include <memory>
+#include <vector>
+
 namespace yage
 {
 
-template<typename Type, int Cols, int Rows> class Matrix
+template<int Rows, int Cols, class Type> class Matrix;
+
+template<int Rows, int Cols, class Type> class Row
 {
+	friend class Matrix<Rows, Cols, Type>;
 private:
-	Type x[Cols][Rows];
+	std::shared_ptr<Matrix<Rows, Cols, Type>> parent_;
+	int index_;
 
 public:
-	Matrix()
-	{
-		for(int i=0; i<Cols; ++i)
-		{
-			for(int j=0; j<Rows; ++j)
-			{
-				x[i][j]=5;
-			}
-		}
-	}
+	Row<Rows, Cols, Type>(std::shared_ptr<Matrix<Rows, Cols, Type>> parent, int index) :
+		parent_(parent), index_(index)
+	{}
 
-	Type get(int i, int j) const
+	Type &operator[](int col)
 	{
-		return x[i][j];
+		return parent_->data_[index_*Cols+col];
+	}
+};
+
+template<int Rows=4, int Cols=4, class Type=double> class Matrix
+{
+private:
+	std::vector<Type> data_;
+
+public:
+	Matrix<Rows, Cols, Type>() : data_(Rows*Cols) {}
+	Matrix<Rows, Cols, Type>(int rows, int cols) : data_(rows*cols) {}
+
+	Row<Rows, Cols, Type> operator[](int row)
+	{
+		return Row<Rows, Cols, Type>(std::make_shared<Matrix<Rows, Cols, Type>>(*this), row);
 	}
 };
 

@@ -4,10 +4,10 @@
 
 int main()
 {
-	yage::Matrix<double, 10, 10> matrix;
+	yage::Matrix<4, 4, int> matrix;
 
-	int x=matrix.get(5, 2);
-
+	int x=matrix[2][2];
+	
 	std::cout<<"at: "<<x<<'\n';
 	return 0;
 }
