@@ -47,6 +47,16 @@ protected:
 public:
 	Matrix<Rows, Cols, Type>() : data_(Rows*Cols) {}
 
+	int rowSize()
+	{
+		return Rows;
+	}
+
+	int colSize()
+	{
+		return Cols;
+	}
+
 	detail::Row<Rows, Cols, Type> operator[](int row)
 	{
 		return detail::Row<Rows, Cols, Type>(this, row);
@@ -127,6 +137,10 @@ template<int Rows=2, class Type=double> class Vector : public Matrix<Rows, 1, Ty
 {
 public:
 	Vector<Rows, Type>() : Matrix<Rows, 1, Type>() {}
+	explicit Vector<Rows, Type>(const Matrix<Rows, 1, Type> &other)
+	{
+		this->data_=other.data_;
+	}
 
 	Type& operator[](int col)
 	{
@@ -172,6 +186,21 @@ typedef Vector2<double> Vector2d;
 namespace matrix
 {
 
+template<int M, int N, class T> Matrix<N, M, T> transpose(const Matrix<M, N, T> &m)
+{
+	static_assert(M!=1, "Called wrong transpose");
+}
+
+template<int N, class T> Vector<N, T> transpose(const Matrix<1, N, T> &m)
+{
+	
+}
+
+template<int R, class T> T dot(const Vector<R, T> &v1, const Vector<R, T> &v2)
+{
+	
+}
+
 template<int M, int N, int P, int Q, class T>
 Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
 {
@@ -182,7 +211,14 @@ Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
 	
 	Matrix<M, Q, T> res;
 
-	
+	for(int i=0; i<M; ++i)
+	{
+		for(int j=0; j<Q; ++j)
+		{
+			int sum=0;
+			
+		}
+	}
 
 	return res;
 }
