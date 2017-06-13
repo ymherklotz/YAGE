@@ -4,12 +4,15 @@
 #include <algorithm>
 #include <exception>
 #include <iostream>
+#include <sstream>
+#include <string>
 #include <vector>
 
 namespace yage
 {
 
 template<int Rows, int Cols, class Type> class Matrix;
+template<int Rows, class Type> class Vector;
 
 namespace detail
 {
@@ -47,19 +50,67 @@ protected:
 public:
 	Matrix<Rows, Cols, Type>() : data_(Rows*Cols) {}
 
-	int rowSize()
+	int rowSize() const
 	{
 		return Rows;
 	}
 
-	int colSize()
+	int colSize() const
 	{
 		return Cols;
+	}
+
+	Matrix<1, Cols, Type> getRow(int row) const
+	{
+		Matrix<1, Cols, Type> rowMatrix;
+		for(int i=0; i<Cols; ++i)
+		{
+			rowMatrix[0][i]=data_[row][i];
+		}
+		return rowMatrix;
+	}
+
+	Matrix<Rows, 1, Type> getCol(int col) const
+	{
+		Matrix<Rows, 1, Type> colMatrix;
+		for(int i=0; i<Rows; ++i)
+		{
+			colMatrix[i][0]=data_[i][col];
+		}
+		return colMatrix;
+	}
+
+	virtual std::string toString() const
+	{
+		std::stringstream ss;
+		ss<<'[';
+		for(int i=0; i<Rows-1; ++i)
+		{
+			ss<<'[';
+			for(int j=0; j<Cols-1; ++j)
+			{
+				ss<<data_[i*Cols+j]<<' ';
+			}
+			ss<<data_[(Rows-1)*Cols+Cols-1]<<"],";
+		}
+		ss<<'[';
+		for(int j=0; j<Cols-1; ++j)
+		{
+			ss<<data_[(Rows-1)*Cols+j]<<' ';
+		}
+		ss<<data_[(Rows-1)*Cols+Cols-1]<<"]]";
+		return ss.str();
 	}
 
 	detail::Row<Rows, Cols, Type> operator[](int row)
 	{
 		return detail::Row<Rows, Cols, Type>(this, row);
+	}
+
+	detail::Row<Rows, Cols, Type> operator[](int row) const
+	{
+		// TODO got to fix this
+		return detail::Row<Rows, Cols, Type>((Matrix<Rows, Cols, Type>*)this, row);
 	}
 
 	Matrix<Rows, Cols, Type>& operator=(const Matrix<Rows, Cols, Type> &other)
@@ -111,25 +162,7 @@ public:
 
 	friend std::ostream& operator<<(std::ostream &os, const Matrix<Rows, Cols, Type> &mat)
 	{
-		os<<'[';
-		for(std::size_t i=0; i<mat.data_.size()-1; ++i)
-		{
-			if(i%Cols == 0 && i!=0)
-			{
-				os<<"]\n[";
-			}
-			
-			if((i+1)%Cols == 0)
-			{
-				os<<mat.data_[i];
-			}
-			else
-			{
-				os<<mat.data_[i]<<" ";
-			}
-		}
-		os<<mat.data_[mat.data_.size()-1]<<"]";
-		return os;
+		return os<<mat.toString();
 	}
 };
 
@@ -137,10 +170,7 @@ template<int Rows=2, class Type=double> class Vector : public Matrix<Rows, 1, Ty
 {
 public:
 	Vector<Rows, Type>() : Matrix<Rows, 1, Type>() {}
-	explicit Vector<Rows, Type>(const Matrix<Rows, 1, Type> &other)
-	{
-		this->data_=other.data_;
-	}
+	explicit Vector<Rows, Type>(const Matrix<Rows, 1, Type> &other) : Matrix<Rows, 1, Type>(other) {}
 
 	Type& operator[](int col)
 	{
@@ -188,12 +218,15 @@ namespace matrix
 
 template<int M, int N, class T> Matrix<N, M, T> transpose(const Matrix<M, N, T> &m)
 {
-	static_assert(M!=1, "Called wrong transpose");
-}
-
-template<int N, class T> Vector<N, T> transpose(const Matrix<1, N, T> &m)
-{
-	
+	Matrix<N, M, T> trans;
+	for(int i=0; i<M; ++i)
+	{
+		for(int j=0; j<N; ++j)
+		{
+			trans[j][i]=m[i][j];
+		}
+	}
+	return trans;
 }
 
 template<int R, class T> T dot(const Vector<R, T> &v1, const Vector<R, T> &v2)
@@ -223,7 +256,7 @@ Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
 	return res;
 }
 
-} // vector
+} // matrix
 
 } // yage
 
