@@ -49,7 +49,7 @@ protected:
 
 public:
 	Matrix<Rows, Cols, Type>() : data_(Rows*Cols) {}
-
+	
 	int rowSize() const
 	{
 		return Rows;
@@ -78,6 +78,16 @@ public:
 			colMatrix[i][0]=data_[i][col];
 		}
 		return colMatrix;
+	}
+
+	typename std::vector<Type>::iterator begin()
+	{
+		return data_.begin();
+	}
+
+	typename std::vector<Type>::iterator end()
+	{
+		return data_.end();
 	}
 
 	virtual std::string toString() const
@@ -134,13 +144,6 @@ public:
 		return *this;
 	}
 
-	friend Matrix<Rows, Cols, Type> operator+(Matrix<Rows, Cols, Type> lhs,
-	                                          const Matrix<Rows, Cols, Type> &rhs)
-	{
-		lhs+=rhs;
-		return lhs;
-	}
-
 	Matrix<Rows, Cols, Type>& operator-=(const Matrix<Rows, Cols, Type> &rhs)
 	{
 		std::vector<Type> out;
@@ -153,18 +156,48 @@ public:
 		return *this;
 	}
 
-	friend Matrix<Rows, Cols, Type> operator-(Matrix<Rows, Cols, Type> lhs,
-	                                          const Matrix<Rows, Cols, Type> &rhs)
-	{
-		lhs-=rhs;
-		return lhs;
-	}
 
-	friend std::ostream& operator<<(std::ostream &os, const Matrix<Rows, Cols, Type> &mat)
-	{
-		return os<<mat.toString();
-	}
 };
+
+template<int M, int N, class T>
+Matrix<M, N, T> operator+(Matrix<M, N, T> lhs, const Matrix<M, N, T> &rhs)
+{
+	lhs+=rhs;
+	return lhs;
+}
+
+template<int M, int N, class T>
+Matrix<M, N, T> operator-(Matrix<M, N, T> lhs, const Matrix<M, N, T> &rhs)
+{
+	lhs-=rhs;
+	return lhs;
+}
+
+template<int M, int N, class T>
+Matrix<M, N, T> operator+(Matrix<M, N, T> lhs, const T &rhs)
+{
+	for(auto &data : lhs)
+	{
+		data+=rhs;
+	}
+	return lhs;
+}
+
+template<int M, int N, class T>
+Matrix<M, N, T> operator+(const T &lhs, Matrix<M, N, T> rhs)
+{
+	for(auto &data : rhs)
+	{
+		data+=lhs;
+	}
+	return rhs;
+}
+
+template<int M, int N, class T>
+std::ostream& operator<<(std::ostream &os, const Matrix<M, N, T> &mat)
+{
+	return os<<mat.toString();
+}
 
 template<int Rows=2, class Type=double> class Vector : public Matrix<Rows, 1, Type>
 {
@@ -231,7 +264,12 @@ template<int M, int N, class T> Matrix<N, M, T> transpose(const Matrix<M, N, T> 
 
 template<int R, class T> T dot(const Vector<R, T> &v1, const Vector<R, T> &v2)
 {
-	
+	T sum=0;
+	for(int i=0; i<R; ++i)
+	{
+		sum += v1[i]*v2[i];
+	}
+	return sum;
 }
 
 template<int M, int N, int P, int Q, class T>
@@ -248,8 +286,7 @@ Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
 	{
 		for(int j=0; j<Q; ++j)
 		{
-			int sum=0;
-			
+			// int sum=0;
 		}
 	}
 
