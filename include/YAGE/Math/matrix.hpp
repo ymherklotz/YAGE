@@ -155,8 +155,6 @@ public:
 		data_=std::move(out);
 		return *this;
 	}
-
-
 };
 
 template<int M, int N, class T>
@@ -189,6 +187,26 @@ Matrix<M, N, T> operator+(const T &lhs, Matrix<M, N, T> rhs)
 	for(auto &data : rhs)
 	{
 		data+=lhs;
+	}
+	return rhs;
+}
+
+template<int M, int N, class T>
+Matrix<M, N, T> operator-(Matrix<M, N, T> lhs, const T &rhs)
+{
+	for(auto &data : lhs)
+	{
+		data-=rhs;
+	}
+	return lhs;
+}
+
+template<int M, int N, class T>
+Matrix<M, N, T> operator-(const T &lhs, Matrix<M, N, T> rhs)
+{
+	for(auto &data : rhs)
+	{
+		data=lhs-data;
 	}
 	return rhs;
 }
