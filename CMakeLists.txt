@@ -64,21 +64,21 @@ include_directories(${YAGE_INCLUDE_DIR}
 add_library(${PROJECT_NAME} ${YAGE_SOURCES})
 
 # add tests
-add_executable(rigid_body_test
-  ${YAGE_TEST_DIR}/rigid_body_test.cpp)
-target_link_libraries(rigid_body_test
+add_executable(rigidbodytest
+  ${YAGE_TEST_DIR}/rigidbodytest.cpp)
+target_link_libraries(rigidbodytest
   ${YAGE_LIBRARIES}
   ${OPENGL_LIBRARIES}
   ${GLEW_LIBRARIES})
 
-add_executable(matrix_test
-  ${YAGE_TEST_DIR}/matrix_test.cpp)
-target_link_libraries(matrix_test
+add_executable(matrixtest
+  ${YAGE_TEST_DIR}/matrixtest.cpp)
+target_link_libraries(matrixtest
   ${YAGE_LIBRARIES}
   ${OPENGL_LIBRARIES}
   ${GLEW_LIBRARIES})
 
 # enable tests
 enable_testing()
-add_test(RigidBodyTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/rigid_body_test)
-add_test(MatrixTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/matrix_test)
+add_test(RigidBodyTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/rigidbodytest)
+add_test(MatrixTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/matrixtest)
