@@ -8,7 +8,16 @@
 
 #include "Math/math.hpp"
 
+#include "testbench.hpp"
+
 int main()
 {
+	TestBench tb;
+	tb.startTest("Hello");
+	tb.endTest(true);
+	tb.startTest("Bye");
+	tb.endTest(true);
+
+	tb.printResults();
 	return 0;
 }

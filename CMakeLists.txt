@@ -47,9 +47,7 @@ set(YAGE_SOURCES
   ${PROJECT_SOURCE_DIR}/src/spritebatch.cpp
   ${PROJECT_SOURCE_DIR}/src/sprite.cpp
   ${PROJECT_SOURCE_DIR}/src/texturecache.cpp
-  #  ${PROJECT_SOURCE_DIR}/src/vector2d.cpp
   ${PROJECT_SOURCE_DIR}/src/window.cpp)
-
 
 # find libraries
 find_package(OpenGL REQUIRED)
@@ -72,7 +70,8 @@ target_link_libraries(rigidbodytest
   ${GLEW_LIBRARIES})
 
 add_executable(matrixtest
-  ${YAGE_TEST_DIR}/matrixtest.cpp)
+  ${YAGE_TEST_DIR}/matrixtest.cpp
+  ${YAGE_TEST_DIR}/testbench.cpp)
 target_link_libraries(matrixtest
   ${YAGE_LIBRARIES}
   ${OPENGL_LIBRARIES}
