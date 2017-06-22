@@ -1,3 +1,11 @@
+/*
+ * created 22-06-17 by Yann Herklotz
+ *
+ * Matrix class that contains definitions for matrices, vectors and operations
+ * on vectors and matrices.
+ *
+ */
+
 #ifndef YAGE_MATH_MATRIX_HPP
 #define YAGE_MATH_MATRIX_HPP
 
@@ -12,11 +20,15 @@ namespace yage
 {
 
 template<int Rows, int Cols, class Type> class Matrix;
-template<int Rows, class Type> class Vector;
 
+// includes implementation details that should not be accessible to the user
 namespace detail
 {
 
+// Row class
+//
+// Used to implement the double square bracket operator and be able
+// to return the value by reference of the array.
 template<int Rows, int Cols, class Type> class Row
 {
 private:
@@ -30,6 +42,7 @@ public:
 
 	Type& operator[](int col)
 	{
+		// the index is the y-position of the element in the matrix
 		return parent_->data_[index_*Cols+col];
 	}
 
@@ -41,8 +54,13 @@ public:
 
 } // detail
 
+// Matrix class
+//
+// Implements the base Matrix class that is inherited by other classes to make them more
+// specific.
 template<int Rows=4, int Cols=4, class Type=double> class Matrix
 {
+	// friended with the row class so that it can access protected member data
 	friend class detail::Row<Rows, Cols, Type>;
 protected:
 	std::vector<Type> data_;
@@ -60,6 +78,7 @@ public:
 		return Cols;
 	}
 
+	// returns the row in a row matrix
 	Matrix<1, Cols, Type> getRow(int row) const
 	{
 		Matrix<1, Cols, Type> rowMatrix;
@@ -70,6 +89,7 @@ public:
 		return rowMatrix;
 	}
 
+	// returns the column in a column matrix
 	Matrix<Rows, 1, Type> getCol(int col) const
 	{
 		Matrix<Rows, 1, Type> colMatrix;
@@ -80,16 +100,20 @@ public:
 		return colMatrix;
 	}
 
+	// iterator support for begin
 	typename std::vector<Type>::iterator begin()
 	{
 		return data_.begin();
 	}
 
+	// iterator support for end
 	typename std::vector<Type>::iterator end()
 	{
 		return data_.end();
 	}
 
+	// prints out the matrix, but can also be implemented by other classes to print data
+	// differently
 	virtual std::string toString() const
 	{
 		std::stringstream ss;
