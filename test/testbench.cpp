@@ -34,6 +34,7 @@ void TestBench::endTest(bool pass)
 
 void TestBench::printResults()
 {
+	printf("Results:\n");
 	printf("+------------+---------+\n");
 	printf("| Test Name  | Result  |\n");
 	printf("+------------+---------+\n");
@@ -44,11 +45,21 @@ void TestBench::printResults()
 			result="PASS";
 		else
 			result="FAIL";
+
+		char test_name[10];
 		
-		printf("| %10s | %6s  |\n", test.name.c_str(), result.c_str());
+		for(std::size_t i=0; i<10; ++i)
+		{
+			if(i<test.name.size())
+				test_name[i]=test.name[i];
+			else
+				test_name[i]=' ';
+		}
+		
+		printf("| %10.10s | %6s  |\n", test_name, result.c_str());
 	}
 	printf("+------------+---------+\n");
-	printf("\n");
+	printf("\nSummary:\n");
 	printf("+--------+--------+\n");
 	printf("| Passed | %6d |\n", passed);
 	printf("| Failed | %6d |\n", failed);
