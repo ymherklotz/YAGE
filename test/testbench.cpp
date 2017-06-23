@@ -42,9 +42,9 @@ void TestBench::printResults()
 		});
 	
 	printf("Results:\n");
-	printf("+------------+---------+\n");
-	printf("| Test Name  | Result  |\n");
-	printf("+------------+---------+\n");
+	printf("+---------------------------+---------+\n");
+	printf("| Test Name                 | Result  |\n");
+	printf("+---------------------------+---------+\n");
 	for(auto test : tests_)
 	{
 		std::string result;
@@ -53,9 +53,9 @@ void TestBench::printResults()
 		else
 			result="FAIL";
 
-		char test_name[10];
+		char test_name[25];
 		
-		for(std::size_t i=0; i<10; ++i)
+		for(std::size_t i=0; i<25; ++i)
 		{
 			if(i<test.name.size())
 				test_name[i]=test.name[i];
@@ -63,9 +63,9 @@ void TestBench::printResults()
 				test_name[i]=' ';
 		}
 		
-		printf("| %10.10s | %6s  |\n", test_name, result.c_str());
+		printf("| %25.25s | %6s  |\n", test_name, result.c_str());
 	}
-	printf("+------------+---------+\n");
+	printf("+---------------------------+---------+\n");
 	printf("\nSummary:\n");
 	printf("+--------+--------+\n");
 	printf("| Passed | %6d |\n", passed);
