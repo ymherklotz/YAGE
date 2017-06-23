@@ -236,6 +236,22 @@ Matrix<M, N, T> operator-(const T &lhs, Matrix<M, N, T> rhs)
 }
 
 template<int M, int N, class T>
+bool operator==(const Matrix<M, N, T> &lhs, const Matrix<M, N, T> &rhs)
+{
+	for(int i=0; i<M; ++i)
+	{
+		for(int j=0; j<N; ++j)
+		{
+			if(lhs[i][j]!=rhs[i][j])
+			{
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
+template<int M, int N, class T>
 std::ostream& operator<<(std::ostream &os, const Matrix<M, N, T> &mat)
 {
 	return os<<mat.toString();
@@ -304,12 +320,12 @@ template<int M, int N, class T> Matrix<N, M, T> transpose(const Matrix<M, N, T> 
 	return trans;
 }
 
-template<int R, class T> T dot(const Vector<R, T> &v1, const Vector<R, T> &v2)
+template<int R, class T> T dot(const Matrix<R, 1, T> &m1, const Matrix<R, 1, T> &m2)
 {
 	T sum=0;
 	for(int i=0; i<R; ++i)
 	{
-		sum += v1[i]*v2[i];
+		sum += m1[i][0]*m2[i][0];
 	}
 	return sum;
 }
@@ -328,7 +344,7 @@ Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
 	{
 		for(int j=0; j<Q; ++j)
 		{
-			// int sum=0;
+			res[i][j] = dot(transpose(m1.getRow(i)), m2.getCol(j));
 		}
 	}
 
