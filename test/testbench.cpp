@@ -1,5 +1,6 @@
 #include "testbench.hpp"
 
+#include <algorithm>
 #include <stdexcept>
 
 void TestBench::startTest(const std::string &test_name)
@@ -34,6 +35,12 @@ void TestBench::endTest(bool pass)
 
 void TestBench::printResults()
 {
+	std::sort(tests_.begin(), tests_.end(), [] (const Test &a, const Test &b) {
+			if(a.name<b.name)
+				return true;
+			return false;
+		});
+	
 	printf("Results:\n");
 	printf("+------------+---------+\n");
 	printf("| Test Name  | Result  |\n");
