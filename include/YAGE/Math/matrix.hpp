@@ -236,6 +236,36 @@ Matrix<M, N, T> operator-(const T &lhs, Matrix<M, N, T> rhs)
 }
 
 template<int M, int N, class T>
+Matrix<M, N, T> operator*(Matrix<M, N, T> lhs, const T &rhs)
+{
+	for(auto &data : lhs)
+	{
+		data*=rhs;
+	}
+	return lhs;
+}
+
+template<int M, int N, class T>
+Matrix<M, N, T> operator*(const T &lhs, Matrix<M, N, T> rhs)
+{
+	for(auto &data : rhs)
+	{
+		data*=lhs;
+	}
+	return rhs;
+}
+
+template<int M, int N, class T>
+Matrix<M, N, T> operator/(Matrix<M, N, T> lhs, const T &rhs)
+{
+	for(auto &data : lhs)
+	{
+		data/=rhs;
+	}
+	return lhs;
+}
+
+template<int M, int N, class T>
 bool operator==(const Matrix<M, N, T> &lhs, const Matrix<M, N, T> &rhs)
 {
 	for(int i=0; i<M; ++i)
@@ -280,6 +310,12 @@ template<class Type=double> class Vector2 : public Vector<2, Type>
 {
 public:
 	Vector2<Type>() : Vector<2, Type>() {}
+	Vector2<Type>(Type x, Type y)
+	{
+		this->data_[0]=x;
+		this->data_[1]=y;
+	}
+	Vector2<Type>(const Matrix<2, 1, Type> &other) : Vector<2, Type>(other) {} 
 
 	Type& x()
 	{

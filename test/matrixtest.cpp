@@ -25,7 +25,7 @@ bool matrixAssign()
 	yage::Matrix<4, 5, int> m;
 	m[2][3]=5;
 
-	return m[2][3]==4;
+	return m[2][3]==5;
 }
 
 bool matrixAddition()
@@ -63,7 +63,7 @@ int main()
 {
 	TestBench tb;
 
-	bool all_passed=true;
+	bool all_passed=false;
 
 	try
 	{

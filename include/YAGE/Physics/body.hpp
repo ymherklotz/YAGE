@@ -1,7 +1,7 @@
 #ifndef YAGE_BODY_HPP
 #define YAGE_BODY_HPP
 
-#include <glm/glm.hpp>
+#include "Math/matrix.hpp"
 
 namespace yage
 {
@@ -13,37 +13,37 @@ public:
 	static const double GRAVITY;	
 protected:
 	// center of mass of the object
-	glm::vec2 position_=glm::vec2(0.f, 0.f);
+	Vector2d position_=Vector2d(0, 0);
 
 	// mass of the object
-    double mass_=1.0;
+    double mass_=1;
 	
 	// current velocity of the object
-	glm::vec2 velocity_=glm::vec2(0.f, 0.f);
+	Vector2d velocity_=Vector2d(0.f, 0.f);
 
 	// boolean that defines if gravity can act on the object
 	bool gravity_=true;
 	
 	// current acceleration
-	glm::vec2 acceleration_=glm::vec2(0.f, 0.f);
+	Vector2d acceleration_=Vector2d(0, 0);
 
 	// force acting on the body
-	glm::vec2 force_=glm::vec2(0.f, 0.f);
+	Vector2d force_=Vector2d(0, 0);
 	
 public:
 	virtual ~Body();
 
 	// apply force to the object and update the velocity
-	virtual void applyForce(const glm::vec2 &force)=0;
+	virtual void applyForce(const Vector2d &force)=0;
 	virtual void update()=0;
 
 	float xPosition() const;
 	float yPosition() const;
 protected:
 	// protected constructor to initialize member variables
-	Body(const glm::vec2 &position=glm::vec2(0.f, 0.f),
+	Body(const Vector2d &position=Vector2d(0.f, 0.f),
 	     double mass=1.0,
-	     const glm::vec2 &velocity=glm::vec2(0.f, 0.f),
+	     const Vector2d &velocity=Vector2d(0.f, 0.f),
 	     bool gravity=false);
 };
 
