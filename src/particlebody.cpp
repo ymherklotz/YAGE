@@ -40,7 +40,7 @@ void ParticleBody::update()
 	Vector2d avg_acceleration=(acceleration_+last_acceleration)/2.0;
 
 	// update the velocity of the body
-	velocity_=avg_acceleration*time_step;
+	velocity_+=avg_acceleration*time_step;
 }
 
 } // yage
