@@ -11,9 +11,9 @@ namespace yage
 class RigidBody : public ParticleBody
 {
 public:
-	RigidBody(const glm::vec2 &position=glm::vec2(0.f, 0.f),
-	          double mass=1.0,
- 	          const glm::vec2 &velocity=glm::vec2(0.f, 0.f),
+	RigidBody(const Vector2d &position=Vector2d(0, 0),
+	          double mass=1,
+ 	          const Vector2d &velocity=Vector2d(0, 0),
 	          bool gravity=true);
 };
 

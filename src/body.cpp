@@ -8,17 +8,17 @@ const double Body::GRAVITY=-9.81;
 Body::~Body()
 {}
 
-float Body::xPosition() const
+double Body::xPosition() const
 {
-	return position_.x;
+	return position_[0];
 }
 
-float Body::yPosition() const
+double Body::yPosition() const
 {
-	return position_.y;
+	return position_[1];
 }
 
-Body::Body(const glm::vec2 &position, double mass, const glm::vec2 &velocity, bool gravity) :
+Body::Body(const Vector2d &position, double mass, const Vector2d &velocity, bool gravity) :
 	position_(position), mass_(mass), velocity_(velocity), gravity_(gravity)
 {}
 

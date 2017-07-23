@@ -3,9 +3,9 @@
 namespace yage
 {
 
-RigidBody::RigidBody(const glm::vec2 &position,
+RigidBody::RigidBody(const Vector2d &position,
                      double mass,
-                     const glm::vec2 &velocity,
+                     const Vector2d &velocity,
                      bool gravity) :
 	ParticleBody(position, mass, velocity, gravity)
 {}

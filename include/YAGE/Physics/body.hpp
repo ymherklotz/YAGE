@@ -19,7 +19,7 @@ protected:
     double mass_=1;
 	
 	// current velocity of the object
-	Vector2d velocity_=Vector2d(0.f, 0.f);
+	Vector2d velocity_=Vector2d(0, 0);
 
 	// boolean that defines if gravity can act on the object
 	bool gravity_=true;
@@ -37,13 +37,13 @@ public:
 	virtual void applyForce(const Vector2d &force)=0;
 	virtual void update()=0;
 
-	float xPosition() const;
-	float yPosition() const;
+	double xPosition() const;
+	double yPosition() const;
 protected:
 	// protected constructor to initialize member variables
-	Body(const Vector2d &position=Vector2d(0.f, 0.f),
-	     double mass=1.0,
-	     const Vector2d &velocity=Vector2d(0.f, 0.f),
+	Body(const Vector2d &position=Vector2d(0, 0),
+	     double mass=1,
+	     const Vector2d &velocity=Vector2d(0, 0),
 	     bool gravity=false);
 };
 

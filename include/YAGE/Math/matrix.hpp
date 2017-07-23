@@ -269,15 +269,9 @@ template<int M, int N, class T>
 bool operator==(const Matrix<M, N, T> &lhs, const Matrix<M, N, T> &rhs)
 {
 	for(int i=0; i<M; ++i)
-	{
 		for(int j=0; j<N; ++j)
-		{
 			if(lhs[i][j]!=rhs[i][j])
-			{
-				return false;
-			}
-		}
-	}
+					return false;
 	return true;
 }
 
@@ -303,18 +297,30 @@ public:
 		return this->data_[col];
 	}
 
-	
+	virtual std::string toString() const
+	{
+		std::stringstream ss;
+		ss<<"[";
+		for(std::size_t i=0; i<this->data_.size()-1; ++i)
+		{
+			ss<<this->data_[i]<<" ";
+		}
+		ss<<this->data_[this->data_.size()-1]<<"]";
+		return ss.str();
+	}
 };
 
 template<class Type=double> class Vector2 : public Vector<2, Type>
 {
 public:
 	Vector2<Type>() : Vector<2, Type>() {}
+	
 	Vector2<Type>(Type x, Type y)
 	{
 		this->data_[0]=x;
 		this->data_[1]=y;
 	}
+	
 	Vector2<Type>(const Matrix<2, 1, Type> &other) : Vector<2, Type>(other) {} 
 
 	Type& x()

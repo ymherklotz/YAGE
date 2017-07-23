@@ -13,6 +13,8 @@ int main(int, char**)
 
 	double ideal_position=0.5*-9.81*3*3;
 
+	std::cout<<"Ideal Position: "<<ideal_position<<"\n";
+
 	if(body.yPosition()<ideal_position*0.95 && body.yPosition()>ideal_position*1.05)
 		return 0;
 	return 1;
