@@ -36,6 +36,8 @@ bool matrixAddition()
 
 	yage::Matrix<4, 4, int> m3=m1+m2;
 
+	std::cout<<m3<<'\n';
+
 	return m3[1][1]==876;
 }
 

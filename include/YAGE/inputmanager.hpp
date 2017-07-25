@@ -8,11 +8,9 @@ namespace yage
 
 class InputManager
 {
-    // member variables
 private:
     std::unordered_map<unsigned, bool> key_map_;
 
-    // member functions
 public:
     void keyPressed(unsigned key);
     void keyReleased(unsigned key);
