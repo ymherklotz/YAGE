@@ -19,15 +19,13 @@ namespace yage
 
 class Camera2D
 {
-    // member variables
 private:
     bool matrix_needs_update_=true;
-    float scale_=1.f;
+    float scale_=1;
     glm::vec2 position_;
     glm::mat4 camera_matrix_;
     glm::mat4 ortho_matrix_;
 
-    // member functions
 public:
     Camera2D(int screen_width=1280, int screen_height=720);
     virtual ~Camera2D();

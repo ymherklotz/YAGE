@@ -13,6 +13,11 @@ import re
 import sys
 
 
+"""@package Add version headers
+Adds the version headers to every file.
+"""
+
+
 header = """/* ---------------------------------------------------------------\
 -------------
  * {0}
