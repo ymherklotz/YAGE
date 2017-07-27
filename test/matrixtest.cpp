@@ -65,34 +65,16 @@ int main()
 {
 	TestBench tb;
 
-	bool all_passed=false;
+	bool all_passed=true;
 
-	try
-	{
-		test(tb, "Matrix Assign", matrixAssign());
-	}
-	catch(std::exception e)
-	{
-		std::cout<<e.what()<<'\n';
-	}
+	try{ test(tb, "Matrix Assign", matrixAssign()); }
+	catch(std::exception e) { std::cout<<e.what()<<'\n'; }
 
-	try
-	{
-		test(tb, "Matrix Addition", matrixAddition());
-	}
-	catch(std::exception e)
-	{
-		std::cout<<e.what()<<'\n';
-	}
+	try{ test(tb, "Matrix Addition", matrixAddition()); }
+	catch(std::exception e) { std::cout<<e.what()<<'\n'; }
 
-	try
-	{
-		test(tb, "Vector Dot Product", vectorDotProduct());
-	}
-	catch(std::string e)
-	{
-		std::cout<<e<<'\n';
-	}
+	try{ test(tb, "Vector Dot Product", vectorDotProduct()); }
+	catch(std::string e) { std::cout<<e<<'\n'; }
 	
 	tb.printResults();
 	return all_passed;
