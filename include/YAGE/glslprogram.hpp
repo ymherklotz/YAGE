@@ -1,3 +1,11 @@
+/* ----------------------------------------------------------------------------
+ * glslprogram.hpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+ * See file LICENSE for more details
+ * ----------------------------------------------------------------------------
+ */
+
 #ifndef GLSL_PROGRAM_HPP
 #define GLSL_PROGRAM_HPP
 

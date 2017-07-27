@@ -1,3 +1,11 @@
+/* ----------------------------------------------------------------------------
+ * testbench.hpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+ * See file LICENSE for more details
+ * ----------------------------------------------------------------------------
+ */
+
 #ifndef TEST_BENCH_HPP
 #define TEST_BENCH_HPP
 
