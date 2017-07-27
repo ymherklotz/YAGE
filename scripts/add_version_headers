@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 # -----------------------------------------------------------------------------
-# add_version_headers.py -- Add version header
+# add_version_headers.py
 #
-# Copyright (c) 2017 Yann Herklotz Grave (ymherklotz@gmail.com) -- MIT License
+# Add version header
+#
+# Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+# See file LICENSE for more details
 # -----------------------------------------------------------------------------
 
 import os
@@ -23,18 +26,17 @@ header = """/* ---------------------------------------------------------------\
 
 
 def main(argv):
-    print("files getting a license: ")
     for subdir, dirs, files in os.walk(os.getcwd()):
         if not re.match(".*build.*", subdir):
             for file_ in files:
                 if re.match(".*[.]cpp$|.*[.]hpp$", file_) and not re.match("^picopng[.]cpp$", file_):
-                    print(os.path.join(subdir, file_))
+                    print(os.path.join(subdir, file_), end=" ")
                     with open(os.path.join(subdir, file_), 'r') as src_file:
                         src = src_file.read()
                     with open(os.path.join(subdir, file_), 'w') as src_file_lic:
                         src_file_lic.write(header.format(file_))
                         src_file_lic.write(src)
-    print("Done")
+                    print("-- done")
 
 
 if __name__ == "__main__":
