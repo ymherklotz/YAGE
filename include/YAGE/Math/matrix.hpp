@@ -6,6 +6,17 @@
  * ----------------------------------------------------------------------------
  */
 
+/** \file matrix.hpp
+ * \brief Templated matrix class
+ * 
+ * Matrix
+ * ======
+
+ * This is a very general matrix class that can then be inherited by
+ * vectors and other similar data structures to minimize code 
+ * density.
+ */
+
 #ifndef YAGE_MATH_MATRIX_HPP
 #define YAGE_MATH_MATRIX_HPP
 
@@ -21,14 +32,17 @@ namespace yage
 
 template<int Rows, int Cols, class Type> class Matrix;
 
-// includes implementation details that should not be accessible to the user
+/** \namespace detail
+ * \brief Detail namespace
+ *
+ * Detail Namespace
+ * ================
+ *
+ * This is the namespace used for implementation detail.
+ */
 namespace detail
 {
 
-// Row class
-//
-// Used to implement the double square bracket operator and be able
-// to return the value by reference of the array.
 template<int Rows, int Cols, class Type> class Row
 {
 private:
@@ -54,10 +68,15 @@ public:
 
 } // detail
 
-// Matrix class
-//
-// Implements the base Matrix class that is inherited by other classes to make them more
-// specific.
+/** \class Matrix
+ * \brief Base matrix class
+ *
+ * Matrix class
+ * ============
+ *
+ * This is the base matrix class that can be used by all the other matrix
+ * like data structures.
+ */
 template<int Rows=4, int Cols=4, class Type=double> class Matrix
 {
 	// friended with the row class so that it can access protected member data
