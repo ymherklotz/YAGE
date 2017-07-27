@@ -6,8 +6,5 @@ YAGE stands for Yet Another Game Engine.
 License
 -------
 
-MIT License
-
-Copyright (c) 2017 Yann Herklotz Grave
-
-see LICENSE file.
+Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+See file LICENSE for more details
