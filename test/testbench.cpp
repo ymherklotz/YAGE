@@ -47,18 +47,12 @@ void TestBench::endTest(bool pass)
 	incrementer--;
 
 	if(incrementer!=0)
-	{
 		throw std::runtime_error("Start and End don't match");
-	}
 
-	if(pass)
-	{
+	if(pass) 
 		passed++;
-	}
-	else
-	{
+	else 
 		failed++;
-	}
 
 	tests_[passed+failed-1].passed=pass;
 }
