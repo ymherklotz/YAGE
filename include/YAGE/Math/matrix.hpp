@@ -1,11 +1,3 @@
-/*
- * created 22-06-17 by Yann Herklotz
- *
- * Matrix class that contains definitions for matrices, vectors and operations
- * on vectors and matrices.
- *
- */
-
 #ifndef YAGE_MATH_MATRIX_HPP
 #define YAGE_MATH_MATRIX_HPP
 
