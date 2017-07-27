@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yage',['YAGE',['../md_README.html',1,'']]]
+  ['documentation',['Documentation',['../md_docs_README.html',1,'']]]
 ];
