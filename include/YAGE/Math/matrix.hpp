@@ -33,6 +33,7 @@ namespace yage
 template<int Rows, int Cols, class Type> class Matrix;
 
 /** \namespace detail
+ * \internal
  * \brief Detail namespace
  *
  * Detail Namespace
