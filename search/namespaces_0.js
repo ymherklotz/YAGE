@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['detail',['detail',['../namespacedetail.html',1,'']]]
+  ['matrix',['matrix',['../namespaceyage_1_1matrix.html',1,'yage']]]
 ];
