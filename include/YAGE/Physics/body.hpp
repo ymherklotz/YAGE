@@ -6,8 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_BODY_HPP
-#define YAGE_BODY_HPP
+#ifndef YAGE_PHYSICS_BODY_HPP
+#define YAGE_PHYSICS_BODY_HPP
 
 #include "Math/matrix.hpp"
 
@@ -55,6 +55,6 @@ protected:
 	     bool gravity=false);
 };
 
-} // yage
+} // namespace yage
 
 #endif

@@ -6,8 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_COLLIDER_HPP
-#define YAGE_COLLIDER_HPP
+#ifndef YAGE_PHYSICS_COLLIDER_HPP
+#define YAGE_PHYSICS_COLLIDER_HPP
 
 #include <glm/glm.hpp>
 
@@ -38,6 +38,6 @@ public:
 	virtual bool inside(const glm::vec2 &point) const=0;
 };
 
-} // yage
+} // namespace yage
 
 #endif
