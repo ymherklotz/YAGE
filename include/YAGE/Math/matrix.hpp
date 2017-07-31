@@ -6,16 +6,17 @@
  * ----------------------------------------------------------------------------
  */
 
-/** \file matrix.hpp
- * \brief Templated matrix class
+
+/** \file matrix.hpp Templated matrix class
  * 
  * Matrix
  * ======
-
+ *
  * This is a very general matrix class that can then be inherited by
  * vectors and other similar data structures to minimize code 
  * density.
  */
+
 
 #ifndef YAGE_MATH_MATRIX_HPP
 #define YAGE_MATH_MATRIX_HPP
@@ -27,15 +28,14 @@
 #include <string>
 #include <vector>
 
+
 namespace yage
 {
 
 template<int Rows, int Cols, class Type> class Matrix;
 
-/** \namespace detail
- * \internal
- * \brief Detail namespace
- *
+/** \internal Namespace for internal details.
+ * 
  * Detail Namespace
  * ================
  *
@@ -44,6 +44,14 @@ template<int Rows, int Cols, class Type> class Matrix;
 namespace detail
 {
 
+/** \internal Internal Row class used by the Matrix class to return the
+ * internal data structure of the Matrix.
+ *
+ * Row
+ * ===
+ *
+ * Internal Row class to return a value in the row of the matrix.
+ */
 template<int Rows, int Cols, class Type> class Row
 {
 private:
@@ -69,8 +77,7 @@ public:
 
 } // detail
 
-/** \class Matrix
- * \brief Base matrix class
+/** Base Matrix class used by other similar classes.
  *
  * Matrix class
  * ============
@@ -83,22 +90,31 @@ template<int Rows=4, int Cols=4, class Type=double> class Matrix
 	// friended with the row class so that it can access protected member data
 	friend class detail::Row<Rows, Cols, Type>;
 protected:
+	/// Vector containing the data of the matrix
 	std::vector<Type> data_;
 
 public:
+	/// Initializes the size of the data_ vector
 	Matrix<Rows, Cols, Type>() : data_(Rows*Cols) {}
-	
+
+	/// Returns the row size of the Matrix
 	int rowSize() const
 	{
 		return Rows;
 	}
 
+	/// Returns the column size of the Matrixxs
 	int colSize() const
 	{
 		return Cols;
 	}
 
-	// returns the row in a row matrix
+	/** Return the row specified row as a Matrix with only one row
+	 *
+	 * \param[in] row Row number to be returned
+	 *
+	 * Returns the row that is specified by the row variables.
+	 */
 	Matrix<1, Cols, Type> getRow(int row) const
 	{
 		Matrix<1, Cols, Type> rowMatrix;
@@ -330,6 +346,10 @@ public:
 	}
 };
 
+/** 2D Vector class.
+ *
+ * Two dimensional vector class.
+ */
 template<class Type=double> class Vector2 : public Vector<2, Type>
 {
 public:
@@ -364,11 +384,17 @@ public:
 	}	
 };
 
+/// Definition of a 2D vector.
 typedef Vector2<double> Vector2d;
 
+/** Namespace containing functions that operate on matrices. */
 namespace matrix
 {
 
+/** Transposes a matrix and returns the result
+ *
+ * \param[in] m input matrix.
+ */
 template<int M, int N, class T> Matrix<N, M, T> transpose(const Matrix<M, N, T> &m)
 {
 	Matrix<N, M, T> trans;
@@ -382,6 +408,10 @@ template<int M, int N, class T> Matrix<N, M, T> transpose(const Matrix<M, N, T> 
 	return trans;
 }
 
+/** Returns the dot product between two vectors
+ *
+ * \param[in] m1,m2 Input matrices.
+ */
 template<int R, class T> T dot(const Matrix<R, 1, T> &m1, const Matrix<R, 1, T> &m2)
 {
 	T sum=0;
@@ -392,6 +422,12 @@ template<int R, class T> T dot(const Matrix<R, 1, T> &m1, const Matrix<R, 1, T> 
 	return sum;
 }
 
+/** Multiplies two matrices together.
+ *
+ * \param[in] m1,m2 Matrix inputs
+ *
+ * Requires the two matrices to be compatible with multiplication.
+ */
 template<int M, int N, int P, int Q, class T>
 Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
 {
