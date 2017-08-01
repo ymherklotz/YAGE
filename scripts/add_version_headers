@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -----------------------------------------------------------------------------
-# add_version_headers.py
+# add_version_headers
 #
 # Add version header
 #
@@ -8,14 +8,24 @@
 # See file LICENSE for more details
 # -----------------------------------------------------------------------------
 
+"""\file add_version_headers
+\brief Adds the version headers to every file.
+
+Add Version Headers
+===================
+
+This file adds the version headers to every file in the directory
+
+
+Improvements
+------------
+
+Add the ability to input command line arguments.
+"""
+
 import os
 import re
 import sys
-
-
-"""@package Add version headers
-Adds the version headers to every file.
-"""
 
 
 header = """/* ---------------------------------------------------------------\
