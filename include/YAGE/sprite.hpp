@@ -29,7 +29,12 @@ private:
     Texture texture_;
 public:
     Sprite();
+	Sprite(const Sprite&)=delete;
+	Sprite(Sprite&&)=delete;
     ~Sprite();
+
+	Sprite& operator=(const Sprite&)=delete;
+	Sprite& operator=(Sprite&&)=delete;
 
     void init(float x, float y, float width, float height, const std::string &texture_path);
     void draw();

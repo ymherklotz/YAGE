@@ -183,15 +183,6 @@ public:
 		return detail::Row<Rows, Cols, Type>((Matrix<Rows, Cols, Type>*)this, row);
 	}
 
-	Matrix<Rows, Cols, Type>& operator=(const Matrix<Rows, Cols, Type> &other)
-	{
-		if(this!=&other)
-		{
-			data_=other.data_;
-		}
-		return *this;
-	}
-
 	Matrix<Rows, Cols, Type>& operator+=(const Matrix<Rows, Cols, Type> &rhs)
 	{
 		std::vector<Type> out;

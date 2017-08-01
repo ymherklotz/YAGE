@@ -28,9 +28,6 @@ protected:
 public:
 	Collider(const glm::vec2 &position, const glm::vec2 &size) : position_(position), size_(size) {}
 
-	// virtual deconstructor for classes that inherits
-	virtual ~Collider() {}
-
 	// function that checks if two colliders are colliding
 	virtual bool collides(const Collider &collider) const=0;
 

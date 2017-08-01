@@ -15,9 +15,6 @@
 namespace yage
 {
 
-GlslProgram::GlslProgram()
-{}
-
 GlslProgram::~GlslProgram()
 {
 	// cleanup all the shaders and the program

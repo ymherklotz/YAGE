@@ -39,8 +39,6 @@ protected:
 	Vector2d force_=Vector2d(0, 0);
 	
 public:
-	virtual ~Body();
-
 	// apply force to the object and update the velocity
 	virtual void applyForce(const Vector2d &force)=0;
 	virtual void update()=0;

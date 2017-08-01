@@ -22,7 +22,6 @@ private:
     std::unordered_map<std::string, Texture> texture_map_;
 public:
     TextureCache();
-    ~TextureCache();
 
     Texture getTexture(const std::string &texture_path);
 };

@@ -19,9 +19,6 @@ Camera2D::Camera2D(int screen_width, int screen_height) :
 	ortho_matrix_(glm::ortho(0.f, (float)screen_width, 0.f, (float)screen_height))
 {}
 
-Camera2D::~Camera2D()
-{}
-
 void Camera2D::update(GlslProgram &program)
 {
 	if(matrix_needs_update_)

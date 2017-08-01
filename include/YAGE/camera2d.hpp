@@ -28,7 +28,6 @@ private:
 
 public:
     Camera2D(int screen_width=1280, int screen_height=720);
-    virtual ~Camera2D();
 
     // update camera location
     void update(GlslProgram &program);

@@ -36,12 +36,12 @@ private:
 public:
     Glyph(GLuint texture, float depth, const Vertex &top_left, const Vertex &top_right, const Vertex &bottom_right, const Vertex &bottom_left);
 
-    inline GLuint texture() const { return texture_; }
-    inline float depth() const { return depth_; }
-    inline Vertex top_left() const { return top_left_; }
-    inline Vertex top_right() const { return top_right_; }
-    inline Vertex bottom_right() const { return bottom_right_; }
-    inline Vertex bottom_left() const { return bottom_left_; }
+    GLuint texture() const { return texture_; }
+    float depth() const { return depth_; }
+    Vertex top_left() const { return top_left_; }
+    Vertex top_right() const { return top_right_; }
+    Vertex bottom_right() const { return bottom_right_; }
+    Vertex bottom_left() const { return bottom_left_; }
 };
 
 class RenderBatch
@@ -58,9 +58,9 @@ public:
     RenderBatch(GLint offset, GLsizei num_vertices, GLuint texture);
 
     // getters
-    inline GLint offset() const { return offset_; }
-    inline GLsizei num_vertices() const { return num_vertices_; }
-    inline GLuint texture() const { return texture_; }
+    GLint offset() const { return offset_; }
+    GLsizei num_vertices() const { return num_vertices_; }
+    GLuint texture() const { return texture_; }
 };
 
 class SpriteBatch
@@ -78,7 +78,12 @@ private:
     // member functions
 public:
     SpriteBatch();
+	SpriteBatch(const SpriteBatch&)=delete;
+	SpriteBatch(SpriteBatch&&)=delete;
     ~SpriteBatch();
+
+	SpriteBatch& operator=(const SpriteBatch&)=delete;
+	SpriteBatch& operator=(SpriteBatch&&)=delete;
 
     // initialize vaos and vbos
     void init();

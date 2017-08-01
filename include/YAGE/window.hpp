@@ -28,25 +28,28 @@ enum WindowFlags : unsigned
 // window wrapper around SDL_Window pointer
 class Window
 {
-public: // member variables
 private:
-    // window handle
+    /// window handle
     SDL_Window *window_=nullptr;
     
-public: // member functions
+public:
     Window();
-    // destroys the window handle
-    ~Window();
+	Window(const Window&)=delete;
+	Window(Window&&)=delete;
+    /// destroys the window handle
+	~Window();
 
-    // create the window, initialize the handle and update the width and height
+	Window& operator=(const Window&)=delete;
+	Window& operator=(Window&&)=delete;
+
+    /// create the window, initialize the handle and update the width and height
     void create(const std::string &window_name, int width, int height, unsigned flags=WindowFlags::SHOWN);
-    // swap the buffer
+    /// swap the buffer
     void swapBuffer();
-    // clear buffer
+    /// clear buffer
     void clearBuffer();
-private:
 };
     
-} // yage
+} // namespace yage
 
 #endif

@@ -13,9 +13,6 @@ namespace yage
 
 const double Body::GRAVITY=-9.81;
 
-Body::~Body()
-{}
-
 double Body::xPosition() const
 {
 	return position_[0];
