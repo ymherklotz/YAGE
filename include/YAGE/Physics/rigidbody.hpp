@@ -1,3 +1,11 @@
+/* ----------------------------------------------------------------------------
+ * rigidbody.hpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+ * See file LICENSE for more details
+ * ----------------------------------------------------------------------------
+ */
+
 #ifndef YAGE_RIGID_BODY_HPP
 #define YAGE_RIGID_BODY_HPP
 

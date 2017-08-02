@@ -1,5 +1,13 @@
-#ifndef YAGE_COLLIDER_HPP
-#define YAGE_COLLIDER_HPP
+/* ----------------------------------------------------------------------------
+ * collider.hpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+ * See file LICENSE for more details
+ * ----------------------------------------------------------------------------
+ */
+
+#ifndef YAGE_PHYSICS_COLLIDER_HPP
+#define YAGE_PHYSICS_COLLIDER_HPP
 
 #include <glm/glm.hpp>
 
@@ -20,9 +28,6 @@ protected:
 public:
 	Collider(const glm::vec2 &position, const glm::vec2 &size) : position_(position), size_(size) {}
 
-	// virtual deconstructor for classes that inherits
-	virtual ~Collider() {}
-
 	// function that checks if two colliders are colliding
 	virtual bool collides(const Collider &collider) const=0;
 
@@ -30,6 +35,6 @@ public:
 	virtual bool inside(const glm::vec2 &point) const=0;
 };
 
-} // yage
+} // namespace yage
 
 #endif

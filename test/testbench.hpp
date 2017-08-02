@@ -1,8 +1,9 @@
-/*
- * created 22-06-17 by Yann Herklotz
+/* ----------------------------------------------------------------------------
+ * testbench.hpp
  *
- * Test bench to test different functions in the yage library
- *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+ * See file LICENSE for more details
+ * ----------------------------------------------------------------------------
  */
 
 #ifndef TEST_BENCH_HPP

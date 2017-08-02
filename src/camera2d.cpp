@@ -1,3 +1,11 @@
+/* ----------------------------------------------------------------------------
+ * camera2d.cpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+ * See file LICENSE for more details
+ * ----------------------------------------------------------------------------
+ */
+
 #include "camera2d.hpp"
 
 #include <GL/glew.h>
@@ -9,9 +17,6 @@ Camera2D::Camera2D(int screen_width, int screen_height) :
 	position_(0.f, 0.f),
 	camera_matrix_(1.f),
 	ortho_matrix_(glm::ortho(0.f, (float)screen_width, 0.f, (float)screen_height))
-{}
-
-Camera2D::~Camera2D()
 {}
 
 void Camera2D::update(GlslProgram &program)

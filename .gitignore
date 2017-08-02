@@ -1,6 +1,10 @@
 # general directories to ignore
 bin/
 build/
+build_clang/
+build_gcc/
+build_debug/
+build_release/
 CMakeFiles/
 Testing/
 

@@ -1,5 +1,13 @@
-#ifndef YAGE_BODY_HPP
-#define YAGE_BODY_HPP
+/* ----------------------------------------------------------------------------
+ * body.hpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+ * See file LICENSE for more details
+ * ----------------------------------------------------------------------------
+ */
+
+#ifndef YAGE_PHYSICS_BODY_HPP
+#define YAGE_PHYSICS_BODY_HPP
 
 #include "Math/matrix.hpp"
 
@@ -31,8 +39,6 @@ protected:
 	Vector2d force_=Vector2d(0, 0);
 	
 public:
-	virtual ~Body();
-
 	// apply force to the object and update the velocity
 	virtual void applyForce(const Vector2d &force)=0;
 	virtual void update()=0;
@@ -47,6 +53,6 @@ protected:
 	     bool gravity=false);
 };
 
-} // yage
+} // namespace yage
 
 #endif

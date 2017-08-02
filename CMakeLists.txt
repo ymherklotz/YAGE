@@ -13,13 +13,6 @@ set(YAGE_VERSION
 # set standard
 set(CMAKE_CXX_STANDARD 14)
 
-if ( CMAKE_COMPILER_IS_GNUCC )
-  set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall -Wextra")
-endif ( CMAKE_COMPILER_IS_GNUCC )
-if ( MSVC )
-  set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} /W4")
-endif ( MSVC )
-
 # set the test sources
 set(YAGE_SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
 set(YAGE_TEST_DIR ${PROJECT_SOURCE_DIR}/test)

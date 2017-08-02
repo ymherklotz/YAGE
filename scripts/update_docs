@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+doxygen ./docs/Doxyfile
+git clone -b gh-pages git@github.com:ymherklotz/YAGE
+cd YAGE/
+git rm -rf *
+mv ../html/* .
+rm -rf ../html
+git add -A
+git commit -a -m 'Updating docs'
+git push origin gh-pages
+cd ..
+rm -rf YAGE
