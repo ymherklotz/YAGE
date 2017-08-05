@@ -42,6 +42,21 @@ set(YAGE_SOURCES
   ${PROJECT_SOURCE_DIR}/src/texturecache.cpp
   ${PROJECT_SOURCE_DIR}/src/window.cpp)
 
+# Initializing google test
+# prevents overriding the parent project's compiler/linter settings on windows
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
+# Add googletest directly to our build. This defines
+# the gtest and gtest_main targets.
+add_subdirectory(${PROJECT_SOURCE_DIR}/googletest)
+
+# The gtest/gtest_main targets carry header search path
+# dependencies automatically when using CMake 2.8.11 or
+# later. Otherwise we have to add them here ourselves.
+if (CMAKE_VERSION VERSION_LESS 2.8.11)
+  include_directories("${gtest_SOURCE_DIR}/include")
+endif()
+
 # find libraries
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
@@ -54,23 +69,13 @@ include_directories(${YAGE_INCLUDE_DIR}
 # make it a static library
 add_library(${PROJECT_NAME} ${YAGE_SOURCES})
 
-# add tests
-add_executable(rigidbodytest
-  ${YAGE_TEST_DIR}/rigidbodytest.cpp)
-target_link_libraries(rigidbodytest
-  ${YAGE_LIBRARIES}
-  ${OPENGL_LIBRARIES}
-  ${GLEW_LIBRARIES})
-
-add_executable(matrixtest
-  ${YAGE_TEST_DIR}/matrixtest.cpp
-  ${YAGE_TEST_DIR}/testbench.cpp)
-target_link_libraries(matrixtest
-  ${YAGE_LIBRARIES}
+set(YAGE_LIB_DEP_L yage
   ${OPENGL_LIBRARIES}
   ${GLEW_LIBRARIES})
 
 # enable tests
 enable_testing()
-add_test(RigidBodyTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/rigidbodytest)
-add_test(MatrixTest ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/matrixtest)
+
+add_executable(matrixtest ${YAGE_TEST_DIR}/matrixtest.cpp)
+target_link_libraries(matrixtest gtest_main ${YAGE_LIB_DEP_L})
+add_test(NAME matrixtest COMMAND matrixtest)
