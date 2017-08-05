@@ -8,37 +8,25 @@
 
 #include "Math/math.hpp"
 
-#include "testbench.hpp"
+#include "gtest/gtest.h"
 
-void test(TestBench &tb, const std::string &test_name, bool result)
-{
-	tb.startTest(test_name);
-	tb.endTest(result);
-	if(!result)
-	{
-		throw std::runtime_error(test_name+" failed...");
-	}
-}
-
-bool matrixAssign()
+int matrixAssign(int number)
 {
 	yage::Matrix<4, 5, int> m;
-	m[2][3]=5;
+	m[2][3]=number;
 
-	return m[2][3]==5;
+	return m[2][3];
 }
 
-bool matrixAddition()
+int matrixAddition(int num1, int num2)
 {
 	yage::Matrix<4, 4, int> m1, m2;
-	m1[1][1]=293;
-	m2[1][1]=583;
+	m1[1][1]=num1;
+	m2[1][1]=num2;
 
 	yage::Matrix<4, 4, int> m3=m1+m2;
 
-	std::cout<<m3<<'\n';
-
-	return m3[1][1]==876;
+	return m3[1][1];
 }
 
 bool vectorDotProduct()
@@ -58,24 +46,28 @@ bool vectorDotProduct()
 
 bool matrixMultiplication()
 {
-	
+	return false;
 }
 
-int main()
+// TESTS
+
+TEST(Matrix, Assign)
 {
-	TestBench tb;
+	ASSERT_EQ(29348, matrixAssign(29348));
+}
 
-	bool all_passed=true;
+TEST(Matrix, Addition)
+{
+	ASSERT_EQ(5793+2389, matrixAddition(5793, 2389));
+}
 
-	try{ test(tb, "Matrix Assign", matrixAssign()); }
-	catch(std::exception e) { std::cout<<e.what()<<'\n'; }
+TEST(Matrix, DotProduct)
+{
+	ASSERT_TRUE(vectorDotProduct());
+}
 
-	try{ test(tb, "Matrix Addition", matrixAddition()); }
-	catch(std::exception e) { std::cout<<e.what()<<'\n'; }
-
-	try{ test(tb, "Vector Dot Product", vectorDotProduct()); }
-	catch(std::string e) { std::cout<<e<<'\n'; }
-	
-	tb.printResults();
-	return all_passed;
+int main(int argc, char **argv)
+{
+	testing::InitGoogleTest(&argc, argv);
+	return RUN_ALL_TESTS();
 }
