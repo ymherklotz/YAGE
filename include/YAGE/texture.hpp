@@ -11,16 +11,14 @@
 
 #include <GL/glew.h>
 
-namespace yage
-{
+namespace yage {
 
-struct Texture
-{
+struct Texture {
     GLuint id;
     int width;
     int height;
 };
-    
-} // yage
+
+}  // yage
 
 #endif

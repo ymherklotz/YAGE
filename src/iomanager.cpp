@@ -11,30 +11,29 @@
 #include <fstream>
 #include <stdexcept>
 
-namespace yage
-{
+namespace yage {
 
-bool IoManager::readFileToBuffer(const std::string &file_path, std::vector<unsigned char> &buffer)
-{
-	std::ifstream file(file_path, std::ios::binary);
-	if(!file.is_open())
-		throw std::runtime_error("Could not open '"+file_path+"'");
-    
-	// seek to the end
-	file.seekg(0, std::ios::end);
+bool IoManager::readFileToBuffer(const std::string& file_path,
+                                 std::vector<unsigned char>& buffer) {
+    std::ifstream file(file_path, std::ios::binary);
+    if (!file.is_open())
+        throw std::runtime_error("Could not open '" + file_path + "'");
 
-	// get the file size
-	int file_size = file.tellg();
-	file.seekg(0, std::ios::beg);
+    // seek to the end
+    file.seekg(0, std::ios::end);
 
-	// reduce file size by header bytes
-	file_size -= file.tellg();
+    // get the file size
+    int file_size = file.tellg();
+    file.seekg(0, std::ios::beg);
 
-	buffer.resize(file_size);
-	file.read((char *)&buffer[0], file_size);
-	file.close();
+    // reduce file size by header bytes
+    file_size -= file.tellg();
 
-	return true;
+    buffer.resize(file_size);
+    file.read((char*)&buffer[0], file_size);
+    file.close();
+
+    return true;
 }
-    
-} // yage
+
+}  // yage

@@ -11,84 +11,66 @@
 
 #include <GL/glew.h>
 
-namespace yage
-{
+namespace yage {
 
-struct Position
-{
+struct Position {
     float x;
     float y;
 
-    Position()
-    {}
-    
-    Position(float x_, float y_) :
-	x(x_), y(y_)
-    {}
+    Position() {}
+
+    Position(float x_, float y_) : x(x_), y(y_) {}
 };
 
-struct Color
-{
+struct Color {
     GLubyte r;
     GLubyte g;
     GLubyte b;
     GLubyte a;
 
-    Color()
-    {}
+    Color() {}
 
-    Color(GLubyte r_, GLubyte g_, GLubyte b_, GLubyte a_) :
-	r(r_), g(g_), b(b_), a(a_)
-    {}
+    Color(GLubyte r_, GLubyte g_, GLubyte b_, GLubyte a_)
+        : r(r_), g(g_), b(b_), a(a_) {}
 };
 
-struct UV
-{
+struct UV {
     float u;
     float v;
 
-    UV()
-    {}
+    UV() {}
 
-    UV(float u_, float v_) :
-	u(u_), v(v_)
-    {}
+    UV(float u_, float v_) : u(u_), v(v_) {}
 };
 
-struct Vertex
-{
+struct Vertex {
     Position position;
     Color color;
     UV uv;
 
-    Vertex()
-    {}
+    Vertex() {}
 
-    Vertex(const Position &position_, const Color &color_, const UV &uv_) :
-	position(position_), color(color_), uv(uv_)
-    {}
+    Vertex(const Position& position_, const Color& color_, const UV& uv_)
+        : position(position_), color(color_), uv(uv_) {}
 
-    void setPosition(float x, float y)
-    {
-	position.x = x;
-	position.y = y;
+    void setPosition(float x, float y) {
+        position.x = x;
+        position.y = y;
     }
-    
-    void setColor(GLubyte r, GLubyte g, GLubyte b, GLubyte a)
-    {
-	color.r = r;
-	color.g = g;
-	color.b = b;
-	color.a = a;
+
+    void setColor(GLubyte r, GLubyte g, GLubyte b, GLubyte a) {
+        color.r = r;
+        color.g = g;
+        color.b = b;
+        color.a = a;
     }
-    
-    void setUv(float u, float v)
-    {
-	uv.u = u;
-	uv.v = v;
+
+    void setUv(float u, float v) {
+        uv.u = u;
+        uv.v = v;
     }
 };
-    
-} // yage
+
+}  // yage
 
 #endif

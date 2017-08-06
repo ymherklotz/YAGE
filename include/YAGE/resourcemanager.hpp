@@ -14,17 +14,16 @@
 
 #include <string>
 
-namespace yage
-{
+namespace yage {
 
-class ResourceManager
-{
+class ResourceManager {
 private:
     static TextureCache texture_cache_;
+
 public:
-    static Texture getTexture(const std::string &texture_path);
+    static Texture getTexture(const std::string& texture_path);
 };
-    
-} // yage
+
+}  // yage
 
 #endif

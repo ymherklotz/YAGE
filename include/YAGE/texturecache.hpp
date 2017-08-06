@@ -13,19 +13,18 @@
 
 #include <unordered_map>
 
-namespace yage
-{
+namespace yage {
 
-class TextureCache
-{
+class TextureCache {
 private:
     std::unordered_map<std::string, Texture> texture_map_;
+
 public:
     TextureCache();
 
-    Texture getTexture(const std::string &texture_path);
+    Texture getTexture(const std::string& texture_path);
 };
-    
-} // yage
+
+}  // yage
 
 #endif
