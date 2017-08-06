@@ -78,4 +78,8 @@ enable_testing()
 
 add_executable(matrixtest ${YAGE_TEST_DIR}/matrixtest.cpp)
 target_link_libraries(matrixtest gtest_main ${YAGE_LIB_DEP_L})
-add_test(NAME matrixtest COMMAND matrixtest --gtest_repeat=1000 --gtest_break_on_failure)
+add_test(NAME MatrixTest COMMAND matrixtest --gtest_repeat=1000 --gtest_break_on_failure)
+
+add_executable(particlebodytest ${YAGE_TEST_DIR}/particlebodytest.cpp)
+target_link_libraries(particlebodytest gtest_main ${YAGE_LIB_DEP_L})
+add_test(NAME ParticleBodyTest COMMAND particlebodytest --gtest_repeat=1000 --gtest_break_on_failure)
