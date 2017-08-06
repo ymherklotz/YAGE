@@ -78,4 +78,4 @@ enable_testing()
 
 add_executable(matrixtest ${YAGE_TEST_DIR}/matrixtest.cpp)
 target_link_libraries(matrixtest gtest_main ${YAGE_LIB_DEP_L})
-add_test(NAME matrixtest COMMAND matrixtest)
+add_test(NAME matrixtest COMMAND matrixtest --gtest_repeat=1000 --gtest_break_on_failure)

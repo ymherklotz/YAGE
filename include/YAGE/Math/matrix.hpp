@@ -96,6 +96,7 @@ protected:
 public:
 	/// Initializes the size of the data_ vector
 	Matrix<Rows, Cols, Type>() : data_(Rows*Cols) {}
+	Matrix<Rows, Cols, Type>(const std::vector<Type>& data) : data_(data) {}
 
 	/// Returns the row size of the Matrix
 	int rowSize() const
@@ -273,8 +274,7 @@ Matrix<M, N, T> operator*(Matrix<M, N, T> lhs, const T &rhs)
 }
 
 template<int M, int N, class T>
-Matrix<M, N, T> operator*(const T &lhs, Matrix<M, N, T> rhs)
-{
+Matrix<M, N, T> operator*(const T &lhs, Matrix<M, N, T> rhs) {
 	for(auto &data : rhs)
 	{
 		data*=lhs;
@@ -312,7 +312,8 @@ template<int Rows=2, class Type=double> class Vector : public Matrix<Rows, 1, Ty
 {
 public:
 	Vector<Rows, Type>() : Matrix<Rows, 1, Type>() {}
-	explicit Vector<Rows, Type>(const Matrix<Rows, 1, Type> &other) : Matrix<Rows, 1, Type>(other) {}
+	Vector<Rows, Type>(const Matrix<Rows, 1, Type>& other) : Matrix<Rows, 1, Type>(other) {}
+	Vector<Rows, Type>(const std::vector<Type>& data) : Matrix<Rows, 1, Type>(data) {}
 
 	Type& operator[](int col)
 	{
@@ -345,6 +346,7 @@ template<class Type=double> class Vector2 : public Vector<2, Type>
 {
 public:
 	Vector2<Type>() : Vector<2, Type>() {}
+	Vector2<Type>(const std::vector<Type>& data) : Vector<2, Type>(data) {}
 	
 	Vector2<Type>(Type x, Type y)
 	{
