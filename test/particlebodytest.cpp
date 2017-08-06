@@ -6,24 +6,33 @@
  * ----------------------------------------------------------------------------
  */
 
+#include <cmath>
+#include <cstdlib>
+
 #include "Physics/particlebody.hpp"
+#include "gtest/gtest.h"
 
-#include <iostream>
-
-int main(int, char**) {
+double gravityAcceleration(int iterations) {
     yage::ParticleBody body;
-    for (int i = 0; i < 60 * 3; ++i) {
+    for (int i = 0; i < 60 * iterations; ++i) {
         body.update();
-        std::cout << "position: " << body.xPosition() << ", "
-                  << body.yPosition() << "\n";
     }
 
-    double ideal_position = 0.5 * -9.81 * 3 * 3;
+    return body.yPosition();
+}
 
-    std::cout << "Ideal Position: " << ideal_position << "\n";
+// Tests
 
-    if (body.yPosition() < ideal_position * 0.95 &&
-        body.yPosition() > ideal_position * 1.05)
-        return 0;
-    return 1;
+TEST(ParticleBody, Gravity) {
+    int random_itr = rand() % 25;
+    double idealPosition = 0.5 * -9.81 * std::pow(random_itr, 2);
+
+    ASSERT_GE(idealPosition * 0.95, gravityAcceleration(random_itr));
+    ASSERT_LE(idealPosition * 1.05, gravityAcceleration(random_itr));
+}
+
+int main(int argc, char** argv) {
+    testing::InitGoogleTest(&argc, argv);
+    srand(static_cast<unsigned>(time(nullptr)));
+    return RUN_ALL_TESTS();
 }

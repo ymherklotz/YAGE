@@ -37,8 +37,6 @@ void ParticleBody::update() {
     else
         acceleration_ = Vector2d(force_.x() / mass_, force_.y() / mass_);
 
-    std::cout << acceleration_ << "\n";
-
     Vector2d avg_acceleration = (acceleration_ + last_acceleration) / 2.0;
 
     // update the velocity of the body

@@ -41,7 +41,7 @@ int vectorDotProduct(const std::vector<int> &vec_contents_f, const std::vector<i
 
 	int x = yage::matrix::dot(v1, v2);
 
-	return x==76;
+	return x;
 }
 
 bool matrixMultiplication()
