@@ -25,23 +25,16 @@
 
 #include <stdexcept>
 
-namespace yage
-{
+namespace yage {
 
-bool init()
-{
-	if(SDL_Init(SDL_INIT_VIDEO))
-	{
-		return false;
-	}
-	return true;
+bool init() {
+    if (SDL_Init(SDL_INIT_VIDEO)) {
+        return false;
+    }
+    return true;
 }
 
-void quit()
-{
-	SDL_Quit();
-}
-
+void quit() { SDL_Quit(); }
 };
 
 #endif

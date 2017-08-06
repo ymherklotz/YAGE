@@ -13,43 +13,41 @@
 
 #include <string>
 
-namespace yage
-{
+namespace yage {
 
 // window flags that can change it's appearance
-enum WindowFlags : unsigned
-{
-    SHOWN=0x1,
-    HIDDEN=0x2,
-    FULLSCREEN=0x4,
-    BORDERLESS=0x8,
+enum WindowFlags : unsigned {
+    SHOWN = 0x1,
+    HIDDEN = 0x2,
+    FULLSCREEN = 0x4,
+    BORDERLESS = 0x8,
 };
 
 // window wrapper around SDL_Window pointer
-class Window
-{
+class Window {
 private:
     /// window handle
-    SDL_Window *window_=nullptr;
-    
+    SDL_Window* window_ = nullptr;
+
 public:
     Window();
-	Window(const Window&)=delete;
-	Window(Window&&)=delete;
+    Window(const Window&) = delete;
+    Window(Window&&) = delete;
     /// destroys the window handle
-	~Window();
+    ~Window();
 
-	Window& operator=(const Window&)=delete;
-	Window& operator=(Window&&)=delete;
+    Window& operator=(const Window&) = delete;
+    Window& operator=(Window&&) = delete;
 
     /// create the window, initialize the handle and update the width and height
-    void create(const std::string &window_name, int width, int height, unsigned flags=WindowFlags::SHOWN);
+    void create(const std::string& window_name, int width, int height,
+                unsigned flags = WindowFlags::SHOWN);
     /// swap the buffer
     void swapBuffer();
     /// clear buffer
     void clearBuffer();
 };
-    
-} // namespace yage
+
+}  // namespace yage
 
 #endif

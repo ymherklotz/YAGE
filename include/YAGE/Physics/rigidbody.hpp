@@ -13,18 +13,14 @@
 
 #include "particlebody.hpp"
 
-namespace yage
-{
+namespace yage {
 
-class RigidBody : public ParticleBody
-{
+class RigidBody : public ParticleBody {
 public:
-	RigidBody(const Vector2d &position=Vector2d(0, 0),
-	          double mass=1,
- 	          const Vector2d &velocity=Vector2d(0, 0),
-	          bool gravity=true);
+    RigidBody(const Vector2d& position = Vector2d(0, 0), double mass = 1,
+              const Vector2d& velocity = Vector2d(0, 0), bool gravity = true);
 };
 
-} // yage
+}  // yage
 
 #endif

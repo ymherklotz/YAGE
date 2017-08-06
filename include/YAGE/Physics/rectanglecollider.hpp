@@ -13,18 +13,16 @@
 
 #include <glm/glm.hpp>
 
-namespace yage
-{
+namespace yage {
 
-class RectangleCollider : public Collider
-{
+class RectangleCollider : public Collider {
 public:
-	RectangleCollider(const glm::vec2 &position, const glm::vec2 &size);
+    RectangleCollider(const glm::vec2& position, const glm::vec2& size);
 
-	virtual bool collides(const Collider &collider) const;
-	virtual bool inside(const glm::vec2 &point) const;
+    virtual bool collides(const Collider& collider) const;
+    virtual bool inside(const glm::vec2& point) const;
 };
 
-} // yage
+}  // yage
 
 #endif

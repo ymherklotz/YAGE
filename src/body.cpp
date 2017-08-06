@@ -8,23 +8,19 @@
 
 #include "Physics/body.hpp"
 
-namespace yage
-{
+namespace yage {
 
-const double Body::GRAVITY=-9.81;
+const double Body::GRAVITY = -9.81;
 
-double Body::xPosition() const
-{
-	return position_[0];
-}
+double Body::xPosition() const { return position_[0]; }
 
-double Body::yPosition() const
-{
-	return position_[1];
-}
+double Body::yPosition() const { return position_[1]; }
 
-Body::Body(const Vector2d &position, double mass, const Vector2d &velocity, bool gravity) :
-	position_(position), mass_(mass), velocity_(velocity), gravity_(gravity)
-{}
+Body::Body(const Vector2d& position, double mass, const Vector2d& velocity,
+           bool gravity)
+    : position_(position),
+      mass_(mass),
+      velocity_(velocity),
+      gravity_(gravity) {}
 
-} // yage
+}  // yage
