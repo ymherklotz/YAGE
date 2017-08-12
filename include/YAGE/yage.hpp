@@ -27,14 +27,9 @@
 
 namespace yage {
 
-bool init() {
-    if (SDL_Init(SDL_INIT_VIDEO)) {
-        return false;
-    }
-    return true;
-}
-
+bool init() { return SDL_Init(SDL_INIT_VIDEO); }
 void quit() { SDL_Quit(); }
+
 };
 
 #endif

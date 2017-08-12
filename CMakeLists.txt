@@ -1,3 +1,10 @@
+# ----------------------------------------------------------------------------
+# CMakeLists.txt
+#
+# Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+# See file LICENSE for more details
+# ----------------------------------------------------------------------------
+
 cmake_minimum_required(VERSION 3.0)
 
 # yage library cmakelists.txt
@@ -69,13 +76,17 @@ include_directories(${YAGE_INCLUDE_DIR}
 # make it a static library
 add_library(${PROJECT_NAME} ${YAGE_SOURCES})
 
-set(YAGE_LIB_DEP_L yage
-  ${OPENGL_LIBRARIES}
-  ${GLEW_LIBRARIES})
+set(YAGE_LIB_DEP_L "yage;${OPENGL_LIBRARIES};${GLEW_LIBRARIES};${SDL2_LIBRAIRES}")
+
+message("${YAGE_LIB_DEP_L}")
 
 # enable tests
 enable_testing()
 set(SIMULATION_RUNS 1000)
+
+add_executable(yagetest ${YAGE_TEST_DIR}/yagetest.cpp)
+target_link_libraries(yagetest gtest_main ${YAGE_LIB_DEP_L})
+add_test(NAME Yagetest COMMAND yagetest --gtest_repeat=${SIMULATION_RUNS} --gtest_break_on_failure)
 
 add_executable(matrixtest ${YAGE_TEST_DIR}/matrixtest.cpp)
 target_link_libraries(matrixtest gtest_main ${YAGE_LIB_DEP_L})
@@ -84,3 +95,7 @@ add_test(NAME MatrixTest COMMAND matrixtest --gtest_repeat=${SIMULATION_RUNS} --
 add_executable(particlebodytest ${YAGE_TEST_DIR}/particlebodytest.cpp)
 target_link_libraries(particlebodytest gtest_main ${YAGE_LIB_DEP_L})
 add_test(NAME ParticleBodyTest COMMAND particlebodytest --gtest_repeat=${SIMULATION_RUNS} --gtest_break_on_failure)
+
+add_executable(windowtest ${YAGE_TEST_DIR}/windowtest.cpp)
+target_link_libraries(windowtest gtest_main ${YAGE_LIB_DEP_L})
+add_test(NAME Windowtest COMMAND windowtest --gtest_repeat=${SIMULATION_RUNS} --gtest_break_on_failure)

@@ -24,11 +24,11 @@ double gravityAcceleration(int iterations) {
 // Tests
 
 TEST(ParticleBody, Gravity) {
-    int random_itr = rand() % 25;
-    double idealPosition = 0.5 * -9.81 * std::pow(random_itr, 2);
+    int randomItr = rand() % 10;
+    double idealPosition = 0.5 * -9.81 * std::pow(randomItr, 2);
 
-    ASSERT_GE(idealPosition * 0.95, gravityAcceleration(random_itr));
-    ASSERT_LE(idealPosition * 1.05, gravityAcceleration(random_itr));
+    ASSERT_GE(idealPosition * 0.95, gravityAcceleration(randomItr));
+    ASSERT_LE(idealPosition * 1.05, gravityAcceleration(randomItr));
 }
 
 int main(int argc, char** argv) {

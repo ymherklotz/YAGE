@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# -----------------------------------------------------------------------------
+# sourceme
+#
+# Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+# See file LICENSE for more details
+# -----------------------------------------------------------------------------
+
+PROJECT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null 2>&1 && pwd )"
+
+export PATH="${PATH}:${PROJECT_DIR}/scripts"

@@ -28,30 +28,54 @@ import re
 import sys
 
 
-header = """/* ---------------------------------------------------------------\
--------------
+header = """/* -----------------------------------------------------------------------------
  * {0}
  *
- * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
- * See file LICENSE for more details
- * ----------------------------------------------------------------------------
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License,
+ * See LICENSE file for more details.
+ * -----------------------------------------------------------------------------
  */
 
 """
 
 
+class HeaderUpdate(object):
+    """Updates the header in all the source and header files in the code"""
+    def __init__(self, **kwargs):
+        self.match_re = ".*[.]cpp$|.*[.]hpp$"
+        if "match_re" in kwargs:
+            self.match_re = kwargs["match_re"]
+        self.exclude_re = ""
+        if "exlude_re" in kwargs:
+            self.exclude_re = kwargs["exclude_re"]
+        self.exclude_build = True
+        if "exclude_build" in kwargs:
+            self.exclude_build = kwargs["exclude_build"]
+
+    def writeHeader(self):
+        for subdir, dirs, files in os.walk(os.getcwd()):
+            if (not re.match(".*build.*", subdir) or (not self.exclude_build)):
+                for file_ in files:
+                    if (re.match(self.match_re, file_)) and (not re.match(self.exclude_re, file_)):
+
+                        with open(os.path.join(subdir, file_), 'r') as src_file:
+                            src = src_file.read()
+                        if not re.match("^/[*] -*$"):
+                            print(os.path.join(subdir, file_), end=" ")
+                            with open(os.path.join(subdir, file_), 'w') as src_file_lic:
+                                src_file_lic.write(header.format(file_))
+                                src_file_lic.write(src)
+                            print("-- done")
+
+    def updateHeader(self):
+        ...
+
+    def removeHeader(self):
+        ...
+
+
 def main(argv):
-    for subdir, dirs, files in os.walk(os.getcwd()):
-        if not re.match(".*build.*", subdir):
-            for file_ in files:
-                if re.match(".*[.]cpp$|.*[.]hpp$", file_) and not re.match("^picopng[.]cpp$", file_):
-                    print(os.path.join(subdir, file_), end=" ")
-                    with open(os.path.join(subdir, file_), 'r') as src_file:
-                        src = src_file.read()
-                    with open(os.path.join(subdir, file_), 'w') as src_file_lic:
-                        src_file_lic.write(header.format(file_))
-                        src_file_lic.write(src)
-                    print("-- done")
+    udpate = HeaderUpdate(exclude_re="^picopng[.]cpp")
 
 
 if __name__ == "__main__":
