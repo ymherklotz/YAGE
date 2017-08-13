@@ -28,12 +28,13 @@ import re
 import sys
 
 
-header = """/* -----------------------------------------------------------------------------
+header = """/* ---------------------------------------------------------------\
+-------------
  * {0}
  *
- * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License,
- * See LICENSE file for more details.
- * -----------------------------------------------------------------------------
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
+ * MIT License, see LICENSE file for more details.
+ * ----------------------------------------------------------------------------
  */
 
 """
@@ -43,26 +44,27 @@ class HeaderUpdate(object):
     """Updates the header in all the source and header files in the code"""
     def __init__(self, **kwargs):
         self.match_re = ".*[.]cpp$|.*[.]hpp$"
-        if "match_re" in kwargs:
-            self.match_re = kwargs["match_re"]
-        self.exclude_re = ""
-        if "exlude_re" in kwargs:
-            self.exclude_re = kwargs["exclude_re"]
+        self.exclude_re = "^$"
         self.exclude_build = True
-        if "exclude_build" in kwargs:
-            self.exclude_build = kwargs["exclude_build"]
+        self.exclude_dir = ".*build.*"
+        self.match_dir = ""
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def writeHeader(self):
         for subdir, dirs, files in os.walk(os.getcwd()):
-            if (not re.match(".*build.*", subdir) or (not self.exclude_build)):
+            if (not re.match(self.exclude_dir, subdir)) and \
+               (re.match(self.match_dir, subdir)):
                 for file_ in files:
-                    if (re.match(self.match_re, file_)) and (not re.match(self.exclude_re, file_)):
-
-                        with open(os.path.join(subdir, file_), 'r') as src_file:
+                    if (re.match(self.match_re, file_)) and \
+                       (not re.match(self.exclude_re, file_)):
+                        with open(os.path.join(subdir, file_), 'r') \
+                             as src_file:
                             src = src_file.read()
-                        if not re.match("^/[*] -*$"):
+                        if not re.match("^\/[*] -+", src):
                             print(os.path.join(subdir, file_), end=" ")
-                            with open(os.path.join(subdir, file_), 'w') as src_file_lic:
+                            with open(os.path.join(subdir, file_),
+                                      'w') as src_file_lic:
                                 src_file_lic.write(header.format(file_))
                                 src_file_lic.write(src)
                             print("-- done")
@@ -75,7 +77,10 @@ class HeaderUpdate(object):
 
 
 def main(argv):
-    udpate = HeaderUpdate(exclude_re="^picopng[.]cpp")
+    update = HeaderUpdate(exclude_re="^picopng[.]cpp",
+                          exclude_dir=".*build.*|.*google.*",
+                          match_dir=".*src.*|.*include.*|.*test.*")
+    update.writeHeader()
 
 
 if __name__ == "__main__":

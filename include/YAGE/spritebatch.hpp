@@ -6,8 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef SPRITE_BATCH_HPP
-#define SPRITE_BATCH_HPP
+#ifndef YAGE_SPRITE_BATCH_HPP
+#define YAGE_SPRITE_BATCH_HPP
 
 #include "vertex.hpp"
 
@@ -20,6 +20,8 @@ namespace yage {
 
 class SpriteBatch;
 
+/** Glyph with information of the texture.
+ */
 class Glyph {
     // member variables
 private:
@@ -46,24 +48,20 @@ public:
 
 class RenderBatch {
     friend SpriteBatch;
-    // member variables
 private:
     GLsizei num_vertices_;
     GLint offset_;
     GLuint texture_;
 
-    // member functions
 public:
     RenderBatch(GLint offset, GLsizei num_vertices, GLuint texture);
 
-    // getters
     GLint offset() const { return offset_; }
     GLsizei num_vertices() const { return num_vertices_; }
     GLuint texture() const { return texture_; }
 };
 
 class SpriteBatch {
-    // member variables
 public:
     static const int NUM_VERTICES = 6;
 
