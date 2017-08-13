@@ -1,14 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "cdgmnortvy",
+  0: "cdgmrtvy",
   1: "gmv",
   2: "y",
   3: "m",
-  4: "cdgmnort",
+  4: "cdgmrt",
   5: "d",
   6: "v",
-  7: "g",
-  8: "dy"
+  7: "dy"
 };
 
 var indexSectionNames =
@@ -20,8 +19,7 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "typedefs",
-  7: "groups",
-  8: "pages"
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -33,7 +31,6 @@ var indexSectionLabels =
   4: "Functions",
   5: "Variables",
   6: "Typedefs",
-  7: "Modules",
-  8: "Pages"
+  7: "Pages"
 };
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['offset',['offset',['../group__getters.html#ga6bedb60b10b6d47b7b198d3cb53eea2a',1,'yage::RenderBatch']]]
+  ['transpose',['transpose',['../namespaceyage_1_1matrix.html#a62de4b4b6bab23717d957c370f2e41c7',1,'yage::matrix']]]
 ];

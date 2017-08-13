@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['num_5fvertices',['num_vertices',['../group__getters.html#gad5edaded9e6257aa2f3a3b7cae276307',1,'yage::RenderBatch']]]
+  ['rowsize',['rowSize',['../classyage_1_1Matrix.html#acaf0837fade0cb4179603b97ac224965',1,'yage::Matrix']]]
 ];
