@@ -23,7 +23,6 @@ class SpriteBatch;
 /** Glyph with information of the texture.
  */
 class Glyph {
-    // member variables
 private:
     GLuint texture_;
     float depth_;
@@ -32,7 +31,6 @@ private:
     Vertex bottom_right_;
     Vertex bottom_left_;
 
-    // member functions
 public:
     Glyph(GLuint texture, float depth, const Vertex& top_left,
           const Vertex& top_right, const Vertex& bottom_right,
@@ -72,7 +70,6 @@ private:
     std::vector<Glyph*> glyph_ptrs_;
     std::vector<RenderBatch> render_batches_;
 
-    // member functions
 public:
     SpriteBatch();
     SpriteBatch(const SpriteBatch&) = delete;
@@ -98,6 +95,6 @@ private:
     void sortGlyphs();
 };
 
-}  // yage
+}  // namespace yage
 
 #endif

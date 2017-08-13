@@ -48,32 +48,39 @@ class HeaderUpdate(object):
         self.exclude_build = True
         self.exclude_dir = ".*build.*"
         self.match_dir = ""
+        self.comment_match = "^\/[*] -+"
+        self.starting_dir = os.getcwd()
         for key, value in kwargs.items():
             setattr(self, key, value)
 
     def writeHeader(self):
-        for subdir, dirs, files in os.walk(os.getcwd()):
-            if (not re.match(self.exclude_dir, subdir)) and \
-               (re.match(self.match_dir, subdir)):
-                for file_ in files:
-                    if (re.match(self.match_re, file_)) and \
-                       (not re.match(self.exclude_re, file_)):
-                        with open(os.path.join(subdir, file_), 'r') \
-                             as src_file:
-                            src = src_file.read()
-                        if not re.match("^\/[*] -+", src):
-                            print(os.path.join(subdir, file_), end=" ")
-                            with open(os.path.join(subdir, file_),
-                                      'w') as src_file_lic:
-                                src_file_lic.write(header.format(file_))
-                                src_file_lic.write(src)
-                            print("-- done")
+        def writeFileOperation(filePath, src):
+            if not re.match(self.comment_match, src):
+                print(filePath, end=" ")
+                with open(filePath, 'w') as src_file_lic:
+                    src_file_lic.write(header.format(filePath))
+                    src_file_lic.write(src)
+                print("-- done")
+
+        self._traverseDir(self.starting_dir, writeFileOperation)
 
     def updateHeader(self):
         ...
 
     def removeHeader(self):
         ...
+
+    def _traverseDir(self, path, fileOperation):
+        for subdir, dirs, files in os.walk(os.getcwd()):
+            if (not re.match(self.exclude_dir, subdir)) and \
+               (re.match(self.match_dir, subdir)):
+                for fileName in files:
+                    if (re.match(self.match_re, fileName)) and \
+                       (not re.match(self.exclude_re, fileName)):
+                        with open(os.path.join(subdir, fileName), 'r') \
+                             as src_file:
+                            src = src_file.read()
+                        fileOperation(os.path.join(subdir, fileName), src)
 
 
 def main(argv):
