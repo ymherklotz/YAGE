@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['vector2',['Vector2',['../classyage_1_1Vector2.html',1,'yage']]],
-  ['vector2_3c_20double_20_3e',['Vector2&lt; double &gt;',['../classyage_1_1Vector2.html',1,'yage']]]
+  ['matrix',['Matrix',['../classyage_1_1Matrix.html',1,'yage']]],
+  ['matrix_3c_20rows_2c_201_2c_20double_20_3e',['Matrix&lt; Rows, 1, double &gt;',['../classyage_1_1Matrix.html',1,'yage']]],
+  ['matrix_3c_20rows_2c_201_2c_20type_20_3e',['Matrix&lt; Rows, 1, Type &gt;',['../classyage_1_1Matrix.html',1,'yage']]]
 ];
