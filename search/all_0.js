@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['colsize',['colSize',['../classyage_1_1Matrix.html#a2753285bcc49a050a49976a6dbc8e89a',1,'yage::Matrix']]]
+  ['begin',['begin',['../classyage_1_1Matrix.html#a83d77d3a40ced5e2b703a6d66b6e6055',1,'yage::Matrix']]]
 ];

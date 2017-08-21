@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getrow',['getRow',['../classyage_1_1Matrix.html#adffb22a99417271958621ff1f51b7f08',1,'yage::Matrix']]]
+  ['dot',['dot',['../namespaceyage_1_1matrix.html#ac4d2f55a5c3369ec42001776a582c30a',1,'yage::matrix']]]
 ];
