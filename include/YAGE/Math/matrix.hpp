@@ -121,14 +121,15 @@ public:
         return colMatrix;
     }
 
-    // iterator support for begin
+    /// iterator support for begin
     typename std::vector<Type>::iterator begin() { return data_.begin(); }
 
-    // iterator support for end
+    /// iterator support for end
     typename std::vector<Type>::iterator end() { return data_.end(); }
 
-    // prints out the matrix, but can also be implemented by other classes to
-    // print data differently
+    /** prints out the matrix, but can also be implemented by other classes to
+	 * print data differently
+	 */
     virtual std::string toString() const {
         std::stringstream ss;
         ss << '[';
