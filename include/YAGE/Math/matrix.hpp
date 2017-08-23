@@ -275,7 +275,7 @@ public:
 
     const Type& operator[](int col) const { return this->data_[col]; }
 
-    std::string toString() const override override override {
+    std::string toString() const override {
         std::stringstream ss;
         ss << "[";
         for (std::size_t i = 0; i < this->data_.size() - 1; ++i) {
