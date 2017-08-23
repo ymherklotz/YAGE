@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['imageloader_2ecpp',['imageloader.cpp',['../imageloader_8cpp.html',1,'']]],
-  ['imageloader_2ehpp',['imageloader.hpp',['../imageloader_8hpp.html',1,'']]],
-  ['inputmanager_2ecpp',['inputmanager.cpp',['../inputmanager_8cpp.html',1,'']]],
-  ['inputmanager_2ehpp',['inputmanager.hpp',['../inputmanager_8hpp.html',1,'']]],
-  ['iomanager_2ecpp',['iomanager.cpp',['../iomanager_8cpp.html',1,'']]],
-  ['iomanager_2ehpp',['iomanager.hpp',['../iomanager_8hpp.html',1,'']]]
+  ['math_2ehpp',['math.hpp',['../math_8hpp.html',1,'']]],
+  ['matrix_2ehpp',['matrix.hpp',['../matrix_8hpp.html',1,'']]],
+  ['matrixtest_2ecpp',['matrixtest.cpp',['../matrixtest_8cpp.html',1,'']]]
 ];

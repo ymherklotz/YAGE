@@ -1,7 +1,6 @@
 var searchData=
 [
   ['data_5f',['data_',['../classyage_1_1Matrix.html#a0ab11922319366f6e74f6e9e7d7abeed',1,'yage::Matrix']]],
-  ['dec',['DEC',['../3_88_82_2CompilerIdC_2CMakeCCompilerId_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCCompilerId.c'],['../3_88_82_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCXXCompilerId.cpp'],['../3_89_81_2CompilerIdC_2CMakeCCompilerId_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCCompilerId.c'],['../3_89_81_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCXXCompilerId.cpp']]],
   ['decodepng',['decodePNG',['../namespaceyage.html#a60fa59da6c362523413ddcd5739a9891',1,'yage']]],
   ['depth',['depth',['../classyage_1_1Glyph.html#ab1906273e09446d9f6ccdc0a06428afa',1,'yage::Glyph']]],
   ['depth_5f',['depth_',['../classyage_1_1Glyph.html#ab27b92a62dcebccae673a7d8d0c15704',1,'yage::Glyph']]],

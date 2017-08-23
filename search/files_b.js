@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['window_2ecpp',['window.cpp',['../window_8cpp.html',1,'']]],
-  ['window_2ehpp',['window.hpp',['../window_8hpp.html',1,'']]],
-  ['windowtest_2ecpp',['windowtest.cpp',['../windowtest_8cpp.html',1,'']]]
+  ['yage_2ehpp',['yage.hpp',['../yage_8hpp.html',1,'']]],
+  ['yagetest_2ecpp',['yagetest.cpp',['../yagetest_8cpp.html',1,'']]]
 ];
