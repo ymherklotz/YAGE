@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -44,6 +51,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('inputmanager_8hpp_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -58,23 +80,27 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f562165b51c585c003877be645f219b5.html">YAGE</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">inputmanager.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ----------------------------------------------------------------------------</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * inputmanager.hpp</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2017 Yann Herklotz Grave &lt;ymherklotz@gmail.com&gt; -- MIT License</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * See file LICENSE for more details</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * ----------------------------------------------------------------------------</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef INPUT_MANAGER_HPP</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define INPUT_MANAGER_HPP</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceyage.html">yage</a></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>InputManager</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::unordered_map&lt;unsigned, bool&gt; key_map_;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> keyPressed(<span class="keywordtype">unsigned</span> key);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> keyReleased(<span class="keywordtype">unsigned</span> key);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> isKeyPressed(<span class="keywordtype">unsigned</span> key) <span class="keyword">const</span>;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="namespaceyage_html"><div class="ttname"><a href="namespaceyage.html">yage</a></div><div class="ttdef"><b>Definition:</b> camera2d.hpp:17</div></div>
+<a href="inputmanager_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ----------------------------------------------------------------------------</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * inputmanager.hpp</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2017 Yann Herklotz Grave &lt;ymherklotz@gmail.com&gt; -- MIT License</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * See file LICENSE for more details</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * ----------------------------------------------------------------------------</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef INPUT_MANAGER_HPP</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define INPUT_MANAGER_HPP</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceyage.html">yage</a></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classyage_1_1InputManager.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1InputManager.html">InputManager</a></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classyage_1_1InputManager.html#a9a484e406a3713df30ad887abd8ae28c">   20</a></span>&#160;    std::unordered_map&lt;unsigned, bool&gt; <a class="code" href="classyage_1_1InputManager.html#a9a484e406a3713df30ad887abd8ae28c">key_map_</a>;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1InputManager.html#aa5f6416a0277a33cf9afe74e16f156a5">keyPressed</a>(<span class="keywordtype">unsigned</span> key);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1InputManager.html#aa420dbea2ae5e291b3fe9d8d3f9095d0">keyReleased</a>(<span class="keywordtype">unsigned</span> key);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classyage_1_1InputManager.html#afc9124e171725c291f9a1b0ed670805e">isKeyPressed</a>(<span class="keywordtype">unsigned</span> key) <span class="keyword">const</span>;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classyage_1_1InputManager_html_aa420dbea2ae5e291b3fe9d8d3f9095d0"><div class="ttname"><a href="classyage_1_1InputManager.html#aa420dbea2ae5e291b3fe9d8d3f9095d0">yage::InputManager::keyReleased</a></div><div class="ttdeci">void keyReleased(unsigned key)</div><div class="ttdef"><b>Definition:</b> inputmanager.cpp:15</div></div>
+<div class="ttc" id="classyage_1_1InputManager_html"><div class="ttname"><a href="classyage_1_1InputManager.html">yage::InputManager</a></div><div class="ttdef"><b>Definition:</b> inputmanager.hpp:17</div></div>
+<div class="ttc" id="classyage_1_1InputManager_html_aa5f6416a0277a33cf9afe74e16f156a5"><div class="ttname"><a href="classyage_1_1InputManager.html#aa5f6416a0277a33cf9afe74e16f156a5">yage::InputManager::keyPressed</a></div><div class="ttdeci">void keyPressed(unsigned key)</div><div class="ttdef"><b>Definition:</b> inputmanager.cpp:13</div></div>
+<div class="ttc" id="classyage_1_1InputManager_html_a9a484e406a3713df30ad887abd8ae28c"><div class="ttname"><a href="classyage_1_1InputManager.html#a9a484e406a3713df30ad887abd8ae28c">yage::InputManager::key_map_</a></div><div class="ttdeci">std::unordered_map&lt; unsigned, bool &gt; key_map_</div><div class="ttdef"><b>Definition:</b> inputmanager.hpp:20</div></div>
+<div class="ttc" id="classyage_1_1InputManager_html_afc9124e171725c291f9a1b0ed670805e"><div class="ttname"><a href="classyage_1_1InputManager.html#afc9124e171725c291f9a1b0ed670805e">yage::InputManager::isKeyPressed</a></div><div class="ttdeci">bool isKeyPressed(unsigned key) const</div><div class="ttdef"><b>Definition:</b> inputmanager.cpp:17</div></div>
+<div class="ttc" id="namespaceyage_html"><div class="ttname"><a href="namespaceyage.html">yage</a></div><div class="ttdoc">Templated matrix class. </div><div class="ttdef"><b>Definition:</b> camera2d.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 21 2017 20:54:26 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f562165b51c585c003877be645f219b5.html">YAGE</a></li><li class="navelem"><a class="el" href="inputmanager_8hpp.html">inputmanager.hpp</a></li>
+    <li class="footer">Generated on Wed Aug 23 2017 22:56:51 for YAGE by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

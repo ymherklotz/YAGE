@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +52,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,35 +81,360 @@ $(function() {
 </div>
 
 <div class="contents">
-&#160;<ul>
+&#160;
+
+<h3><a id="index_a"></a>- a -</h3><ul>
+<li>addAttribute()
+: <a class="el" href="classyage_1_1GlslProgram.html#a4e38b9f5daaf4b111b69e4d2900d4970">yage::GlslProgram</a>
+</li>
+<li>applyForce()
+: <a class="el" href="classyage_1_1Body.html#a56310be4f9d7d2d4e7f954af0e0a5878">yage::Body</a>
+, <a class="el" href="classyage_1_1ParticleBody.html#adbfa9273896a46d494499cc146f17425">yage::ParticleBody</a>
+</li>
+</ul>
+
+
+<h3><a id="index_b"></a>- b -</h3><ul>
 <li>begin()
 : <a class="el" href="classyage_1_1Matrix.html#a83d77d3a40ced5e2b703a6d66b6e6055">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
+, <a class="el" href="classyage_1_1SpriteBatch.html#af6293aac69e1124199297e5b921a4872">yage::SpriteBatch</a>
+</li>
+<li>Body()
+: <a class="el" href="classyage_1_1Body.html#aeca769807d9b6f6fb3c9f61deaa83b86">yage::Body</a>
+</li>
+<li>bottom_left()
+: <a class="el" href="classyage_1_1Glyph.html#a8d8150986db3f0985f1b5d9622f83854">yage::Glyph</a>
+</li>
+<li>bottom_right()
+: <a class="el" href="classyage_1_1Glyph.html#a3db3e9cd03629c6c37a597d5779d1024">yage::Glyph</a>
+</li>
+</ul>
+
+
+<h3><a id="index_c"></a>- c -</h3><ul>
+<li>Camera2D()
+: <a class="el" href="classyage_1_1Camera2D.html#a7ef3b02255622486ef8f396e2cb1ec4a">yage::Camera2D</a>
+</li>
+<li>clearBuffer()
+: <a class="el" href="classyage_1_1Window.html#a98e2a33820ad63b2c94c56e203ff6e58">yage::Window</a>
+</li>
+<li>Collider()
+: <a class="el" href="classyage_1_1Collider.html#ae33aeb0711409e7c3ef9e21ed99fa8a3">yage::Collider</a>
+</li>
+<li>collides()
+: <a class="el" href="classyage_1_1Collider.html#abbab9373c0805ffa5215c08b82eaed03">yage::Collider</a>
+, <a class="el" href="classyage_1_1RectangleCollider.html#a81e825cf009a437bc0f61b846cac66f6">yage::RectangleCollider</a>
+</li>
+<li>CollisionBody()
+: <a class="el" href="classyage_1_1CollisionBody.html#a5289e613269facc45cd451872c17a83d">yage::CollisionBody</a>
+</li>
+<li>Color()
+: <a class="el" href="structyage_1_1Color.html#ab0262bbe3b2ec12a9933fe411034d09e">yage::Color</a>
 </li>
 <li>colSize()
 : <a class="el" href="classyage_1_1Matrix.html#a2753285bcc49a050a49976a6dbc8e89a">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
 </li>
+<li>compileShader()
+: <a class="el" href="classyage_1_1GlslProgram.html#a1acc7e052209fde74256c479af6d9988">yage::GlslProgram</a>
+</li>
+<li>compileShaders()
+: <a class="el" href="classyage_1_1GlslProgram.html#acf57b56739f67ac88b0d5df3bf1d4cb1">yage::GlslProgram</a>
+</li>
+<li>create()
+: <a class="el" href="classyage_1_1Window.html#abfb5ae5e5abf22133e59097fc8aae5fe">yage::Window</a>
+</li>
+<li>createRenderBatches()
+: <a class="el" href="classyage_1_1SpriteBatch.html#ae3e74abbf722aba0197b64d8f61d928c">yage::SpriteBatch</a>
+</li>
+<li>createVertexArray()
+: <a class="el" href="classyage_1_1SpriteBatch.html#a4e21cc3bc27fbfaf1b6a15362b664027">yage::SpriteBatch</a>
+</li>
+</ul>
+
+
+<h3><a id="index_d"></a>- d -</h3><ul>
+<li>depth()
+: <a class="el" href="classyage_1_1Glyph.html#ab1906273e09446d9f6ccdc0a06428afa">yage::Glyph</a>
+</li>
+<li>draw()
+: <a class="el" href="classyage_1_1Sprite.html#a8eed26f4fa57b3ad47d791564233ee40">yage::Sprite</a>
+, <a class="el" href="classyage_1_1SpriteBatch.html#ab477a5393ddd7b78afba93b96962f038">yage::SpriteBatch</a>
+</li>
+</ul>
+
+
+<h3><a id="index_e"></a>- e -</h3><ul>
 <li>end()
 : <a class="el" href="classyage_1_1Matrix.html#a20ea5fe16d27ef15f775b5497cadc851">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
+, <a class="el" href="classyage_1_1SpriteBatch.html#af8b705cdad7ceefa902f3be620ac8632">yage::SpriteBatch</a>
+</li>
+</ul>
+
+
+<h3><a id="index_g"></a>- g -</h3><ul>
+<li>getCol()
+: <a class="el" href="classyage_1_1Matrix.html#a2833adcae1e01f637eba251c5aee7888">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
 </li>
 <li>getRow()
 : <a class="el" href="classyage_1_1Matrix.html#adffb22a99417271958621ff1f51b7f08">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
 </li>
+<li>getTexture()
+: <a class="el" href="classyage_1_1ResourceManager.html#a36d805924374f27aa7dbce1d47795b25">yage::ResourceManager</a>
+, <a class="el" href="classyage_1_1TextureCache.html#acec85e497e3dbcded344f4bed6b4389e">yage::TextureCache</a>
+</li>
+<li>getUniformLocation()
+: <a class="el" href="classyage_1_1GlslProgram.html#a255ccbb1d94d17f2de62319efd4be91d">yage::GlslProgram</a>
+</li>
+<li>GlslProgram()
+: <a class="el" href="classyage_1_1GlslProgram.html#a78268f78af00bcb2358d48bb010aa9fd">yage::GlslProgram</a>
+</li>
+<li>Glyph()
+: <a class="el" href="classyage_1_1Glyph.html#a19ae31e594b33bb1ad3bc1763cdba38f">yage::Glyph</a>
+</li>
+</ul>
+
+
+<h3><a id="index_i"></a>- i -</h3><ul>
+<li>init()
+: <a class="el" href="classyage_1_1Sprite.html#a2f6294be8b2551077cf475892bcddcc1">yage::Sprite</a>
+, <a class="el" href="classyage_1_1SpriteBatch.html#a7731372a6ec1aea75d1732700fe0f4c6">yage::SpriteBatch</a>
+</li>
+<li>inside()
+: <a class="el" href="classyage_1_1Collider.html#a4a8ad9e664a0015e023a70d196302fe9">yage::Collider</a>
+, <a class="el" href="classyage_1_1RectangleCollider.html#ac8d8e6bdb12c21be12f7d398242147c4">yage::RectangleCollider</a>
+</li>
+<li>isKeyPressed()
+: <a class="el" href="classyage_1_1InputManager.html#afc9124e171725c291f9a1b0ed670805e">yage::InputManager</a>
+</li>
+</ul>
+
+
+<h3><a id="index_k"></a>- k -</h3><ul>
+<li>keyPressed()
+: <a class="el" href="classyage_1_1InputManager.html#aa5f6416a0277a33cf9afe74e16f156a5">yage::InputManager</a>
+</li>
+<li>keyReleased()
+: <a class="el" href="classyage_1_1InputManager.html#aa420dbea2ae5e291b3fe9d8d3f9095d0">yage::InputManager</a>
+</li>
+</ul>
+
+
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>linkShaders()
+: <a class="el" href="classyage_1_1GlslProgram.html#aed74ec6db4d2b02e1172bd5694eb1b27">yage::GlslProgram</a>
+</li>
+<li>loadPng()
+: <a class="el" href="classyage_1_1ImageLoader.html#ad8dcdaaed43713f07723f2b6719d1b32">yage::ImageLoader</a>
+</li>
+</ul>
+
+
+<h3><a id="index_m"></a>- m -</h3><ul>
 <li>Matrix()
 : <a class="el" href="classyage_1_1Matrix.html#a73b7d1f94f4f72a2294b71b3a35794ad">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
+</li>
+<li>move()
+: <a class="el" href="classyage_1_1Camera2D.html#a9c6d369978a4c142db3059f8d5a122b0">yage::Camera2D</a>
+</li>
+</ul>
+
+
+<h3><a id="index_n"></a>- n -</h3><ul>
+<li>num_vertices()
+: <a class="el" href="classyage_1_1RenderBatch.html#ad5edaded9e6257aa2f3a3b7cae276307">yage::RenderBatch</a>
+</li>
+</ul>
+
+
+<h3><a id="index_o"></a>- o -</h3><ul>
+<li>offset()
+: <a class="el" href="classyage_1_1RenderBatch.html#a6bedb60b10b6d47b7b198d3cb53eea2a">yage::RenderBatch</a>
+</li>
+<li>operator+=()
+: <a class="el" href="classyage_1_1Matrix.html#a8b7e0913efdb5e8c9ff39df4c4f36228">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
+</li>
+<li>operator-=()
+: <a class="el" href="classyage_1_1Matrix.html#acc2d0763f060c923ce53b37143d0a7bb">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
+</li>
+<li>operator=()
+: <a class="el" href="classyage_1_1GlslProgram.html#a5af953324ac9f89aecf7e0a73a9467ad">yage::GlslProgram</a>
+, <a class="el" href="classyage_1_1Sprite.html#a97dd80e05efb9399ee8471ff40a77bee">yage::Sprite</a>
+, <a class="el" href="classyage_1_1SpriteBatch.html#a1b365d89c096d7fa138e1c7091f1d737">yage::SpriteBatch</a>
+, <a class="el" href="classyage_1_1Window.html#a5247a4164bf0006fe9f034cd27c5b6db">yage::Window</a>
+</li>
+<li>operator[]()
+: <a class="el" href="classyage_1_1detail_1_1Row.html#a2d29349b569f311919bb100855a4bfee">yage::detail::Row&lt; Rows, Cols, Type &gt;</a>
+, <a class="el" href="classyage_1_1Matrix.html#a9dc57c60a19b805a41b8bfb951ce2fef">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
+, <a class="el" href="classyage_1_1Vector.html#a81efa1cb9d4ce8bb8c5cf9652a5650a2">yage::Vector&lt; Rows, Type &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_p"></a>- p -</h3><ul>
+<li>ParticleBody()
+: <a class="el" href="classyage_1_1ParticleBody.html#ae20aad802b5620597d0521663061efc0">yage::ParticleBody</a>
+</li>
+<li>Position()
+: <a class="el" href="structyage_1_1Position.html#a41b1d5ee23c50208982ab6089708e5d2">yage::Position</a>
+</li>
+</ul>
+
+
+<h3><a id="index_r"></a>- r -</h3><ul>
+<li>readFileToBuffer()
+: <a class="el" href="classyage_1_1IoManager.html#a75d13ca634df592e44e4152fedcd446d">yage::IoManager</a>
+</li>
+<li>RectangleCollider()
+: <a class="el" href="classyage_1_1RectangleCollider.html#af9e0964655073b0a190c9d06b449a969">yage::RectangleCollider</a>
+</li>
+<li>render()
+: <a class="el" href="classyage_1_1SpriteBatch.html#a195c4aca60815d413c65dce99389282d">yage::SpriteBatch</a>
+</li>
+<li>RenderBatch()
+: <a class="el" href="classyage_1_1RenderBatch.html#a4a3a3180c63c51178871648d4c8e6853">yage::RenderBatch</a>
+</li>
+<li>RigidBody()
+: <a class="el" href="classyage_1_1RigidBody.html#aed946934f970694c6f6840b09600a606">yage::RigidBody</a>
+</li>
+<li>Row()
+: <a class="el" href="classyage_1_1detail_1_1Row.html#aed5d16657dfa849a6ea1b8b05f5bbcf8">yage::detail::Row&lt; Rows, Cols, Type &gt;</a>
 </li>
 <li>rowSize()
 : <a class="el" href="classyage_1_1Matrix.html#acaf0837fade0cb4179603b97ac224965">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
 </li>
+</ul>
+
+
+<h3><a id="index_s"></a>- s -</h3><ul>
+<li>setColor()
+: <a class="el" href="structyage_1_1Vertex.html#a0dc5fa6c669b4c10a8d56702f2aa9b50">yage::Vertex</a>
+</li>
+<li>setPosition()
+: <a class="el" href="structyage_1_1Vertex.html#af392248f0be173221ebcc62d490fe03d">yage::Vertex</a>
+</li>
+<li>setUv()
+: <a class="el" href="structyage_1_1Vertex.html#aa1fa8f5ebd883068828466cc924d4c50">yage::Vertex</a>
+</li>
+<li>sortGlyphs()
+: <a class="el" href="classyage_1_1SpriteBatch.html#adea6570f196b203a4d6e07ad66738c9a">yage::SpriteBatch</a>
+</li>
+<li>Sprite()
+: <a class="el" href="classyage_1_1Sprite.html#a80b2bc32161d2444f4a4cf3492effc06">yage::Sprite</a>
+</li>
+<li>SpriteBatch()
+: <a class="el" href="classyage_1_1SpriteBatch.html#afda50a8a2a6c9ffd1b9d962fae223f8a">yage::SpriteBatch</a>
+</li>
+<li>swapBuffer()
+: <a class="el" href="classyage_1_1Window.html#a86d0aa8e9896850b9acfc720b5615359">yage::Window</a>
+</li>
+</ul>
+
+
+<h3><a id="index_t"></a>- t -</h3><ul>
+<li>texture()
+: <a class="el" href="classyage_1_1Glyph.html#af59de1a9642b07583d49197bc9d74747">yage::Glyph</a>
+, <a class="el" href="classyage_1_1RenderBatch.html#a54102dde86a787d06d47928de8f72c3f">yage::RenderBatch</a>
+</li>
+<li>TextureCache()
+: <a class="el" href="classyage_1_1TextureCache.html#a5e96e92a02ded2af93e91df54f08300d">yage::TextureCache</a>
+</li>
+<li>top_left()
+: <a class="el" href="classyage_1_1Glyph.html#a6a86e79419ccea7f6921685c197453a1">yage::Glyph</a>
+</li>
+<li>top_right()
+: <a class="el" href="classyage_1_1Glyph.html#aac14f7258926c0c06ec594bc616ed5d0">yage::Glyph</a>
+</li>
 <li>toString()
 : <a class="el" href="classyage_1_1Matrix.html#aaa7273d046ac077da76ffaec876041d7">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
+, <a class="el" href="classyage_1_1Vector.html#a8834325b7bb718b2c47929b2fbf07985">yage::Vector&lt; Rows, Type &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_u"></a>- u -</h3><ul>
+<li>unuse()
+: <a class="el" href="classyage_1_1GlslProgram.html#a2afa98cbf5d25b634e01b863c33fcf8f">yage::GlslProgram</a>
+</li>
+<li>update()
+: <a class="el" href="classyage_1_1Body.html#a17017d183f3f9ecdff779fd6f82c5d36">yage::Body</a>
+, <a class="el" href="classyage_1_1Camera2D.html#addc194a43322262e7d102f212e5f5cf7">yage::Camera2D</a>
+, <a class="el" href="classyage_1_1ParticleBody.html#a3e4a2a23b33b991b01cdaf237a41773d">yage::ParticleBody</a>
+</li>
+<li>use()
+: <a class="el" href="classyage_1_1GlslProgram.html#a762b44540ef219ff39f784543fc162c3">yage::GlslProgram</a>
+</li>
+<li>UV()
+: <a class="el" href="structyage_1_1UV.html#ac918524789292937aae5803df3c2673f">yage::UV</a>
+</li>
+</ul>
+
+
+<h3><a id="index_v"></a>- v -</h3><ul>
+<li>Vector()
+: <a class="el" href="classyage_1_1Vector.html#ac9b202913c03bde201e350e855fbbffa">yage::Vector&lt; Rows, Type &gt;</a>
+</li>
+<li>Vector2()
+: <a class="el" href="classyage_1_1Vector2.html#a3ef3bc2954f387f1db2165a884765ad0">yage::Vector2&lt; Type &gt;</a>
+</li>
+<li>Vertex()
+: <a class="el" href="structyage_1_1Vertex.html#acae9697c2762e37dfa4472b85fa112c3">yage::Vertex</a>
+</li>
+</ul>
+
+
+<h3><a id="index_w"></a>- w -</h3><ul>
+<li>Window()
+: <a class="el" href="classyage_1_1Window.html#a7d7bd2f22e095df387e8b5cda2bb484e">yage::Window</a>
+</li>
+</ul>
+
+
+<h3><a id="index_x"></a>- x -</h3><ul>
+<li>x()
+: <a class="el" href="classyage_1_1Vector2.html#a5a777413b63e68dc5f797d31e3d7beaf">yage::Vector2&lt; Type &gt;</a>
+</li>
+<li>xPosition()
+: <a class="el" href="classyage_1_1Body.html#a8daaf95396e8e0c580fa3d94c9542289">yage::Body</a>
+</li>
+</ul>
+
+
+<h3><a id="index_y"></a>- y -</h3><ul>
+<li>y()
+: <a class="el" href="classyage_1_1Vector2.html#a554645b415a76af47698985b7757f0c2">yage::Vector2&lt; Type &gt;</a>
+</li>
+<li>yPosition()
+: <a class="el" href="classyage_1_1Body.html#ac4e626792d726a12e0b461a6c0eff02d">yage::Body</a>
+</li>
+</ul>
+
+
+<h3><a id="index_0x7e"></a>- ~ -</h3><ul>
+<li>~CollisionBody()
+: <a class="el" href="classyage_1_1CollisionBody.html#a758b2f867f276f4c7e02ebda2cd04c8b">yage::CollisionBody</a>
+</li>
+<li>~GlslProgram()
+: <a class="el" href="classyage_1_1GlslProgram.html#a45676c850afad2717fd4119eb8c02ef7">yage::GlslProgram</a>
+</li>
+<li>~Sprite()
+: <a class="el" href="classyage_1_1Sprite.html#aa2f833e040940616fa17ee8f02f8cab2">yage::Sprite</a>
+</li>
+<li>~SpriteBatch()
+: <a class="el" href="classyage_1_1SpriteBatch.html#afa26d86730be23aa5e0c8c4a9d67001a">yage::SpriteBatch</a>
+</li>
+<li>~Window()
+: <a class="el" href="classyage_1_1Window.html#a9a8dd109e145c459e52abb3a8861e3a0">yage::Window</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 21 2017 20:54:26 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Wed Aug 23 2017 22:56:51 for YAGE by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['glyph',['Glyph',['../classyage_1_1Glyph.html',1,'yage']]]
+  ['body',['Body',['../classyage_1_1Body.html',1,'yage']]]
 ];

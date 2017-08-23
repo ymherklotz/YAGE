@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -44,6 +51,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('namespaceyage_1_1matrix.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -58,11 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>yage</b></li><li class="navelem"><a class="el" href="namespaceyage_1_1matrix.html">matrix</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -90,8 +107,7 @@ Functions</h2></td></tr>
 <tr class="separator:a277125ad9fa06a7119c59d350e129985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Namespace containing functions that operate on matrices. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<div class="textblock"></div><h2 class="groupheader">Function Documentation</h2>
 <a id="ac4d2f55a5c3369ec42001776a582c30a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4d2f55a5c3369ec42001776a582c30a">&#9670;&nbsp;</a></span>dot()</h2>
 
@@ -119,8 +135,6 @@ template&lt;int R, class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Returns the dot product between two vectors. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m1,m2</td><td>Input matrices. </td></tr>
@@ -157,8 +171,6 @@ template&lt;int M, int N, int P, int Q, class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Multiplies two matrices together. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m1,m2</td><td><a class="el" href="classyage_1_1Matrix.html" title="Base Matrix class used by other similar classes. ">Matrix</a> inputs</td></tr>
@@ -186,8 +198,6 @@ template&lt;int M, int N, class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Transposes a matrix and returns the result. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>input matrix. </td></tr>
@@ -198,11 +208,15 @@ template&lt;int M, int N, class T &gt; </div>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 21 2017 20:54:26 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="namespaceyage_1_1matrix.html">matrix</a></li>
+    <li class="footer">Generated on Wed Aug 23 2017 22:56:51 for YAGE by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

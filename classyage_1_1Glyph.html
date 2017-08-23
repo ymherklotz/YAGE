@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -44,6 +51,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classyage_1_1Glyph.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -58,13 +80,10 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>yage</b></li><li class="navelem"><a class="el" href="classyage_1_1Glyph.html">Glyph</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classyage_1_1Glyph-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">yage::Glyph Class Reference</div>  </div>
@@ -72,21 +91,393 @@ $(function() {
 <div class="contents">
 
 <p><a class="el" href="classyage_1_1Glyph.html" title="Glyph with information of the texture. ">Glyph</a> with information of the texture.  
- <a href="classyage_1_1Glyph.html#details">More...</a></p>
+</p>
 
 <p><code>#include &lt;<a class="el" href="spritebatch_8hpp_source.html">spritebatch.hpp</a>&gt;</code></p>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classyage_1_1Glyph.html" title="Glyph with information of the texture. ">Glyph</a> with information of the texture. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a19ae31e594b33bb1ad3bc1763cdba38f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#a19ae31e594b33bb1ad3bc1763cdba38f">Glyph</a> (GLuint <a class="el" href="classyage_1_1Glyph.html#af59de1a9642b07583d49197bc9d74747">texture</a>, float <a class="el" href="classyage_1_1Glyph.html#ab1906273e09446d9f6ccdc0a06428afa">depth</a>, const <a class="el" href="structyage_1_1Vertex.html">Vertex</a> &amp;<a class="el" href="classyage_1_1Glyph.html#a6a86e79419ccea7f6921685c197453a1">top_left</a>, const <a class="el" href="structyage_1_1Vertex.html">Vertex</a> &amp;<a class="el" href="classyage_1_1Glyph.html#aac14f7258926c0c06ec594bc616ed5d0">top_right</a>, const <a class="el" href="structyage_1_1Vertex.html">Vertex</a> &amp;<a class="el" href="classyage_1_1Glyph.html#a3db3e9cd03629c6c37a597d5779d1024">bottom_right</a>, const <a class="el" href="structyage_1_1Vertex.html">Vertex</a> &amp;<a class="el" href="classyage_1_1Glyph.html#a8d8150986db3f0985f1b5d9622f83854">bottom_left</a>)</td></tr>
+<tr class="separator:a19ae31e594b33bb1ad3bc1763cdba38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59de1a9642b07583d49197bc9d74747"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#af59de1a9642b07583d49197bc9d74747">texture</a> () const</td></tr>
+<tr class="separator:af59de1a9642b07583d49197bc9d74747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1906273e09446d9f6ccdc0a06428afa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#ab1906273e09446d9f6ccdc0a06428afa">depth</a> () const</td></tr>
+<tr class="separator:ab1906273e09446d9f6ccdc0a06428afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a86e79419ccea7f6921685c197453a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structyage_1_1Vertex.html">Vertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#a6a86e79419ccea7f6921685c197453a1">top_left</a> () const</td></tr>
+<tr class="separator:a6a86e79419ccea7f6921685c197453a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac14f7258926c0c06ec594bc616ed5d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structyage_1_1Vertex.html">Vertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#aac14f7258926c0c06ec594bc616ed5d0">top_right</a> () const</td></tr>
+<tr class="separator:aac14f7258926c0c06ec594bc616ed5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db3e9cd03629c6c37a597d5779d1024"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structyage_1_1Vertex.html">Vertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#a3db3e9cd03629c6c37a597d5779d1024">bottom_right</a> () const</td></tr>
+<tr class="separator:a3db3e9cd03629c6c37a597d5779d1024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d8150986db3f0985f1b5d9622f83854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structyage_1_1Vertex.html">Vertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#a8d8150986db3f0985f1b5d9622f83854">bottom_left</a> () const</td></tr>
+<tr class="separator:a8d8150986db3f0985f1b5d9622f83854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2efbe49c2307601731416d615ac415c8"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#a2efbe49c2307601731416d615ac415c8">texture_</a></td></tr>
+<tr class="separator:a2efbe49c2307601731416d615ac415c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27b92a62dcebccae673a7d8d0c15704"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#ab27b92a62dcebccae673a7d8d0c15704">depth_</a></td></tr>
+<tr class="separator:ab27b92a62dcebccae673a7d8d0c15704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c5c3381928153e3eb2f67461b76a2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structyage_1_1Vertex.html">Vertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#a71c5c3381928153e3eb2f67461b76a2d">top_left_</a></td></tr>
+<tr class="separator:a71c5c3381928153e3eb2f67461b76a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db1936e683cafe3b6ef72f63b3241fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structyage_1_1Vertex.html">Vertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#a9db1936e683cafe3b6ef72f63b3241fa">top_right_</a></td></tr>
+<tr class="separator:a9db1936e683cafe3b6ef72f63b3241fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6240a88991e31b2fc8ed5dccfc362234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structyage_1_1Vertex.html">Vertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#a6240a88991e31b2fc8ed5dccfc362234">bottom_right_</a></td></tr>
+<tr class="separator:a6240a88991e31b2fc8ed5dccfc362234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add70123a08d594e4cfb627a03ae8daad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structyage_1_1Vertex.html">Vertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Glyph.html#add70123a08d594e4cfb627a03ae8daad">bottom_left_</a></td></tr>
+<tr class="separator:add70123a08d594e4cfb627a03ae8daad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a19ae31e594b33bb1ad3bc1763cdba38f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ae31e594b33bb1ad3bc1763cdba38f">&#9670;&nbsp;</a></span>Glyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">yage::Glyph::Glyph </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structyage_1_1Vertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>top_left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structyage_1_1Vertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>top_right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structyage_1_1Vertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>bottom_right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structyage_1_1Vertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>bottom_left</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8d8150986db3f0985f1b5d9622f83854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d8150986db3f0985f1b5d9622f83854">&#9670;&nbsp;</a></span>bottom_left()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structyage_1_1Vertex.html">Vertex</a> yage::Glyph::bottom_left </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3db3e9cd03629c6c37a597d5779d1024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db3e9cd03629c6c37a597d5779d1024">&#9670;&nbsp;</a></span>bottom_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structyage_1_1Vertex.html">Vertex</a> yage::Glyph::bottom_right </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1906273e09446d9f6ccdc0a06428afa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1906273e09446d9f6ccdc0a06428afa">&#9670;&nbsp;</a></span>depth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float yage::Glyph::depth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af59de1a9642b07583d49197bc9d74747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af59de1a9642b07583d49197bc9d74747">&#9670;&nbsp;</a></span>texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint yage::Glyph::texture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a86e79419ccea7f6921685c197453a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a86e79419ccea7f6921685c197453a1">&#9670;&nbsp;</a></span>top_left()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structyage_1_1Vertex.html">Vertex</a> yage::Glyph::top_left </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac14f7258926c0c06ec594bc616ed5d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac14f7258926c0c06ec594bc616ed5d0">&#9670;&nbsp;</a></span>top_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structyage_1_1Vertex.html">Vertex</a> yage::Glyph::top_right </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="add70123a08d594e4cfb627a03ae8daad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add70123a08d594e4cfb627a03ae8daad">&#9670;&nbsp;</a></span>bottom_left_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structyage_1_1Vertex.html">Vertex</a> yage::Glyph::bottom_left_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6240a88991e31b2fc8ed5dccfc362234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6240a88991e31b2fc8ed5dccfc362234">&#9670;&nbsp;</a></span>bottom_right_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structyage_1_1Vertex.html">Vertex</a> yage::Glyph::bottom_right_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab27b92a62dcebccae673a7d8d0c15704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27b92a62dcebccae673a7d8d0c15704">&#9670;&nbsp;</a></span>depth_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float yage::Glyph::depth_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2efbe49c2307601731416d615ac415c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2efbe49c2307601731416d615ac415c8">&#9670;&nbsp;</a></span>texture_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint yage::Glyph::texture_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71c5c3381928153e3eb2f67461b76a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71c5c3381928153e3eb2f67461b76a2d">&#9670;&nbsp;</a></span>top_left_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structyage_1_1Vertex.html">Vertex</a> yage::Glyph::top_left_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9db1936e683cafe3b6ef72f63b3241fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db1936e683cafe3b6ef72f63b3241fa">&#9670;&nbsp;</a></span>top_right_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structyage_1_1Vertex.html">Vertex</a> yage::Glyph::top_right_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/YAGE/<a class="el" href="spritebatch_8hpp_source.html">spritebatch.hpp</a></li>
-<li>src/spritebatch.cpp</li>
+<li>src/<a class="el" href="spritebatch_8cpp.html">spritebatch.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 21 2017 20:54:26 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="classyage_1_1Glyph.html">Glyph</a></li>
+    <li class="footer">Generated on Wed Aug 23 2017 22:56:51 for YAGE by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>
