@@ -83,6 +83,8 @@ $(document).ready(function(){initNavTree('classyage_1_1GlslProgram.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classyage_1_1GlslProgram-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">yage::GlslProgram Class Reference</div>  </div>
@@ -118,6 +120,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a762b44540ef219ff39f784543fc162c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2afa98cbf5d25b634e01b863c33fcf8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1GlslProgram.html#a2afa98cbf5d25b634e01b863c33fcf8f">unuse</a> ()</td></tr>
 <tr class="separator:a2afa98cbf5d25b634e01b863c33fcf8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1acc7e052209fde74256c479af6d9988"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1GlslProgram.html#a1acc7e052209fde74256c479af6d9988">compileShader</a> (const GLuint &amp;shader, const std::string &amp;file_path)</td></tr>
+<tr class="memdesc:a1acc7e052209fde74256c479af6d9988"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiles one shader  <a href="#a1acc7e052209fde74256c479af6d9988">More...</a><br /></td></tr>
+<tr class="separator:a1acc7e052209fde74256c479af6d9988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad8f02beee9fdc3608d7aceebf3398e8b"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1GlslProgram.html#ad8f02beee9fdc3608d7aceebf3398e8b">program_id_</a> = 0</td></tr>
+<tr class="memdesc:ad8f02beee9fdc3608d7aceebf3398e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiled shader program id  <a href="#ad8f02beee9fdc3608d7aceebf3398e8b">More...</a><br /></td></tr>
+<tr class="separator:ad8f02beee9fdc3608d7aceebf3398e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe46af121e9c0214be6f7b18660c5bc7"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1GlslProgram.html#afe46af121e9c0214be6f7b18660c5bc7">vertex_shader_id_</a> = 0</td></tr>
+<tr class="separator:afe46af121e9c0214be6f7b18660c5bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20ee225c8e981861923a2d7eeaf940f"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1GlslProgram.html#ad20ee225c8e981861923a2d7eeaf940f">fragment_shader_id_</a> = 0</td></tr>
+<tr class="separator:ad20ee225c8e981861923a2d7eeaf940f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d4f797833c688be78c00882112e486"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1GlslProgram.html#a55d4f797833c688be78c00882112e486">attribute_index_</a> = 0</td></tr>
+<tr class="separator:a55d4f797833c688be78c00882112e486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a721b43cbdf82dbf68b3a4f3304a135c4"></a>
@@ -229,6 +249,42 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1acc7e052209fde74256c479af6d9988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1acc7e052209fde74256c479af6d9988">&#9670;&nbsp;</a></span>compileShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void yage::GlslProgram::compileShader </td>
+          <td>(</td>
+          <td class="paramtype">const GLuint &amp;&#160;</td>
+          <td class="paramname"><em>shader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -382,6 +438,95 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a55d4f797833c688be78c00882112e486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d4f797833c688be78c00882112e486">&#9670;&nbsp;</a></span>attribute_index_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int yage::GlslProgram::attribute_index_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad20ee225c8e981861923a2d7eeaf940f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20ee225c8e981861923a2d7eeaf940f">&#9670;&nbsp;</a></span>fragment_shader_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint yage::GlslProgram::fragment_shader_id_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8f02beee9fdc3608d7aceebf3398e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f02beee9fdc3608d7aceebf3398e8b">&#9670;&nbsp;</a></span>program_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint yage::GlslProgram::program_id_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe46af121e9c0214be6f7b18660c5bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe46af121e9c0214be6f7b18660c5bc7">&#9670;&nbsp;</a></span>vertex_shader_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint yage::GlslProgram::vertex_shader_id_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/YAGE/<a class="el" href="glslprogram_8hpp_source.html">glslprogram.hpp</a></li>
 <li>src/<a class="el" href="glslprogram_8cpp.html">glslprogram.cpp</a></li>
@@ -392,7 +537,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="classyage_1_1GlslProgram.html">GlslProgram</a></li>
-    <li class="footer">Generated on Wed Aug 23 2017 23:00:29 for YAGE by
+    <li class="footer">Generated on Wed Aug 23 2017 23:02:53 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

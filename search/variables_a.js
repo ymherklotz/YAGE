@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['position',['position',['../structyage_1_1Vertex.html#abefe88d26b055655f9cc038a1dd4ff6a',1,'yage::Vertex']]],
-  ['position_5f',['position_',['../classyage_1_1Body.html#a8fe4f244be47f1336a57c1f2aa095157',1,'yage::Body::position_()'],['../classyage_1_1Collider.html#a2ae348a82a0ca7a871c05f36e5031161',1,'yage::Collider::position_()']]]
+  ['num_5fvertices',['NUM_VERTICES',['../classyage_1_1SpriteBatch.html#a6e01d11880a841b153e950aa8307b1a5',1,'yage::SpriteBatch']]],
+  ['num_5fvertices_5f',['num_vertices_',['../classyage_1_1RenderBatch.html#a160bf0e089d392d26fd50935263762ba',1,'yage::RenderBatch']]]
 ];

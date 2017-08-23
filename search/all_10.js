@@ -7,6 +7,7 @@ var searchData=
   ['rectanglecollider_2ecpp',['rectanglecollider.cpp',['../rectanglecollider_8cpp.html',1,'']]],
   ['rectanglecollider_2ehpp',['rectanglecollider.hpp',['../rectanglecollider_8hpp.html',1,'']]],
   ['render',['render',['../classyage_1_1SpriteBatch.html#a195c4aca60815d413c65dce99389282d',1,'yage::SpriteBatch']]],
+  ['render_5fbatches_5f',['render_batches_',['../classyage_1_1SpriteBatch.html#abf057ffe5fd9b7c35256dad147391008',1,'yage::SpriteBatch']]],
   ['renderbatch',['RenderBatch',['../classyage_1_1RenderBatch.html',1,'yage::RenderBatch'],['../classyage_1_1RenderBatch.html#a4a3a3180c63c51178871648d4c8e6853',1,'yage::RenderBatch::RenderBatch()']]],
   ['resourcemanager',['ResourceManager',['../classyage_1_1ResourceManager.html',1,'yage']]],
   ['resourcemanager_2ecpp',['resourcemanager.cpp',['../resourcemanager_8cpp.html',1,'']]],
