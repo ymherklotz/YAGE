@@ -11,47 +11,57 @@
 #include <algorithm>
 #include <stdexcept>
 
-namespace yage {
+namespace yage
+{
 
 const int SpriteBatch::NUM_VERTICES;
 
-Glyph::Glyph(GLuint texture, float depth, const Vertex& top_left,
-             const Vertex& top_right, const Vertex& bottom_right,
-             const Vertex& bottom_left)
-    : texture_(texture),
-      depth_(depth),
-      top_left_(top_left),
-      top_right_(top_right),
-      bottom_right_(bottom_right),
-      bottom_left_(bottom_left) {}
+Glyph::Glyph(GLuint texture, float depth, const Vertex &top_left,
+             const Vertex &top_right, const Vertex &bottom_right,
+             const Vertex &bottom_left)
+    : texture_(texture), depth_(depth), top_left_(top_left),
+      top_right_(top_right), bottom_right_(bottom_right),
+      bottom_left_(bottom_left)
+{
+}
 
 RenderBatch::RenderBatch(GLint offset, GLsizei num_vertices, GLuint texture)
-    : num_vertices_(num_vertices), offset_(offset), texture_(texture) {}
+    : num_vertices_(num_vertices), offset_(offset), texture_(texture)
+{
+}
 
-SpriteBatch::SpriteBatch() {}
+SpriteBatch::SpriteBatch() = default;
 
-SpriteBatch::~SpriteBatch() {
-    if (vao_ != 0) glDeleteVertexArrays(1, &vao_);
+SpriteBatch::~SpriteBatch()
+{
+    if (vao_ != 0) {
+        glDeleteVertexArrays(1, &vao_);
+    }
 
-    if (vbo_ != 0) glDeleteVertexArrays(1, &vbo_);
+    if (vbo_ != 0) {
+        glDeleteVertexArrays(1, &vbo_);
+    }
 }
 
 void SpriteBatch::init() { createVertexArray(); }
 
-void SpriteBatch::begin() {
+void SpriteBatch::begin()
+{
     glyphs_.clear();
     glyph_ptrs_.clear();
     render_batches_.clear();
 }
 
-void SpriteBatch::end() {
+void SpriteBatch::end()
+{
     sortGlyphs();
     createRenderBatches();
 }
 
-void SpriteBatch::draw(const glm::vec4& destination_rect,
-                       const glm::vec4& uv_rect, GLuint texture,
-                       const Color& color, float depth) {
+void SpriteBatch::draw(const glm::vec4 &destination_rect,
+                       const glm::vec4 &uv_rect, GLuint texture,
+                       const Color &color, float depth)
+{
     Vertex top_left, top_right, bottom_right, bottom_left;
 
     top_left.color = color;
@@ -79,26 +89,32 @@ void SpriteBatch::draw(const glm::vec4& destination_rect,
     glyph_ptrs_.push_back(&glyphs_.back());
 }
 
-void SpriteBatch::render() {
+void SpriteBatch::render()
+{
     glBindVertexArray(vao_);
-    for (auto&& batch : render_batches_) {
+    for (auto &&batch : render_batches_) {
         glBindTexture(GL_TEXTURE_2D, batch.texture());
         glDrawArrays(GL_TRIANGLES, batch.offset(), batch.num_vertices());
     }
     glBindVertexArray(0);
 }
 
-void SpriteBatch::createVertexArray() {
+void SpriteBatch::createVertexArray()
+{
     if (vao_ == 0) {
         glGenVertexArrays(1, &vao_);
-        if (vao_ == 0) throw std::runtime_error("glGenVertexArrays failed");
+        if (vao_ == 0) {
+            throw std::runtime_error("glGenVertexArrays failed");
+        }
     }
     // bind vertex array object
     glBindVertexArray(vao_);
 
     if (vbo_ == 0) {
         glGenBuffers(1, &vbo_);
-        if (vbo_ == 0) throw std::runtime_error("glGenBuffers failed");
+        if (vbo_ == 0) {
+            throw std::runtime_error("glGenBuffers failed");
+        }
     }
     // bind vertex buffer object
     glBindBuffer(GL_ARRAY_BUFFER, vbo_);
@@ -110,30 +126,34 @@ void SpriteBatch::createVertexArray() {
 
     // set the vertex attribute pointers
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
-                          (void*)offsetof(Vertex, position));
+                          (void *)offsetof(Vertex, position));
     glVertexAttribPointer(1, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(Vertex),
-                          (void*)offsetof(Vertex, color));
+                          (void *)offsetof(Vertex, color));
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
-                          (void*)offsetof(Vertex, uv));
+                          (void *)offsetof(Vertex, uv));
     glDrawArrays(GL_TRIANGLES, 0, 6);
 
     // unbind vertex array object
     glBindVertexArray(0);
 }
 
-void SpriteBatch::createRenderBatches() {
+void SpriteBatch::createRenderBatches()
+{
     std::vector<Vertex> vertices;
-    if (glyph_ptrs_.empty()) return;
+    if (glyph_ptrs_.empty()) {
+        return;
+    }
 
     render_batches_.reserve(glyph_ptrs_.size() * NUM_VERTICES);
 
     for (int i = 0; i < (int)glyph_ptrs_.size(); ++i) {
         if (i == 0 || (i > 0 && (glyph_ptrs_[i]->texture() !=
-                                 glyph_ptrs_[i - 1]->texture())))
+                                 glyph_ptrs_[i - 1]->texture()))) {
             render_batches_.emplace_back(i * NUM_VERTICES, NUM_VERTICES,
                                          glyph_ptrs_[i]->texture());
-        else
+        } else {
             render_batches_.back().num_vertices_ += NUM_VERTICES;
+        }
 
         vertices.push_back(glyph_ptrs_[i]->bottom_left());
         vertices.push_back(glyph_ptrs_[i]->top_left());
@@ -155,14 +175,16 @@ void SpriteBatch::createRenderBatches() {
     }
 }
 
-void SpriteBatch::sortGlyphs() {
+void SpriteBatch::sortGlyphs()
+{
     // sort using introsort or quicksort
     std::sort(glyph_ptrs_.begin(), glyph_ptrs_.end(),
-              [](Glyph* a, Glyph* b) -> bool {
-                  if (a->depth() == b->depth())
+              [](Glyph *a, Glyph *b) -> bool {
+                  if (a->depth() == b->depth()) {
                       return a->texture() < b->texture();
+                  }
                   return a->depth() < b->depth();
               });
 }
 
-}  // yage
+} // yage

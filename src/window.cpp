@@ -13,23 +13,31 @@
 #include <iostream>
 #include <stdexcept>
 
-namespace yage {
+namespace yage
+{
 
-Window::Window() {}
+Window::Window() = default;
 
 Window::~Window() { SDL_DestroyWindow(window_); }
 
-void Window::create(const std::string& window_name, int width, int height,
-                    unsigned flags) {
+void Window::create(const std::string &window_name, int width, int height,
+                    unsigned flags)
+{
     Uint32 gl_window_states = 0;
 
     // set the correct input flags
-    if (flags & WindowFlags::SHOWN) gl_window_states |= SDL_WINDOW_OPENGL;
-    if (flags & WindowFlags::HIDDEN) gl_window_states |= SDL_WINDOW_HIDDEN;
-    if (flags & WindowFlags::FULLSCREEN)
+    if (flags & WindowFlags::SHOWN) {
+        gl_window_states |= SDL_WINDOW_OPENGL;
+    }
+    if (flags & WindowFlags::HIDDEN) {
+        gl_window_states |= SDL_WINDOW_HIDDEN;
+    }
+    if (flags & WindowFlags::FULLSCREEN) {
         gl_window_states |= SDL_WINDOW_FULLSCREEN;
-    if (flags & WindowFlags::BORDERLESS)
+    }
+    if (flags & WindowFlags::BORDERLESS) {
         gl_window_states |= SDL_WINDOW_BORDERLESS;
+    }
 
     // SDL_GL options
 
@@ -41,16 +49,21 @@ void Window::create(const std::string& window_name, int width, int height,
     window_ = SDL_CreateWindow(window_name.c_str(), SDL_WINDOWPOS_CENTERED,
                                SDL_WINDOWPOS_CENTERED, width, height,
                                gl_window_states);
-    if (window_ == nullptr) throw std::runtime_error("SDL_CreateWindow failed");
+    if (window_ == nullptr) {
+        throw std::runtime_error("SDL_CreateWindow failed");
+    }
 
     // initialize the GL context in the window
     SDL_GLContext gl_context = SDL_GL_CreateContext(window_);
-    if (gl_context == nullptr)
+    if (gl_context == nullptr) {
         throw std::runtime_error("SDL_GL_CreateContext failed");
+    }
 
     // initialize glew
     GLenum error = glewInit();
-    if (error != GLEW_OK) throw std::runtime_error("glewInit failed");
+    if (error != GLEW_OK) {
+        throw std::runtime_error("glewInit failed");
+    }
 
     // print out the current OpenGL version to debug
     std::cout << "***  OpenGL version: " << glGetString(GL_VERSION)
@@ -65,16 +78,18 @@ void Window::create(const std::string& window_name, int width, int height,
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
-void Window::swapBuffer() {
+void Window::swapBuffer()
+{
     // swap the window buffer
     SDL_GL_SwapWindow(window_);
 }
 
-void Window::clearBuffer() {
+void Window::clearBuffer()
+{
     // set the clear depth
     glClearDepth(1.f);
     // clears buffer with clear color
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-}  // yage
+} // yage

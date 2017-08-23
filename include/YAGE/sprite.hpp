@@ -15,9 +15,11 @@
 
 #include <string>
 
-namespace yage {
+namespace yage
+{
 
-class Sprite {
+class Sprite
+{
 private:
     float x_;
     float y_;
@@ -28,18 +30,18 @@ private:
 
 public:
     Sprite();
-    Sprite(const Sprite&) = delete;
-    Sprite(Sprite&&) = delete;
+    Sprite(const Sprite &) = delete;
+    Sprite(Sprite &&) = delete;
     ~Sprite();
 
-    Sprite& operator=(const Sprite&) = delete;
-    Sprite& operator=(Sprite&&) = delete;
+    Sprite &operator=(const Sprite &) = delete;
+    Sprite &operator=(Sprite &&) = delete;
 
     void init(float x, float y, float width, float height,
-              const std::string& texture_path);
+              const std::string &texture_path);
     void draw();
 };
 
-}  // yage
+} // yage
 
 #endif

@@ -16,7 +16,8 @@
 #include "gtest/gtest.h"
 
 template <int Size>
-int matrixAssign(int number, int i, int j) {
+int matrixAssign(int number, int i, int j)
+{
     yage::Matrix<Size, Size, int> m;
     m[j][i] = number;
 
@@ -24,7 +25,8 @@ int matrixAssign(int number, int i, int j) {
 }
 
 template <int Size>
-int matrixAddition(int num1, int num2) {
+int matrixAddition(int num1, int num2)
+{
     yage::Matrix<Size, Size, int> m1, m2;
     m1[1][1] = num1;
     m2[1][1] = num2;
@@ -34,8 +36,9 @@ int matrixAddition(int num1, int num2) {
     return m3[1][1];
 }
 
-int vectorDotProduct(const std::vector<int>& vec_contents_f,
-                     const std::vector<int>& vec_contents_s) {
+int vectorDotProduct(const std::vector<int> &vec_contents_f,
+                     const std::vector<int> &vec_contents_s)
+{
     yage::Vector<3, int> v1(vec_contents_f);
     yage::Vector<3, int> v2(vec_contents_s);
 
@@ -48,28 +51,32 @@ bool matrixMultiplication() { return false; }
 
 // TESTS
 
-TEST(Matrix, Assign) {
+TEST(Matrix, Assign)
+{
     int rand_num = rand();
     ASSERT_EQ(rand_num, matrixAssign<10>(rand_num, 4, 2));
 }
 
-TEST(Matrix, Addition) {
+TEST(Matrix, Addition)
+{
     int rand_x = rand();
     int rand_y = rand();
     ASSERT_EQ(rand_x + rand_y, matrixAddition<10>(rand_x, rand_y));
 }
 
-TEST(Vector, DotProduct) {
+TEST(Vector, DotProduct)
+{
     std::vector<int> contents_i = {rand() % 100, rand() % 100, rand() % 100};
     std::vector<int> contents_j = {rand() % 100, rand() % 100, rand() % 100};
     int sum = 0;
-    for(std::size_t i = 0; i < contents_i.size(); ++i) {
+    for (std::size_t i = 0; i < contents_i.size(); ++i) {
         sum += contents_i[i] * contents_j[i];
     }
     ASSERT_EQ(sum, vectorDotProduct(contents_i, contents_j));
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv)
+{
     srand(static_cast<unsigned>(time(nullptr)));
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

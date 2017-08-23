@@ -1,12 +1,9 @@
 # general directories to ignore
-bin/
-build/
-build_clang/
-build_gcc/
-build_debug/
-build_release/
-CMakeFiles/
-Testing/
+bin
+build
+build_*
+CMakeFiles
+Testing
 
 # extensions to ignore
 *.o
@@ -14,10 +11,13 @@ Testing/
 *.a
 *.cmake
 
+# emacs
+*.#
+*~
+
 # general files to ignore
 CMakeCache.txt
 Makefile
-
-# specific directories to ignore
-/debug_build/
-/G*
+GPATH
+GTAGS
+GRTAGS

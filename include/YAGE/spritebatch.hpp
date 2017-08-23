@@ -16,13 +16,15 @@
 
 #include <vector>
 
-namespace yage {
+namespace yage
+{
 
 class SpriteBatch;
 
 /** Glyph with information of the texture.
  */
-class Glyph {
+class Glyph
+{
 private:
     GLuint texture_;
     float depth_;
@@ -32,9 +34,9 @@ private:
     Vertex bottom_left_;
 
 public:
-    Glyph(GLuint texture, float depth, const Vertex& top_left,
-          const Vertex& top_right, const Vertex& bottom_right,
-          const Vertex& bottom_left);
+    Glyph(GLuint texture, float depth, const Vertex &top_left,
+          const Vertex &top_right, const Vertex &bottom_right,
+          const Vertex &bottom_left);
 
     GLuint texture() const { return texture_; }
     float depth() const { return depth_; }
@@ -44,8 +46,10 @@ public:
     Vertex bottom_left() const { return bottom_left_; }
 };
 
-class RenderBatch {
+class RenderBatch
+{
     friend SpriteBatch;
+
 private:
     GLsizei num_vertices_;
     GLint offset_;
@@ -59,7 +63,8 @@ public:
     GLuint texture() const { return texture_; }
 };
 
-class SpriteBatch {
+class SpriteBatch
+{
 public:
     static const int NUM_VERTICES = 6;
 
@@ -67,25 +72,25 @@ private:
     GLuint vbo_ = 0;
     GLuint vao_ = 0;
     std::vector<Glyph> glyphs_;
-    std::vector<Glyph*> glyph_ptrs_;
+    std::vector<Glyph *> glyph_ptrs_;
     std::vector<RenderBatch> render_batches_;
 
 public:
     SpriteBatch();
-    SpriteBatch(const SpriteBatch&) = delete;
-    SpriteBatch(SpriteBatch&&) = delete;
+    SpriteBatch(const SpriteBatch &) = delete;
+    SpriteBatch(SpriteBatch &&) = delete;
     ~SpriteBatch();
 
-    SpriteBatch& operator=(const SpriteBatch&) = delete;
-    SpriteBatch& operator=(SpriteBatch&&) = delete;
+    SpriteBatch &operator=(const SpriteBatch &) = delete;
+    SpriteBatch &operator=(SpriteBatch &&) = delete;
 
     // initialize vaos and vbos
     void init();
     void begin();
     void end();
     // adds a sprite to the sprite batch to be rendered later
-    void draw(const glm::vec4& destination_rect, const glm::vec4& uv_rect,
-              GLuint texture, const Color& color, float depth);
+    void draw(const glm::vec4 &destination_rect, const glm::vec4 &uv_rect,
+              GLuint texture, const Color &color, float depth);
     // render the batch
     void render();
 
@@ -95,6 +100,6 @@ private:
     void sortGlyphs();
 };
 
-}  // namespace yage
+} // namespace yage
 
 #endif
