@@ -14,9 +14,11 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-namespace yage {
+namespace yage
+{
 
-class Camera2D {
+class Camera2D
+{
 private:
     bool matrix_needs_update_ = true;
     float scale_ = 1;
@@ -28,11 +30,11 @@ public:
     Camera2D(int screen_width = 1280, int screen_height = 720);
 
     // update camera location
-    void update(GlslProgram& program);
+    void update(GlslProgram &program);
     // camera movement
-    void move(const glm::vec2& direction);
+    void move(const glm::vec2 &direction);
 };
 
-}  // yage
+} // yage
 
 #endif

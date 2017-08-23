@@ -10,11 +10,10 @@
 
 #include "yage.hpp"
 
-TEST(Window, Open) {
-	ASSERT_TRUE(true);
-}
+TEST(Window, Open) { ASSERT_TRUE(true); }
 
-int main(int argc, char** argv) {
-	testing::InitGoogleTest(&argc, argv);
-	return RUN_ALL_TESTS();
+int main(int argc, char **argv)
+{
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

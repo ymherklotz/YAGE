@@ -24,6 +24,5 @@ public:
     void keyReleased(unsigned key);
     bool isKeyPressed(unsigned key) const;
 };
-
 }
 #endif

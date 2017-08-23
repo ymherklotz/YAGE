@@ -12,23 +12,30 @@
 
 #include <cstddef>
 
-namespace yage {
+namespace yage
+{
 
 Sprite::Sprite() = default;
 
-Sprite::~Sprite() {
-    if (vbo_id_ != 0) glDeleteBuffers(1, &vbo_id_);
+Sprite::~Sprite()
+{
+    if (vbo_id_ != 0) {
+        glDeleteBuffers(1, &vbo_id_);
+    }
 }
 
 void Sprite::init(float x, float y, float width, float height,
-                  const std::string& texture_path) {
+                  const std::string &texture_path)
+{
     x_ = x;
     y_ = y;
     width_ = width;
     height_ = height;
     texture_ = ResourceManager::getTexture(texture_path);
 
-    if (vbo_id_ == 0) glGenBuffers(1, &vbo_id_);
+    if (vbo_id_ == 0) {
+        glGenBuffers(1, &vbo_id_);
+    }
 
     Vertex vertex_data[6];
 
@@ -50,7 +57,9 @@ void Sprite::init(float x, float y, float width, float height,
     vertex_data[5].setPosition(x + width, y);
     vertex_data[5].setUv(1.f, 0.f);
 
-    for (auto & i : vertex_data) i.setColor(255, 0, 255, 255);
+    for (auto &i : vertex_data) {
+        i.setColor(255, 0, 255, 255);
+    }
 
     vertex_data[1].setColor(0, 255, 255, 255);
     vertex_data[4].setColor(255, 0, 0, 255);
@@ -61,7 +70,8 @@ void Sprite::init(float x, float y, float width, float height,
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
-void Sprite::draw() {
+void Sprite::draw()
+{
     glBindTexture(GL_TEXTURE_2D, texture_.id);
     glBindBuffer(GL_ARRAY_BUFFER, vbo_id_);
 
@@ -70,11 +80,11 @@ void Sprite::draw() {
     glEnableVertexAttribArray(2);
 
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
-                          (void*)offsetof(Vertex, position));
+                          (void *)offsetof(Vertex, position));
     glVertexAttribPointer(1, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(Vertex),
-                          (void*)offsetof(Vertex, color));
+                          (void *)offsetof(Vertex, color));
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
-                          (void*)offsetof(Vertex, uv));
+                          (void *)offsetof(Vertex, uv));
     glDrawArrays(GL_TRIANGLES, 0, 6);
 
     glDisableVertexAttribArray(2);
@@ -84,4 +94,4 @@ void Sprite::draw() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
-}  // yage
+} // yage

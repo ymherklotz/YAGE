@@ -13,13 +13,15 @@
 
 #include <string>
 
-namespace yage {
+namespace yage
+{
 
-class ImageLoader {
+class ImageLoader
+{
 public:
-    static Texture loadPng(const std::string& file_path);
+    static Texture loadPng(const std::string &file_path);
 };
 
-}  // yage
+} // yage
 
 #endif

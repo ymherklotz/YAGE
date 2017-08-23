@@ -11,7 +11,8 @@
 
 #include <GL/glew.h>
 
-namespace yage {
+namespace yage
+{
 
 struct Texture {
     GLuint id;
@@ -19,6 +20,6 @@ struct Texture {
     int height;
 };
 
-}  // yage
+} // yage
 
 #endif

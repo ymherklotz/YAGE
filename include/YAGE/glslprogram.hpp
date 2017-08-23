@@ -13,9 +13,11 @@
 
 #include <string>
 
-namespace yage {
+namespace yage
+{
 
-class GlslProgram {
+class GlslProgram
+{
 private:
     /// compiled shader program id
     GLuint program_id_ = 0;
@@ -24,27 +26,27 @@ private:
     int attribute_index_ = 0;
 
     /// compiles one shader
-    void compileShader(const GLuint& shader, const std::string& file_path);
+    void compileShader(const GLuint &shader, const std::string &file_path);
 
 public:
     GlslProgram() = default;
-    GlslProgram(const GlslProgram&) = delete;
-    GlslProgram(GlslProgram&&) = delete;
+    GlslProgram(const GlslProgram &) = delete;
+    GlslProgram(GlslProgram &&) = delete;
     ~GlslProgram();
 
-    GlslProgram& operator=(const GlslProgram&) = delete;
-    GlslProgram& operator=(GlslProgram&&) = delete;
+    GlslProgram &operator=(const GlslProgram &) = delete;
+    GlslProgram &operator=(GlslProgram &&) = delete;
 
     /// compiles vertex and fragment shader
-    void compileShaders(const std::string& vertex_shader_path,
-                        const std::string& fragment_shader_path);
+    void compileShaders(const std::string &vertex_shader_path,
+                        const std::string &fragment_shader_path);
     void linkShaders();
-    void addAttribute(const std::string& attribute_name);
-    GLint getUniformLocation(const std::string& uniform_name);
+    void addAttribute(const std::string &attribute_name);
+    GLint getUniformLocation(const std::string &uniform_name);
     void use();
     void unuse();
 };
 
-}  // yage
+} // yage
 
 #endif

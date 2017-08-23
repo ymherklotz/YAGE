@@ -11,6 +11,10 @@ Testing
 *.a
 *.cmake
 
+# emacs
+*.#
+*~
+
 # general files to ignore
 CMakeCache.txt
 Makefile

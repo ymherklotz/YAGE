@@ -12,7 +12,8 @@
 #include "Physics/particlebody.hpp"
 #include "gtest/gtest.h"
 
-double gravityAcceleration(int iterations) {
+double gravityAcceleration(int iterations)
+{
     yage::ParticleBody body;
     for (int i = 0; i < 60 * iterations; ++i) {
         body.update();
@@ -23,7 +24,8 @@ double gravityAcceleration(int iterations) {
 
 // Tests
 
-TEST(ParticleBody, Gravity) {
+TEST(ParticleBody, Gravity)
+{
     int randomItr = rand() % 10;
     double idealPosition = 0.5 * -9.81 * std::pow(randomItr, 2);
 
@@ -31,7 +33,8 @@ TEST(ParticleBody, Gravity) {
     ASSERT_LE(idealPosition * 1.05, gravityAcceleration(randomItr));
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv)
+{
     testing::InitGoogleTest(&argc, argv);
     srand(static_cast<unsigned>(time(nullptr)));
     return RUN_ALL_TESTS();

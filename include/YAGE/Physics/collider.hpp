@@ -11,11 +11,13 @@
 
 #include <glm/glm.hpp>
 
-namespace yage {
+namespace yage
+{
 
 // The Collider class helps collision detection by providing a general shape
 // for different shapes to have their own collision algorithms.
-class Collider {
+class Collider
+{
 protected:
     // position of the object
     glm::vec2 position_;
@@ -24,16 +26,18 @@ protected:
     glm::vec2 size_;
 
 public:
-    Collider(const glm::vec2& position, const glm::vec2& size)
-        : position_(position), size_(size) {}
+    Collider(const glm::vec2 &position, const glm::vec2 &size)
+        : position_(position), size_(size)
+    {
+    }
 
     // function that checks if two colliders are colliding
-    virtual bool collides(const Collider& collider) const = 0;
+    virtual bool collides(const Collider &collider) const = 0;
 
     // function that returns if a point is inside the shape
-    virtual bool inside(const glm::vec2& point) const = 0;
+    virtual bool inside(const glm::vec2 &point) const = 0;
 };
 
-}  // namespace yage
+} // namespace yage
 
 #endif
