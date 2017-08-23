@@ -273,7 +273,7 @@ public:
 
     const Type& operator[](int col) const { return this->data_[col]; }
 
-    virtual std::string toString() const {
+    std::string toString() const override override override {
         std::stringstream ss;
         ss << "[";
         for (std::size_t i = 0; i < this->data_.size() - 1; ++i) {
@@ -311,7 +311,7 @@ public:
 };
 
 /// Definition of a 2D vector.
-typedef Vector2<double> Vector2d;
+using Vector2d = Vector2<double>;
 
 /** Namespace containing functions that operate on matrices. */
 namespace matrix {

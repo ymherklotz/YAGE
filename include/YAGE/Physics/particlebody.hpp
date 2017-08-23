@@ -22,8 +22,8 @@ public:
                  bool gravity = true);
 
     // apply a force to the rigid body
-    virtual void applyForce(const Vector2d& force);
-    virtual void update();
+    void applyForce(const Vector2d& force) override override;
+    void update() override override;
 };
 
 }  // yage

@@ -19,8 +19,8 @@ class RectangleCollider : public Collider {
 public:
     RectangleCollider(const glm::vec2& position, const glm::vec2& size);
 
-    virtual bool collides(const Collider& collider) const;
-    virtual bool inside(const glm::vec2& point) const;
+    bool collides(const Collider& collider) const override;
+    bool inside(const glm::vec2& point) const override;
 };
 
 }  // yage
