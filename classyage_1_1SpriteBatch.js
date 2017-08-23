@@ -14,7 +14,7 @@ var classyage_1_1SpriteBatch =
     [ "operator=", "classyage_1_1SpriteBatch.html#a204782dd15c82376555ad0b049c4167f", null ],
     [ "render", "classyage_1_1SpriteBatch.html#a195c4aca60815d413c65dce99389282d", null ],
     [ "sortGlyphs", "classyage_1_1SpriteBatch.html#adea6570f196b203a4d6e07ad66738c9a", null ],
-    [ "glyph_ptrs_", "classyage_1_1SpriteBatch.html#aab5ddd1b98fc66c19eeed4d818c6b387", null ],
+    [ "glyph_ptrs_", "classyage_1_1SpriteBatch.html#a007d24cd3765e2fcea843f85dbbb475e", null ],
     [ "glyphs_", "classyage_1_1SpriteBatch.html#a0ca8f0d0df0eeb22e8fc6fceebb96200", null ],
     [ "NUM_VERTICES", "classyage_1_1SpriteBatch.html#a6e01d11880a841b153e950aa8307b1a5", null ],
     [ "render_batches_", "classyage_1_1SpriteBatch.html#abf057ffe5fd9b7c35256dad147391008", null ],
