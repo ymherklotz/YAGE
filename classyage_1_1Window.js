@@ -8,6 +8,5 @@ var classyage_1_1Window =
     [ "create", "classyage_1_1Window.html#abfb5ae5e5abf22133e59097fc8aae5fe", null ],
     [ "operator=", "classyage_1_1Window.html#a5247a4164bf0006fe9f034cd27c5b6db", null ],
     [ "operator=", "classyage_1_1Window.html#a98c07656f90a6205f24dfe85ef1137de", null ],
-    [ "swapBuffer", "classyage_1_1Window.html#a86d0aa8e9896850b9acfc720b5615359", null ],
-    [ "window_", "classyage_1_1Window.html#acebbf824fbe3bb6afa32f2f33817050b", null ]
+    [ "swapBuffer", "classyage_1_1Window.html#a86d0aa8e9896850b9acfc720b5615359", null ]
 ];

@@ -7,7 +7,5 @@ var searchData=
   ['body_2ehpp',['body.hpp',['../body_8hpp.html',1,'']]],
   ['borderless',['BORDERLESS',['../namespaceyage.html#a09d41deeced5fca5df9dc680c9e77c38afa8ece0eef17c604369ca69bc4b09970',1,'yage']]],
   ['bottom_5fleft',['bottom_left',['../classyage_1_1Glyph.html#a8d8150986db3f0985f1b5d9622f83854',1,'yage::Glyph']]],
-  ['bottom_5fleft_5f',['bottom_left_',['../classyage_1_1Glyph.html#add70123a08d594e4cfb627a03ae8daad',1,'yage::Glyph']]],
-  ['bottom_5fright',['bottom_right',['../classyage_1_1Glyph.html#a3db3e9cd03629c6c37a597d5779d1024',1,'yage::Glyph']]],
-  ['bottom_5fright_5f',['bottom_right_',['../classyage_1_1Glyph.html#a6240a88991e31b2fc8ed5dccfc362234',1,'yage::Glyph']]]
+  ['bottom_5fright',['bottom_right',['../classyage_1_1Glyph.html#a3db3e9cd03629c6c37a597d5779d1024',1,'yage::Glyph']]]
 ];

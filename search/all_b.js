@@ -7,7 +7,6 @@ var searchData=
   ['matrix_2ehpp',['matrix.hpp',['../matrix_8hpp.html',1,'']]],
   ['matrix_3c_20rows_2c_201_2c_20double_20_3e',['Matrix&lt; Rows, 1, double &gt;',['../classyage_1_1Matrix.html',1,'yage']]],
   ['matrix_3c_20rows_2c_201_2c_20type_20_3e',['Matrix&lt; Rows, 1, Type &gt;',['../classyage_1_1Matrix.html',1,'yage']]],
-  ['matrix_5fneeds_5fupdate_5f',['matrix_needs_update_',['../classyage_1_1Camera2D.html#a84a0aeb53f0327e192b6e36ce24a41ea',1,'yage::Camera2D']]],
   ['matrixaddition',['matrixAddition',['../matrixtest_8cpp.html#a5476c7c614ed26381a5ffca3ba9c8ed4',1,'matrixtest.cpp']]],
   ['matrixassign',['matrixAssign',['../matrixtest_8cpp.html#a775b6c7dab5de10aea707de6281ad51e',1,'matrixtest.cpp']]],
   ['matrixmultiplication',['matrixMultiplication',['../matrixtest_8cpp.html#a89c46f5f2d4bc6c62c5f9357ddb57f06',1,'matrixtest.cpp']]],
