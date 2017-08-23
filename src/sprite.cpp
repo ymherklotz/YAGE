@@ -14,7 +14,7 @@
 
 namespace yage {
 
-Sprite::Sprite() {}
+Sprite::Sprite() = default;
 
 Sprite::~Sprite() {
     if (vbo_id_ != 0) glDeleteBuffers(1, &vbo_id_);
@@ -50,7 +50,7 @@ void Sprite::init(float x, float y, float width, float height,
     vertex_data[5].setPosition(x + width, y);
     vertex_data[5].setUv(1.f, 0.f);
 
-    for (int i = 0; i < 6; ++i) vertex_data[i].setColor(255, 0, 255, 255);
+    for (auto & i : vertex_data) i.setColor(255, 0, 255, 255);
 
     vertex_data[1].setColor(0, 255, 255, 255);
     vertex_data[4].setColor(255, 0, 0, 255);

@@ -67,16 +67,16 @@ endif()
 # find libraries
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
+include(FindPkgConfig)
+pkg_search_module(SDL2 REQUIRED sdl2)
 
 # set include directory
-include_directories(${YAGE_INCLUDE_DIR}
-  ${YAGE_INCLUDE_DIR}/Physics/
-  ${YAGE_INCLUDE_DIR}/Math/)
+include_directories(${YAGE_INCLUDE_DIR})
 
 # make it a static library
 add_library(${PROJECT_NAME} ${YAGE_SOURCES})
 
-set(YAGE_LIB_DEP_L "yage;${OPENGL_LIBRARIES};${GLEW_LIBRARIES};${SDL2_LIBRAIRES}")
+set(YAGE_LIB_DEP_L "yage;${OPENGL_LIBRARIES};${GLEW_LIBRARIES};${SDL2_LIBRARIES}")
 
 message("${YAGE_LIB_DEP_L}")
 

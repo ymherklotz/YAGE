@@ -38,7 +38,7 @@ void GlslProgram::compileShader(const GLuint& shader,
 
     // cast source to a c string to get the address of it and input it for
     // compilation
-    const GLchar* vertex_source = (const GLchar*)content.c_str();
+    const auto* vertex_source = (const GLchar*)content.c_str();
     glShaderSource(shader, 1, &vertex_source, nullptr);
     glCompileShader(shader);
 

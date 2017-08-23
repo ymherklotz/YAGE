@@ -28,7 +28,7 @@ Glyph::Glyph(GLuint texture, float depth, const Vertex& top_left,
 RenderBatch::RenderBatch(GLint offset, GLsizei num_vertices, GLuint texture)
     : num_vertices_(num_vertices), offset_(offset), texture_(texture) {}
 
-SpriteBatch::SpriteBatch() {}
+SpriteBatch::SpriteBatch() = default;
 
 SpriteBatch::~SpriteBatch() {
     if (vao_ != 0) glDeleteVertexArrays(1, &vao_);

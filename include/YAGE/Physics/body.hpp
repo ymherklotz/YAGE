@@ -46,7 +46,7 @@ public:
 
 protected:
 	// protected constructor to initialize member variables
-	Body(const Vector2d& position = Vector2d(0, 0), double mass = 1, const Vector2d& velocity = Vector2d(0, 0), bool gravity = false);
+	Body(Vector2d  position = Vector2d(0, 0), double mass = 1, Vector2d  velocity = Vector2d(0, 0), bool gravity = false);
 };
 }  // namespace yage
 

@@ -6,6 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
+#include <utility>
+
 #include "Physics/body.hpp"
 
 namespace yage {
@@ -16,11 +18,11 @@ double Body::xPosition() const { return position_[0]; }
 
 double Body::yPosition() const { return position_[1]; }
 
-Body::Body(const Vector2d& position, double mass, const Vector2d& velocity,
+Body::Body(Vector2d  position, double mass, Vector2d  velocity,
            bool gravity)
-    : position_(position),
+    : position_(std::move(position)),
       mass_(mass),
-      velocity_(velocity),
+      velocity_(std::move(velocity)),
       gravity_(gravity) {}
 
 }  // yage

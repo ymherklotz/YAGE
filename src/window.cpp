@@ -15,7 +15,7 @@
 
 namespace yage {
 
-Window::Window() {}
+Window::Window() = default;
 
 Window::~Window() { SDL_DestroyWindow(window_); }
 

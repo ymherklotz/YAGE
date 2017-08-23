@@ -466,7 +466,7 @@ int decodePNG(std::vector<unsigned char>& out_image, unsigned long& image_width,
         void decode(std::vector<unsigned char>& out, const unsigned char* in,
                     size_t size, bool convert_to_rgba32) {
             error = 0;
-            if (size == 0 || in == 0) {
+            if (size == 0 || in == nullptr) {
                 error = 48;
                 return;
             }  // the given data is empty
@@ -543,7 +543,7 @@ int decodePNG(std::vector<unsigned char>& out_image, unsigned long& image_width,
                             return;
                         }  // error: this chunk must be 2 bytes for greyscale
                            // image
-                        info.key_defined = 1;
+                        info.key_defined = true;
                         info.key_r = info.key_g = info.key_b =
                             256 * in[pos] + in[pos + 1];
                         pos += 2;
@@ -552,7 +552,7 @@ int decodePNG(std::vector<unsigned char>& out_image, unsigned long& image_width,
                             error = 41;
                             return;
                         }  // error: this chunk must be 6 bytes for RGB image
-                        info.key_defined = 1;
+                        info.key_defined = true;
                         info.key_r = 256 * in[pos] + in[pos + 1];
                         pos += 2;
                         info.key_g = 256 * in[pos] + in[pos + 1];
@@ -590,7 +590,7 @@ int decodePNG(std::vector<unsigned char>& out_image, unsigned long& image_width,
                    outlength = (info.height * info.width * bpp + 7) / 8;
             out.resize(outlength);  // time to fill the out buffer
             unsigned char* out_ =
-                outlength ? &out[0] : 0;  // use a regular pointer to the
+                outlength ? &out[0] : nullptr;  // use a regular pointer to the
                                           // std::vector for faster code if
                                           // compiled without optimization
             if (info.interlaceMethod == 0)  // no interlace, just filter
@@ -603,7 +603,7 @@ int decodePNG(std::vector<unsigned char>& out_image, unsigned long& image_width,
                     for (unsigned long y = 0; y < info.height; y++) {
                         unsigned long filterType = scanlines[linestart];
                         const unsigned char* prevline =
-                            (y == 0) ? 0
+                            (y == 0) ? nullptr
                                      : &out_[(y - 1) * info.width * bytewidth];
                         unFilterScanline(&out_[linestart - y],
                                          &scanlines[linestart + 1], prevline,
@@ -619,7 +619,7 @@ int decodePNG(std::vector<unsigned char>& out_image, unsigned long& image_width,
                     for (size_t y = 0, obp = 0; y < info.height; y++) {
                         unsigned long filterType = scanlines[linestart];
                         const unsigned char* prevline =
-                            (y == 0) ? 0
+                            (y == 0) ? nullptr
                                      : &out_[(y - 1) * info.width * bytewidth];
                         unFilterScanline(&templine[0],
                                          &scanlines[linestart + 1], prevline,
@@ -788,7 +788,7 @@ int decodePNG(std::vector<unsigned char>& out_image, unsigned long& image_width,
                    linelength = 1 + ((bpp * passw + 7) / 8);
             for (unsigned long y = 0; y < passh; y++) {
                 unsigned char filterType = in[y * linelength],
-                              *prevline = (y == 0) ? 0 : lineo;
+                              *prevline = (y == 0) ? nullptr : lineo;
                 unFilterScanline(linen, &in[y * linelength + 1], prevline,
                                  bytewidth, filterType, (w * bpp + 7) / 8);
                 if (error) return;
@@ -876,7 +876,7 @@ int decodePNG(std::vector<unsigned char>& out_image, unsigned long& image_width,
             out.resize(numpixels * 4);
             unsigned char* out_ =
                 out.empty()
-                    ? 0
+                    ? nullptr
                     : &out[0];  // faster if compiled without optimization
             if (infoIn.bitDepth == 8 && infoIn.colorType == 0)  // greyscale
                 for (size_t i = 0; i < numpixels; i++) {
