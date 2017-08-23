@@ -6,15 +6,17 @@
  * ----------------------------------------------------------------------------
  */
 
-/** \file matrix.hpp Templated matrix class
- *
- * Matrix
- * ======
- *
- * This is a very general matrix class that can then be inherited by
- * vectors and other similar data structures to minimize code
- * density.
- */
+/// @file
+
+/** Templated matrix class
+  *
+  * Matrix
+  * ======
+  *
+  * This is a very general matrix class that can then be inherited by
+  * vectors and other similar data structures to minimize code
+  * density.
+  */
 
 #ifndef YAGE_MATH_MATRIX_HPP
 #define YAGE_MATH_MATRIX_HPP
@@ -31,7 +33,7 @@ namespace yage {
 template <int Rows, int Cols, class Type>
 class Matrix;
 
-/** \internal Namespace for internal details.
+/** @internal Namespace for internal details.
  *
  * Detail Namespace
  * ================
@@ -40,7 +42,7 @@ class Matrix;
  */
 namespace detail {
 
-/** \internal Internal Row class used by the Matrix class to return the
+/** @internal Internal Row class used by the Matrix class to return the
  * internal data structure of the Matrix.
  *
  * Row
