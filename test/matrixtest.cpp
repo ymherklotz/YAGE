@@ -47,7 +47,10 @@ int vectorDotProduct(const std::vector<int> &vec_contents_f,
     return x;
 }
 
-bool matrixMultiplication() { return false; }
+bool matrixMultiplication()
+{
+    return false;
+}
 
 // TESTS
 

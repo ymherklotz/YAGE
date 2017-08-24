@@ -43,7 +43,10 @@ SpriteBatch::~SpriteBatch()
     }
 }
 
-void SpriteBatch::init() { createVertexArray(); }
+void SpriteBatch::init()
+{
+    createVertexArray();
+}
 
 void SpriteBatch::begin()
 {

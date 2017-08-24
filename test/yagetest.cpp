@@ -10,7 +10,10 @@
 
 #include "yage.hpp"
 
-TEST(YAGE, InitQuit) { ASSERT_TRUE(true); }
+TEST(YAGE, InitQuit)
+{
+    ASSERT_TRUE(true);
+}
 
 int main(int argc, char **argv)
 {

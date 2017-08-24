@@ -31,7 +31,8 @@
 namespace yage
 {
 
-template <int Rows, int Cols, class Type> class Matrix;
+template <int Rows, int Cols, class Type>
+class Matrix;
 
 /** @internal Namespace for internal details.
  *
@@ -51,7 +52,8 @@ namespace detail
  *
  * Internal Row class to return a value in the row of the matrix.
  */
-template <int Rows, int Cols, class Type> class Row
+template <int Rows, int Cols, class Type>
+class Row
 {
 private:
     Matrix<Rows, Cols, Type> *parent_;
@@ -85,7 +87,8 @@ public:
  * This is the base matrix class that can be used by all the other matrix
  * like data structures.
  */
-template <int Rows = 4, int Cols = 4, class Type = double> class Matrix
+template <int Rows = 4, int Cols = 4, class Type = double>
+class Matrix
 {
     // friended with the row class so that it can access protected member data
     friend class detail::Row<Rows, Cols, Type>;
@@ -323,7 +326,8 @@ public:
  *
  * Two dimensional vector class.
  */
-template <class Type = double> class Vector2 : public Vector<2, Type>
+template <class Type = double>
+class Vector2 : public Vector<2, Type>
 {
 public:
     Vector2<Type>() : Vector<2, Type>() {}

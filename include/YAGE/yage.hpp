@@ -28,8 +28,14 @@
 namespace yage
 {
 
-bool init() { return SDL_Init(SDL_INIT_VIDEO); }
-void quit() { SDL_Quit(); }
+bool init()
+{
+    return SDL_Init(SDL_INIT_VIDEO);
+}
+void quit()
+{
+    SDL_Quit();
+}
 };
 
 #endif

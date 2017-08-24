@@ -11,9 +11,15 @@
 namespace yage
 {
 
-void InputManager::keyPressed(unsigned key) { key_map_[key] = true; }
+void InputManager::keyPressed(unsigned key)
+{
+    key_map_[key] = true;
+}
 
-void InputManager::keyReleased(unsigned key) { key_map_[key] = false; }
+void InputManager::keyReleased(unsigned key)
+{
+    key_map_[key] = false;
+}
 
 bool InputManager::isKeyPressed(unsigned key) const
 {

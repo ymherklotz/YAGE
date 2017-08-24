@@ -20,7 +20,10 @@ ParticleBody::ParticleBody(const Vector2d &position, double mass,
 {
 }
 
-void ParticleBody::applyForce(const Vector2d &force) { force_ += force; }
+void ParticleBody::applyForce(const Vector2d &force)
+{
+    force_ += force;
+}
 
 void ParticleBody::update()
 {
