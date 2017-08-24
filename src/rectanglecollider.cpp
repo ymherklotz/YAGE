@@ -33,4 +33,4 @@ inline bool RectangleCollider::inside(const glm::vec2 &point) const
            position_.y < point.y && position_.y + size_.y > point.y;
 }
 
-} // yage
+} // namespace yage

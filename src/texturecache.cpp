@@ -27,4 +27,4 @@ Texture TextureCache::getTexture(const std::string &texture_path)
     return itr->second;
 }
 
-} // yage
+} // namespace yage

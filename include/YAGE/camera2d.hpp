@@ -35,6 +35,6 @@ public:
     void move(const glm::vec2 &direction);
 };
 
-} // yage
+} // namespace yage
 
 #endif

@@ -42,6 +42,6 @@ public:
     void draw();
 };
 
-} // yage
+} // namespace yage
 
 #endif

@@ -27,6 +27,6 @@ public:
     Texture getTexture(const std::string &texture_path);
 };
 
-} // yage
+} // namespace yage
 
 #endif

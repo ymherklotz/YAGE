@@ -36,6 +36,7 @@ void quit()
 {
     SDL_Quit();
 }
-};
+
+} // namespace yage
 
 #endif

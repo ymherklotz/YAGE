@@ -20,6 +20,6 @@ struct Texture {
     int height;
 };
 
-} // yage
+} // namespace yage
 
 #endif

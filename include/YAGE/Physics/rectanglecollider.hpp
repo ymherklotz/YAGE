@@ -25,6 +25,6 @@ public:
     bool inside(const glm::vec2 &point) const override;
 };
 
-} // yage
+} // namespace yage
 
 #endif

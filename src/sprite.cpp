@@ -94,4 +94,4 @@ void Sprite::draw()
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
-} // yage
+} // namespace yage

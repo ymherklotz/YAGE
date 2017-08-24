@@ -79,6 +79,6 @@ struct Vertex {
     }
 };
 
-} // yage
+} // namespace yage
 
 #endif

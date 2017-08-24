@@ -27,6 +27,6 @@ public:
     void update() override;
 };
 
-} // yage
+} // namespace yage
 
 #endif

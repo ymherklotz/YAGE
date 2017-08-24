@@ -51,4 +51,4 @@ void ParticleBody::update()
     velocity_ += avg_acceleration * time_step;
 }
 
-} // yage
+} // namespace yage

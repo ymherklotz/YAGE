@@ -39,4 +39,4 @@ bool IoManager::readFileToBuffer(const std::string &file_path,
     return true;
 }
 
-} // yage
+} // namespace yage

@@ -77,7 +77,7 @@ public:
     }
 };
 
-} // detail
+} // namespace detail
 
 /** Base Matrix class used by other similar classes.
  *
@@ -412,8 +412,8 @@ Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
     return res;
 }
 
-} // matrix
+} // namespace matrix
 
-} // yage
+} // namespace yage
 
 #endif

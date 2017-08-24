@@ -57,4 +57,4 @@ Texture ImageLoader::loadPng(const std::string &file_path)
     return texture;
 }
 
-} // yage
+} // namespace yage

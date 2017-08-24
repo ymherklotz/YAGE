@@ -17,4 +17,4 @@ extern int decodePNG(std::vector<unsigned char> &out_image,
                      const unsigned char *in_png, size_t in_size,
                      bool convert_to_rgba32 = true);
 
-} // yage
+} // namespace yage

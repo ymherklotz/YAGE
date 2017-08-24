@@ -22,6 +22,6 @@ public:
                                  std::vector<unsigned char> &buffer);
 };
 
-} // yage
+} // namespace yage
 
 #endif

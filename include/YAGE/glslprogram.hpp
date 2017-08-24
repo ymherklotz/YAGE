@@ -47,6 +47,6 @@ public:
     void unuse();
 };
 
-} // yage
+} // namespace yage
 
 #endif

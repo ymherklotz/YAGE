@@ -22,6 +22,6 @@ public:
     static Texture loadPng(const std::string &file_path);
 };
 
-} // yage
+} // namespace yage
 
 #endif

@@ -190,4 +190,4 @@ void SpriteBatch::sortGlyphs()
               });
 }
 
-} // yage
+} // namespace yage

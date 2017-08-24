@@ -1115,4 +1115,4 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
     return decoder.error;
 }
 
-} // yage
+} // namespace yage

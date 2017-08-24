@@ -31,4 +31,4 @@ Body::Body(Vector2d position, double mass, Vector2d velocity, bool gravity)
 {
 }
 
-} // yage
+} // namespace yage

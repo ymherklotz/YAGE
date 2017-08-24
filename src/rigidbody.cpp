@@ -17,4 +17,4 @@ RigidBody::RigidBody(const Vector2d &position, double mass,
 {
 }
 
-} // yage
+} // namespace yage

@@ -23,6 +23,6 @@ public:
               const Vector2d &velocity = Vector2d(0, 0), bool gravity = true);
 };
 
-} // yage
+} // namespace yage
 
 #endif

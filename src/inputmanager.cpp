@@ -30,4 +30,4 @@ bool InputManager::isKeyPressed(unsigned key) const
     return false;
 }
 
-} // yage
+} // namespace yage
