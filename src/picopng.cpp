@@ -366,7 +366,7 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
                         error = 16;
                         return;
                     } // error: somehow an unexisting code appeared. This can
-                      // never happen.
+                    // never happen.
                 }
                 if (bitlen[256] == 0) {
                     error = 64;
@@ -493,17 +493,17 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
             if ((in[0] * 256 + in[1]) % 31 != 0) {
                 return 24;
             } // error: 256 * in[0] + in[1] must be a multiple of 31, the
-              // FCHECK value is supposed to be made that way
+            // FCHECK value is supposed to be made that way
             unsigned long CM = in[0] & 15, CINFO = (in[0] >> 4) & 15,
                           FDICT = (in[1] >> 5) & 1;
             if (CM != 8 || CINFO > 7) {
                 return 25;
             } // error: only compression method 8: inflate with sliding window
-              // of 32k is supported by the PNG spec
+            // of 32k is supported by the PNG spec
             if (FDICT != 0) {
                 return 26;
             } // error: the specification of PNG says about the zlib stream:
-              // "The additional flags shall not specify a preset dictionary."
+            // "The additional flags shall not specify a preset dictionary."
             inflator.inflate(out, in, 2);
             return inflator
                 .error; // note: adler32 checksum was skipped and ignored
@@ -542,7 +542,7 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
                     error = 30;
                     return;
                 } // error: size of the in buffer too small to contain next
-                  // chunk
+                // chunk
                 size_t chunkLength = read32bitInt(&in[pos]);
                 pos += 4;
                 if (chunkLength > 2147483647) {
@@ -553,7 +553,7 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
                     error = 35;
                     return;
                 } // error: size of the in buffer too small to contain next
-                  // chunk
+                // chunk
                 if (in[pos + 0] == 'I' && in[pos + 1] == 'D' &&
                     in[pos + 2] == 'A' &&
                     in[pos + 3] ==
@@ -593,7 +593,7 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
                             error = 39;
                             return;
                         } // error: more alpha values given than there are
-                          // palette entries
+                        // palette entries
                         for (size_t i = 0; i < chunkLength; i++) {
                             info.palette[4 * i + 3] = in[pos++];
                         }
@@ -602,7 +602,7 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
                             error = 40;
                             return;
                         } // error: this chunk must be 2 bytes for greyscale
-                          // image
+                        // image
                         info.key_defined = true;
                         info.key_r = info.key_g = info.key_b =
                             256 * in[pos] + in[pos + 1];
@@ -630,7 +630,7 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
                         error = 69;
                         return;
                     } // error: unknown critical chunk (5th bit of first byte
-                      // of chunk type is 0)
+                    // of chunk type is 0)
                     pos += (chunkLength + 4); // skip 4 letters and
                                               // uninterpreted data of
                                               // unimplemented chunk
@@ -745,7 +745,7 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
                 error = 27;
                 return;
             } // error: the data length is smaller than the length of the
-              // header
+            // header
             if (in[0] != 137 || in[1] != 80 || in[2] != 78 || in[3] != 71 ||
                 in[4] != 13 || in[5] != 10 || in[6] != 26 || in[7] != 10) {
                 error = 28;
@@ -765,7 +765,7 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
                 error = 32;
                 return;
             } // error: only compression method 0 is allowed in the
-              // specification
+            // specification
             info.filterMethod = in[27];
             if (in[27] != 0) {
                 error = 33;
@@ -776,7 +776,7 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
                 error = 34;
                 return;
             } // error: only interlace methods 0 and 1 exist in the
-              // specification
+            // specification
             error = checkColorValidity(info.colorType, info.bitDepth);
         }
         void unFilterScanline(unsigned char *recon,

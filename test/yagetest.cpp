@@ -12,7 +12,8 @@
 
 TEST(YAGE, InitQuit)
 {
-    ASSERT_TRUE(true);
+    ASSERT_TRUE(yage::init());
+    yage::quit();
 }
 
 int main(int argc, char **argv)

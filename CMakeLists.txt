@@ -86,7 +86,7 @@ set(SIMULATION_RUNS 1000)
 
 add_executable(yagetest ${YAGE_TEST_DIR}/yagetest.cpp)
 target_link_libraries(yagetest gtest_main ${YAGE_LIB_DEP_L})
-add_test(NAME Yagetest COMMAND yagetest --gtest_repeat=${SIMULATION_RUNS} --gtest_break_on_failure)
+add_test(NAME YageTest COMMAND yagetest --gtest_repeat=10 --gtest_break_on_failure)
 
 add_executable(matrixtest ${YAGE_TEST_DIR}/matrixtest.cpp)
 target_link_libraries(matrixtest gtest_main ${YAGE_LIB_DEP_L})
@@ -98,4 +98,4 @@ add_test(NAME ParticleBodyTest COMMAND particlebodytest --gtest_repeat=${SIMULAT
 
 add_executable(windowtest ${YAGE_TEST_DIR}/windowtest.cpp)
 target_link_libraries(windowtest gtest_main ${YAGE_LIB_DEP_L})
-add_test(NAME Windowtest COMMAND windowtest --gtest_repeat=${SIMULATION_RUNS} --gtest_break_on_failure)
+add_test(NAME WindowTest COMMAND windowtest --gtest_repeat=${SIMULATION_RUNS} --gtest_break_on_failure)
