@@ -8,16 +8,6 @@
 
 /// @file
 
-/** Templated matrix class
-  *
-  * Matrix
-  * ======
-  *
-  * This is a very general matrix class that can then be inherited by
-  * vectors and other similar data structures to minimize code
-  * density.
-  */
-
 #ifndef YAGE_MATH_MATRIX_HPP
 #define YAGE_MATH_MATRIX_HPP
 
@@ -35,23 +25,23 @@ template <int Rows, int Cols, class Type>
 class Matrix;
 
 /** @internal Namespace for internal details.
- *
- * Detail Namespace
- * ================
- *
- * This is the namespace used for implementation detail.
- */
+  *
+  * Detail Namespace
+  * ================
+  *
+  * This is the namespace used for implementation detail.
+  */
 namespace detail
 {
 
 /** @internal Internal Row class used by the Matrix class to return the
- * internal data structure of the Matrix.
- *
- * Row
- * ===
- *
- * Internal Row class to return a value in the row of the matrix.
- */
+  * internal data structure of the Matrix.
+  *
+  * Row
+  * ===
+  *
+  * Internal Row class to return a value in the row of the matrix.
+  */
 template <int Rows, int Cols, class Type>
 class Row
 {
@@ -80,40 +70,39 @@ public:
 } // namespace detail
 
 /** Base Matrix class used by other similar classes.
- *
- * Matrix class
- * ============
- *
- * This is the base matrix class that can be used by all the other matrix
- * like data structures.
- */
+  *
+  * Matrix class
+  * ============
+  *
+  * This is the base matrix class that can be used by all the other matrix
+  * like data structures.
+  */
 template <int Rows = 4, int Cols = 4, class Type = double>
 class Matrix
 {
-    // friended with the row class so that it can access protected member data
+    // friended with the row class so that it can access protected member data.
     friend class detail::Row<Rows, Cols, Type>;
 
 protected:
-    /// Vector containing the data of the matrix
+    /// Vector containing the data of the matrix.
     std::vector<Type> data_;
 
 public:
-    /// Initializes the size of the data_ vector
+    /// Initializes the size of the data_ vector.
     Matrix<Rows, Cols, Type>() : data_(Rows * Cols) {}
     Matrix<Rows, Cols, Type>(const std::vector<Type> &data) : data_(data) {}
 
-    /// Returns the row size of the Matrix
+    /// Returns the row size of the Matrix.
     int rowSize() const { return Rows; }
 
-    /// Returns the column size of the Matrixxs
+    /// Returns the column size of the Matrix.
     int colSize() const { return Cols; }
 
-    /** Return the row specified row as a Matrix with only one row
-   *
-   * @param row Row number to be returned
-   *
-   * Returns the row that is specified by the row variables.
-   */
+    /** Return the row specified row as a Matrix with only one row.
+      *
+      * @param row Row number to be returned.
+      * @return The row that is specified by the row variables.
+      */
     Matrix<1, Cols, Type> getRow(int row) const
     {
         Matrix<1, Cols, Type> rowMatrix;
@@ -123,7 +112,11 @@ public:
         return rowMatrix;
     }
 
-    // returns the column in a column matrix
+    /** Get a specific column in a column vector. 
+      *
+      * @param col Column number to be returned.
+      * @return Column Matrix of the selected column.
+      */
     Matrix<Rows, 1, Type> getCol(int col) const
     {
         Matrix<Rows, 1, Type> colMatrix;
@@ -133,15 +126,24 @@ public:
         return colMatrix;
     }
 
-    /// iterator support for begin
+    /** Iterator support for the start.
+      *
+      * @return Iterator pointing to the start of the data.
+      */
     typename std::vector<Type>::iterator begin() { return data_.begin(); }
 
-    /// iterator support for end
+    /** Iterator support for the end.
+      *
+      * @return Iterator pointing to the end of the data.
+      */
     typename std::vector<Type>::iterator end() { return data_.end(); }
 
-    /** prints out the matrix, but can also be implemented by other classes to
-     * print data differently
-     */
+    /** Prints out the matrix, but can also be implemented by other classes to
+      * print data differently.
+      *
+      * @bug When printing certain matrices, it omits a row or column. Still
+      * need to determine under which conditions.
+      */
     virtual std::string toString() const
     {
         std::stringstream ss;
@@ -168,7 +170,7 @@ public:
 
     detail::Row<Rows, Cols, Type> operator[](int row) const
     {
-        // @todo got to fix this
+        /// @todo got to fix this
         return detail::Row<Rows, Cols, Type>((Matrix<Rows, Cols, Type> *)this,
                                              row);
     }
@@ -301,6 +303,7 @@ public:
         : Matrix<Rows, 1, Type>(other)
     {
     }
+
     Vector<Rows, Type>(const std::vector<Type> &data)
         : Matrix<Rows, 1, Type>(data)
     {
@@ -323,9 +326,9 @@ public:
 };
 
 /** 2D Vector class.
- *
- * Two dimensional vector class.
- */
+  *
+  * Two dimensional vector class.
+  */
 template <class Type = double>
 class Vector2 : public Vector<2, Type>
 {
@@ -350,17 +353,22 @@ public:
     const Type &y() const { return this->data_[1]; }
 };
 
-/// Definition of a 2D vector.
+/** Definition of a 2D vector.
+  */
 using Vector2d = Vector2<double>;
 
-/** Namespace containing functions that operate on matrices. */
+/** Namespace containing functions that operate on matrices.
+  *
+  * Implementations defined here are meant to operate on anything that inherits
+  * from the base Matrix class.
+  */
 namespace matrix
 {
 
 /** Transposes a matrix and returns the result
-*
-* \param[in] m input matrix.
-*/
+  *
+  * @param m input matrix.
+  */
 template <int M, int N, class T>
 Matrix<N, M, T> transpose(const Matrix<M, N, T> &m)
 {
@@ -374,9 +382,9 @@ Matrix<N, M, T> transpose(const Matrix<M, N, T> &m)
 }
 
 /** Returns the dot product between two vectors
-*
-* \param[in] m1,m2 Input matrices.
-*/
+  *
+  * @param m1,m2 Input matrices.
+  */
 template <int R, class T>
 T dot(const Matrix<R, 1, T> &m1, const Matrix<R, 1, T> &m2)
 {
@@ -388,21 +396,24 @@ T dot(const Matrix<R, 1, T> &m1, const Matrix<R, 1, T> &m2)
 }
 
 /** Multiplies two matrices together.
-*
-* \param[in] m1,m2 Matrix inputs
-*
-* Requires the two matrices to be compatible with multiplication.
-*/
+  *
+  * @param m1,m2 Matrix inputs
+  *
+  * Requires the two matrices to be compatible with multiplication.
+  */
 template <int M, int N, int P, int Q, class T>
 Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
 {
+    /// @todo Think if this should be a static_assert.
     if (N != P) {
         throw std::runtime_error(
             "Matrices don't have the right dimensions for multiplication");
     }
-
+    
     Matrix<M, Q, T> res;
 
+    /// Performs multiplication by getting the rows and columns, transposing
+    /// one of them and then doting the result.
     for (int i = 0; i < M; ++i) {
         for (int j = 0; j < Q; ++j) {
             res[i][j] = dot(transpose(m1.getRow(i)), m2.getCol(j));
