@@ -112,7 +112,7 @@ public:
         return rowMatrix;
     }
 
-    /** Get a specific column in a column vector. 
+    /** Get a specific column in a column vector.
       *
       * @param col Column number to be returned.
       * @return Column Matrix of the selected column.
@@ -409,7 +409,7 @@ Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
         throw std::runtime_error(
             "Matrices don't have the right dimensions for multiplication");
     }
-    
+
     Matrix<M, Q, T> res;
 
     /// Performs multiplication by getting the rows and columns, transposing

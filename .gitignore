@@ -5,6 +5,9 @@ build_*
 CMakeFiles
 Testing
 
+# specific directory to ignore
+/html
+
 # extensions to ignore
 *.o
 *.out

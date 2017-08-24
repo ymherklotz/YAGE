@@ -6,6 +6,11 @@
  * ----------------------------------------------------------------------------
  */
 
+/** @file Includes all the headers in the main YAGE project.
+  *
+  * This does not include
+  */
+
 #ifndef YAGE_HPP
 #define YAGE_HPP
 
@@ -25,13 +30,29 @@
 
 #include <stdexcept>
 
+/** Project namespace.
+  *
+  * Avoids collision as all the classes and global functions are wrapped in.
+  * it.
+  */
 namespace yage
 {
 
+/** Initializes YAGE.
+  *
+  * This is only there to initialize SDL2.
+  *
+  * @return Returns true if the initialization was successful.
+  */
 bool init()
 {
     return SDL_Init(SDL_INIT_VIDEO);
 }
+
+/** Quit and cleanup YAGE
+  *
+  * SDL2 needs to clean itself up.
+  */
 void quit()
 {
     SDL_Quit();
