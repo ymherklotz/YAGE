@@ -16,15 +16,6 @@
 #include "gtest/gtest.h"
 
 template <int Size>
-int matrixAssign(int number, int i, int j)
-{
-    yage::Matrix<Size, Size, int> m;
-    m[j][i] = number;
-
-    return m[j][i];
-}
-
-template <int Size>
 int matrixAddition(int num1, int num2)
 {
     yage::Matrix<Size, Size, int> m1, m2;
@@ -56,8 +47,12 @@ bool matrixMultiplication()
 
 TEST(Matrix, Assign)
 {
-    int rand_num = rand();
-    ASSERT_EQ(rand_num, matrixAssign<10>(rand_num, 4, 2));
+    double rand_num = rand();
+    yage::Matrix<5, 5, double> mat1;
+    mat1[3][2] = rand_num;
+    ASSERT_EQ(rand_num, mat1[3][2]);
+    yage::Matrix<2, 2, double> mat2 {{rand_num, rand_num, rand_num, rand_num}};
+    ASSERT_EQ(rand_num, mat2[1][0]);
 }
 
 TEST(Matrix, Addition)

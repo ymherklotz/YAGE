@@ -57,7 +57,7 @@ public:
 
     Type &operator[](int col)
     {
-        // the index is the y-position of the element in the matrix
+        // The index is the y-position of the element in the matrix
         return parent_->data_[index_ * Cols + col];
     }
 
@@ -70,12 +70,6 @@ public:
 } // namespace detail
 
 /** Base Matrix class used by other similar classes.
-  *
-  * Matrix class
-  * ============
-  *
-  * This is the base matrix class that can be used by all the other matrix
-  * like data structures.
   */
 template <int Rows = 4, int Cols = 4, class Type = double>
 class Matrix
@@ -170,7 +164,6 @@ public:
 
     detail::Row<Rows, Cols, Type> operator[](int row) const
     {
-        /// @todo got to fix this
         return detail::Row<Rows, Cols, Type>((Matrix<Rows, Cols, Type> *)this,
                                              row);
     }
