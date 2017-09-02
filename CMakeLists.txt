@@ -26,7 +26,7 @@ set(YAGE_TEST_DIR ${PROJECT_SOURCE_DIR}/test)
 set(YAGE_LIBRARIES yage)
 
 # add include directory
-set(YAGE_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include/YAGE)
+set(YAGE_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 
 # set binary directory
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)

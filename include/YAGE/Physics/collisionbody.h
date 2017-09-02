@@ -1,15 +1,15 @@
 /* ----------------------------------------------------------------------------
- * collisionbody.hpp
+ * collisionbody.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_COLLISION_BODY_HPP
-#define YAGE_COLLISION_BODY_HPP
+#ifndef YAGE_COLLISION_BODY_H
+#define YAGE_COLLISION_BODY_H
 
-#include "Physics/body.hpp"
+#include "body.h"
 
 namespace yage
 {

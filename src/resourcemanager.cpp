@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include "resourcemanager.hpp"
+#include <YAGE/resourcemanager.h>
 
 namespace yage
 {

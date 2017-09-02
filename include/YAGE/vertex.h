@@ -1,13 +1,13 @@
 /* ----------------------------------------------------------------------------
- * vertex.hpp
+ * vertex.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef VERTEX_HPP
-#define VERTEX_HPP
+#ifndef VERTEX_H
+#define VERTEX_H
 
 #include <GL/glew.h>
 

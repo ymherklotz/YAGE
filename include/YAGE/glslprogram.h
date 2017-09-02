@@ -1,13 +1,13 @@
 /* ----------------------------------------------------------------------------
- * glslprogram.hpp
+ * glslprogram.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef GLSL_PROGRAM_HPP
-#define GLSL_PROGRAM_HPP
+#ifndef GLSL_PROGRAM_H
+#define GLSL_PROGRAM_H
 
 #include <GL/glew.h>
 

@@ -1,15 +1,15 @@
 /* ----------------------------------------------------------------------------
- * sprite.hpp
+ * sprite.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef SPRITE_HPP
-#define SPRITE_HPP
+#ifndef SPRITE_H
+#define SPRITE_H
 
-#include "texture.hpp"
+#include "texture.h"
 
 #include <GL/glew.h>
 

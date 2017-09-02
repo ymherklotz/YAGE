@@ -6,9 +6,9 @@
  * ----------------------------------------------------------------------------
  */
 
-#include "imageloader.hpp"
-#include "iomanager.hpp"
-#include "picopng.hpp"
+#include <YAGE/imageloader.h>
+#include <YAGE/iomanager.h>
+#include <YAGE/picopng.h>
 
 #include <stdexcept>
 

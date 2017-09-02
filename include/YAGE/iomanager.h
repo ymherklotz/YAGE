@@ -1,13 +1,13 @@
 /* ----------------------------------------------------------------------------
- * iomanager.hpp
+ * iomanager.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef IO_MANAGER_HPP
-#define IO_MANAGER_HPP
+#ifndef IO_MANAGER_H
+#define IO_MANAGER_H
 
 #include <string>
 #include <vector>

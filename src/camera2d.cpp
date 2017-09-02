@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include "camera2d.hpp"
+#include <YAGE/camera2d.h>
 
 #include <GL/glew.h>
 

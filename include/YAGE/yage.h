@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
- * yage.hpp
+ * yage.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
@@ -11,20 +11,20 @@
   * This does not include
   */
 
-#ifndef YAGE_HPP
-#define YAGE_HPP
+#ifndef YAGE_YAGE_H
+#define YAGE_YAGE_H
 
-#include "camera2d.hpp"
-#include "glslprogram.hpp"
-#include "imageloader.hpp"
-#include "inputmanager.hpp"
-#include "iomanager.hpp"
-#include "picopng.hpp"
-#include "resourcemanager.hpp"
-#include "spritebatch.hpp"
-#include "texture.hpp"
-#include "vertex.hpp"
-#include "window.hpp"
+#include "camera2d.h"
+#include "glslprogram.h"
+#include "imageloader.h"
+#include "inputmanager.h"
+#include "iomanager.h"
+#include "picopng.h"
+#include "resourcemanager.h"
+#include "spritebatch.h"
+#include "texture.h"
+#include "vertex.h"
+#include "window.h"
 
 #include <SDL2/SDL.h>
 

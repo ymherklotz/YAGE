@@ -6,9 +6,9 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <utility>
+#include <YAGE/Physics/body.h>
 
-#include "Physics/body.hpp"
+#include <utility>
 
 namespace yage
 {

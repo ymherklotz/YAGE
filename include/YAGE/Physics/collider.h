@@ -1,13 +1,13 @@
 /* ----------------------------------------------------------------------------
- * collider.hpp
+ * collider.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_PHYSICS_COLLIDER_HPP
-#define YAGE_PHYSICS_COLLIDER_HPP
+#ifndef YAGE_PHYSICS_COLLIDER_H
+#define YAGE_PHYSICS_COLLIDER_H
 
 #include <glm/glm.hpp>
 

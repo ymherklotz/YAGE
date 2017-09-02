@@ -6,9 +6,9 @@
  * ----------------------------------------------------------------------------
  */
 
-#include "sprite.hpp"
-#include "resourcemanager.hpp"
-#include "vertex.hpp"
+#include <YAGE/sprite.h>
+#include <YAGE/resourcemanager.h>
+#include <YAGE/vertex.h>
 
 #include <cstddef>
 

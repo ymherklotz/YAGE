@@ -1,15 +1,15 @@
 /* ----------------------------------------------------------------------------
- * rectanglecollider.hpp
+ * rectanglecollider.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_RECTANGLE_COLLIDER_HPP
-#define YAGE_RECTANGLE_COLLIDER_HPP
+#ifndef YAGE_RECTANGLE_COLLIDER_H
+#define YAGE_RECTANGLE_COLLIDER_H
 
-#include "Physics/collider.hpp"
+#include "collider.h"
 
 #include <glm/glm.hpp>
 

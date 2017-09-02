@@ -1,15 +1,15 @@
 /* ----------------------------------------------------------------------------
- * texturecache.hpp
+ * texturecache.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef TEXTURE_CACHE_HPP
-#define TEXTURE_CACHE_HPP
+#ifndef TEXTURE_CACHE_H
+#define TEXTURE_CACHE_H
 
-#include "texture.hpp"
+#include "texture.h"
 
 #include <unordered_map>
 

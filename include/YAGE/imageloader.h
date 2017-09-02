@@ -1,15 +1,15 @@
 /* ----------------------------------------------------------------------------
- * imageloader.hpp
+ * imageloader.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef IMAGE_LOADER_HPP
-#define IMAGE_LOADER_HPP
+#ifndef IMAGE_LOADER_H
+#define IMAGE_LOADER_H
 
-#include "texture.hpp"
+#include "texture.h"
 
 #include <string>
 

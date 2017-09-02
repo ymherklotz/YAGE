@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
- * matrix.hpp
+ * matrix.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
@@ -9,8 +9,8 @@
 /** @file 
   */
 
-#ifndef YAGE_MATH_MATRIX_HPP
-#define YAGE_MATH_MATRIX_HPP
+#ifndef YAGE_MATH_MATRIX_H
+#define YAGE_MATH_MATRIX_H
 
 #include <algorithm>
 #include <exception>

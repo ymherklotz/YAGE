@@ -6,14 +6,13 @@
  * ----------------------------------------------------------------------------
  */
 
+#include <YAGE/Math/math.h>
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <cstdlib>
 #include <ctime>
 #include <vector>
-
-#include "Math/math.hpp"
-
-#include "gtest/gtest.h"
 
 template <int Size>
 int matrixAddition(int num1, int num2)

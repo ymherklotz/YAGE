@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include "window.hpp"
-
+#include <YAGE/window.h>
 #include <GL/glew.h>
 
 #include <iostream>

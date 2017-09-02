@@ -1,15 +1,15 @@
 /* ----------------------------------------------------------------------------
- * spritebatch.hpp
+ * spritebatch.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_SPRITE_BATCH_HPP
-#define YAGE_SPRITE_BATCH_HPP
+#ifndef YAGE_SPRITE_BATCH_H
+#define YAGE_SPRITE_BATCH_H
 
-#include "vertex.hpp"
+#include "vertex.h"
 
 #include <GL/glew.h>
 #include <glm/glm.hpp>

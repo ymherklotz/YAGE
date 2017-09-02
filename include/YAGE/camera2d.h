@@ -1,15 +1,15 @@
 /* ----------------------------------------------------------------------------
- * camera2d.hpp
+ * camera2d.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
  * ----------------------------------------------------------------------------
  */
 
-#ifndef CAMERA_2D_HPP
-#define CAMERA_2D_HPP
+#ifndef CAMERA_2D_H
+#define CAMERA_2D_H
 
-#include "glslprogram.hpp"
+#include "glslprogram.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>

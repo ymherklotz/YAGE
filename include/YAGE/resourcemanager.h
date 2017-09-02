@@ -1,16 +1,16 @@
 /* ----------------------------------------------------------------------------
- * resourcemanager.hpp
+ * resourcemanager.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef RESOURCE_MANAGER_HPP
-#define RESOURCE_MANAGER_HPP
+#ifndef RESOURCE_MANAGER_H
+#define RESOURCE_MANAGER_H
 
-#include "texture.hpp"
-#include "texturecache.hpp"
+#include "texture.h"
+#include "texturecache.h"
 
 #include <string>
 

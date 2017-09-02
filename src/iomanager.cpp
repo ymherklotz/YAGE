@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include "iomanager.hpp"
+#include <YAGE/iomanager.h>
 
 #include <fstream>
 #include <stdexcept>

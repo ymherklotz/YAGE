@@ -1,19 +1,19 @@
 /* ----------------------------------------------------------------------------
- * physics.hpp
+ * physics.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_PHYSICS_HPP
-#define YAGE_PHYSICS_HPP
+#ifndef YAGE_PHYSICS_H
+#define YAGE_PHYSICS_H
 
-#include "body.hpp"
-#include "collider.hpp"
-#include "collisionbody.hpp"
-#include "particlebody.hpp"
-#include "rectanglecollider.hpp"
-#include "rigidbody.hpp"
+#include "body.h"
+#include "collider.h"
+#include "collisionbody.h"
+#include "particlebody.h"
+#include "rectanglecollider.h"
+#include "rigidbody.h"
 
 #endif

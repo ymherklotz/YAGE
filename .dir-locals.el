@@ -1,19 +1,14 @@
-((nil . ((company-clang-arguments . ("-I../include/YAGE/"
-				     "-I../../include/YAGE/"
-				     "-I../../../include/YAGE/"
-				     "-I/usr/include/"
-				     "-I/usr/include/SDL2/"
-                     "-I../googletest/googletest/include/")) 
-	 (company-c-headers-path-user . ("../include/YAGE/"
-					 "../../include/YAGE/"
-					 "../../../include/YAGE/"
-					 "/usr/include/"
-					 "/usr/include/SDL2/"
-                     "../googletest/googletest/include/"))
-	 (flycheck-clang-include-path . ("../include/YAGE/"
-					 "../../include/YAGE/"
-					 "../../../include/YAGE/"
-					 "/usr/include/"
-					 "/usr/include/SDL2/"
-                     "../googletest/googletest/include")))))
-
+((nil . ((eval . (progn
+                   (require 'projectile)
+                   (setq company-clang-arguments (delete-dups (append
+                                                               company-clang-arguments
+                                                               (list (concat "-I" (projectile-project-root) "include")))))
+                   (setq company-clang-arguments (delete-dups (append
+                                                               company-clang-arguments
+                                                               (list (concat "-I" (projectile-project-root) "googletest/googletest/include")))))
+                   (setq flycheck-clang-include-path (delete-dups (append
+                                                                   flycheck-clang-include-path
+                                                                   (list (concat (projectile-project-root) "include")))))
+                   (setq flycheck-clang-include-path (delete-dups (append
+                                                                   flycheck-clang-include-path
+                                                                   (list (concat (projectile-project-root) "googletest/googletest/include"))))))))))

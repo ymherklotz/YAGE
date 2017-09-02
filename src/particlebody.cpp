@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include "Physics/particlebody.hpp"
+#include <YAGE/Physics/particlebody.h>
 
 #include <cmath>
 #include <iostream>

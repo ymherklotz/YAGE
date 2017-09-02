@@ -6,11 +6,11 @@
  * ----------------------------------------------------------------------------
  */
 
+#include <YAGE/Physics/particlebody.h>
+#include <gtest/gtest.h>
+
 #include <cmath>
 #include <cstdlib>
-
-#include "Physics/particlebody.hpp"
-#include "gtest/gtest.h"
 
 double gravityAcceleration(int iterations)
 {
