@@ -8,11 +8,13 @@ YAGE stands for Yet Another Game Engine. It is a game engine that I am
 developing for a game called [Arider](https://github.com/ymherklotz/Arider).
 It uses OpenGL and SDL2 for the window creation and management and graphics.
 
+The full documentation can be seen [here](https://www.yannherklotz.com/YAGE).
+
 Installation and usage
 ----------------------
 
 To use YAGE for your own game, you should link it as a static library and
-include the [yage.hpp](/include/YAGE/yage.hpp) header in your project.
+include the [yage.h](/include/YAGE/yage.h) header in your project.
 
 Build and Testing
 -----------------
