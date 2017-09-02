@@ -10,9 +10,8 @@ var searchData=
   ['vector2d',['Vector2d',['../namespaceyage.html#a23eef341099a6b2816cf0c63f8ffe898',1,'yage']]],
   ['vector_3c_202_2c_20double_20_3e',['Vector&lt; 2, double &gt;',['../classyage_1_1Vector.html',1,'yage']]],
   ['vector_3c_202_2c_20type_20_3e',['Vector&lt; 2, Type &gt;',['../classyage_1_1Vector.html',1,'yage']]],
-  ['vectordotproduct',['vectorDotProduct',['../matrixtest_8cpp.html#a1b776f4c64a26c055b88f98a6c6bd02d',1,'matrixtest.cpp']]],
   ['velocity_5f',['velocity_',['../classyage_1_1Body.html#afead7edec899748eab78879e6e6c5741',1,'yage::Body']]],
   ['vertex',['Vertex',['../structyage_1_1Vertex.html',1,'yage::Vertex'],['../structyage_1_1Vertex.html#acae9697c2762e37dfa4472b85fa112c3',1,'yage::Vertex::Vertex()=default'],['../structyage_1_1Vertex.html#ab2826fb0ec9c48aad0056250dfa9cc2e',1,'yage::Vertex::Vertex(const Position &amp;position_, const Color &amp;color_, const UV &amp;uv_)']]],
-  ['vertex_2ehpp',['vertex.hpp',['../vertex_8hpp.html',1,'']]],
+  ['vertex_2eh',['vertex.h',['../vertex_8h.html',1,'']]],
   ['vertex_5fshader_5fid_5f',['vertex_shader_id_',['../classyage_1_1GlslProgram.html#afe46af121e9c0214be6f7b18660c5bc7',1,'yage::GlslProgram']]]
 ];

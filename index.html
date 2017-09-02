@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>YAGE: Main Page</title>
+<title>YAGE: YAGE</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">YAGE
-   &#160;<span id="projectnumber">0.02</span>
+   &#160;<span id="projectnumber">v0.1.1</span>
    </div>
    <div id="projectbrief">Yet Another Game Engine</div>
   </td>
@@ -82,15 +82,25 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">YAGE Documentation</div>  </div>
+<div class="title">YAGE </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><h2>Introduction </h2>
+<p>YAGE stands for Yet Another Game Engine. It is a game engine that I am developing for a game called <a href="https://github.com/ymherklotz/Arider">Arider</a>. It uses OpenGL and SDL2 for the window creation and management and graphics.</p>
+<p>The full documentation can be seen <a href="https://www.yannherklotz.com/YAGE">here</a>.</p>
+<h2>Installation and usage </h2>
+<p>To use YAGE for your own game, you should link it as a static library and include the <a href="/include/YAGE/yage.h">yage.h</a> header in your project.</p>
+<h2>Build and Testing </h2>
+<p>To compile YAGE, create a build directory from the base directory. Then call cmake and point it to the directory containing. <a href="/CMakeLists.txt">CMakeLists.txt</a>.</p>
+<div class="fragment"><div class="line">mkdir build</div><div class="line">cd build</div><div class="line">cmake ..</div></div><!-- fragment --><p>You can then run google test on YAGE.</p>
+<div class="fragment"><div class="line">ctest</div></div><!-- fragment --><h2>License </h2>
+<p>Copyright (c) 2017 Yann Herklotz Grave <a href="#" onclick="location.href='mai'+'lto:'+'ymh'+'er'+'klo'+'tz'+'@gm'+'ai'+'l.c'+'om'; return false;">ymher<span style="display: none;">.nosp@m.</span>klot<span style="display: none;">.nosp@m.</span>z@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> &ndash; MIT License, see file <a href="/LICENSE">LICENSE</a> for more details. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Aug 24 2017 00:24:55 for YAGE by
+    <li class="footer">Generated on Sat Sep 2 2017 12:28:04 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

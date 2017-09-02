@@ -9,9 +9,9 @@ var searchData=
   ['sortglyphs',['sortGlyphs',['../classyage_1_1SpriteBatch.html#adea6570f196b203a4d6e07ad66738c9a',1,'yage::SpriteBatch']]],
   ['sprite',['Sprite',['../classyage_1_1Sprite.html',1,'yage::Sprite'],['../classyage_1_1Sprite.html#a80b2bc32161d2444f4a4cf3492effc06',1,'yage::Sprite::Sprite()'],['../classyage_1_1Sprite.html#aa5a7958e17f1d042226b91fb1829642e',1,'yage::Sprite::Sprite(const Sprite &amp;)=delete'],['../classyage_1_1Sprite.html#a33789b3e37bfcb84ed89ec69f47817a1',1,'yage::Sprite::Sprite(Sprite &amp;&amp;)=delete']]],
   ['sprite_2ecpp',['sprite.cpp',['../sprite_8cpp.html',1,'']]],
-  ['sprite_2ehpp',['sprite.hpp',['../sprite_8hpp.html',1,'']]],
+  ['sprite_2eh',['sprite.h',['../sprite_8h.html',1,'']]],
   ['spritebatch',['SpriteBatch',['../classyage_1_1SpriteBatch.html',1,'yage::SpriteBatch'],['../classyage_1_1RenderBatch.html#ad12ecf32cf9f9244afa7e9ad15b4e78f',1,'yage::RenderBatch::SpriteBatch()'],['../classyage_1_1SpriteBatch.html#afda50a8a2a6c9ffd1b9d962fae223f8a',1,'yage::SpriteBatch::SpriteBatch()'],['../classyage_1_1SpriteBatch.html#a30a46a7182235a739916d540781af652',1,'yage::SpriteBatch::SpriteBatch(const SpriteBatch &amp;)=delete'],['../classyage_1_1SpriteBatch.html#a7f18a506f4188acd2219da8147dc0e1e',1,'yage::SpriteBatch::SpriteBatch(SpriteBatch &amp;&amp;)=delete']]],
   ['spritebatch_2ecpp',['spritebatch.cpp',['../spritebatch_8cpp.html',1,'']]],
-  ['spritebatch_2ehpp',['spritebatch.hpp',['../spritebatch_8hpp.html',1,'']]],
+  ['spritebatch_2eh',['spritebatch.h',['../spritebatch_8h.html',1,'']]],
   ['swapbuffer',['swapBuffer',['../classyage_1_1Window.html#a86d0aa8e9896850b9acfc720b5615359',1,'yage::Window']]]
 ];

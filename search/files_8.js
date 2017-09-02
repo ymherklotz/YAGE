@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['texture_2ehpp',['texture.hpp',['../texture_8hpp.html',1,'']]],
+  ['texture_2eh',['texture.h',['../texture_8h.html',1,'']]],
   ['texturecache_2ecpp',['texturecache.cpp',['../texturecache_8cpp.html',1,'']]],
-  ['texturecache_2ehpp',['texturecache.hpp',['../texturecache_8hpp.html',1,'']]]
+  ['texturecache_2eh',['texturecache.h',['../texturecache_8h.html',1,'']]]
 ];

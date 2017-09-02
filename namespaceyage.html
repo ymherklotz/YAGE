@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">YAGE
-   &#160;<span id="projectnumber">0.02</span>
+   &#160;<span id="projectnumber">v0.1.1</span>
    </div>
    <div id="projectbrief">Yet Another Game Engine</div>
   </td>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('namespaceyage.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Templated matrix class.  
+<p>Project namespace.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -178,6 +178,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a0cf122e98752ed702393cbe30df51356"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a0cf122e98752ed702393cbe30df51356">decodePNG</a> (std::vector&lt; unsigned char &gt; &amp;out_image, unsigned long &amp;image_width, unsigned long &amp;image_height, const unsigned char *in_png, size_t in_size, bool convert_to_rgba32)</td></tr>
+<tr class="separator:a0cf122e98752ed702393cbe30df51356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a226cc29763f745fd175844f4263d5dae"><td class="memTemplParams" colspan="2">template&lt;int M, int N, class T &gt; </td></tr>
 <tr class="memitem:a226cc29763f745fd175844f4263d5dae"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1Matrix.html">Matrix</a>&lt; M, N, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a226cc29763f745fd175844f4263d5dae">operator+</a> (<a class="el" href="classyage_1_1Matrix.html">Matrix</a>&lt; M, N, T &gt; lhs, const <a class="el" href="classyage_1_1Matrix.html">Matrix</a>&lt; M, N, T &gt; &amp;rhs)</td></tr>
 <tr class="separator:a226cc29763f745fd175844f4263d5dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,16 +213,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a7ed614bc9d3e8b9f3f8d32b6a7ff28eb"><td class="memTemplParams" colspan="2">template&lt;int M, int N, class T &gt; </td></tr>
 <tr class="memitem:a7ed614bc9d3e8b9f3f8d32b6a7ff28eb"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a7ed614bc9d3e8b9f3f8d32b6a7ff28eb">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classyage_1_1Matrix.html">Matrix</a>&lt; M, N, T &gt; &amp;mat)</td></tr>
 <tr class="separator:a7ed614bc9d3e8b9f3f8d32b6a7ff28eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60fa59da6c362523413ddcd5739a9891"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a60fa59da6c362523413ddcd5739a9891">decodePNG</a> (std::vector&lt; unsigned char &gt; &amp;out_image, unsigned long &amp;image_width, unsigned long &amp;image_height, const unsigned char *in_png, size_t in_size, bool convert_to_rgba32=true)</td></tr>
-<tr class="separator:a60fa59da6c362523413ddcd5739a9891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aea783cb978923211e165efefec4a7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a6aea783cb978923211e165efefec4a7b">init</a> ()</td></tr>
+<tr class="memdesc:a6aea783cb978923211e165efefec4a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes YAGE.  <a href="#a6aea783cb978923211e165efefec4a7b">More...</a><br /></td></tr>
 <tr class="separator:a6aea783cb978923211e165efefec4a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9d8c7327204686b3c86f4ab48672618"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#ac9d8c7327204686b3c86f4ab48672618">quit</a> ()</td></tr>
+<tr class="memdesc:ac9d8c7327204686b3c86f4ab48672618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quit and cleanup YAGE.  <a href="#ac9d8c7327204686b3c86f4ab48672618">More...</a><br /></td></tr>
 <tr class="separator:ac9d8c7327204686b3c86f4ab48672618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h1><a class="el" href="classyage_1_1Matrix.html" title="Base Matrix class used by other similar classes. ">Matrix</a> </h1>
-<p>This is a very general matrix class that can then be inherited by vectors and other similar data structures to minimize code density. </p>
+<div class="textblock"><p>Avoids collision as all the classes and global functions are wrapped in. it. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a id="a23eef341099a6b2816cf0c63f8ffe898"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23eef341099a6b2816cf0c63f8ffe898">&#9670;&nbsp;</a></span>Vector2d</h2>
@@ -258,8 +259,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a60fa59da6c362523413ddcd5739a9891"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60fa59da6c362523413ddcd5739a9891">&#9670;&nbsp;</a></span>decodePNG()</h2>
+<a id="a0cf122e98752ed702393cbe30df51356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf122e98752ed702393cbe30df51356">&#9670;&nbsp;</a></span>decodePNG()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,7 +299,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>convert_to_rgba32</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>convert_to_rgba32</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -324,6 +325,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This is only there to initialize SDL2.</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the initialization was successful. </dd></dl>
 
 </div>
 </div>
@@ -671,6 +674,7 @@ template&lt;int M, int N, class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>SDL2 needs to clean itself up. </p>
 
 </div>
 </div>
@@ -680,7 +684,7 @@ template&lt;int M, int N, class T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li>
-    <li class="footer">Generated on Thu Aug 24 2017 00:24:55 for YAGE by
+    <li class="footer">Generated on Sat Sep 2 2017 12:28:04 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

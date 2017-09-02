@@ -1,22 +1,22 @@
 var dir_b233a2caca2b45d5ef987dbbf49782d0 =
 [
-    [ "body.hpp", "body_8hpp.html", [
+    [ "body.h", "body_8h.html", [
       [ "Body", "classyage_1_1Body.html", "classyage_1_1Body" ]
     ] ],
-    [ "collider.hpp", "collider_8hpp.html", [
+    [ "collider.h", "collider_8h.html", [
       [ "Collider", "classyage_1_1Collider.html", "classyage_1_1Collider" ]
     ] ],
-    [ "collisionbody.hpp", "collisionbody_8hpp.html", [
+    [ "collisionbody.h", "collisionbody_8h.html", [
       [ "CollisionBody", "classyage_1_1CollisionBody.html", "classyage_1_1CollisionBody" ]
     ] ],
-    [ "particlebody.hpp", "particlebody_8hpp.html", [
+    [ "particlebody.h", "particlebody_8h.html", [
       [ "ParticleBody", "classyage_1_1ParticleBody.html", "classyage_1_1ParticleBody" ]
     ] ],
-    [ "physics.hpp", "physics_8hpp.html", null ],
-    [ "rectanglecollider.hpp", "rectanglecollider_8hpp.html", [
+    [ "physics.h", "physics_8h.html", null ],
+    [ "rectanglecollider.h", "rectanglecollider_8h.html", [
       [ "RectangleCollider", "classyage_1_1RectangleCollider.html", "classyage_1_1RectangleCollider" ]
     ] ],
-    [ "rigidbody.hpp", "rigidbody_8hpp.html", [
+    [ "rigidbody.h", "rigidbody_8h.html", [
       [ "RigidBody", "classyage_1_1RigidBody.html", "classyage_1_1RigidBody" ]
     ] ]
 ];

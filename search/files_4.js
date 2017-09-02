@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['math_2ehpp',['math.hpp',['../math_8hpp.html',1,'']]],
-  ['matrix_2ehpp',['matrix.hpp',['../matrix_8hpp.html',1,'']]],
-  ['matrixtest_2ecpp',['matrixtest.cpp',['../matrixtest_8cpp.html',1,'']]]
+  ['math_2eh',['math.h',['../math_8h.html',1,'']]],
+  ['matrix_2edox',['matrix.dox',['../matrix_8dox.html',1,'']]],
+  ['matrix_2eh',['matrix.h',['../matrix_8h.html',1,'']]]
 ];

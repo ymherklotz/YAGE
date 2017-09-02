@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">YAGE
-   &#160;<span id="projectnumber">0.02</span>
+   &#160;<span id="projectnumber">v0.1.1</span>
    </div>
    <div id="projectbrief">Yet Another Game Engine</div>
   </td>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('classyage_1_1Camera2D.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="camera2d_8hpp_source.html">camera2d.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="camera2d_8h_source.html">camera2d.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -103,8 +103,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a84a0aeb53f0327e192b6e36ce24a41ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera2D.html#a84a0aeb53f0327e192b6e36ce24a41ea">matrix_needs_update_</a> = true</td></tr>
-<tr class="separator:a84a0aeb53f0327e192b6e36ce24a41ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f599101972611e898ba9be349464961"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera2D.html#a8f599101972611e898ba9be349464961">update_matrix_</a> = true</td></tr>
+<tr class="separator:a8f599101972611e898ba9be349464961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf1432e35cef0a54f35863f13a9d5448"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera2D.html#abf1432e35cef0a54f35863f13a9d5448">scale_</a> = 1</td></tr>
 <tr class="separator:abf1432e35cef0a54f35863f13a9d5448"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3eec769d8b57ec0f6d370f5f75a6eda"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera2D.html#af3eec769d8b57ec0f6d370f5f75a6eda">position_</a></td></tr>
@@ -203,28 +203,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a84a0aeb53f0327e192b6e36ce24a41ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84a0aeb53f0327e192b6e36ce24a41ea">&#9670;&nbsp;</a></span>matrix_needs_update_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool yage::Camera2D::matrix_needs_update_ = true</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ae557d3648deba40236fd696a17c7d7c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae557d3648deba40236fd696a17c7d7c4">&#9670;&nbsp;</a></span>ortho_matrix_</h2>
 
@@ -291,8 +269,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8f599101972611e898ba9be349464961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f599101972611e898ba9be349464961">&#9670;&nbsp;</a></span>update_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool yage::Camera2D::update_matrix_ = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/YAGE/<a class="el" href="camera2d_8hpp_source.html">camera2d.hpp</a></li>
+<li>include/YAGE/<a class="el" href="camera2d_8h_source.html">camera2d.h</a></li>
 <li>src/<a class="el" href="camera2d_8cpp.html">camera2d.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -301,7 +301,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="classyage_1_1Camera2D.html">Camera2D</a></li>
-    <li class="footer">Generated on Thu Aug 24 2017 00:24:55 for YAGE by
+    <li class="footer">Generated on Sat Sep 2 2017 12:28:04 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

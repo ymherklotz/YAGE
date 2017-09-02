@@ -1,8 +1,8 @@
 var NAVTREE =
 [
   [ "YAGE", "index.html", [
-    [ "Documentation", "md_docs_README.html", null ],
-    [ "YAGE", "md_README.html", null ],
+    [ "Todo List", "todo.html", null ],
+    [ "Bug List", "bug.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -25,11 +25,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", null, [
-      [ "File List", "files.html", "files" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
-      ] ]
+      [ "File List", "files.html", "files" ]
     ] ]
   ] ]
 ];
@@ -37,7 +33,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"md_README.html"
+"pages.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
