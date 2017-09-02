@@ -20,7 +20,7 @@ namespace yage
 class Camera2D
 {
 private:
-    bool matrix_needs_update_ = true;
+    bool update_matrix_ = true;
     float scale_ = 1;
     glm::vec2 position_;
     glm::mat4 camera_matrix_;

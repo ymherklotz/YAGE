@@ -6,7 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-/// @file
+/** @file 
+  */
 
 #ifndef YAGE_MATH_MATRIX_HPP
 #define YAGE_MATH_MATRIX_HPP
