@@ -6,6 +6,11 @@
  * ----------------------------------------------------------------------------
  */
 
+/** @file @deprecated
+  * 
+  * Use SpriteBatch instead 
+  */
+
 #ifndef SPRITE_H
 #define SPRITE_H
 
