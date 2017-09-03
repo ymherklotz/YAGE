@@ -6,9 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file @deprecated
-  * 
-  * Use SpriteBatch instead 
+/** @file
   */
 
 #ifndef SPRITE_H
@@ -23,6 +21,8 @@
 namespace yage
 {
 
+/** @deprecated Use SpriteBatch instead
+  */
 class Sprite
 {
 private:

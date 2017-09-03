@@ -6,9 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file @deprecated
-  * 
-  * Use SpriteBatch instead 
+/** @file
   */
 
 #include <YAGE/sprite.h>
