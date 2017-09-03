@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['vector',['Vector',['../classyage_1_1Vector.html#ac9b202913c03bde201e350e855fbbffa',1,'yage::Vector::Vector()'],['../classyage_1_1Vector.html#a55fd6c60a95832ad4b68083071f9866f',1,'yage::Vector::Vector(const Matrix&lt; Rows, 1, Type &gt; &amp;other)'],['../classyage_1_1Vector.html#aa291a8ee264f81165b529b7f3a0c265d',1,'yage::Vector::Vector(const std::vector&lt; Type &gt; &amp;data)']]],
-  ['vector2',['Vector2',['../classyage_1_1Vector2.html#a50c108903be424de1c41ce31fddd23ea',1,'yage::Vector2::Vector2()'],['../classyage_1_1Vector2.html#af69d534302a406bac419589e0a2f2917',1,'yage::Vector2::Vector2(const std::vector&lt; Type &gt; &amp;data)'],['../classyage_1_1Vector2.html#a3ef3bc2954f387f1db2165a884765ad0',1,'yage::Vector2::Vector2(Type x, Type y)'],['../classyage_1_1Vector2.html#aacee766d18741a925a47b91fa0080822',1,'yage::Vector2::Vector2(const Matrix&lt; 2, 1, Type &gt; &amp;other)']]],
-  ['vertex',['Vertex',['../structyage_1_1Vertex.html#acae9697c2762e37dfa4472b85fa112c3',1,'yage::Vertex::Vertex()=default'],['../structyage_1_1Vertex.html#ab2826fb0ec9c48aad0056250dfa9cc2e',1,'yage::Vertex::Vertex(const Position &amp;position_, const Color &amp;color_, const UV &amp;uv_)']]]
+  ['unuse',['unuse',['../classyage_1_1GlslProgram.html#a2afa98cbf5d25b634e01b863c33fcf8f',1,'yage::GlslProgram']]],
+  ['update',['update',['../classyage_1_1Camera2D.html#addc194a43322262e7d102f212e5f5cf7',1,'yage::Camera2D::update()'],['../classyage_1_1Body.html#a17017d183f3f9ecdff779fd6f82c5d36',1,'yage::Body::update()'],['../classyage_1_1ParticleBody.html#a1f24ef00fd59254397d677d90936ec4c',1,'yage::ParticleBody::update()']]],
+  ['use',['use',['../classyage_1_1GlslProgram.html#a762b44540ef219ff39f784543fc162c3',1,'yage::GlslProgram']]],
+  ['uv',['UV',['../structyage_1_1UV.html#ae236139f3a5f6024aac1e21bd93b7bde',1,'yage::UV::UV()=default'],['../structyage_1_1UV.html#ac918524789292937aae5803df3c2673f',1,'yage::UV::UV(float u_, float v_)']]]
 ];

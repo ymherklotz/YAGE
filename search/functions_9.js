@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['matrix',['Matrix',['../classyage_1_1Matrix.html#a73b7d1f94f4f72a2294b71b3a35794ad',1,'yage::Matrix::Matrix()'],['../classyage_1_1Matrix.html#a191b02ff353d04f18779d4c84e20927b',1,'yage::Matrix::Matrix(const std::vector&lt; Type &gt; &amp;data)']]],
-  ['move',['move',['../classyage_1_1Camera2D.html#a9c6d369978a4c142db3059f8d5a122b0',1,'yage::Camera2D']]],
-  ['multiply',['multiply',['../namespaceyage_1_1matrix.html#a277125ad9fa06a7119c59d350e129985',1,'yage::matrix']]]
+  ['last_5fattribute',['last_attribute',['../classrapidxml_1_1xml__node.html#a67db03d1568dc6891573210ddba61520',1,'rapidxml::xml_node']]],
+  ['last_5fnode',['last_node',['../classrapidxml_1_1xml__node.html#a524d427e32c72fba9de1857e02e82fa7',1,'rapidxml::xml_node']]],
+  ['linkshaders',['linkShaders',['../classyage_1_1GlslProgram.html#aed74ec6db4d2b02e1172bd5694eb1b27',1,'yage::GlslProgram']]],
+  ['loadpng',['loadPng',['../classyage_1_1ImageLoader.html#ad8dcdaaed43713f07723f2b6719d1b32',1,'yage::ImageLoader']]],
+  ['loadspritesheet',['loadSpriteSheet',['../classyage_1_1ImageLoader.html#a478c77d049a34df4729101ca9ae7ef30',1,'yage::ImageLoader']]]
 ];

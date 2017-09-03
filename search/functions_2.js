@@ -1,7 +1,9 @@
 var searchData=
 [
   ['camera2d',['Camera2D',['../classyage_1_1Camera2D.html#a7ef3b02255622486ef8f396e2cb1ec4a',1,'yage::Camera2D']]],
+  ['clear',['clear',['../classrapidxml_1_1memory__pool.html#aad377c835fdaed1cb2cc9df194cf84e4',1,'rapidxml::memory_pool::clear()'],['../classrapidxml_1_1xml__document.html#a826929ff54242532198701f19ff5f83f',1,'rapidxml::xml_document::clear()']]],
   ['clearbuffer',['clearBuffer',['../classyage_1_1Window.html#a98e2a33820ad63b2c94c56e203ff6e58',1,'yage::Window']]],
+  ['clone_5fnode',['clone_node',['../classrapidxml_1_1memory__pool.html#a0a10679fc17597d339a0dc107f8a94ac',1,'rapidxml::memory_pool']]],
   ['collider',['Collider',['../classyage_1_1Collider.html#ae33aeb0711409e7c3ef9e21ed99fa8a3',1,'yage::Collider']]],
   ['collides',['collides',['../classyage_1_1Collider.html#abbab9373c0805ffa5215c08b82eaed03',1,'yage::Collider::collides()'],['../classyage_1_1RectangleCollider.html#a81e825cf009a437bc0f61b846cac66f6',1,'yage::RectangleCollider::collides()']]],
   ['collisionbody',['CollisionBody',['../classyage_1_1CollisionBody.html#a5289e613269facc45cd451872c17a83d',1,'yage::CollisionBody']]],

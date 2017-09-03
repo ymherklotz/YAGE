@@ -18,6 +18,7 @@ var dir_f562165b51c585c003877be645f219b5 =
       [ "IoManager", "classyage_1_1IoManager.html", "classyage_1_1IoManager" ]
     ] ],
     [ "picopng.h", "picopng_8h.html", "picopng_8h" ],
+    [ "rapidxml.h", "rapidxml_8h.html", "rapidxml_8h" ],
     [ "resourcemanager.h", "resourcemanager_8h.html", [
       [ "ResourceManager", "classyage_1_1ResourceManager.html", "classyage_1_1ResourceManager" ]
     ] ],

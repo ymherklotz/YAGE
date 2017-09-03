@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['init',['init',['../classyage_1_1Sprite.html#a2f6294be8b2551077cf475892bcddcc1',1,'yage::Sprite::init()'],['../classyage_1_1SpriteBatch.html#a7731372a6ec1aea75d1732700fe0f4c6',1,'yage::SpriteBatch::init()'],['../namespaceyage.html#a6aea783cb978923211e165efefec4a7b',1,'yage::init()']]],
-  ['inside',['inside',['../classyage_1_1Collider.html#a4a8ad9e664a0015e023a70d196302fe9',1,'yage::Collider::inside()'],['../classyage_1_1RectangleCollider.html#ac8d8e6bdb12c21be12f7d398242147c4',1,'yage::RectangleCollider::inside()']]],
-  ['iskeypressed',['isKeyPressed',['../classyage_1_1InputManager.html#afc9124e171725c291f9a1b0ed670805e',1,'yage::InputManager']]]
+  ['getcol',['getCol',['../classyage_1_1Matrix.html#a2833adcae1e01f637eba251c5aee7888',1,'yage::Matrix']]],
+  ['getrow',['getRow',['../classyage_1_1Matrix.html#adffb22a99417271958621ff1f51b7f08',1,'yage::Matrix']]],
+  ['gettexture',['getTexture',['../classyage_1_1ResourceManager.html#a36d805924374f27aa7dbce1d47795b25',1,'yage::ResourceManager::getTexture()'],['../classyage_1_1TextureCache.html#acec85e497e3dbcded344f4bed6b4389e',1,'yage::TextureCache::getTexture()']]],
+  ['getuniformlocation',['getUniformLocation',['../classyage_1_1GlslProgram.html#a255ccbb1d94d17f2de62319efd4be91d',1,'yage::GlslProgram']]],
+  ['glslprogram',['GlslProgram',['../classyage_1_1GlslProgram.html#a721b43cbdf82dbf68b3a4f3304a135c4',1,'yage::GlslProgram::GlslProgram()=default'],['../classyage_1_1GlslProgram.html#a78268f78af00bcb2358d48bb010aa9fd',1,'yage::GlslProgram::GlslProgram(const GlslProgram &amp;)=delete'],['../classyage_1_1GlslProgram.html#af2cea717928baf5feed2ac5dc2a03290',1,'yage::GlslProgram::GlslProgram(GlslProgram &amp;&amp;)=delete']]],
+  ['glyph',['Glyph',['../classyage_1_1Glyph.html#a19ae31e594b33bb1ad3bc1763cdba38f',1,'yage::Glyph']]]
 ];
