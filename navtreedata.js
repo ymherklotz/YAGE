@@ -2,6 +2,7 @@ var NAVTREE =
 [
   [ "YAGE", "index.html", [
     [ "Todo List", "todo.html", null ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Bug List", "bug.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
@@ -39,7 +40,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classyage_1_1SpriteBatch.html#ab477a5393ddd7b78afba93b96962f038",
-"structyage_1_1UV.html#ae236139f3a5f6024aac1e21bd93b7bde"
+"structyage_1_1UV.html#ac918524789292937aae5803df3c2673f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

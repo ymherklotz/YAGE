@@ -2,6 +2,7 @@ var searchData=
 [
   ['data_5f',['data_',['../classyage_1_1Matrix.html#a0ab11922319366f6e74f6e9e7d7abeed',1,'yage::Matrix']]],
   ['decodepng',['decodePNG',['../namespaceyage.html#a0cf122e98752ed702393cbe30df51356',1,'yage']]],
+  ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]],
   ['depth',['depth',['../classyage_1_1Glyph.html#ab1906273e09446d9f6ccdc0a06428afa',1,'yage::Glyph']]],
   ['depth_5f',['depth_',['../classyage_1_1Glyph.html#ab27b92a62dcebccae673a7d8d0c15704',1,'yage::Glyph']]],
   ['document',['document',['../classrapidxml_1_1xml__attribute.html#ab0ff3bc7880a6969ddcf0bb1e0444077',1,'rapidxml::xml_attribute::document()'],['../classrapidxml_1_1xml__node.html#af23d2d56182411e9261ca6974bfd767f',1,'rapidxml::xml_node::document()']]],
