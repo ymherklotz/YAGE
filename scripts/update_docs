@@ -1,13 +1,27 @@
 #!/usr/bin/env bash
 
-doxygen ./docs/Doxyfile
-git clone -b gh-pages git@github.com:ymherklotz/YAGE
-cd YAGE/
-git rm -rf *
-mv ../html/* .
-rm -rf ../html
-git add -A
-git commit -a -m 'Updating docs'
-git push origin gh-pages
-cd ..
-rm -rf YAGE
+printf "running doxygen on all files in %s: " $( pwd )
+doxygen ./docs/Doxyfile >/dev/null 2>&1
+printf "Done\n"
+printf "cloning gh-pages from git@github.com:ymherklotz/YAGE: "
+git clone -b gh-pages git@github.com:ymherklotz/YAGE >/dev/null 2>&1
+printf "Done\n"
+printf "updating repository: "
+cd YAGE/ >/dev/null 2>&1
+git rm -rf * >/dev/null 2>&1
+mv ../html/* . >/dev/null 2>&1
+rm -rf ../html >/dev/null 2>&1
+printf "Done\n"
+printf "adding files: "
+git add -A >/dev/null 2>&1
+printf "Done\n"
+printf "commiting files: "
+git commit -a -m 'Updating docs' >/dev/null 2>&1
+printf "Done\n"
+printf "pushing commit: "
+git push origin gh-pages >/dev/null 2>&1
+printf "Done\n"
+printf "cleaning up files: "
+cd .. >/dev/null 2>&1
+rm -rf YAGE >/dev/null 2>&1
+printf "Done\n"
