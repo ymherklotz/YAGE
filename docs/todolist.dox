@@ -11,7 +11,6 @@ can be edited easily and improved without having to know the exact implementatio
 */
 
 /** @todo
-
 # Switch GPU API
 
 ## Reason
@@ -21,5 +20,5 @@ graphics cards.
 
 ## Requirements
 - yage shouldn't depend on GL anymore and exclusively use Vulkan libraries.
-    
+
 */

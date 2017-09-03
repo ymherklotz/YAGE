@@ -20,6 +20,7 @@ class ImageLoader
 {
 public:
     static Texture loadPng(const std::string &file_path);
+    static Texture loadSpriteSheet(const std::string &file_path);
 };
 
 } // namespace yage
