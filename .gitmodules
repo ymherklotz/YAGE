@@ -2,3 +2,7 @@
 	path = lib/googletest
 	url = https://github.com/google/googletest
 	branch = master
+[submodule "lib/yajl"]
+	path = lib/yajl
+	url = git://github.com/lloyd/yajl
+	branch = master
