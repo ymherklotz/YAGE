@@ -6,9 +6,6 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file
-  */
-
 #include <YAGE/sprite.h>
 #include <YAGE/resourcemanager.h>
 #include <YAGE/vertex.h>

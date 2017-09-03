@@ -6,8 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef CAMERA_2D_H
-#define CAMERA_2D_H
+#ifndef YAGE_CAMERA2D_H
+#define YAGE_CAMERA2D_H
 
 #include "glslprogram.h"
 
@@ -29,9 +29,7 @@ private:
 public:
     Camera2D(int screen_width = 1280, int screen_height = 720);
 
-    // update camera location
     void update(GlslProgram &program);
-    // camera movement
     void move(const glm::vec2 &direction);
 };
 
