@@ -6,9 +6,20 @@ dist: trusty
 compiler:
   - gcc
 
-install: make cmake
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libegl1-mesa-dev
+  - sudo apt-get install -y libgles2-mesa-dev
+  - sudo apt-get install -y libglew-dev
+  - sudo apt-get install -y libsdl2-dev
+  - sudo apt-get install -y libglm-dev
 
-script: mkdir build && cmake .. && make
+script:
+  - cd $TRAVIS_BUILD_DIR
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
 
 branches:
   only:
