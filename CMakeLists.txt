@@ -21,35 +21,35 @@ set(YAGE_VERSION
 set(CMAKE_CXX_STANDARD 14)
 
 # set the test sources
-set(YAGE_SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
-set(YAGE_TEST_DIR ${PROJECT_SOURCE_DIR}/test)
-set(YAGE_LIBRARIES yage)
+set(YAGE_SOURCE_DIR "${PROJECT_SOURCE_DIR}/src")
+set(YAGE_TEST_DIR "${PROJECT_SOURCE_DIR}/test")
+set(YAGE_LIBRARIES ${PROJECT_NAME})
 
 # add include directory
-set(YAGE_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
+set(YAGE_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include")
 
 # set binary directory
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 
 # add sources to library
 set(YAGE_SOURCES
-  ${PROJECT_SOURCE_DIR}/src/body.cpp
-  ${PROJECT_SOURCE_DIR}/src/camera2d.cpp
-  ${PROJECT_SOURCE_DIR}/src/glslprogram.cpp
-  ${PROJECT_SOURCE_DIR}/src/imageloader.cpp
-  ${PROJECT_SOURCE_DIR}/src/inputmanager.cpp
-  ${PROJECT_SOURCE_DIR}/src/iomanager.cpp
-  ${PROJECT_SOURCE_DIR}/src/particlebody.cpp
-  ${PROJECT_SOURCE_DIR}/src/picopng.cpp
-  ${PROJECT_SOURCE_DIR}/src/rectanglecollider.cpp
-  ${PROJECT_SOURCE_DIR}/src/resourcemanager.cpp
-  ${PROJECT_SOURCE_DIR}/src/rigidbody.cpp
-  ${PROJECT_SOURCE_DIR}/src/spritebatch.cpp
-  ${PROJECT_SOURCE_DIR}/src/sprite.cpp
-  ${PROJECT_SOURCE_DIR}/src/texturecache.cpp
-  ${PROJECT_SOURCE_DIR}/src/window.cpp)
+  "${PROJECT_SOURCE_DIR}/src/body.cpp"
+  "${PROJECT_SOURCE_DIR}/src/camera2d.cpp"
+  "${PROJECT_SOURCE_DIR}/src/glslprogram.cpp"
+  "${PROJECT_SOURCE_DIR}/src/imageloader.cpp"
+  "${PROJECT_SOURCE_DIR}/src/inputmanager.cpp"
+  "${PROJECT_SOURCE_DIR}/src/iomanager.cpp"
+  "${PROJECT_SOURCE_DIR}/src/particlebody.cpp"
+  "${PROJECT_SOURCE_DIR}/src/picopng.cpp"
+  "${PROJECT_SOURCE_DIR}/src/rectanglecollider.cpp"
+  "${PROJECT_SOURCE_DIR}/src/resourcemanager.cpp"
+  "${PROJECT_SOURCE_DIR}/src/rigidbody.cpp"
+  "${PROJECT_SOURCE_DIR}/src/spritebatch.cpp"
+  "${PROJECT_SOURCE_DIR}/src/sprite.cpp"
+  "${PROJECT_SOURCE_DIR}/src/texturecache.cpp"
+  "${PROJECT_SOURCE_DIR}/src/window.cpp")
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib)
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/lib")
 
 # find libraries
 find_package(OpenGL REQUIRED)
@@ -72,7 +72,7 @@ enable_testing()
 set(SIMULATION_RUNS 1000)
 
 function(make_test test_name cycles)
-  add_executable(${test_name} ${YAGE_TEST_DIR}/${test_name}.cpp)
+  add_executable(${test_name} "${YAGE_TEST_DIR}/${test_name}.cpp")
   target_link_libraries(${test_name} gtest_main ${YAGE_LIB_DEP_L})
   add_test(NAME ${test_name} COMMAND ${test_name} --gtest_repeat=${cycles} --gtest_break_on_failure)
 endfunction(make_test)

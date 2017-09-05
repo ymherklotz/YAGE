@@ -1,0 +1,19 @@
+language: cpp
+sudo: required
+os: linux
+dist: trusty
+
+compiler:
+  - gcc
+
+install: make cmake
+
+script: mkdir build && cmake .. && make
+
+branches:
+  only:
+    - master
+    - develop
+
+notifications:
+  email: false
