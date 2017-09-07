@@ -14,3 +14,7 @@
 	path = lib/SDL2
 	url = https://github.com/spurious/SDL-mirror
 	branch = release-2.0.5
+[submodule "lib/rapidxml"]
+	path = lib/rapidxml
+	url = https://github.com/dwd/rapidxml
+	branch = master
