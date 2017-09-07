@@ -3,8 +3,31 @@ sudo: required
 os: linux
 dist: trusty
 
-compiler:
-  - gcc
+branches:
+  only:
+    - master
+    - develop
+
+notifications:
+  email: false
+
+git:
+  depth: 3
+
+#############
+# Compilers #
+#############
+
+matrix:
+  include:
+    - os: linux
+      compiler: gcc
+    - os: linux
+      compiler: clang
+
+################
+# Dependencies #
+################
 
 before_install:
   - sudo apt-get -qq update
@@ -14,17 +37,14 @@ before_install:
   - sudo apt-get install -y libsdl2-dev
   - sudo apt-get install -y libglm-dev
 
+################
+# Build Script #
+################
+
 script:
   - cd $TRAVIS_BUILD_DIR
-  - mkdir build
+  - mkdir -p build
   - cd build
   - cmake ..
   - make
-
-branches:
-  only:
-    - master
-    - develop
-
-notifications:
-  email: false
+  - ctest
