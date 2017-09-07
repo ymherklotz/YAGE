@@ -1,8 +1,6 @@
 YAGE {#mainpage}
 ====
-
-master build status:  ![master-build](https://travis-ci.org/ymherklotz/YAGE.svg?branch=master)
-develop build status: ![develop-build](https://travis-ci.org/ymherklotz/YAGE.svg?branch=develop)
+![master-build](https://travis-ci.org/ymherklotz/YAGE.svg?branch=master)
 
 Introduction
 ------------
