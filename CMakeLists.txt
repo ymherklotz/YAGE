@@ -65,8 +65,6 @@ add_library(${PROJECT_NAME} ${YAGE_SOURCES})
 
 set(YAGE_LIB_DEP_L "yage;${OPENGL_LIBRARIES};${GLEW_LIBRARIES};${SDL2_LIBRARIES}")
 
-message("${YAGE_LIB_DEP_L}")
-
 # enable tests
 enable_testing()
 set(SIMULATION_RUNS 1000)
@@ -77,7 +75,7 @@ function(make_test test_name cycles)
   add_test(NAME ${test_name} COMMAND ${test_name} --gtest_repeat=${cycles} --gtest_break_on_failure)
 endfunction(make_test)
 
-make_test(yagetest 10)
+make_test(yagetest ${SIMULATION_RUNS})
 make_test(matrixtest ${SIMULATION_RUNS})
 make_test(particlebodytest ${SIMULATION_RUNS})
 make_test(windowtest ${SIMULATION_RUNS})

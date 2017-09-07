@@ -6,3 +6,11 @@
 	path = lib/rapidjson
 	url = https://github.com/miloyip/rapidjson
 	branch = master
+[submodule "lib/glew"]
+	path = lib/glew
+	url = https://github.com/nigels-com/glew.git
+	branch = master
+[submodule "lib/SDL2"]
+	path = lib/SDL2
+	url = https://github.com/spurious/SDL-mirror
+	branch = release-2.0.5
