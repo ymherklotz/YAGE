@@ -22,6 +22,3 @@ endif()
 
 # include headers for rapidjson, no need to build it
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/rapidjson/include")
-
-# include header only rapidxml library
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/rapidxml")
