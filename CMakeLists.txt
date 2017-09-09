@@ -29,7 +29,7 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
 if(${ENABLE_TESTING})
   # enable tests
   enable_testing()
-  set(SIMULATION_RUNS 1000)
+  set(SIMULATION_RUNS 10000)
 
   function(make_test test_name cycles)
     add_executable(${test_name} ${YAGE_TEST_DIR}/${test_name}.cpp)
