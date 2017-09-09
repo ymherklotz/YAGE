@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file Includes all the headers in the main YAGE project.
+/** @file Includes all the headers in the main yage project.
   *
   * This does not include
   */
@@ -14,17 +14,23 @@
 #ifndef YAGE_YAGE_H
 #define YAGE_YAGE_H
 
-#include "camera2d.h"
-#include "glslprogram.h"
-#include "imageloader.h"
-#include "inputmanager.h"
-#include "iomanager.h"
-#include "picopng.h"
-#include "resourcemanager.h"
-#include "spritebatch.h"
-#include "texture.h"
-#include "vertex.h"
-#include "window.h"
+#include "base/camera2d.h"
+#include "base/glslprogram.h"
+#include "base/imageloader.h"
+#include "base/inputmanager.h"
+#include "base/iomanager.h"
+#include "base/picopng.h"
+#include "base/resourcemanager.h"
+#include "base/spritebatch.h"
+#include "base/texture.h"
+#include "base/vertex.h"
+#include "base/window.h"
+
+#include "physics/rectanglecollider.h"
+#include "physics/rigidbody.h"
+#include "physics/particlebody.h"
+#include "physics/body.h"
+
 
 #include <SDL2/SDL.h>
 
@@ -38,7 +44,7 @@
 namespace yage
 {
 
-/** Initializes YAGE.
+/** Initializes yage.
   *
   * This is only there to initialize SDL2.
   *
@@ -49,7 +55,7 @@ bool init()
     return SDL_Init(SDL_INIT_VIDEO);
 }
 
-/** Quit and cleanup YAGE
+/** Quit and cleanup yage
   *
   * SDL2 needs to clean itself up.
   */

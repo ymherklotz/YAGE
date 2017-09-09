@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <YAGE/Math/math.h>
+#include <yage/yage.h>
 #include <gtest/gtest.h>
 
 #include <algorithm>

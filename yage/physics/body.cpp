@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <YAGE/Physics/body.h>
+#include <yage/physics/body.h>
 
 #include <utility>
 

@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <YAGE/yage.h>
+#include <yage/yage.h>
 #include <gtest/gtest.h>
 
 TEST(Window, Open)

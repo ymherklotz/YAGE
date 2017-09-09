@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <YAGE/Physics/rectanglecollider.h>
+#include <yage/physics/rectanglecollider.h>
 
 namespace yage
 {

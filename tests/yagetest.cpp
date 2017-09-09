@@ -6,9 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
+#include <yage/yage.h>
 #include <gtest/gtest.h>
-
-#include <YAGE/yage.h>
 
 TEST(YAGE, InitQuit)
 {

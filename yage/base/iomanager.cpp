@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <YAGE/iomanager.h>
+#include <yage/base/iomanager.h>
 
 #include <fstream>
 #include <stdexcept>

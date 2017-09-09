@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <YAGE/spritebatch.h>
+#include <yage/base/spritebatch.h>
 
 #include <algorithm>
 #include <stdexcept>

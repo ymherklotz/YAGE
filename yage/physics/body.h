@@ -9,10 +9,11 @@
 #ifndef YAGE_PHYSICS_BODY_H
 #define YAGE_PHYSICS_BODY_H
 
-#include <YAGE/Math/matrix.h>
+#include <math/matrix.h>
 
 namespace yage
 {
+
 class Body
 {
 public:
@@ -51,6 +52,7 @@ protected:
     Body(Vector2d position = Vector2d(0, 0), double mass = 1,
          Vector2d velocity = Vector2d(0, 0), bool gravity = false);
 };
+
 } // namespace yage
 
 #endif

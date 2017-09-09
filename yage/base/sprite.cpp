@@ -6,9 +6,9 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <YAGE/sprite.h>
-#include <YAGE/resourcemanager.h>
-#include <YAGE/vertex.h>
+#include <yage/base/sprite.h>
+#include <yage/base/resourcemanager.h>
+#include <yage/base/vertex.h>
 
 #include <cstddef>
 

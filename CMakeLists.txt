@@ -7,12 +7,12 @@ project(YetAnotherGameEngine)
 set(CMAKE_CXX_STANDARD 14)
 
 # set the test sources
-set(YAGE_SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
-set(YAGE_TEST_DIR ${PROJECT_SOURCE_DIR}/test)
-set(YAGE_LIBRARIES ${PROJECT_NAME})
+set(YAGE_TEST_DIR ${PROJECT_SOURCE_DIR}/tests)
 
 # set binary directory
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 # find libraries
 find_package(OpenGL REQUIRED)
@@ -26,7 +26,7 @@ pkg_search_module(SDL2 REQUIRED sdl2)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
 
-if(ENABLE_TESTING)
+if(${ENABLE_TESTING})
   # enable tests
   enable_testing()
   set(SIMULATION_RUNS 1000)
@@ -43,4 +43,4 @@ if(ENABLE_TESTING)
   make_test(matrixtest ${SIMULATION_RUNS})
   make_test(particlebodytest ${SIMULATION_RUNS})
   make_test(windowtest ${SIMULATION_RUNS})
-endif(ENABLE_TESTING)
+endif()

@@ -11,7 +11,7 @@
 
 #include "body.h"
 
-#include <YAGE/Math/matrix.h>
+#include <yage/math/matrix.h>
 
 namespace yage
 {

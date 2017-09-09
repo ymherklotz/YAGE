@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <YAGE/Physics/rigidbody.h>
+#include <yage/physics/rigidbody.h>
 
 namespace yage
 {

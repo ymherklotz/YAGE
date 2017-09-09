@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <YAGE/Physics/particlebody.h>
+#include <yage/yage.h>
 #include <gtest/gtest.h>
 
 #include <cmath>

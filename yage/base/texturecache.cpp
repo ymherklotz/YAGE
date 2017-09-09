@@ -6,8 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <YAGE/texturecache.h>
-#include <YAGE/imageloader.h>
+#include <yage/base/texturecache.h>
+#include <yage/base/imageloader.h>
 
 namespace yage
 {
