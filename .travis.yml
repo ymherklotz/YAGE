@@ -1,6 +1,4 @@
 language: cpp
-sudo: required
-os: linux
 dist: trusty
 
 branches:
@@ -12,7 +10,7 @@ notifications:
   email: false
 
 git:
-  depth: 3
+  depth: 1
 
 #############
 # Compilers #
@@ -45,6 +43,6 @@ script:
   - cd $TRAVIS_BUILD_DIR
   - mkdir -p build
   - cd build
-  - cmake ..
+  - cmake -DENABLE_TESTING=1 ..
   - make
   - ctest
