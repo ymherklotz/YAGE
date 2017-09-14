@@ -45,6 +45,4 @@ script:
   - make
   - ctest
   - branch=$(git symbolic-ref HEAD | sed -r -e 's:.*/(.*):\1:')
-  - 'if [ "$branch" = "master" ]; then
-       ../tools/update_docs
-     fi'
+  - if [ "$branch" = "master" ]; then ../tools/update_docs; fi
