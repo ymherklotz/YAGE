@@ -50,19 +50,13 @@ namespace yage
   *
   * @return Returns true if the initialization was successful.
   */
-bool init()
-{
-    return SDL_Init(SDL_INIT_VIDEO);
-}
+extern bool init();
 
 /** Quit and cleanup yage
   *
   * SDL2 needs to clean itself up.
   */
-void quit()
-{
-    SDL_Quit();
-}
+extern void quit();
 
 } // namespace yage
 

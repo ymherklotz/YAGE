@@ -1,30 +1,24 @@
 /* ----------------------------------------------------------------------------
- * texture.h
+ * yage.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef GL_TEXTURE_H
-#define GL_TEXTURE_H
-
-#include <GL/glew.h>
+#include "yage.h"
 
 namespace yage
 {
 
-struct Texture {
-    GLuint id;
-    int width;
-    int height;
+bool init()
+{
+    return SDL_Init(SDL_INIT_VIDEO);
+}
 
-    Texture(GLuint id_i, int width_i, int height_i)
-        : id(id_i), width(width_i), height(height_i)
-    {
-    }
-};
+void quit()
+{
+    SDL_Quit();
+}
 
 } // namespace yage
-
-#endif

@@ -26,6 +26,8 @@ pkg_search_module(SDL2 REQUIRED sdl2)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
 
+include(cmake/cppcheck.cmake)
+
 if(${ENABLE_TESTING})
   # enable tests
   enable_testing()
