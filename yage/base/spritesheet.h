@@ -17,7 +17,7 @@
 namespace yage
 {
 
-namespace
+namespace details
 {
 
 struct Coordinate {
@@ -32,16 +32,18 @@ struct Coordinate {
     }
 };
 
-} // namespace
+} // namespace details
 
 class SpriteSheet
 {
 public:
     SpriteSheet(std::string pngFileName, std::string jsonFileName);
 
+    void sprite(std::string spriteName) const;
+
 private:
     Texture texture_;
-    std::map<std::string, Coordinate> fileLocations_;
+    std::map<std::string, details::Coordinate> fileLocations_;
 };
 
 } // namespace yage
