@@ -3,5 +3,5 @@
 
 TEST(SpriteSheet, Load)
 {
-    
+
 }
