@@ -16,11 +16,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 # find libraries
 find_package(OpenGL REQUIRED)
-find_package(GLEW REQUIRED)
-
-# todo: change this to find_package
-include(FindPkgConfig)
-pkg_search_module(SDL2 REQUIRED sdl2)
 
 # adding libraries
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib)
@@ -28,10 +23,10 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
 
 include(cmake/cppcheck.cmake)
 
-if(${ENABLE_TESTING})
+if($ENV{UNIT_TESTS})
   # enable tests
   enable_testing()
-  set(SIMULATION_RUNS 10000)
+  set(SIMULATION_RUNS 100)
 
   function(make_test test_name cycles)
     add_executable(${test_name} ${YAGE_TEST_DIR}/${test_name}.cpp)

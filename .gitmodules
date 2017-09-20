@@ -14,3 +14,7 @@
 	path = lib/SDL2
 	url = https://github.com/spurious/SDL-mirror
 	branch = release-2.0.5
+[submodule "lib/glfw"]
+	path = lib/glfw
+	url = https://github.com/glfw/glfw.git
+	branch = latest

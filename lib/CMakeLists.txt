@@ -5,22 +5,29 @@
 # See file LICENSE for more details
 # ----------------------------------------------------------------------------
 
-if(${ENABLE_TESTING})
+if($ENV{UNIT_TESTS})
   # Initializing google test
   # prevents overriding the parent project's compiler/linter settings on windows
   set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+  set(BUILD_GTEST ON CACHE BOOL "" FORCE)
+  set(BUILD_GMOCK OFF CACHE BOOL "" FORCE)
 
   # Add googletest directly to our build. This defines
   # the gtest and gtest_main targets.
-  add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/googletest")
+  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/googletest)
 
   # The gtest/gtest_main targets carry header search path
   # dependencies automatically when using CMake 2.8.11 or
   # later. Otherwise we have to add them here ourselves.
   if (CMAKE_VERSION VERSION_LESS 2.8.11)
-    include_directories("${gtest_SOURCE_DIR}/include")
+    include_directories(${gtest_SOURCE_DIR}/include)
   endif()
 endif()
 
-# include headers for rapidjson, no need to build it
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/rapidjson/include")
+include_directories(${rapidjson}/include)
+
+# setting up glfw
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/glfw)

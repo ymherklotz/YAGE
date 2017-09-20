@@ -8,17 +8,29 @@
 
 #include "yage.h"
 
+#include <GLFW/glfw3.h>
+
+#include <stdexcept>
+
 namespace yage
 {
 
-bool init()
+void glfwErrorCallback(int, const char *description)
 {
-    return SDL_Init(SDL_INIT_VIDEO);
+    fprintf(stderr, "ERROR: %s\n", description);
+}
+
+void init()
+{
+    glfwSetErrorCallback(glfwErrorCallback);
+    if (!glfwInit()) {
+        throw std::runtime_error("GLFW couldn't be initialised");
+    }
 }
 
 void quit()
 {
-    SDL_Quit();
+    glfwTerminate();
 }
 
 } // namespace yage
