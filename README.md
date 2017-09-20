@@ -27,7 +27,7 @@ cmake and point it to the directory containing.
 ``` shell
 mkdir build
 cd build
-cmake ..
+cmake .. -DENABLE_TESTING=1
 ```
 
 You can then run google test on YAGE.
