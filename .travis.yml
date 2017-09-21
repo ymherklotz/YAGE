@@ -30,6 +30,8 @@ before_install:
   - sudo apt-get install -y libegl1-mesa-dev
   - sudo apt-get install -y libgles2-mesa-dev
   - sudo apt-get install -y libglm-dev
+  - sudo apt-get install -y xorg-dev
+  - sudo apt-get install -y libglu1-mesa-dev
 
 ################
 # Build Script #
