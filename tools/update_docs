@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
-doxygen ./docs/Doxyfile >/dev/null 2>&1
-cd html >/dev/null 2>&1
-git init >/dev/null 2>&1
-git config user.name "TravisBot" >/dev/null 2>&1
-git config user.email "" >/dev/null 2>&1
-git remote add upstream "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git" >/dev/null 2>&1
-git fetch upstream >/dev/null 2>&1
-git reset upstream/gh-pages >/dev/null 2>&1
-git add -A >/dev/null 2>&1
-git commit -m "Rebuilding documentation" >/dev/null 2>&1
-git push -q upstream HEAD:gh-pages >/dev/null 2>&1
+if [[ "$TRAVIS_BRANCH" == "master" ]]; then
+    doxygen ./docs/Doxyfile
+    cd html
+    git init
+    git config user.name "TravisBot"
+    git config user.email ""
+    git remote add upstream "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git"
+    git fetch upstream
+    git reset upstream/gh-pages
+    git add -A
+    git commit -m "Rebuilding documentation"
+    git push -q upstream HEAD:gh-pages
+fi
