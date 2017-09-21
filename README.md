@@ -7,7 +7,7 @@ Introduction
 
 YAGE stands for Yet Another Game Engine. It is a game engine that I am
 developing for a game called [Arider](https://github.com/ymherklotz/Arider).
-It uses OpenGL and SDL2 for the window creation and management and graphics.
+It uses OpenGL and GLFW for the window creation and management and graphics.
 
 The full documentation can be seen [here](https://www.yannherklotz.com/YAGE).
 
@@ -27,7 +27,7 @@ cmake and point it to the directory containing.
 ``` shell
 mkdir build
 cd build
-cmake ..
+cmake .. -DENABLE_TESTING=1
 ```
 
 You can then run google test on YAGE.

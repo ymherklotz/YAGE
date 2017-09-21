@@ -17,8 +17,6 @@ namespace yage
 
 Texture ImageLoader::loadPng(const std::string &file_path)
 {
-    Texture texture = {};
-
     std::vector<unsigned char> in;
     std::vector<unsigned char> out;
     unsigned long width, height;
@@ -35,6 +33,8 @@ Texture ImageLoader::loadPng(const std::string &file_path)
                                  std::to_string(error_code));
     }
 
+    Texture texture{0, (int)width, (int)height};
+
     glGenTextures(1, &texture.id);
 
     glBindTexture(GL_TEXTURE_2D, texture.id);
@@ -50,9 +50,6 @@ Texture ImageLoader::loadPng(const std::string &file_path)
     glGenerateMipmap(GL_TEXTURE_2D);
 
     glBindTexture(GL_TEXTURE_2D, 0);
-
-    texture.width = (int)width;
-    texture.height = (int)height;
 
     return texture;
 }

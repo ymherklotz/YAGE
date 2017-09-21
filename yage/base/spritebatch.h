@@ -6,12 +6,15 @@
  * ----------------------------------------------------------------------------
  */
 
+/** @file 
+  */
+
 #ifndef YAGE_SPRITE_BATCH_H
 #define YAGE_SPRITE_BATCH_H
 
 #include "vertex.h"
 
-#include <GL/glew.h>
+#include <glad/glad.h>
 #include <glm/glm.hpp>
 
 #include <vector>

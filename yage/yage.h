@@ -26,15 +26,10 @@
 #include "base/vertex.h"
 #include "base/window.h"
 
+#include "physics/body.h"
+#include "physics/particlebody.h"
 #include "physics/rectanglecollider.h"
 #include "physics/rigidbody.h"
-#include "physics/particlebody.h"
-#include "physics/body.h"
-
-
-#include <SDL2/SDL.h>
-
-#include <stdexcept>
 
 /** Project namespace.
   *
@@ -44,25 +39,21 @@
 namespace yage
 {
 
+extern void glfwErrorCallback(int, const char *);
+
 /** Initializes yage.
   *
-  * This is only there to initialize SDL2.
+  * This is only there to initialize glfw.
   *
   * @return Returns true if the initialization was successful.
   */
-bool init()
-{
-    return SDL_Init(SDL_INIT_VIDEO);
-}
+extern void init();
 
 /** Quit and cleanup yage
   *
-  * SDL2 needs to clean itself up.
+  * glfw needs to clean itself up.
   */
-void quit()
-{
-    SDL_Quit();
-}
+extern void quit();
 
 } // namespace yage
 

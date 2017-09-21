@@ -9,7 +9,7 @@
 #ifndef VERTEX_H
 #define VERTEX_H
 
-#include <GL/glew.h>
+#include <glad/glad.h>
 
 namespace yage
 {

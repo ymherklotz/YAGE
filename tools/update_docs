@@ -1,27 +1,13 @@
 #!/usr/bin/env bash
 
-printf "running doxygen on all files in %s: " $( pwd )
 doxygen ./docs/Doxyfile >/dev/null 2>&1
-printf "Done\n"
-printf "cloning gh-pages from git@github.com:ymherklotz/YAGE: "
-git clone -b gh-pages git@github.com:ymherklotz/YAGE >/dev/null 2>&1
-printf "Done\n"
-printf "updating repository: "
-cd YAGE/ >/dev/null 2>&1
-git rm -rf * >/dev/null 2>&1
-mv ../html/* . >/dev/null 2>&1
-rm -rf ../html >/dev/null 2>&1
-printf "Done\n"
-printf "adding files: "
+cd html >/dev/null 2>&1
+git init >/dev/null 2>&1
+git config user.name "TravisBot" >/dev/null 2>&1
+git config user.email "" >/dev/null 2>&1
+git remote add upstream "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git" >/dev/null 2>&1
+git fetch upstream >/dev/null 2>&1
+git reset upstream/gh-pages >/dev/null 2>&1
 git add -A >/dev/null 2>&1
-printf "Done\n"
-printf "commiting files: "
-git commit -a -m 'Updating docs' >/dev/null 2>&1
-printf "Done\n"
-printf "pushing commit: "
-git push origin gh-pages >/dev/null 2>&1
-printf "Done\n"
-printf "cleaning up files: "
-cd .. >/dev/null 2>&1
-rm -rf YAGE >/dev/null 2>&1
-printf "Done\n"
+git commit -m "Rebuilding documentation" >/dev/null 2>&1
+git push -q upstream HEAD:gh-pages >/dev/null 2>&1

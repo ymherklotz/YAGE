@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file 
+/** @file
   */
 
 #ifndef YAGE_MATH_MATRIX_H
@@ -27,12 +27,12 @@ class Matrix;
 
 /** @internal Namespace for internal details.
   *
-  * Detail Namespace
+  * Details Namespace
   * ================
   *
-  * This is the namespace used for implementation detail.
+  * This is the namespace used for implementation details.
   */
-namespace detail
+namespace details
 {
 
 /** @internal Internal Row class used by the Matrix class to return the
@@ -68,7 +68,7 @@ public:
     }
 };
 
-} // namespace detail
+} // namespace details
 
 /** Base Matrix class used by other similar classes.
   */
@@ -76,7 +76,7 @@ template <int Rows = 4, int Cols = 4, class Type = double>
 class Matrix
 {
     // friended with the row class so that it can access protected member data.
-    friend class detail::Row<Rows, Cols, Type>;
+    friend class details::Row<Rows, Cols, Type>;
 
 protected:
     /// Vector containing the data of the matrix.
@@ -158,14 +158,14 @@ public:
         return ss.str();
     }
 
-    detail::Row<Rows, Cols, Type> operator[](int row)
+    details::Row<Rows, Cols, Type> operator[](int row)
     {
-        return detail::Row<Rows, Cols, Type>(this, row);
+        return details::Row<Rows, Cols, Type>(this, row);
     }
 
-    detail::Row<Rows, Cols, Type> operator[](int row) const
+    details::Row<Rows, Cols, Type> operator[](int row) const
     {
-        return detail::Row<Rows, Cols, Type>((Matrix<Rows, Cols, Type> *)this,
+        return details::Row<Rows, Cols, Type>((Matrix<Rows, Cols, Type> *)this,
                                              row);
     }
 

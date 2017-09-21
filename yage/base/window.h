@@ -6,10 +6,13 @@
  * ----------------------------------------------------------------------------
  */
 
+/** @file
+  */
+
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include <SDL2/SDL.h>
+#include <GLFW/glfw3.h>
 
 #include <string>
 
@@ -24,12 +27,12 @@ enum WindowFlags : unsigned {
     BORDERLESS = 0x8,
 };
 
-// window wrapper around SDL_Window pointer
+// window wrapper around GLFWwindow pointer
 class Window
 {
 private:
     /// window handle
-    SDL_Window *window_ = nullptr;
+    GLFWwindow *window_ = nullptr;
 
 public:
     Window();

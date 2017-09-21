@@ -12,7 +12,6 @@ Testing
 *.o
 *.out
 *.a
-*.cmake
 
 # emacs
 *.#

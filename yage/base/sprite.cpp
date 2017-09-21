@@ -15,8 +15,6 @@
 namespace yage
 {
 
-Sprite::Sprite() = default;
-
 Sprite::~Sprite()
 {
     if (vbo_id_ != 0) {

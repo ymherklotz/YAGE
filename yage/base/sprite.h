@@ -14,7 +14,7 @@
 
 #include "texture.h"
 
-#include <GL/glew.h>
+#include <glad/glad.h>
 
 #include <string>
 
@@ -34,7 +34,7 @@ private:
     Texture texture_;
 
 public:
-    Sprite();
+    Sprite() = default;
     Sprite(const Sprite &) = delete;
     Sprite(Sprite &&) = delete;
     ~Sprite();
