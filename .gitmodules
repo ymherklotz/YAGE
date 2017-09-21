@@ -10,3 +10,7 @@
 	path = lib/glfw
 	url = https://github.com/glfw/glfw.git
 	branch = latest
+[submodule "lib/glad"]
+	path = lib/glad
+	url = https://github.com/ymherklotz/glad.git
+	branch = master
