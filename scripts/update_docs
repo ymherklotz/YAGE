@@ -9,7 +9,9 @@ if [[ "$TRAVIS_BRANCH" == "master" ]]; then
     git remote add upstream "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git"
     git fetch upstream
     git reset upstream/gh-pages
-    git add -A
+    touch .
+    git add -A .
     git commit -m "Rebuilding documentation"
     git push -q upstream HEAD:gh-pages
+    cd ..
 fi
