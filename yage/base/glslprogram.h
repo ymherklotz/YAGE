@@ -9,7 +9,7 @@
 #ifndef GLSL_PROGRAM_H
 #define GLSL_PROGRAM_H
 
-#include <GL/glew.h>
+#include <glad/glad.h>
 
 #include <string>
 

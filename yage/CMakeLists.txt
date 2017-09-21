@@ -22,10 +22,9 @@ add_library(${PROJECT_NAME}
 
 target_include_directories(${PROJECT_NAME}
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
-  ${OPENGL_INCLUDE_DIR}
-  ${GLEW_INCLUDE_DIR})
+  ${OPENGL_INCLUDE_DIR})
 
 target_link_libraries(${PROJECT_NAME}
   ${OPENGL_gl_LIBRARY}
-  ${GLEW_LIBRARIES}
-  glfw)
+  glfw
+  glad)

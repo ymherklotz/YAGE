@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <yage/base/glslprogram.h>
+#include "glslprogram.h"
 
 #include <fstream>
 #include <stdexcept>

@@ -15,6 +15,9 @@
                    (setq company-clang-arguments (delete-dups (append
                                                                company-clang-arguments
                                                                (list (concat "-I" (projectile-project-root) "lib/glfw/include")))))
+                   (setq company-clang-arguments (delete-dups (append
+                                                               company-clang-arguments
+                                                               (list (concat "-I" (projectile-project-root) "lib/glad/include")))))
                    (setq flycheck-clang-include-path (delete-dups (append
                                                                    flycheck-clang-include-path
                                                                    (list (concat (projectile-project-root) "yage")))))
@@ -27,6 +30,9 @@
                    (setq flycheck-clang-include-path (delete-dups (append
                                                                    flycheck-clang-include-path
                                                                    (list (concat (projectile-project-root) "lib/glfw/include")))))
+                   (setq flycheck-clang-include-path (delete-dups (append
+                                                                   flycheck-clang-include-path
+                                                                   (list (concat (projectile-project-root) "lib/glad/include")))))
                    (setq flycheck-clang-include-path (delete-dups (append
                                                                    flycheck-clang-include-path
                                                                    (list (concat (projectile-project-root) "lib/rapidjson/include"))))))))))

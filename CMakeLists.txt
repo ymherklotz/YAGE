@@ -21,8 +21,6 @@ find_package(OpenGL REQUIRED)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
 
-include(cmake/cppcheck.cmake)
-
 if($ENV{UNIT_TESTS})
   # enable tests
   enable_testing()
