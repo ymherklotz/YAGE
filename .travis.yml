@@ -28,7 +28,7 @@ script:
 - make
 - ctest
 - |
-  if [ "$TRAVIS_BRANCH" == "master" ] then
+  if [ "$TRAVIS_BRANCH" == "master" ]; then
     ./tools/update_docs
     exit 0
   else
