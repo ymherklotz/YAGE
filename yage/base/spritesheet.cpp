@@ -62,16 +62,20 @@ bool SpriteSheetHandler::Key(const char *str, rapidjson::SizeType length, bool)
 
 bool SpriteSheetHandler::StartObject()
 {
-    if(depth_ == 2) {
-        map_[current_key_] = Coordinate();
+    depth_++;
+
+    if(depth_ == 3) {
+        current_image_ = current_key_;
     }
 
-    depth_++;
     return true;
 }
 
 bool SpriteSheetHandler::EndObject(rapidjson::SizeType)
 {
+    if(depth_ == 3) {
+        map_[current_image_] = coord_;
+    }
     depth_--;
     return true;
 }
@@ -86,12 +90,29 @@ bool SpriteSheetHandler::EndArray(rapidjson::SizeType)
     return true;
 }
 
+SpriteMap SpriteSheetHandler::spriteMap() const
+{
+    return map_;
+}
+
 bool SpriteSheetHandler::handleNumber(int i)
 {
     if(current_key_ == "width") {
         if(depth_ == 1) {
-            
+            image_width_ = i;
+        } else {
+            coord_.width = i;
         }
+    } else if(current_key_ == "height") {
+        if(depth_ == 1) {
+            image_height_ = i;
+        } else {
+            coord_.height = i;
+        }
+    } else if(current_key_ == "x") {
+        coord_.x = i;
+    } else if(current_key_ == "y") {
+        coord_.y = i;
     }
     return true;
 }

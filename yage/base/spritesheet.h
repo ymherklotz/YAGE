@@ -61,7 +61,11 @@ public:
 
 private:
     std::string current_key_;
+    std::string current_image_;
+    Coordinate coord_;
     int depth_;
+    int image_width_;
+    int image_height_;
     SpriteMap map_;
 
     bool handleNumber(int i);
