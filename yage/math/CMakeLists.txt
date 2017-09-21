@@ -1,0 +1,1 @@
+set(YAGE_MATH_SOURCES)

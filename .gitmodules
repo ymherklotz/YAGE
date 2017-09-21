@@ -1,0 +1,16 @@
+[submodule "lib/googletest"]
+	path = lib/googletest
+	url = https://github.com/google/googletest
+	branch = master
+[submodule "lib/rapidjson"]
+	path = lib/rapidjson
+	url = https://github.com/miloyip/rapidjson
+	branch = master
+[submodule "lib/glfw"]
+	path = lib/glfw
+	url = https://github.com/glfw/glfw.git
+	branch = latest
+[submodule "lib/glad"]
+	path = lib/glad
+	url = https://github.com/ymherklotz/glad.git
+	branch = master
