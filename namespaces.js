@@ -1,4 +1,4 @@
 var namespaces =
 [
-    [ "yage", "namespaceyage.html", null ]
+    [ "yage", "namespaceyage.html", "namespaceyage" ]
 ];
