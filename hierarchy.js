@@ -1,8 +1,5 @@
 var hierarchy =
 [
-    [ "BaseReaderHandler", null, [
-      [ "yage::details::SpriteSheetHandler", "classyage_1_1details_1_1SpriteSheetHandler.html", null ]
-    ] ],
     [ "yage::Body", "classyage_1_1Body.html", [
       [ "yage::CollisionBody", "classyage_1_1CollisionBody.html", null ],
       [ "yage::ParticleBody", "classyage_1_1ParticleBody.html", [

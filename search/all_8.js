@@ -1,8 +1,6 @@
 var searchData=
 [
   ['id',['id',['../structyage_1_1Texture.html#a26386c2709b906ec07c9a1bb8daf2968',1,'yage::Texture']]],
-  ['image_5fheight_5f',['image_height_',['../classyage_1_1details_1_1SpriteSheetHandler.html#a5168939b5e39a167e53ce272e748615b',1,'yage::details::SpriteSheetHandler']]],
-  ['image_5fwidth_5f',['image_width_',['../classyage_1_1details_1_1SpriteSheetHandler.html#a2d5cee115c7fee8328b7a05c6370d9be',1,'yage::details::SpriteSheetHandler']]],
   ['imageloader',['ImageLoader',['../classyage_1_1ImageLoader.html',1,'yage']]],
   ['imageloader_2ecpp',['imageloader.cpp',['../imageloader_8cpp.html',1,'']]],
   ['imageloader_2eh',['imageloader.h',['../imageloader_8h.html',1,'']]],
@@ -12,8 +10,6 @@ var searchData=
   ['inputmanager_2ecpp',['inputmanager.cpp',['../inputmanager_8cpp.html',1,'']]],
   ['inputmanager_2eh',['inputmanager.h',['../inputmanager_8h.html',1,'']]],
   ['inside',['inside',['../classyage_1_1Collider.html#a4a8ad9e664a0015e023a70d196302fe9',1,'yage::Collider::inside()'],['../classyage_1_1RectangleCollider.html#ac8d8e6bdb12c21be12f7d398242147c4',1,'yage::RectangleCollider::inside()']]],
-  ['int',['Int',['../classyage_1_1details_1_1SpriteSheetHandler.html#aa01ca94fec72e7b5067a8b5c33073218',1,'yage::details::SpriteSheetHandler']]],
-  ['int64',['Int64',['../classyage_1_1details_1_1SpriteSheetHandler.html#ac1fb0bea7248f14206a1919d41b9ebf1',1,'yage::details::SpriteSheetHandler']]],
   ['iomanager',['IoManager',['../classyage_1_1IoManager.html',1,'yage']]],
   ['iomanager_2ecpp',['iomanager.cpp',['../iomanager_8cpp.html',1,'']]],
   ['iomanager_2eh',['iomanager.h',['../iomanager_8h.html',1,'']]],

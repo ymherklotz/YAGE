@@ -6,7 +6,6 @@ var searchData=
   ['body',['Body',['../classyage_1_1Body.html#aeca769807d9b6f6fb3c9f61deaa83b86',1,'yage::Body']]],
   ['body_2ecpp',['body.cpp',['../body_8cpp.html',1,'']]],
   ['body_2eh',['body.h',['../body_8h.html',1,'']]],
-  ['bool',['Bool',['../classyage_1_1details_1_1SpriteSheetHandler.html#ac116b3bafc3fc09b05d3b7d334390944',1,'yage::details::SpriteSheetHandler']]],
   ['borderless',['BORDERLESS',['../namespaceyage.html#a09d41deeced5fca5df9dc680c9e77c38afa8ece0eef17c604369ca69bc4b09970',1,'yage']]],
   ['bottom_5fleft',['bottom_left',['../classyage_1_1Glyph.html#aa94ec682d592c86e2c08560919d675a1',1,'yage::Glyph']]],
   ['bottom_5fleft_5f',['bottom_left_',['../classyage_1_1Glyph.html#add70123a08d594e4cfb627a03ae8daad',1,'yage::Glyph']]],
