@@ -5,6 +5,8 @@
 # See file LICENSE for more details
 # ----------------------------------------------------------------------------
 
+set(LIBRARY_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+
 if($ENV{UNIT_TESTS})
   # Initializing google test
   # prevents overriding the parent project's compiler/linter settings on windows
@@ -14,7 +16,7 @@ if($ENV{UNIT_TESTS})
 
   # Add googletest directly to our build. This defines
   # the gtest and gtest_main targets.
-  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/googletest)
+  add_subdirectory(${LIBRARY_DIRECTORY}/googletest)
 
   # The gtest/gtest_main targets carry header search path
   # dependencies automatically when using CMake 2.8.11 or
@@ -24,12 +26,12 @@ if($ENV{UNIT_TESTS})
   endif()
 endif()
 
-include_directories(${rapidjson}/include)
+include_directories(${LIBRARY_DIRECTORY}/rapidjson/include)
 
 # setting up glfw
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/glfw)
+add_subdirectory(${LIBRARY_DIRECTORY}/glfw)
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/glad)
+add_subdirectory(${LIBRARY_DIRECTORY}/glad)

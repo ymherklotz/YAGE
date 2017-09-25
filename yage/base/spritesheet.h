@@ -58,6 +58,8 @@ public:
     bool EndArray(rapidjson::SizeType memberCount);
 
     SpriteMap spriteMap() const;
+    int imageWidth() const;
+    int imageHeight() const;
 
 private:
     std::string current_key_;
@@ -79,6 +81,7 @@ public:
     SpriteSheet(std::string pngFileName, std::string jsonFileName);
 
     void sprite(std::string spriteName) const;
+    std::string fileContent(std::string jsonFileName) const;
 
 private:
     Texture texture_;

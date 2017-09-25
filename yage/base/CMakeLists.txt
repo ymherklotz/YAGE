@@ -3,7 +3,9 @@ set(YAGE_BASE_SOURCES
   base/window.cpp
   base/texturecache.cpp
   base/glslprogram.cpp
+  base/sprite.cpp
   base/spritebatch.cpp
+  base/spritesheet.cpp
   base/resourcemanager.cpp
   base/sprite.cpp
   base/inputmanager.cpp

@@ -12,6 +12,8 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
+#include <glad/glad.h>
+
 #include <GLFW/glfw3.h>
 
 #include <string>
@@ -51,6 +53,10 @@ public:
     void swapBuffer();
     /// clear buffer
     void clearBuffer();
+    /// hide windowProc
+    void hide();
+    /// show window
+    void show();
 };
 
 } // namespace yage

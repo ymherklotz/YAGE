@@ -22,6 +22,7 @@
 #include "base/picopng.h"
 #include "base/resourcemanager.h"
 #include "base/spritebatch.h"
+#include "base/spritesheet.h"
 #include "base/texture.h"
 #include "base/vertex.h"
 #include "base/window.h"

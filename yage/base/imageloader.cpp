@@ -6,10 +6,16 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <yage/base/imageloader.h>
+#include "imageloader.h"
+
+#ifndef UNIT_TESTS
+#include <glad/glad.h>
+#endif
+
 #include <yage/base/iomanager.h>
 #include <yage/base/picopng.h>
 
+#include <iostream>
 #include <stdexcept>
 
 namespace yage
@@ -33,7 +39,8 @@ Texture ImageLoader::loadPng(const std::string &file_path)
                                  std::to_string(error_code));
     }
 
-    Texture texture{0, (int)width, (int)height};
+    Texture texture(0, static_cast<int>(width), static_cast<int>(height));
+    std::cout << "Geometry: " << texture.width << "x" << texture.height << "\n";
 
     glGenTextures(1, &texture.id);
 

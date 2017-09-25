@@ -8,7 +8,6 @@
 
 #include "window.h"
 
-#include <iostream>
 #include <stdexcept>
 
 namespace yage
@@ -22,12 +21,13 @@ Window::~Window()
 }
 
 void Window::create(const std::string &window_name, int width, int height,
-                    unsigned flags)
+                    unsigned)
 {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 
-    window_ = glfwCreateWindow(width, height, window_name.c_str(), nullptr, nullptr);
+    window_ =
+        glfwCreateWindow(width, height, window_name.c_str(), nullptr, nullptr);
     if (window_ == nullptr) {
         throw std::runtime_error("GLFW Window creation failed");
     }
@@ -35,9 +35,8 @@ void Window::create(const std::string &window_name, int width, int height,
     // initialize the gl context
     glfwMakeContextCurrent(window_);
 
-    // print out the current OpenGL version to debug
-    std::cout << "***  OpenGL version: " << glGetString(GL_VERSION)
-              << "  ***\n";
+    // initialize glad
+    gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
 
     // set vsync on
     glfwSwapInterval(1);
@@ -61,6 +60,16 @@ void Window::clearBuffer()
     glClearDepth(1.f);
     // clears buffer with clear color
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void Window::hide()
+{
+    glfwHideWindow(window_);
+}
+
+void Window::show()
+{
+    glfwShowWindow(window_);
 }
 
 } // namespace yage

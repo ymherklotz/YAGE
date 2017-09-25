@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
 
 # yage library cmakelists.txt
-project(YetAnotherGameEngine)
+project(yage
+  VERSION 0.1.1.0
+  LANGUAGES CXX)
 
 # set standard
 set(CMAKE_CXX_STANDARD 14)
@@ -17,8 +19,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 # find libraries
 find_package(OpenGL REQUIRED)
 
-# adding libraries
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib)
+# include subdirectories
+include(${CMAKE_CURRENT_SOURCE_DIR}/lib/CMakeLists.txt)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
 
 if($ENV{UNIT_TESTS})
@@ -38,4 +40,5 @@ if($ENV{UNIT_TESTS})
   make_test(matrixtest ${SIMULATION_RUNS})
   make_test(particlebodytest ${SIMULATION_RUNS})
   make_test(windowtest ${SIMULATION_RUNS})
+  make_test(spritesheettest ${SIMULATION_RUNS})
 endif()
