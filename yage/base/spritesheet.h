@@ -38,41 +38,6 @@ struct Coordinate {
 
 typedef std::map<std::string, details::Coordinate> SpriteMap;
 
-class SpriteSheetHandler
-    : public rapidjson::BaseReaderHandler<rapidjson::UTF8<>, SpriteSheetHandler>
-{
-public:
-    bool Null();
-    bool Bool(bool b);
-    bool Int(int i);
-    bool Uint(unsigned u);
-    bool Int64(int64_t i);
-    bool Uint64(uint64_t u);
-    bool Double(double d);
-    bool String(const char *str, rapidjson::SizeType length, bool copy);
-
-    bool Key(const char *str, rapidjson::SizeType length, bool copy);
-    bool StartObject();
-    bool EndObject(rapidjson::SizeType memberCount);
-    bool StartArray();
-    bool EndArray(rapidjson::SizeType memberCount);
-
-    SpriteMap spriteMap() const;
-    int imageWidth() const;
-    int imageHeight() const;
-
-private:
-    std::string current_key_;
-    std::string current_image_;
-    Coordinate coord_;
-    int depth_;
-    int image_width_;
-    int image_height_;
-    SpriteMap map_;
-
-    bool handleNumber(int i);
-};
-
 } // namespace details
 
 class SpriteSheet
@@ -86,6 +51,8 @@ public:
 private:
     Texture texture_;
     details::SpriteMap fileLocations_;
+
+    details::SpriteMap parseJson(int &width, int &height, const std::string &jsonContent) const;
 };
 
 } // namespace yage

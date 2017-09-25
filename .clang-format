@@ -9,6 +9,7 @@ AllowShortFunctionsOnASingleLine: Inline
 AlwaysBreakTemplateDeclarations: true
 BreakBeforeBraces: Linux
 SortIncludes: true
+SpaceBeforeParens: ControlStatements
 UseTab: Never
 ...
 
