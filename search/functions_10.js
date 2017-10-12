@@ -6,5 +6,5 @@ var searchData=
   ['renderbatch',['RenderBatch',['../classyage_1_1RenderBatch.html#a4a3a3180c63c51178871648d4c8e6853',1,'yage::RenderBatch']]],
   ['rigidbody',['RigidBody',['../classyage_1_1RigidBody.html#aed946934f970694c6f6840b09600a606',1,'yage::RigidBody']]],
   ['row',['Row',['../classyage_1_1details_1_1Row.html#a18904acbce1c6084bc25a753989b5f06',1,'yage::details::Row']]],
-  ['rowsize',['rowSize',['../classyage_1_1Matrix.html#acaf0837fade0cb4179603b97ac224965',1,'yage::Matrix']]]
+  ['rowsize',['rowSize',['../classyage_1_1Matrix.html#a0cc8e242b2e8319789aae0e1d81834a1',1,'yage::Matrix']]]
 ];

@@ -13,5 +13,5 @@ var searchData=
   ['iomanager',['IoManager',['../classyage_1_1IoManager.html',1,'yage']]],
   ['iomanager_2ecpp',['iomanager.cpp',['../iomanager_8cpp.html',1,'']]],
   ['iomanager_2eh',['iomanager.h',['../iomanager_8h.html',1,'']]],
-  ['iskeypressed',['isKeyPressed',['../classyage_1_1InputManager.html#afc9124e171725c291f9a1b0ed670805e',1,'yage::InputManager']]]
+  ['iskeypressed',['isKeyPressed',['../classyage_1_1InputManager.html#ae99a13911fe80c221e83218b51a76ab0',1,'yage::InputManager']]]
 ];

@@ -7,7 +7,7 @@ var classyage_1_1SpriteBatch =
     [ "begin", "classyage_1_1SpriteBatch.html#af6293aac69e1124199297e5b921a4872", null ],
     [ "createRenderBatches", "classyage_1_1SpriteBatch.html#ae3e74abbf722aba0197b64d8f61d928c", null ],
     [ "createVertexArray", "classyage_1_1SpriteBatch.html#a4e21cc3bc27fbfaf1b6a15362b664027", null ],
-    [ "draw", "classyage_1_1SpriteBatch.html#ab477a5393ddd7b78afba93b96962f038", null ],
+    [ "draw", "classyage_1_1SpriteBatch.html#a22c8bb28a72c309afeb6f78b6af19ec5", null ],
     [ "end", "classyage_1_1SpriteBatch.html#af8b705cdad7ceefa902f3be620ac8632", null ],
     [ "init", "classyage_1_1SpriteBatch.html#a7731372a6ec1aea75d1732700fe0f4c6", null ],
     [ "operator=", "classyage_1_1SpriteBatch.html#a1b365d89c096d7fa138e1c7091f1d737", null ],

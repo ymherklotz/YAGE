@@ -27,6 +27,12 @@ var hierarchy =
       [ "yage::Vector< 2, Type >", "classyage_1_1Vector.html", [
         [ "yage::Vector2< Type >", "classyage_1_1Vector2.html", null ]
       ] ],
+      [ "yage::Vector< 3, Type >", "classyage_1_1Vector.html", [
+        [ "yage::Vector3< Type >", "classyage_1_1Vector3.html", null ]
+      ] ],
+      [ "yage::Vector< 4, Type >", "classyage_1_1Vector.html", [
+        [ "yage::Vector4< Type >", "classyage_1_1Vector4.html", null ]
+      ] ],
       [ "yage::Vector< Rows, Type >", "classyage_1_1Vector.html", null ]
     ] ],
     [ "yage::Position", "structyage_1_1Position.html", null ],
