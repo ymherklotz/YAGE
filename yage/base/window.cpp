@@ -18,13 +18,17 @@ Window::Window() = default;
 Window::~Window()
 {
     glfwDestroyWindow(window_);
+    glfwTerminate();
 }
 
-void Window::create(const std::string &window_name, int width, int height,
-                    unsigned)
+void Window::create(std::string window_name, int width, int height)
 {
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
+    if(glfwInit() == GLFW_FALSE) {
+        throw std::runtime_error("GLFW Initialisation failed");
+    }
+
+    glfwWindowHint(GLFW_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_VERSION_MINOR, 5);
 
     window_ =
         glfwCreateWindow(width, height, window_name.c_str(), nullptr, nullptr);
@@ -46,6 +50,8 @@ void Window::create(const std::string &window_name, int width, int height,
     // set alpha blending
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    // set the clear depth
+    glClearDepth(1.f);
 }
 
 void Window::swapBuffer()
@@ -56,8 +62,6 @@ void Window::swapBuffer()
 
 void Window::clearBuffer()
 {
-    // set the clear depth
-    glClearDepth(1.f);
     // clears buffer with clear color
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
@@ -70,6 +74,16 @@ void Window::hide()
 void Window::show()
 {
     glfwShowWindow(window_);
+}
+
+bool Window::shouldClose()
+{
+    return glfwWindowShouldClose(window_);
+}
+
+void Window::pollEvents() const
+{
+    glfwPollEvents();
 }
 
 } // namespace yage

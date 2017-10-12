@@ -1,3 +1,4 @@
+
 /* ----------------------------------------------------------------------------
  * resourcemanager.h
  *
@@ -24,6 +25,7 @@ private:
 
 public:
     static Texture getTexture(const std::string &texture_path);
+    
 };
 
 } // namespace yage

@@ -1,9 +1,5 @@
 cmake_policy(SET CMP0048 NEW)
 
-project(yage
-  VERSION 0.1.1.0
-  LANGUAGES CXX)
-
 include(base/CMakeLists.txt)
 include(physics/CMakeLists.txt)
 include(math/CMakeLists.txt)

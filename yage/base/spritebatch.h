@@ -6,8 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file 
-  */
+/** @file
+ */
 
 #ifndef YAGE_SPRITE_BATCH_H
 #define YAGE_SPRITE_BATCH_H
@@ -16,6 +16,7 @@
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
+#include <yage/math/matrix.h>
 
 #include <vector>
 
@@ -92,8 +93,9 @@ public:
     void begin();
     void end();
     // adds a sprite to the sprite batch to be rendered later
-    void draw(const glm::vec4 &destination_rect, const glm::vec4 &uv_rect,
-              GLuint texture, const Color &color, float depth);
+    void draw(const yage::Vector4f &destination_rect,
+              const yage::Vector4f &uv_rect, GLuint texture, const Color &color,
+              float depth);
     // render the batch
     void render();
 

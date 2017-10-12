@@ -6,6 +6,9 @@
  * ----------------------------------------------------------------------------
  */
 
+/** @file
+ */
+
 #include "spritesheet.h"
 
 #include <cassert>
@@ -25,7 +28,15 @@ namespace yage
 
 SpriteSheet::SpriteSheet(string pngFileName, string jsonFileName)
 {
-    string fileContents = fileContent(jsonFileName);
+    int jsonWidth, jsonHeight;
+    fileLocations_ =
+        parseJson(jsonWidth, jsonHeight, fileContent(jsonFileName));
+    texture_ = ImageLoader::loadPng(pngFileName);
+
+    if (texture_.width != jsonWidth)
+        throw runtime_error("JSON width does not match texture width");
+    if (texture_.height != jsonHeight) 
+        throw runtime_error("JSON height does not match texture height");
 }
 
 string SpriteSheet::fileContent(string jsonFileName) const
@@ -38,7 +49,8 @@ string SpriteSheet::fileContent(string jsonFileName) const
     return stream.str();
 }
 
-SpriteMap SpriteSheet::parseJson(int &width, int &height, const string &jsonContent) const
+SpriteMap SpriteSheet::parseJson(int &width, int &height,
+                                 string jsonContent) const
 {
     SpriteMap spriteMap;
     Document jsonAtlas;
@@ -48,10 +60,23 @@ SpriteMap SpriteSheet::parseJson(int &width, int &height, const string &jsonCont
     height = jsonAtlas["height"].GetInt();
 
     for (auto &texture : jsonAtlas["sprites"].GetObject()) {
-        spriteMap[texture.name.GetString()] = Coordinate();
+        Coordinate coord;
         for (auto &value : texture.value.GetObject()) {
-            /// @todo add the coordinate to the map
+            string keyName{value.value.GetString()};
+            int keyValue{value.value.GetInt()};
+            if (keyName == "x") {
+                coord.x = keyValue;
+            } else if (keyName == "y") {
+                coord.y = keyValue;
+            } else if (keyName == "width") {
+                coord.width = keyValue;
+            } else if (keyName == "height") {
+                coord.height = keyValue;
+            } else {
+                throw runtime_error("JSON key incorrect: " + keyName);
+            }
         }
+        spriteMap[texture.name.GetString()] = coord;
     }
 
     return spriteMap;

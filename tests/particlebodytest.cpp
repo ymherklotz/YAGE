@@ -6,8 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <yage/yage.h>
 #include <gtest/gtest.h>
+#include <yage/yage.h>
 
 #include <cmath>
 #include <cstdlib>

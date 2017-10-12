@@ -12,8 +12,6 @@
 namespace yage
 {
 
-TextureCache::TextureCache() = default;
-
 Texture TextureCache::getTexture(const std::string &texture_path)
 {
     auto itr = texture_map_.find(texture_path);

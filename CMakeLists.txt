@@ -23,6 +23,9 @@ find_package(OpenGL REQUIRED)
 include(${CMAKE_CURRENT_SOURCE_DIR}/lib/CMakeLists.txt)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
 
+add_executable(simplegame tests/simplegame.cpp)
+target_link_libraries(simplegame yage)
+
 if($ENV{UNIT_TESTS})
   # enable tests
   enable_testing()
@@ -41,4 +44,6 @@ if($ENV{UNIT_TESTS})
   make_test(particlebodytest ${SIMULATION_RUNS})
   make_test(windowtest ${SIMULATION_RUNS})
   make_test(spritesheettest ${SIMULATION_RUNS})
+  make_test(vector3test ${SIMULATION_RUNS})
+  make_test(vector4test ${SIMULATION_RUNS})
 endif()

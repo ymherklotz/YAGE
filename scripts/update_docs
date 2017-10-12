@@ -3,17 +3,15 @@
 if [[ "$TRAVIS_BRANCH" == "master" ]]; then
     doxygen ./docs/Doxyfile
     if [ -d "$TRAVIS_BUILD_DIR/html" ]; then
-        cd $TRAVIS_BUILD_DIR/html
-        git init
+        git clone -b gh-pages "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git" YAGE_gh-pages
+        cd YAGE_gh-pages
         git config user.name "TravisBot"
         git config user.email ""
-        git remote add upstream "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git"
-        git fetch upstream
-        git reset upstream/gh-pages
-        touch .
+        rm -rf *
+        cp -r ../html/* .
         git add -A .
         git commit -m "Rebuilding documentation"
-        git push -q upstream HEAD:gh-pages
+        git push -q origin gh-pages
         cd ..
     fi
 fi

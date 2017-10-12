@@ -61,8 +61,8 @@ void SpriteBatch::end()
     createRenderBatches();
 }
 
-void SpriteBatch::draw(const glm::vec4 &destination_rect,
-                       const glm::vec4 &uv_rect, GLuint texture,
+void SpriteBatch::draw(const yage::Vector4f &destination_rect,
+                       const yage::Vector4f &uv_rect, GLuint texture,
                        const Color &color, float depth)
 {
     Vertex top_left, top_right, bottom_right, bottom_left;

@@ -7,7 +7,7 @@
  */
 
 /** @file
-  */
+ */
 
 #ifndef YAGE_MATH_MATRIX_H
 #define YAGE_MATH_MATRIX_H
@@ -26,23 +26,23 @@ template <int Rows, int Cols, class Type>
 class Matrix;
 
 /** @internal Namespace for internal details.
-  *
-  * Details Namespace
-  * ================
-  *
-  * This is the namespace used for implementation details.
-  */
+ *
+ * Details Namespace
+ * ================
+ *
+ * This is the namespace used for implementation details.
+ */
 namespace details
 {
 
 /** @internal Internal Row class used by the Matrix class to return the
-  * internal data structure of the Matrix.
-  *
-  * Row
-  * ===
-  *
-  * Internal Row class to return a value in the row of the matrix.
-  */
+ * internal data structure of the Matrix.
+ *
+ * Row
+ * ===
+ *
+ * Internal Row class to return a value in the row of the matrix.
+ */
 template <int Rows, int Cols, class Type>
 class Row
 {
@@ -71,7 +71,7 @@ public:
 } // namespace details
 
 /** Base Matrix class used by other similar classes.
-  */
+ */
 template <int Rows = 4, int Cols = 4, class Type = double>
 class Matrix
 {
@@ -94,10 +94,10 @@ public:
     int colSize() const { return Cols; }
 
     /** Return the row specified row as a Matrix with only one row.
-      *
-      * @param row Row number to be returned.
-      * @return The row that is specified by the row variables.
-      */
+     *
+     * @param row Row number to be returned.
+     * @return The row that is specified by the row variables.
+     */
     Matrix<1, Cols, Type> getRow(int row) const
     {
         Matrix<1, Cols, Type> rowMatrix;
@@ -108,10 +108,10 @@ public:
     }
 
     /** Get a specific column in a column vector.
-      *
-      * @param col Column number to be returned.
-      * @return Column Matrix of the selected column.
-      */
+     *
+     * @param col Column number to be returned.
+     * @return Column Matrix of the selected column.
+     */
     Matrix<Rows, 1, Type> getCol(int col) const
     {
         Matrix<Rows, 1, Type> colMatrix;
@@ -122,23 +122,23 @@ public:
     }
 
     /** Iterator support for the start.
-      *
-      * @return Iterator pointing to the start of the data.
-      */
+     *
+     * @return Iterator pointing to the start of the data.
+     */
     typename std::vector<Type>::iterator begin() { return data_.begin(); }
 
     /** Iterator support for the end.
-      *
-      * @return Iterator pointing to the end of the data.
-      */
+     *
+     * @return Iterator pointing to the end of the data.
+     */
     typename std::vector<Type>::iterator end() { return data_.end(); }
 
     /** Prints out the matrix, but can also be implemented by other classes to
-      * print data differently.
-      *
-      * @bug When printing certain matrices, it omits a row or column. Still
-      * need to determine under which conditions.
-      */
+     * print data differently.
+     *
+     * @bug When printing certain matrices, it omits a row or column. Still
+     * need to determine under which conditions.
+     */
     virtual std::string toString() const
     {
         std::stringstream ss;
@@ -166,7 +166,7 @@ public:
     details::Row<Rows, Cols, Type> operator[](int row) const
     {
         return details::Row<Rows, Cols, Type>((Matrix<Rows, Cols, Type> *)this,
-                                             row);
+                                              row);
     }
 
     Matrix<Rows, Cols, Type> &operator+=(const Matrix<Rows, Cols, Type> &rhs)
@@ -320,10 +320,10 @@ public:
 };
 
 /** 2D Vector class.
-  *
-  * Two dimensional vector class.
-  */
-template <class Type = double>
+ *
+ * Two dimensional vector class.
+ */
+template <typename Type = double>
 class Vector2 : public Vector<2, Type>
 {
 public:
@@ -339,30 +339,90 @@ public:
     Vector2<Type>(const Matrix<2, 1, Type> &other) : Vector<2, Type>(other) {}
 
     Type &x() { return this->data_[0]; }
-
     const Type &x() const { return this->data_[0]; }
 
     Type &y() { return this->data_[1]; }
-
     const Type &y() const { return this->data_[1]; }
 };
 
+/** 3D Vector class.
+ *
+ * Two dimensional vector class.
+ */
+template <typename Type = double>
+class Vector3 : public Vector<3, Type>
+{
+public:
+    Type &x, &y, &z;
+
+    Vector3<Type>() : Vector<4, Type>() {}
+
+    Vector3<Type>(std::vector<Type> data)
+        : Vector<3, Type>(data), x(this->data_[0]), y(this->data_[1]),
+          z(this->data_[2])
+    {
+    }
+
+    Vector3<Type>(Type x_in, Type y_in, Type z_in)
+        : Vector<3, Type>({x_in, y_in, z_in}), x(this->data_[0]),
+          y(this->data_[1]), z(this->data_[2])
+    {
+    }
+};
+
+/** 4D Vector class
+ */
+template <typename Type = double>
+class Vector4 : public Vector<4, Type>
+{
+public:
+    Type &x, &y, &z, &w;
+
+    Vector4<Type>() : Vector<4, Type>() {}
+
+    Vector4<Type>(std::vector<Type> data)
+        : Vector<4, Type>(data), x(this->data_[0]), y(this->data_[1]),
+          z(this->data_[2]), w(this->data_[3])
+    {
+    }
+
+    Vector4<Type>(Type x_in, Type y_in, Type z_in, Type w_in)
+        : Vector<4, Type>({x_in, y_in, z_in, w_in}), x(this->data_[0]),
+          y(this->data_[1]), z(this->data_[2]), w(this->data[3])
+    {
+    }
+};
+
 /** Definition of a 2D vector.
-  */
+ */
 using Vector2d = Vector2<double>;
+using Vector2f = Vector2<float>;
+using Vector2i = Vector2<int>;
+
+/** Definition of a 3D vector.
+ */
+using Vector3d = Vector3<double>;
+using Vector3f = Vector3<float>;
+using Vector3i = Vector3<int>;
+
+/** Definition of a 4D vector
+ */
+using Vector4d = Vector4<double>;
+using Vector4f = Vector4<float>;
+using Vector4i = Vector4<int>;
 
 /** Namespace containing functions that operate on matrices.
-  *
-  * Implementations defined here are meant to operate on anything that inherits
-  * from the base Matrix class.
-  */
+ *
+ * Implementations defined here are meant to operate on anything that inherits
+ * from the base Matrix class.
+ */
 namespace matrix
 {
 
 /** Transposes a matrix and returns the result
-  *
-  * @param m input matrix.
-  */
+ *
+ * @param m input matrix.
+ */
 template <int M, int N, class T>
 Matrix<N, M, T> transpose(const Matrix<M, N, T> &m)
 {
@@ -376,9 +436,9 @@ Matrix<N, M, T> transpose(const Matrix<M, N, T> &m)
 }
 
 /** Returns the dot product between two vectors
-  *
-  * @param m1,m2 Input matrices.
-  */
+ *
+ * @param m1,m2 Input matrices.
+ */
 template <int R, class T>
 T dot(const Matrix<R, 1, T> &m1, const Matrix<R, 1, T> &m2)
 {
@@ -390,11 +450,11 @@ T dot(const Matrix<R, 1, T> &m1, const Matrix<R, 1, T> &m2)
 }
 
 /** Multiplies two matrices together.
-  *
-  * @param m1,m2 Matrix inputs
-  *
-  * Requires the two matrices to be compatible with multiplication.
-  */
+ *
+ * @param m1,m2 Matrix inputs
+ *
+ * Requires the two matrices to be compatible with multiplication.
+ */
 template <int M, int N, int P, int Q, class T>
 Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
 {

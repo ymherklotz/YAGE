@@ -6,6 +6,9 @@
  * ----------------------------------------------------------------------------
  */
 
+/** @file
+ */
+
 #ifndef YAGE_SPRITESHEET_H
 #define YAGE_SPRITESHEET_H
 
@@ -52,7 +55,8 @@ private:
     Texture texture_;
     details::SpriteMap fileLocations_;
 
-    details::SpriteMap parseJson(int &width, int &height, const std::string &jsonContent) const;
+    details::SpriteMap parseJson(int &width, int &height,
+                                 std::string jsonContent) const;
 };
 
 } // namespace yage

@@ -47,8 +47,7 @@ public:
     Window &operator=(Window &&) = delete;
 
     /// create the window, initialize the handle and update the width and height
-    void create(const std::string &window_name, int width, int height,
-                unsigned flags = WindowFlags::SHOWN);
+    void create(std::string window_name, int width, int height);
     /// swap the buffer
     void swapBuffer();
     /// clear buffer
@@ -57,6 +56,8 @@ public:
     void hide();
     /// show window
     void show();
+    bool shouldClose();
+    void pollEvents() const;
 };
 
 } // namespace yage
