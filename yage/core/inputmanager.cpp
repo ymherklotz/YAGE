@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#include <yage/base/inputmanager.h>
+#include <yage/core/inputmanager.h>
 
 namespace yage
 {

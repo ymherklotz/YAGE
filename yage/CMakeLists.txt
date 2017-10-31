@@ -1,12 +1,12 @@
 cmake_policy(SET CMP0048 NEW)
 
-include(base/CMakeLists.txt)
+include(core/CMakeLists.txt)
 include(physics/CMakeLists.txt)
 include(math/CMakeLists.txt)
 
 set(YAGE_SOURCES
   yage.cpp
-  ${YAGE_BASE_SOURCES}
+  ${YAGE_CORE_SOURCES}
   ${YAGE_PHYSICS_SOURCES}
   ${YAGE_MATH_SOURCES})
 

@@ -12,8 +12,8 @@
 #include <glad/glad.h>
 #endif
 
-#include <yage/base/iomanager.h>
-#include <yage/base/picopng.h>
+#include <yage/core/iomanager.h>
+#include <yage/core/picopng.h>
 
 #include <iostream>
 #include <stdexcept>

@@ -23,10 +23,10 @@ find_package(OpenGL REQUIRED)
 include(${CMAKE_CURRENT_SOURCE_DIR}/lib/CMakeLists.txt)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
 
-add_executable(simplegame tests/simplegame.cpp)
-target_link_libraries(simplegame yage)
-
 if($ENV{UNIT_TESTS})
+  add_executable(simplegame tests/simplegame.cpp)
+  target_link_libraries(simplegame yage)
+
   # enable tests
   enable_testing()
   set(SIMULATION_RUNS 1000)

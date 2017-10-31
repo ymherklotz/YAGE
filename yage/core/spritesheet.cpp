@@ -17,7 +17,7 @@
 #include <stdexcept>
 
 #include <rapidjson/document.h>
-#include <yage/base/imageloader.h>
+#include <yage/core/imageloader.h>
 
 using namespace std;
 using namespace rapidjson;
