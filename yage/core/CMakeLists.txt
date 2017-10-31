@@ -1,0 +1,15 @@
+set(YAGE_CORE_SOURCES
+  core/imageloader.cpp
+  core/window.cpp
+  core/texturecache.cpp
+  core/glslprogram.cpp
+  core/sprite.cpp
+  core/spritebatch.cpp
+  core/spritesheet.cpp
+  core/resourcemanager.cpp
+  core/sprite.cpp
+  core/inputmanager.cpp
+  core/picopng.cpp
+  core/camera2d.cpp
+  core/iomanager.cpp
+  )

@@ -10,8 +10,19 @@
 
 #include <stdexcept>
 
+
+
 namespace yage
 {
+
+void key_callback(GLFWwindow *window, int key, int scanCode, int action, int mods)
+{
+    if(key == GLFW_KEY_E && action == GLFW_PRESS) {
+        glClearColor(0.5f, 0.f, 0.f, 1.f);
+    } else {
+        glClearColor(0.f, 0.5f, 0.f, 1.f);
+    }
+}
 
 Window::Window() = default;
 
@@ -41,6 +52,9 @@ void Window::create(std::string window_name, int width, int height)
 
     // initialize glad
     gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
+
+    // set key callback
+    glfwSetKeyCallback(window_, key_callback);
 
     // set vsync on
     glfwSwapInterval(1);

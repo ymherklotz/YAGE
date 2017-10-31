@@ -10,6 +10,7 @@
 
 #include <GLFW/glfw3.h>
 
+#include <iostream>
 #include <stdexcept>
 
 namespace yage
@@ -17,7 +18,7 @@ namespace yage
 
 void glfwErrorCallback(int, const char *description)
 {
-    fprintf(stderr, "ERROR: %s\n", description);
+    std::cerr << "ERROR: %s\n" << description;
 }
 
 void init()
