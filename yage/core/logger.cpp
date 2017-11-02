@@ -11,8 +11,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 namespace yage
 {
 
@@ -21,9 +19,12 @@ LogMessage Logger::operator()()
     return LogMessage(this);
 }
 
-void Logger::flush(const LogMessage &msg)
+void Logger::flush(const LogMessage *msg)
 {
-    string asString(msg.buffer_.str());
+    using std::string;
+    using std::cout;
+
+    string asString(msg->buffer_.str());
     cout << asString << "\n";
 }
 

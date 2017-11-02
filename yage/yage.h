@@ -26,6 +26,9 @@
 #include "core/texture.h"
 #include "core/vertex.h"
 #include "core/window.h"
+#include "core/logger.h"
+#include "core/logmessage.h"
+#include "core/logsink.h"
 
 #include "physics/body.h"
 #include "physics/particlebody.h"

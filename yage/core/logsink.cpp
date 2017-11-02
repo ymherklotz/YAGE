@@ -1,31 +1,19 @@
 /* ----------------------------------------------------------------------------
- * logger.h
+ * logsink.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
  * See file LICENSE for more details
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_CORE_LOGGER_H
-#define YAGE_CORE_LOGGER_H
-
-#include "logmessage.h"
+#include "logsink.h"
 
 namespace yage
 {
 
-class Logger
+void LogSink::write(const LogMessage::Meta &meta, const std::string &msg)
 {
-public:
-    LogMessage operator()();
-
-    void flush(const LogMessage *msg);
-
-    static Logger &instance();
-};
+    wrapper_->write(meta, msg);
+}
 
 } // namespace yage
-
-#define gLog yage::Logger::instance()()
-
-#endif

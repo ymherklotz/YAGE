@@ -9,6 +9,9 @@
 #include "logmessage.h"
 #include "logger.h"
 
+
+#include <iostream>
+
 namespace yage
 {
 
@@ -19,7 +22,7 @@ LogMessage::LogMessage(LogMessage &&msg) : owner_(std::move(msg.owner_)) {}
 LogMessage::~LogMessage()
 {
     if (owner_ != nullptr) {
-        owner_->flush(*this);
+        owner_->flush(this);
     }
 }
 
