@@ -23,6 +23,13 @@ public:
     template <typename T>
     LogSink(T impl);
 
+    LogSink(const LogSink &sink);
+    LogSink(LogSink &&sink);
+
+    LogSink &operator=(const LogSink &sink);
+    LogSink &operator=(LogSink &&sink);
+    bool operator==(const LogSink &sink);
+
     void write(const LogMessage::Meta &meta, const std::string &msg);
 
 private:
@@ -46,6 +53,8 @@ private:
 
     std::unique_ptr<Concept> wrapper_;
 };
+
+LogSink makeConsoleSink();
 
 /* -----------------------------------------------------------------------------
  * Template Implementation

@@ -43,8 +43,9 @@ private:
 
     std::ostringstream buffer_;
     Logger *owner_;
+    Meta meta_;
 
-    LogMessage(Logger *owner);
+    LogMessage(Logger *owner, const std::string &fileName_i, int lineNum_i);
     LogMessage(LogMessage &&msg);
 };
 

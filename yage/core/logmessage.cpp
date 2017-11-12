@@ -9,13 +9,16 @@
 #include "logmessage.h"
 #include "logger.h"
 
-
 #include <iostream>
 
 namespace yage
 {
 
-LogMessage::LogMessage(Logger *owner) : owner_(owner) {}
+LogMessage::LogMessage(Logger *owner, const std::string &fileName_i,
+                       int lineNum_i)
+    : owner_(owner), meta_({fileName_i, lineNum_i})
+{
+}
 
 LogMessage::LogMessage(LogMessage &&msg) : owner_(std::move(msg.owner_)) {}
 

@@ -7,25 +7,52 @@
  */
 
 #include "logger.h"
+#include "logmessage.h"
+#include "logsink.h"
 
+#include <algorithm>
 #include <iostream>
 #include <string>
 
 namespace yage
 {
 
-LogMessage Logger::operator()()
+Logger::Logger()
 {
-    return LogMessage(this);
+    add(makeConsoleSink());
+}
+
+LogMessage Logger::operator()(const std::string &fileName, int lineNum)
+{
+    return LogMessage(this, fileName, lineNum);
 }
 
 void Logger::flush(const LogMessage *msg)
 {
-    using std::string;
-    using std::cout;
+    std::string asString(msg->buffer_.str());
 
-    string asString(msg->buffer_.str());
-    cout << asString << "\n";
+    for (auto &&sink : sinks_) {
+        sink.write(msg->meta_, asString);
+    }
+}
+
+void Logger::add(const LogSink &sink)
+{
+    sinks_.push_back(sink);
+}
+
+void Logger::remove(const LogSink &sink)
+{
+    auto it = std::find(std::begin(sinks_), std::end(sinks_), sink);
+
+    if(it != std::end(sinks_)) {
+        sinks_.erase(it);
+    }
+}
+
+void Logger::clear()
+{
+    sinks_.clear();
 }
 
 Logger &Logger::instance()

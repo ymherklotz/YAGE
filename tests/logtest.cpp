@@ -1,3 +1,11 @@
+/* ----------------------------------------------------------------------------
+ * logtest.cpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
+ * See file LICENSE for more details
+ * ----------------------------------------------------------------------------
+ */
+
 #include <yage.h>
 
 #include <iostream>
@@ -5,10 +13,7 @@
 int main()
 {
     gLog << "Hello World";
-    yage::Logger l;
-    l() << "Hello my name is Yann";
-    std::cout << "#####################\n";
 
-    gLog << "Yanananan";
-    gLog << "Remove the top element";
+    gLog << "This is Yann";
+        std::cout << "Hello\n";
 }
