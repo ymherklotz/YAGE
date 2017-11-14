@@ -35,6 +35,11 @@
 #include "physics/rectanglecollider.h"
 #include "physics/rigidbody.h"
 
+#include "math/matrix.h"
+
+#include "util/active.h"
+#include "util/syncqueue.h"
+
 /** Project namespace.
   *
   * Avoids collision as all the classes and global functions are wrapped in.
