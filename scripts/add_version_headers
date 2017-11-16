@@ -37,11 +37,13 @@ header = """/* ---------------------------------------------------------------\
 """
 
 
-lic_regex = re.compile("\/\* -+\n \* ([a-z]+\.(?:cpp|h)|\{0\})\n(?: \*[ a-zA-Z0-9_.,\-()<>@]*\n)+ \* -+\n \*/", re.MULTILINE)
+lic_regex = re.compile(
+    "\/\* -+\n \* ([a-z]+\.(?:cpp|h)|\{0\})\n(?: \*[ a-zA-Z0-9_.,\-()<>@]*\n)+ \* -+\n \*/", re.MULTILINE)
 
 
 class HeaderUpdate(object):
     """Updates the header in all the source and header files in the code"""
+
     def __init__(self, **kwargs):
         self.match_re = ".*[.]cpp$|.*[.]h$"
         self.exclude_re = "^$"
@@ -70,11 +72,14 @@ class HeaderUpdate(object):
                 src = f.read()
                 f.seek(0)
                 if lic_regex.match(src):
-                    print("Updating {}: ".format(os.path.basename(filePath)), end="")
-                    src = lic_regex.sub(header.format(os.path.basename(filePath)), src)
+                    print("Updating {}: ".format(
+                        os.path.basename(filePath)), end="")
+                    src = lic_regex.sub(header.format(
+                        os.path.basename(filePath)), src)
                     print("done")
                 else:
-                    print("Adding {}: ".format(os.path.basename(filePath)), end="")
+                    print("Adding {}: ".format(
+                        os.path.basename(filePath)), end="")
                     src = header.format(os.path.basename(filePath)) + src
                     print("done")
                 f.write(src)
@@ -87,11 +92,11 @@ class HeaderUpdate(object):
 
     def _traverseDir(self, path, fileOperation):
         for subdir, dirs, files in os.walk(os.getcwd()):
-            if (re.match(self.match_dir, subdir)) and \
-               (not re.match(self.exclude_dir, subdir)):
+            if (re.match(self.match_dir, subdir)) and (
+                    not re.match(self.exclude_dir, subdir)):
                 for fileName in files:
-                    if (re.match(self.match_re, fileName)) and \
-                       (not re.match(self.exclude_re, fileName)):
+                    if (re.match(self.match_re, fileName)) and (
+                            not re.match(self.exclude_re, fileName)):
                         fileOperation(os.path.join(subdir, fileName))
 
 
