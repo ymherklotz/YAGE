@@ -112,6 +112,10 @@ $(document).ready(function(){initNavTree('logsink_8cpp.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="logsink_8h_source.html">logsink.h</a>&quot;</code><br/>
+<code>#include &lt;chrono&gt;</code><br/>
+<code>#include &lt;ctime&gt;</code><br/>
+<code>#include &lt;fstream&gt;</code><br/>
+<code>#include &lt;iomanip&gt;</code><br/>
 <code>#include &lt;iostream&gt;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -124,14 +128,31 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ab54350a8dbf59338c99ab4f43cfa2858"><td class="memItemLeft" align="right" valign="top">LogSink&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#ab54350a8dbf59338c99ab4f43cfa2858">yage::makeConsoleSink</a> ()</td></tr>
 <tr class="separator:ab54350a8dbf59338c99ab4f43cfa2858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad537beeea51c8314e407fadd24affc34"><td class="memItemLeft" align="right" valign="top">LogSink&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#ad537beeea51c8314e407fadd24affc34">yage::makeFileSink</a> (const std::string &amp;filename)</td></tr>
+<tr class="separator:ad537beeea51c8314e407fadd24affc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b288197f6a97f197dda60e5b54f1841"><td class="memItemLeft" align="right" valign="top">LogSink&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a6b288197f6a97f197dda60e5b54f1841">yage::makeFileSink</a> (std::string &amp;&amp;filename)</td></tr>
+<tr class="separator:a6b288197f6a97f197dda60e5b54f1841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="ae3c7a5bad8dd0db0a0a9cdd60c7b53d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;std::ofstream&gt; fileHandle_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="logsink_8cpp.html">logsink.cpp</a></li>
-    <li class="footer">Generated on Thu Nov 16 2017 16:33:27 for YAGE by
+    <li class="footer">Generated on Thu Nov 16 2017 21:50:38 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

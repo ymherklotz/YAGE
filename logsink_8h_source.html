@@ -166,53 +166,57 @@ $(document).ready(function(){initNavTree('logsink_8h_source.html','');});
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="classyage_1_1LogSink.html">LogSink</a> <a class="code" href="namespaceyage.html#ab54350a8dbf59338c99ab4f43cfa2858">makeConsoleSink</a>();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">/* -----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"> * Template Implementation</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"> * -----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classyage_1_1LogSink.html#ab7b70959364771b105c0dffa0b64c38e">   65</a></span>&#160;<a class="code" href="classyage_1_1LogSink.html#ab7b70959364771b105c0dffa0b64c38e">LogSink::LogSink</a>(T impl) : wrapper_(new <a class="code" href="structyage_1_1LogSink_1_1Model.html">Model</a>&lt;T&gt;(std::move(impl)))</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structyage_1_1LogSink_1_1Model.html#a207d650bb7d170236eff7b705228e3d9">   70</a></span>&#160;<a class="code" href="structyage_1_1LogSink_1_1Model.html#a207d650bb7d170236eff7b705228e3d9">LogSink::Model&lt;T&gt;::Model</a>(T impl_i) : impl(impl_i)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structyage_1_1LogSink_1_1Model.html#a30f256cae13bc0c1a0a93cae4909feaf">   75</a></span>&#160;<a class="code" href="structyage_1_1LogSink_1_1Concept.html">LogSink::Concept</a> *<a class="code" href="structyage_1_1LogSink_1_1Model.html#a30f256cae13bc0c1a0a93cae4909feaf">LogSink::Model&lt;T&gt;::clone</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="structyage_1_1LogSink_1_1Model.html">Model&lt;T&gt;</a>(impl);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="structyage_1_1LogSink_1_1Model.html#ae61438d2927d21b4af8f6ff2acc38224">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structyage_1_1LogSink_1_1Model.html#ae61438d2927d21b4af8f6ff2acc38224">LogSink::Model&lt;T&gt;::write</a>(<span class="keyword">const</span> <a class="code" href="structyage_1_1LogMessage_1_1Meta.html">LogMessage::Meta</a> &amp;meta,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                              <span class="keyword">const</span> std::string &amp;msg)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    impl(meta, msg);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="classyage_1_1LogSink.html">LogSink</a> <a class="code" href="namespaceyage.html#ad537beeea51c8314e407fadd24affc34">makeFileSink</a>(<span class="keyword">const</span> std::string &amp;filename);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<a class="code" href="classyage_1_1LogSink.html">LogSink</a> <a class="code" href="namespaceyage.html#ad537beeea51c8314e407fadd24affc34">makeFileSink</a>(std::string &amp;&amp;filename);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">/* -----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> * Template Implementation</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> * -----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classyage_1_1LogSink.html#ab7b70959364771b105c0dffa0b64c38e">   68</a></span>&#160;<a class="code" href="classyage_1_1LogSink.html#ab7b70959364771b105c0dffa0b64c38e">LogSink::LogSink</a>(T impl) : wrapper_(new <a class="code" href="structyage_1_1LogSink_1_1Model.html">Model</a>&lt;T&gt;(std::move(impl)))</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structyage_1_1LogSink_1_1Model.html#a207d650bb7d170236eff7b705228e3d9">   73</a></span>&#160;<a class="code" href="structyage_1_1LogSink_1_1Model.html#a207d650bb7d170236eff7b705228e3d9">LogSink::Model&lt;T&gt;::Model</a>(T impl_i) : impl(impl_i)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="structyage_1_1LogSink_1_1Model.html#a30f256cae13bc0c1a0a93cae4909feaf">   78</a></span>&#160;<a class="code" href="structyage_1_1LogSink_1_1Concept.html">LogSink::Concept</a> *<a class="code" href="structyage_1_1LogSink_1_1Model.html#a30f256cae13bc0c1a0a93cae4909feaf">LogSink::Model&lt;T&gt;::clone</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="structyage_1_1LogSink_1_1Model.html">Model&lt;T&gt;</a>(impl);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="structyage_1_1LogSink_1_1Model.html#ae61438d2927d21b4af8f6ff2acc38224">   84</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="structyage_1_1LogSink_1_1Model.html#ae61438d2927d21b4af8f6ff2acc38224">LogSink::Model&lt;T&gt;::write</a>(<span class="keyword">const</span> <a class="code" href="structyage_1_1LogMessage_1_1Meta.html">LogMessage::Meta</a> &amp;meta,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                              <span class="keyword">const</span> std::string &amp;msg)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    impl(meta, msg);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classyage_1_1LogSink_html_a63dfa11dc8cc1d885b61613e10332fdc"><div class="ttname"><a href="classyage_1_1LogSink.html#a63dfa11dc8cc1d885b61613e10332fdc">yage::LogSink::wrapper_</a></div><div class="ttdeci">std::unique_ptr&lt; Concept &gt; wrapper_</div><div class="ttdef"><b>Definition:</b> logsink.h:54</div></div>
-<div class="ttc" id="structyage_1_1LogSink_1_1Model_html_a30f256cae13bc0c1a0a93cae4909feaf"><div class="ttname"><a href="structyage_1_1LogSink_1_1Model.html#a30f256cae13bc0c1a0a93cae4909feaf">yage::LogSink::Model::clone</a></div><div class="ttdeci">virtual Concept * clone() const override</div><div class="ttdef"><b>Definition:</b> logsink.h:75</div></div>
+<div class="ttc" id="structyage_1_1LogSink_1_1Model_html_a30f256cae13bc0c1a0a93cae4909feaf"><div class="ttname"><a href="structyage_1_1LogSink_1_1Model.html#a30f256cae13bc0c1a0a93cae4909feaf">yage::LogSink::Model::clone</a></div><div class="ttdeci">virtual Concept * clone() const override</div><div class="ttdef"><b>Definition:</b> logsink.h:78</div></div>
 <div class="ttc" id="structyage_1_1LogSink_1_1Model_html_a99a011e95f7979baec2805df06d20c5d"><div class="ttname"><a href="structyage_1_1LogSink_1_1Model.html#a99a011e95f7979baec2805df06d20c5d">yage::LogSink::Model::impl</a></div><div class="ttdeci">T impl</div><div class="ttdef"><b>Definition:</b> logsink.h:51</div></div>
-<div class="ttc" id="structyage_1_1LogSink_1_1Model_html_ae61438d2927d21b4af8f6ff2acc38224"><div class="ttname"><a href="structyage_1_1LogSink_1_1Model.html#ae61438d2927d21b4af8f6ff2acc38224">yage::LogSink::Model::write</a></div><div class="ttdeci">virtual void write(const LogMessage::Meta &amp;meta, const std::string &amp;msg) const override</div><div class="ttdef"><b>Definition:</b> logsink.h:81</div></div>
-<div class="ttc" id="namespaceyage_html_ab54350a8dbf59338c99ab4f43cfa2858"><div class="ttname"><a href="namespaceyage.html#ab54350a8dbf59338c99ab4f43cfa2858">yage::makeConsoleSink</a></div><div class="ttdeci">LogSink makeConsoleSink()</div><div class="ttdef"><b>Definition:</b> logsink.cpp:42</div></div>
-<div class="ttc" id="classyage_1_1LogSink_html_ab7b70959364771b105c0dffa0b64c38e"><div class="ttname"><a href="classyage_1_1LogSink.html#ab7b70959364771b105c0dffa0b64c38e">yage::LogSink::LogSink</a></div><div class="ttdeci">LogSink(T impl)</div><div class="ttdef"><b>Definition:</b> logsink.h:65</div></div>
-<div class="ttc" id="structyage_1_1LogSink_1_1Model_html_a207d650bb7d170236eff7b705228e3d9"><div class="ttname"><a href="structyage_1_1LogSink_1_1Model.html#a207d650bb7d170236eff7b705228e3d9">yage::LogSink::Model::Model</a></div><div class="ttdeci">Model(T impl_i)</div><div class="ttdef"><b>Definition:</b> logsink.h:70</div></div>
-<div class="ttc" id="classyage_1_1LogSink_html_ac41716cf03dac6311cb7287c9edf8a8d"><div class="ttname"><a href="classyage_1_1LogSink.html#ac41716cf03dac6311cb7287c9edf8a8d">yage::LogSink::write</a></div><div class="ttdeci">void write(const LogMessage::Meta &amp;meta, const std::string &amp;msg) const </div><div class="ttdef"><b>Definition:</b> logsink.cpp:37</div></div>
+<div class="ttc" id="structyage_1_1LogSink_1_1Model_html_ae61438d2927d21b4af8f6ff2acc38224"><div class="ttname"><a href="structyage_1_1LogSink_1_1Model.html#ae61438d2927d21b4af8f6ff2acc38224">yage::LogSink::Model::write</a></div><div class="ttdeci">virtual void write(const LogMessage::Meta &amp;meta, const std::string &amp;msg) const override</div><div class="ttdef"><b>Definition:</b> logsink.h:84</div></div>
+<div class="ttc" id="namespaceyage_html_ab54350a8dbf59338c99ab4f43cfa2858"><div class="ttname"><a href="namespaceyage.html#ab54350a8dbf59338c99ab4f43cfa2858">yage::makeConsoleSink</a></div><div class="ttdeci">LogSink makeConsoleSink()</div><div class="ttdef"><b>Definition:</b> logsink.cpp:46</div></div>
+<div class="ttc" id="classyage_1_1LogSink_html_ab7b70959364771b105c0dffa0b64c38e"><div class="ttname"><a href="classyage_1_1LogSink.html#ab7b70959364771b105c0dffa0b64c38e">yage::LogSink::LogSink</a></div><div class="ttdeci">LogSink(T impl)</div><div class="ttdef"><b>Definition:</b> logsink.h:68</div></div>
+<div class="ttc" id="namespaceyage_html_ad537beeea51c8314e407fadd24affc34"><div class="ttname"><a href="namespaceyage.html#ad537beeea51c8314e407fadd24affc34">yage::makeFileSink</a></div><div class="ttdeci">LogSink makeFileSink(const std::string &amp;filename)</div><div class="ttdef"><b>Definition:</b> logsink.cpp:95</div></div>
+<div class="ttc" id="structyage_1_1LogSink_1_1Model_html_a207d650bb7d170236eff7b705228e3d9"><div class="ttname"><a href="structyage_1_1LogSink_1_1Model.html#a207d650bb7d170236eff7b705228e3d9">yage::LogSink::Model::Model</a></div><div class="ttdeci">Model(T impl_i)</div><div class="ttdef"><b>Definition:</b> logsink.h:73</div></div>
+<div class="ttc" id="classyage_1_1LogSink_html_ac41716cf03dac6311cb7287c9edf8a8d"><div class="ttname"><a href="classyage_1_1LogSink.html#ac41716cf03dac6311cb7287c9edf8a8d">yage::LogSink::write</a></div><div class="ttdeci">void write(const LogMessage::Meta &amp;meta, const std::string &amp;msg) const </div><div class="ttdef"><b>Definition:</b> logsink.cpp:41</div></div>
 <div class="ttc" id="structyage_1_1LogSink_1_1Concept_html_a1d46d97ab5cec0d30b86fda9d20cd69d"><div class="ttname"><a href="structyage_1_1LogSink_1_1Concept.html#a1d46d97ab5cec0d30b86fda9d20cd69d">yage::LogSink::Concept::clone</a></div><div class="ttdeci">virtual Concept * clone() const =0</div></div>
 <div class="ttc" id="structyage_1_1LogSink_1_1Concept_html"><div class="ttname"><a href="structyage_1_1LogSink_1_1Concept.html">yage::LogSink::Concept</a></div><div class="ttdef"><b>Definition:</b> logsink.h:36</div></div>
 <div class="ttc" id="structyage_1_1LogSink_1_1Concept_html_ada9b09f3614787df485134262b1bc7f1"><div class="ttname"><a href="structyage_1_1LogSink_1_1Concept.html#ada9b09f3614787df485134262b1bc7f1">yage::LogSink::Concept::~Concept</a></div><div class="ttdeci">virtual ~Concept()=default</div></div>
-<div class="ttc" id="classyage_1_1LogSink_html_a1ba5b4000f07f581e0d0c2babb2811dc"><div class="ttname"><a href="classyage_1_1LogSink.html#a1ba5b4000f07f581e0d0c2babb2811dc">yage::LogSink::operator=</a></div><div class="ttdeci">LogSink &amp; operator=(const LogSink &amp;sink)</div><div class="ttdef"><b>Definition:</b> logsink.cpp:20</div></div>
+<div class="ttc" id="classyage_1_1LogSink_html_a1ba5b4000f07f581e0d0c2babb2811dc"><div class="ttname"><a href="classyage_1_1LogSink.html#a1ba5b4000f07f581e0d0c2babb2811dc">yage::LogSink::operator=</a></div><div class="ttdeci">LogSink &amp; operator=(const LogSink &amp;sink)</div><div class="ttdef"><b>Definition:</b> logsink.cpp:24</div></div>
 <div class="ttc" id="logmessage_8h_html"><div class="ttname"><a href="logmessage_8h.html">logmessage.h</a></div></div>
 <div class="ttc" id="structyage_1_1LogSink_1_1Concept_html_a3b752fd501daae85f1b78e5d0df912ac"><div class="ttname"><a href="structyage_1_1LogSink_1_1Concept.html#a3b752fd501daae85f1b78e5d0df912ac">yage::LogSink::Concept::write</a></div><div class="ttdeci">virtual void write(const LogMessage::Meta &amp;meta, const std::string &amp;msg) const =0</div></div>
 <div class="ttc" id="structyage_1_1LogMessage_1_1Meta_html"><div class="ttname"><a href="structyage_1_1LogMessage_1_1Meta.html">yage::LogMessage::Meta</a></div><div class="ttdef"><b>Definition:</b> logmessage.h:36</div></div>
-<div class="ttc" id="classyage_1_1LogSink_html_abe2e73398ecb925233b50be5d15e20f9"><div class="ttname"><a href="classyage_1_1LogSink.html#abe2e73398ecb925233b50be5d15e20f9">yage::LogSink::operator==</a></div><div class="ttdeci">bool operator==(const LogSink &amp;sink)</div><div class="ttdef"><b>Definition:</b> logsink.cpp:32</div></div>
+<div class="ttc" id="classyage_1_1LogSink_html_abe2e73398ecb925233b50be5d15e20f9"><div class="ttname"><a href="classyage_1_1LogSink.html#abe2e73398ecb925233b50be5d15e20f9">yage::LogSink::operator==</a></div><div class="ttdeci">bool operator==(const LogSink &amp;sink)</div><div class="ttdef"><b>Definition:</b> logsink.cpp:36</div></div>
 <div class="ttc" id="structyage_1_1LogSink_1_1Model_html"><div class="ttname"><a href="structyage_1_1LogSink_1_1Model.html">yage::LogSink::Model</a></div><div class="ttdef"><b>Definition:</b> logsink.h:45</div></div>
 <div class="ttc" id="classyage_1_1LogSink_html"><div class="ttname"><a href="classyage_1_1LogSink.html">yage::LogSink</a></div><div class="ttdef"><b>Definition:</b> logsink.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -221,7 +225,7 @@ $(document).ready(function(){initNavTree('logsink_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="logsink_8h.html">logsink.h</a></li>
-    <li class="footer">Generated on Thu Nov 16 2017 16:33:27 for YAGE by
+    <li class="footer">Generated on Thu Nov 16 2017 21:50:38 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

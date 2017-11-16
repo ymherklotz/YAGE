@@ -1,6 +1,7 @@
 var searchData=
 [
   ['makeconsolesink',['makeConsoleSink',['../namespaceyage.html#ab54350a8dbf59338c99ab4f43cfa2858',1,'yage']]],
+  ['makefilesink',['makeFileSink',['../namespaceyage.html#ad537beeea51c8314e407fadd24affc34',1,'yage::makeFileSink(const std::string &amp;filename)'],['../namespaceyage.html#a6b288197f6a97f197dda60e5b54f1841',1,'yage::makeFileSink(std::string &amp;&amp;filename)']]],
   ['mass_5f',['mass_',['../classyage_1_1Body.html#a01b2a500e71bc88f2cb597f376bc8289',1,'yage::Body']]],
   ['math_2eh',['math.h',['../math_8h.html',1,'']]],
   ['matrix',['Matrix',['../classyage_1_1Matrix.html#a73b7d1f94f4f72a2294b71b3a35794ad',1,'yage::Matrix::Matrix()'],['../classyage_1_1Matrix.html#a191b02ff353d04f18779d4c84e20927b',1,'yage::Matrix::Matrix(const std::vector&lt; Type &gt; &amp;data)']]],
