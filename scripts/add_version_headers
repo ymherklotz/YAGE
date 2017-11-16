@@ -37,14 +37,13 @@ header = """/* ---------------------------------------------------------------\
 """
 
 
-lic_regex = re.compile("\/\* -+\n \* [a-z]+\.cpp\n(?: \*[ a-zA-Z0-9_.,\-()<>@]*\n)+ \* -+\n \*/",
-                       re.MULTILINE)
+lic_regex = re.compile("\/\* -+\n \* ([a-z]+\.(?:cpp|h)|\{0\})\n(?: \*[ a-zA-Z0-9_.,\-()<>@]*\n)+ \* -+\n \*/", re.MULTILINE)
 
 
 class HeaderUpdate(object):
     """Updates the header in all the source and header files in the code"""
     def __init__(self, **kwargs):
-        self.match_re = ".*[.]cpp$|.*[.]hpp$"
+        self.match_re = ".*[.]cpp$|.*[.]h$"
         self.exclude_re = "^$"
         self.exclude_build = True
         self.exclude_dir = ".*build.*"
@@ -70,9 +69,14 @@ class HeaderUpdate(object):
             with open(filePath, "r+") as f:
                 src = f.read()
                 f.seek(0)
-                print("Updating {}:".format(os.path.basename(filePath)), end="")
-                lic_regex.sub(header.format(os.path.basename(filePath)), src)
-                print("done")
+                if lic_regex.match(src):
+                    print("Updating {}: ".format(os.path.basename(filePath)), end="")
+                    src = lic_regex.sub(header.format(os.path.basename(filePath)), src)
+                    print("done")
+                else:
+                    print("Adding {}: ".format(os.path.basename(filePath)), end="")
+                    src = header.format(os.path.basename(filePath)) + src
+                    print("done")
                 f.write(src)
                 f.truncate()
 

@@ -35,7 +35,7 @@ SpriteSheet::SpriteSheet(string pngFileName, string jsonFileName)
 
     if (texture_.width != jsonWidth)
         throw runtime_error("JSON width does not match texture width");
-    if (texture_.height != jsonHeight) 
+    if (texture_.height != jsonHeight)
         throw runtime_error("JSON height does not match texture height");
 }
 

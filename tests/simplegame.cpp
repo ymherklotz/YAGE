@@ -1,3 +1,11 @@
+/* ----------------------------------------------------------------------------
+ * simplegame.cpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
+ * MIT License, see LICENSE file for more details.
+ * ----------------------------------------------------------------------------
+ */
+
 #include <yage.cpp>
 
 using namespace yage;

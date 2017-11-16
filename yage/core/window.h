@@ -1,13 +1,13 @@
 /* ----------------------------------------------------------------------------
  * window.h
  *
- * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
- * See file LICENSE for more details
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
+ * MIT License, see LICENSE file for more details.
  * ----------------------------------------------------------------------------
  */
 
 /** @file
-  */
+ */
 
 #ifndef WINDOW_H
 #define WINDOW_H

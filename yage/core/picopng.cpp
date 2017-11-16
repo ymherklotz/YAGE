@@ -715,8 +715,8 @@ int decodePNG(std::vector<unsigned char> &out_image, unsigned long &image_width,
                                       1, 8, 8, 8, 4, 4, 2, 2}; // values for the
                                                                // adam7 passes
                 for (int i = 0; i < 6; i++) {
-                    passstart[i + 1] = passstart[i] +
-                                       passh[i] * ((passw[i] ? 1 : 0) +
+                    passstart[i + 1] =
+                        passstart[i] + passh[i] * ((passw[i] ? 1 : 0) +
                                                    (passw[i] * bpp + 7) / 8);
                 }
                 std::vector<unsigned char> scanlineo((info.width * bpp + 7) /

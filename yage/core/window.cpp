@@ -1,8 +1,8 @@
 /* ----------------------------------------------------------------------------
  * window.cpp
  *
- * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com> -- MIT License
- * See file LICENSE for more details
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
+ * MIT License, see LICENSE file for more details.
  * ----------------------------------------------------------------------------
  */
 
@@ -10,14 +10,13 @@
 
 #include <stdexcept>
 
-
-
 namespace yage
 {
 
-void key_callback(GLFWwindow *window, int key, int scanCode, int action, int mods)
+void key_callback(GLFWwindow *window, int key, int scanCode, int action,
+                  int mods)
 {
-    if(key == GLFW_KEY_E && action == GLFW_PRESS) {
+    if (key == GLFW_KEY_E && action == GLFW_PRESS) {
         glClearColor(0.5f, 0.f, 0.f, 1.f);
     } else {
         glClearColor(0.f, 0.5f, 0.f, 1.f);
@@ -34,7 +33,7 @@ Window::~Window()
 
 void Window::create(std::string window_name, int width, int height)
 {
-    if(glfwInit() == GLFW_FALSE) {
+    if (glfwInit() == GLFW_FALSE) {
         throw std::runtime_error("GLFW Initialisation failed");
     }
 
@@ -51,7 +50,7 @@ void Window::create(std::string window_name, int width, int height)
     glfwMakeContextCurrent(window_);
 
     // initialize glad
-    gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
+    gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
     // set key callback
     glfwSetKeyCallback(window_, key_callback);
