@@ -8,6 +8,10 @@
 
 #include "logsink.h"
 
+#include <chrono>
+#include <ctime>
+#include <fstream>
+#include <iomanip>
 #include <iostream>
 
 namespace yage
@@ -42,9 +46,58 @@ void LogSink::write(const LogMessage::Meta &meta, const std::string &msg) const
 LogSink makeConsoleSink()
 {
     return [](const LogMessage::Meta &meta, const std::string &msg) {
-        std::cout << msg << " (" << meta.fileName << ":" << meta.lineNo
-                  << ")\n";
+        std::cout << msg << "\n";
     };
+}
+
+namespace
+{
+
+class FileSink
+{
+public:
+    FileSink(std::string &&filename)
+        : fileHandle_(std::make_shared<std::ofstream>(filename))
+    {
+        if (!fileHandle_->good()) {
+            throw std::runtime_error("Could not open file: " + filename);
+        }
+    }
+
+    FileSink(const std::string filename)
+        : fileHandle_(std::make_shared<std::ofstream>(filename))
+    {
+        if (!fileHandle_->good()) {
+            throw std::runtime_error("Could not open file: " + filename);
+        }
+    }
+
+    ~FileSink() = default;
+
+    void operator()(const LogMessage::Meta &meta, const std::string &msg) const
+    {
+        using namespace std::chrono;
+
+        auto now = system_clock::now();
+        auto time_t = system_clock::to_time_t(now);
+        auto local_time = std::localtime(&time_t);
+
+        (*fileHandle_) << std::put_time(local_time, "[%H:%M:%S] ") << msg
+                       << " (" << meta.fileName << ":" << meta.lineNo << ")\n";
+    }
+
+private:
+    std::shared_ptr<std::ofstream> fileHandle_;
+};
+
+} // namespace
+
+LogSink makeFileSink(const std::string &filename) {
+    return FileSink(filename);
+}
+
+LogSink makeFileSink(std::string &&filename) {
+    return FileSink(filename);
 }
 
 } // namespace yage

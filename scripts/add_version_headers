@@ -37,6 +37,10 @@ header = """/* ---------------------------------------------------------------\
 """
 
 
+lic_regex = re.compile("\/\* -+\n \* [a-z]+\.cpp\n(?: \*[ a-zA-Z0-9_.,\-()<>@]*\n)+ \* -+\n \*/",
+                       re.MULTILINE)
+
+
 class HeaderUpdate(object):
     """Updates the header in all the source and header files in the code"""
     def __init__(self, **kwargs):
@@ -45,24 +49,34 @@ class HeaderUpdate(object):
         self.exclude_build = True
         self.exclude_dir = ".*build.*"
         self.match_dir = ""
-        self.comment_match = "^\/\* -+"
         self.starting_dir = os.getcwd()
         for key, value in kwargs.items():
             setattr(self, key, value)
 
     def writeHeader(self):
-        def writeFileOperation(filePath, src):
-            if not re.match(self.comment_match, src):
-                print(filePath, end=" ")
-                with open(filePath, 'w') as src_file_lic:
-                    src_file_lic.write(header.format(filePath))
-                    src_file_lic.write(src)
-                print("-- done")
+        def writeFileOperation(filePath):
+            with open(filePath, "r+") as f:
+                src = f.read()
+                f.seek(0)
+                if lic_regex.match(src):
+                    print(filePath)
+                f.write(src)
+                f.truncate()
 
         self._traverseDir(self.starting_dir, writeFileOperation)
 
     def updateHeader(self):
-        ...
+        def updateFileOperation(filePath):
+            with open(filePath, "r+") as f:
+                src = f.read()
+                f.seek(0)
+                print("Updating {}:".format(os.path.basename(filePath)), end="")
+                lic_regex.sub(header.format(os.path.basename(filePath)), src)
+                print("done")
+                f.write(src)
+                f.truncate()
+
+        self._traverseDir(self.starting_dir, updateFileOperation)
 
     def removeHeader(self):
         ...
@@ -71,20 +85,17 @@ class HeaderUpdate(object):
         for subdir, dirs, files in os.walk(os.getcwd()):
             if (re.match(self.match_dir, subdir)) and \
                (not re.match(self.exclude_dir, subdir)):
-                print(subdir)
                 for fileName in files:
                     if (re.match(self.match_re, fileName)) and \
                        (not re.match(self.exclude_re, fileName)):
-                        with open(os.path.join(subdir, fileName), 'r') \
-                             as src_file:
-                            src = src_file.read()
-                        fileOperation(os.path.join(subdir, fileName), src)
+                        fileOperation(os.path.join(subdir, fileName))
 
 
 def main(argv):
     update = HeaderUpdate(exclude_re="^picopng\.cpp",
-                          match_dir=".*yage|.*tests")
-    update.writeHeader()
+                          match_dir=".*yage|.*tests",
+                          exclude_dir=".*lib.*|.*build.*")
+    update.updateHeader()
 
 
 if __name__ == "__main__":

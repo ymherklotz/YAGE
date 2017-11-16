@@ -23,3 +23,6 @@ Makefile
 GPATH
 GTAGS
 GRTAGS
+
+# do not upload log files
+*.log

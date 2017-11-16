@@ -20,6 +20,7 @@ namespace yage
 Logger::Logger() : active_(Active::create())
 {
     add(makeConsoleSink());
+    add(makeFileSink("yage.log"));
 }
 
 LogMessage Logger::operator()(const std::string &fileName, int lineNum)

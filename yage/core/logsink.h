@@ -56,6 +56,9 @@ private:
 
 LogSink makeConsoleSink();
 
+LogSink makeFileSink(const std::string &filename);
+LogSink makeFileSink(std::string &&filename);
+
 /* -----------------------------------------------------------------------------
  * Template Implementation
  * -----------------------------------------------------------------------------
