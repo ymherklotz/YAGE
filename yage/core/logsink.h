@@ -30,7 +30,7 @@ public:
     LogSink &operator=(LogSink &&sink);
     bool operator==(const LogSink &sink);
 
-    void write(const LogMessage::Meta &meta, const std::string &msg);
+    void write(const LogMessage::Meta &meta, const std::string &msg) const;
 
 private:
     struct Concept {
@@ -38,7 +38,7 @@ private:
 
         virtual Concept *clone() const = 0;
         virtual void write(const LogMessage::Meta &meta,
-                           const std::string &msg) = 0;
+                           const std::string &msg) const = 0;
     };
 
     template <typename T>
@@ -46,7 +46,7 @@ private:
         Model(T impl_i);
         virtual Concept *clone() const override;
         virtual void write(const LogMessage::Meta &meta,
-                           const std::string &msg) override;
+                           const std::string &msg) const override;
 
         T impl;
     };
@@ -79,7 +79,7 @@ LogSink::Concept *LogSink::Model<T>::clone() const
 
 template <typename T>
 void LogSink::Model<T>::write(const LogMessage::Meta &meta,
-                              const std::string &msg)
+                              const std::string &msg) const
 {
     impl(meta, msg);
 }

@@ -6,7 +6,7 @@
 using namespace yage;
 
 SyncQueue<int> queue;
-std::atomic_int j;
+std::atomic_int j(0);
 
 void push_to_queue1(int elements)
 {
@@ -28,7 +28,6 @@ void push_to_queue2(int elements)
 
 int main()
 {
-    j.store(0);
     std::thread first(push_to_queue1, 100000);
     std::thread second(push_to_queue2, 100000);
 

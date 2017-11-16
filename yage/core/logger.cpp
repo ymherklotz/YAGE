@@ -17,7 +17,7 @@
 namespace yage
 {
 
-Logger::Logger()
+Logger::Logger() : active_(Active::create())
 {
     add(makeConsoleSink());
 }
@@ -31,9 +31,14 @@ void Logger::flush(const LogMessage *msg)
 {
     std::string asString(msg->buffer_.str());
 
-    for (auto &&sink : sinks_) {
-        sink.write(msg->meta_, asString);
-    }
+    auto &&sinks = sinks_;
+    auto &&meta = msg->meta_;
+
+    active_->send([=] {
+        for (auto &&sink : sinks) {
+            sink.write(meta, asString);
+        }
+    });
 }
 
 void Logger::add(const LogSink &sink)
@@ -45,7 +50,7 @@ void Logger::remove(const LogSink &sink)
 {
     auto it = std::find(std::begin(sinks_), std::end(sinks_), sink);
 
-    if(it != std::end(sinks_)) {
+    if (it != std::end(sinks_)) {
         sinks_.erase(it);
     }
 }

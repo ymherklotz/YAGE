@@ -9,6 +9,9 @@
 #ifndef YAGE_CORE_LOGGER_H
 #define YAGE_CORE_LOGGER_H
 
+#include <yage/util/active.h>
+
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -34,6 +37,7 @@ public:
 
 private:
     std::vector<LogSink> sinks_;
+    std::unique_ptr<Active> active_;
 };
 
 } // namespace yage

@@ -12,8 +12,8 @@
 
 int main()
 {
-    gLog << "Hello World";
+    gLog << "First message";
 
-    gLog << "This is Yann";
-        std::cout << "Hello\n";
+    gLog << "Second Message";
+    std::cout << "COUT\n";
 }

@@ -34,7 +34,7 @@ bool LogSink::operator==(const LogSink &sink)
     return (wrapper_.get() == sink.wrapper_.get());
 }
 
-void LogSink::write(const LogMessage::Meta &meta, const std::string &msg)
+void LogSink::write(const LogMessage::Meta &meta, const std::string &msg) const
 {
     wrapper_->write(meta, msg);
 }
