@@ -71,6 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -93,7 +94,7 @@ $(document).ready(function(){initNavTree('yage_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,22 +111,28 @@ $(document).ready(function(){initNavTree('yage_8h.html','');});
 <div class="title">yage.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="camera2d_8h_source.html">base/camera2d.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="glslprogram_8h_source.html">base/glslprogram.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="imageloader_8h_source.html">base/imageloader.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="inputmanager_8h_source.html">base/inputmanager.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="iomanager_8h_source.html">base/iomanager.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="picopng_8h_source.html">base/picopng.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="resourcemanager_8h_source.html">base/resourcemanager.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="spritebatch_8h_source.html">base/spritebatch.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="spritesheet_8h_source.html">base/spritesheet.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="texture_8h_source.html">base/texture.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="vertex_8h_source.html">base/vertex.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="window_8h_source.html">base/window.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="camera2d_8h_source.html">core/camera2d.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="glslprogram_8h_source.html">core/glslprogram.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="imageloader_8h_source.html">core/imageloader.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="inputmanager_8h_source.html">core/inputmanager.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="iomanager_8h_source.html">core/iomanager.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="picopng_8h_source.html">core/picopng.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="resourcemanager_8h_source.html">core/resourcemanager.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="spritebatch_8h_source.html">core/spritebatch.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="spritesheet_8h_source.html">core/spritesheet.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="texture_8h_source.html">core/texture.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="vertex_8h_source.html">core/vertex.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="window_8h_source.html">core/window.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="logger_8h_source.html">core/logger.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="logmessage_8h_source.html">core/logmessage.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="logsink_8h_source.html">core/logsink.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="body_8h_source.html">physics/body.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="particlebody_8h_source.html">physics/particlebody.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rectanglecollider_8h_source.html">physics/rectanglecollider.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="rigidbody_8h_source.html">physics/rigidbody.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="matrix_8h_source.html">math/matrix.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="active_8h_source.html">util/active.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="syncqueue_8h_source.html">util/syncqueue.h</a>&quot;</code><br/>
 </div>
 <p><a href="yage_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -152,7 +159,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="yage_8h.html">yage.h</a></li>
-    <li class="footer">Generated on Thu Oct 12 2017 13:59:44 for YAGE by
+    <li class="footer">Generated on Thu Nov 16 2017 16:33:27 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

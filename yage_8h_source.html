@@ -71,6 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -93,7 +94,7 @@ $(document).ready(function(){initNavTree('yage_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -118,62 +119,76 @@ $(document).ready(function(){initNavTree('yage_8h_source.html','');});
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef YAGE_YAGE_H</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_YAGE_H</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="camera2d_8h.html">base/camera2d.h</a>&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="glslprogram_8h.html">base/glslprogram.h</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="imageloader_8h.html">base/imageloader.h</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="inputmanager_8h.html">base/inputmanager.h</a>&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="iomanager_8h.html">base/iomanager.h</a>&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="picopng_8h.html">base/picopng.h</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="resourcemanager_8h.html">base/resourcemanager.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="spritebatch_8h.html">base/spritebatch.h</a>&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="spritesheet_8h.html">base/spritesheet.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="texture_8h.html">base/texture.h</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vertex_8h.html">base/vertex.h</a>&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="window_8h.html">base/window.h</a>&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="body_8h.html">physics/body.h</a>&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="particlebody_8h.html">physics/particlebody.h</a>&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rectanglecollider_8h.html">physics/rectanglecollider.h</a>&quot;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rigidbody_8h.html">physics/rigidbody.h</a>&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="camera2d_8h.html">core/camera2d.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="glslprogram_8h.html">core/glslprogram.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="imageloader_8h.html">core/imageloader.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="inputmanager_8h.html">core/inputmanager.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="iomanager_8h.html">core/iomanager.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="picopng_8h.html">core/picopng.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="resourcemanager_8h.html">core/resourcemanager.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="spritebatch_8h.html">core/spritebatch.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="spritesheet_8h.html">core/spritesheet.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="texture_8h.html">core/texture.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vertex_8h.html">core/vertex.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="window_8h.html">core/window.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logger_8h.html">core/logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logmessage_8h.html">core/logmessage.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logsink_8h.html">core/logsink.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="body_8h.html">physics/body.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="particlebody_8h.html">physics/particlebody.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rectanglecollider_8h.html">physics/rectanglecollider.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rigidbody_8h.html">physics/rigidbody.h</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="matrix_8h.html">math/matrix.h</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="active_8h.html">util/active.h</a>&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="syncqueue_8h.html">util/syncqueue.h</a>&quot;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#a0bd2fedcbe862fdea1ea54b6b7d49bec">glfwErrorCallback</a>(<span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#a4fc8b4d2a19d4c7f7f1bd42a788827ce">init</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#a0bd2fedcbe862fdea1ea54b6b7d49bec">glfwErrorCallback</a>(<span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#ac9d8c7327204686b3c86f4ab48672618">quit</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#a4fc8b4d2a19d4c7f7f1bd42a788827ce">init</a>();</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#ac9d8c7327204686b3c86f4ab48672618">quit</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="rigidbody_8h_html"><div class="ttname"><a href="rigidbody_8h.html">rigidbody.h</a></div></div>
 <div class="ttc" id="inputmanager_8h_html"><div class="ttname"><a href="inputmanager_8h.html">inputmanager.h</a></div></div>
-<div class="ttc" id="namespaceyage_html_ac9d8c7327204686b3c86f4ab48672618"><div class="ttname"><a href="namespaceyage.html#ac9d8c7327204686b3c86f4ab48672618">yage::quit</a></div><div class="ttdeci">void quit()</div><div class="ttdoc">Quit and cleanup yage. </div><div class="ttdef"><b>Definition:</b> yage.cpp:31</div></div>
+<div class="ttc" id="namespaceyage_html_ac9d8c7327204686b3c86f4ab48672618"><div class="ttname"><a href="namespaceyage.html#ac9d8c7327204686b3c86f4ab48672618">yage::quit</a></div><div class="ttdeci">void quit()</div><div class="ttdoc">Quit and cleanup yage. </div><div class="ttdef"><b>Definition:</b> yage.cpp:32</div></div>
 <div class="ttc" id="window_8h_html"><div class="ttname"><a href="window_8h.html">window.h</a></div></div>
 <div class="ttc" id="body_8h_html"><div class="ttname"><a href="body_8h.html">body.h</a></div></div>
 <div class="ttc" id="imageloader_8h_html"><div class="ttname"><a href="imageloader_8h.html">imageloader.h</a></div></div>
 <div class="ttc" id="texture_8h_html"><div class="ttname"><a href="texture_8h.html">texture.h</a></div></div>
 <div class="ttc" id="iomanager_8h_html"><div class="ttname"><a href="iomanager_8h.html">iomanager.h</a></div></div>
-<div class="ttc" id="namespaceyage_html_a4fc8b4d2a19d4c7f7f1bd42a788827ce"><div class="ttname"><a href="namespaceyage.html#a4fc8b4d2a19d4c7f7f1bd42a788827ce">yage::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initializes yage. </div><div class="ttdef"><b>Definition:</b> yage.cpp:23</div></div>
-<div class="ttc" id="namespaceyage_html_a0bd2fedcbe862fdea1ea54b6b7d49bec"><div class="ttname"><a href="namespaceyage.html#a0bd2fedcbe862fdea1ea54b6b7d49bec">yage::glfwErrorCallback</a></div><div class="ttdeci">void glfwErrorCallback(int, const char *description)</div><div class="ttdef"><b>Definition:</b> yage.cpp:18</div></div>
+<div class="ttc" id="namespaceyage_html_a4fc8b4d2a19d4c7f7f1bd42a788827ce"><div class="ttname"><a href="namespaceyage.html#a4fc8b4d2a19d4c7f7f1bd42a788827ce">yage::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initializes yage. </div><div class="ttdef"><b>Definition:</b> yage.cpp:24</div></div>
+<div class="ttc" id="namespaceyage_html_a0bd2fedcbe862fdea1ea54b6b7d49bec"><div class="ttname"><a href="namespaceyage.html#a0bd2fedcbe862fdea1ea54b6b7d49bec">yage::glfwErrorCallback</a></div><div class="ttdeci">void glfwErrorCallback(int, const char *description)</div><div class="ttdef"><b>Definition:</b> yage.cpp:19</div></div>
 <div class="ttc" id="rectanglecollider_8h_html"><div class="ttname"><a href="rectanglecollider_8h.html">rectanglecollider.h</a></div></div>
 <div class="ttc" id="spritesheet_8h_html"><div class="ttname"><a href="spritesheet_8h.html">spritesheet.h</a></div></div>
 <div class="ttc" id="vertex_8h_html"><div class="ttname"><a href="vertex_8h.html">vertex.h</a></div></div>
+<div class="ttc" id="matrix_8h_html"><div class="ttname"><a href="matrix_8h.html">matrix.h</a></div></div>
 <div class="ttc" id="resourcemanager_8h_html"><div class="ttname"><a href="resourcemanager_8h.html">resourcemanager.h</a></div></div>
 <div class="ttc" id="camera2d_8h_html"><div class="ttname"><a href="camera2d_8h.html">camera2d.h</a></div></div>
 <div class="ttc" id="picopng_8h_html"><div class="ttname"><a href="picopng_8h.html">picopng.h</a></div></div>
+<div class="ttc" id="logmessage_8h_html"><div class="ttname"><a href="logmessage_8h.html">logmessage.h</a></div></div>
+<div class="ttc" id="logger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div></div>
+<div class="ttc" id="syncqueue_8h_html"><div class="ttname"><a href="syncqueue_8h.html">syncqueue.h</a></div></div>
 <div class="ttc" id="spritebatch_8h_html"><div class="ttname"><a href="spritebatch_8h.html">spritebatch.h</a></div></div>
 <div class="ttc" id="glslprogram_8h_html"><div class="ttname"><a href="glslprogram_8h.html">glslprogram.h</a></div></div>
+<div class="ttc" id="active_8h_html"><div class="ttname"><a href="active_8h.html">active.h</a></div></div>
 <div class="ttc" id="particlebody_8h_html"><div class="ttname"><a href="particlebody_8h.html">particlebody.h</a></div></div>
+<div class="ttc" id="logsink_8h_html"><div class="ttname"><a href="logsink_8h.html">logsink.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="yage_8h.html">yage.h</a></li>
-    <li class="footer">Generated on Thu Oct 12 2017 13:59:44 for YAGE by
+    <li class="footer">Generated on Thu Nov 16 2017 16:33:27 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['particlebody',['ParticleBody',['../classyage_1_1ParticleBody.html',1,'yage']]],
-  ['position',['Position',['../structyage_1_1Position.html',1,'yage']]]
+  ['logger',['Logger',['../classyage_1_1Logger.html',1,'yage']]],
+  ['loglevel',['LogLevel',['../classLogLevel.html',1,'']]],
+  ['logmessage',['LogMessage',['../classyage_1_1LogMessage.html',1,'yage']]],
+  ['logsink',['LogSink',['../classyage_1_1LogSink.html',1,'yage']]]
 ];

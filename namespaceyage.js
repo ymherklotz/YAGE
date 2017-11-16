@@ -7,6 +7,9 @@ var namespaceyage =
     [ "ImageLoader", "classyage_1_1ImageLoader.html", "classyage_1_1ImageLoader" ],
     [ "InputManager", "classyage_1_1InputManager.html", "classyage_1_1InputManager" ],
     [ "IoManager", "classyage_1_1IoManager.html", "classyage_1_1IoManager" ],
+    [ "Logger", "classyage_1_1Logger.html", "classyage_1_1Logger" ],
+    [ "LogMessage", "classyage_1_1LogMessage.html", "classyage_1_1LogMessage" ],
+    [ "LogSink", "classyage_1_1LogSink.html", "classyage_1_1LogSink" ],
     [ "ResourceManager", "classyage_1_1ResourceManager.html", "classyage_1_1ResourceManager" ],
     [ "Sprite", "classyage_1_1Sprite.html", "classyage_1_1Sprite" ],
     [ "Glyph", "classyage_1_1Glyph.html", "classyage_1_1Glyph" ],
@@ -30,5 +33,7 @@ var namespaceyage =
     [ "CollisionBody", "classyage_1_1CollisionBody.html", "classyage_1_1CollisionBody" ],
     [ "ParticleBody", "classyage_1_1ParticleBody.html", "classyage_1_1ParticleBody" ],
     [ "RectangleCollider", "classyage_1_1RectangleCollider.html", "classyage_1_1RectangleCollider" ],
-    [ "RigidBody", "classyage_1_1RigidBody.html", "classyage_1_1RigidBody" ]
+    [ "RigidBody", "classyage_1_1RigidBody.html", "classyage_1_1RigidBody" ],
+    [ "Active", "classyage_1_1Active.html", "classyage_1_1Active" ],
+    [ "SyncQueue", "classyage_1_1SyncQueue.html", "classyage_1_1SyncQueue" ]
 ];

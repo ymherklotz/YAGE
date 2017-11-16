@@ -11,5 +11,6 @@ var searchData=
   ['bottom_5fleft_5f',['bottom_left_',['../classyage_1_1Glyph.html#add70123a08d594e4cfb627a03ae8daad',1,'yage::Glyph']]],
   ['bottom_5fright',['bottom_right',['../classyage_1_1Glyph.html#a8979cbe2f07cf12cf537a2bd88df99a2',1,'yage::Glyph']]],
   ['bottom_5fright_5f',['bottom_right_',['../classyage_1_1Glyph.html#a6240a88991e31b2fc8ed5dccfc362234',1,'yage::Glyph']]],
+  ['buffer_5f',['buffer_',['../classyage_1_1LogMessage.html#ae34f407242db5713632181b4ce9ae3d5',1,'yage::LogMessage']]],
   ['bug_20list',['Bug List',['../bug.html',1,'']]]
 ];

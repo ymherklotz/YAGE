@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['y',['y',['../structyage_1_1details_1_1Coordinate.html#a6d54c056ec7bd3c7ed1c6a226c2cf508',1,'yage::details::Coordinate::y()'],['../structyage_1_1Position.html#a45b8cc8245d0e05bb9e482d85512ee27',1,'yage::Position::y()'],['../classyage_1_1Vector3.html#a3076edb39227c1fcc77a8160fb9c5832',1,'yage::Vector3::y()'],['../classyage_1_1Vector4.html#ae0609f2db5e14fe05fddd71ec09f4735',1,'yage::Vector4::y()']]],
-  ['y_5f',['y_',['../classyage_1_1Sprite.html#a91e70bb6f123955cb3dd5e7932e9c3ed',1,'yage::Sprite']]]
+  ['w',['w',['../classyage_1_1Vector4.html#acf752077d460438407ed3c84fe199f63',1,'yage::Vector4']]],
+  ['width',['width',['../structyage_1_1details_1_1Coordinate.html#aed145c923c95f852a8fb3abde8e346c0',1,'yage::details::Coordinate::width()'],['../structyage_1_1Texture.html#ad42f41cc57ed7a20928382f6557dc598',1,'yage::Texture::width()']]],
+  ['width_5f',['width_',['../classyage_1_1Sprite.html#a9699a12e74c0b78d3b4e396fed59b7a8',1,'yage::Sprite']]],
+  ['window_5f',['window_',['../classyage_1_1Window.html#a7b09e6b3e575a40b99bfb7c685432787',1,'yage::Window']]],
+  ['wrapper_5f',['wrapper_',['../classyage_1_1LogSink.html#a63dfa11dc8cc1d885b61613e10332fdc',1,'yage::LogSink']]]
 ];

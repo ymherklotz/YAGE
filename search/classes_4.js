@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['matrix',['Matrix',['../classyage_1_1Matrix.html',1,'yage']]],
-  ['matrix_3c_20rows_2c_201_2c_20double_20_3e',['Matrix&lt; Rows, 1, double &gt;',['../classyage_1_1Matrix.html',1,'yage']]],
-  ['matrix_3c_20rows_2c_201_2c_20type_20_3e',['Matrix&lt; Rows, 1, Type &gt;',['../classyage_1_1Matrix.html',1,'yage']]]
+  ['imageloader',['ImageLoader',['../classyage_1_1ImageLoader.html',1,'yage']]],
+  ['inputmanager',['InputManager',['../classyage_1_1InputManager.html',1,'yage']]],
+  ['iomanager',['IoManager',['../classyage_1_1IoManager.html',1,'yage']]]
 ];

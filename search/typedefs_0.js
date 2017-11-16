@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spritemap',['SpriteMap',['../namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9',1,'yage::details']]]
+  ['callback',['Callback',['../classyage_1_1Active.html#a4b82fec6f02c00d186b1b840ce8f11dc',1,'yage::Active']]]
 ];

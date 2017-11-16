@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['rectanglecollider',['RectangleCollider',['../classyage_1_1RectangleCollider.html',1,'yage']]],
-  ['renderbatch',['RenderBatch',['../classyage_1_1RenderBatch.html',1,'yage']]],
-  ['resourcemanager',['ResourceManager',['../classyage_1_1ResourceManager.html',1,'yage']]],
-  ['rigidbody',['RigidBody',['../classyage_1_1RigidBody.html',1,'yage']]],
-  ['row',['Row',['../classyage_1_1details_1_1Row.html',1,'yage::details']]]
+  ['matrix',['Matrix',['../classyage_1_1Matrix.html',1,'yage']]],
+  ['matrix_3c_20rows_2c_201_2c_20double_20_3e',['Matrix&lt; Rows, 1, double &gt;',['../classyage_1_1Matrix.html',1,'yage']]],
+  ['matrix_3c_20rows_2c_201_2c_20type_20_3e',['Matrix&lt; Rows, 1, Type &gt;',['../classyage_1_1Matrix.html',1,'yage']]],
+  ['meta',['Meta',['../structyage_1_1LogMessage_1_1Meta.html',1,'yage::LogMessage']]],
+  ['model',['Model',['../structyage_1_1LogSink_1_1Model.html',1,'yage::LogSink']]]
 ];

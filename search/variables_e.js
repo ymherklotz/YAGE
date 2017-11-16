@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['scale_5f',['scale_',['../classyage_1_1Camera2D.html#abf1432e35cef0a54f35863f13a9d5448',1,'yage::Camera2D']]],
-  ['size_5f',['size_',['../classyage_1_1Collider.html#ad7456f84c1acb4fd9ee0ea67c8ee7308',1,'yage::Collider']]],
-  ['spritebatch',['SpriteBatch',['../classyage_1_1RenderBatch.html#ad12ecf32cf9f9244afa7e9ad15b4e78f',1,'yage::RenderBatch']]]
+  ['queue_5f',['queue_',['../classyage_1_1Active.html#a8c957af55704f6f30734054336f1a6d3',1,'yage::Active::queue_()'],['../classyage_1_1SyncQueue.html#ae554585c8b44da0db79a0767c1b90968',1,'yage::SyncQueue::queue_()']]]
 ];

@@ -81,6 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
@@ -133,7 +134,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -146,6 +147,12 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>Active()
+: <a class="el" href="classyage_1_1Active.html#a7cd7344f0b8b7aa93ac0449e2fbbf7bd">yage::Active</a>
+</li>
+<li>add()
+: <a class="el" href="classyage_1_1Logger.html#a5ec9a752e8cbb278342fdb49520fbcdd">yage::Logger</a>
+</li>
 <li>addAttribute()
 : <a class="el" href="classyage_1_1GlslProgram.html#a4e38b9f5daaf4b111b69e4d2900d4970">yage::GlslProgram</a>
 </li>
@@ -177,8 +184,15 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>Camera2D()
 : <a class="el" href="classyage_1_1Camera2D.html#a7ef3b02255622486ef8f396e2cb1ec4a">yage::Camera2D</a>
 </li>
+<li>clear()
+: <a class="el" href="classyage_1_1Logger.html#a036fcbfcb9d3428931ec5a11237501a8">yage::Logger</a>
+</li>
 <li>clearBuffer()
 : <a class="el" href="classyage_1_1Window.html#a98e2a33820ad63b2c94c56e203ff6e58">yage::Window</a>
+</li>
+<li>clone()
+: <a class="el" href="structyage_1_1LogSink_1_1Concept.html#a1d46d97ab5cec0d30b86fda9d20cd69d">yage::LogSink::Concept</a>
+, <a class="el" href="structyage_1_1LogSink_1_1Model.html#a30f256cae13bc0c1a0a93cae4909feaf">yage::LogSink::Model&lt; T &gt;</a>
 </li>
 <li>Collider()
 : <a class="el" href="classyage_1_1Collider.html#ae33aeb0711409e7c3ef9e21ed99fa8a3">yage::Collider</a>
@@ -191,7 +205,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classyage_1_1CollisionBody.html#a5289e613269facc45cd451872c17a83d">yage::CollisionBody</a>
 </li>
 <li>Color()
-: <a class="el" href="structyage_1_1Color.html#a2ce7b1060775f64c9b578b3f81fdd648">yage::Color</a>
+: <a class="el" href="structyage_1_1Color.html#ab0262bbe3b2ec12a9933fe411034d09e">yage::Color</a>
 </li>
 <li>colSize()
 : <a class="el" href="classyage_1_1Matrix.html#a2148cd52008892765ad90250c68afba1">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
@@ -206,7 +220,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="structyage_1_1details_1_1Coordinate.html#a43fb6bd3e325d5cd7ec436778605db2a">yage::details::Coordinate</a>
 </li>
 <li>create()
-: <a class="el" href="classyage_1_1Window.html#afdf3e2826526abc23a4e206c9a8a8745">yage::Window</a>
+: <a class="el" href="classyage_1_1Active.html#aa2ed414bbe94fdd51c8aeb7ada73a064">yage::Active</a>
+, <a class="el" href="classyage_1_1Window.html#afdf3e2826526abc23a4e206c9a8a8745">yage::Window</a>
 </li>
 <li>createRenderBatches()
 : <a class="el" href="classyage_1_1SpriteBatch.html#ae3e74abbf722aba0197b64d8f61d928c">yage::SpriteBatch</a>
@@ -239,6 +254,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
 <li>fileContent()
 : <a class="el" href="classyage_1_1SpriteSheet.html#a4e2030a2ac36886cc3de06e2ae5c881d">yage::SpriteSheet</a>
+</li>
+<li>flush()
+: <a class="el" href="classyage_1_1Logger.html#afe5dc1d30d3fd2599a119455672d6e00">yage::Logger</a>
 </li>
 </ul>
 
@@ -285,6 +303,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classyage_1_1Collider.html#a4a8ad9e664a0015e023a70d196302fe9">yage::Collider</a>
 , <a class="el" href="classyage_1_1RectangleCollider.html#ac8d8e6bdb12c21be12f7d398242147c4">yage::RectangleCollider</a>
 </li>
+<li>instance()
+: <a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger</a>
+</li>
 <li>isKeyPressed()
 : <a class="el" href="classyage_1_1InputManager.html#ae99a13911fe80c221e83218b51a76ab0">yage::InputManager</a>
 </li>
@@ -308,12 +329,27 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>loadPng()
 : <a class="el" href="classyage_1_1ImageLoader.html#ad8dcdaaed43713f07723f2b6719d1b32">yage::ImageLoader</a>
 </li>
+<li>Logger()
+: <a class="el" href="classyage_1_1Logger.html#a950c0c75b86bf330cf11a0ad29bd9a64">yage::Logger</a>
+</li>
+<li>LogLevel()
+: <a class="el" href="classLogLevel.html#ae9961bbc0dfc8f5cce5889f39e1d47ec">LogLevel</a>
+</li>
+<li>LogMessage()
+: <a class="el" href="classyage_1_1LogMessage.html#a2ad7f4e8ddfea01ab99d09ac74f8d4d0">yage::LogMessage</a>
+</li>
+<li>LogSink()
+: <a class="el" href="classyage_1_1LogSink.html#aadebaf552b839879189965faf7b504cf">yage::LogSink</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>Matrix()
 : <a class="el" href="classyage_1_1Matrix.html#a73b7d1f94f4f72a2294b71b3a35794ad">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
+</li>
+<li>Model()
+: <a class="el" href="structyage_1_1LogSink_1_1Model.html#a207d650bb7d170236eff7b705228e3d9">yage::LogSink::Model&lt; T &gt;</a>
 </li>
 <li>move()
 : <a class="el" href="classyage_1_1Camera2D.html#a9c6d369978a4c142db3059f8d5a122b0">yage::Camera2D</a>
@@ -332,21 +368,34 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>offset()
 : <a class="el" href="classyage_1_1RenderBatch.html#aff7e5f873fe2900dc2f4ce8fcf2b3944">yage::RenderBatch</a>
 </li>
+<li>operator()()
+: <a class="el" href="classyage_1_1Logger.html#a541278f8908daecb8d56d6da0a5642b6">yage::Logger</a>
+</li>
 <li>operator+=()
 : <a class="el" href="classyage_1_1Matrix.html#a8b7e0913efdb5e8c9ff39df4c4f36228">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
 </li>
 <li>operator-=()
 : <a class="el" href="classyage_1_1Matrix.html#acc2d0763f060c923ce53b37143d0a7bb">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
 </li>
+<li>operator&lt;&lt;()
+: <a class="el" href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">yage::LogMessage</a>
+</li>
 <li>operator=()
-: <a class="el" href="classyage_1_1GlslProgram.html#a5af953324ac9f89aecf7e0a73a9467ad">yage::GlslProgram</a>
+: <a class="el" href="classyage_1_1Active.html#add837044e73e4bc9849f09495535600c">yage::Active</a>
+, <a class="el" href="classyage_1_1GlslProgram.html#a0de6e3d7c8e39357c7b0f91d85b21fb2">yage::GlslProgram</a>
+, <a class="el" href="classyage_1_1LogMessage.html#a31eb7ca394acbcfedca104e709f1c4ae">yage::LogMessage</a>
+, <a class="el" href="classyage_1_1LogSink.html#a1ba5b4000f07f581e0d0c2babb2811dc">yage::LogSink</a>
 , <a class="el" href="classyage_1_1Sprite.html#a97dd80e05efb9399ee8471ff40a77bee">yage::Sprite</a>
-, <a class="el" href="classyage_1_1SpriteBatch.html#a1b365d89c096d7fa138e1c7091f1d737">yage::SpriteBatch</a>
-, <a class="el" href="classyage_1_1Window.html#a98c07656f90a6205f24dfe85ef1137de">yage::Window</a>
+, <a class="el" href="classyage_1_1SpriteBatch.html#a204782dd15c82376555ad0b049c4167f">yage::SpriteBatch</a>
+, <a class="el" href="classyage_1_1SyncQueue.html#a43e4ba65c8e367ed55da9b8e3e1567b6">yage::SyncQueue&lt; T &gt;</a>
+, <a class="el" href="classyage_1_1Window.html#a5247a4164bf0006fe9f034cd27c5b6db">yage::Window</a>
+</li>
+<li>operator==()
+: <a class="el" href="classyage_1_1LogSink.html#abe2e73398ecb925233b50be5d15e20f9">yage::LogSink</a>
 </li>
 <li>operator[]()
-: <a class="el" href="classyage_1_1details_1_1Row.html#adf2f7047871fdc78ba66d9d08cd07736">yage::details::Row&lt; Rows, Cols, Type &gt;</a>
-, <a class="el" href="classyage_1_1Matrix.html#a89e826d2c6646002cfae23dde7f61145">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
+: <a class="el" href="classyage_1_1details_1_1Row.html#a703d4eee36d93b1227ad734bdcf27190">yage::details::Row&lt; Rows, Cols, Type &gt;</a>
+, <a class="el" href="classyage_1_1Matrix.html#a0e989030df9ebc7e3885a7bc811a45c6">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
 , <a class="el" href="classyage_1_1Vector.html#a81efa1cb9d4ce8bb8c5cf9652a5650a2">yage::Vector&lt; Rows, Type &gt;</a>
 </li>
 </ul>
@@ -362,8 +411,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>pollEvents()
 : <a class="el" href="classyage_1_1Window.html#a1a311e27b1e588f0fce540ce040dcbd5">yage::Window</a>
 </li>
+<li>pop()
+: <a class="el" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">yage::SyncQueue&lt; T &gt;</a>
+</li>
 <li>Position()
-: <a class="el" href="structyage_1_1Position.html#a41b1d5ee23c50208982ab6089708e5d2">yage::Position</a>
+: <a class="el" href="structyage_1_1Position.html#aaeaa1cd93e57adcb08ef4f76513148e2">yage::Position</a>
+</li>
+<li>push()
+: <a class="el" href="classyage_1_1SyncQueue.html#a4c01a855e97a46449a97c76634ef7678">yage::SyncQueue&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -374,6 +429,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>RectangleCollider()
 : <a class="el" href="classyage_1_1RectangleCollider.html#af9e0964655073b0a190c9d06b449a969">yage::RectangleCollider</a>
+</li>
+<li>remove()
+: <a class="el" href="classyage_1_1Logger.html#aac48688c66402e9bc63c4871641ab245">yage::Logger</a>
 </li>
 <li>render()
 : <a class="el" href="classyage_1_1SpriteBatch.html#a195c4aca60815d413c65dce99389282d">yage::SpriteBatch</a>
@@ -390,10 +448,16 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>rowSize()
 : <a class="el" href="classyage_1_1Matrix.html#a0cc8e242b2e8319789aae0e1d81834a1">yage::Matrix&lt; Rows, Cols, Type &gt;</a>
 </li>
+<li>run()
+: <a class="el" href="classyage_1_1Active.html#aa9b25afe60999caaa6f261d1e79a351b">yage::Active</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>send()
+: <a class="el" href="classyage_1_1Active.html#a665673b94eb5ce7c448839e5bb6e0326">yage::Active</a>
+</li>
 <li>setColor()
 : <a class="el" href="structyage_1_1Vertex.html#a0dc5fa6c669b4c10a8d56702f2aa9b50">yage::Vertex</a>
 </li>
@@ -413,19 +477,22 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classyage_1_1SpriteBatch.html#adea6570f196b203a4d6e07ad66738c9a">yage::SpriteBatch</a>
 </li>
 <li>Sprite()
-: <a class="el" href="classyage_1_1Sprite.html#aa5a7958e17f1d042226b91fb1829642e">yage::Sprite</a>
+: <a class="el" href="classyage_1_1Sprite.html#a113bfddfa62846a1d8391d1b86de7987">yage::Sprite</a>
 </li>
 <li>sprite()
 : <a class="el" href="classyage_1_1SpriteSheet.html#a2734c2e7b8bdfc9090d240c070ee55c0">yage::SpriteSheet</a>
 </li>
 <li>SpriteBatch()
-: <a class="el" href="classyage_1_1SpriteBatch.html#afda50a8a2a6c9ffd1b9d962fae223f8a">yage::SpriteBatch</a>
+: <a class="el" href="classyage_1_1SpriteBatch.html#a30a46a7182235a739916d540781af652">yage::SpriteBatch</a>
 </li>
 <li>SpriteSheet()
 : <a class="el" href="classyage_1_1SpriteSheet.html#a73db999ab17c4846f036eb47470176f6">yage::SpriteSheet</a>
 </li>
 <li>swapBuffer()
 : <a class="el" href="classyage_1_1Window.html#a86d0aa8e9896850b9acfc720b5615359">yage::Window</a>
+</li>
+<li>SyncQueue()
+: <a class="el" href="classyage_1_1SyncQueue.html#a0c8aa1c22e3e6d5094dbdeb88cff426b">yage::SyncQueue&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -496,7 +563,12 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classyage_1_1Vector4.html#a0ae3b6494807df896134b669923b81ee">yage::Vector4&lt; Type &gt;</a>
 </li>
 <li>Window()
-: <a class="el" href="classyage_1_1Window.html#a4be115daea6c7473fca81623c547d821">yage::Window</a>
+: <a class="el" href="classyage_1_1Window.html#a7d7bd2f22e095df387e8b5cda2bb484e">yage::Window</a>
+</li>
+<li>write()
+: <a class="el" href="structyage_1_1LogSink_1_1Concept.html#a3b752fd501daae85f1b78e5d0df912ac">yage::LogSink::Concept</a>
+, <a class="el" href="structyage_1_1LogSink_1_1Model.html#ae61438d2927d21b4af8f6ff2acc38224">yage::LogSink::Model&lt; T &gt;</a>
+, <a class="el" href="classyage_1_1LogSink.html#ac41716cf03dac6311cb7287c9edf8a8d">yage::LogSink</a>
 </li>
 </ul>
 
@@ -534,11 +606,20 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_~"></a>- ~ -</h3><ul>
+<li>~Active()
+: <a class="el" href="classyage_1_1Active.html#ab69d08cf4804b59ac9db283015e749f2">yage::Active</a>
+</li>
 <li>~CollisionBody()
 : <a class="el" href="classyage_1_1CollisionBody.html#a758b2f867f276f4c7e02ebda2cd04c8b">yage::CollisionBody</a>
 </li>
+<li>~Concept()
+: <a class="el" href="structyage_1_1LogSink_1_1Concept.html#ada9b09f3614787df485134262b1bc7f1">yage::LogSink::Concept</a>
+</li>
 <li>~GlslProgram()
 : <a class="el" href="classyage_1_1GlslProgram.html#a45676c850afad2717fd4119eb8c02ef7">yage::GlslProgram</a>
+</li>
+<li>~LogMessage()
+: <a class="el" href="classyage_1_1LogMessage.html#af82ed7ceef5cfdac54ad2e176deb9fca">yage::LogMessage</a>
 </li>
 <li>~Sprite()
 : <a class="el" href="classyage_1_1Sprite.html#aa2f833e040940616fa17ee8f02f8cab2">yage::Sprite</a>
@@ -555,7 +636,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Oct 12 2017 13:59:44 for YAGE by
+    <li class="footer">Generated on Thu Nov 16 2017 16:33:27 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

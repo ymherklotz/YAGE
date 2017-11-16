@@ -1,4 +1,4 @@
-var dir_ac0faa69eaf4dc6c8e3ca03d2fb5cb5f =
+var dir_11841e5da2063fc5766a682aee38e289 =
 [
     [ "camera2d.cpp", "camera2d_8cpp.html", null ],
     [ "camera2d.h", "camera2d_8h.html", [
@@ -20,6 +20,18 @@ var dir_ac0faa69eaf4dc6c8e3ca03d2fb5cb5f =
     [ "iomanager.h", "iomanager_8h.html", [
       [ "IoManager", "classyage_1_1IoManager.html", "classyage_1_1IoManager" ]
     ] ],
+    [ "logger.cpp", "logger_8cpp.html", null ],
+    [ "logger.h", "logger_8h.html", "logger_8h" ],
+    [ "loglevel.h", "loglevel_8h.html", [
+      [ "LogLevel", "classLogLevel.html", "classLogLevel" ]
+    ] ],
+    [ "logmessage.cpp", "logmessage_8cpp.html", null ],
+    [ "logmessage.h", "logmessage_8h.html", [
+      [ "LogMessage", "classyage_1_1LogMessage.html", "classyage_1_1LogMessage" ],
+      [ "Meta", "structyage_1_1LogMessage_1_1Meta.html", "structyage_1_1LogMessage_1_1Meta" ]
+    ] ],
+    [ "logsink.cpp", "logsink_8cpp.html", "logsink_8cpp" ],
+    [ "logsink.h", "logsink_8h.html", "logsink_8h" ],
     [ "picopng.cpp", "picopng_8cpp.html", "picopng_8cpp" ],
     [ "picopng.h", "picopng_8h.html", "picopng_8h" ],
     [ "resourcemanager.cpp", "resourcemanager_8cpp.html", null ],
@@ -51,6 +63,6 @@ var dir_ac0faa69eaf4dc6c8e3ca03d2fb5cb5f =
       [ "UV", "structyage_1_1UV.html", "structyage_1_1UV" ],
       [ "Vertex", "structyage_1_1Vertex.html", "structyage_1_1Vertex" ]
     ] ],
-    [ "window.cpp", "window_8cpp.html", null ],
+    [ "window.cpp", "window_8cpp.html", "window_8cpp" ],
     [ "window.h", "window_8h.html", "window_8h" ]
 ];

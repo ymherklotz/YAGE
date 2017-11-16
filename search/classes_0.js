@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['body',['Body',['../classyage_1_1Body.html',1,'yage']]]
+  ['active',['Active',['../classyage_1_1Active.html',1,'yage']]]
 ];

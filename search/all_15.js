@@ -8,5 +8,7 @@ var searchData=
   ['window_2ecpp',['window.cpp',['../window_8cpp.html',1,'']]],
   ['window_2eh',['window.h',['../window_8h.html',1,'']]],
   ['window_5f',['window_',['../classyage_1_1Window.html#a7b09e6b3e575a40b99bfb7c685432787',1,'yage::Window']]],
-  ['windowflags',['WindowFlags',['../namespaceyage.html#a09d41deeced5fca5df9dc680c9e77c38',1,'yage']]]
+  ['windowflags',['WindowFlags',['../namespaceyage.html#a09d41deeced5fca5df9dc680c9e77c38',1,'yage']]],
+  ['wrapper_5f',['wrapper_',['../classyage_1_1LogSink.html#a63dfa11dc8cc1d885b61613e10332fdc',1,'yage::LogSink']]],
+  ['write',['write',['../classyage_1_1LogSink.html#ac41716cf03dac6311cb7287c9edf8a8d',1,'yage::LogSink::write()'],['../structyage_1_1LogSink_1_1Concept.html#a3b752fd501daae85f1b78e5d0df912ac',1,'yage::LogSink::Concept::write()'],['../structyage_1_1LogSink_1_1Model.html#ae61438d2927d21b4af8f6ff2acc38224',1,'yage::LogSink::Model::write()']]]
 ];

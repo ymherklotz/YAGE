@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['u',['u',['../structyage_1_1UV.html#aa726c11ba59a9a5edffef27ac3845053',1,'yage::UV']]],
-  ['update_5fmatrix_5f',['update_matrix_',['../classyage_1_1Camera2D.html#a8f599101972611e898ba9be349464961',1,'yage::Camera2D']]],
-  ['uv',['uv',['../structyage_1_1Vertex.html#a2d1923353f0e50e7753ff1ae2d9ba84e',1,'yage::Vertex']]]
+  ['scale_5f',['scale_',['../classyage_1_1Camera2D.html#abf1432e35cef0a54f35863f13a9d5448',1,'yage::Camera2D']]],
+  ['sinks_5f',['sinks_',['../classyage_1_1Logger.html#a4135a0742877aa36d52f1867bc4e7b1f',1,'yage::Logger']]],
+  ['size_5f',['size_',['../classyage_1_1Collider.html#ad7456f84c1acb4fd9ee0ea67c8ee7308',1,'yage::Collider']]],
+  ['spritebatch',['SpriteBatch',['../classyage_1_1RenderBatch.html#ad12ecf32cf9f9244afa7e9ad15b4e78f',1,'yage::RenderBatch']]]
 ];

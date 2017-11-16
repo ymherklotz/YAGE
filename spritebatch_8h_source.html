@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>YAGE: yage/base/spritebatch.h Source File</title>
+<title>YAGE: yage/core/spritebatch.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,6 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -93,7 +94,7 @@ $(document).ready(function(){initNavTree('spritebatch_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -196,22 +197,23 @@ $(document).ready(function(){initNavTree('spritebatch_8h_source.html','');});
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#a7731372a6ec1aea75d1732700fe0f4c6">init</a>();</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#af6293aac69e1124199297e5b921a4872">begin</a>();</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#af8b705cdad7ceefa902f3be620ac8632">end</a>();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// adds a sprite to the sprite batch to be rendered later</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#a22c8bb28a72c309afeb6f78b6af19ec5">draw</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1Vector4.html">yage::Vector4f</a> &amp;destination_rect,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;              <span class="keyword">const</span> <a class="code" href="classyage_1_1Vector4.html">yage::Vector4f</a> &amp;uv_rect, GLuint texture, <span class="keyword">const</span> <a class="code" href="structyage_1_1Color.html">Color</a> &amp;color,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;              <span class="keywordtype">float</span> depth);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// render the batch</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#a195c4aca60815d413c65dce99389282d">render</a>();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#a4e21cc3bc27fbfaf1b6a15362b664027">createVertexArray</a>();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#ae3e74abbf722aba0197b64d8f61d928c">createRenderBatches</a>();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#adea6570f196b203a4d6e07ad66738c9a">sortGlyphs</a>();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// adds a sprite to the sprite batch to be rendered later</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#a22c8bb28a72c309afeb6f78b6af19ec5">draw</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1Vector4.html">yage::Vector4f</a> &amp;destination_rect,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;              <span class="keyword">const</span> <a class="code" href="classyage_1_1Vector4.html">yage::Vector4f</a> &amp;uv_rect, GLuint texture, <span class="keyword">const</span> <a class="code" href="structyage_1_1Color.html">Color</a> &amp;color,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;              <span class="keywordtype">float</span> depth);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">// render the batch</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#a195c4aca60815d413c65dce99389282d">render</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#a4e21cc3bc27fbfaf1b6a15362b664027">createVertexArray</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#ae3e74abbf722aba0197b64d8f61d928c">createRenderBatches</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#adea6570f196b203a4d6e07ad66738c9a">sortGlyphs</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classyage_1_1RenderBatch_html"><div class="ttname"><a href="classyage_1_1RenderBatch.html">yage::RenderBatch</a></div><div class="ttdef"><b>Definition:</b> spritebatch.h:53</div></div>
 <div class="ttc" id="classyage_1_1SpriteBatch_html_a007d24cd3765e2fcea843f85dbbb475e"><div class="ttname"><a href="classyage_1_1SpriteBatch.html#a007d24cd3765e2fcea843f85dbbb475e">yage::SpriteBatch::glyph_ptrs_</a></div><div class="ttdeci">std::vector&lt; Glyph * &gt; glyph_ptrs_</div><div class="ttdef"><b>Definition:</b> spritebatch.h:79</div></div>
 <div class="ttc" id="classyage_1_1RenderBatch_html_a17da9d35451d55766836917699406160"><div class="ttname"><a href="classyage_1_1RenderBatch.html#a17da9d35451d55766836917699406160">yage::RenderBatch::texture_</a></div><div class="ttdeci">GLuint texture_</div><div class="ttdef"><b>Definition:</b> spritebatch.h:60</div></div>
@@ -263,8 +265,8 @@ $(document).ready(function(){initNavTree('spritebatch_8h_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_ac0faa69eaf4dc6c8e3ca03d2fb5cb5f.html">base</a></li><li class="navelem"><a class="el" href="spritebatch_8h.html">spritebatch.h</a></li>
-    <li class="footer">Generated on Thu Oct 12 2017 13:59:44 for YAGE by
+    <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="spritebatch_8h.html">spritebatch.h</a></li>
+    <li class="footer">Generated on Thu Nov 16 2017 16:33:27 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
