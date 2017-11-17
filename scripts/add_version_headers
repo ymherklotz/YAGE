@@ -59,8 +59,11 @@ class HeaderUpdate(object):
             with open(filePath, "r+") as f:
                 src = f.read()
                 f.seek(0)
-                if lic_regex.match(src):
-                    print(filePath)
+                if not lic_regex.match(src):
+                    print("Adding {}: ".format(
+                        os.path.basename(filePath)), end="")
+                    src = header.format(os.path.basename(filePath)) + src
+                    print("done")
                 f.write(src)
                 f.truncate()
 
