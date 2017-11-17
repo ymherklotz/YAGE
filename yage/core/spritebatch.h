@@ -95,7 +95,7 @@ public:
 
     // adds a sprite to the sprite batch to be rendered later
     void draw(const yage::Vector4f &destination_rect,
-              const yage::Vector4f &uv_rect, GLuint texture, const Color &color,
+              const yage::Vector4f &uv_rect, GLuint texture, const Colour &colour,
               float depth);
     // render the batch
     void render();

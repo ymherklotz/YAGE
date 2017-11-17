@@ -63,26 +63,26 @@ void SpriteBatch::end()
 
 void SpriteBatch::draw(const yage::Vector4f &destination_rect,
                        const yage::Vector4f &uv_rect, GLuint texture,
-                       const Color &color, float depth)
+                       const Colour &colour, float depth)
 {
     Vertex top_left, top_right, bottom_right, bottom_left;
 
-    top_left.color = color;
+    top_left.colour = colour;
     top_left.setPosition(destination_rect.x,
                          destination_rect.y + destination_rect.w);
     top_left.setUv(uv_rect.x, uv_rect.y + uv_rect.w);
 
-    top_right.color = color;
+    top_right.colour = colour;
     top_right.setPosition(destination_rect.x + destination_rect.z,
                           destination_rect.y + destination_rect.w);
     top_right.setUv(uv_rect.x + uv_rect.z, uv_rect.y + uv_rect.w);
 
-    bottom_right.color = color;
+    bottom_right.colour = colour;
     bottom_right.setPosition(destination_rect.x + destination_rect.z,
                              destination_rect.y);
     bottom_right.setUv(uv_rect.x + uv_rect.z, uv_rect.y);
 
-    bottom_left.color = color;
+    bottom_left.colour = colour;
     bottom_left.setPosition(destination_rect.x, destination_rect.y);
     bottom_left.setUv(uv_rect.x, uv_rect.y);
 
@@ -131,7 +131,7 @@ void SpriteBatch::createVertexArray()
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
                           (void *)offsetof(Vertex, position));
     glVertexAttribPointer(1, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(Vertex),
-                          (void *)offsetof(Vertex, color));
+                          (void *)offsetof(Vertex, colour));
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
                           (void *)offsetof(Vertex, uv));
     glDrawArrays(GL_TRIANGLES, 0, 6);

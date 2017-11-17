@@ -23,15 +23,15 @@ struct Position {
     Position(float x_, float y_) : x(x_), y(y_) {}
 };
 
-struct Color {
+struct Colour {
     GLubyte r;
     GLubyte g;
     GLubyte b;
     GLubyte a;
 
-    Color() = default;
+    Colour() = default;
 
-    Color(GLubyte r_, GLubyte g_, GLubyte b_, GLubyte a_)
+    Colour(GLubyte r_, GLubyte g_, GLubyte b_, GLubyte a_)
         : r(r_), g(g_), b(b_), a(a_)
     {
     }
@@ -48,13 +48,13 @@ struct UV {
 
 struct Vertex {
     Position position;
-    Color color;
+    Colour colour;
     UV uv;
 
     Vertex() = default;
 
-    Vertex(const Position &position_, const Color &color_, const UV &uv_)
-        : position(position_), color(color_), uv(uv_)
+    Vertex(const Position &position_, const Colour &colour_, const UV &uv_)
+        : position(position_), colour(colour_), uv(uv_)
     {
     }
 
@@ -64,12 +64,12 @@ struct Vertex {
         position.y = y;
     }
 
-    void setColor(GLubyte r, GLubyte g, GLubyte b, GLubyte a)
+    void setColour(GLubyte r, GLubyte g, GLubyte b, GLubyte a)
     {
-        color.r = r;
-        color.g = g;
-        color.b = b;
-        color.a = a;
+        colour.r = r;
+        colour.g = g;
+        colour.b = b;
+        colour.a = a;
     }
 
     void setUv(float u, float v)

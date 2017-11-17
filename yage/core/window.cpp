@@ -17,9 +17,9 @@ void key_callback(GLFWwindow *window, int key, int scanCode, int action,
                   int mods)
 {
     if (key == GLFW_KEY_E && action == GLFW_PRESS) {
-        glClearColor(0.5f, 0.f, 0.f, 1.f);
+        glClearColour(0.5f, 0.f, 0.f, 1.f);
     } else {
-        glClearColor(0.f, 0.5f, 0.f, 1.f);
+        glClearColour(0.f, 0.5f, 0.f, 1.f);
     }
 }
 
@@ -58,8 +58,8 @@ void Window::create(std::string window_name, int width, int height)
     // set vsync on
     glfwSwapInterval(1);
 
-    // set the clear color to black
-    glClearColor(0.f, 0.5f, 0.f, 1.f);
+    // set the clear colour to black
+    glClearColour(0.f, 0.5f, 0.f, 1.f);
     // set alpha blending
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -75,7 +75,7 @@ void Window::swapBuffer()
 
 void Window::clearBuffer()
 {
-    // clears buffer with clear color
+    // clears buffer with clear colour
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
