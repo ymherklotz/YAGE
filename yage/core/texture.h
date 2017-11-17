@@ -19,7 +19,7 @@ struct Texture {
     int width;
     int height;
 
-    Texture() = default;
+    Texture() : id(0), width(0), height(0) {}
 
     Texture(GLuint id_i, int width_i, int height_i)
         : id(id_i), width(width_i), height(height_i)

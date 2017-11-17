@@ -29,7 +29,7 @@ struct Colour {
     GLubyte b;
     GLubyte a;
 
-    Colour() = default;
+    Colour() : r(0), g(0), b(0), a(0) {}
 
     Colour(GLubyte r_, GLubyte g_, GLubyte b_, GLubyte a_)
         : r(r_), g(g_), b(b_), a(a_)

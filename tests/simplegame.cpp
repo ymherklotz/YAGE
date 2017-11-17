@@ -21,7 +21,7 @@ int main()
 
     program.compileShaders("/home/yannherklotz/Github/YAGE/resources/defaultshader.vert", "/home/yannherklotz/Github/YAGE/tests/resources/defaultshader.frag");
     program.addAttribute("vertex_position");
-    program.addAttribute("vertex_color");
+    program.addAttribute("vertex_colour");
     program.addAttribute("vertex_uv");
     program.linkShaders();
 
@@ -31,7 +31,7 @@ int main()
         window.clearBuffer();
 
         sp.begin();
-        sp.draw(std::vector<float>({0, 0, 50, 50}), std::vector<float>({0, 0, 1, 1}), fountain.id, Color(), 0);
+        sp.draw(std::vector<float>({0, 0, 50, 50}), std::vector<float>({0, 0, 1, 1}), fountain.id, Colour(), 0);
         sp.render();
 
         window.pollEvents();
