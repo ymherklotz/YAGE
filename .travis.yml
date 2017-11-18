@@ -13,14 +13,6 @@ matrix:
   - os: linux
     env: UNIT_TESTS=1
     compiler: g++-6
-before_install:
-- sudo apt-get -qq update
-- sudo apt-get install -y libegl1-mesa-dev
-- sudo apt-get install -y libgles2-mesa-dev
-- sudo apt-get install -y libglm-dev
-- sudo apt-get install -y xorg-dev
-- sudo apt-get install -y libglu1-mesa-dev
-- sudo apt-get install -y doxygen
 script:
 - g++-6 --version
 - cd $TRAVIS_BUILD_DIR
