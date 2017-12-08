@@ -89,7 +89,6 @@ public:
     SpriteBatch &operator=(SpriteBatch &&) = delete;
 
     // initialize vaos and vbos
-    void init();
     void begin();
     void end();
 

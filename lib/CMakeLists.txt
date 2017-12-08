@@ -7,7 +7,7 @@
 
 set(LIBRARY_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
-if($ENV{UNIT_TESTS})
+if(UNIT_TESTS)
   # Initializing google test
   # prevents overriding the parent project's compiler/linter settings on windows
   set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)

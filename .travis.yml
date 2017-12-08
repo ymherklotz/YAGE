@@ -1,39 +1,48 @@
-language: cpp
-dist: trusty
-branches:
-  only:
-  - master
-  - develop
-notifications:
-  email: false
-git:
-  depth: 1
-matrix:
-  include:
-  - os: linux
-    env: UNIT_TESTS=1
-    compiler: g++-6
-script:
-- g++-6 --version
-- cd $TRAVIS_BUILD_DIR
-- mkdir -p build
-- cd build
-- cmake ..
-- make
-- ctest
-- cd .. && ./scripts/update_docs
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
+--- 
+addons: 
+  apt: 
+    packages: 
       - g++-6
+      - gcc-6
+      - g++-7
+      - gcc-7
       - libegl1-mesa-dev
       - libgles2-mesa-dev
       - libglm-dev
       - xorg-dev
       - libglu1-mesa-dev
       - doxygen
-env:
-  global:
+    sources: 
+      - ubuntu-toolchain-r-test
+branches: 
+  only: 
+    - master
+    - develop
+dist: trusty
+env: 
+  global: 
     secure: NGWn7hJAd/iYfJQmr8oDjTlwttldj8zB+X0gk2TqDhAJ2gLiZ2+b8Bp5FSzBlNIyhcbuhzRU+rzkbo03XSwXZXFRZK/gyPMGaB75ay8MLQBrN3L7THXbjQm1SZg2mO17/MKT+rJH/NvhmqPoUoJaYnoki1G6AZfhnDx+3bW4MNp5/g3u8trk1HNvXWTvjdqS99OH36bvoq8BsOi53Po1veeCIWza6JO61n2nRHzCC2sYWtsZyTQSi3B//iie5zF3gvuRorbzjA/ayc8lLmhUsTmoA1t9HJP52fKzv/q3mxllXzyzpWNRmUJCzf7I1wY9jp1FVwojfl0umofzYPCCjwSrKlRtmwQfi0peg7VOJVCCJx7Eh/i0hamGUnDEu0aZnfhgwzkqDDIgO1AwcEv5i9egt/73kK4mdm22sEDa3dWVu37tnj5dItaQesMm6TXKMy9+r7v0aaVJbQB2atvBaf3RlW71P9iy8mOZ+geKNwVFRuBdu5g3oQe5QrqXRi4inMv0bjN8HwOVs/f8ZTGZePnbHnxOnYRErxLnha/bsu7btfDT8Q8nmZ/Rhcu7QkMRNTm5L3+YHFUngiIygOs8wrH6HECtSYwmi9WejRuPgU2GnYR0Rzyi5dyaFok1iN+jsYsY9YFx5tRgxuX4H9CnUlfDabdFSLzqbmKRlbP79as=
+git: 
+  depth: 1
+language: cpp
+matrix: 
+  include: 
+    - 
+      compiler: g++-6
+      env: UNIT_TESTS=1
+      os: linux
+    - 
+      compiler: g++-7
+      env: UNIT_TESTS=1
+      os: linux
+notifications: 
+  email: false
+script: 
+  - "g++-6 --version"
+  - "cd $TRAVIS_BUILD_DIR"
+  - "mkdir -p build"
+  - "cd build"
+  - "cmake .."
+  - make
+  - ctest
+  - "cd .. && ./scripts/update_docs"

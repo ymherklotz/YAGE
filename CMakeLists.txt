@@ -5,6 +5,10 @@ project(yage
   VERSION 0.1.1.0
   LANGUAGES CXX)
 
+if(NOT DEFINED UNIT_TESTS)
+  set(UNIT_TESTS 0)
+endif()
+
 # set standard
 set(CMAKE_CXX_STANDARD 14)
 
@@ -23,7 +27,7 @@ find_package(OpenGL REQUIRED)
 include(${CMAKE_CURRENT_SOURCE_DIR}/lib/CMakeLists.txt)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
 
-if($ENV{UNIT_TESTS})
+if(UNIT_TESTS)
   add_executable(simplegame tests/simplegame.cpp)
   target_link_libraries(simplegame yage)
 

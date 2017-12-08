@@ -30,7 +30,10 @@ RenderBatch::RenderBatch(GLint offset, GLsizei num_vertices, GLuint texture)
 {
 }
 
-SpriteBatch::SpriteBatch() = default;
+SpriteBatch::SpriteBatch()
+{
+    createVertexArray();
+}
 
 SpriteBatch::~SpriteBatch()
 {
@@ -41,11 +44,6 @@ SpriteBatch::~SpriteBatch()
     if (vbo_ != 0) {
         glDeleteVertexArrays(1, &vbo_);
     }
-}
-
-void SpriteBatch::init()
-{
-    createVertexArray();
 }
 
 void SpriteBatch::begin()
@@ -94,12 +92,21 @@ void SpriteBatch::draw(const yage::Vector4f &destination_rect,
 
 void SpriteBatch::render()
 {
+    // sort and create render batches
+    sortGlyphs();
+    createRenderBatches();
+
     glBindVertexArray(vao_);
     for (auto &&batch : render_batches_) {
         glBindTexture(GL_TEXTURE_2D, batch.texture());
         glDrawArrays(GL_TRIANGLES, batch.offset(), batch.num_vertices());
     }
     glBindVertexArray(0);
+
+    // clear and reset the vectors
+    glyphs_.clear();
+    glyph_ptrs_.clear();
+    render_batches_.clear();
 }
 
 void SpriteBatch::createVertexArray()
