@@ -68,25 +68,8 @@ matrix:
     - 
       addons: 
         apt: 
-          packages: 
-            - clang-3.6
-            - libegl1-mesa-dev
-            - libgles2-mesa-dev
-            - libglm-dev
-            - xorg-dev
-            - libglu1-mesa-dev
-            - doxygen
-          sources: 
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.6
-      compiler: clang++-3.6
-      env: 
-        - "MATRIX_EVAL=\"CC=clang-3.6 && CXX=clang++-3.6\""
-      os: linux
-    - 
-      addons: 
-        apt: 
-          packages: 
+          packages:
+            - g++-7
             - clang-4.0
             - libegl1-mesa-dev
             - libgles2-mesa-dev
@@ -104,7 +87,8 @@ matrix:
     - 
       addons: 
         apt: 
-          packages: 
+          packages:
+            - g++-7
             - clang-5.0
             - libegl1-mesa-dev
             - libgles2-mesa-dev
@@ -121,17 +105,17 @@ matrix:
       os: linux
     - 
       env: 
-        - "MATRIX_EVAL=\"brew install gcc5 && CC=gcc-5 && CXX=g++-5\""
+        - "MATRIX_EVAL=\"rvm use 2.3.3 && brew update && brew install gcc5 && CC=gcc-5 && CXX=g++-5\""
       os: osx
       osx_image: xcode8
     - 
       env: 
-        - "MATRIX_EVAL=\"brew install gcc6 && CC=gcc-6 && CXX=g++-6\""
+        - "MATRIX_EVAL=\"rvm use 2.3.3 && brew update && brew install gcc6 && CC=gcc-6 && CXX=g++-6\""
       os: osx
       osx_image: xcode8
     - 
       env: 
-        - "MATRIX_EVAL=\"brew install gcc && CC=gcc-7 && CXX=g++-7\""
+        - "MATRIX_EVAL=\"rvm use 2.3.3 && brew update && brew install gcc && CC=gcc-7 && CXX=g++-7\""
       os: osx
       osx_image: xcode8
 notifications: 
