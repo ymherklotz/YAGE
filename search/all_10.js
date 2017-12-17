@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['r',['r',['../structyage_1_1Color.html#a5a97b7679703c28ad0c90d1bedde5da1',1,'yage::Color']]],
+  ['r',['r',['../structyage_1_1Colour.html#a572fe7933c59ebfa6720088cd33dad99',1,'yage::Colour']]],
   ['readfiletobuffer',['readFileToBuffer',['../classyage_1_1IoManager.html#a75d13ca634df592e44e4152fedcd446d',1,'yage::IoManager']]],
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['readme_2emd',['README.md',['../yage_2physics_2README_8md.html',1,'']]],

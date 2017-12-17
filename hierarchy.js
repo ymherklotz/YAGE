@@ -11,7 +11,7 @@ var hierarchy =
     [ "yage::Collider", "classyage_1_1Collider.html", [
       [ "yage::RectangleCollider", "classyage_1_1RectangleCollider.html", null ]
     ] ],
-    [ "yage::Color", "structyage_1_1Color.html", null ],
+    [ "yage::Colour", "structyage_1_1Colour.html", null ],
     [ "yage::LogSink::Concept", "structyage_1_1LogSink_1_1Concept.html", [
       [ "yage::LogSink::Model< T >", "structyage_1_1LogSink_1_1Model.html", null ]
     ] ],

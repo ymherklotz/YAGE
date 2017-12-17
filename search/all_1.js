@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['b',['b',['../structyage_1_1Color.html#a01253439ca70585948fb560ecdd3e766',1,'yage::Color']]],
+  ['b',['b',['../structyage_1_1Colour.html#a7bd3ed4a377c384af80aa8c7f55dc96f',1,'yage::Colour']]],
   ['begin',['begin',['../classyage_1_1SpriteBatch.html#af6293aac69e1124199297e5b921a4872',1,'yage::SpriteBatch::begin()'],['../classyage_1_1Matrix.html#a83d77d3a40ced5e2b703a6d66b6e6055',1,'yage::Matrix::begin()']]],
   ['body',['Body',['../classyage_1_1Body.html',1,'yage']]],
   ['body',['Body',['../classyage_1_1Body.html#aeca769807d9b6f6fb3c9f61deaa83b86',1,'yage::Body']]],

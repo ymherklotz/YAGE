@@ -59,7 +59,7 @@ var dir_11841e5da2063fc5766a682aee38e289 =
     ] ],
     [ "vertex.h", "vertex_8h.html", [
       [ "Position", "structyage_1_1Position.html", "structyage_1_1Position" ],
-      [ "Color", "structyage_1_1Color.html", "structyage_1_1Color" ],
+      [ "Colour", "structyage_1_1Colour.html", "structyage_1_1Colour" ],
       [ "UV", "structyage_1_1UV.html", "structyage_1_1UV" ],
       [ "Vertex", "structyage_1_1Vertex.html", "structyage_1_1Vertex" ]
     ] ],

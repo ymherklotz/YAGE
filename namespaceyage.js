@@ -19,7 +19,7 @@ var namespaceyage =
     [ "Texture", "structyage_1_1Texture.html", "structyage_1_1Texture" ],
     [ "TextureCache", "classyage_1_1TextureCache.html", "classyage_1_1TextureCache" ],
     [ "Position", "structyage_1_1Position.html", "structyage_1_1Position" ],
-    [ "Color", "structyage_1_1Color.html", "structyage_1_1Color" ],
+    [ "Colour", "structyage_1_1Colour.html", "structyage_1_1Colour" ],
     [ "UV", "structyage_1_1UV.html", "structyage_1_1UV" ],
     [ "Vertex", "structyage_1_1Vertex.html", "structyage_1_1Vertex" ],
     [ "Window", "classyage_1_1Window.html", "classyage_1_1Window" ],

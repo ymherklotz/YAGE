@@ -1,7 +1,7 @@
 var searchData=
 [
   ['texture',['Texture',['../structyage_1_1Texture.html',1,'yage']]],
-  ['texture',['Texture',['../structyage_1_1Texture.html#ab8ecfcc681a98f9a8654bc6b9f2c87b3',1,'yage::Texture::Texture()=default'],['../structyage_1_1Texture.html#a9af4689df9f99c5074b7aa5d5857775c',1,'yage::Texture::Texture(GLuint id_i, int width_i, int height_i)'],['../classyage_1_1Glyph.html#a0d5bfd4874a5d29c96a3d22f45543eb2',1,'yage::Glyph::texture()'],['../classyage_1_1RenderBatch.html#ad1cfc404c74ee3d838e9cd12a8c1962d',1,'yage::RenderBatch::texture()']]],
+  ['texture',['Texture',['../structyage_1_1Texture.html#a0cef080bceaaf5e702985f5494ea35d5',1,'yage::Texture::Texture()'],['../structyage_1_1Texture.html#a9af4689df9f99c5074b7aa5d5857775c',1,'yage::Texture::Texture(GLuint id_i, int width_i, int height_i)'],['../classyage_1_1Glyph.html#a0d5bfd4874a5d29c96a3d22f45543eb2',1,'yage::Glyph::texture()'],['../classyage_1_1RenderBatch.html#ad1cfc404c74ee3d838e9cd12a8c1962d',1,'yage::RenderBatch::texture()']]],
   ['texture_2eh',['texture.h',['../texture_8h.html',1,'']]],
   ['texture_5f',['texture_',['../classyage_1_1Sprite.html#ac8f6505d7b080bb346458e6d70cc60d0',1,'yage::Sprite::texture_()'],['../classyage_1_1Glyph.html#a2efbe49c2307601731416d615ac415c8',1,'yage::Glyph::texture_()'],['../classyage_1_1RenderBatch.html#a17da9d35451d55766836917699406160',1,'yage::RenderBatch::texture_()'],['../classyage_1_1SpriteSheet.html#a8094499cceedc9cb3b15bfe0520db6b8',1,'yage::SpriteSheet::texture_()']]],
   ['texture_5fcache_5f',['texture_cache_',['../classyage_1_1ResourceManager.html#a2799a8ff957874fbe7b7c791781255f6',1,'yage::ResourceManager']]],

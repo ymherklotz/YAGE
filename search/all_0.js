@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a',['a',['../structyage_1_1Color.html#a1df3f4a850d0e50dba19e0681d71f3a6',1,'yage::Color']]],
+  ['a',['a',['../structyage_1_1Colour.html#a5aef37a5ac37e44dc32f5f9b1ebee10c',1,'yage::Colour']]],
   ['acceleration_5f',['acceleration_',['../classyage_1_1Body.html#a36c0a4485bf9a704901d88c6cf212a5f',1,'yage::Body']]],
   ['active',['Active',['../classyage_1_1Active.html',1,'yage']]],
   ['active',['Active',['../classyage_1_1Active.html#a7cd7344f0b8b7aa93ac0449e2fbbf7bd',1,'yage::Active::Active(const Active &amp;)=delete'],['../classyage_1_1Active.html#ad7b4b4cea1880d115dc5e3e1f80f404b',1,'yage::Active::Active()']]],

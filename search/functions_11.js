@@ -1,7 +1,7 @@
 var searchData=
 [
   ['send',['send',['../classyage_1_1Active.html#a665673b94eb5ce7c448839e5bb6e0326',1,'yage::Active']]],
-  ['setcolor',['setColor',['../structyage_1_1Vertex.html#a0dc5fa6c669b4c10a8d56702f2aa9b50',1,'yage::Vertex']]],
+  ['setcolour',['setColour',['../structyage_1_1Vertex.html#aa759435739e34e2a0bfd1803c2aeeddf',1,'yage::Vertex']]],
   ['setposition',['setPosition',['../structyage_1_1Vertex.html#af392248f0be173221ebcc62d490fe03d',1,'yage::Vertex']]],
   ['setuv',['setUv',['../structyage_1_1Vertex.html#aa1fa8f5ebd883068828466cc924d4c50',1,'yage::Vertex']]],
   ['shouldclose',['shouldClose',['../classyage_1_1Window.html#a5e3b209289bc343609d809d5b7f23cc8',1,'yage::Window']]],

@@ -28,7 +28,7 @@ var searchData=
   ['vector_3c_204_2c_20type_20_3e',['Vector&lt; 4, Type &gt;',['../classyage_1_1Vector.html',1,'yage']]],
   ['velocity_5f',['velocity_',['../classyage_1_1Body.html#afead7edec899748eab78879e6e6c5741',1,'yage::Body']]],
   ['vertex',['Vertex',['../structyage_1_1Vertex.html',1,'yage']]],
-  ['vertex',['Vertex',['../structyage_1_1Vertex.html#acae9697c2762e37dfa4472b85fa112c3',1,'yage::Vertex::Vertex()=default'],['../structyage_1_1Vertex.html#ab2826fb0ec9c48aad0056250dfa9cc2e',1,'yage::Vertex::Vertex(const Position &amp;position_, const Color &amp;color_, const UV &amp;uv_)']]],
+  ['vertex',['Vertex',['../structyage_1_1Vertex.html#acae9697c2762e37dfa4472b85fa112c3',1,'yage::Vertex::Vertex()=default'],['../structyage_1_1Vertex.html#aac3046359c44aeabc910a81f4f41789e',1,'yage::Vertex::Vertex(const Position &amp;position_, const Colour &amp;colour_, const UV &amp;uv_)']]],
   ['vertex_2eh',['vertex.h',['../vertex_8h.html',1,'']]],
   ['vertex_5fshader_5fid_5f',['vertex_shader_id_',['../classyage_1_1GlslProgram.html#afe46af121e9c0214be6f7b18660c5bc7',1,'yage::GlslProgram']]]
 ];

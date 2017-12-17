@@ -7,6 +7,7 @@ var classyage_1_1GlslProgram =
     [ "addAttribute", "classyage_1_1GlslProgram.html#a4e38b9f5daaf4b111b69e4d2900d4970", null ],
     [ "compileShader", "classyage_1_1GlslProgram.html#a1acc7e052209fde74256c479af6d9988", null ],
     [ "compileShaders", "classyage_1_1GlslProgram.html#acf57b56739f67ac88b0d5df3bf1d4cb1", null ],
+    [ "defaultSetup", "classyage_1_1GlslProgram.html#a1260a2302c1434ce38c850dc18cbc04e", null ],
     [ "getUniformLocation", "classyage_1_1GlslProgram.html#a255ccbb1d94d17f2de62319efd4be91d", null ],
     [ "linkShaders", "classyage_1_1GlslProgram.html#aed74ec6db4d2b02e1172bd5694eb1b27", null ],
     [ "operator=", "classyage_1_1GlslProgram.html#a5af953324ac9f89aecf7e0a73a9467ad", null ],
