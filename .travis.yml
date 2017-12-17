@@ -12,6 +12,8 @@ addons:
       - doxygen
     sources: 
       - ubuntu-toolchain-r-test
+before_install: 
+  - "eval \"${MATRIX_EVAL}\""
 branches: 
   only: 
     - master
@@ -25,18 +27,16 @@ git:
 language: cpp
 matrix: 
   include: 
-    -
+    - 
       compiler: g++-6
+      env: 
+        - "MATRIX_EVAL=\"CC=gcc-6 && CXX=g++-6\""
       os: linux
-      env:
-        - "CC=gcc-6"
-        - "CXX=g++-6"
-    -
+    - 
       compiler: g++-7
+      env: 
+        - "MATRIX_EVAL=\"CC=gcc-7 && CXX=g++-7\""
       os: linux
-      env:
-        - "CC=gcc-7"
-        - "CXX = g++-7"
 notifications: 
   email: false
 script: 
@@ -45,7 +45,7 @@ script:
   - "cd $TRAVIS_BUILD_DIR"
   - "mkdir -p build"
   - "cd build"
-  - "cmake .."
+  - "cmake -DUNIT_TESTS=ON .."
   - make
   - ctest
   - "cd .. && ./scripts/update_docs"
