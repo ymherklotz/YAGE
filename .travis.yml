@@ -1,24 +1,4 @@
 --- 
-addons: 
-  apt: 
-    packages: 
-      - g++-5
-      - g++-6
-      - g++-7
-      - clang-3.6
-      - clang-4.0
-      - clang-5.0
-      - libegl1-mesa-dev
-      - libgles2-mesa-dev
-      - libglm-dev
-      - xorg-dev
-      - libglu1-mesa-dev
-      - doxygen
-    sources: 
-      - ubuntu-toolchain-r-test
-      - llvm-toolchain-precise-3.6
-      - llvm-toolchain-trusty-4.0
-      - llvm-toolchain-trusty-5.0
 before_install: 
   - "eval \"${MATRIX_EVAL}\""
 branches: 
@@ -35,31 +15,106 @@ language: cpp
 matrix: 
   include: 
     - 
+      addons: 
+        apt: 
+          packages: 
+            - g++-5
+            - libegl1-mesa-dev
+            - libgles2-mesa-dev
+            - libglm-dev
+            - xorg-dev
+            - libglu1-mesa-dev
+            - doxygen
+          sources: 
+            - ubuntu-toolchain-r-test
       compiler: g++-5
       env: 
         - "MATRIX_EVAL=\"CC=gcc-5 && CXX=g++-5\""
       os: linux
     - 
+      addons: 
+        apt: 
+          packages: 
+            - g++-6
+            - libegl1-mesa-dev
+            - libgles2-mesa-dev
+            - libglm-dev
+            - xorg-dev
+            - libglu1-mesa-dev
+            - doxygen
+          sources: 
+            - ubuntu-toolchain-r-test
       compiler: g++-6
       env: 
         - "MATRIX_EVAL=\"CC=gcc-6 && CXX=g++-6\""
       os: linux
     - 
+      addons: 
+        apt: 
+          packages: 
+            - g++-7
+            - libegl1-mesa-dev
+            - libgles2-mesa-dev
+            - libglm-dev
+            - xorg-dev
+            - libglu1-mesa-dev
+            - doxygen
+          sources: 
+            - ubuntu-toolchain-r-test
       compiler: g++-7
       env: 
         - "MATRIX_EVAL=\"CC=gcc-7 && CXX=g++-7\""
       os: linux
     - 
+      addons: 
+        apt: 
+          packages: 
+            - clang-3.6
+            - libegl1-mesa-dev
+            - libgles2-mesa-dev
+            - libglm-dev
+            - xorg-dev
+            - libglu1-mesa-dev
+            - doxygen
+          sources: 
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-3.6
       compiler: clang++-3.6
       env: 
         - "MATRIX_EVAL=\"CC=clang-3.6 && CXX=clang++-3.6\""
       os: linux
     - 
+      addons: 
+        apt: 
+          packages: 
+            - clang-4.0
+            - libegl1-mesa-dev
+            - libgles2-mesa-dev
+            - libglm-dev
+            - xorg-dev
+            - libglu1-mesa-dev
+            - doxygen
+          sources: 
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-trusty-4.0
       compiler: clang++-4.0
       env: 
         - "MATRIX_EVAL=\"CC=clang-4.0 && CXX=clang++-4.0\""
       os: linux
     - 
+      addons: 
+        apt: 
+          packages: 
+            - clang-5.0
+            - libegl1-mesa-dev
+            - libgles2-mesa-dev
+            - libglm-dev
+            - xorg-dev
+            - libglu1-mesa-dev
+            - doxygen
+          sources: 
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-trusty-5.0
       compiler: clang++-5.0
       env: 
         - "MATRIX_EVAL=\"CC=clang-5.0 && CXX=clang++-5.0\""
@@ -91,3 +146,4 @@ script:
   - make
   - ctest
   - "cd .. && ./scripts/update_docs"
+  
