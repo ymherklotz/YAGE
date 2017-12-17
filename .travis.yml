@@ -1,15 +1,4 @@
 --- 
-addons: 
-  apt: 
-    packages:
-      - libegl1-mesa-dev
-      - libgles2-mesa-dev
-      - libglm-dev
-      - xorg-dev
-      - libglu1-mesa-dev
-      - doxygen
-    sources: 
-      - ubuntu-toolchain-r-test
 branches: 
   only: 
     - master
@@ -56,9 +45,10 @@ before_install:
     - eval "${MATRIX_EVAL}"
 notifications: 
   email: false
-script: 
-  - "g++-6 --version"
+script:
   - "g++-7 --version"
+  - "g++-6 --version"
+  - "g++-5 --version"
   - "cd $TRAVIS_BUILD_DIR"
   - "mkdir -p build"
   - "cd build"
