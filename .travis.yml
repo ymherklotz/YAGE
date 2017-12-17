@@ -1,9 +1,7 @@
 --- 
 addons: 
   apt: 
-    packages: 
-      - gcc-6
-      - gcc-7
+    packages:
       - libegl1-mesa-dev
       - libgles2-mesa-dev
       - libglm-dev
@@ -23,14 +21,39 @@ env:
 git: 
   depth: 1
 language: cpp
-matrix: 
-  include: 
-    - 
-      compiler: g++-6
-      os: linux
-    - 
-      compiler: g++-7
-      os: linux
+matrix:
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-5
+      env:
+         - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
+
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-6
+      env:
+        - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
+
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-7
+      env:
+        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+
+before_install:
+    - eval "${MATRIX_EVAL}"
 notifications: 
   email: false
 script: 
