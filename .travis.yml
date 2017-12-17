@@ -40,8 +40,8 @@ matrix:
 notifications: 
   email: false
 script: 
-  - "g++-6 --version"
-  - "g++-7 --version"
+  - "$CC --version"
+  - "$CXX --version"
   - "cd $TRAVIS_BUILD_DIR"
   - "mkdir -p build"
   - "cd build"
