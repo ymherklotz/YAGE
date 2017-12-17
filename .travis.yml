@@ -105,17 +105,17 @@ matrix:
       os: linux
     - 
       env: 
-        - "MATRIX_EVAL=\"rvm use 2.3.3 && brew update && brew install gcc5 && CC=gcc-5 && CXX=g++-5\""
+        - "MATRIX_EVAL=\"rvm install ruby-2.3.3 && rvm use 2.3.3 && brew update && brew install gcc5 && CC=gcc-5 && CXX=g++-5\""
       os: osx
       osx_image: xcode8
     - 
       env: 
-        - "MATRIX_EVAL=\"rvm use 2.3.3 && brew update && brew install gcc6 && CC=gcc-6 && CXX=g++-6\""
+        - "MATRIX_EVAL=\"rvm install ruby-2.3.3 && rvm use 2.3.3 && brew update && brew install gcc6 && CC=gcc-6 && CXX=g++-6\""
       os: osx
       osx_image: xcode8
     - 
       env: 
-        - "MATRIX_EVAL=\"rvm use 2.3.3 && brew update && brew install gcc && CC=gcc-7 && CXX=g++-7\""
+        - "MATRIX_EVAL=\"rvm install ruby-2.3.3 && rvm use 2.3.3 && brew update && brew install gcc && CC=gcc-7 && CXX=g++-7\""
       os: osx
       osx_image: xcode8
 notifications: 
