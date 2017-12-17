@@ -49,8 +49,7 @@ int main()
         GLint texture_location = program.getUniformLocation("texture_sampler");
         glUniform1i(texture_location, 0);
 
-        sp.draw(std::vector<float>({0, 0, 64, 64}),
-                std::vector<float>({0, 0, 1, 1}), fountain.id, Colour(), 0);
+        sp.draw({0.f, 0.f, 64.f, 64.f}, {0, 0, 1, 1}, fountain.id, Colour(), 0);
         sp.render();
 
         glBindTexture(GL_TEXTURE_2D, 0);

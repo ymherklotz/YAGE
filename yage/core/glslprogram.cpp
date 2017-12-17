@@ -159,4 +159,8 @@ void GlslProgram::unuse()
     glUseProgram(0);
 }
 
+void GlslProgram::defaultSetup()
+{
+}
+
 } // namespace yage

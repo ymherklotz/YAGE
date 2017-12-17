@@ -388,7 +388,7 @@ public:
 
     Vector4<Type>(Type x_in, Type y_in, Type z_in, Type w_in)
         : Vector<4, Type>({x_in, y_in, z_in, w_in}), x(this->data_[0]),
-          y(this->data_[1]), z(this->data_[2]), w(this->data[3])
+          y(this->data_[1]), z(this->data_[2]), w(this->data_[3])
     {
     }
 };
