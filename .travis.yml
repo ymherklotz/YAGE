@@ -28,9 +28,15 @@ matrix:
     -
       compiler: g++-6
       os: linux
+      env:
+        - "CC=gcc-6"
+        - "CXX=g++-6"
     -
       compiler: g++-7
       os: linux
+      env:
+        - "CC=gcc-7"
+        - "CXX = g++-7"
 notifications: 
   email: false
 script: 
