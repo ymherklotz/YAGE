@@ -66,9 +66,6 @@ matrix:
       os: linux
 notifications: 
   email: false
-os: 
-  - linux
-  - osx
 script: 
   - "$CC --version"
   - "$CXX --version"
