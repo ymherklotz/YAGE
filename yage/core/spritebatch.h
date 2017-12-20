@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
- * spritebatch.h
+/** ---------------------------------------------------------------------------
+ * @file: spritebatch.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -94,8 +94,8 @@ public:
 
     // adds a sprite to the sprite batch to be rendered later
     void draw(const yage::Vector4f &destination_rect,
-              const yage::Vector4f &uv_rect, GLuint texture, const Colour &colour,
-              float depth);
+              const yage::Vector4f &uv_rect, GLuint texture,
+              const Colour &colour, float depth);
     // render the batch
     void render();
 

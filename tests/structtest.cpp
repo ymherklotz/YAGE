@@ -1,8 +1,16 @@
-#include <yage/yage.h>
-#include <gtest/gtest.h>
+/** ---------------------------------------------------------------------------
+ * @file: structtest.cpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
+ * MIT License, see LICENSE file for more details.
+ * ----------------------------------------------------------------------------
+ */
 
-#include <ctime>
+#include <gtest/gtest.h>
+#include <yage/yage.h>
+
 #include <cstdlib>
+#include <ctime>
 
 TEST(StructTest, ColourDefault)
 {
@@ -15,7 +23,7 @@ TEST(StructTest, ColourDefault)
 
 TEST(StructTest, ColourConstructor)
 {
-    int r = rand()%255, g = rand()%255, b = rand() % 255, a = rand() % 255;
+    int r = rand() % 255, g = rand() % 255, b = rand() % 255, a = rand() % 255;
     yage::Colour c(r, g, b, a);
 
     ASSERT_EQ(c.r, r);

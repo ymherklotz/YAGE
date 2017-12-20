@@ -1,13 +1,37 @@
-/* ----------------------------------------------------------------------------
- * vector3test.cpp
+/** ---------------------------------------------------------------------------
+ * @file: vector3test.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
  * ----------------------------------------------------------------------------
  */
 
-/* ----------------------------------------------------------------------------
- * vector3test.cpp
+/** ---------------------------------------------------------------------------
+ * @file: vector3test.cpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
+ * MIT License, see LICENSE file for more details.
+ * ----------------------------------------------------------------------------
+ */
+
+/** ---------------------------------------------------------------------------
+ * @file: vector3test.cpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
+ * MIT License, see LICENSE file for more details.
+ * ----------------------------------------------------------------------------
+ */
+
+/** ---------------------------------------------------------------------------
+ * @file: vector3test.cpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
+ * MIT License, see LICENSE file for more details.
+ * ----------------------------------------------------------------------------
+ */
+
+/** ---------------------------------------------------------------------------
+ * @file: vector3test.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -17,8 +41,8 @@
 #include <gtest/gtest.h>
 #include <yage/yage.h>
 
-#include <ctime>
 #include <cstdlib>
+#include <ctime>
 
 using namespace yage;
 
@@ -60,9 +84,7 @@ TEST(Vector3, Assigning_z)
     ASSERT_EQ(vec.z, vec[2]);
 }
 
-TEST(Vector3, Addition)
-{    
-}
+TEST(Vector3, Addition) {}
 
 int main(int argc, char **argv)
 {

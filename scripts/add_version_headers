@@ -40,7 +40,7 @@ header = """/** ---------------------------------------------------------------\
 
 
 lic_regex = re.compile(
-    "\/(?:\*|\*\*) -+\n \* ((?:@file: )?[a-z]+\.(?:cpp|h)|\{0\})\n(?: \*[ a-zA-Z0-9_.,\-()<>@]*\n)+ \* -+\n \*/", re.MULTILINE)
+    "\/(?:\*|\*\*) -+\n \* ((?:@file: )?[a-z0-9]+\.(?:cpp|h)|\{0\})\n(?: \*[ a-zA-Z0-9_.,\-()<>@]*\n)+ \* -+\n \*/\n\n", re.MULTILINE)
 
 
 class HeaderUpdate(object):
@@ -77,11 +77,13 @@ class HeaderUpdate(object):
                 src = f.read()
                 f.seek(0)
                 if lic_regex.match(src):
-                    print("Updating {}: ".format(
-                        os.path.basename(filePath)), end="")
-                    src = lic_regex.sub(header.format(
+                    other_src = lic_regex.sub(header.format(
                         os.path.basename(filePath)), src)
-                    print("done")
+                    if other_src != src:
+                        print("Updating {}: ".format(
+                            os.path.basename(filePath)), end="")
+                        src = other_src
+                        print("done")
                 else:
                     print("Adding {}: ".format(
                         os.path.basename(filePath)), end="")

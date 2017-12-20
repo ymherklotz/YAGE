@@ -1,13 +1,5 @@
-/* ----------------------------------------------------------------------------
- * camera2d.h
- *
- * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
- * MIT License, see LICENSE file for more details.
- * ----------------------------------------------------------------------------
- */
-
-/* ----------------------------------------------------------------------------
- * camera2d.h
+/** ---------------------------------------------------------------------------
+ * @file: camera2d.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.

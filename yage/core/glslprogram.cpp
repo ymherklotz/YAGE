@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
- * glslprogram.cpp
+/** ---------------------------------------------------------------------------
+ * @file: glslprogram.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -159,8 +159,6 @@ void GlslProgram::unuse()
     glUseProgram(0);
 }
 
-void GlslProgram::defaultSetup()
-{
-}
+void GlslProgram::defaultSetup() {}
 
 } // namespace yage

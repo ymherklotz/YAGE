@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
- * spritesheet.h
+/** ---------------------------------------------------------------------------
+ * @file: spritesheet.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -11,8 +11,8 @@
 #ifndef YAGE_SPRITESHEET_H
 #define YAGE_SPRITESHEET_H
 
-/** @todo think of removing this, by, for example, using a pointer 
- * This could be more efficient when copying the texture out of the 
+/** @todo think of removing this, by, for example, using a pointer
+ * This could be more efficient when copying the texture out of the
  * spritesheet.
  */
 #include "texture.h"
