@@ -15,7 +15,6 @@
 #define YAGE_YAGE_H
 
 #include "core/camera2d.h"
-#include "core/defaultfile.h"
 #include "core/glslprogram.h"
 #include "core/imageloader.h"
 #include "core/inputmanager.h"

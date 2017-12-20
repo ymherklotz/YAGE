@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 # yage library cmakelists.txt
 project(yage
-  VERSION 0.3.1.0
+  VERSION 0.1.3.0
   LANGUAGES CXX)
 
 if(NOT DEFINED UNIT_TESTS)
@@ -55,5 +55,4 @@ if(UNIT_TESTS)
   make_test(syncqueuetest 1)
   make_test(activetest 1)
   make_test(structtest ${SIMULATION_RUNS})
-  make_test(defaultfiletest ${SIMULATION_RUNS})
 endif()

@@ -28,8 +28,10 @@ public:
     GlslProgram &operator=(GlslProgram &&) = delete;
 
     /// compiles vertex and fragment shader
-    void compileShaders(const std::string &vertex_shader_path,
-                        const std::string &fragment_shader_path);
+    void compileShaders(const std::string &vertexShader,
+                        const std::string fragmentShader);
+    void compileShadersFromFile(const std::string &vertex_shader_path,
+                                const std::string &fragment_shader_path);
     void linkShaders();
     void addAttribute(const std::string &attribute_name);
     GLint getUniformLocation(const std::string &uniform_name);
@@ -46,7 +48,9 @@ private:
     int attribute_index_ = 0;
 
     /// compiles one shader
-    void compileShader(const GLuint &shader, const std::string &file_path);
+    void compileShader(GLuint shader, const std::string &shaderContent);
+    void compileShaderFromFile(GLuint shader, const std::string &file_path);
+    void initShaderId();
 };
 
 } // namespace yage
