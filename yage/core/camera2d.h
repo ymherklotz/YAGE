@@ -17,13 +17,13 @@
 #ifndef YAGE_CAMERA2D_H
 #define YAGE_CAMERA2D_H
 
-#include "glslprogram.h"
-
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
 namespace yage
 {
+
+class GlslProgram;
 
 class Camera2D
 {

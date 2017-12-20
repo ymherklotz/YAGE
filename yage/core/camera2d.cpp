@@ -7,6 +7,7 @@
  */
 
 #include "camera2d.h"
+#include "glslprogram.h"
 
 #include <glad/glad.h>
 

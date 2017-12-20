@@ -9,12 +9,12 @@
 #ifndef IMAGE_LOADER_H
 #define IMAGE_LOADER_H
 
-#include "texture.h"
-
 #include <string>
 
 namespace yage
 {
+
+class Texture;
 
 class ImageLoader
 {

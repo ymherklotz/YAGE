@@ -6,9 +6,12 @@
  * ----------------------------------------------------------------------------
  */
 
+/// @file
+
 #ifndef YAGE_CORE_LOGSINK_H
 #define YAGE_CORE_LOGSINK_H
 
+/// @todo remove the include to make compilation faster
 #include "logmessage.h"
 
 #include <memory>

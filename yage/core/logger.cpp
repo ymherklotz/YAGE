@@ -10,6 +10,8 @@
 #include "logmessage.h"
 #include "logsink.h"
 
+#include <yage/util/active.h>
+
 #include <algorithm>
 #include <iostream>
 #include <string>

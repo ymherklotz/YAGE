@@ -7,11 +7,9 @@
  */
 
 #include "imageloader.h"
+#include "texture.h"
 
-#ifndef UNIT_TESTS
 #include <glad/glad.h>
-#endif
-
 #include <yage/core/iomanager.h>
 #include <yage/core/picopng.h>
 

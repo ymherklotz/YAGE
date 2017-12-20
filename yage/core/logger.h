@@ -9,8 +9,6 @@
 #ifndef YAGE_CORE_LOGGER_H
 #define YAGE_CORE_LOGGER_H
 
-#include <yage/util/active.h>
-
 #include <memory>
 #include <string>
 #include <vector>
@@ -18,6 +16,7 @@
 namespace yage
 {
 
+class Active;
 class LogMessage;
 class LogSink;
 

@@ -6,12 +6,15 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file
- */
+/// @file
 
 #ifndef YAGE_SPRITESHEET_H
 #define YAGE_SPRITESHEET_H
 
+/** @todo think of removing this, by, for example, using a pointer 
+ * This could be more efficient when copying the texture out of the 
+ * spritesheet.
+ */
 #include "texture.h"
 
 #include <rapidjson/reader.h>

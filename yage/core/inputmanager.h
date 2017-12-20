@@ -24,5 +24,7 @@ public:
     void keyReleased(unsigned key);
     bool isKeyPressed(unsigned key) const;
 };
+
 } // namespace yage
+
 #endif
