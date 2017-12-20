@@ -1,23 +1,23 @@
---- 
-before_install: 
+---
+before_install:
   - "eval \"${MATRIX_EVAL}\""
-branches: 
-  only: 
+branches:
+  only:
     - master
     - develop
 dist: trusty
-env: 
-  global: 
+env:
+  global:
     secure: NGWn7hJAd/iYfJQmr8oDjTlwttldj8zB+X0gk2TqDhAJ2gLiZ2+b8Bp5FSzBlNIyhcbuhzRU+rzkbo03XSwXZXFRZK/gyPMGaB75ay8MLQBrN3L7THXbjQm1SZg2mO17/MKT+rJH/NvhmqPoUoJaYnoki1G6AZfhnDx+3bW4MNp5/g3u8trk1HNvXWTvjdqS99OH36bvoq8BsOi53Po1veeCIWza6JO61n2nRHzCC2sYWtsZyTQSi3B//iie5zF3gvuRorbzjA/ayc8lLmhUsTmoA1t9HJP52fKzv/q3mxllXzyzpWNRmUJCzf7I1wY9jp1FVwojfl0umofzYPCCjwSrKlRtmwQfi0peg7VOJVCCJx7Eh/i0hamGUnDEu0aZnfhgwzkqDDIgO1AwcEv5i9egt/73kK4mdm22sEDa3dWVu37tnj5dItaQesMm6TXKMy9+r7v0aaVJbQB2atvBaf3RlW71P9iy8mOZ+geKNwVFRuBdu5g3oQe5QrqXRi4inMv0bjN8HwOVs/f8ZTGZePnbHnxOnYRErxLnha/bsu7btfDT8Q8nmZ/Rhcu7QkMRNTm5L3+YHFUngiIygOs8wrH6HECtSYwmi9WejRuPgU2GnYR0Rzyi5dyaFok1iN+jsYsY9YFx5tRgxuX4H9CnUlfDabdFSLzqbmKRlbP79as=
-git: 
+git:
   depth: 1
 language: cpp
-matrix: 
-  include: 
-    - 
-      addons: 
-        apt: 
-          packages: 
+matrix:
+  include:
+    -
+      addons:
+        apt:
+          packages:
             - g++-5
             - libegl1-mesa-dev
             - libgles2-mesa-dev
@@ -25,16 +25,16 @@ matrix:
             - xorg-dev
             - libglu1-mesa-dev
             - doxygen
-          sources: 
+          sources:
             - ubuntu-toolchain-r-test
       compiler: g++-5
-      env: 
+      env:
         - "MATRIX_EVAL=\"CC=gcc-5 && CXX=g++-5\""
       os: linux
-    - 
-      addons: 
-        apt: 
-          packages: 
+    -
+      addons:
+        apt:
+          packages:
             - g++-6
             - libegl1-mesa-dev
             - libgles2-mesa-dev
@@ -42,16 +42,16 @@ matrix:
             - xorg-dev
             - libglu1-mesa-dev
             - doxygen
-          sources: 
+          sources:
             - ubuntu-toolchain-r-test
       compiler: g++-6
-      env: 
+      env:
         - "MATRIX_EVAL=\"CC=gcc-6 && CXX=g++-6\""
       os: linux
-    - 
-      addons: 
-        apt: 
-          packages: 
+    -
+      addons:
+        apt:
+          packages:
             - g++-7
             - libegl1-mesa-dev
             - libgles2-mesa-dev
@@ -59,15 +59,15 @@ matrix:
             - xorg-dev
             - libglu1-mesa-dev
             - doxygen
-          sources: 
+          sources:
             - ubuntu-toolchain-r-test
       compiler: g++-7
-      env: 
+      env:
         - "MATRIX_EVAL=\"CC=gcc-7 && CXX=g++-7\""
       os: linux
-    - 
-      addons: 
-        apt: 
+    -
+      addons:
+        apt:
           packages:
             - g++-7
             - clang-4.0
@@ -77,16 +77,16 @@ matrix:
             - xorg-dev
             - libglu1-mesa-dev
             - doxygen
-          sources: 
+          sources:
             - ubuntu-toolchain-r-test
             - llvm-toolchain-trusty-4.0
       compiler: clang++-4.0
-      env: 
+      env:
         - "MATRIX_EVAL=\"CC=clang-4.0 && CXX=clang++-4.0\""
       os: linux
-    - 
-      addons: 
-        apt: 
+    -
+      addons:
+        apt:
           packages:
             - g++-7
             - clang-5.0
@@ -96,31 +96,16 @@ matrix:
             - xorg-dev
             - libglu1-mesa-dev
             - doxygen
-          sources: 
+          sources:
             - ubuntu-toolchain-r-test
             - llvm-toolchain-trusty-5.0
       compiler: clang++-5.0
-      env: 
+      env:
         - "MATRIX_EVAL=\"CC=clang-5.0 && CXX=clang++-5.0\""
       os: linux
-#    - 
-#      env: 
-#        - "MATRIX_EVAL=\"rvm install ruby-2.3.3 && rvm use 2.3.3 && brew update && brew install gcc5 && CC=gcc-5 && CXX=g++-5\""
-#      os: osx
-#      osx_image: xcode8
-#    - 
-#      env: 
-#        - "MATRIX_EVAL=\"rvm install ruby-2.3.3 && rvm use 2.3.3 && brew update && brew install gcc6 && CC=gcc-6 && CXX=g++-6\""
-#      os: osx
-#      osx_image: xcode8
-#    - 
-#      env: 
-#        - "MATRIX_EVAL=\"rvm install ruby-2.3.3 && rvm use 2.3.3 && brew update && brew install gcc && CC=gcc-7 && CXX=g++-7\""
-#      os: osx
-#      osx_image: xcode8
-notifications: 
+notifications:
   email: false
-script: 
+script:
   - "$CC --version"
   - "$CXX --version"
   - "cd $TRAVIS_BUILD_DIR"

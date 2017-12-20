@@ -1,14 +1,17 @@
-/* ----------------------------------------------------------------------------
- * logsink.h
+/** ---------------------------------------------------------------------------
+ * @file: logsink.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
  * ----------------------------------------------------------------------------
  */
 
+/// @file
+
 #ifndef YAGE_CORE_LOGSINK_H
 #define YAGE_CORE_LOGSINK_H
 
+/// @todo remove the include to make compilation faster
 #include "logmessage.h"
 
 #include <memory>

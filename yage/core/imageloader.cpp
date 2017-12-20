@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
- * imageloader.cpp
+/** ---------------------------------------------------------------------------
+ * @file: imageloader.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -7,11 +7,9 @@
  */
 
 #include "imageloader.h"
+#include "texture.h"
 
-#ifndef UNIT_TESTS
 #include <glad/glad.h>
-#endif
-
 #include <yage/core/iomanager.h>
 #include <yage/core/picopng.h>
 

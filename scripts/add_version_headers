@@ -24,10 +24,12 @@ import os
 import re
 import sys
 
+from subprocess import call
 
-header = """/* ---------------------------------------------------------------\
--------------
- * {0}
+
+header = """/** ---------------------------------------------------------------\
+------------
+ * @file: {0}
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -38,7 +40,7 @@ header = """/* ---------------------------------------------------------------\
 
 
 lic_regex = re.compile(
-    "\/\* -+\n \* ([a-z]+\.(?:cpp|h)|\{0\})\n(?: \*[ a-zA-Z0-9_.,\-()<>@]*\n)+ \* -+\n \*/", re.MULTILINE)
+    "\/(?:\*|\*\*) -+\n \* ((?:@file: )?[a-z0-9]+\.(?:cpp|h)|\{0\})\n(?: \*[ a-zA-Z0-9_.,\-()<>@]*\n)+ \* -+\n \*/\n\n", re.MULTILINE)
 
 
 class HeaderUpdate(object):
@@ -75,11 +77,13 @@ class HeaderUpdate(object):
                 src = f.read()
                 f.seek(0)
                 if lic_regex.match(src):
-                    print("Updating {}: ".format(
-                        os.path.basename(filePath)), end="")
-                    src = lic_regex.sub(header.format(
+                    other_src = lic_regex.sub(header.format(
                         os.path.basename(filePath)), src)
-                    print("done")
+                    if other_src != src:
+                        print("Updating {}: ".format(
+                            os.path.basename(filePath)), end="")
+                        src = other_src
+                        print("done")
                 else:
                     print("Adding {}: ".format(
                         os.path.basename(filePath)), end="")
@@ -102,12 +106,19 @@ class HeaderUpdate(object):
                             not re.match(self.exclude_re, fileName)):
                         fileOperation(os.path.join(subdir, fileName))
 
+    def runClangFormat(self):
+        def clangFormatFileOpration(filePath):
+            call(["clang-format", "-i", filePath])
+
+        self._traverseDir(self.starting_dir, clangFormatFileOpration)
+
 
 def main(argv):
     update = HeaderUpdate(exclude_re="^picopng\.cpp",
                           match_dir=".*yage|.*tests",
                           exclude_dir=".*lib.*|.*build.*")
     update.updateHeader()
+    update.runClangFormat()
 
 
 if __name__ == "__main__":

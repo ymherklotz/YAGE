@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
- * logger.cpp
+/** ---------------------------------------------------------------------------
+ * @file: logger.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -9,6 +9,8 @@
 #include "logger.h"
 #include "logmessage.h"
 #include "logsink.h"
+
+#include <yage/util/active.h>
 
 #include <algorithm>
 #include <iostream>

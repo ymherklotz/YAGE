@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
- * logger.h
+/** ---------------------------------------------------------------------------
+ * @file: logger.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -9,8 +9,6 @@
 #ifndef YAGE_CORE_LOGGER_H
 #define YAGE_CORE_LOGGER_H
 
-#include <yage/util/active.h>
-
 #include <memory>
 #include <string>
 #include <vector>
@@ -18,6 +16,7 @@
 namespace yage
 {
 
+class Active;
 class LogMessage;
 class LogSink;
 

@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
- * simplegame.cpp
+/** ---------------------------------------------------------------------------
+ * @file: simplegame.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -22,13 +22,7 @@ int main()
     window.create("Simple Game", 800, 640);
     SpriteBatch sp;
 
-    program.compileShaders(
-        "/home/yannherklotz/Github/YAGE/resources/defaultshader.vert",
-        "/home/yannherklotz/Github/YAGE/resources/defaultshader.frag");
-    program.addAttribute("vertex_position");
-    program.addAttribute("vertex_colour");
-    program.addAttribute("vertex_uv");
-    program.linkShaders();
+    program.defaultSetup();
 
     Texture fountain =
         ResourceManager::getTexture("/home/yannherklotz/Github/YAGE/tests/"

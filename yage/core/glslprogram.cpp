@@ -1,5 +1,5 @@
-/* ----------------------------------------------------------------------------
- * glslprogram.cpp
+/** ---------------------------------------------------------------------------
+ * @file: glslprogram.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -17,7 +17,7 @@ namespace yage
 
 GlslProgram::~GlslProgram()
 {
-    // cleanup all the shaders and the program
+    /// cleans up all the shaders and the program
     if (fragment_shader_id_ != 0) {
         glDeleteShader(fragment_shader_id_);
     }
@@ -31,26 +31,11 @@ GlslProgram::~GlslProgram()
     }
 }
 
-void GlslProgram::compileShader(const GLuint &shader,
-                                const std::string &file_path)
+void GlslProgram::compileShader(GLuint shader, const std::string &shaderContent)
 {
-    // get a string with the input from the shader file
-    std::ifstream file(file_path);
-    if (!file.is_open()) {
-        throw std::runtime_error("Failed to open '" + file_path + "'");
-    }
-
-    std::string content = "";
-    std::string line;
-
-    while (std::getline(file, line)) {
-        content += line + "\n";
-    }
-    file.close();
-
     // cast source to a c string to get the address of it and input it for
     // compilation
-    const auto *vertex_source = (const GLchar *)content.c_str();
+    const auto *vertex_source = (const GLchar *)shaderContent.c_str();
     glShaderSource(shader, 1, &vertex_source, nullptr);
     glCompileShader(shader);
 
@@ -67,13 +52,38 @@ void GlslProgram::compileShader(const GLuint &shader,
         glGetShaderInfoLog(shader, max_length, &max_length, &error_log[0]);
         std::string error_log_str((const char *)&error_log[0]);
 
-        throw std::runtime_error("Couldn't compile " + file_path + " : " +
+        std::string shaderName;
+        if (shader == vertex_shader_id_)
+            shaderName = "vertex shader";
+        else
+            shaderName = "fragment shader";
+
+        throw std::runtime_error("Couldn't compile the " + shaderName + " : " +
                                  error_log_str);
     }
 }
 
-void GlslProgram::compileShaders(const std::string &vertex_shader_path,
-                                 const std::string &fragment_shader_path)
+void GlslProgram::compileShaderFromFile(GLuint shader,
+                                        const std::string &file_path)
+{
+    // get a string with the input from the shader file
+    std::ifstream file(file_path);
+    if (!file.is_open()) {
+        throw std::runtime_error("Failed to open '" + file_path + "'");
+    }
+
+    std::string content = "";
+    std::string line;
+
+    while (std::getline(file, line)) {
+        content += line + "\n";
+    }
+    file.close();
+
+    compileShader(shader, content);
+}
+
+void GlslProgram::initShaderId()
 {
     // create the program that will be run on GPU
     program_id_ = glCreateProgram();
@@ -89,10 +99,26 @@ void GlslProgram::compileShaders(const std::string &vertex_shader_path,
     if (fragment_shader_id_ == 0) {
         throw std::runtime_error("Fragment shader failed to be created");
     }
+}
+
+void GlslProgram::compileShaders(const std::string &vertexShader,
+                                 const std::string fragmentShader)
+{
+    initShaderId();
+
+    compileShader(vertex_shader_id_, vertexShader);
+    compileShader(fragment_shader_id_, fragmentShader);
+}
+
+void GlslProgram::compileShadersFromFile(
+    const std::string &vertex_shader_path,
+    const std::string &fragment_shader_path)
+{
+    initShaderId();
 
     // compile the two shaders
-    compileShader(vertex_shader_id_, vertex_shader_path);
-    compileShader(fragment_shader_id_, fragment_shader_path);
+    compileShaderFromFile(vertex_shader_id_, vertex_shader_path);
+    compileShaderFromFile(fragment_shader_id_, fragment_shader_path);
 }
 
 void GlslProgram::linkShaders()
@@ -161,6 +187,29 @@ void GlslProgram::unuse()
 
 void GlslProgram::defaultSetup()
 {
+    std::string vertexShader =
+        "#version 130\n\nin vec2 vertex_position;\nin vec4 vertex_colour;\nin "
+        "vec2 vertex_uv;\n\nout vec2 fragment_position;\nout vec4 "
+        "fragment_colour;\nout vec2 fragment_uv;\n\nuniform mat4 P;\n\nvoid "
+        "main()\n{\n    gl_Position.xy = (P*vec4(vertex_position, 0.0, "
+        "1.0)).xy;\n    gl_Position.z = 0.0;\n    gl_Position.w = 1.0;\n\n    "
+        "fragment_position = vertex_position;\n    fragment_colour = "
+        "vertex_colour;\n    fragment_uv = vec2(vertex_uv.x, "
+        "1-vertex_uv.y);\n\n}";
+
+    std::string fragmentShader =
+        "#version 130\n\nin vec2 fragment_position;\nin vec4 "
+        "fragment_colour;\nin vec2 fragment_uv;\n\nout vec4 colour;\n\nuniform "
+        "sampler2D texture_sampler;\n\nvoid main()\n{\n    vec4 texture_color "
+        "= texture(texture_sampler, fragment_uv);\n\n    colour = "
+        "texture_color;\n}";
+
+    compileShaders(vertexShader, fragmentShader);
+    addAttribute("vertex_position");
+    addAttribute("vertex_colour");
+    addAttribute("vertex_uv");
+
+    linkShaders();
 }
 
 } // namespace yage
