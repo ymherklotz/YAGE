@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">YAGE
-   &#160;<span id="projectnumber">v0.3.1</span>
+   &#160;<span id="projectnumber">v0.1.3</span>
    </div>
    <div id="projectbrief">Yet Another Game Engine</div>
   </td>
@@ -108,23 +108,16 @@ $(document).ready(function(){initNavTree('imageloader_8h_source.html','');});
 <div class="title">imageloader.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="imageloader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * imageloader.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2017 Yann Herklotz Grave &lt;ymherklotz@gmail.com&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * MIT License, see LICENSE file for more details.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * ----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<a href="imageloader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef IMAGE_LOADER_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define IMAGE_LOADER_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="texture_8h.html">texture.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>Texture;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classyage_1_1ImageLoader.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1ImageLoader.html">ImageLoader</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
@@ -136,8 +129,7 @@ $(document).ready(function(){initNavTree('imageloader_8h_source.html','');});
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classyage_1_1ImageLoader_html"><div class="ttname"><a href="classyage_1_1ImageLoader.html">yage::ImageLoader</a></div><div class="ttdef"><b>Definition:</b> imageloader.h:19</div></div>
-<div class="ttc" id="texture_8h_html"><div class="ttname"><a href="texture_8h.html">texture.h</a></div></div>
-<div class="ttc" id="classyage_1_1ImageLoader_html_ad8dcdaaed43713f07723f2b6719d1b32"><div class="ttname"><a href="classyage_1_1ImageLoader.html#ad8dcdaaed43713f07723f2b6719d1b32">yage::ImageLoader::loadPng</a></div><div class="ttdeci">static Texture loadPng(const std::string &amp;file_path)</div><div class="ttdef"><b>Definition:</b> imageloader.cpp:24</div></div>
+<div class="ttc" id="classyage_1_1ImageLoader_html_ad8dcdaaed43713f07723f2b6719d1b32"><div class="ttname"><a href="classyage_1_1ImageLoader.html#ad8dcdaaed43713f07723f2b6719d1b32">yage::ImageLoader::loadPng</a></div><div class="ttdeci">static Texture loadPng(const std::string &amp;file_path)</div><div class="ttdef"><b>Definition:</b> imageloader.cpp:22</div></div>
 <div class="ttc" id="structyage_1_1Texture_html"><div class="ttname"><a href="structyage_1_1Texture.html">yage::Texture</a></div><div class="ttdef"><b>Definition:</b> texture.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -145,7 +137,7 @@ $(document).ready(function(){initNavTree('imageloader_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="imageloader_8h.html">imageloader.h</a></li>
-    <li class="footer">Generated on Sun Dec 17 2017 12:31:07 for YAGE by
+    <li class="footer">Generated on Wed Dec 20 2017 18:02:10 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">YAGE
-   &#160;<span id="projectnumber">v0.3.1</span>
+   &#160;<span id="projectnumber">v0.1.3</span>
    </div>
    <div id="projectbrief">Yet Another Game Engine</div>
   </td>
@@ -108,14 +108,7 @@ $(document).ready(function(){initNavTree('spritebatch_8h_source.html','');});
 <div class="title">spritebatch.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="spritebatch_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * spritebatch.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2017 Yann Herklotz Grave &lt;ymherklotz@gmail.com&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * MIT License, see LICENSE file for more details.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * ----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<a href="spritebatch_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef YAGE_SPRITE_BATCH_H</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_SPRITE_BATCH_H</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
@@ -199,8 +192,8 @@ $(document).ready(function(){initNavTree('spritebatch_8h_source.html','');});
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// adds a sprite to the sprite batch to be rendered later</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#af06239e2779d49eb6e915980a0aac941">draw</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1Vector4.html">yage::Vector4f</a> &amp;destination_rect,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;              <span class="keyword">const</span> <a class="code" href="classyage_1_1Vector4.html">yage::Vector4f</a> &amp;uv_rect, GLuint texture, <span class="keyword">const</span> <a class="code" href="structyage_1_1Colour.html">Colour</a> &amp;colour,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;              <span class="keywordtype">float</span> depth);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;              <span class="keyword">const</span> <a class="code" href="classyage_1_1Vector4.html">yage::Vector4f</a> &amp;uv_rect, GLuint texture,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;              <span class="keyword">const</span> <a class="code" href="structyage_1_1Colour.html">Colour</a> &amp;colour, <span class="keywordtype">float</span> depth);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// render the batch</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteBatch.html#a195c4aca60815d413c65dce99389282d">render</a>();</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
@@ -231,10 +224,10 @@ $(document).ready(function(){initNavTree('spritebatch_8h_source.html','');});
 <div class="ttc" id="classyage_1_1SpriteBatch_html_a56e335f07826ca61ba680981d46b043c"><div class="ttname"><a href="classyage_1_1SpriteBatch.html#a56e335f07826ca61ba680981d46b043c">yage::SpriteBatch::vbo_</a></div><div class="ttdeci">GLuint vbo_</div><div class="ttdef"><b>Definition:</b> spritebatch.h:76</div></div>
 <div class="ttc" id="classyage_1_1Glyph_html_ab27b92a62dcebccae673a7d8d0c15704"><div class="ttname"><a href="classyage_1_1Glyph.html#ab27b92a62dcebccae673a7d8d0c15704">yage::Glyph::depth_</a></div><div class="ttdeci">float depth_</div><div class="ttdef"><b>Definition:</b> spritebatch.h:34</div></div>
 <div class="ttc" id="classyage_1_1RenderBatch_html_aff7e5f873fe2900dc2f4ce8fcf2b3944"><div class="ttname"><a href="classyage_1_1RenderBatch.html#aff7e5f873fe2900dc2f4ce8fcf2b3944">yage::RenderBatch::offset</a></div><div class="ttdeci">GLint offset() const </div><div class="ttdef"><b>Definition:</b> spritebatch.h:65</div></div>
-<div class="ttc" id="vertex_8h_html"><div class="ttname"><a href="vertex_8h.html">vertex.h</a></div></div>
+<div class="ttc" id="vertex_8h_html"><div class="ttname"><a href="vertex_8h.html">vertex.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="classyage_1_1RenderBatch_html_ad12ecf32cf9f9244afa7e9ad15b4e78f"><div class="ttname"><a href="classyage_1_1RenderBatch.html#ad12ecf32cf9f9244afa7e9ad15b4e78f">yage::RenderBatch::SpriteBatch</a></div><div class="ttdeci">friend SpriteBatch</div><div class="ttdef"><b>Definition:</b> spritebatch.h:55</div></div>
 <div class="ttc" id="classyage_1_1SpriteBatch_html_ae3e74abbf722aba0197b64d8f61d928c"><div class="ttname"><a href="classyage_1_1SpriteBatch.html#ae3e74abbf722aba0197b64d8f61d928c">yage::SpriteBatch::createRenderBatches</a></div><div class="ttdeci">void createRenderBatches()</div><div class="ttdef"><b>Definition:</b> spritebatch.cpp:150</div></div>
-<div class="ttc" id="matrix_8h_html"><div class="ttname"><a href="matrix_8h.html">matrix.h</a></div></div>
+<div class="ttc" id="matrix_8h_html"><div class="ttname"><a href="matrix_8h.html">matrix.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="classyage_1_1Glyph_html_a2efbe49c2307601731416d615ac415c8"><div class="ttname"><a href="classyage_1_1Glyph.html#a2efbe49c2307601731416d615ac415c8">yage::Glyph::texture_</a></div><div class="ttdeci">GLuint texture_</div><div class="ttdef"><b>Definition:</b> spritebatch.h:33</div></div>
 <div class="ttc" id="classyage_1_1Glyph_html_a7b8b85a8044d751cfa29135690c23ff9"><div class="ttname"><a href="classyage_1_1Glyph.html#a7b8b85a8044d751cfa29135690c23ff9">yage::Glyph::depth</a></div><div class="ttdeci">float depth() const </div><div class="ttdef"><b>Definition:</b> spritebatch.h:46</div></div>
 <div class="ttc" id="classyage_1_1Glyph_html_a6240a88991e31b2fc8ed5dccfc362234"><div class="ttname"><a href="classyage_1_1Glyph.html#a6240a88991e31b2fc8ed5dccfc362234">yage::Glyph::bottom_right_</a></div><div class="ttdeci">Vertex bottom_right_</div><div class="ttdef"><b>Definition:</b> spritebatch.h:37</div></div>
@@ -264,7 +257,7 @@ $(document).ready(function(){initNavTree('spritebatch_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="spritebatch_8h.html">spritebatch.h</a></li>
-    <li class="footer">Generated on Sun Dec 17 2017 12:31:07 for YAGE by
+    <li class="footer">Generated on Wed Dec 20 2017 18:02:10 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
