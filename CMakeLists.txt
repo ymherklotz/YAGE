@@ -5,54 +5,49 @@ project(yage
   VERSION 0.1.3.0
   LANGUAGES CXX)
 
-if(NOT DEFINED UNIT_TESTS)
-  set(UNIT_TESTS 0)
-endif()
-
 # set standard
 set(CMAKE_CXX_STANDARD 14)
 
-# set the test sources
-set(YAGE_TEST_DIR ${PROJECT_SOURCE_DIR}/tests)
+# find other libraries from source
+set(EXTERNAL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external)
 
-# set binary directory
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+# GLFW3
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+add_subdirectory(${EXTERNAL_DIR}/glfw)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+# glad
+add_subdirectory(${EXTERNAL_DIR}/glad)
 
-# find libraries
-find_package(OpenGL REQUIRED)
+# yage
+file(GLOB YAGE_CORE_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/core/*.cpp)
+file(GLOB YAGE_MATH_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/math/*.cpp)
+file(GLOB YAGE_PHYSICS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/physics/*.cpp)
+file(GLOB YAGE_UTIL_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/util/*.cpp)
+file(GLOB YAGE_CURRENT_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/*.cpp)
 
-# include subdirectories
-include(${CMAKE_CURRENT_SOURCE_DIR}/lib/CMakeLists.txt)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
+set(YAGE_SOURCES
+  ${YAGE_CORE_SOURCES}
+  ${YAGE_PHYSICS_SOURCES}
+  ${YAGE_MATH_SOURCES}
+  ${YAGE_UTIL_SOURCES}
+  ${YAGE_CURRENT_SOURCES})
 
-if(UNIT_TESTS)
-  add_executable(simplegame tests/simplegame.cpp)
-  target_link_libraries(simplegame yage)
+add_library(yage
+  ${YAGE_SOURCES})
 
-  # enable tests
-  enable_testing()
-  set(SIMULATION_RUNS 1000)
+target_include_directories(yage
+  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}/yage
+  ${EXTERNAL_DIR}/glm
+  ${EXTERNAL_DIR}/rapidjson/include)
 
-  function(make_test test_name cycles)
-    add_executable(${test_name} ${YAGE_TEST_DIR}/${test_name}.cpp)
-    target_link_libraries(${test_name}
-      gtest_main
-      yage)
-    add_test(NAME ${test_name} COMMAND ${test_name} --gtest_repeat=${cycles} --gtest_break_on_failure)
-  endfunction(make_test)
+target_link_libraries(yage
+  glfw
+  ${GLFW_LIBRARIES}
+  glad)
 
-  make_test(yagetest 1)
-  make_test(matrixtest ${SIMULATION_RUNS})
-  make_test(particlebodytest 100)
-  make_test(windowtest ${SIMULATION_RUNS})
-  make_test(spritesheettest ${SIMULATION_RUNS})
-  make_test(vector3test ${SIMULATION_RUNS})
-  make_test(vector4test ${SIMULATION_RUNS})
-  make_test(logtest 1)
-  make_test(threadtest 1)
-  make_test(syncqueuetest 1)
-  make_test(activetest 1)
-  make_test(structtest ${SIMULATION_RUNS})
-endif()
+if(YAGE_BUILD_TESTS)
+  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)
+endif(YAGE_BUILD_TESTS)

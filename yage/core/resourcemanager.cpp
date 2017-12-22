@@ -7,6 +7,7 @@
  */
 
 #include "resourcemanager.h"
+#include "texture.h"
 
 namespace yage
 {

@@ -1,8 +1,8 @@
-#version 130
+#version 450
 
-in vec2 fragment_position;
-in vec4 fragment_colour;
-in vec2 fragment_uv;
+layout(location = 0) in vec2 fragment_position;
+layout(location = 1) in vec4 fragment_colour;
+layout(location = 2) in vec2 fragment_uv;
 
 out vec4 colour;
 

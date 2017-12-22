@@ -16,10 +16,13 @@ namespace yage
 void key_callback(GLFWwindow *window, int key, int scanCode, int action,
                   int mods)
 {
-    if (key == GLFW_KEY_E && action == GLFW_PRESS) {
+    if (key == GLFW_KEY_E && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
         glClearColor(0.5f, 0.f, 0.f, 1.f);
+    } else if (key == GLFW_KEY_Q &&
+               (action == GLFW_REPEAT || action == GLFW_PRESS)) {
+        glClearColor(0.f, 0.f, 0.5f, 1.f);
     } else {
-        glClearColor(0.f, 0.5f, 0.f, 1.f);
+        glClearColor(0.f, .5f, 0.f, 1.f);
     }
 }
 
@@ -37,8 +40,9 @@ void Window::create(std::string window_name, int width, int height)
         throw std::runtime_error("GLFW Initialisation failed");
     }
 
-    glfwWindowHint(GLFW_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_VERSION_MINOR, 5);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     window_ =
         glfwCreateWindow(width, height, window_name.c_str(), nullptr, nullptr);
@@ -97,6 +101,10 @@ bool Window::shouldClose()
 void Window::pollEvents() const
 {
     glfwPollEvents();
+
+    if (glfwGetKey(window_, GLFW_KEY_W) == GLFW_PRESS) {
+        glClearColor(0.f, 0.5f, 0.5f, 1.f);
+    }
 }
 
 } // namespace yage
