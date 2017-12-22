@@ -5,6 +5,9 @@ project(yage
   VERSION 0.1.3.0
   LANGUAGES CXX)
 
+option(YAGE_BUILD_TESTS "Build tests and ctest testing suite" ON)
+option(YAGE_BUILD_DOCS "Build documentation using Doxygen" ON)
+
 # set standard
 set(CMAKE_CXX_STANDARD 14)
 
@@ -52,6 +55,34 @@ target_link_libraries(yage
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/examples)
 
-if(YAGE_BUILD_TESTS)
+if(${YAGE_BUILD_TESTS})
+
   add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)
-endif(YAGE_BUILD_TESTS)
+
+endif(${YAGE_BUILD_TESTS})
+
+if(${YAGE_BUILD_DOCS})
+
+  find_package(Doxygen)
+
+  if(DOXYGEN_FOUND)
+
+    set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/docs/Doxyfile.in)
+    set(DOXYGEN_OUT ${CMAKE_CURRENT_SOURCE_DIR}/docs/Doxyfile)
+    
+    configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
+    message("-- Configured Doxygen files")
+
+    add_custom_target(doc_doxygen ALL
+      COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT} >/dev/null
+      WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+      COMMENT "Generating API documentation with Doxygen")
+
+  else(DOXYGEN_FOUND)
+
+    message("Doxygen needs to be installed to generate the documentation.")
+
+  endif(DOXYGEN_FOUND)
+    
+endif(${YAGE_BUILD_DOCS})
+  
