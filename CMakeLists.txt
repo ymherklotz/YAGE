@@ -11,6 +11,8 @@ set(CMAKE_CXX_STANDARD 14)
 # find other libraries from source
 set(EXTERNAL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/")
+
 # GLFW3
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
@@ -47,6 +49,8 @@ target_link_libraries(yage
   glfw
   ${GLFW_LIBRARIES}
   glad)
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/examples)
 
 if(YAGE_BUILD_TESTS)
   add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)

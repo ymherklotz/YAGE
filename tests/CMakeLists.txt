@@ -8,30 +8,27 @@ set(BUILD_GMOCK OFF CACHE BOOL "" FORCE)
 # the gtest and gtest_main targets.
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/googletest)
 
-add_executable(simplegame simplegame.cpp)
-target_link_libraries(simplegame yage)
-
 # enable tests
 enable_testing()
 set(SIMULATION_RUNS 1000)
 
 function(make_test test_name cycles)
-  add_executable(${test_name} ${test_name}.cpp)
-  target_link_libraries(${test_name}
+  add_executable("${test_name}test" ${test_name}/test.cpp)
+  target_link_libraries("${test_name}test"
     gtest_main
     yage)
-  add_test(NAME ${test_name} COMMAND ${test_name} --gtest_repeat=${cycles} --gtest_break_on_failure)
+  add_test(NAME ${test_name} COMMAND "${test_name}test" --gtest_repeat=${cycles} --gtest_break_on_failure)
 endfunction(make_test)
 
-make_test(yagetest 1)
-make_test(matrixtest ${SIMULATION_RUNS})
-make_test(particlebodytest 100)
-make_test(windowtest ${SIMULATION_RUNS})
-make_test(spritesheettest ${SIMULATION_RUNS})
-make_test(vector3test ${SIMULATION_RUNS})
-make_test(vector4test ${SIMULATION_RUNS})
-make_test(logtest 1)
-make_test(threadtest 1)
-make_test(syncqueuetest 1)
-make_test(activetest 1)
-make_test(structtest ${SIMULATION_RUNS})
+make_test(yage 1)
+make_test(matrix ${SIMULATION_RUNS})
+make_test(particlebody 100)
+make_test(window ${SIMULATION_RUNS})
+make_test(spritesheet ${SIMULATION_RUNS})
+make_test(vector3 ${SIMULATION_RUNS})
+make_test(vector4 ${SIMULATION_RUNS})
+make_test(log 1)
+make_test(thread 1)
+make_test(syncqueue 1)
+make_test(active 1)
+make_test(struct ${SIMULATION_RUNS})

@@ -14,14 +14,14 @@
 namespace yage
 {
 
-Camera2D::Camera2D(int screen_width, int screen_height)
+Camera::Camera(int screen_width, int screen_height)
     : position_(0.f, 0.f), camera_matrix_(1.f),
       ortho_matrix_(
           glm::ortho(0.f, (float)screen_width, 0.f, (float)screen_height))
 {
 }
 
-void Camera2D::update(GlslProgram &program)
+void Camera::update(GlslProgram &program)
 {
     if (update_matrix_) {
         glm::vec3 translate(-position_.x, -position_.y, 0.f);
@@ -37,7 +37,7 @@ void Camera2D::update(GlslProgram &program)
     glUniformMatrix4fv(matrix_location, 1, GL_FALSE, &(camera_matrix_[0][0]));
 }
 
-void Camera2D::move(const glm::vec2 &direction)
+void Camera::move(const glm::vec2 &direction)
 {
     position_ += direction;
     update_matrix_ = true;
