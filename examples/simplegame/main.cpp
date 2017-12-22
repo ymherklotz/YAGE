@@ -22,15 +22,16 @@ int main()
     window.create("Simple Game", 800, 640);
     SpriteBatch sp;
 
-    program.defaultSetup();
+    program.compileShadersFromFile("examples/simplegame/textureshader.vert",
+                                   "examples/simplegame/textureshader.frag");
+    program.linkShaders();
 
-    Texture fountain =
-        ResourceManager::getTexture("/home/yannherklotz/Github/YAGE/tests/"
-                                    "resources/dngn_blood_fountain.png");
+    Texture fountain = ResourceManager::getTexture(
+        "examples/simplegame/dngn_blood_fountain.png");
 
     cout << "texture: " << fountain.width << ", " << fountain.height << '\n';
 
-    Camera2D camera(800, 640);
+    Camera camera(800, 640);
 
     while (!window.shouldClose()) {
         window.clearBuffer();
@@ -43,13 +44,14 @@ int main()
         GLint texture_location = program.getUniformLocation("texture_sampler");
         glUniform1i(texture_location, 0);
 
-        sp.draw({0.f, 0.f, 64.f, 64.f}, {0, 0, 1, 1}, fountain.id, Colour(), 0);
+        sp.draw({0.f, 0.f, 64.f, 64.f}, {0, 0, 1, 1}, fountain.id,
+                Colour(255, 0, 255, 255), 0);
         sp.render();
 
         glBindTexture(GL_TEXTURE_2D, 0);
         program.unuse();
 
-        window.pollEvents();
         window.swapBuffer();
+        window.pollEvents();
     }
 }

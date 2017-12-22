@@ -36,13 +36,13 @@ For example, one can use the following commands
 ``` shell
 mkdir -p build
 cd build
-cmake -DENABLE_TESTING=1 ..
+cmake ..
 ```
 
-You can then run google test on YAGE.
+The test suite can then be run using
 
 ``` shell
-ctest
+cd build/tests && ctest
 ```
 
 License

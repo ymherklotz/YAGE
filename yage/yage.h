@@ -6,11 +6,6 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file Includes all the headers in the main yage project.
- *
- * This does not include
- */
-
 #ifndef YAGE_YAGE_H
 #define YAGE_YAGE_H
 

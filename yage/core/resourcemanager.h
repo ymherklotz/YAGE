@@ -17,13 +17,14 @@
 #ifndef RESOURCE_MANAGER_H
 #define RESOURCE_MANAGER_H
 
-#include "texture.h"
 #include "texturecache.h"
 
 #include <string>
 
 namespace yage
 {
+
+class Texture;
 
 class ResourceManager
 {

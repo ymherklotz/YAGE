@@ -21,7 +21,6 @@ matrix:
             - g++-5
             - libegl1-mesa-dev
             - libgles2-mesa-dev
-            - libglm-dev
             - xorg-dev
             - libglu1-mesa-dev
             - doxygen
@@ -38,7 +37,6 @@ matrix:
             - g++-6
             - libegl1-mesa-dev
             - libgles2-mesa-dev
-            - libglm-dev
             - xorg-dev
             - libglu1-mesa-dev
             - doxygen
@@ -55,7 +53,6 @@ matrix:
             - g++-7
             - libegl1-mesa-dev
             - libgles2-mesa-dev
-            - libglm-dev
             - xorg-dev
             - libglu1-mesa-dev
             - doxygen
@@ -63,7 +60,7 @@ matrix:
             - ubuntu-toolchain-r-test
       compiler: g++-7
       env:
-        - "MATRIX_EVAL=\"CC=gcc-7 && CXX=g++-7\""
+        - "MATRIX_EVAL=\"CC=gcc-7 && CXX=g++-7 && BUILD_DOCS=1\""
       os: linux
     -
       addons:
@@ -73,7 +70,6 @@ matrix:
             - clang-4.0
             - libegl1-mesa-dev
             - libgles2-mesa-dev
-            - libglm-dev
             - xorg-dev
             - libglu1-mesa-dev
             - doxygen
@@ -92,7 +88,6 @@ matrix:
             - clang-5.0
             - libegl1-mesa-dev
             - libgles2-mesa-dev
-            - libglm-dev
             - xorg-dev
             - libglu1-mesa-dev
             - doxygen
@@ -106,13 +101,6 @@ matrix:
 notifications:
   email: false
 script:
-  - "$CC --version"
-  - "$CXX --version"
-  - "cd $TRAVIS_BUILD_DIR"
-  - "mkdir -p build"
-  - "cd build"
-  - "cmake -DUNIT_TESTS=ON .."
-  - "make -j9"
-  - ctest
-  - "cd .. && ./scripts/update_docs"
-  
+  - "./scripts/travis_build"
+
+

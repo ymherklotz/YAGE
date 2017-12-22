@@ -4,6 +4,7 @@ IndentWidth: 4
 ---
 Language: Cpp
 AccessModifierOffset: -4
+AlignConsecutiveAssignments: true
 AlignTrailingComments: true
 AllowShortFunctionsOnASingleLine: Inline
 AlwaysBreakTemplateDeclarations: true

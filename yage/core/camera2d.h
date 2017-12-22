@@ -17,7 +17,7 @@ namespace yage
 
 class GlslProgram;
 
-class Camera2D
+class Camera
 {
 private:
     bool update_matrix_ = true;
@@ -27,7 +27,7 @@ private:
     glm::mat4 ortho_matrix_;
 
 public:
-    Camera2D(int screen_width = 1280, int screen_height = 720);
+    Camera(int screen_width = 1280, int screen_height = 720);
 
     void update(GlslProgram &program);
     void move(const glm::vec2 &direction);

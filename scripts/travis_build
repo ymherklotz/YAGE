@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# check compiler versions
+$CC --version
+$CXX --version
+
+# go to correct directory
+cd $TRAVIS_BUILD_DIR
+
+# start building
+mkdir -p build
+cd build
+cmake ..
+make
+cd tests
+ctest
+cd ../..
+
+# update docs if we are on the master branch
+if [[ $TRAVIS_BRANCH = "master" && $BUILD_DOCS -eq 1 ]]; then
+    if [[ -d "$TRAVIS_BUILD_DIR/build/doc_doxygen/html" ]]; then
+        git clone -b gh-pages "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git" YAGE_gh-pages
+        cd YAGE_gh-pages
+        git config user.name "TravisBot"
+        git config user.email ""
+        rm -rf *
+        cp -r ../build/doc_doxygen/html/* .
+        git add -A .
+        git commit -m "[Travis] Rebuilding documentation"
+        git push -q origin gh-pages
+        cd ..
+    fi
+fi

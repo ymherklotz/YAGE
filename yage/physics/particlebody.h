@@ -10,7 +10,6 @@
 #define YAGE_PHYSICS_PARTICLE_BODY_H
 
 #include "body.h"
-
 #include <math/matrix.h>
 
 namespace yage

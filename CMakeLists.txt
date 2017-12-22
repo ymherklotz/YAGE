@@ -5,54 +5,84 @@ project(yage
   VERSION 0.1.3.0
   LANGUAGES CXX)
 
-if(NOT DEFINED UNIT_TESTS)
-  set(UNIT_TESTS 0)
-endif()
+option(YAGE_BUILD_TESTS "Build tests and ctest testing suite" ON)
+option(YAGE_BUILD_DOCS "Build documentation using Doxygen" ON)
 
 # set standard
 set(CMAKE_CXX_STANDARD 14)
 
-# set the test sources
-set(YAGE_TEST_DIR ${PROJECT_SOURCE_DIR}/tests)
+# find other libraries from source
+set(EXTERNAL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external)
 
-# set binary directory
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/")
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+# GLFW3
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+add_subdirectory(${EXTERNAL_DIR}/glfw)
 
-# find libraries
-find_package(OpenGL REQUIRED)
+# glad
+add_subdirectory(${EXTERNAL_DIR}/glad)
 
-# include subdirectories
-include(${CMAKE_CURRENT_SOURCE_DIR}/lib/CMakeLists.txt)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yage)
+# yage
+file(GLOB YAGE_CORE_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/core/*.cpp)
+file(GLOB YAGE_MATH_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/math/*.cpp)
+file(GLOB YAGE_PHYSICS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/physics/*.cpp)
+file(GLOB YAGE_UTIL_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/util/*.cpp)
+file(GLOB YAGE_CURRENT_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/*.cpp)
 
-if(UNIT_TESTS)
-  add_executable(simplegame tests/simplegame.cpp)
-  target_link_libraries(simplegame yage)
+set(YAGE_SOURCES
+  ${YAGE_CORE_SOURCES}
+  ${YAGE_PHYSICS_SOURCES}
+  ${YAGE_MATH_SOURCES}
+  ${YAGE_UTIL_SOURCES}
+  ${YAGE_CURRENT_SOURCES})
 
-  # enable tests
-  enable_testing()
-  set(SIMULATION_RUNS 1000)
+add_library(yage
+  ${YAGE_SOURCES})
 
-  function(make_test test_name cycles)
-    add_executable(${test_name} ${YAGE_TEST_DIR}/${test_name}.cpp)
-    target_link_libraries(${test_name}
-      gtest_main
-      yage)
-    add_test(NAME ${test_name} COMMAND ${test_name} --gtest_repeat=${cycles} --gtest_break_on_failure)
-  endfunction(make_test)
+target_include_directories(yage
+  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}/yage
+  ${EXTERNAL_DIR}/glm
+  ${EXTERNAL_DIR}/rapidjson/include)
 
-  make_test(yagetest 1)
-  make_test(matrixtest ${SIMULATION_RUNS})
-  make_test(particlebodytest 100)
-  make_test(windowtest ${SIMULATION_RUNS})
-  make_test(spritesheettest ${SIMULATION_RUNS})
-  make_test(vector3test ${SIMULATION_RUNS})
-  make_test(vector4test ${SIMULATION_RUNS})
-  make_test(logtest 1)
-  make_test(threadtest 1)
-  make_test(syncqueuetest 1)
-  make_test(activetest 1)
-  make_test(structtest ${SIMULATION_RUNS})
-endif()
+target_link_libraries(yage
+  glfw
+  ${GLFW_LIBRARIES}
+  glad)
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/examples)
+
+if(${YAGE_BUILD_TESTS})
+
+  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)
+
+endif(${YAGE_BUILD_TESTS})
+
+if(${YAGE_BUILD_DOCS})
+
+  find_package(Doxygen)
+
+  if(DOXYGEN_FOUND)
+
+    set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/docs/Doxyfile.in)
+    set(DOXYGEN_OUT ${CMAKE_CURRENT_SOURCE_DIR}/docs/Doxyfile)
+    
+    configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
+    message("-- Configured Doxygen files")
+
+    add_custom_target(doc_doxygen ALL
+      COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT} >/dev/null
+      WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+      COMMENT "Generating API documentation with Doxygen")
+
+  else(DOXYGEN_FOUND)
+
+    message("Doxygen needs to be installed to generate the documentation.")
+
+  endif(DOXYGEN_FOUND)
+    
+endif(${YAGE_BUILD_DOCS})
+  
