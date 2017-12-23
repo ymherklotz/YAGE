@@ -5,7 +5,6 @@ var namespaceyage =
     [ "Camera", "classyage_1_1Camera.html", "classyage_1_1Camera" ],
     [ "GlslProgram", "classyage_1_1GlslProgram.html", "classyage_1_1GlslProgram" ],
     [ "ImageLoader", "classyage_1_1ImageLoader.html", "classyage_1_1ImageLoader" ],
-    [ "InputManager", "classyage_1_1InputManager.html", "classyage_1_1InputManager" ],
     [ "IoManager", "classyage_1_1IoManager.html", "classyage_1_1IoManager" ],
     [ "Logger", "classyage_1_1Logger.html", "classyage_1_1Logger" ],
     [ "LogMessage", "classyage_1_1LogMessage.html", "classyage_1_1LogMessage" ],

@@ -19,7 +19,6 @@ var hierarchy =
     [ "yage::GlslProgram", "classyage_1_1GlslProgram.html", null ],
     [ "yage::Glyph", "classyage_1_1Glyph.html", null ],
     [ "yage::ImageLoader", "classyage_1_1ImageLoader.html", null ],
-    [ "yage::InputManager", "classyage_1_1InputManager.html", null ],
     [ "yage::IoManager", "classyage_1_1IoManager.html", null ],
     [ "yage::Logger", "classyage_1_1Logger.html", null ],
     [ "LogLevel", "classLogLevel.html", null ],

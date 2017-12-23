@@ -16,7 +16,7 @@ var searchData=
   ['slash',['SLASH',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a646da671ca01bb5d84dbb5fb2238dc8e',1,'yage']]],
   ['sortglyphs',['sortGlyphs',['../classyage_1_1SpriteBatch.html#adea6570f196b203a4d6e07ad66738c9a',1,'yage::SpriteBatch']]],
   ['space',['SPACE',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a6506ae39fdca9845e3a6de3865183e57',1,'yage']]],
-  ['sprite',['sprite',['../classyage_1_1SpriteSheet.html#a2734c2e7b8bdfc9090d240c070ee55c0',1,'yage::SpriteSheet::sprite()'],['../classyage_1_1Sprite.html#a113bfddfa62846a1d8391d1b86de7987',1,'yage::Sprite::Sprite()=default'],['../classyage_1_1Sprite.html#aa5a7958e17f1d042226b91fb1829642e',1,'yage::Sprite::Sprite(const Sprite &amp;)=delete'],['../classyage_1_1Sprite.html#a33789b3e37bfcb84ed89ec69f47817a1',1,'yage::Sprite::Sprite(Sprite &amp;&amp;)=delete']]],
+  ['sprite',['Sprite',['../classyage_1_1Sprite.html#a113bfddfa62846a1d8391d1b86de7987',1,'yage::Sprite::Sprite()=default'],['../classyage_1_1Sprite.html#aa5a7958e17f1d042226b91fb1829642e',1,'yage::Sprite::Sprite(const Sprite &amp;)=delete'],['../classyage_1_1Sprite.html#a33789b3e37bfcb84ed89ec69f47817a1',1,'yage::Sprite::Sprite(Sprite &amp;&amp;)=delete'],['../classyage_1_1SpriteSheet.html#a2734c2e7b8bdfc9090d240c070ee55c0',1,'yage::SpriteSheet::sprite()']]],
   ['sprite',['Sprite',['../classyage_1_1Sprite.html',1,'yage']]],
   ['sprite_2ecpp',['sprite.cpp',['../sprite_8cpp.html',1,'']]],
   ['sprite_2eh',['sprite.h',['../sprite_8h.html',1,'']]],

@@ -12,7 +12,7 @@ var indexSectionsWithContent =
   2: "y",
   3: "abcgilmprstvwy",
   4: "abcdefghiklmnopqrstuvwxyz~",
-  5: "abcdfghiklmnopqrstuvwxyz",
+  5: "abcdfghilmnopqrstuvwxyz",
   6: "csv",
   7: "kw",
   8: "abcdefghijklmnopqrstuvwxyz",

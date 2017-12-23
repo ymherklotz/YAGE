@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['queue_5f',['queue_',['../classyage_1_1Active.html#a8c957af55704f6f30734054336f1a6d3',1,'yage::Active::queue_()'],['../classyage_1_1SyncQueue.html#ae554585c8b44da0db79a0767c1b90968',1,'yage::SyncQueue::queue_()']]]
+  ['r',['r',['../structyage_1_1Colour.html#a572fe7933c59ebfa6720088cd33dad99',1,'yage::Colour']]],
+  ['render_5fbatches_5f',['render_batches_',['../classyage_1_1SpriteBatch.html#abf057ffe5fd9b7c35256dad147391008',1,'yage::SpriteBatch']]],
+  ['running_5f',['running_',['../classyage_1_1Active.html#ac32d54302bf084f0f7422cce5ee617db',1,'yage::Active']]]
 ];

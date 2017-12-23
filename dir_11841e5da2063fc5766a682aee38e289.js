@@ -1,7 +1,7 @@
 var dir_11841e5da2063fc5766a682aee38e289 =
 [
-    [ "camera2d.cpp", "camera2d_8cpp.html", null ],
-    [ "camera2d.h", "camera2d_8h.html", [
+    [ "camera.cpp", "camera_8cpp.html", null ],
+    [ "camera.h", "camera_8h.html", [
       [ "Camera", "classyage_1_1Camera.html", "classyage_1_1Camera" ]
     ] ],
     [ "glslprogram.cpp", "glslprogram_8cpp.html", null ],
@@ -13,10 +13,6 @@ var dir_11841e5da2063fc5766a682aee38e289 =
       [ "ImageLoader", "classyage_1_1ImageLoader.html", "classyage_1_1ImageLoader" ]
     ] ],
     [ "input.h", "input_8h.html", "input_8h" ],
-    [ "inputmanager.cpp", "inputmanager_8cpp.html", null ],
-    [ "inputmanager.h", "inputmanager_8h.html", [
-      [ "InputManager", "classyage_1_1InputManager.html", "classyage_1_1InputManager" ]
-    ] ],
     [ "iomanager.cpp", "iomanager_8cpp.html", null ],
     [ "iomanager.h", "iomanager_8h.html", [
       [ "IoManager", "classyage_1_1IoManager.html", "classyage_1_1IoManager" ]
