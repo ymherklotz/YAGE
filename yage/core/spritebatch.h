@@ -82,7 +82,7 @@ private:
 public:
     SpriteBatch();
     SpriteBatch(const SpriteBatch &) = delete;
-    SpriteBatch(SpriteBatch &&) = delete;
+    SpriteBatch(SpriteBatch &&)      = delete;
     ~SpriteBatch();
 
     SpriteBatch &operator=(const SpriteBatch &) = delete;

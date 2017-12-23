@@ -9,10 +9,10 @@
 #ifndef YAGE_YAGE_H
 #define YAGE_YAGE_H
 
-#include "core/camera2d.h"
+#include "core/camera.h"
 #include "core/glslprogram.h"
 #include "core/imageloader.h"
-#include "core/inputmanager.h"
+#include "core/input.h"
 #include "core/iomanager.h"
 #include "core/logger.h"
 #include "core/logmessage.h"

@@ -19,9 +19,9 @@ namespace yage
 class GlslProgram
 {
 public:
-    GlslProgram() = default;
+    GlslProgram()                    = default;
     GlslProgram(const GlslProgram &) = delete;
-    GlslProgram(GlslProgram &&) = delete;
+    GlslProgram(GlslProgram &&)      = delete;
     ~GlslProgram();
 
     GlslProgram &operator=(const GlslProgram &) = delete;
@@ -42,10 +42,10 @@ public:
 
 private:
     /// compiled shader program id
-    GLuint program_id_ = 0;
-    GLuint vertex_shader_id_ = 0;
+    GLuint program_id_         = 0;
+    GLuint vertex_shader_id_   = 0;
     GLuint fragment_shader_id_ = 0;
-    int attribute_index_ = 0;
+    int attribute_index_       = 0;
 
     /// compiles one shader
     void compileShader(GLuint shader, const std::string &shaderContent);

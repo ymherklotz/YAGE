@@ -78,8 +78,8 @@ public:
     {
         using namespace std::chrono;
 
-        auto now = system_clock::now();
-        auto time_t = system_clock::to_time_t(now);
+        auto now        = system_clock::now();
+        auto time_t     = system_clock::to_time_t(now);
         auto local_time = std::localtime(&time_t);
 
         (*fileHandle_) << std::put_time(local_time, "[%H:%M:%S] ") << msg

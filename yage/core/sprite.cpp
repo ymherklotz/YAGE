@@ -25,10 +25,10 @@ Sprite::~Sprite()
 void Sprite::init(float x, float y, float width, float height,
                   const std::string &texture_path)
 {
-    x_ = x;
-    y_ = y;
-    width_ = width;
-    height_ = height;
+    x_       = x;
+    y_       = y;
+    width_   = width;
+    height_  = height;
     texture_ = ResourceManager::getTexture(texture_path);
 
     if (vbo_id_ == 0) {

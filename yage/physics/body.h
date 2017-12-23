@@ -42,7 +42,7 @@ protected:
 public:
     // apply force to the object and update the velocity
     virtual void applyForce(const Vector2d &force) = 0;
-    virtual void update() = 0;
+    virtual void update()                          = 0;
 
     double xPosition() const;
     double yPosition() const;
