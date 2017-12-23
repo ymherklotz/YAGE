@@ -17,6 +17,11 @@ ctest
 cd ../..
 
 # update docs if we are on the master branch
+echo "TRAVIS_BRANCH = " $TRAVIS_BRANCH
+echo "BUILD_DOCS    = " $BUILD_DOCS
+echo "CC            = " $CC
+echo "CXX           = " $CXX
+
 if [[ $TRAVIS_BRANCH = "master" && $BUILD_DOCS -eq 1 ]]; then
     if [[ -d "build/doc_doxygen/html" ]]; then
         git clone -b gh-pages "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git" YAGE_gh-pages
@@ -24,10 +29,9 @@ if [[ $TRAVIS_BRANCH = "master" && $BUILD_DOCS -eq 1 ]]; then
         git config user.name "TravisBot"
         git config user.email ""
         rm -rf *
-        cp -r build/doc_doxygen/html/* .
+        cp -r ../build/doc_doxygen/html/* .
         git add -A .
         git commit -m "[Travis] Rebuilding documentation"
         git push -q origin gh-pages
-        cd ..
     fi
 fi
