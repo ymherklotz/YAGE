@@ -17,6 +17,11 @@ ctest
 cd ../..
 
 # update docs if we are on the master branch
+echo "TRAVIS_BRANCH = " $TRAVIS_BRANCH
+echo "BUILD_DOCS = " $BUILD_DOCS
+ls build
+ls build/doc_doxygen
+ls build/doc_doxygen/html
 if [[ $TRAVIS_BRANCH = "master" && $BUILD_DOCS -eq 1 ]]; then
     if [[ -d "build/doc_doxygen/html" ]]; then
         git clone -b gh-pages "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git" YAGE_gh-pages
