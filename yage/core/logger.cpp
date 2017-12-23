@@ -35,7 +35,7 @@ void Logger::flush(const LogMessage *msg)
     std::string asString(msg->buffer_.str());
 
     auto &&sinks = sinks_;
-    auto &&meta = msg->meta_;
+    auto &&meta  = msg->meta_;
 
     active_->send([=] {
         for (auto &&sink : sinks) {

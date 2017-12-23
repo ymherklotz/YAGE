@@ -23,8 +23,8 @@ namespace yage
 
 // window flags that can change it's appearance
 enum WindowFlags : unsigned {
-    SHOWN = 0x1,
-    HIDDEN = 0x2,
+    SHOWN      = 0x1,
+    HIDDEN     = 0x2,
     FULLSCREEN = 0x4,
     BORDERLESS = 0x8,
 };
@@ -39,7 +39,7 @@ private:
 public:
     Window();
     Window(const Window &) = delete;
-    Window(Window &&) = delete;
+    Window(Window &&)      = delete;
     /// destroys the window handle
     ~Window();
 

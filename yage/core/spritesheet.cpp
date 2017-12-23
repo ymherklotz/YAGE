@@ -55,7 +55,7 @@ SpriteMap SpriteSheet::parseJson(int &width, int &height,
     Document jsonAtlas;
     jsonAtlas.Parse(jsonContent.c_str());
 
-    width = jsonAtlas["width"].GetInt();
+    width  = jsonAtlas["width"].GetInt();
     height = jsonAtlas["height"].GetInt();
 
     for (auto &texture : jsonAtlas["sprites"].GetObject()) {

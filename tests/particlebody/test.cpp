@@ -1,5 +1,5 @@
 /** ---------------------------------------------------------------------------
- * @file: particlebodytest.cpp
+ * @file: test.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -26,7 +26,7 @@ double gravityAcceleration(int iterations)
 
 TEST(ParticleBody, Gravity)
 {
-    int randomItr = rand() % 10;
+    int randomItr        = rand() % 10;
     double idealPosition = 0.5 * -9.81 * std::pow(randomItr, 2);
 
     ASSERT_GE(idealPosition * 0.95, gravityAcceleration(randomItr));

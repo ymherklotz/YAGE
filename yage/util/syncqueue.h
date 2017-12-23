@@ -20,7 +20,7 @@ template <typename T>
 class SyncQueue
 {
 public:
-    SyncQueue() = default;
+    SyncQueue()                  = default;
     SyncQueue(const SyncQueue &) = delete;
     SyncQueue &operator=(const SyncQueue &) = delete;
 

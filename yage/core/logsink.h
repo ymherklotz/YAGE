@@ -39,7 +39,7 @@ private:
     struct Concept {
         virtual ~Concept() = default;
 
-        virtual Concept *clone() const = 0;
+        virtual Concept *clone() const                   = 0;
         virtual void write(const LogMessage::Meta &meta,
                            const std::string &msg) const = 0;
     };

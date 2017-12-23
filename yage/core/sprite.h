@@ -31,9 +31,9 @@ private:
     Texture texture_;
 
 public:
-    Sprite() = default;
+    Sprite()               = default;
     Sprite(const Sprite &) = delete;
-    Sprite(Sprite &&) = delete;
+    Sprite(Sprite &&)      = delete;
     ~Sprite();
 
     Sprite &operator=(const Sprite &) = delete;
