@@ -81,3 +81,4 @@ notifications:
   email: false
 script:
   - ./scripts/travis_build
+sudo: required
