@@ -60,7 +60,8 @@ matrix:
             - ubuntu-toolchain-r-test
       compiler: g++-7
       env:
-        - "MATRIX_EVAL=\"CC=gcc-7 && CXX=g++-7 && BUILD_DOCS=1\""
+        - "MATRIX_EVAL=\"CC=gcc-7 && CXX=g++-7\""
+        - "BUILD_DOCS=1"
       os: linux
     -
       addons:
