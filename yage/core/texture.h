@@ -6,8 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef GL_TEXTURE_H
-#define GL_TEXTURE_H
+#ifndef YAGE_CORE_TEXTURE_H
+#define YAGE_CORE_TEXTURE_H
 
 #include <glad/glad.h>
 
