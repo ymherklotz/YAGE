@@ -142,7 +142,7 @@ void GlslProgram::linkShaders()
 
         std::string error_log_str((const char *)&error_log[0]);
 
-        throw std::runtime_error("Could not link program : " + error_log_str);
+        throw std::runtime_error("Could not link program: " + error_log_str);
     }
 
     // detach shaders after successful link
