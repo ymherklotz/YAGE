@@ -1,0 +1,6 @@
+#ifndef YAGE_RENDER_ELLIPSE_H
+#define YAGE_RENDER_ELLIPSE_H
+
+
+
+#endif

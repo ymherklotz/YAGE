@@ -6,17 +6,14 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file
- */
-
 #ifndef YAGE_SPRITE_BATCH_H
 #define YAGE_SPRITE_BATCH_H
 
+#include "batch.h"
 #include "vertex.h"
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
-#include <yage/math/matrix.h>
 
 #include <vector>
 
@@ -50,24 +47,8 @@ public:
     Vertex bottom_left() const { return bottom_left_; }
 };
 
-class RenderBatch
-{
-    friend SpriteBatch;
 
-private:
-    GLsizei num_vertices_;
-    GLint offset_;
-    GLuint texture_;
-
-public:
-    RenderBatch(GLint offset, GLsizei num_vertices, GLuint texture);
-
-    GLint offset() const { return offset_; }
-    GLsizei num_vertices() const { return num_vertices_; }
-    GLuint texture() const { return texture_; }
-};
-
-class SpriteBatch
+class SpriteBatch : public Batch
 {
 public:
     static const int NUM_VERTICES = 6;
@@ -93,9 +74,8 @@ public:
     void end();
 
     // adds a sprite to the sprite batch to be rendered later
-    void draw(const yage::Vector4f &destination_rect,
-              const yage::Vector4f &uv_rect, GLuint texture,
-              const Colour &colour, float depth);
+    void draw(const glm::vec4 &destination_rect, const glm::vec4 &uv_rect,
+              GLuint texture, const Colour &colour, float depth);
     // render the batch
     void render();
 

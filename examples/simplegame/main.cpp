@@ -22,8 +22,9 @@ int main()
     window.create("Simple Game", 800, 640);
     SpriteBatch sp;
 
-    textureProgram.compileShadersFromFile("examples/resources/textureshader.vert",
-                                   "examples/resources/textureshader.frag");
+    textureProgram.compileShadersFromFile(
+        "examples/resources/textureshader.vert",
+        "examples/resources/textureshader.frag");
     textureProgram.linkShaders();
 
     Texture fountain = ResourceManager::getTexture(
@@ -52,7 +53,8 @@ int main()
 
         glActiveTexture(GL_TEXTURE0);
 
-        GLint texture_location = textureProgram.getUniformLocation("texture_sampler");
+        GLint texture_location =
+            textureProgram.getUniformLocation("texture_sampler");
         glUniform1i(texture_location, 0);
 
         sp.draw({0.f, 0.f, 64.f, 64.f}, {0, 0, 1, 1}, texture.id,
