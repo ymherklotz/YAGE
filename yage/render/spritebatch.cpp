@@ -9,6 +9,7 @@
 #include "spritebatch.h"
 
 #include <algorithm>
+#include <iostream>
 #include <stdexcept>
 
 namespace yage
@@ -88,10 +89,9 @@ void SpriteBatch::draw(const glm::vec4 &destination_rect,
 void SpriteBatch::render()
 {
     // sort and create render batches
-    glBindVertexArray(vao_);
     sortGlyphs();
     createRenderBatches();
-
+    glBindVertexArray(vao_);
     for (auto &&batch : render_batches_) {
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, batch.texture);
@@ -155,6 +155,7 @@ void SpriteBatch::createRenderBatches()
                                  glyph_ptrs_[i - 1]->texture()))) {
             render_batches_.emplace_back(i * NUM_VERTICES, NUM_VERTICES,
                                          glyph_ptrs_[i]->texture());
+
         } else {
             render_batches_.back().num_vertices += NUM_VERTICES;
         }

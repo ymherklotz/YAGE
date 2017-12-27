@@ -9,7 +9,7 @@ struct RenderBatch {
     GLuint texture;
 
     RenderBatch(GLint offset_i, GLsizei num_vertices_i, GLuint texture_i)
-        : offset(offset_i), num_vertices(num_vertices_i), texture(texture_i = 0)
+        : offset(offset_i), num_vertices(num_vertices_i), texture(texture_i)
     {
     }
 };
