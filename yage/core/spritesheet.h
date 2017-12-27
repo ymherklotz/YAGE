@@ -15,7 +15,7 @@
  * This could be more efficient when copying the texture out of the
  * spritesheet.
  */
-#include "texture.h"
+#include "../data/texture.h"
 
 #include <rapidjson/reader.h>
 

@@ -8,6 +8,7 @@ namespace yage
 
 class Shape : public Drawable
 {
+public:
     virtual void render() const;
 };
 

@@ -17,15 +17,11 @@ using namespace yage;
 int main()
 {
     Window window;
-    GlslProgram textureProgram;
-
     window.create("Simple Game", 800, 640);
-    SpriteBatch sp;
 
-    textureProgram.compileShadersFromFile(
-        "examples/resources/textureshader.vert",
-        "examples/resources/textureshader.frag");
-    textureProgram.linkShaders();
+    Shader textureProgram("examples/resources/textureshader.vert",
+                          "examples/resources/textureshader.frag");
+    SpriteBatch sp;
 
     Texture fountain = ResourceManager::getTexture(
         "examples/resources/dngn_blood_fountain.png");
@@ -35,6 +31,9 @@ int main()
     cout << "texture: " << fountain.width << ", " << fountain.height << '\n';
 
     Camera camera(800, 640);
+
+    textureProgram.use();
+    textureProgram.setUniform("texture_sampler", 0);
 
     while (!window.shouldClose()) {
         window.clearBuffer();
@@ -48,21 +47,11 @@ int main()
             texture = breast_plate;
         }
 
-        textureProgram.use();
         camera.update(textureProgram);
 
-        glActiveTexture(GL_TEXTURE0);
-
-        GLint texture_location =
-            textureProgram.getUniformLocation("texture_sampler");
-        glUniform1i(texture_location, 0);
-
-        sp.draw({0.f, 0.f, 64.f, 64.f}, {0, 0, 1, 1}, texture.id,
+        sp.draw({0.f, 0.f, 64.f, 64.f}, {0, 0, 1, 1}, fountain.id,
                 Colour(255, 0, 255, 255), 0);
         sp.render();
-
-        glBindTexture(GL_TEXTURE_2D, 0);
-        textureProgram.unuse();
 
         window.swapBuffer();
     }

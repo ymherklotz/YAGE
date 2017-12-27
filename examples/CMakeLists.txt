@@ -4,7 +4,7 @@ function(make_example name)
   add_executable(${name} ${SOURCES})
   target_link_libraries(${name} yage)
 
-endfunction(make_test)
+endfunction(make_example)
 
 make_example(simplegame)
 make_example(shooter)

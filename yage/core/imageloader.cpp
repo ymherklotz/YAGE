@@ -7,7 +7,7 @@
  */
 
 #include "imageloader.h"
-#include "texture.h"
+#include "../data/texture.h"
 
 #include <glad/glad.h>
 #include <yage/core/iomanager.h>

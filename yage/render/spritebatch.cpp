@@ -25,11 +25,6 @@ Glyph::Glyph(GLuint texture, float depth, const Vertex &top_left,
 {
 }
 
-RenderBatch::RenderBatch(GLint offset, GLsizei num_vertices, GLuint texture)
-    : num_vertices_(num_vertices), offset_(offset), texture_(texture)
-{
-}
-
 SpriteBatch::SpriteBatch()
 {
     createVertexArray();
@@ -42,7 +37,7 @@ SpriteBatch::~SpriteBatch()
     }
 
     if (vbo_ != 0) {
-        glDeleteVertexArrays(1, &vbo_);
+        glDeleteBuffers(1, &vbo_);
     }
 }
 
@@ -59,8 +54,8 @@ void SpriteBatch::end()
     createRenderBatches();
 }
 
-void SpriteBatch::draw(const yage::Vector4f &destination_rect,
-                       const yage::Vector4f &uv_rect, GLuint texture,
+void SpriteBatch::draw(const glm::vec4 &destination_rect,
+                       const glm::vec4 &uv_rect, GLuint texture,
                        const Colour &colour, float depth)
 {
     Vertex top_left, top_right, bottom_right, bottom_left;
@@ -93,15 +88,15 @@ void SpriteBatch::draw(const yage::Vector4f &destination_rect,
 void SpriteBatch::render()
 {
     // sort and create render batches
+    glBindVertexArray(vao_);
     sortGlyphs();
     createRenderBatches();
 
-    glBindVertexArray(vao_);
     for (auto &&batch : render_batches_) {
-        glBindTexture(GL_TEXTURE_2D, batch.texture());
-        glDrawArrays(GL_TRIANGLES, batch.offset(), batch.num_vertices());
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, batch.texture);
+        glDrawArrays(GL_TRIANGLES, batch.offset, batch.num_vertices);
     }
-    glBindVertexArray(0);
 
     // clear and reset the vectors
     glyphs_.clear();
@@ -129,11 +124,6 @@ void SpriteBatch::createVertexArray()
     // bind vertex buffer object
     glBindBuffer(GL_ARRAY_BUFFER, vbo_);
 
-    // enable vertex attribute arrays
-    glEnableVertexAttribArray(0);
-    glEnableVertexAttribArray(1);
-    glEnableVertexAttribArray(2);
-
     // set the vertex attribute pointers
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
                           (void *)offsetof(Vertex, position));
@@ -141,7 +131,11 @@ void SpriteBatch::createVertexArray()
                           (void *)offsetof(Vertex, colour));
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
                           (void *)offsetof(Vertex, uv));
-    glDrawArrays(GL_TRIANGLES, 0, 6);
+
+    // enable vertex attribute arrays
+    glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(1);
+    glEnableVertexAttribArray(2);
 
     // unbind vertex array object
     glBindVertexArray(0);
@@ -162,7 +156,7 @@ void SpriteBatch::createRenderBatches()
             render_batches_.emplace_back(i * NUM_VERTICES, NUM_VERTICES,
                                          glyph_ptrs_[i]->texture());
         } else {
-            render_batches_.back().num_vertices_ += NUM_VERTICES;
+            render_batches_.back().num_vertices += NUM_VERTICES;
         }
 
         vertices.push_back(glyph_ptrs_[i]->bottom_left());

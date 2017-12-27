@@ -3,11 +3,19 @@
 
 #include "shape.h"
 
-namespace yage {
+#include <glm/glm.hpp>
 
-class Rectangle
+namespace yage
 {
+
+class Rectangle : public Shape
+{
+public:
+    Rectangle(glm::vec4 position);
     virtual void render() const;
+
+private:
+    glm::vec4 position_;
 };
 
 } // namespace yage

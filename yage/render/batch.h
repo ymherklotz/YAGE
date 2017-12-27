@@ -28,10 +28,7 @@ public:
     virtual bool init();
     virtual void begin();
     virtual void end();
-    virtual void draw();
     virtual void render();
-
-protected:
 };
 
 } // namespace yage

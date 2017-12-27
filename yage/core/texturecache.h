@@ -9,7 +9,7 @@
 #ifndef TEXTURE_CACHE_H
 #define TEXTURE_CACHE_H
 
-#include "texture.h"
+#include "../data/texture.h"
 
 #include <unordered_map>
 

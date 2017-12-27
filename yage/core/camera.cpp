@@ -7,7 +7,7 @@
  */
 
 #include "camera.h"
-#include "glslprogram.h"
+#include "../render/shader.h"
 
 #include <glad/glad.h>
 #include <glm/gtc/matrix_transform.hpp>
@@ -22,7 +22,7 @@ Camera::Camera(int screen_width, int screen_height)
 {
 }
 
-void Camera::update(GlslProgram &program)
+void Camera::update(Shader &program)
 {
     if (update_matrix_) {
         glm::vec3 translate(-position_.x, -position_.y, 0.f);
@@ -34,8 +34,7 @@ void Camera::update(GlslProgram &program)
         update_matrix_ = false;
     }
 
-    GLint matrix_location = program.getUniformLocation("P");
-    glUniformMatrix4fv(matrix_location, 1, GL_FALSE, &(camera_matrix_[0][0]));
+    program.setUniform("P", camera_matrix_);
 }
 
 void Camera::move(const glm::vec2 &direction)

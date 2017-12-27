@@ -10,7 +10,8 @@
 #define YAGE_SPRITE_BATCH_H
 
 #include "batch.h"
-#include "vertex.h"
+#include "../data/vertex.h"
+#include "../data/renderbatch.h"
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
@@ -48,7 +49,7 @@ public:
 };
 
 
-class SpriteBatch : public Batch
+class SpriteBatch
 {
 public:
     static const int NUM_VERTICES = 6;

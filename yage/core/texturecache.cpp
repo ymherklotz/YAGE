@@ -8,7 +8,7 @@
 
 #include "texturecache.h"
 #include "imageloader.h"
-#include "texture.h"
+#include "../data/texture.h"
 
 namespace yage
 {
