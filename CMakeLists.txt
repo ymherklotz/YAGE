@@ -11,6 +11,9 @@ option(YAGE_BUILD_DOCS "Build documentation using Doxygen" ON)
 # set standard
 set(CMAKE_CXX_STANDARD 14)
 
+# adding more warnings to cmake
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-Wall")
+
 # find other libraries from source
 set(EXTERNAL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external)
 
