@@ -12,8 +12,8 @@
 
 int main()
 {
-    gLog << "First message";
+    yLog << "First message";
 
-    gLog << "Second Message";
+    yLog << "Second Message";
     std::cout << "COUT\n";
 }

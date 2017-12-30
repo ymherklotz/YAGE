@@ -65,9 +65,9 @@ void Logger::clear()
 
 Logger &Logger::instance()
 {
-    static Logger gLogger;
+    static Logger yLogger;
 
-    return gLogger;
+    return yLogger;
 }
 
 } // namespace yage

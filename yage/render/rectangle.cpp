@@ -35,3 +35,4 @@ void Rectangle::render() const
 }
 
 } // namepsace yage
+

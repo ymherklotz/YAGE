@@ -41,6 +41,6 @@ private:
 
 } // namespace yage
 
-#define gLog (yage::Logger::instance()(__FILE__, __LINE__))
+#define yLog (yage::Logger::instance()(__FILE__, __LINE__))
 
 #endif

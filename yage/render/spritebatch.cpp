@@ -26,9 +26,37 @@ Glyph::Glyph(GLuint texture, float depth, const Vertex &top_left,
 {
 }
 
-SpriteBatch::SpriteBatch()
+SpriteBatch::SpriteBatch() : vao_(0), vbo_(0)
 {
-    createVertexArray();
+    glGenVertexArrays(1, &vao_);
+    if (vao_ == 0) {
+        throw std::runtime_error("failed to generate VAO");
+    }
+    // bind vertex array object
+    glBindVertexArray(vao_);
+
+    glGenBuffers(1, &vbo_);
+    if (vbo_ == 0) {
+        throw std::runtime_error("failed to generate VBO");
+    }
+    // bind vertex buffer object
+    glBindBuffer(GL_ARRAY_BUFFER, vbo_);
+
+    // set the vertex attribute pointers
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
+                          (void *)offsetof(Vertex, position));
+    glVertexAttribPointer(1, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(Vertex),
+                          (void *)offsetof(Vertex, colour));
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
+                          (void *)offsetof(Vertex, uv));
+
+    // enable vertex attribute arrays
+    glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(1);
+    glEnableVertexAttribArray(2);
+
+    // unbind vertex array object
+    glBindVertexArray(0);
 }
 
 SpriteBatch::~SpriteBatch()
@@ -88,10 +116,10 @@ void SpriteBatch::draw(const glm::vec4 &destination_rect,
 
 void SpriteBatch::render()
 {
-    // sort and create render batches
-    sortGlyphs();
-    createRenderBatches();
     glBindVertexArray(vao_);
+    // sort and create render batches
+    createRenderBatches();
+    sortGlyphs();
     for (auto &&batch : render_batches_) {
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, batch.texture);
@@ -102,43 +130,6 @@ void SpriteBatch::render()
     glyphs_.clear();
     glyph_ptrs_.clear();
     render_batches_.clear();
-}
-
-void SpriteBatch::createVertexArray()
-{
-    if (vao_ == 0) {
-        glGenVertexArrays(1, &vao_);
-        if (vao_ == 0) {
-            throw std::runtime_error("glGenVertexArrays failed");
-        }
-    }
-    // bind vertex array object
-    glBindVertexArray(vao_);
-
-    if (vbo_ == 0) {
-        glGenBuffers(1, &vbo_);
-        if (vbo_ == 0) {
-            throw std::runtime_error("glGenBuffers failed");
-        }
-    }
-    // bind vertex buffer object
-    glBindBuffer(GL_ARRAY_BUFFER, vbo_);
-
-    // set the vertex attribute pointers
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
-                          (void *)offsetof(Vertex, position));
-    glVertexAttribPointer(1, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(Vertex),
-                          (void *)offsetof(Vertex, colour));
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
-                          (void *)offsetof(Vertex, uv));
-
-    // enable vertex attribute arrays
-    glEnableVertexAttribArray(0);
-    glEnableVertexAttribArray(1);
-    glEnableVertexAttribArray(2);
-
-    // unbind vertex array object
-    glBindVertexArray(0);
 }
 
 void SpriteBatch::createRenderBatches()
@@ -163,12 +154,11 @@ void SpriteBatch::createRenderBatches()
         vertices.push_back(glyph_ptrs_[i]->bottom_left());
         vertices.push_back(glyph_ptrs_[i]->top_left());
         vertices.push_back(glyph_ptrs_[i]->top_right());
-        vertices.push_back(glyph_ptrs_[i]->bottom_left());
-        vertices.push_back(glyph_ptrs_[i]->bottom_right());
-        vertices.push_back(glyph_ptrs_[i]->top_right());
 
-        // bind vbo
-        glBindBuffer(GL_ARRAY_BUFFER, vbo_);
+        vertices.push_back(glyph_ptrs_[i]->top_right());
+        vertices.push_back(glyph_ptrs_[i]->bottom_right());
+        vertices.push_back(glyph_ptrs_[i]->bottom_left());
+
         // orphan the buffer
         glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), nullptr,
                      GL_DYNAMIC_DRAW);
@@ -176,7 +166,6 @@ void SpriteBatch::createRenderBatches()
         glBufferSubData(GL_ARRAY_BUFFER, 0, vertices.size() * sizeof(Vertex),
                         vertices.data());
         // unbind buffer
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
 }
 

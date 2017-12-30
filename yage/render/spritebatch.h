@@ -9,9 +9,9 @@
 #ifndef YAGE_SPRITE_BATCH_H
 #define YAGE_SPRITE_BATCH_H
 
-#include "batch.h"
-#include "../data/vertex.h"
 #include "../data/renderbatch.h"
+#include "../data/vertex.h"
+#include "batch.h"
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
@@ -48,15 +48,14 @@ public:
     Vertex bottom_left() const { return bottom_left_; }
 };
 
-
 class SpriteBatch
 {
 public:
     static const int NUM_VERTICES = 6;
 
 private:
-    GLuint vbo_ = 0;
-    GLuint vao_ = 0;
+    GLuint vao_;
+    GLuint vbo_;
     std::vector<Glyph> glyphs_;
     std::vector<Glyph *> glyph_ptrs_;
     std::vector<RenderBatch> render_batches_;
@@ -81,7 +80,6 @@ public:
     void render();
 
 private:
-    void createVertexArray();
     void createRenderBatches();
     void sortGlyphs();
 };
