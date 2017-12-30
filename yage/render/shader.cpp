@@ -101,7 +101,7 @@ void Shader::setUniform(const std::string &name, const glm::mat4 &matrix) const
 
 GLint Shader::getUniformLocation(const std::string &uniform_name) const
 {
-    GLint location = glGetUniformLocation(program_id_, uniform_name.c_str());
+    GLuint location = glGetUniformLocation(program_id_, uniform_name.c_str());
     if (location == GL_INVALID_INDEX) {
         throw std::runtime_error("'" + uniform_name + "' not found");
     }
