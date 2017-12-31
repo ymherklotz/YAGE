@@ -1,11 +1,10 @@
-#version 450
+#version 330
 
-layout(location = 0) in vec2 fragment_position;
-layout(location = 1) in vec4 fragment_colour;
-layout(location = 2) in vec2 fragment_uv;
+in vec2 fragment_position;
+in vec4 fragment_colour;
+in vec2 fragment_uv;
 
-layout(location = 0) out vec4 colour;
-layout(location = 1) out vec4 colour2;
+out vec4 colour;
 
 uniform sampler2D texture_sampler;
 
@@ -13,6 +12,5 @@ void main()
 {
     vec4 texture_colour = texture(texture_sampler, fragment_uv);
 
-    colour2 = vec4(1.f, 0.f, 0.f, 1.f);
     colour = texture_colour;
 }

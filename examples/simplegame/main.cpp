@@ -17,10 +17,10 @@ using namespace yage;
 int main()
 {
     Window window;
-    window.create("Simple Game", 800, 640);
+    window.create("Simple Game", 1920, 1080);
 
-    Shader textureProgram("examples/resources/learnopenglshader.vert",
-                          "examples/resources/learnopenglshader.frag");
+    Shader textureProgram("examples/resources/textureshader.vert",
+                          "examples/resources/textureshader.frag");
     SpriteBatch sp;
 
     Texture fountain = ResourceManager::getTexture(
@@ -32,9 +32,16 @@ int main()
 
     cout << "texture: " << brick.width << ", " << brick.height << '\n';
 
-    Camera camera(800, 640);
+    Camera camera(1920, 1080);
     textureProgram.use();
-    textureProgram.setUniform("ourTexture", 0);
+    textureProgram.setUniform("texture_sampler", 0);
+
+    double prev_time  = glfwGetTime();
+    double final_time = 0;
+    double diff       = 0;
+    double fps        = 0;
+    int i             = 0;
+    double time;
 
     while (!window.shouldClose()) {
         window.clearBuffer();
@@ -48,10 +55,30 @@ int main()
             texture = breast_plate;
         }
 
-        sp.draw({-0.5, -0.5, 1, 1}, {0, 0, 1, 1}, brick.id, Colour(255, 255, 255, 255), 0);
+        camera.update(textureProgram);
 
+        time = glfwGetTime();
+        for (int i = 0; i < 1920/10; i++) {
+            for(int j = 0; j < 1080/10; j++)
+                sp.draw({(float)(10*i), (float)(10*j), 10.f, 10.f}, {0.f, 0.f, 1.f, 1.f}, fountain.id,
+                    Colour(255, 255, 255, 255), 0);
+        }
+
+        sp.draw({50, 50, 100, 100}, {0, 0, 1, 1}, brick.id, Colour(255, 255, 255, 255), 1);
+        yLog << "draw: " << glfwGetTime() - time;
+
+        time = glfwGetTime();
         sp.render();
-
+        yLog << "render: " << glfwGetTime() - time;
         window.swapBuffer();
+
+        if (i == 0) {
+            final_time = glfwGetTime();
+            diff       = final_time - prev_time;
+            prev_time  = final_time;
+            fps        = 1 / diff * 30;
+            yLog << "fps: " << fps;
+        }
+        i = (i + 1) % 30;
     }
 }

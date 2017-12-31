@@ -13,12 +13,12 @@
 #include <string>
 #include <vector>
 
+#include "../util/active.h"
+#include "logmessage.h"
+#include "logsink.h"
+
 namespace yage
 {
-
-class Active;
-class LogMessage;
-class LogSink;
 
 class Logger
 {

@@ -24,7 +24,7 @@
 namespace yage
 {
 
-class Texture;
+struct Texture;
 
 class ResourceManager
 {
@@ -32,7 +32,8 @@ private:
     static TextureCache texture_cache_;
 
 public:
-    static Texture getTexture(const std::string &texture_path);
+    static Texture getTexture(const std::string &texture_path, int x = 1,
+                              int y = 1);
 };
 
 } // namespace yage

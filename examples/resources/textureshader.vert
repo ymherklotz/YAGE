@@ -1,12 +1,12 @@
-#version 450
+#version 330
 
 layout(location = 0) in vec2 vertex_position;
 layout(location = 1) in vec4 vertex_colour;
 layout(location = 2) in vec2 vertex_uv;
 
-layout(location = 0) out vec2 fragment_position;
-layout(location = 1) out vec4 fragment_colour;
-layout(location = 2) out vec2 fragment_uv;
+out vec2 fragment_position;
+out vec4 fragment_colour;
+out vec2 fragment_uv;
 
 uniform mat4 P;
 

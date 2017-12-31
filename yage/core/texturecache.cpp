@@ -7,19 +7,21 @@
  */
 
 #include "texturecache.h"
-#include "imageloader.h"
 #include "../data/texture.h"
+#include "imageloader.h"
 
 namespace yage
 {
 
-Texture TextureCache::getTexture(const std::string &texture_path)
+Texture TextureCache::getTexture(const std::string &texture_path, int x, int y)
 {
     auto itr = texture_map_.find(texture_path);
 
     if (itr == texture_map_.end()) {
         Texture new_texture = ImageLoader::loadPng(texture_path);
         texture_map_.insert(make_pair(texture_path, new_texture));
+        new_texture.x = x;
+        new_texture.y = y;
         return new_texture;
     }
 
