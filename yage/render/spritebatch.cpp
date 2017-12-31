@@ -11,6 +11,9 @@
 #include <algorithm>
 #include <stdexcept>
 #include "../core/logger.h"
+#include <iostream>
+
+using std::cout;
 
 #include <GLFW/glfw3.h>
 
@@ -112,13 +115,13 @@ void SpriteBatch::draw(const glm::vec4 &destination_rect,
     // deal with fragmenting by creating vector of pointers
     glyphs_.emplace_back(texture, depth, top_left, top_right, bottom_right,
                          bottom_left);
-    glyph_ptrs_.push_back(&glyphs_.back());
 }
 
 void SpriteBatch::render()
 {
     glBindVertexArray(vao_);
     // sort and create render batches
+
     sortGlyphs();
     createRenderBatches();
     glActiveTexture(GL_TEXTURE0);
@@ -135,13 +138,13 @@ void SpriteBatch::render()
 
 void SpriteBatch::createRenderBatches()
 {
-    std::vector<Vertex> vertices(glyph_ptrs_.size() * NUM_VERTICES);
+    std::vector<Vertex> vertices;
     if (glyph_ptrs_.empty()) {
         return;
     }
 
-    int cv = 0;
-    
+    vertices.reserve(glyph_ptrs_.size() * NUM_VERTICES);
+
     for (int i = 0; i < (int)glyph_ptrs_.size(); ++i) {
         if (i == 0 || (i > 0 && (glyph_ptrs_[i]->texture() !=
                                  glyph_ptrs_[i - 1]->texture()))) {
@@ -152,13 +155,13 @@ void SpriteBatch::createRenderBatches()
             render_batches_.back().num_vertices += NUM_VERTICES;
         }
 
-        vertices[cv++] = glyph_ptrs_[i]->bottom_left();
-        vertices[cv++] = glyph_ptrs_[i]->top_left();
-        vertices[cv++] = glyph_ptrs_[i]->top_right();
+        vertices.push_back(glyph_ptrs_[i]->bottom_left());
+        vertices.push_back(glyph_ptrs_[i]->top_left());
+        vertices.push_back(glyph_ptrs_[i]->top_right());
 
-        vertices[cv++] = glyph_ptrs_[i]->top_right();
-        vertices[cv++] = glyph_ptrs_[i]->bottom_right();
-        vertices[cv++] = glyph_ptrs_[i]->bottom_left();
+        vertices.push_back(glyph_ptrs_[i]->top_right());
+        vertices.push_back(glyph_ptrs_[i]->bottom_right());
+        vertices.push_back(glyph_ptrs_[i]->bottom_left());
     }
 
     // orphan the buffer
@@ -170,6 +173,10 @@ void SpriteBatch::createRenderBatches()
 
 void SpriteBatch::sortGlyphs()
 {
+    glyph_ptrs_.reserve(glyphs_.size());
+    for(auto &glyph : glyphs_) {
+        glyph_ptrs_.push_back(&glyph);
+    }
     // sort using introsort or quicksort
     std::sort(glyph_ptrs_.begin(), glyph_ptrs_.end(),
               [](Glyph *a, Glyph *b) -> bool {

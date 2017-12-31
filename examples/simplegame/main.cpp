@@ -57,10 +57,11 @@ int main()
 
         camera.update(textureProgram);
 
+        int amount = 5;
         time = glfwGetTime();
-        for (int i = 0; i < 1920/10; i++) {
-            for(int j = 0; j < 1080/10; j++)
-                sp.draw({(float)(10*i), (float)(10*j), 10.f, 10.f}, {0.f, 0.f, 1.f, 1.f}, fountain.id,
+        for (int i = 0; i < 1920/amount; i++) {
+            for(int j = 0; j < 1080/amount; j++)
+                sp.draw({(float)(amount*i), (float)(amount*j), (float)amount, (float)amount}, {0.f, 0.f, 1.f, 1.f}, fountain.id,
                     Colour(255, 255, 255, 255), 0);
         }
 

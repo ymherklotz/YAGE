@@ -58,7 +58,7 @@ void Window::create(std::string window_name, int width, int height)
     glfwSetKeyCallback(window_, key_callback);
 
     // set vsync on
-    glfwSwapInterval(1);
+    glfwSwapInterval(0);
 
     // set the clear colour to black
     glClearColor(0.18f, 0.18f, 0.18f, 1.f);
