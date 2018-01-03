@@ -1,7 +1,10 @@
 #include <yage/yage.h>
 
-#include "player.h"
 #include "bullet.h"
+#include "player.h"
+
+#include <vector>
+#include <memory>
 
 using std::cout;
 
@@ -9,6 +12,8 @@ int main(int argc, char **argv)
 {
     yage::Window window;
     window.create("Shooter example", 800, 600);
+
+    std::vector<std::unique_ptr<yage::Drawable>> objects;
 
     yage::Shader shader("examples/resources/textureshader.vert",
                         "examples/resources/textureshader.frag");
@@ -64,7 +69,7 @@ int main(int argc, char **argv)
     auto textures = male_l;
 
     Player player({400, 300, 48 * 2, 64 * 2}, textures.front());
-    Bullet bullet({400, 300, 25, 25});
+    objects.push_back(std::make_unique<Bullet>(glm::vec4(400, 300, 25, 25)));
 
     while (!window.shouldClose()) {
         window.pollEvents();
@@ -116,13 +121,25 @@ int main(int argc, char **argv)
             c_pressed = false;
         }
 
+        if (window.keyPressed(yage::key::RIGHT)) {
+            objects.push_back(std::make_unique<Bullet>(glm::vec4(player.position().x, player.position().y, 25, 25)));
+        } else if (window.keyPressed(yage::key::DOWN)) {
+
+        } else if (window.keyPressed(yage::key::LEFT)) {
+        } else if (window.keyPressed(yage::key::UP)) {
+        }
+
         player.setTexture(textures[i]);
 
         camera.update(shader);
 
         window.clearBuffer();
         player.draw(sp);
-        bullet.draw(sp);
+
+        for(auto &&object : objects) {
+            object->draw(sp);
+        }
+
         sp.render();
 
         window.swapBuffer();

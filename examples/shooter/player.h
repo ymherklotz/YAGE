@@ -15,7 +15,7 @@ enum class Action {
     MOVING,
 };
 
-class Player
+class Player : public yage::Drawable
 {
 public:
     Player(const glm::vec4 &bound, const yage::Texture &texture);
@@ -26,6 +26,9 @@ public:
 
     void move(Direction direction);
     void idle();
+
+    // simple getters
+    glm::vec4 position() const;
 private:
     glm::vec4 bound_;
     yage::Texture texture_;

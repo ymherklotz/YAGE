@@ -3,11 +3,13 @@
 
 #include <yage/yage.h>
 
-class Bullet {
+class Bullet : public yage::Drawable
+{
 public:
     Bullet(const glm::vec4 &bound);
 
     void draw(yage::SpriteBatch &sp) const;
+
 private:
     glm::vec4 bound_;
 };

@@ -60,3 +60,8 @@ void Player::idle()
 {
     action_    = Action::IDLE;
 }
+
+glm::vec4 Player::position() const
+{
+    return bound_;
+}
