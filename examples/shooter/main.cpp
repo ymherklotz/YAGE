@@ -1,6 +1,7 @@
 #include <yage/yage.h>
 
 #include "player.h"
+#include "bullet.h"
 
 using std::cout;
 
@@ -63,6 +64,7 @@ int main(int argc, char **argv)
     auto textures = male_l;
 
     Player player({400, 300, 48 * 2, 64 * 2}, textures.front());
+    Bullet bullet({400, 300, 25, 25});
 
     while (!window.shouldClose()) {
         window.pollEvents();
@@ -120,6 +122,7 @@ int main(int argc, char **argv)
 
         window.clearBuffer();
         player.draw(sp);
+        bullet.draw(sp);
         sp.render();
 
         window.swapBuffer();

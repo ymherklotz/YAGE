@@ -8,10 +8,10 @@
 
 #include "spritebatch.h"
 
-#include <algorithm>
-#include <stdexcept>
 #include "../core/logger.h"
+#include <algorithm>
 #include <iostream>
+#include <stdexcept>
 
 using std::cout;
 
@@ -21,15 +21,6 @@ namespace yage
 {
 
 const int SpriteBatch::NUM_VERTICES;
-
-Glyph::Glyph(GLuint texture, float depth, const Vertex &top_left,
-             const Vertex &top_right, const Vertex &bottom_right,
-             const Vertex &bottom_left)
-    : texture_(texture), depth_(depth), top_left_(top_left),
-      top_right_(top_right), bottom_right_(bottom_right),
-      bottom_left_(bottom_left)
-{
-}
 
 SpriteBatch::SpriteBatch() : vao_(0), vbo_(0)
 {
@@ -59,9 +50,6 @@ SpriteBatch::SpriteBatch() : vao_(0), vbo_(0)
     glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
     glEnableVertexAttribArray(2);
-
-    // unbind vertex array object
-    glBindVertexArray(0);
 }
 
 SpriteBatch::~SpriteBatch()
@@ -121,11 +109,12 @@ void SpriteBatch::render()
 {
     glBindVertexArray(vao_);
     // sort and create render batches
-
     sortGlyphs();
     createRenderBatches();
     glActiveTexture(GL_TEXTURE0);
     for (auto &&batch : render_batches_) {
+        yLog << "Drawing " << batch.num_vertices
+             << " vertices bound to texture: " << batch.texture;
         glBindTexture(GL_TEXTURE_2D, batch.texture);
         glDrawArrays(GL_TRIANGLES, batch.offset, batch.num_vertices);
     }
@@ -146,22 +135,22 @@ void SpriteBatch::createRenderBatches()
     vertices.reserve(glyph_ptrs_.size() * NUM_VERTICES);
 
     for (int i = 0; i < (int)glyph_ptrs_.size(); ++i) {
-        if (i == 0 || (i > 0 && (glyph_ptrs_[i]->texture() !=
-                                 glyph_ptrs_[i - 1]->texture()))) {
+        if (i == 0 || (i > 0 && (glyph_ptrs_[i]->texture !=
+                                 glyph_ptrs_[i - 1]->texture))) {
             render_batches_.emplace_back(i * NUM_VERTICES, NUM_VERTICES,
-                                         glyph_ptrs_[i]->texture());
+                                         glyph_ptrs_[i]->texture);
 
         } else {
             render_batches_.back().num_vertices += NUM_VERTICES;
         }
 
-        vertices.push_back(glyph_ptrs_[i]->bottom_left());
-        vertices.push_back(glyph_ptrs_[i]->top_left());
-        vertices.push_back(glyph_ptrs_[i]->top_right());
+        vertices.push_back(glyph_ptrs_[i]->bottom_left);
+        vertices.push_back(glyph_ptrs_[i]->top_left);
+        vertices.push_back(glyph_ptrs_[i]->top_right);
 
-        vertices.push_back(glyph_ptrs_[i]->top_right());
-        vertices.push_back(glyph_ptrs_[i]->bottom_right());
-        vertices.push_back(glyph_ptrs_[i]->bottom_left());
+        vertices.push_back(glyph_ptrs_[i]->top_right);
+        vertices.push_back(glyph_ptrs_[i]->bottom_right);
+        vertices.push_back(glyph_ptrs_[i]->bottom_left);
     }
 
     // orphan the buffer
@@ -174,16 +163,17 @@ void SpriteBatch::createRenderBatches()
 void SpriteBatch::sortGlyphs()
 {
     glyph_ptrs_.reserve(glyphs_.size());
-    for(auto &glyph : glyphs_) {
+    for (auto &glyph : glyphs_) {
         glyph_ptrs_.push_back(&glyph);
     }
+
     // sort using introsort or quicksort
     std::sort(glyph_ptrs_.begin(), glyph_ptrs_.end(),
-              [](Glyph *a, Glyph *b) -> bool {
-                  if (a->depth() == b->depth()) {
-                      return a->texture() < b->texture();
+              [](details::Glyph *a, details::Glyph *b) -> bool {
+                  if (a->depth == b->depth) {
+                      return a->texture < b->texture;
                   }
-                  return a->depth() < b->depth();
+                  return a->depth < b->depth;
               });
 }
 

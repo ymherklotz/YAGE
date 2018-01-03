@@ -9,7 +9,6 @@
 #ifndef YAGE_SPRITE_BATCH_H
 #define YAGE_SPRITE_BATCH_H
 
-#include "../data/renderbatch.h"
 #include "../data/vertex.h"
 #include "batch.h"
 
@@ -21,32 +20,41 @@
 namespace yage
 {
 
-class SpriteBatch;
+namespace details
+{
+
+struct RenderBatch {
+    GLint offset;
+    GLsizei num_vertices;
+    GLuint texture;
+
+    RenderBatch(GLint offset_i, GLsizei num_vertices_i, GLuint texture_i)
+        : offset(offset_i), num_vertices(num_vertices_i), texture(texture_i)
+    {
+    }
+};
 
 /** Glyph with information of the texture.
  */
-class Glyph
-{
-private:
-    GLuint texture_;
-    float depth_;
-    Vertex top_left_;
-    Vertex top_right_;
-    Vertex bottom_right_;
-    Vertex bottom_left_;
+struct Glyph {
+    GLuint texture;
+    float depth;
+    Vertex top_left;
+    Vertex top_right;
+    Vertex bottom_right;
+    Vertex bottom_left;
 
-public:
-    Glyph(GLuint texture, float depth, const Vertex &top_left,
-          const Vertex &top_right, const Vertex &bottom_right,
-          const Vertex &bottom_left);
-
-    GLuint texture() const { return texture_; }
-    float depth() const { return depth_; }
-    Vertex top_left() const { return top_left_; }
-    Vertex top_right() const { return top_right_; }
-    Vertex bottom_right() const { return bottom_right_; }
-    Vertex bottom_left() const { return bottom_left_; }
+    Glyph(GLuint texture_i, float depth_i, const Vertex &top_left_i,
+          const Vertex &top_right_i, const Vertex &bottom_right_i,
+          const Vertex &bottom_left_i)
+        : texture(texture_i), depth(depth_i), top_left(top_left_i),
+          top_right(top_right_i), bottom_right(bottom_right_i),
+          bottom_left(bottom_left_i)
+    {
+    }
 };
+
+} // namespace details
 
 class SpriteBatch
 {
@@ -56,9 +64,9 @@ public:
 private:
     GLuint vao_;
     GLuint vbo_;
-    std::vector<Glyph> glyphs_;
-    std::vector<Glyph *> glyph_ptrs_;
-    std::vector<RenderBatch> render_batches_;
+    std::vector<details::Glyph> glyphs_;
+    std::vector<details::Glyph *> glyph_ptrs_;
+    std::vector<details::RenderBatch> render_batches_;
 
 public:
     SpriteBatch();
