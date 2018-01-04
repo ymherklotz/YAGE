@@ -1,14 +1,9 @@
 #ifndef EXAMPLE_SHOOTER_PLAYER_H
 #define EXAMPLE_SHOOTER_PLAYER_H
 
-#include "yage/yage.h"
+#include <yage/yage.h>
 
-enum class Direction {
-    LEFT,
-    DOWN,
-    RIGHT,
-    UP,
-};
+#include "direction.h"
 
 enum class Action {
     IDLE,
@@ -22,10 +17,11 @@ public:
 
     void setTexture(const yage::Texture &texture);
 
-    void draw(yage::SpriteBatch &sp) const;
+    void draw(yage::SpriteBatch &sp);
 
     void move(Direction direction);
     void idle();
+    void look(Direction direction);
 
     // simple getters
     glm::vec4 position() const;

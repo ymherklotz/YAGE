@@ -10,7 +10,7 @@ void Player::setTexture(const yage::Texture &texture) {
     texture_ = texture;
 }
 
-void Player::draw(yage::SpriteBatch &sp) const
+void Player::draw(yage::SpriteBatch &sp)
 {
     static int time      = 0;
     static int iteration = 0;
@@ -21,7 +21,7 @@ void Player::draw(yage::SpriteBatch &sp) const
     case Action::IDLE:
         sp.draw(bound_,
                 {width, static_cast<int>(direction_) * height, width, height},
-                texture_.id, yage::Colour(255, 255, 255, 255), 0);
+                texture_.id, yage::Colour(255, 255, 255, 255), 1);
         break;
     case Action::MOVING:
         if(time % 15 == 0) {
@@ -29,7 +29,7 @@ void Player::draw(yage::SpriteBatch &sp) const
         }
         sp.draw(bound_,
                 {iteration * 2 * width, static_cast<int>(direction_) * height, width, height},
-                texture_.id, yage::Colour(255, 255, 255, 255), 0);
+                texture_.id, yage::Colour(255, 255, 255, 255), 1);
         time = (time + 1) % 59;
         break;
     }
@@ -59,6 +59,11 @@ void Player::move(Direction direction)
 void Player::idle()
 {
     action_    = Action::IDLE;
+}
+
+void Player::look(Direction direction)
+{
+    direction_ = direction;
 }
 
 glm::vec4 Player::position() const

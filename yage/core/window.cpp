@@ -19,10 +19,19 @@ using std::runtime_error;
 namespace yage
 {
 
+namespace {
+
 void key_callback(GLFWwindow *window, int key, int scanCode, int action,
                   int mods)
 {
 }
+
+void framebuffer_size_callback(GLFWwindow *window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+
+} // namespace
 
 Window::Window() = default;
 
@@ -56,6 +65,8 @@ void Window::create(std::string window_name, int width, int height)
 
     // set key callback
     glfwSetKeyCallback(window_, key_callback);
+    // set resize callback
+    glfwSetFramebufferSizeCallback(window_, framebuffer_size_callback);
 
     // set vsync on
     glfwSwapInterval(1);

@@ -9,7 +9,7 @@ namespace yage
 class Drawable
 {
 public:
-    virtual void draw(SpriteBatch &sp) const = 0;
+    virtual void draw(SpriteBatch &sp) = 0;
 };
 
 } // namespace yage

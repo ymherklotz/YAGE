@@ -1,10 +1,11 @@
 #include <yage/yage.h>
 
 #include "bullet.h"
+#include "direction.h"
 #include "player.h"
 
-#include <vector>
 #include <memory>
+#include <vector>
 
 using std::cout;
 
@@ -13,7 +14,7 @@ int main(int argc, char **argv)
     yage::Window window;
     window.create("Shooter example", 800, 600);
 
-    std::vector<std::unique_ptr<yage::Drawable>> objects;
+    std::vector<std::unique_ptr<Bullet>> bullets;
 
     yage::Shader shader("examples/resources/textureshader.vert",
                         "examples/resources/textureshader.frag");
@@ -69,7 +70,6 @@ int main(int argc, char **argv)
     auto textures = male_l;
 
     Player player({400, 300, 48 * 2, 64 * 2}, textures.front());
-    objects.push_back(std::make_unique<Bullet>(glm::vec4(400, 300, 25, 25)));
 
     while (!window.shouldClose()) {
         window.pollEvents();
@@ -122,11 +122,33 @@ int main(int argc, char **argv)
         }
 
         if (window.keyPressed(yage::key::RIGHT)) {
-            objects.push_back(std::make_unique<Bullet>(glm::vec4(player.position().x, player.position().y, 25, 25)));
+            bullets.push_back(std::make_unique<Bullet>(
+                glm::vec4(player.position().x + player.position().z / 2.f,
+                          player.position().y + player.position().w / 2.f, 25,
+                          25),
+                Direction::RIGHT, 10.f));
+            player.look(Direction::RIGHT);
         } else if (window.keyPressed(yage::key::DOWN)) {
-
+            bullets.push_back(std::make_unique<Bullet>(
+                glm::vec4(player.position().x + player.position().z / 2.f,
+                          player.position().y + player.position().w / 2.f, 25,
+                          25),
+                Direction::DOWN, 10.f, 2));
+            player.look(Direction::DOWN);
         } else if (window.keyPressed(yage::key::LEFT)) {
+            bullets.push_back(std::make_unique<Bullet>(
+                glm::vec4(player.position().x + player.position().z / 2.f,
+                          player.position().y + player.position().w / 2.f, 25,
+                          25),
+                Direction::LEFT, 10.f, 2));
+            player.look(Direction::LEFT);
         } else if (window.keyPressed(yage::key::UP)) {
+            bullets.push_back(std::make_unique<Bullet>(
+                glm::vec4(player.position().x + player.position().z / 2.f,
+                          player.position().y + player.position().w / 2.f, 25,
+                          25),
+                Direction::UP, 10.f));
+            player.look(Direction::UP);
         }
 
         player.setTexture(textures[i]);
@@ -136,8 +158,8 @@ int main(int argc, char **argv)
         window.clearBuffer();
         player.draw(sp);
 
-        for(auto &&object : objects) {
-            object->draw(sp);
+        for (auto &&bullet : bullets) {
+            bullet->draw(sp);
         }
 
         sp.render();
