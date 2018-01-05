@@ -30,6 +30,7 @@ public:
 
     void update(Shader &program);
     void move(const glm::vec2 &direction);
+    void zoom(float factor);
 };
 
 } // namespace yage

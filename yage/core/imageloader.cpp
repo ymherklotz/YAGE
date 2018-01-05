@@ -46,7 +46,7 @@ Texture ImageLoader::loadPng(const std::string &file_path)
 
     glGenerateMipmap(GL_TEXTURE_2D);
 
-    yLog << "Successfully loaded texture: " << file_path;
+    yLogDebug << "Successfully loaded texture: " << file_path;
 
     return texture;
 }

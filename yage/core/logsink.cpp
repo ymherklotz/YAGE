@@ -82,8 +82,37 @@ public:
         auto time_t     = system_clock::to_time_t(now);
         auto local_time = std::localtime(&time_t);
 
-        (*fileHandle_) << std::put_time(local_time, "[%H:%M:%S] ") << msg
-                       << " (" << meta.fileName << ":" << meta.lineNo << ")\n";
+        std::string level;
+
+        switch (meta.level) {
+        case LogLevel::DEBUG:
+            level = "DEBUG";
+            break;
+        case LogLevel::INFO:
+            level = "INFO";
+            break;
+        case LogLevel::WARNING:
+            level = "WARNING";
+            break;
+        case LogLevel::ERROR:
+            level = "ERROR";
+            break;
+        case LogLevel::FATAL:
+            level = "FATAL";
+            break;
+        }
+
+        (*fileHandle_) << std::put_time(local_time, "[%H:%M:%S] [") << level
+                       << "] " << msg << "\n";
+        if (meta.fileName != "") {
+            (*fileHandle_) << "(" << meta.fileName;
+            if (meta.line != -1) {
+                (*fileHandle_) << ":" << meta.line << ")";
+            } else {
+                (*fileHandle_) << ")";
+            }
+        }
+        (*fileHandle_) << "\n\n";
     }
 
 private:

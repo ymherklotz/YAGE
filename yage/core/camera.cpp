@@ -9,6 +9,8 @@
 #include "camera.h"
 #include "../render/shader.h"
 
+#include "logger.h"
+
 #include <glad/glad.h>
 #include <glm/gtc/matrix_transform.hpp>
 
@@ -40,6 +42,12 @@ void Camera::update(Shader &program)
 void Camera::move(const glm::vec2 &direction)
 {
     position_ += direction;
+    update_matrix_ = true;
+}
+
+void Camera::zoom(float factor)
+{
+    scale_ += factor;
     update_matrix_ = true;
 }
 

@@ -113,7 +113,7 @@ void SpriteBatch::render()
     createRenderBatches();
     glActiveTexture(GL_TEXTURE0);
     for (auto &&batch : render_batches_) {
-        yLog << "Drawing " << batch.num_vertices
+        yLogDebug << "Drawing " << batch.num_vertices
              << " vertices bound to texture: " << batch.texture;
         glBindTexture(GL_TEXTURE_2D, batch.texture);
         glDrawArrays(GL_TRIANGLES, batch.offset, batch.num_vertices);

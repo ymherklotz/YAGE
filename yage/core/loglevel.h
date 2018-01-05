@@ -9,10 +9,16 @@
 #ifndef YAGE_CORE_LOGLEVEL_H
 #define YAGE_CORE_LOGLEVEL_H
 
-class LogLevel
-{
-public:
-    LogLevel();
+namespace yage {
+
+enum class LogLevel {
+    DEBUG,
+    INFO,
+    WARNING,
+    ERROR,
+    FATAL,
 };
+
+}
 
 #endif
