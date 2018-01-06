@@ -1,5 +1,6 @@
 var input_8h =
 [
+    [ "GLFW_INCLUDE_NONE", "input_8h.html#a088324ad8995e3eb76024e3e79083d48", null ],
     [ "key", "input_8h.html#ad5a9307442e5daa8810aff942564a822", [
       [ "UNKNOWN", "input_8h.html#ad5a9307442e5daa8810aff942564a822a696b031073e74bf2cb98e5ef201d4aa3", null ],
       [ "SPACE", "input_8h.html#ad5a9307442e5daa8810aff942564a822a6506ae39fdca9845e3a6de3865183e57", null ],

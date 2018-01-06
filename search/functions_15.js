@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['w',['w',['../classyage_1_1Vector4.html#a111ecbf09543e8fafaf3aedef77d168d',1,'yage::Vector4']]],
-  ['window',['Window',['../classyage_1_1Window.html#a7d7bd2f22e095df387e8b5cda2bb484e',1,'yage::Window::Window()'],['../classyage_1_1Window.html#a1225a2b5eff6d44a6bce3f0f5f10e2bf',1,'yage::Window::Window(const Window &amp;)=delete'],['../classyage_1_1Window.html#a4be115daea6c7473fca81623c547d821',1,'yage::Window::Window(Window &amp;&amp;)=delete']]],
-  ['write',['write',['../classyage_1_1LogSink.html#ac41716cf03dac6311cb7287c9edf8a8d',1,'yage::LogSink::write()'],['../structyage_1_1LogSink_1_1Concept.html#a3b752fd501daae85f1b78e5d0df912ac',1,'yage::LogSink::Concept::write()'],['../structyage_1_1LogSink_1_1Model.html#ae61438d2927d21b4af8f6ff2acc38224',1,'yage::LogSink::Model::write()']]]
+  ['x',['x',['../classyage_1_1Vector2.html#a5a777413b63e68dc5f797d31e3d7beaf',1,'yage::Vector2::x()'],['../classyage_1_1Vector2.html#a14a436185842f7375d02b57a37832740',1,'yage::Vector2::x() const '],['../classyage_1_1Vector3.html#ae91b009b2e5e81163ebf80bf5bcbe7f0',1,'yage::Vector3::x()'],['../classyage_1_1Vector4.html#ad6d84a870f51573b60490591cdbd8b4c',1,'yage::Vector4::x()']]],
+  ['xposition',['xPosition',['../classyage_1_1Body.html#a8a800cef0fb3561332d4a97c790e7225',1,'yage::Body']]]
 ];

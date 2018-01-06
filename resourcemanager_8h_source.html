@@ -119,33 +119,33 @@ $(document).ready(function(){initNavTree('resourcemanager_8h_source.html','');})
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>yage</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span>Texture;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">struct </span>Texture;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classyage_1_1ResourceManager.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1ResourceManager.html">ResourceManager</a></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classyage_1_1ResourceManager.html#a2799a8ff957874fbe7b7c791781255f6">   32</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classyage_1_1TextureCache.html">TextureCache</a> <a class="code" href="classyage_1_1ResourceManager.html#a2799a8ff957874fbe7b7c791781255f6">texture_cache_</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">static</span> <a class="code" href="classyage_1_1TextureCache.html">TextureCache</a> texture_cache_;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <a class="code" href="structyage_1_1Texture.html">Texture</a> <a class="code" href="classyage_1_1ResourceManager.html#a36d805924374f27aa7dbce1d47795b25">getTexture</a>(<span class="keyword">const</span> std::string &amp;texture_path);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classyage_1_1ResourceManager_html_a2799a8ff957874fbe7b7c791781255f6"><div class="ttname"><a href="classyage_1_1ResourceManager.html#a2799a8ff957874fbe7b7c791781255f6">yage::ResourceManager::texture_cache_</a></div><div class="ttdeci">static TextureCache texture_cache_</div><div class="ttdef"><b>Definition:</b> resourcemanager.h:32</div></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <a class="code" href="structyage_1_1Texture.html">Texture</a> <a class="code" href="classyage_1_1ResourceManager.html#aec533f266d9b432050faed301f4191dc">getTexture</a>(<span class="keyword">const</span> std::string &amp;texture_path, <span class="keywordtype">int</span> x = 1,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                              <span class="keywordtype">int</span> y = 1);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classyage_1_1ResourceManager_html"><div class="ttname"><a href="classyage_1_1ResourceManager.html">yage::ResourceManager</a></div><div class="ttdef"><b>Definition:</b> resourcemanager.h:29</div></div>
 <div class="ttc" id="texturecache_8h_html"><div class="ttname"><a href="texturecache_8h.html">texturecache.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="classyage_1_1ResourceManager_html_a36d805924374f27aa7dbce1d47795b25"><div class="ttname"><a href="classyage_1_1ResourceManager.html#a36d805924374f27aa7dbce1d47795b25">yage::ResourceManager::getTexture</a></div><div class="ttdeci">static Texture getTexture(const std::string &amp;texture_path)</div><div class="ttdef"><b>Definition:</b> resourcemanager.cpp:17</div></div>
 <div class="ttc" id="structyage_1_1Texture_html"><div class="ttname"><a href="structyage_1_1Texture.html">yage::Texture</a></div><div class="ttdef"><b>Definition:</b> texture.h:17</div></div>
 <div class="ttc" id="classyage_1_1TextureCache_html"><div class="ttname"><a href="classyage_1_1TextureCache.html">yage::TextureCache</a></div><div class="ttdef"><b>Definition:</b> texturecache.h:19</div></div>
+<div class="ttc" id="classyage_1_1ResourceManager_html_aec533f266d9b432050faed301f4191dc"><div class="ttname"><a href="classyage_1_1ResourceManager.html#aec533f266d9b432050faed301f4191dc">yage::ResourceManager::getTexture</a></div><div class="ttdeci">static Texture getTexture(const std::string &amp;texture_path, int x=1, int y=1)</div><div class="ttdef"><b>Definition:</b> resourcemanager.cpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="resourcemanager_8h.html">resourcemanager.h</a></li>
-    <li class="footer">Generated on Sat Dec 23 2017 01:50:21 for YAGE by
+    <li class="footer">Generated on Sat Jan 6 2018 11:36:16 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -116,47 +116,74 @@ $(document).ready(function(){initNavTree('logger_8h_source.html','');});
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span>Active;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span>LogMessage;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span>LogSink;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classyage_1_1Logger.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Logger.html">Logger</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classyage_1_1Logger.html#a950c0c75b86bf330cf11a0ad29bd9a64">Logger</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> <a class="code" href="classyage_1_1Logger.html#a541278f8908daecb8d56d6da0a5642b6">operator()</a>(<span class="keyword">const</span> std::string &amp;fileName, <span class="keywordtype">int</span> lineNum);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Logger.html#afe5dc1d30d3fd2599a119455672d6e00">flush</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> *msg);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Logger.html#a5ec9a752e8cbb278342fdb49520fbcdd">add</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1LogSink.html">LogSink</a> &amp;sink);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <span class="keyword">remove</span>(<span class="keyword">const</span> <a class="code" href="classyage_1_1LogSink.html">LogSink</a> &amp;sink);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Logger.html#a036fcbfcb9d3428931ec5a11237501a8">clear</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../util/active.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="loglevel_8h.html">loglevel.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logmessage_8h.html">logmessage.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logsink_8h.html">logsink.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classyage_1_1Logger.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Logger.html">Logger</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classyage_1_1Logger.html#a950c0c75b86bf330cf11a0ad29bd9a64">Logger</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classyage_1_1Logger.html#a950c0c75b86bf330cf11a0ad29bd9a64">Logger</a>(<span class="keyword">const</span> std::string &amp;file_path);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classyage_1_1Logger.html#a950c0c75b86bf330cf11a0ad29bd9a64">Logger</a>(<a class="code" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">LogLevel</a> min_level);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classyage_1_1Logger.html#a950c0c75b86bf330cf11a0ad29bd9a64">Logger</a>(<a class="code" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">LogLevel</a> min_level, <span class="keyword">const</span> std::string &amp;file_path);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> <a class="code" href="classyage_1_1Logger.html#a3c7d6d1a9ccf0397dc81350cef6782f2">operator()</a>(<a class="code" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">LogLevel</a> level = <a class="code" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a>, <span class="keyword">const</span> std::string &amp;fileName = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                          <span class="keywordtype">int</span> lineNum = -1);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <a class="code" href="classyage_1_1Logger.html">Logger</a> &amp;<a class="code" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">instance</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classyage_1_1Logger.html#a4135a0742877aa36d52f1867bc4e7b1f">   38</a></span>&#160;    std::vector&lt;LogSink&gt; <a class="code" href="classyage_1_1Logger.html#a4135a0742877aa36d52f1867bc4e7b1f">sinks_</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classyage_1_1Logger.html#a489f97b1b21ac425ebbdb063de068744">   39</a></span>&#160;    std::unique_ptr&lt;Active&gt; <a class="code" href="classyage_1_1Logger.html#a489f97b1b21ac425ebbdb063de068744">active_</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Logger.html#afe5dc1d30d3fd2599a119455672d6e00">flush</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> *msg);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Logger.html#a5ec9a752e8cbb278342fdb49520fbcdd">add</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1LogSink.html">LogSink</a> &amp;sink);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <span class="keyword">remove</span>(<span class="keyword">const</span> <a class="code" href="classyage_1_1LogSink.html">LogSink</a> &amp;sink);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Logger.html#a036fcbfcb9d3428931ec5a11237501a8">clear</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> <a class="code" href="classyage_1_1Logger.html">Logger</a> &amp;<a class="code" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">instance</a>();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="logger_8h.html#aade1a167159e476dee85a6a097cb7ccc">   44</a></span>&#160;<span class="preprocessor">#define gLog (yage::Logger::instance()(__FILE__, __LINE__))</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// setter for the level</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Logger.html#a2ce5eb7eb1b108e38c1b90655999a8eb">setLevel</a>(<a class="code" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">LogLevel</a> min_level);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::vector&lt;LogSink&gt; sinks_;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::unique_ptr&lt;Active&gt; active_;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">LogLevel</a> min_level_;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="logger_8h.html#a9055939896a9ae18d3a833c5023e98d1">   53</a></span>&#160;<span class="preprocessor">#define yLogger (yage::Logger::instance())</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="logger_8h.html#a0061fe08a4e2d9ed843a782044d3528f">   55</a></span>&#160;<span class="preprocessor">#define yLogDebug                                                              \</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    (yage::Logger::instance()(yage::LogLevel::DEBUG, __FILE__, __LINE__))</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="logger_8h.html#a17afd33b46d111ec5e97f20e2c667e2d">   58</a></span>&#160;<span class="preprocessor">#define yLogInfo (yage::Logger::instance()(yage::LogLevel::INFO, __FILE__, __LINE__))</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="logger_8h.html#ac26448787b9e07f1cf6e928e23ef9b7a">   60</a></span>&#160;<span class="preprocessor">#define yLogWarning                                                            \</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">    (yage::Logger::instance()(yage::LogLevel::WARNING, __FILE__, __LINE__))</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="logger_8h.html#ac71f194a096b3d7b4cf4ec448ee8b87d">   63</a></span>&#160;<span class="preprocessor">#define yLogError                                                              \</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">    (yage::Logger::instance()(yage::LogLevel::ERROR, __FILE__, __LINE__))</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="logger_8h.html#a89062c0e6f5d9d0dd34553259c0fe00e">   66</a></span>&#160;<span class="preprocessor">#define yLogFatal                                                              \</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">    (yage::Logger::instance()(yage::LogLevel::FATAL, __FILE__, __LINE__))</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classyage_1_1Logger_html_a950c0c75b86bf330cf11a0ad29bd9a64"><div class="ttname"><a href="classyage_1_1Logger.html#a950c0c75b86bf330cf11a0ad29bd9a64">yage::Logger::Logger</a></div><div class="ttdeci">Logger()</div><div class="ttdef"><b>Definition:</b> logger.cpp:22</div></div>
-<div class="ttc" id="classyage_1_1LogMessage_html"><div class="ttname"><a href="classyage_1_1LogMessage.html">yage::LogMessage</a></div><div class="ttdef"><b>Definition:</b> logmessage.h:21</div></div>
-<div class="ttc" id="classyage_1_1Logger_html_a489f97b1b21ac425ebbdb063de068744"><div class="ttname"><a href="classyage_1_1Logger.html#a489f97b1b21ac425ebbdb063de068744">yage::Logger::active_</a></div><div class="ttdeci">std::unique_ptr&lt; Active &gt; active_</div><div class="ttdef"><b>Definition:</b> logger.h:39</div></div>
-<div class="ttc" id="classyage_1_1Logger_html_a036fcbfcb9d3428931ec5a11237501a8"><div class="ttname"><a href="classyage_1_1Logger.html#a036fcbfcb9d3428931ec5a11237501a8">yage::Logger::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> logger.cpp:61</div></div>
-<div class="ttc" id="classyage_1_1Logger_html_a4135a0742877aa36d52f1867bc4e7b1f"><div class="ttname"><a href="classyage_1_1Logger.html#a4135a0742877aa36d52f1867bc4e7b1f">yage::Logger::sinks_</a></div><div class="ttdeci">std::vector&lt; LogSink &gt; sinks_</div><div class="ttdef"><b>Definition:</b> logger.h:38</div></div>
-<div class="ttc" id="classyage_1_1Logger_html_ad165738c5b738d80a14b0ee1319cae2e"><div class="ttname"><a href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a></div><div class="ttdeci">static Logger &amp; instance()</div><div class="ttdef"><b>Definition:</b> logger.cpp:66</div></div>
-<div class="ttc" id="classyage_1_1Logger_html"><div class="ttname"><a href="classyage_1_1Logger.html">yage::Logger</a></div><div class="ttdef"><b>Definition:</b> logger.h:23</div></div>
-<div class="ttc" id="classyage_1_1Logger_html_afe5dc1d30d3fd2599a119455672d6e00"><div class="ttname"><a href="classyage_1_1Logger.html#afe5dc1d30d3fd2599a119455672d6e00">yage::Logger::flush</a></div><div class="ttdeci">void flush(const LogMessage *msg)</div><div class="ttdef"><b>Definition:</b> logger.cpp:33</div></div>
-<div class="ttc" id="classyage_1_1Logger_html_a541278f8908daecb8d56d6da0a5642b6"><div class="ttname"><a href="classyage_1_1Logger.html#a541278f8908daecb8d56d6da0a5642b6">yage::Logger::operator()</a></div><div class="ttdeci">LogMessage operator()(const std::string &amp;fileName, int lineNum)</div><div class="ttdef"><b>Definition:</b> logger.cpp:28</div></div>
-<div class="ttc" id="classyage_1_1Logger_html_a5ec9a752e8cbb278342fdb49520fbcdd"><div class="ttname"><a href="classyage_1_1Logger.html#a5ec9a752e8cbb278342fdb49520fbcdd">yage::Logger::add</a></div><div class="ttdeci">void add(const LogSink &amp;sink)</div><div class="ttdef"><b>Definition:</b> logger.cpp:47</div></div>
+<div class="ttc" id="classyage_1_1LogMessage_html"><div class="ttname"><a href="classyage_1_1LogMessage.html">yage::LogMessage</a></div><div class="ttdef"><b>Definition:</b> logmessage.h:23</div></div>
+<div class="ttc" id="namespaceyage_html_a4ac616fa26af17775ed558a4c08e4788"><div class="ttname"><a href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">yage::LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> loglevel.h:14</div></div>
+<div class="ttc" id="classyage_1_1Logger_html_a2ce5eb7eb1b108e38c1b90655999a8eb"><div class="ttname"><a href="classyage_1_1Logger.html#a2ce5eb7eb1b108e38c1b90655999a8eb">yage::Logger::setLevel</a></div><div class="ttdeci">void setLevel(LogLevel min_level)</div><div class="ttdef"><b>Definition:</b> logger.cpp:95</div></div>
+<div class="ttc" id="classyage_1_1Logger_html_a036fcbfcb9d3428931ec5a11237501a8"><div class="ttname"><a href="classyage_1_1Logger.html#a036fcbfcb9d3428931ec5a11237501a8">yage::Logger::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> logger.cpp:83</div></div>
+<div class="ttc" id="classyage_1_1Logger_html_ad165738c5b738d80a14b0ee1319cae2e"><div class="ttname"><a href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a></div><div class="ttdeci">static Logger &amp; instance()</div><div class="ttdef"><b>Definition:</b> logger.cpp:88</div></div>
+<div class="ttc" id="classyage_1_1Logger_html_a3c7d6d1a9ccf0397dc81350cef6782f2"><div class="ttname"><a href="classyage_1_1Logger.html#a3c7d6d1a9ccf0397dc81350cef6782f2">yage::Logger::operator()</a></div><div class="ttdeci">LogMessage operator()(LogLevel level=LogLevel::INFO, const std::string &amp;fileName=&quot;&quot;, int lineNum=-1)</div><div class="ttdef"><b>Definition:</b> logger.cpp:47</div></div>
+<div class="ttc" id="logmessage_8h_html"><div class="ttname"><a href="logmessage_8h.html">logmessage.h</a></div><div class="ttdoc"> </div></div>
+<div class="ttc" id="loglevel_8h_html"><div class="ttname"><a href="loglevel_8h.html">loglevel.h</a></div><div class="ttdoc"> </div></div>
+<div class="ttc" id="classyage_1_1Logger_html"><div class="ttname"><a href="classyage_1_1Logger.html">yage::Logger</a></div><div class="ttdoc">Logger</div><div class="ttdef"><b>Definition:</b> logger.h:24</div></div>
+<div class="ttc" id="classyage_1_1Logger_html_afe5dc1d30d3fd2599a119455672d6e00"><div class="ttname"><a href="classyage_1_1Logger.html#afe5dc1d30d3fd2599a119455672d6e00">yage::Logger::flush</a></div><div class="ttdeci">void flush(const LogMessage *msg)</div><div class="ttdef"><b>Definition:</b> logger.cpp:53</div></div>
+<div class="ttc" id="namespaceyage_html_a4ac616fa26af17775ed558a4c08e4788a551b723eafd6a31d444fcb2f5920fbd3"><div class="ttname"><a href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a551b723eafd6a31d444fcb2f5920fbd3">yage::LogLevel::INFO</a></div></div>
+<div class="ttc" id="logsink_8h_html"><div class="ttname"><a href="logsink_8h.html">logsink.h</a></div><div class="ttdoc"> </div></div>
+<div class="ttc" id="classyage_1_1Logger_html_a5ec9a752e8cbb278342fdb49520fbcdd"><div class="ttname"><a href="classyage_1_1Logger.html#a5ec9a752e8cbb278342fdb49520fbcdd">yage::Logger::add</a></div><div class="ttdeci">void add(const LogSink &amp;sink)</div><div class="ttdef"><b>Definition:</b> logger.cpp:69</div></div>
 <div class="ttc" id="classyage_1_1LogSink_html"><div class="ttname"><a href="classyage_1_1LogSink.html">yage::LogSink</a></div><div class="ttdef"><b>Definition:</b> logsink.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -164,7 +191,7 @@ $(document).ready(function(){initNavTree('logger_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="logger_8h.html">logger.h</a></li>
-    <li class="footer">Generated on Sat Dec 23 2017 01:50:21 for YAGE by
+    <li class="footer">Generated on Sat Jan 6 2018 11:36:16 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

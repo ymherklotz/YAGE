@@ -108,7 +108,6 @@ $(document).ready(function(){initNavTree('classyage_1_1Camera.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classyage_1_1Camera-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">yage::Camera Class Reference</div>  </div>
@@ -120,24 +119,17 @@ $(document).ready(function(){initNavTree('classyage_1_1Camera.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a13be1e50638977d62cff9ffba1213611"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera.html#a13be1e50638977d62cff9ffba1213611">Camera</a> (int screen_width=1280, int screen_height=720)</td></tr>
+<tr class="memdesc:a13be1e50638977d62cff9ffba1213611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a camera that looks onto the scene.  <a href="#a13be1e50638977d62cff9ffba1213611">More...</a><br/></td></tr>
 <tr class="separator:a13be1e50638977d62cff9ffba1213611"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6239cd6ad44fcdcc12d7b183c8a0f86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera.html#af6239cd6ad44fcdcc12d7b183c8a0f86">update</a> (<a class="el" href="classyage_1_1GlslProgram.html">GlslProgram</a> &amp;program)</td></tr>
-<tr class="separator:af6239cd6ad44fcdcc12d7b183c8a0f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f0af50db990c5558fd0b7b82f3978c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera.html#a99f0af50db990c5558fd0b7b82f3978c">update</a> (<a class="el" href="classyage_1_1Shader.html">Shader</a> &amp;program)</td></tr>
+<tr class="memdesc:a99f0af50db990c5558fd0b7b82f3978c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the camera matrix value in the shader program that is passed to it.  <a href="#a99f0af50db990c5558fd0b7b82f3978c">More...</a><br/></td></tr>
+<tr class="separator:a99f0af50db990c5558fd0b7b82f3978c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a012820185cceb451926bc4ef1607b324"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera.html#a012820185cceb451926bc4ef1607b324">move</a> (const glm::vec2 &amp;direction)</td></tr>
+<tr class="memdesc:a012820185cceb451926bc4ef1607b324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the camera using a two-dimensional displacement vector to describe the movement.  <a href="#a012820185cceb451926bc4ef1607b324">More...</a><br/></td></tr>
 <tr class="separator:a012820185cceb451926bc4ef1607b324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a2a6ad87f9f4c38c3ffe6ec6c090e4c7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera.html#a2a6ad87f9f4c38c3ffe6ec6c090e4c7c">update_matrix_</a> = true</td></tr>
-<tr class="separator:a2a6ad87f9f4c38c3ffe6ec6c090e4c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a665b599105c6930711d31ada6e12dc8f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera.html#a665b599105c6930711d31ada6e12dc8f">scale_</a> = 1</td></tr>
-<tr class="separator:a665b599105c6930711d31ada6e12dc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2a2daab94b27622cc0d7764b13edfc2"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera.html#af2a2daab94b27622cc0d7764b13edfc2">position_</a></td></tr>
-<tr class="separator:af2a2daab94b27622cc0d7764b13edfc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c1c0547d4c4a9bce102f2fb0c9071b3"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera.html#a2c1c0547d4c4a9bce102f2fb0c9071b3">camera_matrix_</a></td></tr>
-<tr class="separator:a2c1c0547d4c4a9bce102f2fb0c9071b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7419b0ba645f44f05fa125421c041e26"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera.html#a7419b0ba645f44f05fa125421c041e26">ortho_matrix_</a></td></tr>
-<tr class="separator:a7419b0ba645f44f05fa125421c041e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b50af04dae6eca905c5008ef93b72d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Camera.html#a8b50af04dae6eca905c5008ef93b72d0">zoom</a> (float factor)</td></tr>
+<tr class="memdesc:a8b50af04dae6eca905c5008ef93b72d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zooms the camera by an incremental amount.  <a href="#a8b50af04dae6eca905c5008ef93b72d0">More...</a><br/></td></tr>
+<tr class="separator:a8b50af04dae6eca905c5008ef93b72d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a13be1e50638977d62cff9ffba1213611"></a>
@@ -164,6 +156,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates a camera that looks onto the scene. </p>
+<p>The screen width and screen height should be the current size of the window that the camera is being used on so that is functions correctly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screen_width</td><td>Current screen width of the <a class="el" href="classyage_1_1Window.html">Window</a>. </td></tr>
+    <tr><td class="paramname">screen_height</td><td>Current screen height of the <a class="el" href="classyage_1_1Window.html">Window</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -181,122 +183,63 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Moves the camera using a two-dimensional displacement vector to describe the movement. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>Two-dimensional vector to describe the displacement of the camera. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="af6239cd6ad44fcdcc12d7b183c8a0f86"></a>
+<a class="anchor" id="a99f0af50db990c5558fd0b7b82f3978c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void yage::Camera::update </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classyage_1_1GlslProgram.html">GlslProgram</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classyage_1_1Shader.html">Shader</a> &amp;&#160;</td>
           <td class="paramname"><em>program</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a2c1c0547d4c4a9bce102f2fb0c9071b3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">glm::mat4 yage::Camera::camera_matrix_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Updates the camera matrix value in the shader program that is passed to it. </p>
+<p>This must be a parameter <code>P</code> in the shader for this function to work.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">program</td><td><a class="el" href="classyage_1_1Shader.html">Shader</a> program to make changes to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Make this function more general to be able to be able to use any parametre in then shader as the camera matrix and not make it dependent on it being <code>P</code>. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a7419b0ba645f44f05fa125421c041e26"></a>
+<a class="anchor" id="a8b50af04dae6eca905c5008ef93b72d0"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">glm::mat4 yage::Camera::ortho_matrix_</td>
+          <td class="memname">void yage::Camera::zoom </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>factor</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="af2a2daab94b27622cc0d7764b13edfc2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">glm::vec2 yage::Camera::position_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a665b599105c6930711d31ada6e12dc8f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float yage::Camera::scale_ = 1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a2a6ad87f9f4c38c3ffe6ec6c090e4c7c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool yage::Camera::update_matrix_ = true</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Zooms the camera by an incremental amount. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">factor</td><td>Factor by which the camera should zoom. This can also be a negative number for the camera to zoom out. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -310,7 +253,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="classyage_1_1Camera.html">Camera</a></li>
-    <li class="footer">Generated on Sat Dec 23 2017 01:50:21 for YAGE by
+    <li class="footer">Generated on Sat Jan 6 2018 11:36:17 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

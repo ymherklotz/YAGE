@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['offset_5f',['offset_',['../classyage_1_1RenderBatch.html#a129b5fa960e1acc85650ce06b10905e7',1,'yage::RenderBatch']]],
-  ['ortho_5fmatrix_5f',['ortho_matrix_',['../classyage_1_1Camera.html#a7419b0ba645f44f05fa125421c041e26',1,'yage::Camera']]],
-  ['owner_5f',['owner_',['../classyage_1_1LogMessage.html#ad093f33360fc32ef014d215b0c1d4792',1,'yage::LogMessage']]]
+  ['num_5fvertices',['num_vertices',['../structyage_1_1details_1_1RenderBatch.html#a27ed6f3911a6d7c8c2b6b4e5a5889b29',1,'yage::details::RenderBatch::num_vertices()'],['../classyage_1_1SpriteBatch.html#a6e01d11880a841b153e950aa8307b1a5',1,'yage::SpriteBatch::NUM_VERTICES()']]]
 ];

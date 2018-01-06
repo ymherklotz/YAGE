@@ -26,5 +26,6 @@ var searchData=
   ['f7',['F7',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a47489eb597b7db34caa24b1fc78fc839',1,'yage']]],
   ['f8',['F8',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a4787509ad9f9d747a81a30e9dde3d4a7',1,'yage']]],
   ['f9',['F9',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a892a245e287c163080b23db737d3c4c9',1,'yage']]],
+  ['fatal',['FATAL',['../namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a19da7170bea36556dde582519795f3fc',1,'yage']]],
   ['fullscreen',['FULLSCREEN',['../namespaceyage.html#a09d41deeced5fca5df9dc680c9e77c38a409ae568f380139ffa38d7fffa5ffb2f',1,'yage']]]
 ];

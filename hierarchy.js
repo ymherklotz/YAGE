@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "yage::Active", "classyage_1_1Active.html", null ],
+    [ "yage::Batch", "classyage_1_1Batch.html", null ],
     [ "yage::Body", "classyage_1_1Body.html", [
       [ "yage::CollisionBody", "classyage_1_1CollisionBody.html", null ],
       [ "yage::ParticleBody", "classyage_1_1ParticleBody.html", [
@@ -12,16 +13,16 @@ var hierarchy =
       [ "yage::RectangleCollider", "classyage_1_1RectangleCollider.html", null ]
     ] ],
     [ "yage::Colour", "structyage_1_1Colour.html", null ],
-    [ "yage::LogSink::Concept", "structyage_1_1LogSink_1_1Concept.html", [
-      [ "yage::LogSink::Model< T >", "structyage_1_1LogSink_1_1Model.html", null ]
-    ] ],
     [ "yage::details::Coordinate", "structyage_1_1details_1_1Coordinate.html", null ],
-    [ "yage::GlslProgram", "classyage_1_1GlslProgram.html", null ],
-    [ "yage::Glyph", "classyage_1_1Glyph.html", null ],
+    [ "yage::Drawable", "classyage_1_1Drawable.html", [
+      [ "yage::Shape", "classyage_1_1Shape.html", [
+        [ "yage::Rectangle", "classyage_1_1Rectangle.html", null ]
+      ] ]
+    ] ],
+    [ "yage::details::Glyph", "structyage_1_1details_1_1Glyph.html", null ],
     [ "yage::ImageLoader", "classyage_1_1ImageLoader.html", null ],
     [ "yage::IoManager", "classyage_1_1IoManager.html", null ],
     [ "yage::Logger", "classyage_1_1Logger.html", null ],
-    [ "LogLevel", "classLogLevel.html", null ],
     [ "yage::LogMessage", "classyage_1_1LogMessage.html", null ],
     [ "yage::LogSink", "classyage_1_1LogSink.html", null ],
     [ "yage::Matrix< Rows, Cols, Type >", "classyage_1_1Matrix.html", null ],
@@ -44,12 +45,14 @@ var hierarchy =
     ] ],
     [ "yage::LogMessage::Meta", "structyage_1_1LogMessage_1_1Meta.html", null ],
     [ "yage::Position", "structyage_1_1Position.html", null ],
-    [ "yage::RenderBatch", "classyage_1_1RenderBatch.html", null ],
+    [ "yage::details::RenderBatch", "structyage_1_1details_1_1RenderBatch.html", null ],
     [ "yage::ResourceManager", "classyage_1_1ResourceManager.html", null ],
     [ "yage::details::Row< Rows, Cols, Type >", "classyage_1_1details_1_1Row.html", null ],
+    [ "yage::Shader", "classyage_1_1Shader.html", null ],
     [ "yage::Sprite", "classyage_1_1Sprite.html", null ],
     [ "yage::SpriteBatch", "classyage_1_1SpriteBatch.html", null ],
     [ "yage::SpriteSheet", "classyage_1_1SpriteSheet.html", null ],
+    [ "stbi_io_callbacks", "structstbi__io__callbacks.html", null ],
     [ "yage::SyncQueue< T >", "classyage_1_1SyncQueue.html", null ],
     [ "yage::SyncQueue< Callback >", "classyage_1_1SyncQueue.html", null ],
     [ "yage::Texture", "structyage_1_1Texture.html", null ],

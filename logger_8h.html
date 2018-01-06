@@ -119,12 +119,18 @@ $(document).ready(function(){initNavTree('logger_8h.html','');});
 <div class="textblock"><code>#include &lt;memory&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;vector&gt;</code><br/>
+<code>#include &quot;<a class="el" href="active_8h_source.html">../util/active.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="loglevel_8h_source.html">loglevel.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="logmessage_8h_source.html">logmessage.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="logsink_8h_source.html">logsink.h</a>&quot;</code><br/>
 </div>
 <p><a href="logger_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Logger.html">yage::Logger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><h2><a class="el" href="classyage_1_1Logger.html" title="Logger">Logger</a></h2>
+ <a href="classyage_1_1Logger.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -135,19 +141,90 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aade1a167159e476dee85a6a097cb7ccc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#aade1a167159e476dee85a6a097cb7ccc">gLog</a>&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(__FILE__, __LINE__))</td></tr>
-<tr class="separator:aade1a167159e476dee85a6a097cb7ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9055939896a9ae18d3a833c5023e98d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a9055939896a9ae18d3a833c5023e98d1">yLogger</a>&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>())</td></tr>
+<tr class="separator:a9055939896a9ae18d3a833c5023e98d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0061fe08a4e2d9ed843a782044d3528f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a0061fe08a4e2d9ed843a782044d3528f">yLogDebug</a>&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788adc30ec20708ef7b0f641ef78b7880a15">yage::LogLevel::DEBUG</a>, __FILE__, __LINE__))</td></tr>
+<tr class="separator:a0061fe08a4e2d9ed843a782044d3528f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17afd33b46d111ec5e97f20e2c667e2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a17afd33b46d111ec5e97f20e2c667e2d">yLogInfo</a>&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a551b723eafd6a31d444fcb2f5920fbd3">yage::LogLevel::INFO</a>, __FILE__, __LINE__))</td></tr>
+<tr class="separator:a17afd33b46d111ec5e97f20e2c667e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26448787b9e07f1cf6e928e23ef9b7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ac26448787b9e07f1cf6e928e23ef9b7a">yLogWarning</a>&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a059e9861e0400dfbe05c98a841f3f96b">yage::LogLevel::WARNING</a>, __FILE__, __LINE__))</td></tr>
+<tr class="separator:ac26448787b9e07f1cf6e928e23ef9b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71f194a096b3d7b4cf4ec448ee8b87d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ac71f194a096b3d7b4cf4ec448ee8b87d">yLogError</a>&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788abb1ca97ec761fc37101737ba0aa2e7c5">yage::LogLevel::ERROR</a>, __FILE__, __LINE__))</td></tr>
+<tr class="separator:ac71f194a096b3d7b4cf4ec448ee8b87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89062c0e6f5d9d0dd34553259c0fe00e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a89062c0e6f5d9d0dd34553259c0fe00e">yLogFatal</a>&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a19da7170bea36556dde582519795f3fc">yage::LogLevel::FATAL</a>, __FILE__, __LINE__))</td></tr>
+<tr class="separator:a89062c0e6f5d9d0dd34553259c0fe00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Copyright (c) 2017 Yann Herklotz Grave <a href="#" onclick="location.href='mai'+'lto:'+'ymh'+'er'+'klo'+'tz'+'@gm'+'ai'+'l.c'+'om'; return false;">ymher<span style="display: none;">.nosp@m.</span>klot<span style="display: none;">.nosp@m.</span>z@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </p>
+<div class="textblock"><hr/>
+ <p>Copyright (c) 2017 Yann Herklotz Grave <a href="#" onclick="location.href='mai'+'lto:'+'ymh'+'er'+'klo'+'tz'+'@gm'+'ai'+'l.c'+'om'; return false;">ymher<span style="display: none;">.nosp@m.</span>klot<span style="display: none;">.nosp@m.</span>z@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </p>
 <h2>MIT License, see LICENSE file for more details. </h2>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="aade1a167159e476dee85a6a097cb7ccc"></a>
+<a class="anchor" id="a0061fe08a4e2d9ed843a782044d3528f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define gLog&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(__FILE__, __LINE__))</td>
+          <td class="memname">#define yLogDebug&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788adc30ec20708ef7b0f641ef78b7880a15">yage::LogLevel::DEBUG</a>, __FILE__, __LINE__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac71f194a096b3d7b4cf4ec448ee8b87d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define yLogError&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788abb1ca97ec761fc37101737ba0aa2e7c5">yage::LogLevel::ERROR</a>, __FILE__, __LINE__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a89062c0e6f5d9d0dd34553259c0fe00e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define yLogFatal&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a19da7170bea36556dde582519795f3fc">yage::LogLevel::FATAL</a>, __FILE__, __LINE__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9055939896a9ae18d3a833c5023e98d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define yLogger&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a17afd33b46d111ec5e97f20e2c667e2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define yLogInfo&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a551b723eafd6a31d444fcb2f5920fbd3">yage::LogLevel::INFO</a>, __FILE__, __LINE__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac26448787b9e07f1cf6e928e23ef9b7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define yLogWarning&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a059e9861e0400dfbe05c98a841f3f96b">yage::LogLevel::WARNING</a>, __FILE__, __LINE__))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -160,7 +237,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="logger_8h.html">logger.h</a></li>
-    <li class="footer">Generated on Sat Dec 23 2017 01:50:21 for YAGE by
+    <li class="footer">Generated on Sat Jan 6 2018 11:36:17 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

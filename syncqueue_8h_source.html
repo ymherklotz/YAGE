@@ -133,9 +133,9 @@ $(document).ready(function(){initNavTree('syncqueue_8h_source.html','');});
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">push</a>(<a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;&amp;item);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#ae554585c8b44da0db79a0767c1b90968">   33</a></span>&#160;    std::queue&lt;T&gt; <a class="code" href="classyage_1_1SyncQueue.html#ae554585c8b44da0db79a0767c1b90968">queue_</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#a273dec7f58d6a727d32dcfc9b3c9622b">   34</a></span>&#160;    std::mutex <a class="code" href="classyage_1_1SyncQueue.html#a273dec7f58d6a727d32dcfc9b3c9622b">mutex_</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#af1682d934e8a71dad6718977240e83e4">   35</a></span>&#160;    std::condition_variable <a class="code" href="classyage_1_1SyncQueue.html#af1682d934e8a71dad6718977240e83e4">cond_</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::queue&lt;T&gt; queue_;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::mutex mutex_;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::condition_variable cond_;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// Template definitions</span></div>
@@ -193,11 +193,8 @@ $(document).ready(function(){initNavTree('syncqueue_8h_source.html','');});
 <div class="ttc" id="classyage_1_1SyncQueue_html_a0c8aa1c22e3e6d5094dbdeb88cff426b"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a0c8aa1c22e3e6d5094dbdeb88cff426b">yage::SyncQueue::SyncQueue</a></div><div class="ttdeci">SyncQueue()=default</div></div>
 <div class="ttc" id="classyage_1_1SyncQueue_html_a43e4ba65c8e367ed55da9b8e3e1567b6"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a43e4ba65c8e367ed55da9b8e3e1567b6">yage::SyncQueue::operator=</a></div><div class="ttdeci">SyncQueue &amp; operator=(const SyncQueue &amp;)=delete</div></div>
 <div class="ttc" id="classyage_1_1SyncQueue_html_a1f7f099e1347b82c1f2b72a5352ca05e"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">yage::SyncQueue::pop</a></div><div class="ttdeci">T pop()</div><div class="ttdef"><b>Definition:</b> syncqueue.h:41</div></div>
-<div class="ttc" id="classyage_1_1SyncQueue_html_af1682d934e8a71dad6718977240e83e4"><div class="ttname"><a href="classyage_1_1SyncQueue.html#af1682d934e8a71dad6718977240e83e4">yage::SyncQueue::cond_</a></div><div class="ttdeci">std::condition_variable cond_</div><div class="ttdef"><b>Definition:</b> syncqueue.h:35</div></div>
-<div class="ttc" id="classyage_1_1SyncQueue_html_a273dec7f58d6a727d32dcfc9b3c9622b"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a273dec7f58d6a727d32dcfc9b3c9622b">yage::SyncQueue::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdef"><b>Definition:</b> syncqueue.h:34</div></div>
 <div class="ttc" id="classyage_1_1SyncQueue_html_a4ef8940b49b9c1b7a213fd38847370b1"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">yage::SyncQueue::push</a></div><div class="ttdeci">void push(const T &amp;item)</div><div class="ttdef"><b>Definition:</b> syncqueue.h:68</div></div>
 <div class="ttc" id="namespaceyage_html_ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">yage::key::T</a></div></div>
-<div class="ttc" id="classyage_1_1SyncQueue_html_ae554585c8b44da0db79a0767c1b90968"><div class="ttname"><a href="classyage_1_1SyncQueue.html#ae554585c8b44da0db79a0767c1b90968">yage::SyncQueue::queue_</a></div><div class="ttdeci">std::queue&lt; T &gt; queue_</div><div class="ttdef"><b>Definition:</b> syncqueue.h:33</div></div>
 <div class="ttc" id="classyage_1_1SyncQueue_html"><div class="ttname"><a href="classyage_1_1SyncQueue.html">yage::SyncQueue</a></div><div class="ttdef"><b>Definition:</b> syncqueue.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -205,7 +202,7 @@ $(document).ready(function(){initNavTree('syncqueue_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_48a91ae829881cbedcfc124d2027890d.html">util</a></li><li class="navelem"><a class="el" href="syncqueue_8h.html">syncqueue.h</a></li>
-    <li class="footer">Generated on Sat Dec 23 2017 01:50:21 for YAGE by
+    <li class="footer">Generated on Sat Jan 6 2018 11:36:17 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

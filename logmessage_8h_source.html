@@ -116,77 +116,80 @@ $(document).ready(function(){initNavTree('logmessage_8h_source.html','');});
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span>Logger;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="loglevel_8h.html">loglevel.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classyage_1_1LogMessage.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1LogMessage.html">LogMessage</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html#af82ed7ceef5cfdac54ad2e176deb9fca">~LogMessage</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html#af4ab2630201ecd155c329fbfebe352be">LogMessage</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;msg) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span>Logger;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classyage_1_1LogMessage.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1LogMessage.html">LogMessage</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html#af82ed7ceef5cfdac54ad2e176deb9fca">~LogMessage</a>();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;<a class="code" href="classyage_1_1LogMessage.html#a31eb7ca394acbcfedca104e709f1c4ae">operator=</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;msg) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;<a class="code" href="classyage_1_1LogMessage.html#a31eb7ca394acbcfedca104e709f1c4ae">operator=</a>(<a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;&amp;msg) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;<a class="code" href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">operator&lt;&lt;</a>(<span class="keyword">const</span> <a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;value);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;<a class="code" href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">operator&lt;&lt;</a>(std::ostream &amp;(*fn)(std::ostream &amp;os));</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html#af4ab2630201ecd155c329fbfebe352be">LogMessage</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;msg) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;<a class="code" href="classyage_1_1LogMessage.html#a31eb7ca394acbcfedca104e709f1c4ae">operator=</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;msg) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;<a class="code" href="classyage_1_1LogMessage.html#a31eb7ca394acbcfedca104e709f1c4ae">operator=</a>(<a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;&amp;msg) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;<a class="code" href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">operator&lt;&lt;</a>(<span class="keyword">const</span> <a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;value);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structyage_1_1LogMessage_1_1Meta.html">   36</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structyage_1_1LogMessage_1_1Meta.html">Meta</a> {</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structyage_1_1LogMessage_1_1Meta.html#ae3ef1b01f47ef6254b8aa6fce13db7c4">   37</a></span>&#160;        std::string <a class="code" href="structyage_1_1LogMessage_1_1Meta.html#ae3ef1b01f47ef6254b8aa6fce13db7c4">fileName</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structyage_1_1LogMessage_1_1Meta.html#a9df0fa3ac10256390a1fe0c873a9f362">   38</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structyage_1_1LogMessage_1_1Meta.html#a9df0fa3ac10256390a1fe0c873a9f362">lineNo</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classyage_1_1LogMessage.html#aff02b76416d2846736b7ecd798921a0a">   42</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classyage_1_1Logger.html">Logger</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;<a class="code" href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">operator&lt;&lt;</a>(std::ostream &amp;(*fn)(std::ostream &amp;os));</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structyage_1_1LogMessage_1_1Meta.html">   38</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structyage_1_1LogMessage_1_1Meta.html">Meta</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structyage_1_1LogMessage_1_1Meta.html#aa265c76e7ce54e4b912e1c41333fad3b">   39</a></span>&#160;        <a class="code" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">LogLevel</a> <a class="code" href="structyage_1_1LogMessage_1_1Meta.html#aa265c76e7ce54e4b912e1c41333fad3b">level</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structyage_1_1LogMessage_1_1Meta.html#ae3ef1b01f47ef6254b8aa6fce13db7c4">   40</a></span>&#160;        std::string <a class="code" href="structyage_1_1LogMessage_1_1Meta.html#ae3ef1b01f47ef6254b8aa6fce13db7c4">fileName</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structyage_1_1LogMessage_1_1Meta.html#ac2951995b1f4ebf28e94bcd268c3dd3c">   41</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structyage_1_1LogMessage_1_1Meta.html#ac2951995b1f4ebf28e94bcd268c3dd3c">line</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classyage_1_1LogMessage.html#ae34f407242db5713632181b4ce9ae3d5">   44</a></span>&#160;    std::ostringstream <a class="code" href="classyage_1_1LogMessage.html#ae34f407242db5713632181b4ce9ae3d5">buffer_</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classyage_1_1LogMessage.html#ad093f33360fc32ef014d215b0c1d4792">   45</a></span>&#160;    <a class="code" href="classyage_1_1Logger.html">Logger</a> *<a class="code" href="classyage_1_1LogMessage.html#ad093f33360fc32ef014d215b0c1d4792">owner_</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classyage_1_1LogMessage.html#a80b72c0e143b382538c347c201cbb4ee">   46</a></span>&#160;    <a class="code" href="structyage_1_1LogMessage_1_1Meta.html">Meta</a> <a class="code" href="classyage_1_1LogMessage.html#a80b72c0e143b382538c347c201cbb4ee">meta_</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html#af4ab2630201ecd155c329fbfebe352be">LogMessage</a>(<a class="code" href="classyage_1_1Logger.html">Logger</a> *owner, <span class="keyword">const</span> std::string &amp;fileName_i, <span class="keywordtype">int</span> lineNum_i);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html#af4ab2630201ecd155c329fbfebe352be">LogMessage</a>(<a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;&amp;msg);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/* -----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> * Template definitions</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> * -----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">   58</a></span>&#160;<a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;<a class="code" href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">LogMessage::operator&lt;&lt;</a>(<span class="keyword">const</span> T &amp;value)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html#ae34f407242db5713632181b4ce9ae3d5">buffer_</a> &lt;&lt; value;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structyage_1_1LogMessage_1_1Meta_html_a9df0fa3ac10256390a1fe0c873a9f362"><div class="ttname"><a href="structyage_1_1LogMessage_1_1Meta.html#a9df0fa3ac10256390a1fe0c873a9f362">yage::LogMessage::Meta::lineNo</a></div><div class="ttdeci">int lineNo</div><div class="ttdef"><b>Definition:</b> logmessage.h:38</div></div>
-<div class="ttc" id="classyage_1_1LogMessage_html"><div class="ttname"><a href="classyage_1_1LogMessage.html">yage::LogMessage</a></div><div class="ttdef"><b>Definition:</b> logmessage.h:21</div></div>
-<div class="ttc" id="classyage_1_1LogMessage_html_a80b72c0e143b382538c347c201cbb4ee"><div class="ttname"><a href="classyage_1_1LogMessage.html#a80b72c0e143b382538c347c201cbb4ee">yage::LogMessage::meta_</a></div><div class="ttdeci">Meta meta_</div><div class="ttdef"><b>Definition:</b> logmessage.h:46</div></div>
-<div class="ttc" id="classyage_1_1LogMessage_html_af79ecd529e839a5a3e99077dde60df90"><div class="ttname"><a href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">yage::LogMessage::operator&lt;&lt;</a></div><div class="ttdeci">LogMessage &amp; operator&lt;&lt;(const T &amp;value)</div><div class="ttdef"><b>Definition:</b> logmessage.h:58</div></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classyage_1_1LogMessage.html#aff02b76416d2846736b7ecd798921a0a">   45</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classyage_1_1Logger.html">Logger</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::ostringstream buffer_;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classyage_1_1Logger.html">Logger</a> *owner_;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="structyage_1_1LogMessage_1_1Meta.html">Meta</a> meta_;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html#af4ab2630201ecd155c329fbfebe352be">LogMessage</a>(<a class="code" href="classyage_1_1Logger.html">Logger</a> *owner, <a class="code" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">LogLevel</a> level, <span class="keyword">const</span> std::string &amp;file_name, <span class="keywordtype">int</span> line_num);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classyage_1_1LogMessage.html#af4ab2630201ecd155c329fbfebe352be">LogMessage</a>(<a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;&amp;msg);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/* -----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> * Template definitions</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> * -----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">   61</a></span>&#160;<a class="code" href="classyage_1_1LogMessage.html">LogMessage</a> &amp;<a class="code" href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">LogMessage::operator&lt;&lt;</a>(<span class="keyword">const</span> T &amp;value)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    buffer_ &lt;&lt; value;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classyage_1_1LogMessage_html"><div class="ttname"><a href="classyage_1_1LogMessage.html">yage::LogMessage</a></div><div class="ttdef"><b>Definition:</b> logmessage.h:23</div></div>
+<div class="ttc" id="namespaceyage_html_a4ac616fa26af17775ed558a4c08e4788"><div class="ttname"><a href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">yage::LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> loglevel.h:14</div></div>
+<div class="ttc" id="classyage_1_1LogMessage_html_af79ecd529e839a5a3e99077dde60df90"><div class="ttname"><a href="classyage_1_1LogMessage.html#af79ecd529e839a5a3e99077dde60df90">yage::LogMessage::operator&lt;&lt;</a></div><div class="ttdeci">LogMessage &amp; operator&lt;&lt;(const T &amp;value)</div><div class="ttdef"><b>Definition:</b> logmessage.h:61</div></div>
 <div class="ttc" id="classyage_1_1LogMessage_html_af82ed7ceef5cfdac54ad2e176deb9fca"><div class="ttname"><a href="classyage_1_1LogMessage.html#af82ed7ceef5cfdac54ad2e176deb9fca">yage::LogMessage::~LogMessage</a></div><div class="ttdeci">~LogMessage()</div></div>
-<div class="ttc" id="classyage_1_1LogMessage_html_ae34f407242db5713632181b4ce9ae3d5"><div class="ttname"><a href="classyage_1_1LogMessage.html#ae34f407242db5713632181b4ce9ae3d5">yage::LogMessage::buffer_</a></div><div class="ttdeci">std::ostringstream buffer_</div><div class="ttdef"><b>Definition:</b> logmessage.h:44</div></div>
-<div class="ttc" id="structyage_1_1LogMessage_1_1Meta_html_ae3ef1b01f47ef6254b8aa6fce13db7c4"><div class="ttname"><a href="structyage_1_1LogMessage_1_1Meta.html#ae3ef1b01f47ef6254b8aa6fce13db7c4">yage::LogMessage::Meta::fileName</a></div><div class="ttdeci">std::string fileName</div><div class="ttdef"><b>Definition:</b> logmessage.h:37</div></div>
+<div class="ttc" id="structyage_1_1LogMessage_1_1Meta_html_ae3ef1b01f47ef6254b8aa6fce13db7c4"><div class="ttname"><a href="structyage_1_1LogMessage_1_1Meta.html#ae3ef1b01f47ef6254b8aa6fce13db7c4">yage::LogMessage::Meta::fileName</a></div><div class="ttdeci">std::string fileName</div><div class="ttdef"><b>Definition:</b> logmessage.h:40</div></div>
 <div class="ttc" id="classyage_1_1LogMessage_html_af4ab2630201ecd155c329fbfebe352be"><div class="ttname"><a href="classyage_1_1LogMessage.html#af4ab2630201ecd155c329fbfebe352be">yage::LogMessage::LogMessage</a></div><div class="ttdeci">LogMessage(const LogMessage &amp;msg)=delete</div></div>
+<div class="ttc" id="structyage_1_1LogMessage_1_1Meta_html_ac2951995b1f4ebf28e94bcd268c3dd3c"><div class="ttname"><a href="structyage_1_1LogMessage_1_1Meta.html#ac2951995b1f4ebf28e94bcd268c3dd3c">yage::LogMessage::Meta::line</a></div><div class="ttdeci">int line</div><div class="ttdef"><b>Definition:</b> logmessage.h:41</div></div>
 <div class="ttc" id="namespaceyage_html_ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">yage::key::T</a></div></div>
-<div class="ttc" id="classyage_1_1Logger_html"><div class="ttname"><a href="classyage_1_1Logger.html">yage::Logger</a></div><div class="ttdef"><b>Definition:</b> logger.h:23</div></div>
+<div class="ttc" id="structyage_1_1LogMessage_1_1Meta_html_aa265c76e7ce54e4b912e1c41333fad3b"><div class="ttname"><a href="structyage_1_1LogMessage_1_1Meta.html#aa265c76e7ce54e4b912e1c41333fad3b">yage::LogMessage::Meta::level</a></div><div class="ttdeci">LogLevel level</div><div class="ttdef"><b>Definition:</b> logmessage.h:39</div></div>
+<div class="ttc" id="loglevel_8h_html"><div class="ttname"><a href="loglevel_8h.html">loglevel.h</a></div><div class="ttdoc"> </div></div>
+<div class="ttc" id="classyage_1_1Logger_html"><div class="ttname"><a href="classyage_1_1Logger.html">yage::Logger</a></div><div class="ttdoc">Logger</div><div class="ttdef"><b>Definition:</b> logger.h:24</div></div>
 <div class="ttc" id="classyage_1_1LogMessage_html_a31eb7ca394acbcfedca104e709f1c4ae"><div class="ttname"><a href="classyage_1_1LogMessage.html#a31eb7ca394acbcfedca104e709f1c4ae">yage::LogMessage::operator=</a></div><div class="ttdeci">LogMessage &amp; operator=(const LogMessage &amp;msg)=delete</div></div>
-<div class="ttc" id="structyage_1_1LogMessage_1_1Meta_html"><div class="ttname"><a href="structyage_1_1LogMessage_1_1Meta.html">yage::LogMessage::Meta</a></div><div class="ttdef"><b>Definition:</b> logmessage.h:36</div></div>
-<div class="ttc" id="classyage_1_1LogMessage_html_ad093f33360fc32ef014d215b0c1d4792"><div class="ttname"><a href="classyage_1_1LogMessage.html#ad093f33360fc32ef014d215b0c1d4792">yage::LogMessage::owner_</a></div><div class="ttdeci">Logger * owner_</div><div class="ttdef"><b>Definition:</b> logmessage.h:45</div></div>
+<div class="ttc" id="structyage_1_1LogMessage_1_1Meta_html"><div class="ttname"><a href="structyage_1_1LogMessage_1_1Meta.html">yage::LogMessage::Meta</a></div><div class="ttdef"><b>Definition:</b> logmessage.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="logmessage_8h.html">logmessage.h</a></li>
-    <li class="footer">Generated on Sat Dec 23 2017 01:50:21 for YAGE by
+    <li class="footer">Generated on Sat Jan 6 2018 11:36:16 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['height',['height',['../structyage_1_1details_1_1Coordinate.html#a23585afbdaa9bb742353a4c90878a941',1,'yage::details::Coordinate::height()'],['../structyage_1_1Texture.html#a5ce16ac8ad034f7042620a418783b41e',1,'yage::Texture::height()']]],
-  ['height_5f',['height_',['../classyage_1_1Sprite.html#abe6306d84f416b99ff3725ac6d9659d3',1,'yage::Sprite']]]
+  ['g',['g',['../structyage_1_1Colour.html#a205d3a63268f4879adf27aabdf71a6dd',1,'yage::Colour']]],
+  ['gravity',['GRAVITY',['../classyage_1_1Body.html#a4f61913cf00244a6160e09cda846f766',1,'yage::Body']]],
+  ['gravity_5f',['gravity_',['../classyage_1_1Body.html#a454a7c59d07c94afb0a35c3d53ec2191',1,'yage::Body']]]
 ];

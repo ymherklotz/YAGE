@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['imageloader',['ImageLoader',['../classyage_1_1ImageLoader.html',1,'yage']]],
-  ['iomanager',['IoManager',['../classyage_1_1IoManager.html',1,'yage']]]
+  ['glyph',['Glyph',['../structyage_1_1details_1_1Glyph.html',1,'yage::details']]]
 ];

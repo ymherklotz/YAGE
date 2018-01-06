@@ -108,7 +108,6 @@ $(document).ready(function(){initNavTree('classyage_1_1Window.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classyage_1_1Window-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">yage::Window Class Reference</div>  </div>
@@ -151,12 +150,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5e3b209289bc343609d809d5b7f23cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a311e27b1e588f0fce540ce040dcbd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Window.html#a1a311e27b1e588f0fce540ce040dcbd5">pollEvents</a> () const </td></tr>
 <tr class="separator:a1a311e27b1e588f0fce540ce040dcbd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a7b09e6b3e575a40b99bfb7c685432787"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Window.html#a7b09e6b3e575a40b99bfb7c685432787">window_</a> = nullptr</td></tr>
-<tr class="memdesc:a7b09e6b3e575a40b99bfb7c685432787"><td class="mdescLeft">&#160;</td><td class="mdescRight">window handle  <a href="#a7b09e6b3e575a40b99bfb7c685432787">More...</a><br/></td></tr>
-<tr class="separator:a7b09e6b3e575a40b99bfb7c685432787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae95d8670801c04af43da9e4fcc0e1006"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Window.html#ae95d8670801c04af43da9e4fcc0e1006">keyPressed</a> (<a class="el" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822">key</a> k)</td></tr>
+<tr class="separator:ae95d8670801c04af43da9e4fcc0e1006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7d7bd2f22e095df387e8b5cda2bb484e"></a>
@@ -243,6 +238,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>destroys the window handle </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -258,6 +255,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>clear buffer </p>
 
 </div>
 </div>
@@ -291,6 +290,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>create the window, initialize the handle and update the width and height </p>
+
 </div>
 </div>
 <a class="anchor" id="aa421df451f166dfe6441562e92b99115"></a>
@@ -301,6 +302,24 @@ Private Attributes</h2></td></tr>
           <td class="memname">void yage::Window::hide </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>hide windowProc </p>
+
+</div>
+</div>
+<a class="anchor" id="ae95d8670801c04af43da9e4fcc0e1006"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool yage::Window::keyPressed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822">key</a>&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -399,6 +418,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>show window </p>
+
 </div>
 </div>
 <a class="anchor" id="a86d0aa8e9896850b9acfc720b5615359"></a>
@@ -414,26 +435,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a7b09e6b3e575a40b99bfb7c685432787"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">GLFWwindow* yage::Window::window_ = nullptr</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>swap the buffer </p>
 
 </div>
 </div>
@@ -447,7 +449,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="classyage_1_1Window.html">Window</a></li>
-    <li class="footer">Generated on Sat Dec 23 2017 01:50:21 for YAGE by
+    <li class="footer">Generated on Sat Jan 6 2018 11:36:17 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

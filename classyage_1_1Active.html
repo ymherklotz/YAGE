@@ -110,8 +110,6 @@ $(document).ready(function(){initNavTree('classyage_1_1Active.html','');});
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classyage_1_1Active-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">yage::Active Class Reference</div>  </div>
@@ -140,22 +138,6 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa2ed414bbe94fdd51c8aeb7ada73a064"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classyage_1_1Active.html">Active</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Active.html#aa2ed414bbe94fdd51c8aeb7ada73a064">create</a> ()</td></tr>
 <tr class="separator:aa2ed414bbe94fdd51c8aeb7ada73a064"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:ad7b4b4cea1880d115dc5e3e1f80f404b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Active.html#ad7b4b4cea1880d115dc5e3e1f80f404b">Active</a> ()</td></tr>
-<tr class="separator:ad7b4b4cea1880d115dc5e3e1f80f404b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9b25afe60999caaa6f261d1e79a351b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Active.html#aa9b25afe60999caaa6f261d1e79a351b">run</a> ()</td></tr>
-<tr class="separator:aa9b25afe60999caaa6f261d1e79a351b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:ac32d54302bf084f0f7422cce5ee617db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Active.html#ac32d54302bf084f0f7422cce5ee617db">running_</a></td></tr>
-<tr class="separator:ac32d54302bf084f0f7422cce5ee617db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c957af55704f6f30734054336f1a6d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1SyncQueue.html">SyncQueue</a>&lt; <a class="el" href="classyage_1_1Active.html#a4b82fec6f02c00d186b1b840ce8f11dc">Callback</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Active.html#a8c957af55704f6f30734054336f1a6d3">queue_</a></td></tr>
-<tr class="separator:a8c957af55704f6f30734054336f1a6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad673e2fd5b6c0c12de94ea7fcd750a50"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Active.html#ad673e2fd5b6c0c12de94ea7fcd750a50">thread_</a></td></tr>
-<tr class="separator:ad673e2fd5b6c0c12de94ea7fcd750a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a4b82fec6f02c00d186b1b840ce8f11dc"></a>
@@ -210,29 +192,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad7b4b4cea1880d115dc5e3e1f80f404b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">yage::Active::Active </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aa2ed414bbe94fdd51c8aeb7ada73a064"></a>
 <div class="memitem">
@@ -281,29 +240,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa9b25afe60999caaa6f261d1e79a351b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void yage::Active::run </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a665673b94eb5ce7c448839e5bb6e0326"></a>
 <div class="memitem">
 <div class="memproto">
@@ -320,67 +256,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a8c957af55704f6f30734054336f1a6d3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classyage_1_1SyncQueue.html">SyncQueue</a>&lt;<a class="el" href="classyage_1_1Active.html#a4b82fec6f02c00d186b1b840ce8f11dc">Callback</a>&gt; yage::Active::queue_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac32d54302bf084f0f7422cce5ee617db"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool yage::Active::running_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ad673e2fd5b6c0c12de94ea7fcd750a50"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::thread yage::Active::thread_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>yage/util/<a class="el" href="active_8h_source.html">active.h</a></li>
 <li>yage/util/<a class="el" href="active_8cpp.html">active.cpp</a></li>
@@ -391,7 +266,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="classyage_1_1Active.html">Active</a></li>
-    <li class="footer">Generated on Sat Dec 23 2017 01:50:21 for YAGE by
+    <li class="footer">Generated on Sat Jan 6 2018 11:36:17 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

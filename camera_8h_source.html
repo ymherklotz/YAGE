@@ -109,52 +109,49 @@ $(document).ready(function(){initNavTree('camera_8h_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="camera_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef YAGE_CAMERA2D_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_CAMERA2D_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef YAGE_CORE_CAMERA_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_CORE_CAMERA_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>yage</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>GlslProgram;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>Shader;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classyage_1_1Camera.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Camera.html">Camera</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classyage_1_1Camera.html#a2a6ad87f9f4c38c3ffe6ec6c090e4c7c">   22</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classyage_1_1Camera.html#a2a6ad87f9f4c38c3ffe6ec6c090e4c7c">update_matrix_</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classyage_1_1Camera.html#a665b599105c6930711d31ada6e12dc8f">   23</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classyage_1_1Camera.html#a665b599105c6930711d31ada6e12dc8f">scale_</a>        = 1;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classyage_1_1Camera.html#af2a2daab94b27622cc0d7764b13edfc2">   24</a></span>&#160;    glm::vec2 <a class="code" href="classyage_1_1Camera.html#af2a2daab94b27622cc0d7764b13edfc2">position_</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classyage_1_1Camera.html#a2c1c0547d4c4a9bce102f2fb0c9071b3">   25</a></span>&#160;    glm::mat4 <a class="code" href="classyage_1_1Camera.html#a2c1c0547d4c4a9bce102f2fb0c9071b3">camera_matrix_</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classyage_1_1Camera.html#a7419b0ba645f44f05fa125421c041e26">   26</a></span>&#160;    glm::mat4 <a class="code" href="classyage_1_1Camera.html#a7419b0ba645f44f05fa125421c041e26">ortho_matrix_</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> update_matrix_ = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> scale_        = 1;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    glm::vec2 position_;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    glm::mat4 camera_matrix_;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    glm::mat4 ortho_matrix_;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classyage_1_1Camera.html#a13be1e50638977d62cff9ffba1213611">Camera</a>(<span class="keywordtype">int</span> screen_width = 1280, <span class="keywordtype">int</span> screen_height = 720);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Camera.html#af6239cd6ad44fcdcc12d7b183c8a0f86">update</a>(<a class="code" href="classyage_1_1GlslProgram.html">GlslProgram</a> &amp;program);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Camera.html#a99f0af50db990c5558fd0b7b82f3978c">update</a>(<a class="code" href="classyage_1_1Shader.html">Shader</a> &amp;program);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Camera.html#a012820185cceb451926bc4ef1607b324">move</a>(<span class="keyword">const</span> glm::vec2 &amp;direction);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classyage_1_1Camera_html_a665b599105c6930711d31ada6e12dc8f"><div class="ttname"><a href="classyage_1_1Camera.html#a665b599105c6930711d31ada6e12dc8f">yage::Camera::scale_</a></div><div class="ttdeci">float scale_</div><div class="ttdef"><b>Definition:</b> camera.h:23</div></div>
-<div class="ttc" id="classyage_1_1Camera_html_a2a6ad87f9f4c38c3ffe6ec6c090e4c7c"><div class="ttname"><a href="classyage_1_1Camera.html#a2a6ad87f9f4c38c3ffe6ec6c090e4c7c">yage::Camera::update_matrix_</a></div><div class="ttdeci">bool update_matrix_</div><div class="ttdef"><b>Definition:</b> camera.h:22</div></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Camera.html#a8b50af04dae6eca905c5008ef93b72d0">zoom</a>(<span class="keywordtype">float</span> factor);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classyage_1_1Camera_html"><div class="ttname"><a href="classyage_1_1Camera.html">yage::Camera</a></div><div class="ttdef"><b>Definition:</b> camera.h:19</div></div>
-<div class="ttc" id="classyage_1_1GlslProgram_html"><div class="ttname"><a href="classyage_1_1GlslProgram.html">yage::GlslProgram</a></div><div class="ttdef"><b>Definition:</b> glslprogram.h:19</div></div>
-<div class="ttc" id="classyage_1_1Camera_html_af6239cd6ad44fcdcc12d7b183c8a0f86"><div class="ttname"><a href="classyage_1_1Camera.html#af6239cd6ad44fcdcc12d7b183c8a0f86">yage::Camera::update</a></div><div class="ttdeci">void update(GlslProgram &amp;program)</div><div class="ttdef"><b>Definition:</b> camera.cpp:25</div></div>
-<div class="ttc" id="classyage_1_1Camera_html_af2a2daab94b27622cc0d7764b13edfc2"><div class="ttname"><a href="classyage_1_1Camera.html#af2a2daab94b27622cc0d7764b13edfc2">yage::Camera::position_</a></div><div class="ttdeci">glm::vec2 position_</div><div class="ttdef"><b>Definition:</b> camera.h:24</div></div>
-<div class="ttc" id="classyage_1_1Camera_html_a13be1e50638977d62cff9ffba1213611"><div class="ttname"><a href="classyage_1_1Camera.html#a13be1e50638977d62cff9ffba1213611">yage::Camera::Camera</a></div><div class="ttdeci">Camera(int screen_width=1280, int screen_height=720)</div><div class="ttdef"><b>Definition:</b> camera.cpp:18</div></div>
-<div class="ttc" id="classyage_1_1Camera_html_a012820185cceb451926bc4ef1607b324"><div class="ttname"><a href="classyage_1_1Camera.html#a012820185cceb451926bc4ef1607b324">yage::Camera::move</a></div><div class="ttdeci">void move(const glm::vec2 &amp;direction)</div><div class="ttdef"><b>Definition:</b> camera.cpp:41</div></div>
-<div class="ttc" id="classyage_1_1Camera_html_a7419b0ba645f44f05fa125421c041e26"><div class="ttname"><a href="classyage_1_1Camera.html#a7419b0ba645f44f05fa125421c041e26">yage::Camera::ortho_matrix_</a></div><div class="ttdeci">glm::mat4 ortho_matrix_</div><div class="ttdef"><b>Definition:</b> camera.h:26</div></div>
-<div class="ttc" id="classyage_1_1Camera_html_a2c1c0547d4c4a9bce102f2fb0c9071b3"><div class="ttname"><a href="classyage_1_1Camera.html#a2c1c0547d4c4a9bce102f2fb0c9071b3">yage::Camera::camera_matrix_</a></div><div class="ttdeci">glm::mat4 camera_matrix_</div><div class="ttdef"><b>Definition:</b> camera.h:25</div></div>
+<div class="ttc" id="classyage_1_1Camera_html_a8b50af04dae6eca905c5008ef93b72d0"><div class="ttname"><a href="classyage_1_1Camera.html#a8b50af04dae6eca905c5008ef93b72d0">yage::Camera::zoom</a></div><div class="ttdeci">void zoom(float factor)</div><div class="ttdoc">Zooms the camera by an incremental amount. </div><div class="ttdef"><b>Definition:</b> camera.cpp:78</div></div>
+<div class="ttc" id="classyage_1_1Camera_html_a13be1e50638977d62cff9ffba1213611"><div class="ttname"><a href="classyage_1_1Camera.html#a13be1e50638977d62cff9ffba1213611">yage::Camera::Camera</a></div><div class="ttdeci">Camera(int screen_width=1280, int screen_height=720)</div><div class="ttdoc">Creates a camera that looks onto the scene. </div><div class="ttdef"><b>Definition:</b> camera.cpp:27</div></div>
+<div class="ttc" id="classyage_1_1Shader_html"><div class="ttname"><a href="classyage_1_1Shader.html">yage::Shader</a></div><div class="ttdef"><b>Definition:</b> shader.h:20</div></div>
+<div class="ttc" id="classyage_1_1Camera_html_a012820185cceb451926bc4ef1607b324"><div class="ttname"><a href="classyage_1_1Camera.html#a012820185cceb451926bc4ef1607b324">yage::Camera::move</a></div><div class="ttdeci">void move(const glm::vec2 &amp;direction)</div><div class="ttdoc">Moves the camera using a two-dimensional displacement vector to describe the movement. </div><div class="ttdef"><b>Definition:</b> camera.cpp:66</div></div>
+<div class="ttc" id="classyage_1_1Camera_html_a99f0af50db990c5558fd0b7b82f3978c"><div class="ttname"><a href="classyage_1_1Camera.html#a99f0af50db990c5558fd0b7b82f3978c">yage::Camera::update</a></div><div class="ttdeci">void update(Shader &amp;program)</div><div class="ttdoc">Updates the camera matrix value in the shader program that is passed to it. </div><div class="ttdef"><b>Definition:</b> camera.cpp:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="camera_8h.html">camera.h</a></li>
-    <li class="footer">Generated on Sat Dec 23 2017 01:50:21 for YAGE by
+    <li class="footer">Generated on Sat Jan 6 2018 11:36:16 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

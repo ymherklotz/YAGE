@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['mass_5f',['mass_',['../classyage_1_1Body.html#a01b2a500e71bc88f2cb597f376bc8289',1,'yage::Body']]],
-  ['meta_5f',['meta_',['../classyage_1_1LogMessage.html#a80b72c0e143b382538c347c201cbb4ee',1,'yage::LogMessage']]],
-  ['mutex_5f',['mutex_',['../classyage_1_1SyncQueue.html#a273dec7f58d6a727d32dcfc9b3c9622b',1,'yage::SyncQueue']]]
+  ['level',['level',['../structyage_1_1LogMessage_1_1Meta.html#aa265c76e7ce54e4b912e1c41333fad3b',1,'yage::LogMessage::Meta']]],
+  ['line',['line',['../structyage_1_1LogMessage_1_1Meta.html#ac2951995b1f4ebf28e94bcd268c3dd3c',1,'yage::LogMessage::Meta']]]
 ];

@@ -1,5 +1,5 @@
 var annotated =
 [
     [ "yage", "namespaceyage.html", "namespaceyage" ],
-    [ "LogLevel", "classLogLevel.html", "classLogLevel" ]
+    [ "stbi_io_callbacks", "structstbi__io__callbacks.html", "structstbi__io__callbacks" ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>YAGE: yage/core/texture.h Source File</title>
+<title>YAGE: yage/data/texture.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -109,8 +109,8 @@ $(document).ready(function(){initNavTree('texture_8h_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="texture_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef GL_TEXTURE_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define GL_TEXTURE_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef YAGE_CORE_TEXTURE_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_CORE_TEXTURE_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;glad/glad.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
@@ -121,31 +121,35 @@ $(document).ready(function(){initNavTree('texture_8h_source.html','');});
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structyage_1_1Texture.html#a26386c2709b906ec07c9a1bb8daf2968">   18</a></span>&#160;    GLuint <a class="code" href="structyage_1_1Texture.html#a26386c2709b906ec07c9a1bb8daf2968">id</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structyage_1_1Texture.html#ad42f41cc57ed7a20928382f6557dc598">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1Texture.html#ad42f41cc57ed7a20928382f6557dc598">width</a>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structyage_1_1Texture.html#a5ce16ac8ad034f7042620a418783b41e">   20</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1Texture.html#a5ce16ac8ad034f7042620a418783b41e">height</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structyage_1_1Texture.html#a0cef080bceaaf5e702985f5494ea35d5">   22</a></span>&#160;    <a class="code" href="structyage_1_1Texture.html#a0cef080bceaaf5e702985f5494ea35d5">Texture</a>() : <a class="code" href="structyage_1_1Texture.html#a26386c2709b906ec07c9a1bb8daf2968">id</a>(0), <a class="code" href="structyage_1_1Texture.html#ad42f41cc57ed7a20928382f6557dc598">width</a>(0), <a class="code" href="structyage_1_1Texture.html#a5ce16ac8ad034f7042620a418783b41e">height</a>(0) {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structyage_1_1Texture.html#a7ecf257a7663cb0523d41c0519380046">   21</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1Texture.html#a7ecf257a7663cb0523d41c0519380046">x</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structyage_1_1Texture.html#a4bfae86da1ef1930238291660223a8f0">   22</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1Texture.html#a4bfae86da1ef1930238291660223a8f0">y</a>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structyage_1_1Texture.html#a9af4689df9f99c5074b7aa5d5857775c">   24</a></span>&#160;    <a class="code" href="structyage_1_1Texture.html#a9af4689df9f99c5074b7aa5d5857775c">Texture</a>(GLuint id_i, <span class="keywordtype">int</span> width_i, <span class="keywordtype">int</span> height_i)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        : <a class="code" href="structyage_1_1Texture.html#a26386c2709b906ec07c9a1bb8daf2968">id</a>(id_i), <a class="code" href="structyage_1_1Texture.html#ad42f41cc57ed7a20928382f6557dc598">width</a>(width_i), <a class="code" href="structyage_1_1Texture.html#a5ce16ac8ad034f7042620a418783b41e">height</a>(height_i)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structyage_1_1Texture.html#a0cef080bceaaf5e702985f5494ea35d5">   24</a></span>&#160;    <a class="code" href="structyage_1_1Texture.html#a0cef080bceaaf5e702985f5494ea35d5">Texture</a>() : <a class="code" href="structyage_1_1Texture.html#a26386c2709b906ec07c9a1bb8daf2968">id</a>(0), <a class="code" href="structyage_1_1Texture.html#ad42f41cc57ed7a20928382f6557dc598">width</a>(0), <a class="code" href="structyage_1_1Texture.html#a5ce16ac8ad034f7042620a418783b41e">height</a>(0), <a class="code" href="structyage_1_1Texture.html#a7ecf257a7663cb0523d41c0519380046">x</a>(0), <a class="code" href="structyage_1_1Texture.html#a4bfae86da1ef1930238291660223a8f0">y</a>(0) {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structyage_1_1Texture.html#af0a85aa4202d12fca9c1f52085d26850">   26</a></span>&#160;    <a class="code" href="structyage_1_1Texture.html#af0a85aa4202d12fca9c1f52085d26850">Texture</a>(GLuint id_i, <span class="keywordtype">int</span> width_i, <span class="keywordtype">int</span> height_i, <span class="keywordtype">int</span> x_i = 1, <span class="keywordtype">int</span> y_i = 1)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        : <a class="code" href="structyage_1_1Texture.html#a26386c2709b906ec07c9a1bb8daf2968">id</a>(id_i), <a class="code" href="structyage_1_1Texture.html#ad42f41cc57ed7a20928382f6557dc598">width</a>(width_i), <a class="code" href="structyage_1_1Texture.html#a5ce16ac8ad034f7042620a418783b41e">height</a>(height_i), <a class="code" href="structyage_1_1Texture.html#a7ecf257a7663cb0523d41c0519380046">x</a>(x_i), <a class="code" href="structyage_1_1Texture.html#a4bfae86da1ef1930238291660223a8f0">y</a>(y_i)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structyage_1_1Texture_html_a4bfae86da1ef1930238291660223a8f0"><div class="ttname"><a href="structyage_1_1Texture.html#a4bfae86da1ef1930238291660223a8f0">yage::Texture::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> texture.h:22</div></div>
+<div class="ttc" id="structyage_1_1Texture_html_a7ecf257a7663cb0523d41c0519380046"><div class="ttname"><a href="structyage_1_1Texture.html#a7ecf257a7663cb0523d41c0519380046">yage::Texture::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> texture.h:21</div></div>
 <div class="ttc" id="structyage_1_1Texture_html_a5ce16ac8ad034f7042620a418783b41e"><div class="ttname"><a href="structyage_1_1Texture.html#a5ce16ac8ad034f7042620a418783b41e">yage::Texture::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> texture.h:20</div></div>
 <div class="ttc" id="structyage_1_1Texture_html"><div class="ttname"><a href="structyage_1_1Texture.html">yage::Texture</a></div><div class="ttdef"><b>Definition:</b> texture.h:17</div></div>
-<div class="ttc" id="structyage_1_1Texture_html_a9af4689df9f99c5074b7aa5d5857775c"><div class="ttname"><a href="structyage_1_1Texture.html#a9af4689df9f99c5074b7aa5d5857775c">yage::Texture::Texture</a></div><div class="ttdeci">Texture(GLuint id_i, int width_i, int height_i)</div><div class="ttdef"><b>Definition:</b> texture.h:24</div></div>
+<div class="ttc" id="structyage_1_1Texture_html_af0a85aa4202d12fca9c1f52085d26850"><div class="ttname"><a href="structyage_1_1Texture.html#af0a85aa4202d12fca9c1f52085d26850">yage::Texture::Texture</a></div><div class="ttdeci">Texture(GLuint id_i, int width_i, int height_i, int x_i=1, int y_i=1)</div><div class="ttdef"><b>Definition:</b> texture.h:26</div></div>
 <div class="ttc" id="structyage_1_1Texture_html_ad42f41cc57ed7a20928382f6557dc598"><div class="ttname"><a href="structyage_1_1Texture.html#ad42f41cc57ed7a20928382f6557dc598">yage::Texture::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> texture.h:19</div></div>
-<div class="ttc" id="structyage_1_1Texture_html_a0cef080bceaaf5e702985f5494ea35d5"><div class="ttname"><a href="structyage_1_1Texture.html#a0cef080bceaaf5e702985f5494ea35d5">yage::Texture::Texture</a></div><div class="ttdeci">Texture()</div><div class="ttdef"><b>Definition:</b> texture.h:22</div></div>
+<div class="ttc" id="structyage_1_1Texture_html_a0cef080bceaaf5e702985f5494ea35d5"><div class="ttname"><a href="structyage_1_1Texture.html#a0cef080bceaaf5e702985f5494ea35d5">yage::Texture::Texture</a></div><div class="ttdeci">Texture()</div><div class="ttdef"><b>Definition:</b> texture.h:24</div></div>
 <div class="ttc" id="structyage_1_1Texture_html_a26386c2709b906ec07c9a1bb8daf2968"><div class="ttname"><a href="structyage_1_1Texture.html#a26386c2709b906ec07c9a1bb8daf2968">yage::Texture::id</a></div><div class="ttdeci">GLuint id</div><div class="ttdef"><b>Definition:</b> texture.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li><li class="navelem"><a class="el" href="texture_8h.html">texture.h</a></li>
-    <li class="footer">Generated on Sat Dec 23 2017 01:50:21 for YAGE by
+    <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_d09e80fdcf0bb585bbe3b7099c52d028.html">data</a></li><li class="navelem"><a class="el" href="texture_8h.html">texture.h</a></li>
+    <li class="footer">Generated on Sat Jan 6 2018 11:36:17 for YAGE by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
