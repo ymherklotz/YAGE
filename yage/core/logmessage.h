@@ -13,6 +13,8 @@
 #include <sstream>
 #include <string>
 
+#include "loglevel.h"
+
 namespace yage
 {
 
@@ -34,8 +36,9 @@ public:
     LogMessage &operator<<(std::ostream &(*fn)(std::ostream &os));
 
     struct Meta {
+        LogLevel level;
         std::string fileName;
-        int lineNo;
+        int line;
     };
 
 private:
@@ -45,7 +48,7 @@ private:
     Logger *owner_;
     Meta meta_;
 
-    LogMessage(Logger *owner, const std::string &fileName_i, int lineNum_i);
+    LogMessage(Logger *owner, LogLevel level, const std::string &file_name, int line_num);
     LogMessage(LogMessage &&msg);
 };
 

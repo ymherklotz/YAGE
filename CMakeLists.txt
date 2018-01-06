@@ -11,6 +11,9 @@ option(YAGE_BUILD_DOCS "Build documentation using Doxygen" ON)
 # set standard
 set(CMAKE_CXX_STANDARD 14)
 
+# adding more warnings to cmake
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-Wall")
+
 # find other libraries from source
 set(EXTERNAL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external)
 
@@ -30,6 +33,7 @@ file(GLOB YAGE_CORE_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/core/*.cpp
 file(GLOB YAGE_MATH_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/math/*.cpp)
 file(GLOB YAGE_PHYSICS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/physics/*.cpp)
 file(GLOB YAGE_UTIL_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/util/*.cpp)
+file(GLOB YAGE_RENDER_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/render/*.cpp)
 file(GLOB YAGE_CURRENT_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/*.cpp)
 
 set(YAGE_SOURCES
@@ -37,6 +41,7 @@ set(YAGE_SOURCES
   ${YAGE_PHYSICS_SOURCES}
   ${YAGE_MATH_SOURCES}
   ${YAGE_UTIL_SOURCES}
+  ${YAGE_RENDER_SOURCES}
   ${YAGE_CURRENT_SOURCES})
 
 add_library(yage

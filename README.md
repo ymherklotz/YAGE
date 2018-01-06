@@ -28,7 +28,7 @@ with the name `yage`.
 Build and Testing
 -----------------
 
-To compile YAGE, create a build directory from the base directory. Then call
+To compile YAGE, create a build directory from the base dirqectory. Then call
 cmake and point it to the directory containing.
 [CMakeLists.txt](/CMakeLists.txt).
 For example, one can use the following commands

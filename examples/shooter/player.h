@@ -1,0 +1,36 @@
+#ifndef EXAMPLE_SHOOTER_PLAYER_H
+#define EXAMPLE_SHOOTER_PLAYER_H
+
+#include <yage/yage.h>
+
+#include "direction.h"
+
+enum class Action {
+    IDLE,
+    MOVING,
+};
+
+class Player : public yage::Drawable
+{
+public:
+    Player(const glm::vec4 &bound, const yage::Texture &texture);
+
+    void setTexture(const yage::Texture &texture);
+
+    void draw(yage::SpriteBatch &sp);
+
+    void move(Direction direction);
+    void idle();
+    void look(Direction direction);
+
+    // simple getters
+    glm::vec4 position() const;
+private:
+    glm::vec4 bound_;
+    yage::Texture texture_;
+    Direction direction_;
+    Action action_;
+    int speed_;
+};
+
+#endif

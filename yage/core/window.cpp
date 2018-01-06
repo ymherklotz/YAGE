@@ -7,24 +7,31 @@
  */
 
 #include "window.h"
+#include "../data/input.h"
+
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 
 #include <stdexcept>
+
+using std::runtime_error;
 
 namespace yage
 {
 
+namespace {
+
 void key_callback(GLFWwindow *window, int key, int scanCode, int action,
                   int mods)
 {
-    if (key == GLFW_KEY_E && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-        glClearColor(0.5f, 0.f, 0.f, 1.f);
-    } else if (key == GLFW_KEY_Q &&
-               (action == GLFW_REPEAT || action == GLFW_PRESS)) {
-        glClearColor(0.f, 0.f, 0.5f, 1.f);
-    } else {
-        glClearColor(0.f, .5f, 0.f, 1.f);
-    }
 }
+
+void framebuffer_size_callback(GLFWwindow *window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+
+} // namespace
 
 Window::Window() = default;
 
@@ -37,7 +44,7 @@ Window::~Window()
 void Window::create(std::string window_name, int width, int height)
 {
     if (glfwInit() == GLFW_FALSE) {
-        throw std::runtime_error("GLFW Initialisation failed");
+        throw runtime_error("GLFW Initialisation failed");
     }
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
@@ -47,7 +54,7 @@ void Window::create(std::string window_name, int width, int height)
     window_ =
         glfwCreateWindow(width, height, window_name.c_str(), nullptr, nullptr);
     if (window_ == nullptr) {
-        throw std::runtime_error("GLFW Window creation failed");
+        throw runtime_error("GLFW Window creation failed");
     }
 
     // initialize the gl context
@@ -58,12 +65,14 @@ void Window::create(std::string window_name, int width, int height)
 
     // set key callback
     glfwSetKeyCallback(window_, key_callback);
+    // set resize callback
+    glfwSetFramebufferSizeCallback(window_, framebuffer_size_callback);
 
     // set vsync on
     glfwSwapInterval(1);
 
     // set the clear colour to black
-    glClearColor(0.f, 0.5f, 0.f, 1.f);
+    glClearColor(0.18f, 0.18f, 0.18f, 1.f);
     // set alpha blending
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -101,10 +110,19 @@ bool Window::shouldClose()
 void Window::pollEvents() const
 {
     glfwPollEvents();
+}
 
-    if (glfwGetKey(window_, GLFW_KEY_W) == GLFW_PRESS) {
-        glClearColor(0.f, 0.5f, 0.5f, 1.f);
+bool Window::keyPressed(key k)
+{
+    if (window_ == nullptr) {
+        throw runtime_error("Window is not initialized");
     }
+
+    if (glfwGetKey(window_, static_cast<int>(k)) == GLFW_PRESS) {
+        return true;
+    }
+
+    return false;
 }
 
 } // namespace yage

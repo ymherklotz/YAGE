@@ -9,7 +9,7 @@
 #ifndef SPRITE_H
 #define SPRITE_H
 
-#include "texture.h"
+#include "../data/texture.h"
 
 #include <glad/glad.h>
 

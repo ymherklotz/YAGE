@@ -6,15 +6,15 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_CAMERA2D_H
-#define YAGE_CAMERA2D_H
+#ifndef YAGE_CORE_CAMERA_H
+#define YAGE_CORE_CAMERA_H
 
 #include <glm/glm.hpp>
 
 namespace yage
 {
 
-class GlslProgram;
+class Shader;
 
 class Camera
 {
@@ -28,8 +28,9 @@ private:
 public:
     Camera(int screen_width = 1280, int screen_height = 720);
 
-    void update(GlslProgram &program);
+    void update(Shader &program);
     void move(const glm::vec2 &direction);
+    void zoom(float factor);
 };
 
 } // namespace yage

@@ -1,7 +1,7 @@
 # Physics Engine
 
 ## Acceleration
-    
+
 speed and position:
 
 I have

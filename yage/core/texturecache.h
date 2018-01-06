@@ -9,7 +9,7 @@
 #ifndef TEXTURE_CACHE_H
 #define TEXTURE_CACHE_H
 
-#include "texture.h"
+#include "../data/texture.h"
 
 #include <unordered_map>
 
@@ -24,7 +24,7 @@ private:
 public:
     TextureCache() = default;
 
-    Texture getTexture(const std::string &texture_path);
+    Texture getTexture(const std::string &texture_path, int x = 1, int y = 1);
     Texture getTextureFromSpriteSheet();
 };
 

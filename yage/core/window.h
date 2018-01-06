@@ -6,20 +6,17 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file
- */
-
-#ifndef WINDOW_H
-#define WINDOW_H
-
-#include <glad/glad.h>
-
-#include <GLFW/glfw3.h>
+#ifndef YAGE_CORE_WINDOW_H
+#define YAGE_CORE_WINDOW_H
 
 #include <string>
 
+class GLFWwindow;
+
 namespace yage
 {
+
+enum class key;
 
 // window flags that can change it's appearance
 enum WindowFlags : unsigned {
@@ -58,6 +55,8 @@ public:
     void show();
     bool shouldClose();
     void pollEvents() const;
+
+    bool keyPressed(key k);
 };
 
 } // namespace yage

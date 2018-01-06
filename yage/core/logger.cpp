@@ -19,29 +19,51 @@
 namespace yage
 {
 
-Logger::Logger() : active_(Active::create())
+Logger::Logger() : active_(Active::create()), min_level_(LogLevel::INFO)
 {
     add(makeConsoleSink());
-    add(makeFileSink("yage.log"));
 }
 
-LogMessage Logger::operator()(const std::string &fileName, int lineNum)
+Logger::Logger(const std::string &file_path)
+    : active_(Active::create()), min_level_(LogLevel::INFO)
 {
-    return LogMessage(this, fileName, lineNum);
+    add(makeConsoleSink());
+    add(makeFileSink(file_path));
+}
+
+Logger::Logger(LogLevel min_level)
+    : active_(Active::create()), min_level_(min_level)
+{
+    add(makeConsoleSink());
+}
+
+Logger::Logger(LogLevel min_level, const std::string &file_path)
+    : active_(Active::create()), min_level_(min_level)
+{
+    add(makeConsoleSink());
+    add(makeFileSink(file_path));
+}
+
+LogMessage Logger::operator()(LogLevel level, const std::string &fileName,
+                              int lineNum)
+{
+    return LogMessage(this, level, fileName, lineNum);
 }
 
 void Logger::flush(const LogMessage *msg)
 {
-    std::string asString(msg->buffer_.str());
+    if (static_cast<int>(msg->meta_.level) >= static_cast<int>(min_level_)) {
+        std::string asString(msg->buffer_.str());
 
-    auto &&sinks = sinks_;
-    auto &&meta  = msg->meta_;
+        auto &&sinks = sinks_;
+        auto &&meta  = msg->meta_;
 
-    active_->send([=] {
-        for (auto &&sink : sinks) {
-            sink.write(meta, asString);
-        }
-    });
+        active_->send([=] {
+            for (auto &&sink : sinks) {
+                sink.write(meta, asString);
+            }
+        });
+    }
 }
 
 void Logger::add(const LogSink &sink)
@@ -65,9 +87,14 @@ void Logger::clear()
 
 Logger &Logger::instance()
 {
-    static Logger gLogger;
+    static Logger y_logger(LogLevel::INFO, "yage.log");
 
-    return gLogger;
+    return y_logger;
+}
+
+void Logger::setLevel(LogLevel min_level)
+{
+    min_level_ = min_level;
 }
 
 } // namespace yage

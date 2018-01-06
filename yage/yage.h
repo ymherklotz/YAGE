@@ -10,30 +10,22 @@
 #define YAGE_YAGE_H
 
 #include "core/camera.h"
-#include "core/glslprogram.h"
-#include "core/imageloader.h"
-#include "core/input.h"
 #include "core/iomanager.h"
 #include "core/logger.h"
-#include "core/logmessage.h"
-#include "core/logsink.h"
-#include "core/picopng.h"
 #include "core/resourcemanager.h"
-#include "core/spritebatch.h"
 #include "core/spritesheet.h"
-#include "core/texture.h"
-#include "core/vertex.h"
 #include "core/window.h"
-
+#include "data/input.h"
+#include "data/texture.h"
+#include "data/vertex.h"
+#include "math/matrix.h"
 #include "physics/body.h"
 #include "physics/particlebody.h"
 #include "physics/rectanglecollider.h"
 #include "physics/rigidbody.h"
-
-#include "math/matrix.h"
-
-#include "util/active.h"
-#include "util/syncqueue.h"
+#include "render/shader.h"
+#include "render/spritebatch.h"
+#include "render/drawable.h"
 
 /** Project namespace.
  *
