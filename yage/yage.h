@@ -10,12 +10,8 @@
 #define YAGE_YAGE_H
 
 #include "core/camera.h"
-#include "core/imageloader.h"
 #include "core/iomanager.h"
 #include "core/logger.h"
-#include "core/logmessage.h"
-#include "core/logsink.h"
-#include "core/picopng.h"
 #include "core/resourcemanager.h"
 #include "core/spritesheet.h"
 #include "core/window.h"
@@ -30,8 +26,6 @@
 #include "render/shader.h"
 #include "render/spritebatch.h"
 #include "render/drawable.h"
-#include "util/active.h"
-#include "util/syncqueue.h"
 
 /** Project namespace.
  *
