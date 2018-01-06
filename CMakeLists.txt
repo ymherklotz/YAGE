@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 # yage library cmakelists.txt
 project(yage
-  VERSION 0.1.3.0
+  VERSION 0.1.4.0
   LANGUAGES CXX)
 
 option(YAGE_BUILD_TESTS "Build tests and ctest testing suite" ON)
