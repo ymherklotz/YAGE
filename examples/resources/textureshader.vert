@@ -16,5 +16,5 @@ void main()
 
     fragment_position = vertex_position;
     fragment_colour = vertex_colour;
-    fragment_uv = vec2(vertex_uv.x, 1-vertex_uv.y);    
+    fragment_uv = vec2(vertex_uv.x, 1-vertex_uv.y);
 }
