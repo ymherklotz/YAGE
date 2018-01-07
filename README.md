@@ -1,4 +1,4 @@
-YAGE {#mainpage}
+YAGE
 ====
 ![master-build](https://travis-ci.org/ymherklotz/YAGE.svg?branch=master)
 
