@@ -48,7 +48,8 @@ private:
     Logger *owner_;
     Meta meta_;
 
-    LogMessage(Logger *owner, LogLevel level, const std::string &file_name, int line_num);
+    LogMessage(Logger *owner, LogLevel level, const std::string &file_name,
+               int line_num);
     LogMessage(LogMessage &&msg);
 };
 

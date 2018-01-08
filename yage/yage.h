@@ -23,9 +23,9 @@
 #include "physics/particlebody.h"
 #include "physics/rectanglecollider.h"
 #include "physics/rigidbody.h"
+#include "render/drawable.h"
 #include "render/shader.h"
 #include "render/spritebatch.h"
-#include "render/drawable.h"
 
 /** Project namespace.
  *

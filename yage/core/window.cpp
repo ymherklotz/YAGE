@@ -9,8 +9,8 @@
 #include "window.h"
 #include "../data/input.h"
 
-#include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 #include <stdexcept>
 
@@ -19,7 +19,8 @@ using std::runtime_error;
 namespace yage
 {
 
-namespace {
+namespace
+{
 
 void key_callback(GLFWwindow *window, int key, int scanCode, int action,
                   int mods)
@@ -71,13 +72,9 @@ void Window::create(std::string window_name, int width, int height)
     // set vsync on
     glfwSwapInterval(1);
 
-    // set the clear colour to black
-    glClearColor(0.18f, 0.18f, 0.18f, 1.f);
     // set alpha blending
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    // set the clear depth
-    glClearDepth(1.f);
 }
 
 void Window::swapBuffer()
@@ -88,6 +85,10 @@ void Window::swapBuffer()
 
 void Window::clearBuffer()
 {
+    // set the clear colour to black
+    glClearColor(0.18f, 0.18f, 0.18f, 1.f);
+    // set the clear depth
+    glClearDepth(1.f);
     // clears buffer with clear colour
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }

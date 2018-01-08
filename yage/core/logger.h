@@ -29,8 +29,8 @@ public:
     explicit Logger(LogLevel min_level);
     Logger(LogLevel min_level, const std::string &file_path);
 
-    LogMessage operator()(LogLevel level = LogLevel::INFO, const std::string &fileName = "",
-                          int lineNum = -1);
+    LogMessage operator()(LogLevel level              = LogLevel::INFO,
+                          const std::string &fileName = "", int lineNum = -1);
 
     void flush(const LogMessage *msg);
     void add(const LogSink &sink);
@@ -55,7 +55,8 @@ private:
 #define yLogDebug                                                              \
     (yage::Logger::instance()(yage::LogLevel::DEBUG, __FILE__, __LINE__))
 
-#define yLogInfo (yage::Logger::instance()(yage::LogLevel::INFO, __FILE__, __LINE__))
+#define yLogInfo                                                               \
+    (yage::Logger::instance()(yage::LogLevel::INFO, __FILE__, __LINE__))
 
 #define yLogWarning                                                            \
     (yage::Logger::instance()(yage::LogLevel::WARNING, __FILE__, __LINE__))
