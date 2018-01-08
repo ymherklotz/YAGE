@@ -18,3 +18,6 @@
 	path = tests/external/googletest
 	url = https://github.com/google/googletest.git
 	branch = master
+[submodule "external/Box2D"]
+	path = external/Box2D
+	url = https://github.com/erincatto/Box2D.git
