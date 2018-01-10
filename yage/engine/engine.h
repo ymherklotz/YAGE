@@ -9,6 +9,7 @@
 #ifndef YAGE_CORE_ENGINE_H
 #define YAGE_CORE_ENGINE_H
 
+#include "../core/window.h"
 #include "system.h"
 
 #include <vector>
@@ -21,6 +22,9 @@ namespace yage
 class Engine
 {
 public:
+    /// Initialize window and other aspects of the engine.
+    void init();
+
     /// Main game loop of the engine.
     void mainLoop();
 
@@ -37,6 +41,9 @@ public:
 private:
     /// Vector of all the systems in the engine.
     std::vector<System *> systems_;
+
+    /// Window
+    Window window_;
 };
 
 } // namespace yage

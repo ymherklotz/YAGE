@@ -8,23 +8,26 @@
 
 #include "engine.h"
 
-#include "../core/window.h"
-
 namespace yage
 {
 
+void Engine::init()
+{
+    window_.create("Game Engine", 800, 640);
+
+    for (auto &system : systems_) {
+        system->init();
+    }
+}
+
 void Engine::mainLoop()
 {
-    Window window;
-
-    window.create("Game Engine", 800, 640);
-
-    while(!window.shouldClose()) {
-        window.clearBuffer();
+    while (!window_.shouldClose()) {
+        window_.clearBuffer();
 
         update();
 
-        window.swapBuffer();
+        window_.swapBuffer();
     }
 }
 
@@ -32,7 +35,7 @@ void Engine::update()
 {
     const double dt = 1.0 / 60.0;
 
-    for(auto &&system : systems_) {
+    for (auto &system : systems_) {
         system->update(dt);
     }
 }

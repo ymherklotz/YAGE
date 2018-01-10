@@ -1,11 +1,3 @@
-/** ---------------------------------------------------------------------------
- * @file: stb_image.h
- *
- * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
- * MIT License, see LICENSE file for more details.
- * ----------------------------------------------------------------------------
- */
-
 /* stb_image - v2.16 - public domain image loader -
 http://nothings.org/stb_image.h no warranty implied; use at your own risk
 
