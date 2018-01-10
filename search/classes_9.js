@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['rectangle',['Rectangle',['../classyage_1_1Rectangle.html',1,'yage']]],
-  ['rectanglecollider',['RectangleCollider',['../classyage_1_1RectangleCollider.html',1,'yage']]],
-  ['renderbatch',['RenderBatch',['../structyage_1_1details_1_1RenderBatch.html',1,'yage::details']]],
-  ['resourcemanager',['ResourceManager',['../classyage_1_1ResourceManager.html',1,'yage']]],
-  ['rigidbody',['RigidBody',['../classyage_1_1RigidBody.html',1,'yage']]],
-  ['row',['Row',['../classyage_1_1details_1_1Row.html',1,'yage::details']]]
+  ['particlebody',['ParticleBody',['../classyage_1_1ParticleBody.html',1,'yage']]],
+  ['position',['Position',['../structyage_1_1Position.html',1,'yage']]]
 ];

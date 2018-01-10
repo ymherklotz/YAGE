@@ -8,13 +8,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-  $(window).load(resizeHeight);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -28,6 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="yage.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">YAGE
    &#160;<span id="projectnumber">v0.1.4.0</span>
@@ -74,21 +68,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('shader_8h_source.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -103,6 +82,11 @@ $(document).ready(function(){initNavTree('shader_8h_source.html','');});
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_059f34b87ae2c2af887b23a7e5e8e88f.html">render</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">shader.h</div>  </div>
@@ -112,8 +96,8 @@ $(document).ready(function(){initNavTree('shader_8h_source.html','');});
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef YAGE_RENDER_SHADER_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_RENDER_SHADER_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;glad/glad.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;glad/glad.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
@@ -154,15 +138,11 @@ $(document).ready(function(){initNavTree('shader_8h_source.html','');});
 <div class="ttc" id="classyage_1_1Shader_html_a9307c4f3cfaf5e584b70601294e09bdd"><div class="ttname"><a href="classyage_1_1Shader.html#a9307c4f3cfaf5e584b70601294e09bdd">yage::Shader::~Shader</a></div><div class="ttdeci">~Shader()</div><div class="ttdef"><b>Definition:</b> shader.cpp:74</div></div>
 <div class="ttc" id="classyage_1_1Shader_html_a8cd66c177f148ac0b619766188696e6c"><div class="ttname"><a href="classyage_1_1Shader.html#a8cd66c177f148ac0b619766188696e6c">yage::Shader::use</a></div><div class="ttdeci">void use() const </div><div class="ttdoc">compiles vertex and fragment shader </div><div class="ttdef"><b>Definition:</b> shader.cpp:82</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_059f34b87ae2c2af887b23a7e5e8e88f.html">render</a></li><li class="navelem"><a class="el" href="shader_8h.html">shader.h</a></li>
-    <li class="footer">Generated on Sat Jan 6 2018 21:19:57 for YAGE by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 10 2018 18:44:07 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
 </body>
 </html>

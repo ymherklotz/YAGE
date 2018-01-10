@@ -8,13 +8,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-  $(window).load(resizeHeight);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -28,6 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="yage.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">YAGE
    &#160;<span id="projectnumber">v0.1.4.0</span>
@@ -76,21 +70,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('classyage_1_1Logger.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -105,6 +84,11 @@ $(document).ready(function(){initNavTree('classyage_1_1Logger.html','');});
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="classyage_1_1Logger.html">Logger</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -114,10 +98,6 @@ $(document).ready(function(){initNavTree('classyage_1_1Logger.html','');});
 <div class="title">yage::Logger Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><h2><a class="el" href="classyage_1_1Logger.html" title="Logger">Logger</a></h2>
- 
- <a href="classyage_1_1Logger.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="logger_8h_source.html">logger.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -149,19 +129,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad165738c5b738d80a14b0ee1319cae2e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classyage_1_1Logger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">instance</a> ()</td></tr>
 <tr class="separator:ad165738c5b738d80a14b0ee1319cae2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h2><a class="el" href="classyage_1_1Logger.html" title="Logger">Logger</a></h2>
-<p>Aynchronous logging is built into the YAGE library, which can be used to log events in the game and also debug the game by using the debug output that the game engine produces. This can help if for example, a texture is being loaded.</p>
-<h3>Log levels</h3>
-<p>The logger has five different levels that can be assigned to a message. These are, from lowest to highest severity, <code><a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788adc30ec20708ef7b0f641ef78b7880a15">LogLevel::DEBUG</a></code>, <code><a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a></code>, <code><a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a059e9861e0400dfbe05c98a841f3f96b">LogLevel::WARNING</a></code>, <code><a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788abb1ca97ec761fc37101737ba0aa2e7c5">LogLevel::ERROR</a></code> and <code><a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a19da7170bea36556dde582519795f3fc">LogLevel::FATAL</a></code>. Messages that the developer then wants to write to the logs can take any of these severities and the developer can then decide what the minimum severity is that the logger should log. By default, the logger will log anything that is above <code><a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a></code>.</p>
-<h3>Using the <a class="el" href="classyage_1_1Logger.html" title="Logger">Logger</a> in your Game</h3>
-<p>There are a few preprocessor definitions to make the use of the logger as simple as possible. First of all, there is a definition to get the instance of the current global logger, which can then be used to set a different minimum display level. This definition is <code>yLogger</code>, and an example of how to use it to change the default output level can be seen below</p>
-<p>``` c++ yLogger.setLevel(yage::LogLevel::ERROR); ```</p>
-<p>The above code changes the global logger so that it will only output things that are an error or fatal and make the engine crash.</p>
-<p>Other preprocessor definitions are <code>yLogDebug</code>, <code>yLogInfo</code>, <code>yLogWarning</code>, <code>yLogError</code> and <code>yLogFatal</code>. These return an object that is similar to a buffer, but belongs to the main global logger <code>yLogger</code>. These are the definitions that should be used to print somehting to the main logger. For example</p>
-<p>``` c++ yLogWarning &lt;&lt; "This is a warning"; ```</p>
-<p>will print the message "This is a warning" with the severity of <code><a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a059e9861e0400dfbe05c98a841f3f96b">LogLevel::WARNING</a></code>. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a950c0c75b86bf330cf11a0ad29bd9a64"></a>
 <div class="memitem">
 <div class="memproto">
@@ -391,15 +359,11 @@ Static Public Member Functions</h2></td></tr>
 <li>yage/core/<a class="el" href="logger_8cpp.html">logger.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="classyage_1_1Logger.html">Logger</a></li>
-    <li class="footer">Generated on Sat Jan 6 2018 21:19:57 for YAGE by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 10 2018 18:44:07 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
 </body>
 </html>

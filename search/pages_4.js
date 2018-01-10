@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yage',['YAGE',['../index.html',1,'']]]
+  ['matrix_20guide',['Matrix Guide',['../matrix_guide.html',1,'']]]
 ];

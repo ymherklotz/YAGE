@@ -8,13 +8,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-  $(window).load(resizeHeight);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -28,6 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="yage.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">YAGE
    &#160;<span id="projectnumber">v0.1.4.0</span>
@@ -77,20 +71,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('annotated.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -112,7 +92,7 @@ $(document).ready(function(){initNavTree('annotated.html','');});
 <div class="contents">
 <div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><div class="directory">
 <div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img id="arr_0_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('0_')"/><img src="ftv2ns.png" alt="N" width="24" height="22" /><a class="el" href="namespaceyage.html" target="_self">yage</a></td><td class="desc">Project namespace </td></tr>
+<tr id="row_0_" class="even"><td class="entry"><img id="arr_0_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('0_')"/><img src="ftv2ns.png" alt="N" width="24" height="22" /><a class="el" href="namespaceyage.html" target="_self">yage</a></td><td class="desc">Core includes </td></tr>
 <tr id="row_0_0_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img id="arr_0_0_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('0_0_')"/><img src="ftv2ns.png" alt="N" width="24" height="22" /><a class="el" href="namespaceyage_1_1details.html" target="_self">details</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structyage_1_1details_1_1Coordinate.html" target="_self">Coordinate</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_1_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1details_1_1Row.html" target="_self">Row</a></td><td class="desc"></td></tr>
@@ -122,8 +102,7 @@ $(document).ready(function(){initNavTree('annotated.html','');});
 <tr id="row_0_2_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Camera.html" target="_self">Camera</a></td><td class="desc"></td></tr>
 <tr id="row_0_3_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1ImageLoader.html" target="_self">ImageLoader</a></td><td class="desc"></td></tr>
 <tr id="row_0_4_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1IoManager.html" target="_self">IoManager</a></td><td class="desc"></td></tr>
-<tr id="row_0_5_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Logger.html" target="_self">Logger</a></td><td class="desc"><h2><a class="el" href="classyage_1_1Logger.html" title="Logger">Logger</a></h2>
-</td></tr>
+<tr id="row_0_5_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Logger.html" target="_self">Logger</a></td><td class="desc"></td></tr>
 <tr id="row_0_6_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img id="arr_0_6_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('0_6_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1LogMessage.html" target="_self">LogMessage</a></td><td class="desc"></td></tr>
 <tr id="row_0_6_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structyage_1_1LogMessage_1_1Meta.html" target="_self">Meta</a></td><td class="desc"></td></tr>
 <tr id="row_0_7_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1LogSink.html" target="_self">LogSink</a></td><td class="desc"></td></tr>
@@ -136,38 +115,41 @@ $(document).ready(function(){initNavTree('annotated.html','');});
 <tr id="row_0_14_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structyage_1_1Colour.html" target="_self">Colour</a></td><td class="desc"></td></tr>
 <tr id="row_0_15_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structyage_1_1UV.html" target="_self">UV</a></td><td class="desc"></td></tr>
 <tr id="row_0_16_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structyage_1_1Vertex.html" target="_self">Vertex</a></td><td class="desc"></td></tr>
-<tr id="row_0_17_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Matrix.html" target="_self">Matrix</a></td><td class="desc">Base <a class="el" href="classyage_1_1Matrix.html" title="Base Matrix class used by other similar classes. ">Matrix</a> class used by other similar classes </td></tr>
-<tr id="row_0_18_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Vector.html" target="_self">Vector</a></td><td class="desc"></td></tr>
-<tr id="row_0_19_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Vector2.html" target="_self">Vector2</a></td><td class="desc">2D <a class="el" href="classyage_1_1Vector.html">Vector</a> class </td></tr>
-<tr id="row_0_20_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Vector3.html" target="_self">Vector3</a></td><td class="desc">3D <a class="el" href="classyage_1_1Vector.html">Vector</a> class </td></tr>
-<tr id="row_0_21_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Vector4.html" target="_self">Vector4</a></td><td class="desc">4D <a class="el" href="classyage_1_1Vector.html">Vector</a> class </td></tr>
-<tr id="row_0_22_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Body.html" target="_self">Body</a></td><td class="desc"></td></tr>
-<tr id="row_0_23_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Collider.html" target="_self">Collider</a></td><td class="desc"></td></tr>
-<tr id="row_0_24_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1CollisionBody.html" target="_self">CollisionBody</a></td><td class="desc"></td></tr>
-<tr id="row_0_25_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1ParticleBody.html" target="_self">ParticleBody</a></td><td class="desc"></td></tr>
-<tr id="row_0_26_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1RectangleCollider.html" target="_self">RectangleCollider</a></td><td class="desc"></td></tr>
-<tr id="row_0_27_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1RigidBody.html" target="_self">RigidBody</a></td><td class="desc"></td></tr>
-<tr id="row_0_28_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Batch.html" target="_self">Batch</a></td><td class="desc">Will be the base class for all the different batching processes that might use different shaders and attributes </td></tr>
-<tr id="row_0_29_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Drawable.html" target="_self">Drawable</a></td><td class="desc"></td></tr>
-<tr id="row_0_30_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Rectangle.html" target="_self">Rectangle</a></td><td class="desc"></td></tr>
-<tr id="row_0_31_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Shader.html" target="_self">Shader</a></td><td class="desc"></td></tr>
-<tr id="row_0_32_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Shape.html" target="_self">Shape</a></td><td class="desc"></td></tr>
-<tr id="row_0_33_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Sprite.html" target="_self">Sprite</a></td><td class="desc"></td></tr>
-<tr id="row_0_34_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1SpriteBatch.html" target="_self">SpriteBatch</a></td><td class="desc"></td></tr>
-<tr id="row_0_35_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Active.html" target="_self">Active</a></td><td class="desc"></td></tr>
-<tr id="row_0_36_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1SyncQueue.html" target="_self">SyncQueue</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structstbi__io__callbacks.html" target="_self">stbi_io_callbacks</a></td><td class="desc"></td></tr>
+<tr id="row_0_17_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Engine.html" target="_self">Engine</a></td><td class="desc">Main engine class that contains a systems, the main loop and the update function that updates all the systems </td></tr>
+<tr id="row_0_18_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Entity.html" target="_self">Entity</a></td><td class="desc"><a class="el" href="classyage_1_1Entity.html" title="Entity convenience class. ">Entity</a> convenience class </td></tr>
+<tr id="row_0_19_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1EntityManager.html" target="_self">EntityManager</a></td><td class="desc">Manages entities in a space </td></tr>
+<tr id="row_0_20_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Space.html" target="_self">Space</a></td><td class="desc"><a class="el" href="classyage_1_1Space.html" title="Space that keeps track of all the entities, componenets and runs the systems on the data to update th...">Space</a> that keeps track of all the entities, componenets and runs the systems on the data to update them </td></tr>
+<tr id="row_0_21_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1System.html" target="_self">System</a></td><td class="desc"><a class="el" href="classyage_1_1System.html" title="System interface for the different systems in the engine. ">System</a> interface for the different systems in the engine </td></tr>
+<tr id="row_0_22_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Matrix.html" target="_self">Matrix</a></td><td class="desc">Base <a class="el" href="classyage_1_1Matrix.html" title="Base Matrix class used by other similar classes. ">Matrix</a> class used by other similar classes </td></tr>
+<tr id="row_0_23_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Vector.html" target="_self">Vector</a></td><td class="desc"></td></tr>
+<tr id="row_0_24_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Vector2.html" target="_self">Vector2</a></td><td class="desc">2D <a class="el" href="classyage_1_1Vector.html">Vector</a> class </td></tr>
+<tr id="row_0_25_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Vector3.html" target="_self">Vector3</a></td><td class="desc">3D <a class="el" href="classyage_1_1Vector.html">Vector</a> class </td></tr>
+<tr id="row_0_26_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Vector4.html" target="_self">Vector4</a></td><td class="desc">4D <a class="el" href="classyage_1_1Vector.html">Vector</a> class </td></tr>
+<tr id="row_0_27_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Body.html" target="_self">Body</a></td><td class="desc"></td></tr>
+<tr id="row_0_28_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Collider.html" target="_self">Collider</a></td><td class="desc"></td></tr>
+<tr id="row_0_29_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1CollisionBody.html" target="_self">CollisionBody</a></td><td class="desc"></td></tr>
+<tr id="row_0_30_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1ParticleBody.html" target="_self">ParticleBody</a></td><td class="desc"></td></tr>
+<tr id="row_0_31_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1RectangleCollider.html" target="_self">RectangleCollider</a></td><td class="desc"></td></tr>
+<tr id="row_0_32_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1RigidBody.html" target="_self">RigidBody</a></td><td class="desc"></td></tr>
+<tr id="row_0_33_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Batch.html" target="_self">Batch</a></td><td class="desc">Will be the base class for all the different batching processes that might use different shaders and attributes </td></tr>
+<tr id="row_0_34_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Drawable.html" target="_self">Drawable</a></td><td class="desc"></td></tr>
+<tr id="row_0_35_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Rectangle.html" target="_self">Rectangle</a></td><td class="desc"></td></tr>
+<tr id="row_0_36_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Shader.html" target="_self">Shader</a></td><td class="desc"></td></tr>
+<tr id="row_0_37_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Shape.html" target="_self">Shape</a></td><td class="desc"></td></tr>
+<tr id="row_0_38_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Sprite.html" target="_self">Sprite</a></td><td class="desc"></td></tr>
+<tr id="row_0_39_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1SpriteBatch.html" target="_self">SpriteBatch</a></td><td class="desc"></td></tr>
+<tr id="row_0_40_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1Active.html" target="_self">Active</a></td><td class="desc"></td></tr>
+<tr id="row_0_41_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classyage_1_1SyncQueue.html" target="_self">SyncQueue</a></td><td class="desc"></td></tr>
+<tr id="row_1_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classComponent.html" target="_self">Component</a></td><td class="desc"></td></tr>
+<tr id="row_2_"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structstbi__io__callbacks.html" target="_self">stbi_io_callbacks</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated on Sat Jan 6 2018 21:19:57 for YAGE by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 10 2018 18:44:07 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
 </body>
 </html>
