@@ -1,25 +1,23 @@
 /** ---------------------------------------------------------------------------
- * @file: shape.h
+ * @file: entity.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_RENDER_SHAPE_H
-#define YAGE_RENDER_SHAPE_H
+#include "entity.h"
 
-#include "drawable.h"
+#include "space.h"
 
 namespace yage
 {
 
-class Shape : public Drawable
+Entity::Entity(unsigned handle) : handle_(handle) {}
+
+unsigned Entity::getHandle() const
 {
-public:
-    virtual void render() const;
-};
+    return handle_;
+}
 
-} // namespace yage
-
-#endif
+} // naemspace yage

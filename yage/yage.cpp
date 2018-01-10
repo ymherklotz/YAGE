@@ -24,7 +24,7 @@ void glfwErrorCallback(int, const char *description)
 void init()
 {
     glfwSetErrorCallback(glfwErrorCallback);
-    if (!glfwInit()) {
+    if (glfwInit() == GLFW_FALSE) {
         throw std::runtime_error("GLFW couldn't be initialised");
     }
 }

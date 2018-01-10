@@ -14,8 +14,8 @@
 namespace yage
 {
 
-LogMessage::LogMessage(Logger *owner, LogLevel level, const std::string &file_name,
-                       int line_num)
+LogMessage::LogMessage(Logger *owner, LogLevel level,
+                       const std::string &file_name, int line_num)
     : owner_(owner), meta_({level, file_name, line_num})
 {
 }

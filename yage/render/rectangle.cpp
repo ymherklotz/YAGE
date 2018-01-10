@@ -1,3 +1,11 @@
+/** ---------------------------------------------------------------------------
+ * @file: rectangle.cpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
+ * MIT License, see LICENSE file for more details.
+ * ----------------------------------------------------------------------------
+ */
+
 #include "rectangle.h"
 
 #include "../data/vertex.h"
@@ -29,10 +37,10 @@ void Rectangle::render() const
     glEnableVertexAttribArray(1);
 
     // set the vertex attribute pointers
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offsetof(Vertex, position));
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
+                          (void *)offsetof(Vertex, position));
 
     glBindVertexArray(0);
 }
 
 } // namepsace yage
-

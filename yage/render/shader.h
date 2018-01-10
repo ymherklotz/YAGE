@@ -9,8 +9,8 @@
 #ifndef YAGE_RENDER_SHADER_H
 #define YAGE_RENDER_SHADER_H
 
-#include <glm/glm.hpp>
 #include <glad/glad.h>
+#include <glm/glm.hpp>
 
 #include <string>
 

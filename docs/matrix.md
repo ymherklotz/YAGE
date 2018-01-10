@@ -1,6 +1,4 @@
-/** @class yage::Matrix
-
-%Matrix Class
+Matrix Guide {#matrix_guide}
 ============
 
 The matrix class is a templated class which implements a mathematical %Matrix.
@@ -17,7 +15,7 @@ Example Code
 
 Creating a %Matrix and performing operations on it.
 
-```
+``` c++
 #include <YAGE/Math/matrix.hpp>
 
 int main(int, char **)
@@ -29,5 +27,3 @@ int main(int, char **)
     return 0;
 }
 ```
-
-*/
