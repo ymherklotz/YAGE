@@ -18,21 +18,34 @@ namespace yage
 class System
 {
 public:
-    /// Virtual destructor to destroy all the objects that implement this
-    /// properly.
+    /**
+     * Virtual destructor to destroy all the objects that implement this
+     * properly.
+     */
     virtual ~System() = 0;
 
-    /// Initializes the system. Good practice to have this function instead
-    /// using the constructor.
+    /**
+     * Initializes the system. Good practice to have this function instead
+     * using the constructor.
+     */
     virtual void init() = 0;
 
-    /// Updates the system at each interval using the time step.
+    /**
+     * Updates the system at each interval using the time step.
+     *
+     * @param dt The time difference between the previous frame and the current one.
+     */
     virtual void update(double dt) = 0;
 };
 
-/// Implement the default destructor, but leaving it as purely virtual in the
-/// definition of the abstract class.
-inline yage::System::~System() {}
+/**
+ * Implement the default destructor, but leaving it as purely virtual in the
+ * definition of the abstract class. This is so that the classes that implement
+ * the abstract class have to implement a desctructor, but at the same time,
+ * that there is no undefined behavious when the stack unwinds to the system and
+ * calls the system destructor.
+ */
+inline System::~System() {}
 
 } // namespace yage
 

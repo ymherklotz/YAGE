@@ -39,15 +39,10 @@ Window::Window() = default;
 Window::~Window()
 {
     glfwDestroyWindow(window_);
-    glfwTerminate();
 }
 
 void Window::create(std::string window_name, int width, int height)
 {
-    if (glfwInit() == GLFW_FALSE) {
-        throw runtime_error("GLFW Initialisation failed");
-    }
-
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
