@@ -9,6 +9,13 @@
 #ifndef YAGE_CORE_LOGLEVEL_H
 #define YAGE_CORE_LOGLEVEL_H
 
+#ifdef _WIN32
+#ifdef ERROR
+#define YAGE_ERROR_TMP ERROR
+#undef ERROR
+#endif
+#endif
+
 namespace yage
 {
 
@@ -28,25 +35,20 @@ enum class LogLevel {
     /// Warning message.
     WARNING,
 
-#ifdef _WIN32
-#ifdef ERROR
-#define YAGE_ERROR_TMP ERROR
-#undef ERROR
-#endif
-#endif
     /// Error message.
     ERROR,
-#ifdef _WIN32
-#ifdef YAGE_ERROR_TMP
-#define ERROR YAGE_ERROR_TMP
-#undef YAGE_ERROR_TMP
-#endif
-#endif
 
     /// Fatal message that should be output when the game
     /// crashes.
     FATAL,
 };
 }
+
+#ifdef _WIN32
+#ifdef YAGE_ERROR_TMP
+#define ERROR YAGE_ERROR_TMP
+#undef YAGE_ERROR_TMP
+#endif
+#endif
 
 #endif

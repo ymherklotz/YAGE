@@ -9,6 +9,13 @@
 #ifndef YAGE_CORE_INPUT_H
 #define YAGE_CORE_INPUT_H
 
+#ifdef _WIN32
+#ifdef DELETE
+#define YAGE_DELETE_TMP DELETE
+#undef DELETE
+#endif
+#endif
+
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 
@@ -77,19 +84,7 @@ enum class key {
     TAB           = GLFW_KEY_TAB,
     BACKSPACE     = GLFW_KEY_BACKSPACE,
     INSERT        = GLFW_KEY_INSERT,
-#ifdef _WIN32
-#ifdef DELETE
-#define YAGE_DELETE_TMP DELETE
-#undef DELETE
-#endif
-#endif
     DELETE        = GLFW_KEY_DELETE,
-#ifdef _WIN32
-#ifdef YAGE_DELETE_TMP
-#define DELETE YAGE_DELETE_TMP
-#undef YAGE_DELETE_TMP
-#endif
-#endif
     RIGHT         = GLFW_KEY_RIGHT,
     LEFT          = GLFW_KEY_LEFT,
     DOWN          = GLFW_KEY_DOWN,
@@ -159,5 +154,12 @@ enum class key {
 };
 
 } // namepsace yage
+
+#ifdef _WIN32
+#ifdef YAGE_DELETE_TMP
+#define DELETE YAGE_DELETE_TMP
+#undef YAGE_DELETE_TMP
+#endif
+#endif
 
 #endif
