@@ -8,3 +8,4 @@ endfunction(make_example)
 
 make_example(simplegame)
 make_example(shooter)
+make_example(render3d)

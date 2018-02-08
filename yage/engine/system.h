@@ -36,6 +36,11 @@ public:
      * @param dt The time difference between the previous frame and the current one.
      */
     virtual void update(double dt) = 0;
+
+    /**
+     * Destroy the system and the components that are contained in it.
+     */
+    virtual void destroy() = 0;
 };
 
 /**

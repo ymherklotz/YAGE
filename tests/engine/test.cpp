@@ -8,7 +8,6 @@ int main()
     auto entity  = space.createEntity();
     auto entity2 = space.createEntity();
     auto entity3 = space.createEntity();
-
     auto entity4 = space.createEntity();
 
     yLogInfo << "Entity 1: " << entity;
