@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>YAGE: yage::System Class Reference</title>
+<title>YAGE: yage::System&lt; Derived &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,10 +91,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classyage_1_1System-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">yage::System Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">yage::System&lt; Derived &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -102,143 +101,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classyage_1_1System.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="system_8h_source.html">system.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for yage::System&lt; Derived &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classyage_1_1System.png" usemap="#yage::System&lt; Derived &gt;_map" alt=""/>
+  <map id="yage::System&lt; Derived &gt;_map" name="yage::System&lt; Derived &gt;_map">
+<area href="classyage_1_1BaseSystem.html" alt="yage::BaseSystem" shape="rect" coords="0,56,155,80"/>
+<area href="classyage_1_1NonCopyable.html" alt="yage::NonCopyable" shape="rect" coords="0,0,155,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a32e00cf7f9b517a43e7db16d2aaa9b57"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1System.html#a32e00cf7f9b517a43e7db16d2aaa9b57">~System</a> ()=0</td></tr>
-<tr class="memdesc:a32e00cf7f9b517a43e7db16d2aaa9b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor to destroy all the objects that implement this properly.  <a href="#a32e00cf7f9b517a43e7db16d2aaa9b57">More...</a><br/></td></tr>
-<tr class="separator:a32e00cf7f9b517a43e7db16d2aaa9b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad697e043fcf7dbcf77821f49073f5af9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1System.html#ad697e043fcf7dbcf77821f49073f5af9">init</a> ()=0</td></tr>
-<tr class="memdesc:ad697e043fcf7dbcf77821f49073f5af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the system.  <a href="#ad697e043fcf7dbcf77821f49073f5af9">More...</a><br/></td></tr>
-<tr class="separator:ad697e043fcf7dbcf77821f49073f5af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a882cfa13fc76d106c9d0ca68b17ff1ff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1System.html#a882cfa13fc76d106c9d0ca68b17ff1ff">update</a> (double dt)=0</td></tr>
-<tr class="memdesc:a882cfa13fc76d106c9d0ca68b17ff1ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the system at each interval using the time step.  <a href="#a882cfa13fc76d106c9d0ca68b17ff1ff">More...</a><br/></td></tr>
-<tr class="separator:a882cfa13fc76d106c9d0ca68b17ff1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e5c249058a70ceb74f7514ade5ab401"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1System.html#a9e5c249058a70ceb74f7514ade5ab401">destroy</a> ()=0</td></tr>
-<tr class="memdesc:a9e5c249058a70ceb74f7514ade5ab401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the system and the components that are contained in it.  <a href="#a9e5c249058a70ceb74f7514ade5ab401">More...</a><br/></td></tr>
-<tr class="separator:a9e5c249058a70ceb74f7514ade5ab401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classyage_1_1BaseSystem"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classyage_1_1BaseSystem')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classyage_1_1BaseSystem.html">yage::BaseSystem</a></td></tr>
+<tr class="memitem:a8391daab8ffc82e734c5607c6adc9c08 inherit pub_types_classyage_1_1BaseSystem"><td class="memItemLeft" align="right" valign="top">typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1BaseSystem.html#a8391daab8ffc82e734c5607c6adc9c08">Identifier</a></td></tr>
+<tr class="separator:a8391daab8ffc82e734c5607c6adc9c08 inherit pub_types_classyage_1_1BaseSystem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classyage_1_1BaseSystem"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classyage_1_1BaseSystem')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classyage_1_1BaseSystem.html">yage::BaseSystem</a></td></tr>
+<tr class="memitem:a3418e8bfda4350a7aa076dc661ce8e21 inherit pub_methods_classyage_1_1BaseSystem"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1BaseSystem.html#a3418e8bfda4350a7aa076dc661ce8e21">update</a> ()=0</td></tr>
+<tr class="separator:a3418e8bfda4350a7aa076dc661ce8e21 inherit pub_methods_classyage_1_1BaseSystem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classyage_1_1NonCopyable"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classyage_1_1NonCopyable')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classyage_1_1NonCopyable.html">yage::NonCopyable</a></td></tr>
+<tr class="memitem:a09d38a4f2290e4cfe2bc7b199421ab6d inherit pro_methods_classyage_1_1NonCopyable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1NonCopyable.html#a09d38a4f2290e4cfe2bc7b199421ab6d">NonCopyable</a> ()=default</td></tr>
+<tr class="separator:a09d38a4f2290e4cfe2bc7b199421ab6d inherit pro_methods_classyage_1_1NonCopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06190acb5123fdfc38675191ae547ba8 inherit pro_methods_classyage_1_1NonCopyable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1NonCopyable.html#a06190acb5123fdfc38675191ae547ba8">~NonCopyable</a> ()=default</td></tr>
+<tr class="separator:a06190acb5123fdfc38675191ae547ba8 inherit pro_methods_classyage_1_1NonCopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adacd41ff69b4b38fda215249a3387aa0 inherit pro_methods_classyage_1_1NonCopyable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1NonCopyable.html#adacd41ff69b4b38fda215249a3387aa0">NonCopyable</a> (const <a class="el" href="classyage_1_1NonCopyable.html">NonCopyable</a> &amp;)=delete</td></tr>
+<tr class="separator:adacd41ff69b4b38fda215249a3387aa0 inherit pro_methods_classyage_1_1NonCopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2972f07c7c098281713d3f9dc20309af inherit pro_methods_classyage_1_1NonCopyable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1NonCopyable.html">NonCopyable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1NonCopyable.html#a2972f07c7c098281713d3f9dc20309af">operator=</a> (const <a class="el" href="classyage_1_1NonCopyable.html">NonCopyable</a> &amp;)=delete</td></tr>
+<tr class="separator:a2972f07c7c098281713d3f9dc20309af inherit pro_methods_classyage_1_1NonCopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classyage_1_1BaseSystem"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classyage_1_1BaseSystem')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classyage_1_1BaseSystem.html">yage::BaseSystem</a></td></tr>
+<tr class="memitem:a9557904e30ba65a215a7ef902a776778 inherit pro_attribs_classyage_1_1BaseSystem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1BaseSystem.html#a8391daab8ffc82e734c5607c6adc9c08">Identifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1BaseSystem.html#a9557904e30ba65a215a7ef902a776778">id_</a></td></tr>
+<tr class="separator:a9557904e30ba65a215a7ef902a776778 inherit pro_attribs_classyage_1_1BaseSystem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classyage_1_1System.html" title="System interface for the different systems in the engine. ">System</a> interface for the different systems in the engine. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a32e00cf7f9b517a43e7db16d2aaa9b57"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">yage::System::~System </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<div class="textblock"><h3>template&lt;typename Derived&gt;<br/>
+class yage::System&lt; Derived &gt;</h3>
 
-<p>Virtual destructor to destroy all the objects that implement this properly. </p>
-<p>Implement the default destructor, but leaving it as purely virtual in the definition of the abstract class.</p>
-<p>This is so that the classes that implement the abstract class have to implement a desctructor, but at the same time, that there is no undefined behavious when the stack unwinds to the system and calls the system destructor. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a9e5c249058a70ceb74f7514ade5ab401"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void yage::System::destroy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Destroy the system and the components that are contained in it. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad697e043fcf7dbcf77821f49073f5af9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void yage::System::init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Initializes the system. </p>
-<p>Good practice to have this function instead using the constructor. </p>
-
-</div>
-</div>
-<a class="anchor" id="a882cfa13fc76d106c9d0ca68b17ff1ff"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void yage::System::update </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dt</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Updates the system at each interval using the time step. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dt</td><td>The time difference between the previous frame and the current one. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<p><a class="el" href="classyage_1_1System.html" title="System interface for the different systems in the engine. ">System</a> interface for the different systems in the engine. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>yage/entity/<a class="el" href="system_8h_source.html">system.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 19:22:08 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 13 2018 20:09:31 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

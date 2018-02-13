@@ -29,8 +29,8 @@ var searchData=
   ['sprite',['Sprite',['../classyage_1_1Sprite.html#a113bfddfa62846a1d8391d1b86de7987',1,'yage::Sprite::Sprite()=default'],['../classyage_1_1Sprite.html#aa5a7958e17f1d042226b91fb1829642e',1,'yage::Sprite::Sprite(const Sprite &amp;)=delete'],['../classyage_1_1Sprite.html#a33789b3e37bfcb84ed89ec69f47817a1',1,'yage::Sprite::Sprite(Sprite &amp;&amp;)=delete'],['../classyage_1_1SpriteSheet.html#a2734c2e7b8bdfc9090d240c070ee55c0',1,'yage::SpriteSheet::sprite()']]],
   ['sprite_2ecpp',['sprite.cpp',['../sprite_8cpp.html',1,'']]],
   ['sprite_2eh',['sprite.h',['../sprite_8h.html',1,'']]],
-  ['spritebatch',['SpriteBatch',['../classyage_1_1SpriteBatch.html#afda50a8a2a6c9ffd1b9d962fae223f8a',1,'yage::SpriteBatch::SpriteBatch()'],['../classyage_1_1SpriteBatch.html#a30a46a7182235a739916d540781af652',1,'yage::SpriteBatch::SpriteBatch(const SpriteBatch &amp;)=delete'],['../classyage_1_1SpriteBatch.html#a7f18a506f4188acd2219da8147dc0e1e',1,'yage::SpriteBatch::SpriteBatch(SpriteBatch &amp;&amp;)=delete']]],
   ['spritebatch',['SpriteBatch',['../classyage_1_1SpriteBatch.html',1,'yage']]],
+  ['spritebatch',['SpriteBatch',['../classyage_1_1SpriteBatch.html#afda50a8a2a6c9ffd1b9d962fae223f8a',1,'yage::SpriteBatch::SpriteBatch()'],['../classyage_1_1SpriteBatch.html#a30a46a7182235a739916d540781af652',1,'yage::SpriteBatch::SpriteBatch(const SpriteBatch &amp;)=delete'],['../classyage_1_1SpriteBatch.html#a7f18a506f4188acd2219da8147dc0e1e',1,'yage::SpriteBatch::SpriteBatch(SpriteBatch &amp;&amp;)=delete']]],
   ['spritebatch_2ecpp',['spritebatch.cpp',['../spritebatch_8cpp.html',1,'']]],
   ['spritebatch_2eh',['spritebatch.h',['../spritebatch_8h.html',1,'']]],
   ['spritebatch_2emd',['spritebatch.md',['../spritebatch_8md.html',1,'']]],
@@ -89,10 +89,12 @@ var searchData=
   ['stbi_5fzlib_5fdecode_5fnoheader_5fmalloc',['stbi_zlib_decode_noheader_malloc',['../stb__image_8h.html#a7fbd65c83495f13f22469fe493775739',1,'stb_image.h']]],
   ['stbidef',['STBIDEF',['../stb__image_8h.html#a2d9ec9850cd12aefe7641b456266a4c2',1,'stb_image.h']]],
   ['swapbuffer',['swapBuffer',['../classyage_1_1Window.html#a86d0aa8e9896850b9acfc720b5615359',1,'yage::Window']]],
-  ['syncqueue',['SyncQueue',['../classyage_1_1SyncQueue.html',1,'yage']]],
   ['syncqueue',['SyncQueue',['../classyage_1_1SyncQueue.html#a0c8aa1c22e3e6d5094dbdeb88cff426b',1,'yage::SyncQueue::SyncQueue()=default'],['../classyage_1_1SyncQueue.html#a8f42b9b34c6495680aade2563cc2359c',1,'yage::SyncQueue::SyncQueue(const SyncQueue &amp;)=delete']]],
+  ['syncqueue',['SyncQueue',['../classyage_1_1SyncQueue.html',1,'yage']]],
   ['syncqueue_2eh',['syncqueue.h',['../syncqueue_8h.html',1,'']]],
   ['syncqueue_3c_20callback_20_3e',['SyncQueue&lt; Callback &gt;',['../classyage_1_1SyncQueue.html',1,'yage']]],
   ['system',['System',['../classyage_1_1System.html',1,'yage']]],
-  ['system_2eh',['system.h',['../system_8h.html',1,'']]]
+  ['system_2eh',['system.h',['../system_8h.html',1,'']]],
+  ['systemmanager',['SystemManager',['../classyage_1_1SystemManager.html',1,'yage']]],
+  ['systemmanager_2eh',['systemmanager.h',['../systemmanager_8h.html',1,'']]]
 ];
