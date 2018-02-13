@@ -50,8 +50,7 @@
  * Engine that includes a Entity Component System to organize the data and make
  * it more flexible and efficient.
  */
-#include "engine/engine.h"
-
+#include "entity/engine.h"
 /**
  * Project namespace.
  *

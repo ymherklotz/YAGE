@@ -14,6 +14,8 @@
 namespace yage
 {
 
+typedef unsigned EntityHandle;
+
 class Space;
 
 /**
@@ -32,20 +34,20 @@ public:
      * This handle refers to the position of he Entity in the list that is held
      * by the EntityManager, and therefore the id is enough to refer to it.
      */
-    Entity(unsigned handle);
+    Entity(EntityHandle handle);
 
     /**
      * Handle getter, as the user will only interact with the id itself. The
      * handle is the unique identifier that the user can use to refer to the
      * entity.
      */
-    unsigned getHandle() const;
+    EntityHandle getHandle() const;
 
 private:
     /**
      * Entity handle for the entity manager.
      */
-    unsigned handle_;
+    EntityHandle handle_;
 };
 
 } // namespace yage

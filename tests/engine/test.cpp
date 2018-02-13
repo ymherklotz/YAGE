@@ -1,4 +1,4 @@
-#include <yage/engine/space.h>
+#include <yage/entity/space.h>
 
 #include <yage/yage.h>
 
@@ -14,5 +14,6 @@ int main()
     yLogInfo << "Entity 3: " << entity3;
     yLogInfo << "Entity 2: " << entity2;
     yLogInfo << "Entity 4: " << entity4;
+
     return 0;
 }
