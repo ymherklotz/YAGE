@@ -196,11 +196,15 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Active.html">Active</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1NonCopyable.html">NonCopyable</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1SyncQueue.html">SyncQueue</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:aa1a73f12188f10f8a3cf46ba3803be9a"><td class="memItemLeft" align="right" valign="top">typedef unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">EntityHandle</a></td></tr>
+<tr class="separator:aa1a73f12188f10f8a3cf46ba3803be9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23eef341099a6b2816cf0c63f8ffe898"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a23eef341099a6b2816cf0c63f8ffe898">Vector2d</a> = <a class="el" href="classyage_1_1Vector2.html">Vector2</a>&lt; double &gt;</td></tr>
 <tr class="memdesc:a23eef341099a6b2816cf0c63f8ffe898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a 2D vector.  <a href="#a23eef341099a6b2816cf0c63f8ffe898">More...</a><br/></td></tr>
 <tr class="separator:a23eef341099a6b2816cf0c63f8ffe898"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -453,9 +457,21 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Core includes. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>remove the include to make compilation faster </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>think of removing this, by, for example, using a pointer This could be more efficient when copying the texture out of the spritesheet.</dd></dl>
-<p>Data structues useful for the game engine and games developed by it Math templated implementation of matrices and operations on them. Physics implementation however, Box2D Rendering implementations for spritebatching and default shapes. <a class="el" href="classyage_1_1Engine.html" title="Main engine class that contains a systems, the main loop and the update function that updates all the...">Engine</a> that includes a <a class="el" href="classyage_1_1Entity.html" title="Entity convenience class. ">Entity</a> <a class="el" href="classComponent.html">Component</a> <a class="el" href="classyage_1_1System.html" title="System interface for the different systems in the engine. ">System</a> to organize the data and make it more flexible and efficient. Project namespace.</p>
+<p>Data structues useful for the game engine and games developed by it Math templated implementation of matrices and operations on them. Physics implementation however, Box2D Rendering implementations for spritebatching and default shapes. <a class="el" href="classyage_1_1Engine.html" title="Main engine class that contains a systems, the main loop and the update function that updates all the...">Engine</a> that includes a <a class="el" href="classyage_1_1Entity.html" title="Entity convenience class. ">Entity</a> Component <a class="el" href="classyage_1_1System.html" title="System interface for the different systems in the engine. ">System</a> to organize the data and make it more flexible and efficient. Project namespace.</p>
 <p>Avoids collision as all the classes and global functions are wrapped in. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="aa1a73f12188f10f8a3cf46ba3803be9a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned <a class="el" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">yage::EntityHandle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a23eef341099a6b2816cf0c63f8ffe898"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1320,7 +1336,7 @@ template&lt;int M, int N, class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 10 2018 19:56:50 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 13 2018 19:22:08 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,7 +1,9 @@
 var searchData=
 [
   ['n',['N',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a8d9c307cb7f3c4a32822a51922d1ceaa',1,'yage']]],
-  ['nax_5fcomponents',['NAX_COMPONENTS',['../component_8h.html#a265b76591becf42b342804bbc4a79507af13334a5251126fb6c2316d8c81c5419',1,'component.h']]],
+  ['noncopyable',['NonCopyable',['../classyage_1_1NonCopyable.html',1,'yage']]],
+  ['noncopyable',['NonCopyable',['../classyage_1_1NonCopyable.html#a09d38a4f2290e4cfe2bc7b199421ab6d',1,'yage::NonCopyable::NonCopyable()=default'],['../classyage_1_1NonCopyable.html#adacd41ff69b4b38fda215249a3387aa0',1,'yage::NonCopyable::NonCopyable(const NonCopyable &amp;)=delete']]],
+  ['noncopyable_2eh',['noncopyable.h',['../noncopyable_8h.html',1,'']]],
   ['num0',['NUM0',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a22517dfceb401f35b1b59999ba74c700',1,'yage']]],
   ['num1',['NUM1',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a71ddb986230a88155bf74e65f644dda4',1,'yage']]],
   ['num2',['NUM2',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a78232351eaf00755d136afad0745157b',1,'yage']]],

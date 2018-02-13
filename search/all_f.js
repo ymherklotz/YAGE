@@ -13,7 +13,7 @@ var searchData=
   ['physics_2eh',['physics.h',['../physics_8h.html',1,'']]],
   ['pollevents',['pollEvents',['../classyage_1_1Window.html#a1a311e27b1e588f0fce540ce040dcbd5',1,'yage::Window']]],
   ['pop',['pop',['../classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e',1,'yage::SyncQueue::pop()'],['../classyage_1_1SyncQueue.html#ab8a3c646e1d2f9adfcbcfbaa2e2a4b27',1,'yage::SyncQueue::pop(T &amp;item)']]],
-  ['position',['Position',['../structyage_1_1Position.html#a41b1d5ee23c50208982ab6089708e5d2',1,'yage::Position::Position()=default'],['../structyage_1_1Position.html#aaeaa1cd93e57adcb08ef4f76513148e2',1,'yage::Position::Position(float x_, float y_)'],['../structyage_1_1Vertex.html#abefe88d26b055655f9cc038a1dd4ff6a',1,'yage::Vertex::position()'],['../component_8h.html#a265b76591becf42b342804bbc4a79507a90b4ba73224408e82ade8a072a3712c1',1,'POSITION():&#160;component.h']]],
+  ['position',['Position',['../structyage_1_1Position.html#a41b1d5ee23c50208982ab6089708e5d2',1,'yage::Position::Position()=default'],['../structyage_1_1Position.html#aaeaa1cd93e57adcb08ef4f76513148e2',1,'yage::Position::Position(float x_, float y_)'],['../structyage_1_1Vertex.html#abefe88d26b055655f9cc038a1dd4ff6a',1,'yage::Vertex::position()']]],
   ['position',['Position',['../structyage_1_1Position.html',1,'yage']]],
   ['position_5f',['position_',['../classyage_1_1Body.html#a8fe4f244be47f1336a57c1f2aa095157',1,'yage::Body::position_()'],['../classyage_1_1Collider.html#a2ae348a82a0ca7a871c05f36e5031161',1,'yage::Collider::position_()']]],
   ['print_5fscreen',['PRINT_SCREEN',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a853f8ded7a96b5a765704974e6a3ca96',1,'yage']]],

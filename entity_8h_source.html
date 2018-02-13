@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>YAGE: yage/engine/entity.h Source File</title>
+<title>YAGE: yage/entity/entity.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_4360c3054e876104aec8d81523b584e2.html">engine</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_b47bccbdb192fb141a0ffded67f346da.html">entity</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,29 +101,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>yage</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>Space;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">   17</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <a class="code" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">EntityHandle</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classyage_1_1Entity.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Entity.html">Entity</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classyage_1_1Entity.html#a046099f19b3483140505938769276d8a">Entity</a>(<span class="keywordtype">unsigned</span> handle);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="classyage_1_1Entity.html#adb9e45f096a38c1057bba28acf7dde71">getHandle</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">unsigned</span> handle_;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Space.html">Space</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classyage_1_1Entity.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Entity.html">Entity</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classyage_1_1Entity.html#a811c917c6048fab74c9972df4cd80cef">Entity</a>(<a class="code" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">EntityHandle</a> handle);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">EntityHandle</a> <a class="code" href="classyage_1_1Entity.html#adb9e45f096a38c1057bba28acf7dde71">getHandle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">EntityHandle</a> handle_;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classyage_1_1Entity_html"><div class="ttname"><a href="classyage_1_1Entity.html">yage::Entity</a></div><div class="ttdoc">Entity convenience class. </div><div class="ttdef"><b>Definition:</b> entity.h:27</div></div>
-<div class="ttc" id="classyage_1_1Entity_html_a046099f19b3483140505938769276d8a"><div class="ttname"><a href="classyage_1_1Entity.html#a046099f19b3483140505938769276d8a">yage::Entity::Entity</a></div><div class="ttdeci">Entity(unsigned handle)</div><div class="ttdoc">Creates an instance of an Entity with a handle that is associated to it. </div><div class="ttdef"><b>Definition:</b> entity.cpp:16</div></div>
-<div class="ttc" id="classyage_1_1Entity_html_adb9e45f096a38c1057bba28acf7dde71"><div class="ttname"><a href="classyage_1_1Entity.html#adb9e45f096a38c1057bba28acf7dde71">yage::Entity::getHandle</a></div><div class="ttdeci">unsigned getHandle() const </div><div class="ttdoc">Handle getter, as the user will only interact with the id itself. </div><div class="ttdef"><b>Definition:</b> entity.cpp:18</div></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespaceyage_html_aa1a73f12188f10f8a3cf46ba3803be9a"><div class="ttname"><a href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">yage::EntityHandle</a></div><div class="ttdeci">unsigned EntityHandle</div><div class="ttdef"><b>Definition:</b> entity.h:17</div></div>
+<div class="ttc" id="classyage_1_1Entity_html"><div class="ttname"><a href="classyage_1_1Entity.html">yage::Entity</a></div><div class="ttdoc">Entity convenience class. </div><div class="ttdef"><b>Definition:</b> entity.h:29</div></div>
+<div class="ttc" id="classyage_1_1Entity_html_a811c917c6048fab74c9972df4cd80cef"><div class="ttname"><a href="classyage_1_1Entity.html#a811c917c6048fab74c9972df4cd80cef">yage::Entity::Entity</a></div><div class="ttdeci">Entity(EntityHandle handle)</div><div class="ttdoc">Creates an instance of an Entity with a handle that is associated to it. </div><div class="ttdef"><b>Definition:</b> entity.cpp:16</div></div>
+<div class="ttc" id="classyage_1_1Entity_html_adb9e45f096a38c1057bba28acf7dde71"><div class="ttname"><a href="classyage_1_1Entity.html#adb9e45f096a38c1057bba28acf7dde71">yage::Entity::getHandle</a></div><div class="ttdeci">EntityHandle getHandle() const </div><div class="ttdoc">Handle getter, as the user will only interact with the id itself. </div><div class="ttdef"><b>Definition:</b> entity.cpp:18</div></div>
+<div class="ttc" id="classyage_1_1Space_html"><div class="ttname"><a href="classyage_1_1Space.html">yage::Space</a></div><div class="ttdoc">Space that keeps track of all the entities, componenets and runs the systems on the data to update th...</div><div class="ttdef"><b>Definition:</b> space.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 10 2018 19:56:50 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 13 2018 19:22:08 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

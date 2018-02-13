@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key',['key',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822',1,'yage']]]
+  ['loglevel',['LogLevel',['../namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788',1,'yage']]]
 ];

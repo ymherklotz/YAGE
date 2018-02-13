@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['update',['update',['../classyage_1_1Camera.html#a99f0af50db990c5558fd0b7b82f3978c',1,'yage::Camera::update()'],['../classyage_1_1Engine.html#a8d888a2871d93f40b98ecf3548dd8d67',1,'yage::Engine::update()'],['../classyage_1_1System.html#a882cfa13fc76d106c9d0ca68b17ff1ff',1,'yage::System::update()'],['../classyage_1_1Body.html#a17017d183f3f9ecdff779fd6f82c5d36',1,'yage::Body::update()'],['../classyage_1_1ParticleBody.html#a1f24ef00fd59254397d677d90936ec4c',1,'yage::ParticleBody::update()']]],
-  ['use',['use',['../classyage_1_1Shader.html#a8cd66c177f148ac0b619766188696e6c',1,'yage::Shader']]],
-  ['uv',['UV',['../structyage_1_1UV.html#ae236139f3a5f6024aac1e21bd93b7bde',1,'yage::UV::UV()=default'],['../structyage_1_1UV.html#ac918524789292937aae5803df3c2673f',1,'yage::UV::UV(float u_, float v_)']]]
+  ['texture',['Texture',['../structyage_1_1Texture.html#a0cef080bceaaf5e702985f5494ea35d5',1,'yage::Texture::Texture()'],['../structyage_1_1Texture.html#af0a85aa4202d12fca9c1f52085d26850',1,'yage::Texture::Texture(GLuint id_i, int width_i, int height_i, int x_i=1, int y_i=1)']]],
+  ['texturecache',['TextureCache',['../classyage_1_1TextureCache.html#a5f6af0bd513dd393061b2d9d18362692',1,'yage::TextureCache']]],
+  ['tostring',['toString',['../classyage_1_1Matrix.html#a07678d7007e89487c7168df84f2a4fa8',1,'yage::Matrix::toString()'],['../classyage_1_1Vector.html#a956f7b6d02c0309adece311f59c8beae',1,'yage::Vector::toString()']]],
+  ['transpose',['transpose',['../namespaceyage_1_1matrix.html#a62de4b4b6bab23717d957c370f2e41c7',1,'yage::matrix']]]
 ];

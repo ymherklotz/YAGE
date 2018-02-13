@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['yage_2ecpp',['yage.cpp',['../yage_8cpp.html',1,'']]],
-  ['yage_2eh',['yage.h',['../yage_8h.html',1,'']]]
+  ['window_2ecpp',['window.cpp',['../window_8cpp.html',1,'']]],
+  ['window_2eh',['window.h',['../window_8h.html',1,'']]]
 ];
