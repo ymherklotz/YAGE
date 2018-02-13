@@ -31,17 +31,11 @@ public:
     /// Updates the systems.
     void update();
 
-    /// Adds a system to the engine.
-    void addSystem(System *system);
-
     /// Returns the instance of the engine, as there is only one instance of the
     /// engine.
     static Engine &instance();
 
 private:
-    /// Vector of all the systems in the engine.
-    std::vector<System *> systems_;
-
     /// Window
     Window window_;
 };

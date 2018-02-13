@@ -14,10 +14,6 @@ namespace yage
 void Engine::init()
 {
     window_.create("Game Engine", 800, 640);
-
-    for (auto &system : systems_) {
-        system->init();
-    }
 }
 
 void Engine::mainLoop()
@@ -33,16 +29,6 @@ void Engine::mainLoop()
 
 void Engine::update()
 {
-    const double dt = 1.0 / 60.0;
-
-    for (auto &system : systems_) {
-        system->update(dt);
-    }
-}
-
-void Engine::addSystem(System *system)
-{
-    systems_.push_back(system);
 }
 
 Engine &Engine::instance()

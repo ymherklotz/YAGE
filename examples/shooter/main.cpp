@@ -11,6 +11,7 @@ using std::cout;
 
 int main(int argc, char **argv)
 {
+    yage::init();
     yage::Window window;
     window.create("Shooter example", 800, 600);
 
@@ -166,4 +167,5 @@ int main(int argc, char **argv)
 
         window.swapBuffer();
     }
+    yage::quit();
 }

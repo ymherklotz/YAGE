@@ -18,7 +18,7 @@ using namespace yage;
 
 int main()
 {
-
+    yage::init();
     Logger logger;
     srand(time(nullptr));
     Window window;
@@ -109,4 +109,5 @@ int main()
         }
         i = (i + 1) % 30;
     }
+    yage::quit();
 }
