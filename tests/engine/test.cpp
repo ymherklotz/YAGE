@@ -1,4 +1,4 @@
-#include <yage/engine/space.h>
+#include <yage/entity/space.h>
 
 #include <yage/yage.h>
 
@@ -8,12 +8,12 @@ int main()
     auto entity  = space.createEntity();
     auto entity2 = space.createEntity();
     auto entity3 = space.createEntity();
-
     auto entity4 = space.createEntity();
 
     yLogInfo << "Entity 1: " << entity;
     yLogInfo << "Entity 3: " << entity3;
     yLogInfo << "Entity 2: " << entity2;
     yLogInfo << "Entity 4: " << entity4;
+
     return 0;
 }
