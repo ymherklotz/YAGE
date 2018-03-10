@@ -57,6 +57,20 @@ The test suite can then be run using
 cd build/tests && ctest
 ```
 
+## Using the game engine
+
+The game engine can be initialised as follows.
+
+``` c++
+yage::init();
+```
+
+It can be then cleaned up by running.
+
+``` objective-c++
+yage::quit();
+```
+
 ## Future Improvements
 
 The first step is to have full support of 3D meshes with their corresponding
