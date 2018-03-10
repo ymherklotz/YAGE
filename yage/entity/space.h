@@ -16,8 +16,6 @@
 namespace yage
 {
 
-class System;
-
 /**
  * Space that keeps track of all the entities, componenets and runs the systems
  * on the data to update them. There can be multiple instances of a space, which
@@ -47,7 +45,6 @@ private:
      * component. These are specific to the Space, as other spaces might have
      * different Systems and not act on the same entities.
      */
-    std::vector<System *> systems_;
 
     /**
      * Manages all the entities in the system, can create them for the current
