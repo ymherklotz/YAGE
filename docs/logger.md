@@ -22,7 +22,7 @@ First of all, there is a definition to get the instance of the current global lo
 can then be used to set a different minimum display level. This definition is `yLogger`, and an
 example of how to use it to change the default output level can be seen below
 
-``` c++
+```
 yLogger.setLevel(yage::LogLevel::ERROR);
 ```
 
@@ -35,7 +35,7 @@ Other preprocessor definitions are `yLogDebug`, `yLogInfo`, `yLogWarning`, `yLog
 global logger `yLogger`. These are the definitions that should be used to print somehting
 to the main logger. For example
 
-``` c++
+```
 yLogWarning << "This is a warning";
 ```
 
