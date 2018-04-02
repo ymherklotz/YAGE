@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['readme',['README',['../md_README.html',1,'']]],
   ['r',['r',['../structyage_1_1Colour.html#a572fe7933c59ebfa6720088cd33dad99',1,'yage::Colour::r()'],['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822ae1e1d3d40573127e9ee0480caf1283d6',1,'yage::R()']]],
   ['read',['read',['../structstbi__io__callbacks.html#a73818f0a4f467e5abfefb1d635f62d82',1,'stbi_io_callbacks']]],
   ['readfiletobuffer',['readFileToBuffer',['../classyage_1_1IoManager.html#a75d13ca634df592e44e4152fedcd446d',1,'yage::IoManager']]],
