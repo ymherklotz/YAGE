@@ -9,6 +9,13 @@
 #ifndef YAGE_CORE_INPUT_H
 #define YAGE_CORE_INPUT_H
 
+#ifdef _WIN32
+#ifdef DELETE
+#define YAGE_DELETE_TMP DELETE
+#undef DELETE
+#endif
+#endif
+
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 
@@ -147,5 +154,12 @@ enum class key {
 };
 
 } // namepsace yage
+
+#ifdef _WIN32
+#ifdef YAGE_DELETE_TMP
+#define DELETE YAGE_DELETE_TMP
+#undef YAGE_DELETE_TMP
+#endif
+#endif
 
 #endif
