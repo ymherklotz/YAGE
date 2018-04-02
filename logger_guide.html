@@ -14,6 +14,7 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -87,15 +88,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>The logger has five different levels that can be assigned to a message. These are, from lowest to highest severity, DEBUG, INFO, WARNING, ERROR and FATAL, which are of type <a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">yage::LogLevel</a>. Messages that the developer then wants to write to the logs can take any of these severities and the developer can then decide what the minimum severity is that the logger should log. By default, the logger will log anything that is above <a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a551b723eafd6a31d444fcb2f5920fbd3">yage::LogLevel::INFO</a>.</p>
 <h2>Using the Logger in your Game </h2>
 <p>There are a few preprocessor definitions to make the use of the logger as simple as possible. First of all, there is a definition to get the instance of the current global logger, which can then be used to set a different minimum display level. This definition is <code>yLogger</code>, and an example of how to use it to change the default output level can be seen below</p>
-<p>``` c++ yLogger.setLevel(yage::LogLevel::ERROR); ```</p>
+<p>``` yLogger.setLevel(yage::LogLevel::ERROR); ```</p>
 <p>The above code changes the global logger so that it will only output things that are an error or fatal and make the engine crash.</p>
 <p>Other preprocessor definitions are <code>yLogDebug</code>, <code>yLogInfo</code>, <code>yLogWarning</code>, <code>yLogError</code> and <code>yLogFatal</code>. These return an object that is similar to a buffer, but belongs to the main global logger <code>yLogger</code>. These are the definitions that should be used to print somehting to the main logger. For example</p>
-<p>``` c++ yLogWarning &lt;&lt; "This is a warning"; ```</p>
+<p>``` yLogWarning &lt;&lt; "This is a warning"; ```</p>
 <p>will print the message "This is a warning" with the severity of <code>LogLevel::WARNING</code>. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 2 2018 16:38:15 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 2 2018 19:14:21 for YAGE by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
