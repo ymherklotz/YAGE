@@ -32,7 +32,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "YAGE"
+PROJECT_NAME           = 
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -876,7 +876,6 @@ RECURSIVE              = YES
 # run.
 
 EXCLUDE                = @CMAKE_CURRENT_SOURCE_DIR@/docs/README.md \
-                         @CMAKE_CURRENT_SOURCE_DIR@/docs/m-css/*
                          
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
@@ -1198,7 +1197,7 @@ HTML_EXTRA_FILES       =
 # Minimum value: 0, maximum value: 359, default value: 220.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_COLORSTYLE_HUE    =  15
+HTML_COLORSTYLE_HUE    =  210
 
 # The HTML_COLORSTYLE_SAT tag controls the purity (or saturation) of the colors
 # in the HTML output. For a value of 0 the output will use grayscales only. A
@@ -1206,7 +1205,7 @@ HTML_COLORSTYLE_HUE    =  15
 # Minimum value: 0, maximum value: 255, default value: 100.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_COLORSTYLE_SAT    = 200
+HTML_COLORSTYLE_SAT    = 180
 
 # The HTML_COLORSTYLE_GAMMA tag controls the gamma correction applied to the
 # luminance component of the colors in the HTML output. Values below 100

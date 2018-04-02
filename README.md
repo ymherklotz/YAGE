@@ -1,6 +1,6 @@
-# YAGE
+![yage-logo](/docs/yage.png "YAGE")
 
-![master-build](https://travis-ci.org/ymherklotz/YAGE.svg?branch=master)
+![master-build](https://travis-ci.org/ymherklotz/YAGE.svg?branch=master "Build Status")
 
 ## Introduction
 

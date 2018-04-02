@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 body {
-    background-color: #CCC;
+    background-color: #a8ccf0;
     color: black;
     margin: 0;
 }
@@ -25,5 +25,5 @@ hr.footer {
 }
 
 .footer {
-    background-color: #AAA;
+    background-color: #7cb2e9;
 }
