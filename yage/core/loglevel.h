@@ -9,6 +9,13 @@
 #ifndef YAGE_CORE_LOGLEVEL_H
 #define YAGE_CORE_LOGLEVEL_H
 
+#ifdef _WIN32
+#ifdef ERROR
+#define YAGE_ERROR_TMP ERROR
+#undef ERROR
+#endif
+#endif
+
 namespace yage
 {
 
@@ -36,5 +43,12 @@ enum class LogLevel {
     FATAL,
 };
 }
+
+#ifdef _WIN32
+#ifdef YAGE_ERROR_TMP
+#define ERROR YAGE_ERROR_TMP
+#undef YAGE_ERROR_TMP
+#endif
+#endif
 
 #endif
