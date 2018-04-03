@@ -1,21 +1,18 @@
-Matrix Guide {#matrix_guide}
-============
+# Matrix Guide {#matrix_guide}
 
 The matrix class is a templated class which implements a mathematical %Matrix.
 
 
-Usage Guide
------------
+## Usage Guide
 
 The class can be instantiated
 
 
-Example Code
-------------
+## Example Code
 
 Creating a %Matrix and performing operations on it.
 
-``` c++
+```
 #include <YAGE/Math/matrix.hpp>
 
 int main(int, char **)

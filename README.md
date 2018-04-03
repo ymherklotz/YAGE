@@ -5,7 +5,7 @@
 ## Introduction
 
 YAGE stands for Yet Another Game Engine. It is a 2D game engine that is being
-developed for the game [Arider](https://github.com/ymherklotz/Arider). However,
+developed for the game [Arider](https://github.com/ymherklotz/Arider "Arider"). However,
 it will also be general game engine library for any other 2D games.
 
 YAGE uses OpenGL for rendering of 2D graphics. OpenGL was chosen because it is
@@ -67,7 +67,7 @@ yage::init();
 
 It can be then cleaned up by running.
 
-``` objective-c++
+``` c++
 yage::quit();
 ```
 
