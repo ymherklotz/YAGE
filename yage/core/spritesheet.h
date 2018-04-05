@@ -16,6 +16,7 @@
  * spritesheet.
  */
 #include "../data/texture.h"
+#include "../util/noncopyable.h"
 
 #include <rapidjson/reader.h>
 
@@ -46,9 +47,10 @@ typedef std::map<std::string, details::Coordinate> SpriteMap;
 
 } // namespace details
 
-class SpriteSheet
+class SpriteSheet : public NonCopyable
 {
 public:
+    SpriteSheet() = default;
     SpriteSheet(std::string pngFileName, std::string jsonFileName);
 
     void sprite(std::string spriteName) const;

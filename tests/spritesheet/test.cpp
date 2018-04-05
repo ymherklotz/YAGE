@@ -6,21 +6,17 @@
  * ----------------------------------------------------------------------------
  */
 
-/** @file */
-
 #include <gtest/gtest.h>
 #include <yage/yage.h>
+
+#include "../testshared.h"
 
 using namespace yage;
 
 TEST(SpriteSheet, Load)
 {
-    /// @todo add a test to test the spritesheet loading
+    SpriteSheet sp("tests/spritesheet/floor_atlas.png", "tests/spritesheet/floor_atlas.json");
     ASSERT_TRUE(true);
 }
 
-int main(int argc, char **argv)
-{
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
+OPENGL_TEST_MAIN(LogLevel::DEBUG)

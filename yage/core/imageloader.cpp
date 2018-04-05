@@ -10,11 +10,14 @@
 #include "../data/texture.h"
 #include "logger.h"
 #include "stb_image.h"
+#include <iostream>
 
 #include <glad/glad.h>
 
 #include <iostream>
 #include <stdexcept>
+
+using std::cout;
 
 namespace yage
 {
@@ -22,10 +25,13 @@ namespace yage
 Texture ImageLoader::loadPng(const std::string &file_path)
 {
     int width, height, num_channels;
+    yLogDebug << "Loading image from disk: " << file_path;
     unsigned char *data =
         stbi_load(file_path.c_str(), &width, &height, &num_channels, 0);
-
+    yLogDebug << "Sucessfully loaded file";
     Texture texture(0, static_cast<int>(width), static_cast<int>(height));
+    yLogDebug << "Creating texture";
+    cout << "Hello";
     glGenTextures(1, &texture.id);
 
     glBindTexture(GL_TEXTURE_2D, texture.id);

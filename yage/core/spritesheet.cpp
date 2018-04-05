@@ -18,9 +18,13 @@
 #include <sstream>
 #include <stdexcept>
 
+#include <iostream>
+
 using rapidjson::Document;
 using yage::details::Coordinate;
 using yage::details::SpriteMap;
+
+using std::cout;
 
 namespace yage
 {
@@ -28,14 +32,16 @@ namespace yage
 SpriteSheet::SpriteSheet(std::string pngFileName, std::string jsonFileName)
 {
     int jsonWidth, jsonHeight;
+
     fileLocations_ =
         parseJson(jsonWidth, jsonHeight, fileContent(jsonFileName));
     texture_ = ImageLoader::loadPng(pngFileName);
-
-    if (texture_.width != jsonWidth)
+    if (texture_.width != jsonWidth) {
         throw std::runtime_error("JSON width does not match texture width");
-    if (texture_.height != jsonHeight)
+    }
+    if (texture_.height != jsonHeight) {
         throw std::runtime_error("JSON height does not match texture height");
+    }
 }
 
 std::string SpriteSheet::fileContent(std::string jsonFileName) const
@@ -54,27 +60,16 @@ SpriteMap SpriteSheet::parseJson(int &width, int &height,
     SpriteMap spriteMap;
     Document jsonAtlas;
     jsonAtlas.Parse(jsonContent.c_str());
-
     width  = jsonAtlas["width"].GetInt();
     height = jsonAtlas["height"].GetInt();
 
-    for (auto &texture : jsonAtlas["sprites"].GetObject()) {
-        Coordinate coord;
-        for (auto &value : texture.value.GetObject()) {
-            std::string keyName{value.value.GetString()};
-            int keyValue{value.value.GetInt()};
-            if (keyName == "x") {
-                coord.x = keyValue;
-            } else if (keyName == "y") {
-                coord.y = keyValue;
-            } else if (keyName == "width") {
-                coord.width = keyValue;
-            } else if (keyName == "height") {
-                coord.height = keyValue;
-            } else {
-                throw std::runtime_error("JSON key incorrect: " + keyName);
-            }
-        }
+    Coordinate coord;
+    for(auto &texture : jsonAtlas["sprites"].GetObject()) {
+        auto texVal = texture.value.GetObject();
+        coord.x = texVal["x"].GetInt();
+        coord.y = texVal["y"].GetInt();
+        coord.width = texVal["width"].GetInt();
+        coord.height = texVal["height"].GetInt();
         spriteMap[texture.name.GetString()] = coord;
     }
 
