@@ -4,9 +4,9 @@ build
 build_*
 CMakeFiles
 Testing
+html
 
 # specific directory to ignore
-/html
 /docs/Doxyfile
 
 # extensions to ignore
