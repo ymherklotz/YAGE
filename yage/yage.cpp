@@ -18,7 +18,7 @@ namespace yage
 
 void glfwErrorCallback(int, const char *description)
 {
-    std::cerr << "ERROR: %s\n" << description;
+    std::cerr << "Error: " << description;
 }
 
 void init()
