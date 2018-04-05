@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger',['Logger',['../logger_guide.html',1,'']]]
+  ['matrix_20guide',['Matrix Guide',['../md_docs_matrix.html',1,'']]]
 ];

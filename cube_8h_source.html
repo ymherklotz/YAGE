@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>yage/core/spritesheet.cpp File Reference</title>
+<title>yage/data/cube.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,40 +82,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_d09e80fdcf0bb585bbe3b7099c52d028.html">data</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">spritesheet.cpp File Reference</div>  </div>
+<div class="title">cube.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><hr/>
-  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="spritesheet_8h_source.html">spritesheet.h</a>&quot;</code><br/>
-<code>#include &lt;rapidjson/document.h&gt;</code><br/>
-<code>#include &lt;<a class="el" href="imageloader_8h_source.html">yage/core/imageloader.h</a>&gt;</code><br/>
-<code>#include &lt;cassert&gt;</code><br/>
-<code>#include &lt;fstream&gt;</code><br/>
-<code>#include &lt;sstream&gt;</code><br/>
-<code>#include &lt;stdexcept&gt;</code><br/>
-<code>#include &lt;iostream&gt;</code><br/>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespaceyage"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html">yage</a></td></tr>
-<tr class="memdesc:namespaceyage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core includes. <br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><hr/>
- <p>Copyright (c) 2017 Yann Herklotz Grave <a href="#" onclick="location.href='mai'+'lto:'+'ymh'+'er'+'klo'+'tz'+'@gm'+'ai'+'l.c'+'om'; return false;">ymher<span style="display: none;">.nosp@m.</span>klot<span style="display: none;">.nosp@m.</span>z@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </p>
-<h2>MIT License, see LICENSE file for more details. </h2>
-</div></div><!-- contents -->
+<a href="cube_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;glad/glad.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="cube_8h.html#a281edacbb5e3df9fd85b17e888ba07c5">    3</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> GLfloat <a class="code" href="cube_8h.html#a281edacbb5e3df9fd85b17e888ba07c5">gl_cube_buffer</a>[] = {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    -1.0f,-1.0f,-1.0f,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    -1.0f,-1.0f, 1.0f,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    -1.0f, 1.0f, 1.0f,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    1.0f, 1.0f,-1.0f, </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    -1.0f,-1.0f,-1.0f,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    -1.0f, 1.0f,-1.0f,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    1.0f,-1.0f, 1.0f,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    -1.0f,-1.0f,-1.0f,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    1.0f,-1.0f,-1.0f,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    1.0f, 1.0f,-1.0f,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    1.0f,-1.0f,-1.0f,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    -1.0f,-1.0f,-1.0f,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    -1.0f,-1.0f,-1.0f,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    -1.0f, 1.0f, 1.0f,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    -1.0f, 1.0f,-1.0f,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    1.0f,-1.0f, 1.0f,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    -1.0f,-1.0f, 1.0f,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    -1.0f,-1.0f,-1.0f,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    -1.0f, 1.0f, 1.0f,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    -1.0f,-1.0f, 1.0f,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    1.0f,-1.0f, 1.0f,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    1.0f, 1.0f, 1.0f,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    1.0f,-1.0f,-1.0f,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    1.0f, 1.0f,-1.0f,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    1.0f,-1.0f,-1.0f,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    1.0f, 1.0f, 1.0f,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    1.0f,-1.0f, 1.0f,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    1.0f, 1.0f, 1.0f,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    1.0f, 1.0f,-1.0f,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    -1.0f, 1.0f,-1.0f,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    1.0f, 1.0f, 1.0f,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    -1.0f, 1.0f,-1.0f,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    -1.0f, 1.0f, 1.0f,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    1.0f, 1.0f, 1.0f,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    -1.0f, 1.0f, 1.0f,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    1.0f,-1.0f, 1.0f</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="ttc" id="cube_8h_html_a281edacbb5e3df9fd85b17e888ba07c5"><div class="ttname"><a href="cube_8h.html#a281edacbb5e3df9fd85b17e888ba07c5">gl_cube_buffer</a></div><div class="ttdeci">static const GLfloat gl_cube_buffer[]</div><div class="ttdef"><b>Definition:</b> cube.h:3</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Thu Apr 5 2018 14:21:41 by &#160;<a href="http://www.doxygen.org/index.html">

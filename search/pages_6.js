@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme',['README',['../md_README.html',1,'']]]
+  ['sprite_20batching',['Sprite Batching',['../spritebatch_guide.html',1,'']]]
 ];

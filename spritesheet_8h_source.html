@@ -96,72 +96,75 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_SPRITESHEET_H</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../data/texture.h&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;rapidjson/reader.h&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespaceyage_1_1details.html">   28</a></span>&#160;<span class="keyword">namespace </span>details</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html">   31</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structyage_1_1details_1_1Coordinate.html">Coordinate</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html#aa1a9203c0a9cd929f333bd99af634adc">   32</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1details_1_1Coordinate.html#aa1a9203c0a9cd929f333bd99af634adc">x</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html#a6d54c056ec7bd3c7ed1c6a226c2cf508">   33</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1details_1_1Coordinate.html#a6d54c056ec7bd3c7ed1c6a226c2cf508">y</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html#aed145c923c95f852a8fb3abde8e346c0">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1details_1_1Coordinate.html#aed145c923c95f852a8fb3abde8e346c0">width</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html#a23585afbdaa9bb742353a4c90878a941">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1details_1_1Coordinate.html#a23585afbdaa9bb742353a4c90878a941">height</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="structyage_1_1details_1_1Coordinate.html#a0b3a6d9aa1d5b846ad7ebc11bc77c629">Coordinate</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html#a43fb6bd3e325d5cd7ec436778605db2a">   39</a></span>&#160;    <a class="code" href="structyage_1_1details_1_1Coordinate.html#a43fb6bd3e325d5cd7ec436778605db2a">Coordinate</a>(<span class="keywordtype">int</span> x_i, <span class="keywordtype">int</span> y_i, <span class="keywordtype">int</span> width_i, <span class="keywordtype">int</span> height_i)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        : <a class="code" href="structyage_1_1details_1_1Coordinate.html#aa1a9203c0a9cd929f333bd99af634adc">x</a>(x_i), <a class="code" href="structyage_1_1details_1_1Coordinate.html#a6d54c056ec7bd3c7ed1c6a226c2cf508">y</a>(y_i), <a class="code" href="structyage_1_1details_1_1Coordinate.html#aed145c923c95f852a8fb3abde8e346c0">width</a>(width_i), <a class="code" href="structyage_1_1details_1_1Coordinate.html#a23585afbdaa9bb742353a4c90878a941">height</a>(height_i)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">   45</a></span>&#160;<span class="keyword">typedef</span> std::map&lt;std::string, details::Coordinate&gt; <a class="code" href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">SpriteMap</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;} <span class="comment">// namespace details</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classyage_1_1SpriteSheet.html">   49</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1SpriteSheet.html">SpriteSheet</a></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classyage_1_1SpriteSheet.html#a73db999ab17c4846f036eb47470176f6">SpriteSheet</a>(std::string pngFileName, std::string jsonFileName);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteSheet.html#a2734c2e7b8bdfc9090d240c070ee55c0">sprite</a>(std::string spriteName) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::string <a class="code" href="classyage_1_1SpriteSheet.html#a50a04ebc989dbc63b0aa6d873da5ccd9">fileContent</a>(std::string jsonFileName) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="structyage_1_1Texture.html">Texture</a> texture_;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">details::SpriteMap</a> fileLocations_;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">details::SpriteMap</a> parseJson(<span class="keywordtype">int</span> &amp;width, <span class="keywordtype">int</span> &amp;height,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                 std::string jsonContent) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../util/noncopyable.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;rapidjson/reader.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespaceyage_1_1details.html">   29</a></span>&#160;<span class="keyword">namespace </span>details</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html">   32</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structyage_1_1details_1_1Coordinate.html">Coordinate</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html#aa1a9203c0a9cd929f333bd99af634adc">   33</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1details_1_1Coordinate.html#aa1a9203c0a9cd929f333bd99af634adc">x</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html#a6d54c056ec7bd3c7ed1c6a226c2cf508">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1details_1_1Coordinate.html#a6d54c056ec7bd3c7ed1c6a226c2cf508">y</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html#aed145c923c95f852a8fb3abde8e346c0">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1details_1_1Coordinate.html#aed145c923c95f852a8fb3abde8e346c0">width</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html#a23585afbdaa9bb742353a4c90878a941">   36</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structyage_1_1details_1_1Coordinate.html#a23585afbdaa9bb742353a4c90878a941">height</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="structyage_1_1details_1_1Coordinate.html#a0b3a6d9aa1d5b846ad7ebc11bc77c629">Coordinate</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structyage_1_1details_1_1Coordinate.html#a43fb6bd3e325d5cd7ec436778605db2a">   40</a></span>&#160;    <a class="code" href="structyage_1_1details_1_1Coordinate.html#a43fb6bd3e325d5cd7ec436778605db2a">Coordinate</a>(<span class="keywordtype">int</span> x_i, <span class="keywordtype">int</span> y_i, <span class="keywordtype">int</span> width_i, <span class="keywordtype">int</span> height_i)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        : <a class="code" href="structyage_1_1details_1_1Coordinate.html#aa1a9203c0a9cd929f333bd99af634adc">x</a>(x_i), <a class="code" href="structyage_1_1details_1_1Coordinate.html#a6d54c056ec7bd3c7ed1c6a226c2cf508">y</a>(y_i), <a class="code" href="structyage_1_1details_1_1Coordinate.html#aed145c923c95f852a8fb3abde8e346c0">width</a>(width_i), <a class="code" href="structyage_1_1details_1_1Coordinate.html#a23585afbdaa9bb742353a4c90878a941">height</a>(height_i)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">   46</a></span>&#160;<span class="keyword">typedef</span> std::map&lt;std::string, details::Coordinate&gt; <a class="code" href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">SpriteMap</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// namespace details</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classyage_1_1SpriteSheet.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1SpriteSheet.html">SpriteSheet</a> : <span class="keyword">public</span> <a class="code" href="classyage_1_1NonCopyable.html">NonCopyable</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classyage_1_1SpriteSheet.html#a82a0fd2c839511f7c6a4d86b5339cf45">SpriteSheet</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classyage_1_1SpriteSheet.html#a82a0fd2c839511f7c6a4d86b5339cf45">SpriteSheet</a>(std::string pngFileName, std::string jsonFileName);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SpriteSheet.html#a2734c2e7b8bdfc9090d240c070ee55c0">sprite</a>(std::string spriteName) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::string <a class="code" href="classyage_1_1SpriteSheet.html#a50a04ebc989dbc63b0aa6d873da5ccd9">fileContent</a>(std::string jsonFileName) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="structyage_1_1Texture.html">Texture</a> texture_;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">details::SpriteMap</a> fileLocations_;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">details::SpriteMap</a> parseJson(<span class="keywordtype">int</span> &amp;width, <span class="keywordtype">int</span> &amp;height,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                 std::string jsonContent) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classyage_1_1SpriteSheet_html"><div class="ttname"><a href="classyage_1_1SpriteSheet.html">yage::SpriteSheet</a></div><div class="ttdef"><b>Definition:</b> spritesheet.h:49</div></div>
-<div class="ttc" id="structyage_1_1details_1_1Coordinate_html_a43fb6bd3e325d5cd7ec436778605db2a"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#a43fb6bd3e325d5cd7ec436778605db2a">yage::details::Coordinate::Coordinate</a></div><div class="ttdeci">Coordinate(int x_i, int y_i, int width_i, int height_i)</div><div class="ttdef"><b>Definition:</b> spritesheet.h:39</div></div>
-<div class="ttc" id="classyage_1_1SpriteSheet_html_a73db999ab17c4846f036eb47470176f6"><div class="ttname"><a href="classyage_1_1SpriteSheet.html#a73db999ab17c4846f036eb47470176f6">yage::SpriteSheet::SpriteSheet</a></div><div class="ttdeci">SpriteSheet(std::string pngFileName, std::string jsonFileName)</div><div class="ttdef"><b>Definition:</b> spritesheet.cpp:28</div></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classyage_1_1SpriteSheet_html"><div class="ttname"><a href="classyage_1_1SpriteSheet.html">yage::SpriteSheet</a></div><div class="ttdef"><b>Definition:</b> spritesheet.h:50</div></div>
+<div class="ttc" id="structyage_1_1details_1_1Coordinate_html_a43fb6bd3e325d5cd7ec436778605db2a"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#a43fb6bd3e325d5cd7ec436778605db2a">yage::details::Coordinate::Coordinate</a></div><div class="ttdeci">Coordinate(int x_i, int y_i, int width_i, int height_i)</div><div class="ttdef"><b>Definition:</b> spritesheet.h:40</div></div>
 <div class="ttc" id="structyage_1_1details_1_1Coordinate_html_a0b3a6d9aa1d5b846ad7ebc11bc77c629"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#a0b3a6d9aa1d5b846ad7ebc11bc77c629">yage::details::Coordinate::Coordinate</a></div><div class="ttdeci">Coordinate()=default</div></div>
-<div class="ttc" id="structyage_1_1details_1_1Coordinate_html_aa1a9203c0a9cd929f333bd99af634adc"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#aa1a9203c0a9cd929f333bd99af634adc">yage::details::Coordinate::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> spritesheet.h:32</div></div>
-<div class="ttc" id="namespaceyage_1_1details_html_a035f63ad1a3114ada8157ed4182521c9"><div class="ttname"><a href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">yage::details::SpriteMap</a></div><div class="ttdeci">std::map&lt; std::string, details::Coordinate &gt; SpriteMap</div><div class="ttdef"><b>Definition:</b> spritesheet.h:45</div></div>
-<div class="ttc" id="structyage_1_1details_1_1Coordinate_html_aed145c923c95f852a8fb3abde8e346c0"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#aed145c923c95f852a8fb3abde8e346c0">yage::details::Coordinate::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> spritesheet.h:34</div></div>
+<div class="ttc" id="structyage_1_1details_1_1Coordinate_html_aa1a9203c0a9cd929f333bd99af634adc"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#aa1a9203c0a9cd929f333bd99af634adc">yage::details::Coordinate::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> spritesheet.h:33</div></div>
+<div class="ttc" id="classyage_1_1SpriteSheet_html_a82a0fd2c839511f7c6a4d86b5339cf45"><div class="ttname"><a href="classyage_1_1SpriteSheet.html#a82a0fd2c839511f7c6a4d86b5339cf45">yage::SpriteSheet::SpriteSheet</a></div><div class="ttdeci">SpriteSheet()=default</div></div>
+<div class="ttc" id="classyage_1_1NonCopyable_html"><div class="ttname"><a href="classyage_1_1NonCopyable.html">yage::NonCopyable</a></div><div class="ttdef"><b>Definition:</b> noncopyable.h:7</div></div>
+<div class="ttc" id="namespaceyage_1_1details_html_a035f63ad1a3114ada8157ed4182521c9"><div class="ttname"><a href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">yage::details::SpriteMap</a></div><div class="ttdeci">std::map&lt; std::string, details::Coordinate &gt; SpriteMap</div><div class="ttdef"><b>Definition:</b> spritesheet.h:46</div></div>
+<div class="ttc" id="structyage_1_1details_1_1Coordinate_html_aed145c923c95f852a8fb3abde8e346c0"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#aed145c923c95f852a8fb3abde8e346c0">yage::details::Coordinate::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> spritesheet.h:35</div></div>
 <div class="ttc" id="classyage_1_1SpriteSheet_html_a2734c2e7b8bdfc9090d240c070ee55c0"><div class="ttname"><a href="classyage_1_1SpriteSheet.html#a2734c2e7b8bdfc9090d240c070ee55c0">yage::SpriteSheet::sprite</a></div><div class="ttdeci">void sprite(std::string spriteName) const </div></div>
-<div class="ttc" id="structyage_1_1details_1_1Coordinate_html_a23585afbdaa9bb742353a4c90878a941"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#a23585afbdaa9bb742353a4c90878a941">yage::details::Coordinate::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> spritesheet.h:35</div></div>
+<div class="ttc" id="structyage_1_1details_1_1Coordinate_html_a23585afbdaa9bb742353a4c90878a941"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#a23585afbdaa9bb742353a4c90878a941">yage::details::Coordinate::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> spritesheet.h:36</div></div>
 <div class="ttc" id="structyage_1_1Texture_html"><div class="ttname"><a href="structyage_1_1Texture.html">yage::Texture</a></div><div class="ttdef"><b>Definition:</b> texture.h:17</div></div>
-<div class="ttc" id="structyage_1_1details_1_1Coordinate_html"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html">yage::details::Coordinate</a></div><div class="ttdef"><b>Definition:</b> spritesheet.h:31</div></div>
-<div class="ttc" id="structyage_1_1details_1_1Coordinate_html_a6d54c056ec7bd3c7ed1c6a226c2cf508"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#a6d54c056ec7bd3c7ed1c6a226c2cf508">yage::details::Coordinate::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> spritesheet.h:33</div></div>
-<div class="ttc" id="classyage_1_1SpriteSheet_html_a50a04ebc989dbc63b0aa6d873da5ccd9"><div class="ttname"><a href="classyage_1_1SpriteSheet.html#a50a04ebc989dbc63b0aa6d873da5ccd9">yage::SpriteSheet::fileContent</a></div><div class="ttdeci">std::string fileContent(std::string jsonFileName) const </div><div class="ttdef"><b>Definition:</b> spritesheet.cpp:41</div></div>
+<div class="ttc" id="structyage_1_1details_1_1Coordinate_html"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html">yage::details::Coordinate</a></div><div class="ttdef"><b>Definition:</b> spritesheet.h:32</div></div>
+<div class="ttc" id="structyage_1_1details_1_1Coordinate_html_a6d54c056ec7bd3c7ed1c6a226c2cf508"><div class="ttname"><a href="structyage_1_1details_1_1Coordinate.html#a6d54c056ec7bd3c7ed1c6a226c2cf508">yage::details::Coordinate::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> spritesheet.h:34</div></div>
+<div class="ttc" id="classyage_1_1SpriteSheet_html_a50a04ebc989dbc63b0aa6d873da5ccd9"><div class="ttname"><a href="classyage_1_1SpriteSheet.html#a50a04ebc989dbc63b0aa6d873da5ccd9">yage::SpriteSheet::fileContent</a></div><div class="ttdeci">std::string fileContent(std::string jsonFileName) const </div><div class="ttdef"><b>Definition:</b> spritesheet.cpp:47</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 2 2018 23:36:46 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 5 2018 14:21:40 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

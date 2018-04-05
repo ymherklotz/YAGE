@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Matrix Guide</title>
+<title>yage/data/cube.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,10 +38,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -60,6 +60,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,24 +80,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_d09e80fdcf0bb585bbe3b7099c52d028.html">data</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Matrix Guide </div>  </div>
+<div class="title">cube.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The matrix class is a templated class which implements a mathematical Matrix.</p>
-<h2>Usage Guide </h2>
-<p>The class can be instantiated</p>
-<h2>Example Code </h2>
-<p>Creating a Matrix and performing operations on it.</p>
-<p>``` c++ #include &lt;YAGE/Math/matrix.hpp&gt;</p>
-<p>int main(int, char **) { yage::Matrix&lt;2, 2, int&gt; mat1 {{1, 2, 3, 4}}; yage::Matrix&lt;2, 2, int&gt; mat2 {{5, 6, 7, 8}};</p>
-<p>int dot = yage::math::dot(mat1, mat2); return 0; } ``` </p>
-</div></div><!-- contents -->
+<div class="textblock"><code>#include &quot;glad/glad.h&quot;</code><br/>
+</div>
+<p><a href="cube_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a281edacbb5e3df9fd85b17e888ba07c5"><td class="memItemLeft" align="right" valign="top">static const GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cube_8h.html#a281edacbb5e3df9fd85b17e888ba07c5">gl_cube_buffer</a> []</td></tr>
+<tr class="separator:a281edacbb5e3df9fd85b17e888ba07c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a281edacbb5e3df9fd85b17e888ba07c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const GLfloat gl_cube_buffer[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 2 2018 23:36:47 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 5 2018 14:21:41 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

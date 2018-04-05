@@ -16,13 +16,14 @@ var searchData=
   ['collisionbody',['CollisionBody',['../classyage_1_1CollisionBody.html#a5289e613269facc45cd451872c17a83d',1,'yage::CollisionBody']]],
   ['collisionbody',['CollisionBody',['../classyage_1_1CollisionBody.html',1,'yage']]],
   ['collisionbody_2eh',['collisionbody.h',['../collisionbody_8h.html',1,'']]],
-  ['colour',['Colour',['../structyage_1_1Colour.html#a585165d5109c81b6b2de6f1116406abd',1,'yage::Colour::Colour()'],['../structyage_1_1Colour.html#a8118ad802db7e61df770f7d3b5b88aaa',1,'yage::Colour::Colour(GLubyte r_, GLubyte g_, GLubyte b_, GLubyte a_)'],['../structyage_1_1Vertex.html#a142db28be39f418a06fa43f75d386182',1,'yage::Vertex::colour()']]],
   ['colour',['Colour',['../structyage_1_1Colour.html',1,'yage']]],
+  ['colour',['Colour',['../structyage_1_1Colour.html#a585165d5109c81b6b2de6f1116406abd',1,'yage::Colour::Colour()'],['../structyage_1_1Colour.html#a8118ad802db7e61df770f7d3b5b88aaa',1,'yage::Colour::Colour(GLubyte r_, GLubyte g_, GLubyte b_, GLubyte a_)'],['../structyage_1_1Vertex.html#a142db28be39f418a06fa43f75d386182',1,'yage::Vertex::colour()']]],
   ['colsize',['colSize',['../classyage_1_1Matrix.html#a2148cd52008892765ad90250c68afba1',1,'yage::Matrix']]],
   ['comma',['COMMA',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a4d9b3e9fc12849d060371eb65154c751',1,'yage']]],
-  ['coordinate',['Coordinate',['../structyage_1_1details_1_1Coordinate.html',1,'yage::details']]],
   ['coordinate',['Coordinate',['../structyage_1_1details_1_1Coordinate.html#a0b3a6d9aa1d5b846ad7ebc11bc77c629',1,'yage::details::Coordinate::Coordinate()=default'],['../structyage_1_1details_1_1Coordinate.html#a43fb6bd3e325d5cd7ec436778605db2a',1,'yage::details::Coordinate::Coordinate(int x_i, int y_i, int width_i, int height_i)']]],
+  ['coordinate',['Coordinate',['../structyage_1_1details_1_1Coordinate.html',1,'yage::details']]],
   ['create',['create',['../classyage_1_1Window.html#afdf3e2826526abc23a4e206c9a8a8745',1,'yage::Window::create()'],['../classyage_1_1Active.html#aa2ed414bbe94fdd51c8aeb7ada73a064',1,'yage::Active::create()']]],
   ['createentity',['createEntity',['../classyage_1_1EntityManager.html#acdd054a1235fb03452089d9f419a7e2b',1,'yage::EntityManager::createEntity()'],['../classyage_1_1Space.html#a41bc332ffb3042c0872ede8c53ff1fa4',1,'yage::Space::createEntity()']]],
-  ['createentityinstance',['createEntityInstance',['../classyage_1_1EntityManager.html#a188f3bc252781f9f3a7b4da417f0d7de',1,'yage::EntityManager']]]
+  ['createentityinstance',['createEntityInstance',['../classyage_1_1EntityManager.html#a188f3bc252781f9f3a7b4da417f0d7de',1,'yage::EntityManager']]],
+  ['cube_2eh',['cube.h',['../cube_8h.html',1,'']]]
 ];

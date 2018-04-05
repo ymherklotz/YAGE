@@ -12,7 +12,7 @@ var searchData=
   ['matrix_2emd',['matrix.md',['../matrix_8md.html',1,'']]],
   ['matrix_3c_20rows_2c_201_2c_20double_20_3e',['Matrix&lt; Rows, 1, double &gt;',['../classyage_1_1Matrix.html',1,'yage']]],
   ['matrix_3c_20rows_2c_201_2c_20type_20_3e',['Matrix&lt; Rows, 1, Type &gt;',['../classyage_1_1Matrix.html',1,'yage']]],
-  ['matrix_20guide',['Matrix Guide',['../matrix_guide.html',1,'']]],
+  ['matrix_20guide',['Matrix Guide',['../md_docs_matrix.html',1,'']]],
   ['menu',['MENU',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a3ed53fbeb1eab0443561b68ca0c0b5cf',1,'yage']]],
   ['meta',['Meta',['../structyage_1_1LogMessage_1_1Meta.html',1,'yage::LogMessage']]],
   ['minus',['MINUS',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822affc0d9b54a1fe677c4c9e6b050e67c81',1,'yage']]],

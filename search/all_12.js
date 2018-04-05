@@ -36,7 +36,7 @@ var searchData=
   ['spritebatch_2emd',['spritebatch.md',['../spritebatch_8md.html',1,'']]],
   ['sprite_20batching',['Sprite Batching',['../spritebatch_guide.html',1,'']]],
   ['spritemap',['SpriteMap',['../namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9',1,'yage::details']]],
-  ['spritesheet',['SpriteSheet',['../classyage_1_1SpriteSheet.html#a73db999ab17c4846f036eb47470176f6',1,'yage::SpriteSheet']]],
+  ['spritesheet',['SpriteSheet',['../classyage_1_1SpriteSheet.html#a82a0fd2c839511f7c6a4d86b5339cf45',1,'yage::SpriteSheet::SpriteSheet()=default'],['../classyage_1_1SpriteSheet.html#a73db999ab17c4846f036eb47470176f6',1,'yage::SpriteSheet::SpriteSheet(std::string pngFileName, std::string jsonFileName)']]],
   ['spritesheet',['SpriteSheet',['../classyage_1_1SpriteSheet.html',1,'yage']]],
   ['spritesheet_2ecpp',['spritesheet.cpp',['../spritesheet_8cpp.html',1,'']]],
   ['spritesheet_2eh',['spritesheet.h',['../spritesheet_8h.html',1,'']]],

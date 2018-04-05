@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]]
+  ['logger',['Logger',['../logger_guide.html',1,'']]]
 ];
