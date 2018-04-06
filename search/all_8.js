@@ -13,7 +13,6 @@ var searchData=
   ['insert',['INSERT',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a61ee777e7f71dc466c3b2c685d8d313b',1,'yage']]],
   ['inside',['inside',['../classyage_1_1Collider.html#a4a8ad9e664a0015e023a70d196302fe9',1,'yage::Collider::inside()'],['../classyage_1_1RectangleCollider.html#ac8d8e6bdb12c21be12f7d398242147c4',1,'yage::RectangleCollider::inside()']]],
   ['instance',['instance',['../classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e',1,'yage::Logger::instance()'],['../classyage_1_1Engine.html#a7e4303fa3bd951ee64e166d6e0fb7b33',1,'yage::Engine::instance()']]],
-  ['iomanager',['IoManager',['../classyage_1_1IoManager.html',1,'yage']]],
   ['iomanager_2ecpp',['iomanager.cpp',['../iomanager_8cpp.html',1,'']]],
   ['iomanager_2eh',['iomanager.h',['../iomanager_8h.html',1,'']]]
 ];
