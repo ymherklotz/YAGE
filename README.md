@@ -33,7 +33,7 @@ The full documentation of the API can be seen
 ## Installation and usage
 
 To use YAGE for your own game, you should link it as a static library and
-include the [yage.h](/include/YAGE/yage.h) header in your project. To link the
+include the [yage.h](/yage/yage.h) header in your project. To link the
 project using cmake, the library has to be added as a subdirectory and then
 linked with the name `yage`.
 

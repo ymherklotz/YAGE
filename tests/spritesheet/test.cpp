@@ -15,7 +15,8 @@ using namespace yage;
 
 TEST(SpriteSheet, Load)
 {
-    SpriteSheet sp("tests/spritesheet/floor_atlas.png", "tests/spritesheet/floor_atlas.json");
+    yLogDebug << IoManager::parentDirectory(__FILE__) << '\n' << __FILE__;
+    SpriteSheet sp(IoManager::parentDirectory(__FILE__), IoManager::parentDirectory(__FILE__));
     ASSERT_TRUE(true);
 }
 

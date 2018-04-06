@@ -10,11 +10,14 @@
 
 #include <fstream>
 #include <stdexcept>
+#include <regex>
 
 namespace yage
 {
 
-bool IoManager::readFileToBuffer(const std::string &file_path,
+namespace IoManager {
+
+bool readFileToBuffer(const std::string &file_path,
                                  std::vector<unsigned char> &buffer)
 {
     std::ifstream file(file_path, std::ios::binary);
@@ -37,6 +40,13 @@ bool IoManager::readFileToBuffer(const std::string &file_path,
     file.close();
 
     return true;
+}
+
+std::string parentDirectory(std::string file_path)
+{
+    return std::regex_replace(file_path, std::regex("(.*)/.*"), "$1");
+}
+
 }
 
 } // namespace yage
