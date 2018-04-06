@@ -5,8 +5,9 @@ project(yage
   VERSION 0.1.4.0
   LANGUAGES CXX)
 
-option(YAGE_BUILD_TESTS "Build tests and ctest testing suite" ON)
-option(YAGE_BUILD_DOCS "Build documentation using Doxygen" ON)
+option(YAGE_BUILD_TESTS "Build tests and ctest testing suite" OFF)
+option(YAGE_BUILD_DOCS "Build documentation using Doxygen" OFF)
+option(YAGE_BUILD_EXAMPLES "Build example executables" OFF)
 
 # set standard
 set(CMAKE_CXX_STANDARD 14)
@@ -61,12 +62,14 @@ target_link_libraries(yage
   ${GLFW_LIBRARIES}
   glad)
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/examples)
+if(${YAGE_BUILD_EXAMPLES})
+
+  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/examples)
+
+endif(${YAGE_BUILD_EXAMPLES})
 
 if(${YAGE_BUILD_TESTS})
-
   add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)
-
 endif(${YAGE_BUILD_TESTS})
 
 if(${YAGE_BUILD_DOCS})
@@ -91,6 +94,6 @@ if(${YAGE_BUILD_DOCS})
     message("Doxygen needs to be installed to generate the documentation.")
 
   endif(DOXYGEN_FOUND)
-    
-endif(${YAGE_BUILD_DOCS})
   
+endif(${YAGE_BUILD_DOCS})
+
