@@ -30,6 +30,11 @@ file without slowing down the program.
 The full documentation of the API can be seen 
 [here](https://www.yannherklotz.com/YAGE).
 
+### Purpose
+
+The purpose of this game engine is not to be very general, but easy to use and
+quick to initially set up.
+
 ## Installation and usage
 
 To use YAGE for your own game, you should link it as a static library and
