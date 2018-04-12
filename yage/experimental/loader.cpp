@@ -2,11 +2,17 @@
 
 #include "../core/exception.h"
 
+#include <algorithm>
 #include <fstream>
+#include <regex>
 #include <sstream>
 
 namespace yage
 {
+
+const std::vector<std::regex> ele_regs({"^(\\d+)$", "^(\\d+)\\/(\\d+)$",
+                                        "^(\\d+)\\/\\/(\\d+)$",
+                                        "^(\\d+)\\/(\\d+)\\/(\\d+)$"});
 
 void load_obj(std::string filename, std::vector<glm::vec4> &vertices,
               std::vector<glm::vec3> &normals, std::vector<GLushort> &elements)
@@ -34,12 +40,20 @@ void load_obj(std::string filename, std::vector<glm::vec4> &vertices,
             elements.push_back(a);
             elements.push_back(b);
             elements.push_back(c);
+        } else if (line.substr(0, 2) == "vn ") {
+            std::for_each(ele_regs.begin(), ele_regs.end(), [](std::regex re) {
+                        
+            });
+            std::istringstream s(line.substr(2));
+            glm::vec3 v;
+            s >> v.x >> v.y >> v.z;
+            normals.push_back(v);
         } else {
             // do nothing otherwise
         }
     }
 
-    normals.resize()
+    in.close();
 }
 
 } // namespace yage
