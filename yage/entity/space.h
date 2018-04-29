@@ -10,8 +10,10 @@
 #define YAGE_ENGINE_SPACE_H
 
 #include <vector>
+#include <memory>
 
 #include "entitymanager.h"
+#include "system.h"
 
 namespace yage
 {
@@ -41,10 +43,11 @@ public:
 
 private:
     /**
-     * The subspaces of the Space that act on the data and on their respective
+     * The systems of the Space that act on the data and on their respective
      * component. These are specific to the Space, as other spaces might have
      * different Systems and not act on the same entities.
      */
+    std::vector<std::unique_ptr<System>> systems_;
 
     /**
      * Manages all the entities in the system, can create them for the current

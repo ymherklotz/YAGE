@@ -31,6 +31,8 @@ public:
     /// Updates the systems.
     void update();
 
+    void registerSystem();
+
     /// Returns the instance of the engine, as there is only one instance of the
     /// engine.
     static Engine &instance();
