@@ -47,8 +47,7 @@ set(YAGE_SOURCES
   ${YAGE_UTIL_SOURCES}
   ${YAGE_RENDER_SOURCES}
   ${YAGE_ENGINE_SOURCES}
-  ${YAGE_CURRENT_SOURCES}
-  ${YAGE_EXPERIMENTAL_SOURCES})
+  ${YAGE_CURRENT_SOURCES})
 
 add_library(yage
   ${YAGE_SOURCES})
@@ -65,9 +64,7 @@ target_link_libraries(yage
   glad)
 
 if(${YAGE_BUILD_EXAMPLES})
-
   add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/examples)
-
 endif(${YAGE_BUILD_EXAMPLES})
 
 if(${YAGE_BUILD_TESTS})
@@ -92,9 +89,7 @@ if(${YAGE_BUILD_DOCS})
       COMMENT "Generating API documentation with Doxygen")
 
   else(DOXYGEN_FOUND)
-
     message("Doxygen needs to be installed to generate the documentation.")
-
   endif(DOXYGEN_FOUND)
   
 endif(${YAGE_BUILD_DOCS})
