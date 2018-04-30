@@ -53,19 +53,11 @@ public:
      */
     unsigned createEntity();
 
-    /**
-     * Creates an Entity and returns it.
-     *
-     * @return The entity that was created by the entity manager in the current
-     * space.
-     */
-    Entity createEntityInstance();
-
 private:
     /**
      * The next available handle to give to the user.
      */
-    unsigned next_handle_;
+    Entity next_entity_ = 0;
 
     /**
      * The space that the entity manager belongs to.

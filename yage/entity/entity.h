@@ -14,7 +14,7 @@
 namespace yage
 {
 
-typedef unsigned int Handle;
+typedef unsigned int Entity;
 
 } // namespace yage
 

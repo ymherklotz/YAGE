@@ -11,22 +11,17 @@
 namespace yage
 {
 
-EntityManager::EntityManager(Space *space) : next_handle_(0), space_(space) {}
+EntityManager::EntityManager(Space *space) : space_(space) {}
 
 EntityManager::EntityManager(Space *space, std::size_t n)
-    : next_handle_(0), space_(space)
+    : space_(space)
 {
     entities_.reserve(n);
 }
 
-unsigned EntityManager::createEntity()
+Entity EntityManager::createEntity()
 {
-    return createEntityInstance().getHandle();
-}
-
-Entity EntityManager::createEntityInstance()
-{
-    Entity entity(next_handle_++);
+    Entity entity = next_entity_++;
     entities_.push_back(entity);
     return entity;
 }
