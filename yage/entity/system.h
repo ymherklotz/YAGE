@@ -16,27 +16,9 @@
 namespace yage
 {
 
-class BaseSystem : public yage::NonCopyable
+class System : public NonCopyable
 {
 public:
-    typedef std::size_t Identifier;
-
-    virtual void update() = 0;
-
-protected:
-    Identifier id_;
-};
-
-/**
- * System interface for the different systems in the engine.
- */
-template <typename Derived>
-class System : public BaseSystem
-{
-public:
-};
-
-class SystemManager : public yage::NonCopyable {
     
 };
 

@@ -13,6 +13,7 @@
 #include <memory>
 
 #include "entitymanager.h"
+#include "system.h"
 
 namespace yage
 {
