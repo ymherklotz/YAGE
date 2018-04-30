@@ -34,7 +34,7 @@ private:
     GLFWwindow *window_ = nullptr;
 
 public:
-    Window();
+    Window() = default;
     Window(const Window &) = delete;
     Window(Window &&)      = delete;
     /// destroys the window handle

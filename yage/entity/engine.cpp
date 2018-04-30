@@ -8,6 +8,9 @@
 
 #include "engine.h"
 
+#include "space.h"
+#include "entity.h"
+
 namespace yage
 {
 
@@ -29,6 +32,14 @@ void Engine::mainLoop()
 
 void Engine::update()
 {
+    for(auto &space : spaces_) {
+        
+    }
+}
+
+void Engine::addSpace(std::unique_ptr<Space> space)
+{
+    spaces_.push_back(std::move(space));
 }
 
 Engine &Engine::instance()

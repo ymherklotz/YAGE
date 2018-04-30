@@ -34,8 +34,6 @@ void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 
 } // namespace
 
-Window::Window() = default;
-
 Window::~Window()
 {
     glfwDestroyWindow(window_);
@@ -49,6 +47,7 @@ void Window::create(std::string window_name, int width, int height)
 
     window_ =
         glfwCreateWindow(width, height, window_name.c_str(), nullptr, nullptr);
+
     if (window_ == nullptr) {
         throw runtime_error("GLFW Window creation failed");
     }
