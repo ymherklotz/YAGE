@@ -12,6 +12,7 @@
 /**
  * Core includes
  */
+#include "core/core.h"
 #include "core/camera.h"
 #include "core/iomanager.h"
 #include "core/logger.h"
@@ -51,34 +52,5 @@
  * it more flexible and efficient.
  */
 #include "entity/engine.h"
-/**
- * Project namespace.
- *
- * Avoids collision as all the classes and global functions are wrapped in.
- */
-namespace yage
-{
-
-/**
- *
- */
-extern void glfwErrorCallback(int, const char *);
-
-/**
- * Initializes YAGE.
- *
- * This is there to initialize GLFW, which is the current
- * window manager that is used with OpenGL.
- */
-extern void init();
-
-/**
- * Quit and cleanup YAGE.
- *
- * This also cleans up GLFW after it was initialized.
- */
-extern void quit();
-
-} // namespace yage
 
 #endif
