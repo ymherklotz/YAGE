@@ -13,8 +13,7 @@ namespace yage
 
 EntityManager::EntityManager(Space *space) : space_(space) {}
 
-EntityManager::EntityManager(Space *space, std::size_t n)
-    : space_(space)
+EntityManager::EntityManager(Space *space, std::size_t n) : space_(space)
 {
     entities_.reserve(n);
 }

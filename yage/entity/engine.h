@@ -6,11 +6,12 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_CORE_ENGINE_H
-#define YAGE_CORE_ENGINE_H
+#pragma once
 
 #include "system.h"
+
 #include "../core/window.h"
+#include "../util/noncopyable.h"
 
 #include <memory>
 #include <vector>
@@ -24,9 +25,12 @@ class Space;
  * Main engine class that contains a systems, the main loop and the update
  * function that updates all the systems.
  */
-class Engine
+class Engine : public NonCopyable
 {
 public:
+
+    ~Engine();
+
     /// Initialize window and other aspects of the engine.
     void init();
 
@@ -41,7 +45,7 @@ public:
 
     /// Returns the instance of the engine, as there is only one instance of the
     /// engine.
-    static Engine &instance();
+    static Engine& instance();
 
 private:
     /// Window
@@ -52,5 +56,3 @@ private:
 };
 
 } // namespace yage
-
-#endif

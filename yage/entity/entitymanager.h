@@ -9,14 +9,14 @@
 #ifndef YAGE_ENGINE_ENTITYMANAGER_H
 #define YAGE_ENGINE_ENTITYMANAGER_H
 
-#include "entity.h"
-
 #include <vector>
 
 namespace yage
 {
 
 class Space;
+
+typedef unsigned int Entity;
 
 /**
  * Manages entities in a space.
@@ -51,7 +51,12 @@ public:
      *
      * @return The handle to the entity that was created in the space.
      */
-    unsigned createEntity();
+    Entity createEntity();
+
+    /**
+     * Delete an entity.
+     */
+    void deleteEntity(Entity entity);
 
 private:
     /**

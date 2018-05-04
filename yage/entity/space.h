@@ -42,7 +42,12 @@ public:
      * visible to the user, as the user only needs to worry about the
      * handle when referring to the Entity and changing it.
      */
-    unsigned createEntity();
+    Entity createEntity();
+
+    /**
+     * Update all the systems.
+     */
+    void update();
 
 private:
     /**
@@ -58,6 +63,11 @@ private:
      * current space.
      */
     EntityManager em_;
+
+    /**
+     * Manages all the components
+     */
+    // ComponentManager cm_;
 };
 
 } // namespace yage

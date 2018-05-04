@@ -18,4 +18,11 @@ unsigned Space::createEntity()
     return em_.createEntity();
 }
 
+void Space::update()
+{
+    for (auto &system : systems_) {
+        system->update();
+    }
+}
+
 } // namespace yage

@@ -19,7 +19,8 @@ namespace yage
 class System : public NonCopyable
 {
 public:
-    
+    virtual void init() = 0;
+    virtual void update() = 0;
 };
 
 } // namespace yage

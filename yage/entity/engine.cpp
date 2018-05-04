@@ -8,20 +8,28 @@
 
 #include "engine.h"
 
+#include "../core/core.h"
+
 #include "space.h"
-#include "entity.h"
 
 namespace yage
 {
 
+Engine::~Engine()
+{
+    quit();
+}
+
 void Engine::init()
 {
+    yage::init();
     window_.create("Game Engine", 800, 640);
 }
 
 void Engine::mainLoop()
 {
     while (!window_.shouldClose()) {
+        window_.pollEvents();
         window_.clearBuffer();
 
         update();
@@ -32,8 +40,8 @@ void Engine::mainLoop()
 
 void Engine::update()
 {
-    for(auto &space : spaces_) {
-        
+    for (auto &space : spaces_) {
+        space->update();
     }
 }
 
