@@ -26,10 +26,6 @@ add_subdirectory(${EXTERNAL_DIR}/glfw)
 # glad
 add_subdirectory(${EXTERNAL_DIR}/glad)
 
-# Box2D
-set(BOX2D_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-add_subdirectory(${EXTERNAL_DIR}/Box2D/Box2D)
-
 # yage
 file(GLOB YAGE_CORE_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/core/*.cpp)
 file(GLOB YAGE_MATH_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} yage/math/*.cpp)
