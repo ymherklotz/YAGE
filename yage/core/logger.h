@@ -6,20 +6,127 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_CORE_LOGGER_H
-#define YAGE_CORE_LOGGER_H
+#pragma once
 
 #include <memory>
+#include <sstream>
 #include <string>
 #include <vector>
 
 #include "../util/active.h"
-#include "loglevel.h"
-#include "logmessage.h"
-#include "logsink.h"
 
 namespace yage
 {
+
+class Logger;
+
+/**
+ * Different log levels that can be assigned to each message sent to the Logger.
+ * The logger then outputs the message if it is above the minimum log level, or
+ * does not process it.
+ */
+enum class LogLevel {
+    /// Lowest log level. This is used by the game engine to output debugging
+    /// information but is turned off in the logger by default.
+    DEBUG,
+
+    /// Information message.
+    INFO,
+
+    /// Warning message.
+    WARNING,
+
+#ifdef _WIN32
+#ifdef ERROR
+#define YAGE_ERROR_TMP ERROR
+#undef ERROR
+#endif
+#endif
+
+    /// Error message.
+    ERROR,
+
+#ifdef _WIN32
+#ifdef YAGE_ERROR_TMP
+#define ERROR YAGE_ERROR_TMP
+#undef YAGE_ERROR_TMP
+#endif
+#endif
+
+    /// Fatal message that should be output when the game
+    /// crashes.
+    FATAL,
+};
+
+class LogMessage
+{
+public:
+    ~LogMessage();
+
+    LogMessage(const LogMessage &msg) = delete;
+
+    LogMessage &operator=(const LogMessage &msg) = delete;
+    LogMessage &operator=(LogMessage &&msg) = delete;
+
+    template <typename T>
+    LogMessage &operator<<(const T &value);
+
+    LogMessage &operator<<(std::ostream &(*fn)(std::ostream &os));
+
+    struct Meta {
+        LogLevel level;
+        std::string fileName;
+        int line;
+    };
+
+private:
+    friend class Logger;
+
+    std::ostringstream buffer_;
+    Logger *owner_;
+    LogMessage::Meta meta_;
+
+    LogMessage(Logger *owner, LogLevel level, const std::string &file_name,
+               int line_num);
+    LogMessage(LogMessage &&msg);
+};
+
+class LogSink
+{
+public:
+    template <typename T>
+    LogSink(T impl);
+
+    LogSink(const LogSink &sink);
+    LogSink(LogSink &&sink);
+
+    LogSink &operator=(const LogSink &sink);
+    LogSink &operator=(LogSink &&sink);
+    bool operator==(const LogSink &sink);
+
+    void write(const LogMessage::Meta &meta, const std::string &msg) const;
+
+private:
+    struct Concept {
+        virtual ~Concept() = default;
+
+        virtual Concept *clone() const                   = 0;
+        virtual void write(const LogMessage::Meta &meta,
+                           const std::string &msg) const = 0;
+    };
+
+    template <typename T>
+    struct Model : Concept {
+        Model(T impl_i);
+        virtual Concept *clone() const override;
+        virtual void write(const LogMessage::Meta &meta,
+                           const std::string &msg) const override;
+
+        T impl;
+    };
+
+    std::unique_ptr<Concept> wrapper_;
+};
 
 class Logger
 {
@@ -48,6 +155,46 @@ private:
     LogLevel min_level_;
 };
 
+LogSink makeConsoleSink();
+
+LogSink makeFileSink(const std::string &filename);
+LogSink makeFileSink(std::string &&filename);
+
+/* -----------------------------------------------------------------------------
+ * Template Implementation
+ * -----------------------------------------------------------------------------
+ */
+
+template <typename T>
+LogSink::LogSink(T impl) : wrapper_(new Model<T>(std::move(impl)))
+{
+}
+
+template <typename T>
+LogSink::Model<T>::Model(T impl_i) : impl(impl_i)
+{
+}
+
+template <typename T>
+LogSink::Concept *LogSink::Model<T>::clone() const
+{
+    return new Model<T>(impl);
+}
+
+template <typename T>
+void LogSink::Model<T>::write(const LogMessage::Meta &meta,
+                              const std::string &msg) const
+{
+    impl(meta, msg);
+}
+
+template <typename T>
+LogMessage &LogMessage::operator<<(const T &value)
+{
+    buffer_ << value;
+    return *this;
+}
+
 } // namespace yage
 
 #define yLogger (yage::Logger::instance())
@@ -66,5 +213,3 @@ private:
 
 #define yLogFatal                                                              \
     (yage::Logger::instance()(yage::LogLevel::FATAL, __FILE__, __LINE__))
-
-#endif

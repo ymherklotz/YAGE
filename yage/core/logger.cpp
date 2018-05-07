@@ -7,17 +7,155 @@
  */
 
 #include "logger.h"
-#include "logmessage.h"
-#include "logsink.h"
 
-#include <yage/util/active.h>
+#include "../util/active.h"
 
 #include <algorithm>
+#include <chrono>
+#include <ctime>
+#include <fstream>
+#include <iomanip>
 #include <iostream>
+#include <sstream>
 #include <string>
 
 namespace yage
 {
+
+LogMessage::LogMessage(Logger *owner, LogLevel level,
+                       const std::string &file_name, int line_num)
+    : owner_(owner), meta_({level, file_name, line_num})
+{
+}
+
+LogMessage::LogMessage(LogMessage &&msg) : owner_(std::move(msg.owner_)) {}
+
+LogMessage::~LogMessage()
+{
+    if (owner_ != nullptr) {
+        owner_->flush(this);
+    }
+}
+
+LogMessage &LogMessage::operator<<(std::ostream &(*fn)(std::ostream &os))
+{
+    fn(buffer_);
+    return *this;
+}
+
+LogSink::LogSink(const LogSink &sink) : wrapper_(sink.wrapper_->clone()) {}
+
+LogSink::LogSink(LogSink &&sink) : wrapper_(std::move(sink.wrapper_)) {}
+
+LogSink &LogSink::operator=(const LogSink &sink)
+{
+    wrapper_.reset(sink.wrapper_->clone());
+    return *this;
+}
+
+LogSink &LogSink::operator=(LogSink &&sink)
+{
+    wrapper_ = std::move(sink.wrapper_);
+    return *this;
+}
+
+bool LogSink::operator==(const LogSink &sink)
+{
+    return (wrapper_.get() == sink.wrapper_.get());
+}
+
+void LogSink::write(const LogMessage::Meta &meta, const std::string &msg) const
+{
+    wrapper_->write(meta, msg);
+}
+
+LogSink makeConsoleSink()
+{
+    return [](const LogMessage::Meta &meta, const std::string &msg) {
+        std::cout << msg << "\n";
+    };
+}
+
+namespace
+{
+
+class FileSink
+{
+public:
+    FileSink(std::string &&filename)
+        : fileHandle_(std::make_shared<std::ofstream>(filename))
+    {
+        if (!fileHandle_->good()) {
+            throw std::runtime_error("Could not open file: " + filename);
+        }
+    }
+
+    FileSink(const std::string filename)
+        : fileHandle_(std::make_shared<std::ofstream>(filename))
+    {
+        if (!fileHandle_->good()) {
+            throw std::runtime_error("Could not open file: " + filename);
+        }
+    }
+
+    ~FileSink() = default;
+
+    void operator()(const LogMessage::Meta &meta, const std::string &msg) const
+    {
+        using namespace std::chrono;
+
+        auto now        = system_clock::now();
+        auto time_t     = system_clock::to_time_t(now);
+        auto local_time = std::localtime(&time_t);
+
+        std::string level;
+
+        switch (meta.level) {
+        case LogLevel::DEBUG:
+            level = "DEBUG";
+            break;
+        case LogLevel::INFO:
+            level = "INFO";
+            break;
+        case LogLevel::WARNING:
+            level = "WARNING";
+            break;
+        case LogLevel::ERROR:
+            level = "ERROR";
+            break;
+        case LogLevel::FATAL:
+            level = "FATAL";
+            break;
+        }
+
+        (*fileHandle_) << std::put_time(local_time, "[%H:%M:%S] [") << level
+                       << "] " << msg << "\n";
+        if (meta.fileName != "") {
+            (*fileHandle_) << "(" << meta.fileName;
+            if (meta.line != -1) {
+                (*fileHandle_) << ":" << meta.line << ")";
+            } else {
+                (*fileHandle_) << ")";
+            }
+        }
+        (*fileHandle_) << "\n\n";
+    }
+
+private:
+    std::shared_ptr<std::ofstream> fileHandle_;
+};
+
+} // namespace
+
+LogSink makeFileSink(const std::string &filename)
+{
+    return FileSink(filename);
+}
+
+LogSink makeFileSink(std::string &&filename)
+{
+    return FileSink(filename);
+}
 
 Logger::Logger() : active_(Active::create()), min_level_(LogLevel::INFO)
 {
