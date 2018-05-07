@@ -51,8 +51,7 @@ add_library(yage
 target_include_directories(yage
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}/yage
-  ${EXTERNAL_DIR}/glm
-  ${EXTERNAL_DIR}/rapidjson/include)
+  ${EXTERNAL_DIR}/glm)
 
 target_link_libraries(yage
   glfw

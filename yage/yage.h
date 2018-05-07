@@ -17,7 +17,6 @@
 #include "core/iomanager.h"
 #include "core/logger.h"
 #include "core/resourcemanager.h"
-#include "core/spritesheet.h"
 #include "core/window.h"
 
 /**
