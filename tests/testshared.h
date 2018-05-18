@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef TEST_TESTSHARED_H
-#define TEST_TESTSHARED_H
+#pragma once
 
 #define OPENGL_TEST_MAIN(LOGLEVEL)                                             \
     int main(int argc, char **argv)                                            \
@@ -29,5 +28,3 @@
         testing::InitGoogleTest(&argc, argv);                                  \
         return RUN_ALL_TESTS();                                                \
     }
-
-#endif

@@ -9,15 +9,14 @@
 #include <gtest/gtest.h>
 #include <yage/yage.h>
 
-#include "../testshared.h"
-
-using namespace yage;
-
-TEST(SpriteSheet, Load)
+TEST(YAGE, InitQuit)
 {
-    yLogDebug << IoManager::parentDirectory(__FILE__) << '\n' << __FILE__;
-    SpriteSheet sp(IoManager::parentDirectory(__FILE__), IoManager::parentDirectory(__FILE__));
-    ASSERT_TRUE(true);
+    yage::init();
+    yage::quit();
 }
 
-OPENGL_TEST_MAIN(LogLevel::DEBUG)
+int main(int argc, char **argv)
+{
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}

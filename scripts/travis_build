@@ -13,7 +13,7 @@ cd build
 cmake ..
 make
 cd tests
-ctest
+ctest -j 2 --schedule-random --repeat-until-fail 3
 cd ../..
 
 # update docs if we are on the master branch

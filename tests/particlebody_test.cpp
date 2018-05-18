@@ -7,7 +7,7 @@
  */
 
 #include <gtest/gtest.h>
-#include <yage/yage.h>
+#include <yage/physics/particlebody.h>
 
 #include <cmath>
 #include <cstdlib>
