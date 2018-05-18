@@ -15,22 +15,14 @@ language: cpp
 addons:
   apt:
     packages:
-      - g++-5
-      - g++-6
       - g++-7
-      - clang-4.0
-      - clang-5.0
       - libegl1-mesa-dev
       - xorg-dev
       - doxygen
     sources:
       - ubuntu-toolchain-r-test
 compiler:
-  - g++-5
-  - g++-6
   - g++-7
-  - clang++-4.0
-  - clang++-5.0
 os:
   - linux
 notifications:
