@@ -10,7 +10,6 @@
 #define YAGE_SPRITE_BATCH_H
 
 #include "../data/vertex.h"
-#include "batch.h"
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>

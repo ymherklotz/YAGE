@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_YAGE_H
-#define YAGE_YAGE_H
+#pragma once
 
 /**
  * Core includes
@@ -32,17 +31,16 @@
 #include "math/matrix.h"
 
 /**
- * Physics implementation however, Box2D
+ * Physics implementation however
  */
-#include "physics/body.h"
-#include "physics/particlebody.h"
-#include "physics/rectanglecollider.h"
-#include "physics/rigidbody.h"
+// #include "physics/body.h"
+// #include "physics/particlebody.h"
+// #include "physics/rectanglecollider.h"
+// #include "physics/rigidbody.h"
 
 /**
  * Rendering implementations for spritebatching and default shapes.
  */
-#include "render/drawable.h"
 #include "render/shader.h"
 #include "render/spritebatch.h"
 
@@ -51,5 +49,3 @@
  * it more flexible and efficient.
  */
 #include "entity/engine.h"
-
-#endif
