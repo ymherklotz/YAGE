@@ -8,12 +8,12 @@
 
 #pragma once
 
+#include "../util/active.h"
+
 #include <memory>
 #include <sstream>
 #include <string>
 #include <vector>
-
-#include "../util/active.h"
 
 namespace yage
 {
