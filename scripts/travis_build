@@ -16,7 +16,7 @@ cmake -DYAGE_BUILD_TESTS=ON -DYAGE_BUILD_DOCS=ON -DYAGE_BUILD_EXAMPLES=ON ..
 make
 cd tests
 ctest -j 2 --schedule-random --repeat-until-fail 3
-cd ..
+cd ../..
 
 # update docs if we are on the master branch
 echo "TRAVIS_BRANCH = " $TRAVIS_BRANCH
