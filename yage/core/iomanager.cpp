@@ -42,11 +42,6 @@ bool readFileToBuffer(const std::string &file_path,
     return true;
 }
 
-std::string parentDirectory(std::string file_path)
-{
-    return std::regex_replace(file_path, std::regex("(.*)/.*"), "$1");
-}
-
 }
 
 } // namespace yage

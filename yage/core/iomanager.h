@@ -21,8 +21,6 @@ namespace IoManager
 extern bool readFileToBuffer(const std::string &file_path,
                              std::vector<unsigned char> &buffer);
 
-extern std::string parentDirectory(std::string file_path);
-
 }
 
 } // namespace yage
