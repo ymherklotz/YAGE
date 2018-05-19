@@ -112,12 +112,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af1644095d96e43ac000375ba7f7ee021"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#af1644095d96e43ac000375ba7f7ee021">EntityManager</a> (<a class="el" href="classyage_1_1Space.html">Space</a> *space, std::size_t n)</td></tr>
 <tr class="memdesc:af1644095d96e43ac000375ba7f7ee021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an instance of the entitiy manager with an initial size.  <a href="#af1644095d96e43ac000375ba7f7ee021">More...</a><br/></td></tr>
 <tr class="separator:af1644095d96e43ac000375ba7f7ee021"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdd054a1235fb03452089d9f419a7e2b"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#acdd054a1235fb03452089d9f419a7e2b">createEntity</a> ()</td></tr>
-<tr class="memdesc:acdd054a1235fb03452089d9f419a7e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an <a class="el" href="classyage_1_1Entity.html" title="Entity convenience class. ">Entity</a> and returns the handle to the entity, which can then be used by the user to do operations on it.  <a href="#acdd054a1235fb03452089d9f419a7e2b">More...</a><br/></td></tr>
-<tr class="separator:acdd054a1235fb03452089d9f419a7e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a188f3bc252781f9f3a7b4da417f0d7de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1Entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a188f3bc252781f9f3a7b4da417f0d7de">createEntityInstance</a> ()</td></tr>
-<tr class="memdesc:a188f3bc252781f9f3a7b4da417f0d7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an <a class="el" href="classyage_1_1Entity.html" title="Entity convenience class. ">Entity</a> and returns it.  <a href="#a188f3bc252781f9f3a7b4da417f0d7de">More...</a><br/></td></tr>
-<tr class="separator:a188f3bc252781f9f3a7b4da417f0d7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646cf1110abdc0a4398c994ead5f537d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a646cf1110abdc0a4398c994ead5f537d">createEntity</a> ()</td></tr>
+<tr class="memdesc:a646cf1110abdc0a4398c994ead5f537d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an Entity and returns the handle to the entity, which can then be used by the user to do operations on it.  <a href="#a646cf1110abdc0a4398c994ead5f537d">More...</a><br/></td></tr>
+<tr class="separator:a646cf1110abdc0a4398c994ead5f537d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a246e10663f55a9f4817cbde23a7a36c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a246e10663f55a9f4817cbde23a7a36c9">deleteEntity</a> (<a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity)</td></tr>
+<tr class="memdesc:a246e10663f55a9f4817cbde23a7a36c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an entity.  <a href="#a246e10663f55a9f4817cbde23a7a36c9">More...</a><br/></td></tr>
+<tr class="separator:a246e10663f55a9f4817cbde23a7a36c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages entities in a space. </p>
@@ -207,12 +207,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acdd054a1235fb03452089d9f419a7e2b"></a>
+<a class="anchor" id="a646cf1110abdc0a4398c994ead5f537d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned yage::EntityManager::createEntity </td>
+          <td class="memname"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> yage::EntityManager::createEntity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -220,26 +220,26 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an <a class="el" href="classyage_1_1Entity.html" title="Entity convenience class. ">Entity</a> and returns the handle to the entity, which can then be used by the user to do operations on it. </p>
+<p>Creates an Entity and returns the handle to the entity, which can then be used by the user to do operations on it. </p>
 <dl class="section return"><dt>Returns</dt><dd>The handle to the entity that was created in the space. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a188f3bc252781f9f3a7b4da417f0d7de"></a>
+<a class="anchor" id="a246e10663f55a9f4817cbde23a7a36c9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classyage_1_1Entity.html">Entity</a> yage::EntityManager::createEntityInstance </td>
+          <td class="memname">void yage::EntityManager::deleteEntity </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an <a class="el" href="classyage_1_1Entity.html" title="Entity convenience class. ">Entity</a> and returns it. </p>
-<dl class="section return"><dt>Returns</dt><dd>The entity that was created by the entity manager in the current space. </dd></dl>
+<p>Delete an entity. </p>
 
 </div>
 </div>
@@ -250,7 +250,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

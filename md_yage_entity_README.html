@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Deprecated List</title>
+<title>Entity Component System (ECS)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,17 +77,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Deprecated List </div>  </div>
+<div class="title">Entity Component System (ECS) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_deprecated000001"></a>Class <a class="el" href="classyage_1_1Sprite.html">yage::Sprite</a>  </dt>
-<dd>Use SpriteBatch instead </dd>
-</dl>
+<div class="textblock"><h2>Structure</h2>
+<h3>Entity</h3>
+<p>The <code>EntityManager</code> is the class that manages the entities, by allocating and deleting them as necessary. The <code>Entity</code> itself is just a handle, and does not contain any logic or data. It is just used to refer to the <code>Entity</code> when doing operations on it.</p>
+<h3>Components</h3>
+<p>These are just data that is associated with Entities, and it gets processed by the Systems when these are updated. The systems only process a few components at once, which separates the logic and makes it easy to develop the Systems and Components orthogonally.</p>
+<h3>Systems</h3>
+<p>These process the Components and update their state. This completely separates the data from the logic, and means that they can be tested independently. New systems can be created by inheriting from the <code>BaseSystem</code>, which provides an interface which then enables that system to be added to the main <code>Engine</code> through different types of <code>Spaces</code>.</p>
+<h2>Implementation</h2>
+<p>The Entity is just an <code>unsigned int</code>, which has a <code>typedef</code> called <code>Entity</code>, which is also what all the functions return.</p>
+<p>The link between the components are managed by a templated <code>ComponentMapper</code> class, that links every entity with it's component. This way it is also to find out if an entity is part of a specific component, and that entity will never be processed in the system that only targets that component, which makes it much more efficient. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -94,14 +94,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef YAGE_ENGINE_ENTITYMANAGER_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_ENGINE_ENTITYMANAGER_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="entity_8h.html">entity.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Space.html">Space</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span>Space;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classyage_1_1EntityManager.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1EntityManager.html">EntityManager</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
@@ -112,32 +112,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classyage_1_1EntityManager.html#a255fa9aff3e6b208eea0c38d8caf08f8">EntityManager</a>(<a class="code" href="classyage_1_1Space.html">Space</a> *space, std::size_t n);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="classyage_1_1EntityManager.html#acdd054a1235fb03452089d9f419a7e2b">createEntity</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> <a class="code" href="classyage_1_1EntityManager.html#a646cf1110abdc0a4398c994ead5f537d">createEntity</a>();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classyage_1_1Entity.html">Entity</a> <a class="code" href="classyage_1_1EntityManager.html#a188f3bc252781f9f3a7b4da417f0d7de">createEntityInstance</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">unsigned</span> next_handle_;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classyage_1_1Space.html">Space</a> *space_;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::vector&lt;Entity&gt; entities_;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="entity_8h_html"><div class="ttname"><a href="entity_8h.html">entity.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="classyage_1_1EntityManager_html_acdd054a1235fb03452089d9f419a7e2b"><div class="ttname"><a href="classyage_1_1EntityManager.html#acdd054a1235fb03452089d9f419a7e2b">yage::EntityManager::createEntity</a></div><div class="ttdeci">unsigned createEntity()</div><div class="ttdoc">Creates an Entity and returns the handle to the entity, which can then be used by the user to do oper...</div><div class="ttdef"><b>Definition:</b> entitymanager.cpp:22</div></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1EntityManager.html#a246e10663f55a9f4817cbde23a7a36c9">deleteEntity</a>(<a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> next_entity_ = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classyage_1_1Space.html">Space</a> *space_;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::vector&lt;Entity&gt; entities_;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classyage_1_1EntityManager_html"><div class="ttname"><a href="classyage_1_1EntityManager.html">yage::EntityManager</a></div><div class="ttdoc">Manages entities in a space. </div><div class="ttdef"><b>Definition:</b> entitymanager.h:24</div></div>
-<div class="ttc" id="classyage_1_1EntityManager_html_a188f3bc252781f9f3a7b4da417f0d7de"><div class="ttname"><a href="classyage_1_1EntityManager.html#a188f3bc252781f9f3a7b4da417f0d7de">yage::EntityManager::createEntityInstance</a></div><div class="ttdeci">Entity createEntityInstance()</div><div class="ttdoc">Creates an Entity and returns it. </div><div class="ttdef"><b>Definition:</b> entitymanager.cpp:27</div></div>
-<div class="ttc" id="classyage_1_1Entity_html"><div class="ttname"><a href="classyage_1_1Entity.html">yage::Entity</a></div><div class="ttdoc">Entity convenience class. </div><div class="ttdef"><b>Definition:</b> entity.h:29</div></div>
+<div class="ttc" id="classyage_1_1EntityManager_html_a646cf1110abdc0a4398c994ead5f537d"><div class="ttname"><a href="classyage_1_1EntityManager.html#a646cf1110abdc0a4398c994ead5f537d">yage::EntityManager::createEntity</a></div><div class="ttdeci">Entity createEntity()</div><div class="ttdoc">Creates an Entity and returns the handle to the entity, which can then be used by the user to do oper...</div><div class="ttdef"><b>Definition:</b> entitymanager.cpp:21</div></div>
+<div class="ttc" id="namespaceyage_html_aa8bc60c76b5240a55672ce5b8e288764"><div class="ttname"><a href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">yage::Entity</a></div><div class="ttdeci">unsigned int Entity</div><div class="ttdef"><b>Definition:</b> entitymanager.h:17</div></div>
 <div class="ttc" id="classyage_1_1EntityManager_html_a255fa9aff3e6b208eea0c38d8caf08f8"><div class="ttname"><a href="classyage_1_1EntityManager.html#a255fa9aff3e6b208eea0c38d8caf08f8">yage::EntityManager::EntityManager</a></div><div class="ttdeci">EntityManager()=default</div><div class="ttdoc">Default instance of an EntityManager. </div></div>
-<div class="ttc" id="classyage_1_1Space_html"><div class="ttname"><a href="classyage_1_1Space.html">yage::Space</a></div><div class="ttdoc">Space that keeps track of all the entities, componenets and runs the systems on the data to update th...</div><div class="ttdef"><b>Definition:</b> space.h:26</div></div>
+<div class="ttc" id="classyage_1_1EntityManager_html_a246e10663f55a9f4817cbde23a7a36c9"><div class="ttname"><a href="classyage_1_1EntityManager.html#a246e10663f55a9f4817cbde23a7a36c9">yage::EntityManager::deleteEntity</a></div><div class="ttdeci">void deleteEntity(Entity entity)</div><div class="ttdoc">Delete an entity. </div></div>
+<div class="ttc" id="classyage_1_1Space_html"><div class="ttname"><a href="classyage_1_1Space.html">yage::Space</a></div><div class="ttdoc">Space that keeps track of all the entities, componenets and runs the systems on the data to update th...</div><div class="ttdef"><b>Definition:</b> space.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

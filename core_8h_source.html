@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>yage/core/logsink.cpp File Reference</title>
+<title>yage/core/core.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,60 +86,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">logsink.cpp File Reference</div>  </div>
+<div class="title">core.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><hr/>
-  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="logsink_8h_source.html">logsink.h</a>&quot;</code><br/>
-<code>#include &lt;chrono&gt;</code><br/>
-<code>#include &lt;ctime&gt;</code><br/>
-<code>#include &lt;fstream&gt;</code><br/>
-<code>#include &lt;iomanip&gt;</code><br/>
-<code>#include &lt;iostream&gt;</code><br/>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespaceyage"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html">yage</a></td></tr>
-<tr class="memdesc:namespaceyage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core includes. <br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ab54350a8dbf59338c99ab4f43cfa2858"><td class="memItemLeft" align="right" valign="top">LogSink&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#ab54350a8dbf59338c99ab4f43cfa2858">yage::makeConsoleSink</a> ()</td></tr>
-<tr class="separator:ab54350a8dbf59338c99ab4f43cfa2858"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad537beeea51c8314e407fadd24affc34"><td class="memItemLeft" align="right" valign="top">LogSink&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#ad537beeea51c8314e407fadd24affc34">yage::makeFileSink</a> (const std::string &amp;filename)</td></tr>
-<tr class="separator:ad537beeea51c8314e407fadd24affc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b288197f6a97f197dda60e5b54f1841"><td class="memItemLeft" align="right" valign="top">LogSink&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a6b288197f6a97f197dda60e5b54f1841">yage::makeFileSink</a> (std::string &amp;&amp;filename)</td></tr>
-<tr class="separator:a6b288197f6a97f197dda60e5b54f1841"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><hr/>
- <p>Copyright (c) 2017 Yann Herklotz Grave <a href="#" onclick="location.href='mai'+'lto:'+'ymh'+'er'+'klo'+'tz'+'@gm'+'ai'+'l.c'+'om'; return false;">ymher<span style="display: none;">.nosp@m.</span>klot<span style="display: none;">.nosp@m.</span>z@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </p>
-<h2>MIT License, see LICENSE file for more details. </h2>
-</div><h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="ae3c7a5bad8dd0db0a0a9cdd60c7b53d1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;std::ofstream&gt; fileHandle_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<a href="core_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#ae53246342d5b0371f300336cbc6595a3">glfwErrorCallback</a>(<span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#a4fc8b4d2a19d4c7f7f1bd42a788827ce">init</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#ac9d8c7327204686b3c86f4ab48672618">quit</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="ttc" id="namespaceyage_html_ac9d8c7327204686b3c86f4ab48672618"><div class="ttname"><a href="namespaceyage.html#ac9d8c7327204686b3c86f4ab48672618">yage::quit</a></div><div class="ttdeci">void quit()</div><div class="ttdoc">Quit and cleanup YAGE. </div><div class="ttdef"><b>Definition:</b> core.cpp:32</div></div>
+<div class="ttc" id="namespaceyage_html_a4fc8b4d2a19d4c7f7f1bd42a788827ce"><div class="ttname"><a href="namespaceyage.html#a4fc8b4d2a19d4c7f7f1bd42a788827ce">yage::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initializes YAGE. </div><div class="ttdef"><b>Definition:</b> core.cpp:24</div></div>
+<div class="ttc" id="namespaceyage_html_ae53246342d5b0371f300336cbc6595a3"><div class="ttname"><a href="namespaceyage.html#ae53246342d5b0371f300336cbc6595a3">yage::glfwErrorCallback</a></div><div class="ttdeci">void glfwErrorCallback(int, const char *description)</div><div class="ttdef"><b>Definition:</b> core.cpp:19</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

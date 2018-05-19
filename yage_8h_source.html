@@ -91,69 +91,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="yage_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef YAGE_YAGE_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_YAGE_H</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_8h.html">core/core.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="camera_8h.html">core/camera.h</a>&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="iomanager_8h.html">core/iomanager.h</a>&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logger_8h.html">core/logger.h</a>&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="resourcemanager_8h.html">core/resourcemanager.h</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="spritesheet_8h.html">core/spritesheet.h</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="window_8h.html">core/window.h</a>&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="input_8h.html">data/input.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="texture_8h.html">data/texture.h</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vertex_8h.html">data/vertex.h</a>&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="matrix_8h.html">math/matrix.h</a>&quot;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="body_8h.html">physics/body.h</a>&quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="particlebody_8h.html">physics/particlebody.h</a>&quot;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rectanglecollider_8h.html">physics/rectanglecollider.h</a>&quot;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rigidbody_8h.html">physics/rigidbody.h</a>&quot;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="drawable_8h.html">render/drawable.h</a>&quot;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="shader_8h.html">render/shader.h</a>&quot;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="spritebatch_8h.html">render/spritebatch.h</a>&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="engine_8h.html">entity/engine.h</a>&quot;</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#ae53246342d5b0371f300336cbc6595a3">glfwErrorCallback</a>(<span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#a4fc8b4d2a19d4c7f7f1bd42a788827ce">init</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="namespaceyage.html#ac9d8c7327204686b3c86f4ab48672618">quit</a>();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="rigidbody_8h_html"><div class="ttname"><a href="rigidbody_8h.html">rigidbody.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="namespaceyage_html_ac9d8c7327204686b3c86f4ab48672618"><div class="ttname"><a href="namespaceyage.html#ac9d8c7327204686b3c86f4ab48672618">yage::quit</a></div><div class="ttdeci">void quit()</div><div class="ttdoc">Quit and cleanup YAGE. </div><div class="ttdef"><b>Definition:</b> yage.cpp:32</div></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="window_8h.html">core/window.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="input_8h.html">data/input.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="texture_8h.html">data/texture.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vertex_8h.html">data/vertex.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="matrix_8h.html">math/matrix.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// #include &quot;physics/body.h&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// #include &quot;physics/particlebody.h&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// #include &quot;physics/rectanglecollider.h&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// #include &quot;physics/rigidbody.h&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="shader_8h.html">render/shader.h</a>&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="spritebatch_8h.html">render/spritebatch.h</a>&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="engine_8h.html">entity/engine.h</a>&quot;</span></div>
 <div class="ttc" id="window_8h_html"><div class="ttname"><a href="window_8h.html">window.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="engine_8h_html"><div class="ttname"><a href="engine_8h.html">engine.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="input_8h_html"><div class="ttname"><a href="input_8h.html">input.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="body_8h_html"><div class="ttname"><a href="body_8h.html">body.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="camera_8h_html"><div class="ttname"><a href="camera_8h.html">camera.h</a></div><div class="ttdoc"> </div></div>
+<div class="ttc" id="core_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="texture_8h_html"><div class="ttname"><a href="texture_8h.html">texture.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="iomanager_8h_html"><div class="ttname"><a href="iomanager_8h.html">iomanager.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="namespaceyage_html_a4fc8b4d2a19d4c7f7f1bd42a788827ce"><div class="ttname"><a href="namespaceyage.html#a4fc8b4d2a19d4c7f7f1bd42a788827ce">yage::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initializes YAGE. </div><div class="ttdef"><b>Definition:</b> yage.cpp:24</div></div>
 <div class="ttc" id="shader_8h_html"><div class="ttname"><a href="shader_8h.html">shader.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="rectanglecollider_8h_html"><div class="ttname"><a href="rectanglecollider_8h.html">rectanglecollider.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="drawable_8h_html"><div class="ttname"><a href="drawable_8h.html">drawable.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="spritesheet_8h_html"><div class="ttname"><a href="spritesheet_8h.html">spritesheet.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="namespaceyage_html_ae53246342d5b0371f300336cbc6595a3"><div class="ttname"><a href="namespaceyage.html#ae53246342d5b0371f300336cbc6595a3">yage::glfwErrorCallback</a></div><div class="ttdeci">void glfwErrorCallback(int, const char *description)</div><div class="ttdef"><b>Definition:</b> yage.cpp:19</div></div>
 <div class="ttc" id="vertex_8h_html"><div class="ttname"><a href="vertex_8h.html">vertex.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="matrix_8h_html"><div class="ttname"><a href="matrix_8h.html">matrix.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="resourcemanager_8h_html"><div class="ttname"><a href="resourcemanager_8h.html">resourcemanager.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="logger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div><div class="ttdoc"> </div></div>
 <div class="ttc" id="spritebatch_8h_html"><div class="ttname"><a href="spritebatch_8h.html">spritebatch.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="particlebody_8h_html"><div class="ttname"><a href="particlebody_8h.html">particlebody.h</a></div><div class="ttdoc"> </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -89,7 +89,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">logger.h File Reference</div>  </div>
 </div><!--header-->
@@ -98,25 +100,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p><hr/>
   
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;memory&gt;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="active_8h_source.html">../util/active.h</a>&quot;</code><br/>
+<code>#include &lt;memory&gt;</code><br/>
+<code>#include &lt;sstream&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;vector&gt;</code><br/>
-<code>#include &quot;<a class="el" href="active_8h_source.html">../util/active.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="loglevel_8h_source.html">loglevel.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="logmessage_8h_source.html">logmessage.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="logsink_8h_source.html">logsink.h</a>&quot;</code><br/>
 </div>
 <p><a href="logger_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1LogMessage.html">yage::LogMessage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structyage_1_1LogMessage_1_1Meta.html">yage::LogMessage::Meta</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1LogSink.html">yage::LogSink</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Logger.html">yage::Logger</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceyage"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html">yage</a></td></tr>
-<tr class="memdesc:namespaceyage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core includes. <br/></td></tr>
+<tr class="memdesc:namespaceyage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project namespace. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -133,6 +139,29 @@ Macros</h2></td></tr>
 <tr class="separator:ac71f194a096b3d7b4cf4ec448ee8b87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89062c0e6f5d9d0dd34553259c0fe00e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a89062c0e6f5d9d0dd34553259c0fe00e">yLogFatal</a>&#160;&#160;&#160;(<a class="el" href="classyage_1_1Logger.html#ad165738c5b738d80a14b0ee1319cae2e">yage::Logger::instance</a>()(<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a19da7170bea36556dde582519795f3fc">yage::LogLevel::FATAL</a>, __FILE__, __LINE__))</td></tr>
 <tr class="separator:a89062c0e6f5d9d0dd34553259c0fe00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a4ac616fa26af17775ed558a4c08e4788"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">yage::LogLevel</a> { <br/>
+&#160;&#160;<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788adc30ec20708ef7b0f641ef78b7880a15">yage::LogLevel::DEBUG</a>, 
+<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a551b723eafd6a31d444fcb2f5920fbd3">yage::LogLevel::INFO</a>, 
+<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a059e9861e0400dfbe05c98a841f3f96b">yage::LogLevel::WARNING</a>, 
+<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788abb1ca97ec761fc37101737ba0aa2e7c5">yage::LogLevel::ERROR</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788a19da7170bea36556dde582519795f3fc">yage::LogLevel::FATAL</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:a4ac616fa26af17775ed558a4c08e4788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Different log levels that can be assigned to each message sent to the Logger.  <a href="namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788">More...</a><br/></td></tr>
+<tr class="separator:a4ac616fa26af17775ed558a4c08e4788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab54350a8dbf59338c99ab4f43cfa2858"><td class="memItemLeft" align="right" valign="top">LogSink&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#ab54350a8dbf59338c99ab4f43cfa2858">yage::makeConsoleSink</a> ()</td></tr>
+<tr class="separator:ab54350a8dbf59338c99ab4f43cfa2858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad537beeea51c8314e407fadd24affc34"><td class="memItemLeft" align="right" valign="top">LogSink&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#ad537beeea51c8314e407fadd24affc34">yage::makeFileSink</a> (const std::string &amp;filename)</td></tr>
+<tr class="separator:ad537beeea51c8314e407fadd24affc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b288197f6a97f197dda60e5b54f1841"><td class="memItemLeft" align="right" valign="top">LogSink&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a6b288197f6a97f197dda60e5b54f1841">yage::makeFileSink</a> (std::string &amp;&amp;filename)</td></tr>
+<tr class="separator:a6b288197f6a97f197dda60e5b54f1841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><hr/>
@@ -214,7 +243,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

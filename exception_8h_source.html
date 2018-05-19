@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>yage/core/spritesheet.h File Reference</title>
+<title>yage/core/exception.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,55 +86,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">spritesheet.h File Reference</div>  </div>
+<div class="title">exception.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><hr/>
-  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="texture_8h_source.html">../data/texture.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="noncopyable_8h_source.html">../util/noncopyable.h</a>&quot;</code><br/>
-<code>#include &lt;rapidjson/reader.h&gt;</code><br/>
-<code>#include &lt;map&gt;</code><br/>
-<code>#include &lt;string&gt;</code><br/>
-</div>
-<p><a href="spritesheet_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structyage_1_1details_1_1Coordinate.html">yage::details::Coordinate</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1SpriteSheet.html">yage::SpriteSheet</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespaceyage"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html">yage</a></td></tr>
-<tr class="memdesc:namespaceyage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core includes. <br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceyage_1_1details"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage_1_1details.html">yage::details</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a035f63ad1a3114ada8157ed4182521c9"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <br class="typebreak"/>
-details::Coordinate &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage_1_1details.html#a035f63ad1a3114ada8157ed4182521c9">yage::details::SpriteMap</a></td></tr>
-<tr class="separator:a035f63ad1a3114ada8157ed4182521c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><hr/>
- <p>Copyright (c) 2017 Yann Herklotz Grave <a href="#" onclick="location.href='mai'+'lto:'+'ymh'+'er'+'klo'+'tz'+'@gm'+'ai'+'l.c'+'om'; return false;">ymher<span style="display: none;">.nosp@m.</span>klot<span style="display: none;">.nosp@m.</span>z@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </p>
-<h2>MIT License, see LICENSE file for more details. </h2>
-</div></div><!-- contents -->
+<a href="exception_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef YAGE_CORE_EXCEPTION_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_CORE_EXCEPTION_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classyage_1_1FileLoadException.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1FileLoadException.html">FileLoadException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classyage_1_1FileLoadException.html#a5f04a1f30d26c3c96192a1c1de3a4f21">FileLoadException</a>(std::string err);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classyage_1_1FileLoadException.html#a16dc9ed93c36e9a754fc7448366bcd0c">what</a>() <span class="keyword">const</span> <span class="keywordflow">throw</span>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::string err_msg;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classyage_1_1FileLoadException_html"><div class="ttname"><a href="classyage_1_1FileLoadException.html">yage::FileLoadException</a></div><div class="ttdef"><b>Definition:</b> exception.h:10</div></div>
+<div class="ttc" id="classyage_1_1FileLoadException_html_a5f04a1f30d26c3c96192a1c1de3a4f21"><div class="ttname"><a href="classyage_1_1FileLoadException.html#a5f04a1f30d26c3c96192a1c1de3a4f21">yage::FileLoadException::FileLoadException</a></div><div class="ttdeci">FileLoadException(std::string err)</div><div class="ttdef"><b>Definition:</b> exception.cpp:6</div></div>
+<div class="ttc" id="classyage_1_1FileLoadException_html_a16dc9ed93c36e9a754fc7448366bcd0c"><div class="ttname"><a href="classyage_1_1FileLoadException.html#a16dc9ed93c36e9a754fc7448366bcd0c">yage::FileLoadException::what</a></div><div class="ttdeci">virtual const char * what() const </div><div class="ttdef"><b>Definition:</b> exception.cpp:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>yage/entity/entity.h Source File</title>
+<title>yage/entity/componentmanager.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,45 +87,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">entity.h</div>  </div>
+<div class="title">componentmanager.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="entity_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef YAGE_ENGINE_ENTITY_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_ENGINE_ENTITY_H</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<a href="componentmanager_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="entitymanager_8h.html">entitymanager.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> CompT&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classyage_1_1ComponentMapper.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1ComponentMapper.html">ComponentMapper</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::map&lt;Entity, CompT&gt; map_;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">   17</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <a class="code" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">EntityHandle</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Space.html">Space</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classyage_1_1Entity.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Entity.html">Entity</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classyage_1_1Entity.html#a811c917c6048fab74c9972df4cd80cef">Entity</a>(<a class="code" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">EntityHandle</a> handle);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">EntityHandle</a> <a class="code" href="classyage_1_1Entity.html#adb9e45f096a38c1057bba28acf7dde71">getHandle</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">EntityHandle</a> handle_;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="namespaceyage_html_aa1a73f12188f10f8a3cf46ba3803be9a"><div class="ttname"><a href="namespaceyage.html#aa1a73f12188f10f8a3cf46ba3803be9a">yage::EntityHandle</a></div><div class="ttdeci">unsigned EntityHandle</div><div class="ttdef"><b>Definition:</b> entity.h:17</div></div>
-<div class="ttc" id="classyage_1_1Entity_html"><div class="ttname"><a href="classyage_1_1Entity.html">yage::Entity</a></div><div class="ttdoc">Entity convenience class. </div><div class="ttdef"><b>Definition:</b> entity.h:29</div></div>
-<div class="ttc" id="classyage_1_1Entity_html_a811c917c6048fab74c9972df4cd80cef"><div class="ttname"><a href="classyage_1_1Entity.html#a811c917c6048fab74c9972df4cd80cef">yage::Entity::Entity</a></div><div class="ttdeci">Entity(EntityHandle handle)</div><div class="ttdoc">Creates an instance of an Entity with a handle that is associated to it. </div><div class="ttdef"><b>Definition:</b> entity.cpp:16</div></div>
-<div class="ttc" id="classyage_1_1Entity_html_adb9e45f096a38c1057bba28acf7dde71"><div class="ttname"><a href="classyage_1_1Entity.html#adb9e45f096a38c1057bba28acf7dde71">yage::Entity::getHandle</a></div><div class="ttdeci">EntityHandle getHandle() const </div><div class="ttdoc">Handle getter, as the user will only interact with the id itself. </div><div class="ttdef"><b>Definition:</b> entity.cpp:18</div></div>
-<div class="ttc" id="classyage_1_1Space_html"><div class="ttname"><a href="classyage_1_1Space.html">yage::Space</a></div><div class="ttdoc">Space that keeps track of all the entities, componenets and runs the systems on the data to update th...</div><div class="ttdef"><b>Definition:</b> space.h:26</div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="ttc" id="entitymanager_8h_html"><div class="ttname"><a href="entitymanager_8h.html">entitymanager.h</a></div><div class="ttdoc"> </div></div>
+<div class="ttc" id="classyage_1_1ComponentMapper_html"><div class="ttname"><a href="classyage_1_1ComponentMapper.html">yage::ComponentMapper</a></div><div class="ttdef"><b>Definition:</b> componentmanager.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

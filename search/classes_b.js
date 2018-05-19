@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['rectangle',['Rectangle',['../classyage_1_1Rectangle.html',1,'yage']]],
   ['rectanglecollider',['RectangleCollider',['../classyage_1_1RectangleCollider.html',1,'yage']]],
   ['renderbatch',['RenderBatch',['../structyage_1_1details_1_1RenderBatch.html',1,'yage::details']]],
   ['resourcemanager',['ResourceManager',['../classyage_1_1ResourceManager.html',1,'yage']]],

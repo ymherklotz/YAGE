@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Member List</title>
+<title>yage/core/core.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,8 +40,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -62,10 +62,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -84,28 +82,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="classyage_1_1BaseSystem.html">BaseSystem</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_11841e5da2063fc5766a682aee38e289.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">yage::BaseSystem Member List</div>  </div>
+<div class="title">core.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classyage_1_1BaseSystem.html">yage::BaseSystem</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classyage_1_1BaseSystem.html#a9557904e30ba65a215a7ef902a776778">id_</a></td><td class="entry"><a class="el" href="classyage_1_1BaseSystem.html">yage::BaseSystem</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classyage_1_1BaseSystem.html#a8391daab8ffc82e734c5607c6adc9c08">Identifier</a> typedef</td><td class="entry"><a class="el" href="classyage_1_1BaseSystem.html">yage::BaseSystem</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classyage_1_1NonCopyable.html#a09d38a4f2290e4cfe2bc7b199421ab6d">NonCopyable</a>()=default</td><td class="entry"><a class="el" href="classyage_1_1NonCopyable.html">yage::NonCopyable</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classyage_1_1NonCopyable.html#adacd41ff69b4b38fda215249a3387aa0">NonCopyable</a>(const NonCopyable &amp;)=delete</td><td class="entry"><a class="el" href="classyage_1_1NonCopyable.html">yage::NonCopyable</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classyage_1_1NonCopyable.html#a2972f07c7c098281713d3f9dc20309af">operator=</a>(const NonCopyable &amp;)=delete</td><td class="entry"><a class="el" href="classyage_1_1NonCopyable.html">yage::NonCopyable</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classyage_1_1BaseSystem.html#a3418e8bfda4350a7aa076dc661ce8e21">update</a>()=0</td><td class="entry"><a class="el" href="classyage_1_1BaseSystem.html">yage::BaseSystem</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classyage_1_1NonCopyable.html#a06190acb5123fdfc38675191ae547ba8">~NonCopyable</a>()=default</td><td class="entry"><a class="el" href="classyage_1_1NonCopyable.html">yage::NonCopyable</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-</table></div><!-- contents -->
+<p><hr/>
+  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="core_8h_source.html">core.h</a>&quot;</code><br/>
+<code>#include &lt;GLFW/glfw3.h&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;stdexcept&gt;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceyage"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html">yage</a></td></tr>
+<tr class="memdesc:namespaceyage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project namespace. <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae53246342d5b0371f300336cbc6595a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#ae53246342d5b0371f300336cbc6595a3">yage::glfwErrorCallback</a> (int, const char *)</td></tr>
+<tr class="separator:ae53246342d5b0371f300336cbc6595a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc8b4d2a19d4c7f7f1bd42a788827ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a4fc8b4d2a19d4c7f7f1bd42a788827ce">yage::init</a> ()</td></tr>
+<tr class="memdesc:a4fc8b4d2a19d4c7f7f1bd42a788827ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes YAGE.  <a href="#a4fc8b4d2a19d4c7f7f1bd42a788827ce">More...</a><br/></td></tr>
+<tr class="separator:a4fc8b4d2a19d4c7f7f1bd42a788827ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d8c7327204686b3c86f4ab48672618"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#ac9d8c7327204686b3c86f4ab48672618">yage::quit</a> ()</td></tr>
+<tr class="memdesc:ac9d8c7327204686b3c86f4ab48672618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quit and cleanup YAGE.  <a href="#ac9d8c7327204686b3c86f4ab48672618">More...</a><br/></td></tr>
+<tr class="separator:ac9d8c7327204686b3c86f4ab48672618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><hr/>
+ <p>Copyright (c) 2017 Yann Herklotz Grave <a href="#" onclick="location.href='mai'+'lto:'+'ymh'+'er'+'klo'+'tz'+'@gm'+'ai'+'l.c'+'om'; return false;">ymher<span style="display: none;">.nosp@m.</span>klot<span style="display: none;">.nosp@m.</span>z@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </p>
+<h2>MIT License, see LICENSE file for more details. </h2>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -106,9 +106,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a40c248478ae521bb4e0d5119002cf8e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Space.html#a40c248478ae521bb4e0d5119002cf8e9">Space</a> ()</td></tr>
 <tr class="memdesc:a40c248478ae521bb4e0d5119002cf8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default instance for a space.  <a href="#a40c248478ae521bb4e0d5119002cf8e9">More...</a><br/></td></tr>
 <tr class="separator:a40c248478ae521bb4e0d5119002cf8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41bc332ffb3042c0872ede8c53ff1fa4"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Space.html#a41bc332ffb3042c0872ede8c53ff1fa4">createEntity</a> ()</td></tr>
+<tr class="memitem:a41bc332ffb3042c0872ede8c53ff1fa4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Space.html#a41bc332ffb3042c0872ede8c53ff1fa4">createEntity</a> ()</td></tr>
 <tr class="memdesc:a41bc332ffb3042c0872ede8c53ff1fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an entity that will belong to this space, and return the handle to the user.  <a href="#a41bc332ffb3042c0872ede8c53ff1fa4">More...</a><br/></td></tr>
 <tr class="separator:a41bc332ffb3042c0872ede8c53ff1fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08a283a165bf29d2eec4ffc5a7629ce2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Space.html#a08a283a165bf29d2eec4ffc5a7629ce2">update</a> ()</td></tr>
+<tr class="memdesc:a08a283a165bf29d2eec4ffc5a7629ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update all the systems.  <a href="#a08a283a165bf29d2eec4ffc5a7629ce2">More...</a><br/></td></tr>
+<tr class="separator:a08a283a165bf29d2eec4ffc5a7629ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classyage_1_1Space.html" title="Space that keeps track of all the entities, componenets and runs the systems on the data to update th...">Space</a> that keeps track of all the entities, componenets and runs the systems on the data to update them. </p>
@@ -146,7 +149,24 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create an entity that will belong to this space, and return the handle to the user. </p>
-<p>The <a class="el" href="classyage_1_1Entity.html" title="Entity convenience class. ">Entity</a> class itself should not be visible to the user, as the user only needs to worry about the handle when referring to the <a class="el" href="classyage_1_1Entity.html" title="Entity convenience class. ">Entity</a> and changing it. </p>
+<p>The Entity class itself should not be visible to the user, as the user only needs to worry about the handle when referring to the Entity and changing it. </p>
+
+</div>
+</div>
+<a class="anchor" id="a08a283a165bf29d2eec4ffc5a7629ce2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void yage::Space::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update all the systems. </p>
 
 </div>
 </div>
@@ -157,7 +177,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

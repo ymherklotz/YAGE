@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>yage/entity/systemmanager.h Source File</title>
+<title>yage::FileLoadException Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,8 +40,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -62,8 +62,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -82,33 +84,90 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0a5be4b85c8e2c05f7a9f5a803f53125.html">yage</a></li><li class="navelem"><a class="el" href="dir_b47bccbdb192fb141a0ffded67f346da.html">entity</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceyage.html">yage</a></li><li class="navelem"><a class="el" href="classyage_1_1FileLoadException.html">FileLoadException</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classyage_1_1FileLoadException-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">systemmanager.h</div>  </div>
+<div class="title">yage::FileLoadException Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="systemmanager_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef YAGE_ENTITY_SYSTEMMANAGER_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define YAGE_ENTITY_SYSTEMMANAGER_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>yage {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span>SystemManager {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    std::unordered_map</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="exception_8h_source.html">exception.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for yage::FileLoadException:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classyage_1_1FileLoadException.png" usemap="#yage::FileLoadException_map" alt=""/>
+  <map id="yage::FileLoadException_map" name="yage::FileLoadException_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5f04a1f30d26c3c96192a1c1de3a4f21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1FileLoadException.html#a5f04a1f30d26c3c96192a1c1de3a4f21">FileLoadException</a> (std::string err)</td></tr>
+<tr class="separator:a5f04a1f30d26c3c96192a1c1de3a4f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16dc9ed93c36e9a754fc7448366bcd0c"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1FileLoadException.html#a16dc9ed93c36e9a754fc7448366bcd0c">what</a> () const   throw ()</td></tr>
+<tr class="separator:a16dc9ed93c36e9a754fc7448366bcd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a5f04a1f30d26c3c96192a1c1de3a4f21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">yage::FileLoadException::FileLoadException </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>err</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a16dc9ed93c36e9a754fc7448366bcd0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * yage::FileLoadException::what </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>yage/core/<a class="el" href="exception_8h_source.html">exception.h</a></li>
+<li>yage/core/<a class="el" href="exception_8cpp.html">exception.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2018 14:48:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
