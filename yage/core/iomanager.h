@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef IO_MANAGER_H
-#define IO_MANAGER_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -24,5 +23,3 @@ extern bool readFileToBuffer(const std::string &file_path,
 }
 
 } // namespace yage
-
-#endif

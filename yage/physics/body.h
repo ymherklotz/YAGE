@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_PHYSICS_BODY_H
-#define YAGE_PHYSICS_BODY_H
+#pragma once
 
 #include <math/matrix.h>
 
@@ -54,5 +53,3 @@ protected:
 };
 
 } // namespace yage
-
-#endif

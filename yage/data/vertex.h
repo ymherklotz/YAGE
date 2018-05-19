@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef VERTEX_H
-#define VERTEX_H
+#pragma once
 
 #include <glad/glad.h>
 
@@ -80,5 +79,3 @@ struct Vertex {
 };
 
 } // namespace yage
-
-#endif

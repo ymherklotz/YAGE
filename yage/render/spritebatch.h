@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_SPRITE_BATCH_H
-#define YAGE_SPRITE_BATCH_H
+#pragma once
 
 #include "../data/vertex.h"
 
@@ -92,5 +91,3 @@ private:
 };
 
 } // namespace yage
-
-#endif

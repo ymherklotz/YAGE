@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_CORE_INPUT_H
-#define YAGE_CORE_INPUT_H
+#pragma once
 
 #ifdef _WIN32
 #ifdef DELETE
@@ -160,6 +159,4 @@ enum class key {
 #define DELETE YAGE_DELETE_TMP
 #undef YAGE_DELETE_TMP
 #endif
-#endif
-
 #endif

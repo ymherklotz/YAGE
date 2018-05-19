@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_CORE_WINDOW_H
-#define YAGE_CORE_WINDOW_H
+#pragma once
 
 #include <string>
 
@@ -60,5 +59,3 @@ public:
 };
 
 } // namespace yage
-
-#endif

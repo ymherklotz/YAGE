@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_CORE_CAMERA_H
-#define YAGE_CORE_CAMERA_H
+#pragma once
 
 #include <glm/glm.hpp>
 
@@ -34,5 +33,3 @@ public:
 };
 
 } // namespace yage
-
-#endif

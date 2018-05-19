@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef TEXTURE_CACHE_H
-#define TEXTURE_CACHE_H
+#pragma once
 
 #include "../data/texture.h"
 
@@ -28,5 +27,3 @@ public:
 };
 
 } // namespace yage
-
-#endif

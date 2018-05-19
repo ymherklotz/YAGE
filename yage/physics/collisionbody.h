@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_COLLISION_BODY_H
-#define YAGE_COLLISION_BODY_H
+#pragma once
 
 #include "body.h"
 
@@ -24,5 +23,3 @@ public:
 };
 
 } // yage
-
-#endif

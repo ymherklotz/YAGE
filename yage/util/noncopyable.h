@@ -1,5 +1,4 @@
-#ifndef YAGE_UTIL_NONCOPYABLE_H
-#define YAGE_UTIL_NONCOPYABLE_H
+#pragma once
 
 namespace yage
 {
@@ -15,5 +14,3 @@ protected:
 };
 
 } // namespace yage
-
-#endif

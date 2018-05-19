@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_PHYSICS_PARTICLE_BODY_H
-#define YAGE_PHYSICS_PARTICLE_BODY_H
+#pragma once
 
 #include "body.h"
 #include <math/matrix.h>
@@ -28,5 +27,3 @@ public:
 };
 
 } // namespace yage
-
-#endif

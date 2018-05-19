@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_RECTANGLE_COLLIDER_H
-#define YAGE_RECTANGLE_COLLIDER_H
+#pragma once
 
 #include "collider.h"
 
@@ -26,5 +25,3 @@ public:
 };
 
 } // namespace yage
-
-#endif

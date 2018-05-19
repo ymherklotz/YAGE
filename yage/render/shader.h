@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_RENDER_SHADER_H
-#define YAGE_RENDER_SHADER_H
+#pragma once
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
@@ -45,5 +44,3 @@ private:
 };
 
 } // namespace yage
-
-#endif

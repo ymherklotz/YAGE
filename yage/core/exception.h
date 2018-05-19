@@ -1,5 +1,4 @@
-#ifndef YAGE_CORE_EXCEPTION_H
-#define YAGE_CORE_EXCEPTION_H
+#pragma once
 
 #include <stdexcept>
 #include <sstream>
@@ -19,5 +18,3 @@ private:
 };
 
 } // namespace yage
-
-#endif

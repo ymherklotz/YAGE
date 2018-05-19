@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_PHYSICS_H
-#define YAGE_PHYSICS_H
+#pragma once
 
 #include "body.h"
 #include "collider.h"
@@ -15,5 +14,3 @@
 #include "particlebody.h"
 #include "rectanglecollider.h"
 #include "rigidbody.h"
-
-#endif

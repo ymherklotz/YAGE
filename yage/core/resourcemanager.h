@@ -6,16 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-/** ---------------------------------------------------------------------------
- * @file: resourcemanager.h
- *
- * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
- * MIT License, see LICENSE file for more details.
- * ----------------------------------------------------------------------------
- */
-
-#ifndef RESOURCE_MANAGER_H
-#define RESOURCE_MANAGER_H
+#pragma once
 
 #include "texturecache.h"
 
@@ -37,5 +28,3 @@ public:
 };
 
 } // namespace yage
-
-#endif

@@ -1,3 +1,5 @@
+#pragma once
+
 #include "glad/glad.h"
 
 static const GLfloat gl_cube_buffer[] = {

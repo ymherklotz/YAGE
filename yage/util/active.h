@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_UTIL_ACTIVE_H
-#define YAGE_UTIL_ACTIVE_H
+#pragma once
 
 #include "syncqueue.h"
 
@@ -42,5 +41,3 @@ private:
 };
 
 } // namespace yage
-
-#endif

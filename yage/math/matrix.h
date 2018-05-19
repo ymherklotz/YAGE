@@ -9,8 +9,7 @@
 /** @file
  */
 
-#ifndef YAGE_MATH_MATRIX_H
-#define YAGE_MATH_MATRIX_H
+#pragma once
 
 #include <algorithm>
 #include <exception>
@@ -480,5 +479,3 @@ Matrix<M, Q, T> multiply(const Matrix<M, N, T> &m1, const Matrix<P, Q, T> &m2)
 } // namespace matrix
 
 } // namespace yage
-
-#endif

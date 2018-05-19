@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_ENGINE_SPACE_H
-#define YAGE_ENGINE_SPACE_H
+#pragma once
 
 #include <vector>
 #include <memory>
@@ -71,5 +70,3 @@ private:
 };
 
 } // namespace yage
-
-#endif

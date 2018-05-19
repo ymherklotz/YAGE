@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef IMAGE_LOADER_H
-#define IMAGE_LOADER_H
+#pragma once
 
 #include <string>
 
@@ -23,5 +22,3 @@ public:
 };
 
 } // namespace yage
-
-#endif

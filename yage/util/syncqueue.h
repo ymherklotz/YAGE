@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_UTIL_SYNCQUEUE_H
-#define YAGE_UTIL_SYNCQUEUE_H
+#pragma once
 
 #include <condition_variable>
 #include <mutex>
@@ -85,5 +84,3 @@ void SyncQueue<T>::push(T &&item)
 }
 
 } // namespace yage
-
-#endif

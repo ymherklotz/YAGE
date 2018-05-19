@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_CORE_TEXTURE_H
-#define YAGE_CORE_TEXTURE_H
+#pragma once
 
 #include <glad/glad.h>
 
@@ -30,5 +29,3 @@ struct Texture {
 };
 
 } // namespace yage
-
-#endif

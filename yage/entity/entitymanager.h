@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_ENGINE_ENTITYMANAGER_H
-#define YAGE_ENGINE_ENTITYMANAGER_H
+#pragma once
 
 #include <vector>
 
@@ -76,5 +75,3 @@ private:
 };
 
 } // namespace yage
-
-#endif

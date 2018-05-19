@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_ENGINE_SYSTEM_H
-#define YAGE_ENGINE_SYSTEM_H
+#pragma once
 
 #include <cstddef>
 
@@ -24,5 +23,3 @@ public:
 };
 
 } // namespace yage
-
-#endif

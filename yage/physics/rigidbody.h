@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_RIGID_BODY_H
-#define YAGE_RIGID_BODY_H
+#pragma once
 
 #include "particlebody.h"
 
@@ -24,5 +23,3 @@ public:
 };
 
 } // namespace yage
-
-#endif

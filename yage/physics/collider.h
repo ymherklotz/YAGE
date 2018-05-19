@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-#ifndef YAGE_PHYSICS_COLLIDER_H
-#define YAGE_PHYSICS_COLLIDER_H
+#pragma once
 
 #include <glm/glm.hpp>
 
@@ -39,5 +38,3 @@ public:
 };
 
 } // namespace yage
-
-#endif
