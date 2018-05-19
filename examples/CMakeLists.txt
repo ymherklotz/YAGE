@@ -1,10 +1,22 @@
-function(make_example name)
-
+macro(make_example name)
   file(GLOB SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${name}/*.cpp)
   add_executable(${name} ${SOURCES})
   target_link_libraries(${name} yage)
+endmacro(make_example)
 
-endfunction(make_example)
+macro(subdirlist result curdir)
+  file(GLOB children RELATIVE ${curdir} ${curdir}/*)
+  set(dirlist "")
+  foreach(child ${children})
+    if(IS_DIRECTORY ${curdir}/${child})
+      list(APPEND dirlist ${child})
+    endif()
+  endforeach()
+  set(${result} ${dirlist})
+endmacro()
 
-make_example(simplegame)
-make_example(shooter)
+subdirlist(SUBDIRS ${CMAKE_CURRENT_SOURCE_DIR})
+
+foreach(subdir ${SUBDIRS})
+  make_example(${subdir})
+endforeach()
