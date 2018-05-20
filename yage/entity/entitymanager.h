@@ -66,7 +66,7 @@ private:
     /**
      * The space that the entity manager belongs to.
      */
-    Space *space_;
+    Space *space_ = nullptr;
 
     /**
      * The entities in the current space.

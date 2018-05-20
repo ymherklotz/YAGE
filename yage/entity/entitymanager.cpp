@@ -8,6 +8,8 @@
 
 #include "entitymanager.h"
 
+#include <algorithm>
+
 namespace yage
 {
 
@@ -23,6 +25,15 @@ Entity EntityManager::createEntity()
     Entity entity = next_entity_++;
     entities_.push_back(entity);
     return entity;
+}
+
+void EntityManager::deleteEntity(Entity entity)
+{
+    auto index = std::find_if(entities_.begin(), entities_.end(),
+                              [&](Entity &value) { return value == entity; });
+    if (index != entities_.end()) {
+        entities_.erase(index);
+    }
 }
 
 } // namespace yage
