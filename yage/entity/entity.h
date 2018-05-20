@@ -1,5 +1,5 @@
 /** ---------------------------------------------------------------------------
- * @file: entitymanager.h
+ * @file: entity.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
@@ -9,11 +9,13 @@
 #pragma once
 
 #include <vector>
+#include <memory>
 
 namespace yage
 {
 
 class Space;
+class ComponentPool;
 
 typedef unsigned int Entity;
 
@@ -72,6 +74,27 @@ private:
      * The entities in the current space.
      */
     std::vector<Entity> entities_;
+
+    std::vector<std::unique_ptr<ComponentPool>> components;
+};
+
+class BaseComponent {
+public:
+    typedef unsigned Group;
+
+protected:
+    static Group group_id_counter_;
+};
+
+template <typename Derived>
+class Component : public BaseComponent {
+private:
+    BaseComponent::Group group();
+};
+
+class ComponentPool {
+private:
+    std::vector<BaseComponent *> components_;
 };
 
 } // namespace yage

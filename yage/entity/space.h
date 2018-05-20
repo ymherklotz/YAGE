@@ -11,8 +11,12 @@
 #include <vector>
 #include <memory>
 
-#include "entitymanager.h"
+#include "entity.h"
 #include "system.h"
+
+struct Movement {
+    
+};
 
 namespace yage
 {

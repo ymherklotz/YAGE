@@ -1,17 +1,19 @@
 /** ---------------------------------------------------------------------------
- * @file: entitymanager.cpp
+ * @file: entity.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
  * MIT License, see LICENSE file for more details.
  * ----------------------------------------------------------------------------
  */
 
-#include "entitymanager.h"
+#include "entity.h"
 
 #include <algorithm>
 
 namespace yage
 {
+
+BaseComponent::Group BaseComponent::group_id_counter_ = 0;
 
 EntityManager::EntityManager(Space *space) : space_(space) {}
 
