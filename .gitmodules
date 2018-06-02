@@ -1,15 +1,3 @@
-[submodule "external/glm"]
-	path = external/glm
-	url = https://github.com/g-truc/glm.git
-	branch = master
-[submodule "external/glad"]
-	path = external/glad
-	url = https://github.com/ymherklotz/glad.git
-	branch = master
-[submodule "external/glfw"]
-	path = external/glfw
-	url = https://github.com/glfw/glfw.git
-	branch = master
 [submodule "tests/external/googletest"]
 	path = tests/external/googletest
 	url = https://github.com/google/googletest.git
