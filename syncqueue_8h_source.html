@@ -91,94 +91,94 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="syncqueue_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;condition_variable&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;queue&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1SyncQueue.html">SyncQueue</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classyage_1_1SyncQueue.html#a0c8aa1c22e3e6d5094dbdeb88cff426b">SyncQueue</a>()                  = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classyage_1_1SyncQueue.html#a0c8aa1c22e3e6d5094dbdeb88cff426b">SyncQueue</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1SyncQueue.html">SyncQueue</a> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classyage_1_1SyncQueue.html">SyncQueue</a> &amp;<a class="code" href="classyage_1_1SyncQueue.html#a43e4ba65c8e367ed55da9b8e3e1567b6">operator=</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1SyncQueue.html">SyncQueue</a> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> <a class="code" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">pop</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">pop</a>(<a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;item);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">push</a>(<span class="keyword">const</span> <a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;item);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">push</a>(<a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;&amp;item);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::queue&lt;T&gt; queue_;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::mutex mutex_;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::condition_variable cond_;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// Template definitions</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">   40</a></span>&#160;<a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> <a class="code" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">SyncQueue&lt;T&gt;::pop</a>()</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::unique_lock&lt;std::mutex&gt; mlock(mutex_);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">while</span> (queue_.empty()) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        cond_.wait(mlock);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">auto</span> item = queue_.front();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    queue_.pop();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> item;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#ab8a3c646e1d2f9adfcbcfbaa2e2a4b27">   54</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">SyncQueue&lt;T&gt;::pop</a>(T &amp;item)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::unique_lock&lt;std::mutex&gt; mlock(mutex_);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">while</span> (queue_.empty()) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        cond_.wait(mlock);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    item = queue_.front();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    queue_.pop();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">SyncQueue&lt;T&gt;::push</a>(<span class="keyword">const</span> T &amp;item)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::unique_lock&lt;std::mutex&gt; mlock(mutex_);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    queue_.push(item);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    mlock.unlock();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    cond_.notify_one();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#a4c01a855e97a46449a97c76634ef7678">   77</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">SyncQueue&lt;T&gt;::push</a>(T &amp;&amp;item)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::unique_lock&lt;std::mutex&gt; mlock(mutex_);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    queue_.push(std::move(item));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    mlock.unlock();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    cond_.notify_one();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;condition_variable&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1SyncQueue.html">SyncQueue</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classyage_1_1SyncQueue.html#a0c8aa1c22e3e6d5094dbdeb88cff426b">SyncQueue</a>()                  = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classyage_1_1SyncQueue.html#a0c8aa1c22e3e6d5094dbdeb88cff426b">SyncQueue</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1SyncQueue.html">SyncQueue</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classyage_1_1SyncQueue.html">SyncQueue</a> &amp;<a class="code" href="classyage_1_1SyncQueue.html#a43e4ba65c8e367ed55da9b8e3e1567b6">operator=</a>(<span class="keyword">const</span> <a class="code" href="classyage_1_1SyncQueue.html">SyncQueue</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> <a class="code" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">pop</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">pop</a>(<a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;item);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">push</a>(<span class="keyword">const</span> <a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;item);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">push</a>(<a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;&amp;item);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::queue&lt;T&gt; queue_;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::mutex mutex_;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::condition_variable cond_;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// Template definitions</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">   41</a></span>&#160;<a class="code" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> <a class="code" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">SyncQueue&lt;T&gt;::pop</a>()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::unique_lock&lt;std::mutex&gt; mlock(mutex_);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">while</span> (queue_.empty()) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        cond_.wait(mlock);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">auto</span> item = queue_.front();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    queue_.pop();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> item;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#ab8a3c646e1d2f9adfcbcfbaa2e2a4b27">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">SyncQueue&lt;T&gt;::pop</a>(T &amp;item)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::unique_lock&lt;std::mutex&gt; mlock(mutex_);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">while</span> (queue_.empty()) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        cond_.wait(mlock);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    item = queue_.front();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    queue_.pop();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">SyncQueue&lt;T&gt;::push</a>(<span class="keyword">const</span> T &amp;item)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::unique_lock&lt;std::mutex&gt; mlock(mutex_);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    queue_.push(item);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    mlock.unlock();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    cond_.notify_one();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classyage_1_1SyncQueue.html#a4c01a855e97a46449a97c76634ef7678">   78</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">SyncQueue&lt;T&gt;::push</a>(T &amp;&amp;item)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::unique_lock&lt;std::mutex&gt; mlock(mutex_);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    queue_.push(std::move(item));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    mlock.unlock();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    cond_.notify_one();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <span class="comment">// namespace yage</span></div>
 <div class="ttc" id="classyage_1_1SyncQueue_html_a0c8aa1c22e3e6d5094dbdeb88cff426b"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a0c8aa1c22e3e6d5094dbdeb88cff426b">yage::SyncQueue::SyncQueue</a></div><div class="ttdeci">SyncQueue()=default</div></div>
 <div class="ttc" id="classyage_1_1SyncQueue_html_a43e4ba65c8e367ed55da9b8e3e1567b6"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a43e4ba65c8e367ed55da9b8e3e1567b6">yage::SyncQueue::operator=</a></div><div class="ttdeci">SyncQueue &amp; operator=(const SyncQueue &amp;)=delete</div></div>
-<div class="ttc" id="classyage_1_1SyncQueue_html_a1f7f099e1347b82c1f2b72a5352ca05e"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">yage::SyncQueue::pop</a></div><div class="ttdeci">T pop()</div><div class="ttdef"><b>Definition:</b> syncqueue.h:40</div></div>
-<div class="ttc" id="classyage_1_1SyncQueue_html_a4ef8940b49b9c1b7a213fd38847370b1"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">yage::SyncQueue::push</a></div><div class="ttdeci">void push(const T &amp;item)</div><div class="ttdef"><b>Definition:</b> syncqueue.h:67</div></div>
+<div class="ttc" id="classyage_1_1SyncQueue_html_a1f7f099e1347b82c1f2b72a5352ca05e"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a1f7f099e1347b82c1f2b72a5352ca05e">yage::SyncQueue::pop</a></div><div class="ttdeci">T pop()</div><div class="ttdef"><b>Definition:</b> syncqueue.h:41</div></div>
+<div class="ttc" id="classyage_1_1SyncQueue_html_a4ef8940b49b9c1b7a213fd38847370b1"><div class="ttname"><a href="classyage_1_1SyncQueue.html#a4ef8940b49b9c1b7a213fd38847370b1">yage::SyncQueue::push</a></div><div class="ttdeci">void push(const T &amp;item)</div><div class="ttdef"><b>Definition:</b> syncqueue.h:68</div></div>
 <div class="ttc" id="namespaceyage_html_ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">yage::key::T</a></div></div>
-<div class="ttc" id="classyage_1_1SyncQueue_html"><div class="ttname"><a href="classyage_1_1SyncQueue.html">yage::SyncQueue</a></div><div class="ttdef"><b>Definition:</b> syncqueue.h:19</div></div>
+<div class="ttc" id="classyage_1_1SyncQueue_html"><div class="ttname"><a href="classyage_1_1SyncQueue.html">yage::SyncQueue</a></div><div class="ttdef"><b>Definition:</b> syncqueue.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 2 2018 15:03:20 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 2 2018 15:21:05 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

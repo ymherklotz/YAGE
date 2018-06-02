@@ -91,90 +91,93 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="entity_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>Space;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1ComponentGroup.html">ComponentGroup</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classyage_1_1EntityManager.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1EntityManager.html">EntityManager</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classyage_1_1EntityManager.html#a255fa9aff3e6b208eea0c38d8caf08f8">EntityManager</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classyage_1_1EntityManager.html#a255fa9aff3e6b208eea0c38d8caf08f8">EntityManager</a>(<a class="code" href="classyage_1_1Space.html">Space</a> *space);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classyage_1_1EntityManager.html#a255fa9aff3e6b208eea0c38d8caf08f8">EntityManager</a>(<a class="code" href="classyage_1_1Space.html">Space</a> *space, std::size_t n);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> <a class="code" href="classyage_1_1EntityManager.html#a646cf1110abdc0a4398c994ead5f537d">createEntity</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1EntityManager.html#a246e10663f55a9f4817cbde23a7a36c9">deleteEntity</a>(<a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> next_entity_ = 0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classyage_1_1Space.html">Space</a> *space_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::vector&lt;Entity&gt; entities_;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::vector&lt;std::unique_ptr&lt;ComponentGroup&gt;&gt; components;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classyage_1_1BaseComponent.html">   80</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1BaseComponent.html">BaseComponent</a> {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">   85</a></span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <a class="code" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">Group</a>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classyage_1_1BaseComponent.html#a529f6d4864bac810a9f5419bb0fccd92">   88</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">Group</a> <a class="code" href="classyage_1_1BaseComponent.html#a529f6d4864bac810a9f5419bb0fccd92">group_id_counter_</a>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classyage_1_1Component.html">   97</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Component.html">Component</a> : <span class="keyword">public</span> <a class="code" href="classyage_1_1BaseComponent.html">BaseComponent</a> {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classyage_1_1Component.html#a6f579cda6059d102e9074e11a27e0282">   99</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classyage_1_1EntityManager.html">EntityManager</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">BaseComponent::Group</a> group();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span>Space;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1ComponentGroup.html">ComponentGroup</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classyage_1_1EntityManager.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1EntityManager.html">EntityManager</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classyage_1_1EntityManager.html#a255fa9aff3e6b208eea0c38d8caf08f8">EntityManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classyage_1_1EntityManager.html#a255fa9aff3e6b208eea0c38d8caf08f8">EntityManager</a>(<a class="code" href="classyage_1_1Space.html">Space</a> *space);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classyage_1_1EntityManager.html#a255fa9aff3e6b208eea0c38d8caf08f8">EntityManager</a>(<a class="code" href="classyage_1_1Space.html">Space</a> *space, std::size_t n);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> <a class="code" href="classyage_1_1EntityManager.html#a646cf1110abdc0a4398c994ead5f537d">createEntity</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1EntityManager.html#a246e10663f55a9f4817cbde23a7a36c9">deleteEntity</a>(<a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> next_entity_ = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classyage_1_1Space.html">Space</a> *space_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    std::vector&lt;Entity&gt; entities_;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::vector&lt;std::unique_ptr&lt;ComponentGroup&gt;&gt; components;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classyage_1_1BaseComponent.html">   81</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1BaseComponent.html">BaseComponent</a></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">   87</a></span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <a class="code" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">Group</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classyage_1_1BaseComponent.html#a529f6d4864bac810a9f5419bb0fccd92">   90</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">Group</a> <a class="code" href="classyage_1_1BaseComponent.html#a529f6d4864bac810a9f5419bb0fccd92">group_id_counter_</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classyage_1_1Component.html">   99</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Component.html">Component</a> : <span class="keyword">public</span> <a class="code" href="classyage_1_1BaseComponent.html">BaseComponent</a></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classyage_1_1Component.html#a6f579cda6059d102e9074e11a27e0282">  102</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classyage_1_1EntityManager.html">EntityManager</a>;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classyage_1_1ComponentGroup.html">  107</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1ComponentGroup.html">ComponentGroup</a> {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classyage_1_1ComponentGroup.html#a6f579cda6059d102e9074e11a27e0282">  109</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classyage_1_1EntityManager.html">EntityManager</a>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::vector&lt;BaseComponent *&gt; components_;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">// Template definitions</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<a class="code" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">BaseComponent::Group</a> <a class="code" href="classyage_1_1Component.html">Component&lt;Derived&gt;::group</a>()</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">static</span> Group group_id = group_id_counter_++;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> group_id;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="ttc" id="classyage_1_1BaseComponent_html"><div class="ttname"><a href="classyage_1_1BaseComponent.html">yage::BaseComponent</a></div><div class="ttdoc">Base component used to store components. </div><div class="ttdef"><b>Definition:</b> entity.h:80</div></div>
-<div class="ttc" id="classyage_1_1EntityManager_html"><div class="ttname"><a href="classyage_1_1EntityManager.html">yage::EntityManager</a></div><div class="ttdoc">Manages entities in a space. </div><div class="ttdef"><b>Definition:</b> entity.h:24</div></div>
-<div class="ttc" id="classyage_1_1BaseComponent_html_a55b026d7deb37888f67636ff22fc32c8"><div class="ttname"><a href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">yage::BaseComponent::Group</a></div><div class="ttdeci">unsigned Group</div><div class="ttdoc">Group used to register a specific component internally with the entity manager. </div><div class="ttdef"><b>Definition:</b> entity.h:85</div></div>
-<div class="ttc" id="classyage_1_1EntityManager_html_a646cf1110abdc0a4398c994ead5f537d"><div class="ttname"><a href="classyage_1_1EntityManager.html#a646cf1110abdc0a4398c994ead5f537d">yage::EntityManager::createEntity</a></div><div class="ttdeci">Entity createEntity()</div><div class="ttdoc">Creates an Entity and returns the handle to the entity, which can then be used by the user to do oper...</div><div class="ttdef"><b>Definition:</b> entity.cpp:25</div></div>
-<div class="ttc" id="namespaceyage_html_aa8bc60c76b5240a55672ce5b8e288764"><div class="ttname"><a href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">yage::Entity</a></div><div class="ttdeci">unsigned int Entity</div><div class="ttdef"><b>Definition:</b> entity.h:18</div></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">BaseComponent::Group</a> group();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classyage_1_1ComponentGroup.html">  110</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1ComponentGroup.html">ComponentGroup</a></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classyage_1_1ComponentGroup.html#a6f579cda6059d102e9074e11a27e0282">  113</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classyage_1_1EntityManager.html">EntityManager</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::vector&lt;BaseComponent *&gt; components_;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">// Template definitions</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<a class="code" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">BaseComponent::Group</a> <a class="code" href="classyage_1_1Component.html">Component&lt;Derived&gt;::group</a>()</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">static</span> Group group_id = group_id_counter_++;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">return</span> group_id;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <span class="comment">// namespace yage</span></div>
+<div class="ttc" id="classyage_1_1BaseComponent_html"><div class="ttname"><a href="classyage_1_1BaseComponent.html">yage::BaseComponent</a></div><div class="ttdoc">Base component used to store components. </div><div class="ttdef"><b>Definition:</b> entity.h:81</div></div>
+<div class="ttc" id="classyage_1_1EntityManager_html"><div class="ttname"><a href="classyage_1_1EntityManager.html">yage::EntityManager</a></div><div class="ttdoc">Manages entities in a space. </div><div class="ttdef"><b>Definition:</b> entity.h:25</div></div>
+<div class="ttc" id="classyage_1_1BaseComponent_html_a55b026d7deb37888f67636ff22fc32c8"><div class="ttname"><a href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">yage::BaseComponent::Group</a></div><div class="ttdeci">unsigned Group</div><div class="ttdoc">Group used to register a specific component internally with the entity manager. </div><div class="ttdef"><b>Definition:</b> entity.h:87</div></div>
+<div class="ttc" id="classyage_1_1EntityManager_html_a646cf1110abdc0a4398c994ead5f537d"><div class="ttname"><a href="classyage_1_1EntityManager.html#a646cf1110abdc0a4398c994ead5f537d">yage::EntityManager::createEntity</a></div><div class="ttdeci">Entity createEntity()</div><div class="ttdoc">Creates an Entity and returns the handle to the entity, which can then be used by the user to do oper...</div><div class="ttdef"><b>Definition:</b> entity.cpp:26</div></div>
+<div class="ttc" id="namespaceyage_html_aa8bc60c76b5240a55672ce5b8e288764"><div class="ttname"><a href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">yage::Entity</a></div><div class="ttdeci">unsigned int Entity</div><div class="ttdef"><b>Definition:</b> entity.h:19</div></div>
 <div class="ttc" id="classyage_1_1EntityManager_html_a255fa9aff3e6b208eea0c38d8caf08f8"><div class="ttname"><a href="classyage_1_1EntityManager.html#a255fa9aff3e6b208eea0c38d8caf08f8">yage::EntityManager::EntityManager</a></div><div class="ttdeci">EntityManager()=default</div><div class="ttdoc">Default instance of an EntityManager. </div></div>
-<div class="ttc" id="classyage_1_1ComponentGroup_html"><div class="ttname"><a href="classyage_1_1ComponentGroup.html">yage::ComponentGroup</a></div><div class="ttdoc">Contains a list of all components that belong to a sepecific group, these are then stored in the main...</div><div class="ttdef"><b>Definition:</b> entity.h:107</div></div>
-<div class="ttc" id="classyage_1_1BaseComponent_html_a529f6d4864bac810a9f5419bb0fccd92"><div class="ttname"><a href="classyage_1_1BaseComponent.html#a529f6d4864bac810a9f5419bb0fccd92">yage::BaseComponent::group_id_counter_</a></div><div class="ttdeci">static Group group_id_counter_</div><div class="ttdef"><b>Definition:</b> entity.h:88</div></div>
-<div class="ttc" id="classyage_1_1EntityManager_html_a246e10663f55a9f4817cbde23a7a36c9"><div class="ttname"><a href="classyage_1_1EntityManager.html#a246e10663f55a9f4817cbde23a7a36c9">yage::EntityManager::deleteEntity</a></div><div class="ttdeci">void deleteEntity(Entity entity)</div><div class="ttdoc">Delete an entity. </div><div class="ttdef"><b>Definition:</b> entity.cpp:32</div></div>
-<div class="ttc" id="classyage_1_1Component_html"><div class="ttname"><a href="classyage_1_1Component.html">yage::Component</a></div><div class="ttdoc">The main component that is used to make a component from a defined struct. </div><div class="ttdef"><b>Definition:</b> entity.h:97</div></div>
+<div class="ttc" id="classyage_1_1ComponentGroup_html"><div class="ttname"><a href="classyage_1_1ComponentGroup.html">yage::ComponentGroup</a></div><div class="ttdoc">Contains a list of all components that belong to a sepecific group, these are then stored in the main...</div><div class="ttdef"><b>Definition:</b> entity.h:110</div></div>
+<div class="ttc" id="classyage_1_1BaseComponent_html_a529f6d4864bac810a9f5419bb0fccd92"><div class="ttname"><a href="classyage_1_1BaseComponent.html#a529f6d4864bac810a9f5419bb0fccd92">yage::BaseComponent::group_id_counter_</a></div><div class="ttdeci">static Group group_id_counter_</div><div class="ttdef"><b>Definition:</b> entity.h:90</div></div>
+<div class="ttc" id="classyage_1_1EntityManager_html_a246e10663f55a9f4817cbde23a7a36c9"><div class="ttname"><a href="classyage_1_1EntityManager.html#a246e10663f55a9f4817cbde23a7a36c9">yage::EntityManager::deleteEntity</a></div><div class="ttdeci">void deleteEntity(Entity entity)</div><div class="ttdoc">Delete an entity. </div><div class="ttdef"><b>Definition:</b> entity.cpp:33</div></div>
+<div class="ttc" id="classyage_1_1Component_html"><div class="ttname"><a href="classyage_1_1Component.html">yage::Component</a></div><div class="ttdoc">The main component that is used to make a component from a defined struct. </div><div class="ttdef"><b>Definition:</b> entity.h:99</div></div>
 <div class="ttc" id="classyage_1_1Space_html"><div class="ttname"><a href="classyage_1_1Space.html">yage::Space</a></div><div class="ttdoc">Space that keeps track of all the entities, componenets and runs the systems on the data to update th...</div><div class="ttdef"><b>Definition:</b> space.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 2 2018 15:03:20 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 2 2018 15:21:05 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

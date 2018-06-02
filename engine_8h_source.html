@@ -91,25 +91,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="engine_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="system_8h.html">system.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../core/window.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../util/noncopyable.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span>Space;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classyage_1_1Engine.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Engine.html">Engine</a> : <span class="keyword">public</span> <a class="code" href="classyage_1_1NonCopyable.html">NonCopyable</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="system_8h.html">system.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../core/window.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../util/noncopyable.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>yage</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span>Space;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classyage_1_1Engine.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1Engine.html">Engine</a> : <span class="keyword">public</span> <a class="code" href="classyage_1_1NonCopyable.html">NonCopyable</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classyage_1_1Engine.html#a53cb4a81be4fc89f4d44057b75fbbcd6">~Engine</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Engine.html#a41073d8b8117e567357fe46fed01bbe4">init</a>();</div>
@@ -120,7 +119,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classyage_1_1Engine.html#a9158d21e4aee58599513dc6bbe6a62e2">addSpace</a>(std::unique_ptr&lt;Space&gt; space);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> <a class="code" href="classyage_1_1Engine.html">Engine</a>&amp; <a class="code" href="classyage_1_1Engine.html#a7e4303fa3bd951ee64e166d6e0fb7b33">instance</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> <a class="code" href="classyage_1_1Engine.html">Engine</a> &amp;<a class="code" href="classyage_1_1Engine.html#a7e4303fa3bd951ee64e166d6e0fb7b33">instance</a>();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classyage_1_1Window.html">Window</a> window_;</div>
@@ -129,20 +128,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="ttc" id="classyage_1_1Engine_html_a9158d21e4aee58599513dc6bbe6a62e2"><div class="ttname"><a href="classyage_1_1Engine.html#a9158d21e4aee58599513dc6bbe6a62e2">yage::Engine::addSpace</a></div><div class="ttdeci">void addSpace(std::unique_ptr&lt; Space &gt; space)</div><div class="ttdoc">Add spaces to the engine. </div><div class="ttdef"><b>Definition:</b> engine.cpp:48</div></div>
-<div class="ttc" id="classyage_1_1Engine_html_a7e4303fa3bd951ee64e166d6e0fb7b33"><div class="ttname"><a href="classyage_1_1Engine.html#a7e4303fa3bd951ee64e166d6e0fb7b33">yage::Engine::instance</a></div><div class="ttdeci">static Engine &amp; instance()</div><div class="ttdoc">Returns the instance of the engine, as there is only one instance of the engine. </div><div class="ttdef"><b>Definition:</b> engine.cpp:53</div></div>
-<div class="ttc" id="classyage_1_1Window_html"><div class="ttname"><a href="classyage_1_1Window.html">yage::Window</a></div><div class="ttdef"><b>Definition:</b> window.h:29</div></div>
-<div class="ttc" id="classyage_1_1Engine_html"><div class="ttname"><a href="classyage_1_1Engine.html">yage::Engine</a></div><div class="ttdoc">Main engine class that contains a systems, the main loop and the update function that updates all the...</div><div class="ttdef"><b>Definition:</b> engine.h:28</div></div>
-<div class="ttc" id="classyage_1_1NonCopyable_html"><div class="ttname"><a href="classyage_1_1NonCopyable.html">yage::NonCopyable</a></div><div class="ttdef"><b>Definition:</b> noncopyable.h:6</div></div>
-<div class="ttc" id="classyage_1_1Engine_html_a8d888a2871d93f40b98ecf3548dd8d67"><div class="ttname"><a href="classyage_1_1Engine.html#a8d888a2871d93f40b98ecf3548dd8d67">yage::Engine::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Updates the systems. </div><div class="ttdef"><b>Definition:</b> engine.cpp:41</div></div>
-<div class="ttc" id="classyage_1_1Engine_html_a41073d8b8117e567357fe46fed01bbe4"><div class="ttname"><a href="classyage_1_1Engine.html#a41073d8b8117e567357fe46fed01bbe4">yage::Engine::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialize window and other aspects of the engine. </div><div class="ttdef"><b>Definition:</b> engine.cpp:23</div></div>
-<div class="ttc" id="classyage_1_1Engine_html_a245478397be4ca0d9ac6af84c1753e42"><div class="ttname"><a href="classyage_1_1Engine.html#a245478397be4ca0d9ac6af84c1753e42">yage::Engine::mainLoop</a></div><div class="ttdeci">void mainLoop()</div><div class="ttdoc">Main game loop of the engine. </div><div class="ttdef"><b>Definition:</b> engine.cpp:29</div></div>
-<div class="ttc" id="system_8h_html"><div class="ttname"><a href="system_8h.html">system.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="classyage_1_1Engine_html_a53cb4a81be4fc89f4d44057b75fbbcd6"><div class="ttname"><a href="classyage_1_1Engine.html#a53cb4a81be4fc89f4d44057b75fbbcd6">yage::Engine::~Engine</a></div><div class="ttdeci">~Engine()</div><div class="ttdef"><b>Definition:</b> engine.cpp:18</div></div>
+<div class="ttc" id="classyage_1_1Engine_html_a9158d21e4aee58599513dc6bbe6a62e2"><div class="ttname"><a href="classyage_1_1Engine.html#a9158d21e4aee58599513dc6bbe6a62e2">yage::Engine::addSpace</a></div><div class="ttdeci">void addSpace(std::unique_ptr&lt; Space &gt; space)</div><div class="ttdoc">Add spaces to the engine. </div><div class="ttdef"><b>Definition:</b> engine.cpp:49</div></div>
+<div class="ttc" id="classyage_1_1Engine_html_a7e4303fa3bd951ee64e166d6e0fb7b33"><div class="ttname"><a href="classyage_1_1Engine.html#a7e4303fa3bd951ee64e166d6e0fb7b33">yage::Engine::instance</a></div><div class="ttdeci">static Engine &amp; instance()</div><div class="ttdoc">Returns the instance of the engine, as there is only one instance of the engine. </div><div class="ttdef"><b>Definition:</b> engine.cpp:54</div></div>
+<div class="ttc" id="classyage_1_1Window_html"><div class="ttname"><a href="classyage_1_1Window.html">yage::Window</a></div><div class="ttdef"><b>Definition:</b> window.h:30</div></div>
+<div class="ttc" id="classyage_1_1Engine_html"><div class="ttname"><a href="classyage_1_1Engine.html">yage::Engine</a></div><div class="ttdoc">Main engine class that contains a systems, the main loop and the update function that updates all the...</div><div class="ttdef"><b>Definition:</b> engine.h:29</div></div>
+<div class="ttc" id="classyage_1_1NonCopyable_html"><div class="ttname"><a href="classyage_1_1NonCopyable.html">yage::NonCopyable</a></div><div class="ttdef"><b>Definition:</b> noncopyable.h:15</div></div>
+<div class="ttc" id="classyage_1_1Engine_html_a8d888a2871d93f40b98ecf3548dd8d67"><div class="ttname"><a href="classyage_1_1Engine.html#a8d888a2871d93f40b98ecf3548dd8d67">yage::Engine::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Updates the systems. </div><div class="ttdef"><b>Definition:</b> engine.cpp:42</div></div>
+<div class="ttc" id="classyage_1_1Engine_html_a41073d8b8117e567357fe46fed01bbe4"><div class="ttname"><a href="classyage_1_1Engine.html#a41073d8b8117e567357fe46fed01bbe4">yage::Engine::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialize window and other aspects of the engine. </div><div class="ttdef"><b>Definition:</b> engine.cpp:24</div></div>
+<div class="ttc" id="classyage_1_1Engine_html_a245478397be4ca0d9ac6af84c1753e42"><div class="ttname"><a href="classyage_1_1Engine.html#a245478397be4ca0d9ac6af84c1753e42">yage::Engine::mainLoop</a></div><div class="ttdeci">void mainLoop()</div><div class="ttdoc">Main game loop of the engine. </div><div class="ttdef"><b>Definition:</b> engine.cpp:30</div></div>
+<div class="ttc" id="system_8h_html"><div class="ttname"><a href="system_8h.html">system.h</a></div><div class="ttdoc"> -*- c++ -*- </div></div>
+<div class="ttc" id="classyage_1_1Engine_html_a53cb4a81be4fc89f4d44057b75fbbcd6"><div class="ttname"><a href="classyage_1_1Engine.html#a53cb4a81be4fc89f4d44057b75fbbcd6">yage::Engine::~Engine</a></div><div class="ttdeci">~Engine()</div><div class="ttdef"><b>Definition:</b> engine.cpp:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 2 2018 15:03:20 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 2 2018 15:21:05 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -91,16 +91,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="space_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="entity_8h.html">entity.h</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="system_8h.html">system.h</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structMovement.html">   17</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structMovement.html">Movement</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="entity_8h.html">entity.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="system_8h.html">system.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structMovement.html">   18</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structMovement.html">Movement</a> {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>yage</div>
@@ -126,19 +125,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="ttc" id="entity_8h_html"><div class="ttname"><a href="entity_8h.html">entity.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="classyage_1_1EntityManager_html"><div class="ttname"><a href="classyage_1_1EntityManager.html">yage::EntityManager</a></div><div class="ttdoc">Manages entities in a space. </div><div class="ttdef"><b>Definition:</b> entity.h:24</div></div>
-<div class="ttc" id="classyage_1_1Space_html_a40c248478ae521bb4e0d5119002cf8e9"><div class="ttname"><a href="classyage_1_1Space.html#a40c248478ae521bb4e0d5119002cf8e9">yage::Space::Space</a></div><div class="ttdeci">Space()</div><div class="ttdoc">Default instance for a space. </div><div class="ttdef"><b>Definition:</b> space.cpp:14</div></div>
-<div class="ttc" id="namespaceyage_html_aa8bc60c76b5240a55672ce5b8e288764"><div class="ttname"><a href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">yage::Entity</a></div><div class="ttdeci">unsigned int Entity</div><div class="ttdef"><b>Definition:</b> entity.h:18</div></div>
-<div class="ttc" id="system_8h_html"><div class="ttname"><a href="system_8h.html">system.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="classyage_1_1Space_html_a08a283a165bf29d2eec4ffc5a7629ce2"><div class="ttname"><a href="classyage_1_1Space.html#a08a283a165bf29d2eec4ffc5a7629ce2">yage::Space::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Update all the systems. </div><div class="ttdef"><b>Definition:</b> space.cpp:21</div></div>
-<div class="ttc" id="classyage_1_1Space_html_a41bc332ffb3042c0872ede8c53ff1fa4"><div class="ttname"><a href="classyage_1_1Space.html#a41bc332ffb3042c0872ede8c53ff1fa4">yage::Space::createEntity</a></div><div class="ttdeci">Entity createEntity()</div><div class="ttdoc">Create an entity that will belong to this space, and return the handle to the user. </div><div class="ttdef"><b>Definition:</b> space.cpp:16</div></div>
+<div class="ttc" id="entity_8h_html"><div class="ttname"><a href="entity_8h.html">entity.h</a></div><div class="ttdoc"> -*- c++ -*- </div></div>
+<div class="ttc" id="classyage_1_1EntityManager_html"><div class="ttname"><a href="classyage_1_1EntityManager.html">yage::EntityManager</a></div><div class="ttdoc">Manages entities in a space. </div><div class="ttdef"><b>Definition:</b> entity.h:25</div></div>
+<div class="ttc" id="classyage_1_1Space_html_a40c248478ae521bb4e0d5119002cf8e9"><div class="ttname"><a href="classyage_1_1Space.html#a40c248478ae521bb4e0d5119002cf8e9">yage::Space::Space</a></div><div class="ttdeci">Space()</div><div class="ttdoc">Default instance for a space. </div><div class="ttdef"><b>Definition:</b> space.cpp:15</div></div>
+<div class="ttc" id="namespaceyage_html_aa8bc60c76b5240a55672ce5b8e288764"><div class="ttname"><a href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">yage::Entity</a></div><div class="ttdeci">unsigned int Entity</div><div class="ttdef"><b>Definition:</b> entity.h:19</div></div>
+<div class="ttc" id="system_8h_html"><div class="ttname"><a href="system_8h.html">system.h</a></div><div class="ttdoc"> -*- c++ -*- </div></div>
+<div class="ttc" id="classyage_1_1Space_html_a08a283a165bf29d2eec4ffc5a7629ce2"><div class="ttname"><a href="classyage_1_1Space.html#a08a283a165bf29d2eec4ffc5a7629ce2">yage::Space::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Update all the systems. </div><div class="ttdef"><b>Definition:</b> space.cpp:22</div></div>
+<div class="ttc" id="classyage_1_1Space_html_a41bc332ffb3042c0872ede8c53ff1fa4"><div class="ttname"><a href="classyage_1_1Space.html#a41bc332ffb3042c0872ede8c53ff1fa4">yage::Space::createEntity</a></div><div class="ttdeci">Entity createEntity()</div><div class="ttdoc">Create an entity that will belong to this space, and return the handle to the user. </div><div class="ttdef"><b>Definition:</b> space.cpp:17</div></div>
 <div class="ttc" id="classyage_1_1Space_html"><div class="ttname"><a href="classyage_1_1Space.html">yage::Space</a></div><div class="ttdoc">Space that keeps track of all the entities, componenets and runs the systems on the data to update th...</div><div class="ttdef"><b>Definition:</b> space.h:34</div></div>
-<div class="ttc" id="structMovement_html"><div class="ttname"><a href="structMovement.html">Movement</a></div><div class="ttdef"><b>Definition:</b> space.h:17</div></div>
+<div class="ttc" id="structMovement_html"><div class="ttname"><a href="structMovement.html">Movement</a></div><div class="ttdef"><b>Definition:</b> space.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 2 2018 15:03:20 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 2 2018 15:21:05 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -875,7 +875,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    stbi__start_callbacks(s, &amp;stbi__stdio_callbacks, (<span class="keywordtype">void</span> *)f);</div>
 <div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;}</div>
 <div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    <span class="comment">// static void stop_file(stbi__context *s) { }</span></div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;<span class="comment">// static void stop_file(stbi__context *s) { }</span></div>
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;</div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;<span class="preprocessor">#endif // !STBI_NO_STDIO</span></div>
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;<span class="preprocessor"></span></div>
@@ -1058,9 +1058,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;    <span class="keywordflow">return</span> stbi__malloc(a * b * c * d + add);</div>
 <div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;}</div>
 <div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;</div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;    <span class="comment">// stbi__err - error</span></div>
-<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    <span class="comment">// stbi__errpf - error returning pointer to float</span></div>
-<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;    <span class="comment">// stbi__errpuc - error returning pointer to unsigned char</span></div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;<span class="comment">// stbi__err - error</span></div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;<span class="comment">// stbi__errpf - error returning pointer to float</span></div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;<span class="comment">// stbi__errpuc - error returning pointer to unsigned char</span></div>
 <div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;</div>
 <div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;<span class="preprocessor">#ifdef STBI_NO_FAILURE_STRINGS</span></div>
 <div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define stbi__err(x, y) 0</span></div>
@@ -1929,26 +1929,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01845"></a><span class="lineno"> 1845</span>&#160;}</div>
 <div class="line"><a name="l01846"></a><span class="lineno"> 1846</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01847"></a><span class="lineno"> 1847</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l01849"></a><span class="lineno"> 1849</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l01850"></a><span class="lineno"> 1850</span>&#160;    <span class="comment">//  &quot;baseline&quot; JPEG/JFIF decoder</span></div>
-<div class="line"><a name="l01851"></a><span class="lineno"> 1851</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160;    <span class="comment">//    simple implementation</span></div>
-<div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160;    <span class="comment">//      - doesn&#39;t support delayed output of y-dimension</span></div>
-<div class="line"><a name="l01854"></a><span class="lineno"> 1854</span>&#160;    <span class="comment">//      - simple interface (only one output format: 8-bit interleaved RGB)</span></div>
-<div class="line"><a name="l01855"></a><span class="lineno"> 1855</span>&#160;    <span class="comment">//      - doesn&#39;t try to recover corrupt jpegs</span></div>
-<div class="line"><a name="l01856"></a><span class="lineno"> 1856</span>&#160;    <span class="comment">//      - doesn&#39;t allow partial loading, loading multiple at once</span></div>
-<div class="line"><a name="l01857"></a><span class="lineno"> 1857</span>&#160;    <span class="comment">//      - still fast on x86 (copying globals into locals doesn&#39;t help x86)</span></div>
-<div class="line"><a name="l01858"></a><span class="lineno"> 1858</span>&#160;    <span class="comment">//      - allocates lots of intermediate memory (full size of all</span></div>
-<div class="line"><a name="l01859"></a><span class="lineno"> 1859</span>&#160;    <span class="comment">//      components)</span></div>
-<div class="line"><a name="l01860"></a><span class="lineno"> 1860</span>&#160;    <span class="comment">//        - non-interleaved case requires this anyway</span></div>
-<div class="line"><a name="l01861"></a><span class="lineno"> 1861</span>&#160;    <span class="comment">//        - allows good upsampling (see next)</span></div>
-<div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160;    <span class="comment">//    high-quality</span></div>
-<div class="line"><a name="l01863"></a><span class="lineno"> 1863</span>&#160;    <span class="comment">//      - upsampled channels are bilinearly interpolated, even across blocks</span></div>
-<div class="line"><a name="l01864"></a><span class="lineno"> 1864</span>&#160;    <span class="comment">//      - quality integer IDCT derived from IJG&#39;s &#39;slow&#39;</span></div>
-<div class="line"><a name="l01865"></a><span class="lineno"> 1865</span>&#160;    <span class="comment">//    performance</span></div>
-<div class="line"><a name="l01866"></a><span class="lineno"> 1866</span>&#160;    <span class="comment">//      - fast huffman; reasonable integer IDCT</span></div>
-<div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;    <span class="comment">//      - some SIMD kernels for common paths on targets with SSE2/NEON</span></div>
-<div class="line"><a name="l01868"></a><span class="lineno"> 1868</span>&#160;    <span class="comment">//      - uses a lot of intermediate memory, could cache poorly</span></div>
+<div class="line"><a name="l01849"></a><span class="lineno"> 1849</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l01850"></a><span class="lineno"> 1850</span>&#160;<span class="comment">//  &quot;baseline&quot; JPEG/JFIF decoder</span></div>
+<div class="line"><a name="l01851"></a><span class="lineno"> 1851</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160;<span class="comment">//    simple implementation</span></div>
+<div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160;<span class="comment">//      - doesn&#39;t support delayed output of y-dimension</span></div>
+<div class="line"><a name="l01854"></a><span class="lineno"> 1854</span>&#160;<span class="comment">//      - simple interface (only one output format: 8-bit interleaved RGB)</span></div>
+<div class="line"><a name="l01855"></a><span class="lineno"> 1855</span>&#160;<span class="comment">//      - doesn&#39;t try to recover corrupt jpegs</span></div>
+<div class="line"><a name="l01856"></a><span class="lineno"> 1856</span>&#160;<span class="comment">//      - doesn&#39;t allow partial loading, loading multiple at once</span></div>
+<div class="line"><a name="l01857"></a><span class="lineno"> 1857</span>&#160;<span class="comment">//      - still fast on x86 (copying globals into locals doesn&#39;t help x86)</span></div>
+<div class="line"><a name="l01858"></a><span class="lineno"> 1858</span>&#160;<span class="comment">//      - allocates lots of intermediate memory (full size of all</span></div>
+<div class="line"><a name="l01859"></a><span class="lineno"> 1859</span>&#160;<span class="comment">//      components)</span></div>
+<div class="line"><a name="l01860"></a><span class="lineno"> 1860</span>&#160;<span class="comment">//        - non-interleaved case requires this anyway</span></div>
+<div class="line"><a name="l01861"></a><span class="lineno"> 1861</span>&#160;<span class="comment">//        - allows good upsampling (see next)</span></div>
+<div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160;<span class="comment">//    high-quality</span></div>
+<div class="line"><a name="l01863"></a><span class="lineno"> 1863</span>&#160;<span class="comment">//      - upsampled channels are bilinearly interpolated, even across blocks</span></div>
+<div class="line"><a name="l01864"></a><span class="lineno"> 1864</span>&#160;<span class="comment">//      - quality integer IDCT derived from IJG&#39;s &#39;slow&#39;</span></div>
+<div class="line"><a name="l01865"></a><span class="lineno"> 1865</span>&#160;<span class="comment">//    performance</span></div>
+<div class="line"><a name="l01866"></a><span class="lineno"> 1866</span>&#160;<span class="comment">//      - fast huffman; reasonable integer IDCT</span></div>
+<div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;<span class="comment">//      - some SIMD kernels for common paths on targets with SSE2/NEON</span></div>
+<div class="line"><a name="l01868"></a><span class="lineno"> 1868</span>&#160;<span class="comment">//      - uses a lot of intermediate memory, could cache poorly</span></div>
 <div class="line"><a name="l01869"></a><span class="lineno"> 1869</span>&#160;</div>
 <div class="line"><a name="l01870"></a><span class="lineno"> 1870</span>&#160;<span class="preprocessor">#ifndef STBI_NO_JPEG</span></div>
 <div class="line"><a name="l01871"></a><span class="lineno"> 1871</span>&#160;<span class="preprocessor"></span></div>
@@ -4334,13 +4334,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l04251"></a><span class="lineno"> 4251</span>&#160;}</div>
 <div class="line"><a name="l04252"></a><span class="lineno"> 4252</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l04253"></a><span class="lineno"> 4253</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l04254"></a><span class="lineno"> 4254</span>&#160;    <span class="comment">// public domain zlib decode    v0.2  Sean Barrett 2006-11-18</span></div>
-<div class="line"><a name="l04255"></a><span class="lineno"> 4255</span>&#160;    <span class="comment">//    simple implementation</span></div>
-<div class="line"><a name="l04256"></a><span class="lineno"> 4256</span>&#160;    <span class="comment">//      - all input must be provided in an upfront buffer</span></div>
-<div class="line"><a name="l04257"></a><span class="lineno"> 4257</span>&#160;    <span class="comment">//      - all output is written to a single output buffer (can</span></div>
-<div class="line"><a name="l04258"></a><span class="lineno"> 4258</span>&#160;    <span class="comment">//      malloc/realloc)</span></div>
-<div class="line"><a name="l04259"></a><span class="lineno"> 4259</span>&#160;    <span class="comment">//    performance</span></div>
-<div class="line"><a name="l04260"></a><span class="lineno"> 4260</span>&#160;    <span class="comment">//      - fast huffman</span></div>
+<div class="line"><a name="l04254"></a><span class="lineno"> 4254</span>&#160;<span class="comment">// public domain zlib decode    v0.2  Sean Barrett 2006-11-18</span></div>
+<div class="line"><a name="l04255"></a><span class="lineno"> 4255</span>&#160;<span class="comment">//    simple implementation</span></div>
+<div class="line"><a name="l04256"></a><span class="lineno"> 4256</span>&#160;<span class="comment">//      - all input must be provided in an upfront buffer</span></div>
+<div class="line"><a name="l04257"></a><span class="lineno"> 4257</span>&#160;<span class="comment">//      - all output is written to a single output buffer (can</span></div>
+<div class="line"><a name="l04258"></a><span class="lineno"> 4258</span>&#160;<span class="comment">//      malloc/realloc)</span></div>
+<div class="line"><a name="l04259"></a><span class="lineno"> 4259</span>&#160;<span class="comment">//    performance</span></div>
+<div class="line"><a name="l04260"></a><span class="lineno"> 4260</span>&#160;<span class="comment">//      - fast huffman</span></div>
 <div class="line"><a name="l04261"></a><span class="lineno"> 4261</span>&#160;</div>
 <div class="line"><a name="l04262"></a><span class="lineno"> 4262</span>&#160;<span class="preprocessor">#ifndef STBI_NO_ZLIB</span></div>
 <div class="line"><a name="l04263"></a><span class="lineno"> 4263</span>&#160;<span class="preprocessor"></span></div>
@@ -4876,15 +4876,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l04793"></a><span class="lineno"> 4793</span>&#160;}</div>
 <div class="line"><a name="l04794"></a><span class="lineno"> 4794</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l04795"></a><span class="lineno"> 4795</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l04796"></a><span class="lineno"> 4796</span>&#160;    <span class="comment">// public domain &quot;baseline&quot; PNG decoder   v0.10  Sean Barrett 2006-11-18</span></div>
-<div class="line"><a name="l04797"></a><span class="lineno"> 4797</span>&#160;    <span class="comment">//    simple implementation</span></div>
-<div class="line"><a name="l04798"></a><span class="lineno"> 4798</span>&#160;    <span class="comment">//      - only 8-bit samples</span></div>
-<div class="line"><a name="l04799"></a><span class="lineno"> 4799</span>&#160;    <span class="comment">//      - no CRC checking</span></div>
-<div class="line"><a name="l04800"></a><span class="lineno"> 4800</span>&#160;    <span class="comment">//      - allocates lots of intermediate memory</span></div>
-<div class="line"><a name="l04801"></a><span class="lineno"> 4801</span>&#160;    <span class="comment">//        - avoids problem of streaming data between subsystems</span></div>
-<div class="line"><a name="l04802"></a><span class="lineno"> 4802</span>&#160;    <span class="comment">//        - avoids explicit window management</span></div>
-<div class="line"><a name="l04803"></a><span class="lineno"> 4803</span>&#160;    <span class="comment">//    performance</span></div>
-<div class="line"><a name="l04804"></a><span class="lineno"> 4804</span>&#160;    <span class="comment">//      - uses stb_zlib, a PD zlib implementation with fast huffman decoding</span></div>
+<div class="line"><a name="l04796"></a><span class="lineno"> 4796</span>&#160;<span class="comment">// public domain &quot;baseline&quot; PNG decoder   v0.10  Sean Barrett 2006-11-18</span></div>
+<div class="line"><a name="l04797"></a><span class="lineno"> 4797</span>&#160;<span class="comment">//    simple implementation</span></div>
+<div class="line"><a name="l04798"></a><span class="lineno"> 4798</span>&#160;<span class="comment">//      - only 8-bit samples</span></div>
+<div class="line"><a name="l04799"></a><span class="lineno"> 4799</span>&#160;<span class="comment">//      - no CRC checking</span></div>
+<div class="line"><a name="l04800"></a><span class="lineno"> 4800</span>&#160;<span class="comment">//      - allocates lots of intermediate memory</span></div>
+<div class="line"><a name="l04801"></a><span class="lineno"> 4801</span>&#160;<span class="comment">//        - avoids problem of streaming data between subsystems</span></div>
+<div class="line"><a name="l04802"></a><span class="lineno"> 4802</span>&#160;<span class="comment">//        - avoids explicit window management</span></div>
+<div class="line"><a name="l04803"></a><span class="lineno"> 4803</span>&#160;<span class="comment">//    performance</span></div>
+<div class="line"><a name="l04804"></a><span class="lineno"> 4804</span>&#160;<span class="comment">//      - uses stb_zlib, a PD zlib implementation with fast huffman decoding</span></div>
 <div class="line"><a name="l04805"></a><span class="lineno"> 4805</span>&#160;</div>
 <div class="line"><a name="l04806"></a><span class="lineno"> 4806</span>&#160;<span class="preprocessor">#ifndef STBI_NO_PNG</span></div>
 <div class="line"><a name="l04807"></a><span class="lineno"> 4807</span>&#160;<span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
@@ -5797,7 +5797,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l05714"></a><span class="lineno"> 5714</span>&#160;}</div>
 <div class="line"><a name="l05715"></a><span class="lineno"> 5715</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l05716"></a><span class="lineno"> 5716</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l05717"></a><span class="lineno"> 5717</span>&#160;    <span class="comment">// Microsoft/Windows BMP image</span></div>
+<div class="line"><a name="l05717"></a><span class="lineno"> 5717</span>&#160;<span class="comment">// Microsoft/Windows BMP image</span></div>
 <div class="line"><a name="l05718"></a><span class="lineno"> 5718</span>&#160;</div>
 <div class="line"><a name="l05719"></a><span class="lineno"> 5719</span>&#160;<span class="preprocessor">#ifndef STBI_NO_BMP</span></div>
 <div class="line"><a name="l05720"></a><span class="lineno"> 5720</span>&#160;<span class="preprocessor"></span><span class="keyword">static</span> <span class="keywordtype">int</span> stbi__bmp_test_raw(stbi__context *s)</div>
@@ -6517,9 +6517,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l06434"></a><span class="lineno"> 6434</span>&#160;}</div>
 <div class="line"><a name="l06435"></a><span class="lineno"> 6435</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l06436"></a><span class="lineno"> 6436</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l06437"></a><span class="lineno"> 6437</span>&#160;    <span class="comment">// *************************************************************************************************</span></div>
-<div class="line"><a name="l06438"></a><span class="lineno"> 6438</span>&#160;    <span class="comment">// Photoshop PSD loader -- PD by Thatcher Ulrich, integration by Nicolas</span></div>
-<div class="line"><a name="l06439"></a><span class="lineno"> 6439</span>&#160;    <span class="comment">// Schulz, tweaked by STB</span></div>
+<div class="line"><a name="l06437"></a><span class="lineno"> 6437</span>&#160;<span class="comment">// *************************************************************************************************</span></div>
+<div class="line"><a name="l06438"></a><span class="lineno"> 6438</span>&#160;<span class="comment">// Photoshop PSD loader -- PD by Thatcher Ulrich, integration by Nicolas</span></div>
+<div class="line"><a name="l06439"></a><span class="lineno"> 6439</span>&#160;<span class="comment">// Schulz, tweaked by STB</span></div>
 <div class="line"><a name="l06440"></a><span class="lineno"> 6440</span>&#160;</div>
 <div class="line"><a name="l06441"></a><span class="lineno"> 6441</span>&#160;<span class="preprocessor">#ifndef STBI_NO_PSD</span></div>
 <div class="line"><a name="l06442"></a><span class="lineno"> 6442</span>&#160;<span class="preprocessor"></span><span class="keyword">static</span> <span class="keywordtype">int</span> stbi__psd_test(stbi__context *s)</div>
@@ -6780,12 +6780,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l06697"></a><span class="lineno"> 6697</span>&#160;}</div>
 <div class="line"><a name="l06698"></a><span class="lineno"> 6698</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l06699"></a><span class="lineno"> 6699</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l06700"></a><span class="lineno"> 6700</span>&#160;    <span class="comment">// *************************************************************************************************</span></div>
-<div class="line"><a name="l06701"></a><span class="lineno"> 6701</span>&#160;    <span class="comment">// Softimage PIC loader</span></div>
-<div class="line"><a name="l06702"></a><span class="lineno"> 6702</span>&#160;    <span class="comment">// by Tom Seddon</span></div>
-<div class="line"><a name="l06703"></a><span class="lineno"> 6703</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l06704"></a><span class="lineno"> 6704</span>&#160;    <span class="comment">// See http://softimage.wiki.softimage.com/index.php/INFO:_PIC_file_format</span></div>
-<div class="line"><a name="l06705"></a><span class="lineno"> 6705</span>&#160;    <span class="comment">// See http://ozviz.wasp.uwa.edu.au/~pbourke/dataformats/softimagepic/</span></div>
+<div class="line"><a name="l06700"></a><span class="lineno"> 6700</span>&#160;<span class="comment">// *************************************************************************************************</span></div>
+<div class="line"><a name="l06701"></a><span class="lineno"> 6701</span>&#160;<span class="comment">// Softimage PIC loader</span></div>
+<div class="line"><a name="l06702"></a><span class="lineno"> 6702</span>&#160;<span class="comment">// by Tom Seddon</span></div>
+<div class="line"><a name="l06703"></a><span class="lineno"> 6703</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l06704"></a><span class="lineno"> 6704</span>&#160;<span class="comment">// See http://softimage.wiki.softimage.com/index.php/INFO:_PIC_file_format</span></div>
+<div class="line"><a name="l06705"></a><span class="lineno"> 6705</span>&#160;<span class="comment">// See http://ozviz.wasp.uwa.edu.au/~pbourke/dataformats/softimagepic/</span></div>
 <div class="line"><a name="l06706"></a><span class="lineno"> 6706</span>&#160;</div>
 <div class="line"><a name="l06707"></a><span class="lineno"> 6707</span>&#160;<span class="preprocessor">#ifndef STBI_NO_PIC</span></div>
 <div class="line"><a name="l06708"></a><span class="lineno"> 6708</span>&#160;<span class="preprocessor"></span><span class="keyword">static</span> <span class="keywordtype">int</span> stbi__pic_is4(stbi__context *s, <span class="keyword">const</span> <span class="keywordtype">char</span> *str)</div>
@@ -7010,9 +7010,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l06927"></a><span class="lineno"> 6927</span>&#160;}</div>
 <div class="line"><a name="l06928"></a><span class="lineno"> 6928</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l06929"></a><span class="lineno"> 6929</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l06930"></a><span class="lineno"> 6930</span>&#160;    <span class="comment">// *************************************************************************************************</span></div>
-<div class="line"><a name="l06931"></a><span class="lineno"> 6931</span>&#160;    <span class="comment">// GIF loader -- public domain by Jean-Marc Lienher -- simplified/shrunk by</span></div>
-<div class="line"><a name="l06932"></a><span class="lineno"> 6932</span>&#160;    <span class="comment">// stb</span></div>
+<div class="line"><a name="l06930"></a><span class="lineno"> 6930</span>&#160;<span class="comment">// *************************************************************************************************</span></div>
+<div class="line"><a name="l06931"></a><span class="lineno"> 6931</span>&#160;<span class="comment">// GIF loader -- public domain by Jean-Marc Lienher -- simplified/shrunk by</span></div>
+<div class="line"><a name="l06932"></a><span class="lineno"> 6932</span>&#160;<span class="comment">// stb</span></div>
 <div class="line"><a name="l06933"></a><span class="lineno"> 6933</span>&#160;</div>
 <div class="line"><a name="l06934"></a><span class="lineno"> 6934</span>&#160;<span class="preprocessor">#ifndef STBI_NO_GIF</span></div>
 <div class="line"><a name="l06935"></a><span class="lineno"> 6935</span>&#160;<span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
@@ -7828,17 +7828,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l07745"></a><span class="lineno"> 7745</span>&#160;}</div>
 <div class="line"><a name="l07746"></a><span class="lineno"> 7746</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l07747"></a><span class="lineno"> 7747</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l07748"></a><span class="lineno"> 7748</span>&#160;    <span class="comment">// *************************************************************************************************</span></div>
-<div class="line"><a name="l07749"></a><span class="lineno"> 7749</span>&#160;    <span class="comment">// Portable Gray Map and Portable Pixel Map loader</span></div>
-<div class="line"><a name="l07750"></a><span class="lineno"> 7750</span>&#160;    <span class="comment">// by Ken Miller</span></div>
-<div class="line"><a name="l07751"></a><span class="lineno"> 7751</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l07752"></a><span class="lineno"> 7752</span>&#160;    <span class="comment">// PGM: http://netpbm.sourceforge.net/doc/pgm.html</span></div>
-<div class="line"><a name="l07753"></a><span class="lineno"> 7753</span>&#160;    <span class="comment">// PPM: http://netpbm.sourceforge.net/doc/ppm.html</span></div>
-<div class="line"><a name="l07754"></a><span class="lineno"> 7754</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l07755"></a><span class="lineno"> 7755</span>&#160;    <span class="comment">// Known limitations:</span></div>
-<div class="line"><a name="l07756"></a><span class="lineno"> 7756</span>&#160;    <span class="comment">//    Does not support comments in the header section</span></div>
-<div class="line"><a name="l07757"></a><span class="lineno"> 7757</span>&#160;    <span class="comment">//    Does not support ASCII image data (formats P2 and P3)</span></div>
-<div class="line"><a name="l07758"></a><span class="lineno"> 7758</span>&#160;    <span class="comment">//    Does not support 16-bit-per-channel</span></div>
+<div class="line"><a name="l07748"></a><span class="lineno"> 7748</span>&#160;<span class="comment">// *************************************************************************************************</span></div>
+<div class="line"><a name="l07749"></a><span class="lineno"> 7749</span>&#160;<span class="comment">// Portable Gray Map and Portable Pixel Map loader</span></div>
+<div class="line"><a name="l07750"></a><span class="lineno"> 7750</span>&#160;<span class="comment">// by Ken Miller</span></div>
+<div class="line"><a name="l07751"></a><span class="lineno"> 7751</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l07752"></a><span class="lineno"> 7752</span>&#160;<span class="comment">// PGM: http://netpbm.sourceforge.net/doc/pgm.html</span></div>
+<div class="line"><a name="l07753"></a><span class="lineno"> 7753</span>&#160;<span class="comment">// PPM: http://netpbm.sourceforge.net/doc/ppm.html</span></div>
+<div class="line"><a name="l07754"></a><span class="lineno"> 7754</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l07755"></a><span class="lineno"> 7755</span>&#160;<span class="comment">// Known limitations:</span></div>
+<div class="line"><a name="l07756"></a><span class="lineno"> 7756</span>&#160;<span class="comment">//    Does not support comments in the header section</span></div>
+<div class="line"><a name="l07757"></a><span class="lineno"> 7757</span>&#160;<span class="comment">//    Does not support ASCII image data (formats P2 and P3)</span></div>
+<div class="line"><a name="l07758"></a><span class="lineno"> 7758</span>&#160;<span class="comment">//    Does not support 16-bit-per-channel</span></div>
 <div class="line"><a name="l07759"></a><span class="lineno"> 7759</span>&#160;</div>
 <div class="line"><a name="l07760"></a><span class="lineno"> 7760</span>&#160;<span class="preprocessor">#ifndef STBI_NO_PNM</span></div>
 <div class="line"><a name="l07761"></a><span class="lineno"> 7761</span>&#160;<span class="preprocessor"></span></div>
@@ -8287,7 +8287,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 2 2018 15:03:20 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 2 2018 15:21:05 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
