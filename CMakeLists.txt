@@ -13,7 +13,7 @@ option(YAGE_BUILD_EXAMPLES "Build example executables" OFF)
 set(CMAKE_CXX_STANDARD 14)
 
 # find other libraries from source
-set(EXTERNAL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external)
+set(EXTERNAL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
