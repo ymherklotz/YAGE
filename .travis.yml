@@ -41,6 +41,7 @@ matrix:
       compiler: clang++-5.0
       env:
         - "MATRIX_EVAL=\"CC=clang-5.0 && CXX=clang++-5.0\""
+        - BUILD_DOCS=0
       os: linux
 notifications:
   email: false
