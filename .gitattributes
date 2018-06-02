@@ -1,5 +1,2 @@
-*.h linguist-language=C++
-yage/*.h linguist-language=C++
-yage/*/*.h linguist-language=C++
 yage/core/stb_image.h linguist-vendored=true
 libs/* linguist-vendored=true
