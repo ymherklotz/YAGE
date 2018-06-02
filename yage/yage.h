@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: yage.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
@@ -11,8 +12,8 @@
 /**
  * Core includes
  */
-#include "core/core.h"
 #include "core/camera.h"
+#include "core/core.h"
 #include "core/iomanager.h"
 #include "core/logger.h"
 #include "core/resourcemanager.h"

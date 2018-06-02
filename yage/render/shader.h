@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: shader.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>

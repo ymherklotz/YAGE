@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: system.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
@@ -18,7 +19,7 @@ namespace yage
 class System : public NonCopyable
 {
 public:
-    virtual void init() = 0;
+    virtual void init()   = 0;
     virtual void update() = 0;
 };
 

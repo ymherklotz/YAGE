@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: engine.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
@@ -28,7 +29,6 @@ class Space;
 class Engine : public NonCopyable
 {
 public:
-
     ~Engine();
 
     /// Initialize window and other aspects of the engine.
@@ -45,7 +45,7 @@ public:
 
     /// Returns the instance of the engine, as there is only one instance of the
     /// engine.
-    static Engine& instance();
+    static Engine &instance();
 
 private:
     /// Window

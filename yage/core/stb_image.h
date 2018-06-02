@@ -789,7 +789,7 @@ static void stbi__start_file(stbi__context *s, FILE *f)
     stbi__start_callbacks(s, &stbi__stdio_callbacks, (void *)f);
 }
 
-    // static void stop_file(stbi__context *s) { }
+// static void stop_file(stbi__context *s) { }
 
 #endif // !STBI_NO_STDIO
 
@@ -972,9 +972,9 @@ static void *stbi__malloc_mad4(int a, int b, int c, int d, int add)
     return stbi__malloc(a * b * c * d + add);
 }
 
-    // stbi__err - error
-    // stbi__errpf - error returning pointer to float
-    // stbi__errpuc - error returning pointer to unsigned char
+// stbi__err - error
+// stbi__errpf - error returning pointer to float
+// stbi__errpuc - error returning pointer to unsigned char
 
 #ifdef STBI_NO_FAILURE_STRINGS
 #define stbi__err(x, y) 0
@@ -1845,27 +1845,27 @@ static stbi_uc *stbi__hdr_to_ldr(float *data, int x, int y, int comp)
 }
 #endif
 
-    //////////////////////////////////////////////////////////////////////////////
-    //
-    //  "baseline" JPEG/JFIF decoder
-    //
-    //    simple implementation
-    //      - doesn't support delayed output of y-dimension
-    //      - simple interface (only one output format: 8-bit interleaved RGB)
-    //      - doesn't try to recover corrupt jpegs
-    //      - doesn't allow partial loading, loading multiple at once
-    //      - still fast on x86 (copying globals into locals doesn't help x86)
-    //      - allocates lots of intermediate memory (full size of all
-    //      components)
-    //        - non-interleaved case requires this anyway
-    //        - allows good upsampling (see next)
-    //    high-quality
-    //      - upsampled channels are bilinearly interpolated, even across blocks
-    //      - quality integer IDCT derived from IJG's 'slow'
-    //    performance
-    //      - fast huffman; reasonable integer IDCT
-    //      - some SIMD kernels for common paths on targets with SSE2/NEON
-    //      - uses a lot of intermediate memory, could cache poorly
+//////////////////////////////////////////////////////////////////////////////
+//
+//  "baseline" JPEG/JFIF decoder
+//
+//    simple implementation
+//      - doesn't support delayed output of y-dimension
+//      - simple interface (only one output format: 8-bit interleaved RGB)
+//      - doesn't try to recover corrupt jpegs
+//      - doesn't allow partial loading, loading multiple at once
+//      - still fast on x86 (copying globals into locals doesn't help x86)
+//      - allocates lots of intermediate memory (full size of all
+//      components)
+//        - non-interleaved case requires this anyway
+//        - allows good upsampling (see next)
+//    high-quality
+//      - upsampled channels are bilinearly interpolated, even across blocks
+//      - quality integer IDCT derived from IJG's 'slow'
+//    performance
+//      - fast huffman; reasonable integer IDCT
+//      - some SIMD kernels for common paths on targets with SSE2/NEON
+//      - uses a lot of intermediate memory, could cache poorly
 
 #ifndef STBI_NO_JPEG
 
@@ -4251,13 +4251,13 @@ static int stbi__jpeg_info(stbi__context *s, int *x, int *y, int *comp)
 }
 #endif
 
-    // public domain zlib decode    v0.2  Sean Barrett 2006-11-18
-    //    simple implementation
-    //      - all input must be provided in an upfront buffer
-    //      - all output is written to a single output buffer (can
-    //      malloc/realloc)
-    //    performance
-    //      - fast huffman
+// public domain zlib decode    v0.2  Sean Barrett 2006-11-18
+//    simple implementation
+//      - all input must be provided in an upfront buffer
+//      - all output is written to a single output buffer (can
+//      malloc/realloc)
+//    performance
+//      - fast huffman
 
 #ifndef STBI_NO_ZLIB
 
@@ -4793,15 +4793,15 @@ STBIDEF int stbi_zlib_decode_noheader_buffer(char *obuffer, int olen,
 }
 #endif
 
-    // public domain "baseline" PNG decoder   v0.10  Sean Barrett 2006-11-18
-    //    simple implementation
-    //      - only 8-bit samples
-    //      - no CRC checking
-    //      - allocates lots of intermediate memory
-    //        - avoids problem of streaming data between subsystems
-    //        - avoids explicit window management
-    //    performance
-    //      - uses stb_zlib, a PD zlib implementation with fast huffman decoding
+// public domain "baseline" PNG decoder   v0.10  Sean Barrett 2006-11-18
+//    simple implementation
+//      - only 8-bit samples
+//      - no CRC checking
+//      - allocates lots of intermediate memory
+//        - avoids problem of streaming data between subsystems
+//        - avoids explicit window management
+//    performance
+//      - uses stb_zlib, a PD zlib implementation with fast huffman decoding
 
 #ifndef STBI_NO_PNG
 typedef struct {
@@ -5714,7 +5714,7 @@ static int stbi__png_info(stbi__context *s, int *x, int *y, int *comp)
 }
 #endif
 
-    // Microsoft/Windows BMP image
+// Microsoft/Windows BMP image
 
 #ifndef STBI_NO_BMP
 static int stbi__bmp_test_raw(stbi__context *s)
@@ -6434,9 +6434,9 @@ static void *stbi__tga_load(stbi__context *s, int *x, int *y, int *comp,
 }
 #endif
 
-    // *************************************************************************************************
-    // Photoshop PSD loader -- PD by Thatcher Ulrich, integration by Nicolas
-    // Schulz, tweaked by STB
+// *************************************************************************************************
+// Photoshop PSD loader -- PD by Thatcher Ulrich, integration by Nicolas
+// Schulz, tweaked by STB
 
 #ifndef STBI_NO_PSD
 static int stbi__psd_test(stbi__context *s)
@@ -6697,12 +6697,12 @@ static void *stbi__psd_load(stbi__context *s, int *x, int *y, int *comp,
 }
 #endif
 
-    // *************************************************************************************************
-    // Softimage PIC loader
-    // by Tom Seddon
-    //
-    // See http://softimage.wiki.softimage.com/index.php/INFO:_PIC_file_format
-    // See http://ozviz.wasp.uwa.edu.au/~pbourke/dataformats/softimagepic/
+// *************************************************************************************************
+// Softimage PIC loader
+// by Tom Seddon
+//
+// See http://softimage.wiki.softimage.com/index.php/INFO:_PIC_file_format
+// See http://ozviz.wasp.uwa.edu.au/~pbourke/dataformats/softimagepic/
 
 #ifndef STBI_NO_PIC
 static int stbi__pic_is4(stbi__context *s, const char *str)
@@ -6927,9 +6927,9 @@ static int stbi__pic_test(stbi__context *s)
 }
 #endif
 
-    // *************************************************************************************************
-    // GIF loader -- public domain by Jean-Marc Lienher -- simplified/shrunk by
-    // stb
+// *************************************************************************************************
+// GIF loader -- public domain by Jean-Marc Lienher -- simplified/shrunk by
+// stb
 
 #ifndef STBI_NO_GIF
 typedef struct {
@@ -7745,17 +7745,17 @@ static int stbi__pic_info(stbi__context *s, int *x, int *y, int *comp)
 }
 #endif
 
-    // *************************************************************************************************
-    // Portable Gray Map and Portable Pixel Map loader
-    // by Ken Miller
-    //
-    // PGM: http://netpbm.sourceforge.net/doc/pgm.html
-    // PPM: http://netpbm.sourceforge.net/doc/ppm.html
-    //
-    // Known limitations:
-    //    Does not support comments in the header section
-    //    Does not support ASCII image data (formats P2 and P3)
-    //    Does not support 16-bit-per-channel
+// *************************************************************************************************
+// Portable Gray Map and Portable Pixel Map loader
+// by Ken Miller
+//
+// PGM: http://netpbm.sourceforge.net/doc/pgm.html
+// PPM: http://netpbm.sourceforge.net/doc/ppm.html
+//
+// Known limitations:
+//    Does not support comments in the header section
+//    Does not support ASCII image data (formats P2 and P3)
+//    Does not support 16-bit-per-channel
 
 #ifndef STBI_NO_PNM
 

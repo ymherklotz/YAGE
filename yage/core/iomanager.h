@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: iomanager.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
@@ -19,7 +20,6 @@ namespace IoManager
 
 extern bool readFileToBuffer(const std::string &file_path,
                              std::vector<unsigned char> &buffer);
-
 }
 
 } // namespace yage

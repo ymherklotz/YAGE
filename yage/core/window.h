@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: window.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
@@ -33,7 +34,7 @@ private:
     GLFWwindow *window_ = nullptr;
 
 public:
-    Window() = default;
+    Window()               = default;
     Window(const Window &) = delete;
     Window(Window &&)      = delete;
     /// destroys the window handle

@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: iomanager.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
@@ -9,16 +10,17 @@
 #include <yage/core/iomanager.h>
 
 #include <fstream>
-#include <stdexcept>
 #include <regex>
+#include <stdexcept>
 
 namespace yage
 {
 
-namespace IoManager {
+namespace IoManager
+{
 
 bool readFileToBuffer(const std::string &file_path,
-                                 std::vector<unsigned char> &buffer)
+                      std::vector<unsigned char> &buffer)
 {
     std::ifstream file(file_path, std::ios::binary);
     if (!file.is_open()) {
@@ -42,6 +44,6 @@ bool readFileToBuffer(const std::string &file_path,
     return true;
 }
 
-}
+} // namespace IoManager
 
 } // namespace yage

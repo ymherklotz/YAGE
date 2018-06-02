@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: body.cpp
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>

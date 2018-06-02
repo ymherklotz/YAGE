@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: entity.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
@@ -8,8 +9,8 @@
 
 #pragma once
 
-#include <vector>
 #include <memory>
+#include <vector>
 
 namespace yage
 {
@@ -77,7 +78,8 @@ private:
  * Should not be inherited from when declaring a new component. Instead, the
  * Component<Derived> should be used.
  */
-class BaseComponent {
+class BaseComponent
+{
 public:
     /** Group used to register a specific component internally with the entity
      * manager.
@@ -94,7 +96,8 @@ protected:
  * data itself.
  */
 template <typename Derived>
-class Component : public BaseComponent {
+class Component : public BaseComponent
+{
 private:
     friend class EntityManager;
 
@@ -104,7 +107,8 @@ private:
 /** Contains a list of all components that belong to a sepecific group, these
  * are then stored in the main entity manager.
  */
-class ComponentGroup {
+class ComponentGroup
+{
 private:
     friend class EntityManager;
 

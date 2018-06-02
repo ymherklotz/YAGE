@@ -29,6 +29,7 @@ from subprocess import call
 
 header = """/** ---------------------------------------------------------------\
 ------------
+ * -*- c++ -*-
  * @file: {0}
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
@@ -116,7 +117,7 @@ class HeaderUpdate(object):
 def main(argv):
     update = HeaderUpdate(exclude_re="^picopng\.cpp",
                           match_dir=".*yage|.*tests",
-                          exclude_dir=".*lib.*|.*build.*")
+                          exclude_dir=".*lib.*|.*build.*|.*googletest.*")
     update.updateHeader()
     update.runClangFormat()
 

@@ -1,9 +1,19 @@
+/** ---------------------------------------------------------------------------
+ * -*- c++ -*-
+ * @file: exception.cpp
+ *
+ * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
+ * MIT License, see LICENSE file for more details.
+ * ----------------------------------------------------------------------------
+ */
+
 #include "exception.h"
 
 namespace yage
 {
 
-FileLoadException::FileLoadException(std::string err) : std::runtime_error("File Load Exception")
+FileLoadException::FileLoadException(std::string err)
+    : std::runtime_error("File Load Exception")
 {
     std::ostringstream msg("");
 

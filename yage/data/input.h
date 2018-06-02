@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: input.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
@@ -152,7 +153,7 @@ enum class key {
     LAST = GLFW_KEY_LAST,
 };
 
-} // namepsace yage
+} // namespace yage
 
 #ifdef _WIN32
 #ifdef YAGE_DELETE_TMP

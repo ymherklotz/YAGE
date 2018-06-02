@@ -1,4 +1,5 @@
 /** ---------------------------------------------------------------------------
+ * -*- c++ -*-
  * @file: space.h
  *
  * Copyright (c) 2017 Yann Herklotz Grave <ymherklotz@gmail.com>
@@ -8,14 +9,13 @@
 
 #pragma once
 
-#include <vector>
 #include <memory>
+#include <vector>
 
 #include "entity.h"
 #include "system.h"
 
 struct Movement {
-    
 };
 
 namespace yage
