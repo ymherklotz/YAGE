@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger',['Logger',['../classyage_1_1LogMessage.html#aff02b76416d2846736b7ecd798921a0a',1,'yage::LogMessage']]]
+  ['entitymanager',['EntityManager',['../classyage_1_1Component.html#a6f579cda6059d102e9074e11a27e0282',1,'yage::Component::EntityManager()'],['../classyage_1_1ComponentGroup.html#a6f579cda6059d102e9074e11a27e0282',1,'yage::ComponentGroup::EntityManager()']]]
 ];

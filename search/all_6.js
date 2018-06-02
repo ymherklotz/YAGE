@@ -11,5 +11,7 @@ var searchData=
   ['glyph',['Glyph',['../structyage_1_1details_1_1Glyph.html#a91752b58fc10fb037658f27c9338627c',1,'yage::details::Glyph']]],
   ['grave_5faccent',['GRAVE_ACCENT',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a1547ad05c44be2cc614be32159bf666b',1,'yage']]],
   ['gravity',['GRAVITY',['../classyage_1_1Body.html#a4f61913cf00244a6160e09cda846f766',1,'yage::Body']]],
-  ['gravity_5f',['gravity_',['../classyage_1_1Body.html#a454a7c59d07c94afb0a35c3d53ec2191',1,'yage::Body']]]
+  ['gravity_5f',['gravity_',['../classyage_1_1Body.html#a454a7c59d07c94afb0a35c3d53ec2191',1,'yage::Body']]],
+  ['group',['Group',['../classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8',1,'yage::BaseComponent']]],
+  ['group_5fid_5fcounter_5f',['group_id_counter_',['../classyage_1_1BaseComponent.html#a529f6d4864bac810a9f5419bb0fccd92',1,'yage::BaseComponent']]]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>yage/entity/componentmanager.h Source File</title>
+<title>yage/entity/entity.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,33 +86,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">componentmanager.h</div>  </div>
+<div class="title">entity.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="componentmanager_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="entitymanager_8h.html">entitymanager.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>yage</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> CompT&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classyage_1_1ComponentMapper.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classyage_1_1ComponentMapper.html">ComponentMapper</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::map&lt;Entity, CompT&gt; map_;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;} <span class="comment">// namespace yage</span></div>
-<div class="ttc" id="entitymanager_8h_html"><div class="ttname"><a href="entitymanager_8h.html">entitymanager.h</a></div><div class="ttdoc"> </div></div>
-<div class="ttc" id="classyage_1_1ComponentMapper_html"><div class="ttname"><a href="classyage_1_1ComponentMapper.html">yage::ComponentMapper</a></div><div class="ttdef"><b>Definition:</b> componentmanager.h:11</div></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p><hr/>
+  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;memory&gt;</code><br/>
+</div>
+<p><a href="entity_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html">yage::EntityManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages entities in a space.  <a href="classyage_1_1EntityManager.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1BaseComponent.html">yage::BaseComponent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base component used to store components.  <a href="classyage_1_1BaseComponent.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Component.html">yage::Component&lt; Derived &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main component that is used to make a component from a defined struct.  <a href="classyage_1_1Component.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1ComponentGroup.html">yage::ComponentGroup</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains a list of all components that belong to a sepecific group, these are then stored in the main entity manager.  <a href="classyage_1_1ComponentGroup.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceyage"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html">yage</a></td></tr>
+<tr class="memdesc:namespaceyage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project namespace. <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aa8bc60c76b5240a55672ce5b8e288764"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">yage::Entity</a></td></tr>
+<tr class="separator:aa8bc60c76b5240a55672ce5b8e288764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><hr/>
+ <p>Copyright (c) 2017 Yann Herklotz Grave <a href="#" onclick="location.href='mai'+'lto:'+'ymh'+'er'+'klo'+'tz'+'@gm'+'ai'+'l.c'+'om'; return false;">ymher<span style="display: none;">.nosp@m.</span>klot<span style="display: none;">.nosp@m.</span>z@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </p>
+<h2>MIT License, see LICENSE file for more details. </h2>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 19 2018 14:24:12 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 2 2018 13:53:39 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
