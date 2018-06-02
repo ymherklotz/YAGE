@@ -6,8 +6,10 @@ set -eu
 $CC --version
 $CXX --version
 
-# go to correct directory
-cd $TRAVIS_BUILD_DIR
+if [[ -z $TRAVIS_BUILD_DIR ]]; then
+  # go to correct directory
+  cd $TRAVIS_BUILD_DIR
+fi  
 
 # start building
 mkdir -p build
@@ -19,21 +21,25 @@ ctest -j 2 --schedule-random --repeat-until-fail 3
 cd ../..
 
 # update docs if we are on the master branch
-echo "TRAVIS_BRANCH = " $TRAVIS_BRANCH
-echo "BUILD_DOCS    = " $BUILD_DOCS
+if [[ -z $TRAVIS_BUILD_DIR ]]; then
+  echo "TRAVIS_BRANCH = " $TRAVIS_BRANCH
+  echo "BUILD_DOCS    = " $BUILD_DOCS
+fi
 echo "CC            = " $CC
 echo "CXX           = " $CXX
 
-if [[ $TRAVIS_BRANCH = "master" && $BUILD_DOCS -eq 1 ]]; then
-  if [[ -d "build/doc_doxygen/html" ]]; then
-    git clone -b gh-pages "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git" YAGE_gh-pages
-    cd YAGE_gh-pages
-    git config user.name "TravisBot"
-    git config user.email ""
-    rm -rf *
-    cp -r ../build/doc_doxygen/html/* .
-    git add -A .
-    git commit -m "[Travis] Rebuilding documentation"
-    git push -q origin gh-pages
+if [[ -z $TRAVIS_BUILD_DIR ]]; then
+  if [[ $TRAVIS_BRANCH = "master" && $BUILD_DOCS -eq 1 ]]; then
+    if [[ -d "build/doc_doxygen/html" ]]; then
+      git clone -b gh-pages "https://$GH_TOKEN@github.com/ymherklotz/YAGE.git" YAGE_gh-pages
+      cd YAGE_gh-pages
+      git config user.name "TravisBot"
+      git config user.email ""
+      rm -rf *
+      cp -r ../build/doc_doxygen/html/* .
+      git add -A .
+      git commit -m "[Travis] Rebuilding documentation"
+      git push -q origin gh-pages
+    fi
   fi
 fi
