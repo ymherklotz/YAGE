@@ -56,7 +56,7 @@ public:
     bool shouldClose();
     void pollEvents() const;
 
-    bool keyPressed(key k);
+    bool keyPressed(key k) const;
 };
 
 } // namespace yage
