@@ -21,13 +21,14 @@ Engine::~Engine()
     quit();
 }
 
-void Engine::init()
+Engine &Engine::init()
 {
     yage::init();
     window_.create("Game Engine", 800, 640);
+    return *this;
 }
 
-void Engine::mainLoop()
+Engine &Engine::mainLoop()
 {
     while (!window_.shouldClose()) {
         window_.pollEvents();
@@ -37,6 +38,8 @@ void Engine::mainLoop()
 
         window_.swapBuffer();
     }
+
+    return *this;
 }
 
 void Engine::update()
@@ -46,9 +49,10 @@ void Engine::update()
     }
 }
 
-void Engine::addSpace(std::unique_ptr<Space> space)
+Engine &Engine::addSpace(std::unique_ptr<Space> space)
 {
     spaces_.push_back(std::move(space));
+    return *this;
 }
 
 Engine &Engine::instance()

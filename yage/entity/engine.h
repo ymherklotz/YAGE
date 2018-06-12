@@ -32,16 +32,16 @@ public:
     ~Engine();
 
     /// Initialize window and other aspects of the engine.
-    void init();
+    Engine &init();
 
     /// Main game loop of the engine.
-    void mainLoop();
+    Engine &mainLoop();
 
     /// Updates the systems.
     void update();
 
     /// Add spaces to the engine
-    void addSpace(std::unique_ptr<Space> space);
+    Engine &addSpace(std::unique_ptr<Space> space);
 
     /// Returns the instance of the engine, as there is only one instance of the
     /// engine.
