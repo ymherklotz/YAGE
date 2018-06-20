@@ -1,4 +1,6 @@
 #include <yage/entity/entity.h>
+#include <yage/entity/component.h>
+#include <yage/entity/system.h>
 
 struct Position {
     double x;
