@@ -10,7 +10,6 @@
 #include <yage/physics/particlebody.h>
 
 #include <cmath>
-#include <iostream>
 
 namespace yage
 {

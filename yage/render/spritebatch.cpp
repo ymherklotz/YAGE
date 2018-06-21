@@ -11,10 +11,7 @@
 
 #include "../core/logger.h"
 #include <algorithm>
-#include <iostream>
 #include <stdexcept>
-
-using std::cout;
 
 #include <GLFW/glfw3.h>
 
