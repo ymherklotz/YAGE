@@ -44,9 +44,3 @@
  */
 #include "render/shader.h"
 #include "render/spritebatch.h"
-
-/**
- * Engine that includes a Entity Component System to organize the data and make
- * it more flexible and efficient.
- */
-#include "entity/engine.h"
