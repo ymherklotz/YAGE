@@ -10,7 +10,7 @@ option(YAGE_BUILD_DOCS "Build documentation using Doxygen" OFF)
 option(YAGE_BUILD_EXAMPLES "Build example executables" OFF)
 
 # set standard
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 # find other libraries from source
 set(EXTERNAL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs)
