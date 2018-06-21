@@ -1,5 +1,7 @@
 #include "entity.h"
 
+#include "component.h"
+
 #include <algorithm>
 
 namespace yage
@@ -27,14 +29,23 @@ bool EntityManager::is_valid(Entity entity) const
     return false;
 }
 
+EntityManager &EntityManager::add_component(Entity entity,
+                                            BaseComponent *component)
+{
+    auto id = component->getGroup();
+    component_masks_[entity] =
+        component_masks_[entity] | ComponentMask(1 << id);
+    return *this;
+}
+
 Entity EntityManager::update_next_entity()
 {
     if (deleted_.empty()) {
-        return ++next_entity_;
+        return next_entity_++;
     }
-    next_entity_ = deleted_.back();
+    Entity ent = deleted_.back();
     deleted_.pop_back();
-    return next_entity_;
+    return ent;
 }
 
 } // namespace yage
