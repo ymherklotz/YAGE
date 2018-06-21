@@ -61,6 +61,7 @@ void Window::create(std::string window_name, int width, int height)
 
     // set key callback
     glfwSetKeyCallback(window_, key_callback);
+
     // set resize callback
     glfwSetFramebufferSizeCallback(window_, framebuffer_size_callback);
 
@@ -108,7 +109,7 @@ void Window::pollEvents() const
     glfwPollEvents();
 }
 
-bool Window::keyPressed(key k)
+bool Window::keyPressed(key k) const
 {
     if (window_ == nullptr) {
         throw runtime_error("Window is not initialized");
