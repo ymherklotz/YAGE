@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>yage::Component&lt; Derived &gt; Class Template Reference</title>
+<title>yage::Component&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,78 +89,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#friends">Friends</a> &#124;
 <a href="classyage_1_1Component-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">yage::Component&lt; Derived &gt; Class Template Reference</div>  </div>
+<div class="title">yage::Component&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>The main component that is used to make a component from a defined struct.  
- <a href="classyage_1_1Component.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="entity_8h_source.html">entity.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="component_8h_source.html">component.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for yage::Component&lt; Derived &gt;:</div>
+Inheritance diagram for yage::Component&lt; T &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classyage_1_1Component.png" usemap="#yage::Component&lt; Derived &gt;_map" alt=""/>
-  <map id="yage::Component&lt; Derived &gt;_map" name="yage::Component&lt; Derived &gt;_map">
-<area href="classyage_1_1BaseComponent.html" title="Base component used to store components. " alt="yage::BaseComponent" shape="rect" coords="0,0,178,24"/>
+  <img src="classyage_1_1Component.png" usemap="#yage::Component&lt; T &gt;_map" alt=""/>
+  <map id="yage::Component&lt; T &gt;_map" name="yage::Component&lt; T &gt;_map">
+<area href="classyage_1_1BaseComponent.html" alt="yage::BaseComponent" shape="rect" coords="0,0,140,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a6f579cda6059d102e9074e11a27e0282"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Component.html#a6f579cda6059d102e9074e11a27e0282">EntityManager</a></td></tr>
-<tr class="separator:a6f579cda6059d102e9074e11a27e0282"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classyage_1_1BaseComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classyage_1_1BaseComponent')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classyage_1_1BaseComponent.html">yage::BaseComponent</a></td></tr>
-<tr class="memitem:a55b026d7deb37888f67636ff22fc32c8 inherit pub_types_classyage_1_1BaseComponent"><td class="memItemLeft" align="right" valign="top">typedef unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">Group</a></td></tr>
-<tr class="memdesc:a55b026d7deb37888f67636ff22fc32c8 inherit pub_types_classyage_1_1BaseComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Group used to register a specific component internally with the entity manager.  <a href="#a55b026d7deb37888f67636ff22fc32c8">More...</a><br/></td></tr>
-<tr class="separator:a55b026d7deb37888f67636ff22fc32c8 inherit pub_types_classyage_1_1BaseComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_classyage_1_1BaseComponent"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classyage_1_1BaseComponent')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classyage_1_1BaseComponent.html">yage::BaseComponent</a></td></tr>
-<tr class="memitem:a529f6d4864bac810a9f5419bb0fccd92 inherit pro_static_attribs_classyage_1_1BaseComponent"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8">Group</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1BaseComponent.html#a529f6d4864bac810a9f5419bb0fccd92">group_id_counter_</a> = 0</td></tr>
-<tr class="separator:a529f6d4864bac810a9f5419bb0fccd92 inherit pro_static_attribs_classyage_1_1BaseComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac864b53e6f3d6ecce6ebe3cfac40daf4 inherit pro_static_attribs_classyage_1_1BaseComponent"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceyage.html#ab24c66406a581b3a0a5ef1b06cd21100">GroupId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1BaseComponent.html#ac864b53e6f3d6ecce6ebe3cfac40daf4">group_id_counter_</a> = 0</td></tr>
+<tr class="separator:ac864b53e6f3d6ecce6ebe3cfac40daf4 inherit pro_static_attribs_classyage_1_1BaseComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Derived&gt;<br/>
-class yage::Component&lt; Derived &gt;</h3>
-
-<p>The main component that is used to make a component from a defined struct. </p>
-<p>A component should only be declared as a struct and should not contain any data itself. </p>
-</div><h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a class="anchor" id="a6f579cda6059d102e9074e11a27e0282"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Derived &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class <a class="el" href="classyage_1_1EntityManager.html">EntityManager</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>yage/entity/<a class="el" href="entity_8h_source.html">entity.h</a></li>
+<li>yage/entity/<a class="el" href="component_8h_source.html">component.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 2 2018 15:21:05 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 21 2018 23:12:55 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -21,10 +21,16 @@ var searchData=
   ['colsize',['colSize',['../classyage_1_1Matrix.html#a2148cd52008892765ad90250c68afba1',1,'yage::Matrix']]],
   ['comma',['COMMA',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a4d9b3e9fc12849d060371eb65154c751',1,'yage']]],
   ['component',['Component',['../classyage_1_1Component.html',1,'yage']]],
+  ['component_2ecpp',['component.cpp',['../component_8cpp.html',1,'']]],
+  ['component_2eh',['component.h',['../component_8h.html',1,'']]],
+  ['component_5fgroup_5f',['component_group_',['../classyage_1_1EntityManager.html#ae9c24dfd7dfc041454b6678dbddc55e2',1,'yage::EntityManager']]],
+  ['component_5fmasks_5f',['component_masks_',['../classyage_1_1EntityManager.html#a579c5e72ace05025af0b5beb24f6766b',1,'yage::EntityManager']]],
   ['componentgroup',['ComponentGroup',['../classyage_1_1ComponentGroup.html',1,'yage']]],
+  ['componentmask',['ComponentMask',['../namespaceyage.html#a868aca3b92f2d669736ab696d2dc2847',1,'yage']]],
+  ['components_5f',['components_',['../classyage_1_1ComponentGroup.html#abed4de09aa22a48680c52824029d7485',1,'yage::ComponentGroup']]],
   ['core_2ecpp',['core.cpp',['../core_8cpp.html',1,'']]],
   ['core_2eh',['core.h',['../core_8h.html',1,'']]],
   ['create',['create',['../classyage_1_1Window.html#afdf3e2826526abc23a4e206c9a8a8745',1,'yage::Window::create()'],['../classyage_1_1Active.html#aa2ed414bbe94fdd51c8aeb7ada73a064',1,'yage::Active::create()']]],
-  ['createentity',['createEntity',['../classyage_1_1EntityManager.html#a646cf1110abdc0a4398c994ead5f537d',1,'yage::EntityManager::createEntity()'],['../classyage_1_1Space.html#a41bc332ffb3042c0872ede8c53ff1fa4',1,'yage::Space::createEntity()']]],
+  ['create_5fentity',['create_entity',['../classyage_1_1EntityManager.html#a5f804a6e96010891615f2a25c579d09a',1,'yage::EntityManager']]],
   ['cube_2eh',['cube.h',['../cube_8h.html',1,'']]]
 ];

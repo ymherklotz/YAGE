@@ -136,23 +136,16 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structyage_1_1Vertex.html">Vertex</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Engine.html">Engine</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main engine class that contains a systems, the main loop and the update function that updates all the systems.  <a href="classyage_1_1Engine.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html">EntityManager</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages entities in a space.  <a href="classyage_1_1EntityManager.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base component used to store components.  <a href="classyage_1_1BaseComponent.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Component.html">Component</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main component that is used to make a component from a defined struct.  <a href="classyage_1_1Component.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1ComponentGroup.html">ComponentGroup</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains a list of all components that belong to a sepecific group, these are then stored in the main entity manager.  <a href="classyage_1_1ComponentGroup.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1Space.html">Space</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classyage_1_1Space.html" title="Space that keeps track of all the entities, componenets and runs the systems on the data to update th...">Space</a> that keeps track of all the entities, componenets and runs the systems on the data to update them.  <a href="classyage_1_1Space.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html">EntityManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has to keep track of all the different entities and their current state.  <a href="classyage_1_1EntityManager.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1BaseSystem.html">BaseSystem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1System.html">System</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,7 +188,13 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a868aca3b92f2d669736ab696d2dc2847"><td class="memItemLeft" align="right" valign="top">typedef std::bitset&lt; 64 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a868aca3b92f2d669736ab696d2dc2847">ComponentMask</a></td></tr>
+<tr class="memdesc:a868aca3b92f2d669736ab696d2dc2847"><td class="mdescLeft">&#160;</td><td class="mdescRight">The component mask represents all the components that the entity is currently attached to.  <a href="#a868aca3b92f2d669736ab696d2dc2847">More...</a><br/></td></tr>
+<tr class="separator:a868aca3b92f2d669736ab696d2dc2847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24c66406a581b3a0a5ef1b06cd21100"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#ab24c66406a581b3a0a5ef1b06cd21100">GroupId</a></td></tr>
+<tr class="separator:ab24c66406a581b3a0a5ef1b06cd21100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8bc60c76b5240a55672ce5b8e288764"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a></td></tr>
+<tr class="memdesc:aa8bc60c76b5240a55672ce5b8e288764"><td class="mdescLeft">&#160;</td><td class="mdescRight">The entity is currently just an unsigned integer, which may change to a class in the future.  <a href="#aa8bc60c76b5240a55672ce5b8e288764">More...</a><br/></td></tr>
 <tr class="separator:aa8bc60c76b5240a55672ce5b8e288764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23eef341099a6b2816cf0c63f8ffe898"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyage.html#a23eef341099a6b2816cf0c63f8ffe898">Vector2d</a> = <a class="el" href="classyage_1_1Vector2.html">Vector2</a>&lt; double &gt;</td></tr>
 <tr class="memdesc:a23eef341099a6b2816cf0c63f8ffe898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a 2D vector.  <a href="#a23eef341099a6b2816cf0c63f8ffe898">More...</a><br/></td></tr>
@@ -451,12 +450,40 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Project namespace. </p>
 <p>Avoids collision as all the classes and global functions are wrapped in. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a868aca3b92f2d669736ab696d2dc2847"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::bitset&lt;64&gt; <a class="el" href="namespaceyage.html#a868aca3b92f2d669736ab696d2dc2847">yage::ComponentMask</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The component mask represents all the components that the entity is currently attached to. </p>
+
+</div>
+</div>
 <a class="anchor" id="aa8bc60c76b5240a55672ce5b8e288764"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">typedef unsigned int <a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">yage::Entity</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The entity is currently just an unsigned integer, which may change to a class in the future. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab24c66406a581b3a0a5ef1b06cd21100"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned int <a class="el" href="namespaceyage.html#ab24c66406a581b3a0a5ef1b06cd21100">yage::GroupId</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1343,7 +1370,7 @@ template&lt;int M, int N, class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 2 2018 15:21:05 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 21 2018 23:12:55 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -9,7 +9,6 @@ var searchData=
   ['shader',['Shader',['../classyage_1_1Shader.html#a34fe30eb6e6d595c1996e8ea6fb3961a',1,'yage::Shader::Shader(const std::string &amp;vertex_path, const std::string &amp;fragment_path)'],['../classyage_1_1Shader.html#a1a006dcb52a4fb9f1dc61df68d3676f5',1,'yage::Shader::Shader(const Shader &amp;)=delete'],['../classyage_1_1Shader.html#adf6dc3a526921d62b55a552f38958dd2',1,'yage::Shader::Shader(Shader &amp;&amp;)=delete']]],
   ['shouldclose',['shouldClose',['../classyage_1_1Window.html#a5e3b209289bc343609d809d5b7f23cc8',1,'yage::Window']]],
   ['show',['show',['../classyage_1_1Window.html#a0847f40df2aafd7da1c315fa84871f34',1,'yage::Window']]],
-  ['space',['Space',['../classyage_1_1Space.html#a40c248478ae521bb4e0d5119002cf8e9',1,'yage::Space']]],
   ['spritebatch',['SpriteBatch',['../classyage_1_1SpriteBatch.html#afda50a8a2a6c9ffd1b9d962fae223f8a',1,'yage::SpriteBatch::SpriteBatch()'],['../classyage_1_1SpriteBatch.html#a30a46a7182235a739916d540781af652',1,'yage::SpriteBatch::SpriteBatch(const SpriteBatch &amp;)=delete'],['../classyage_1_1SpriteBatch.html#a7f18a506f4188acd2219da8147dc0e1e',1,'yage::SpriteBatch::SpriteBatch(SpriteBatch &amp;&amp;)=delete']]],
   ['stbi_5fconvert_5fiphone_5fpng_5fto_5frgb',['stbi_convert_iphone_png_to_rgb',['../stb__image_8h.html#a23525ef2b882f3de426b47ecf8d9151b',1,'stb_image.h']]],
   ['stbi_5ffailure_5freason',['stbi_failure_reason',['../stb__image_8h.html#aa874b3ba909f3281d499894909678336',1,'stb_image.h']]],

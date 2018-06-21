@@ -9,5 +9,5 @@ var searchData=
   ['colour',['Colour',['../structyage_1_1Colour.html#a585165d5109c81b6b2de6f1116406abd',1,'yage::Colour::Colour()'],['../structyage_1_1Colour.html#a8118ad802db7e61df770f7d3b5b88aaa',1,'yage::Colour::Colour(GLubyte r_, GLubyte g_, GLubyte b_, GLubyte a_)']]],
   ['colsize',['colSize',['../classyage_1_1Matrix.html#a2148cd52008892765ad90250c68afba1',1,'yage::Matrix']]],
   ['create',['create',['../classyage_1_1Window.html#afdf3e2826526abc23a4e206c9a8a8745',1,'yage::Window::create()'],['../classyage_1_1Active.html#aa2ed414bbe94fdd51c8aeb7ada73a064',1,'yage::Active::create()']]],
-  ['createentity',['createEntity',['../classyage_1_1EntityManager.html#a646cf1110abdc0a4398c994ead5f537d',1,'yage::EntityManager::createEntity()'],['../classyage_1_1Space.html#a41bc332ffb3042c0872ede8c53ff1fa4',1,'yage::Space::createEntity()']]]
+  ['create_5fentity',['create_entity',['../classyage_1_1EntityManager.html#a5f804a6e96010891615f2a25c579d09a',1,'yage::EntityManager']]]
 ];

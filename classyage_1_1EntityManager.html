@@ -90,102 +90,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classyage_1_1EntityManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">yage::EntityManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Manages entities in a space.  
+<p>Has to keep track of all the different entities and their current state.  
  <a href="classyage_1_1EntityManager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="entity_8h_source.html">entity.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a255fa9aff3e6b208eea0c38d8caf08f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a255fa9aff3e6b208eea0c38d8caf08f8">EntityManager</a> ()=default</td></tr>
-<tr class="memdesc:a255fa9aff3e6b208eea0c38d8caf08f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default instance of an <a class="el" href="classyage_1_1EntityManager.html" title="Manages entities in a space. ">EntityManager</a>.  <a href="#a255fa9aff3e6b208eea0c38d8caf08f8">More...</a><br/></td></tr>
-<tr class="separator:a255fa9aff3e6b208eea0c38d8caf08f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0099fe0038967007891d2b7575090915"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a0099fe0038967007891d2b7575090915">EntityManager</a> (<a class="el" href="classyage_1_1Space.html">Space</a> *space)</td></tr>
-<tr class="memdesc:a0099fe0038967007891d2b7575090915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an instance of the entity manager, which refers back to the space it was created in and belongs to.  <a href="#a0099fe0038967007891d2b7575090915">More...</a><br/></td></tr>
-<tr class="separator:a0099fe0038967007891d2b7575090915"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1644095d96e43ac000375ba7f7ee021"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#af1644095d96e43ac000375ba7f7ee021">EntityManager</a> (<a class="el" href="classyage_1_1Space.html">Space</a> *space, std::size_t n)</td></tr>
-<tr class="memdesc:af1644095d96e43ac000375ba7f7ee021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an instance of the entitiy manager with an initial size.  <a href="#af1644095d96e43ac000375ba7f7ee021">More...</a><br/></td></tr>
-<tr class="separator:af1644095d96e43ac000375ba7f7ee021"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a646cf1110abdc0a4398c994ead5f537d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a646cf1110abdc0a4398c994ead5f537d">createEntity</a> ()</td></tr>
-<tr class="memdesc:a646cf1110abdc0a4398c994ead5f537d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an Entity and returns the handle to the entity, which can then be used by the user to do operations on it.  <a href="#a646cf1110abdc0a4398c994ead5f537d">More...</a><br/></td></tr>
-<tr class="separator:a646cf1110abdc0a4398c994ead5f537d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a246e10663f55a9f4817cbde23a7a36c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a246e10663f55a9f4817cbde23a7a36c9">deleteEntity</a> (<a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity)</td></tr>
-<tr class="memdesc:a246e10663f55a9f4817cbde23a7a36c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an entity.  <a href="#a246e10663f55a9f4817cbde23a7a36c9">More...</a><br/></td></tr>
-<tr class="separator:a246e10663f55a9f4817cbde23a7a36c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f804a6e96010891615f2a25c579d09a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a5f804a6e96010891615f2a25c579d09a">create_entity</a> ()</td></tr>
+<tr class="separator:a5f804a6e96010891615f2a25c579d09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a73fc2ccf0851d8f43a951db889cba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1EntityManager.html">EntityManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a1a73fc2ccf0851d8f43a951db889cba9">delete_entity</a> (<a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity)</td></tr>
+<tr class="separator:a1a73fc2ccf0851d8f43a951db889cba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e89a1d61ff4cd047b41eb363839369f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a7e89a1d61ff4cd047b41eb363839369f">is_valid</a> (<a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity) const </td></tr>
+<tr class="separator:a7e89a1d61ff4cd047b41eb363839369f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a134194877cce6003b2bd2245b78cd876"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1EntityManager.html">EntityManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a134194877cce6003b2bd2245b78cd876">add_component</a> (<a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity, <a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a> *component)</td></tr>
+<tr class="separator:a134194877cce6003b2bd2245b78cd876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae9c24dfd7dfc041454b6678dbddc55e2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classyage_1_1ComponentGroup.html">ComponentGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#ae9c24dfd7dfc041454b6678dbddc55e2">component_group_</a></td></tr>
+<tr class="separator:ae9c24dfd7dfc041454b6678dbddc55e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579c5e72ace05025af0b5beb24f6766b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceyage.html#a868aca3b92f2d669736ab696d2dc2847">ComponentMask</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a579c5e72ace05025af0b5beb24f6766b">component_masks_</a></td></tr>
+<tr class="separator:a579c5e72ace05025af0b5beb24f6766b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa895f8d9e3e741fba7b9b17abd9d3675"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#aa895f8d9e3e741fba7b9b17abd9d3675">deleted_</a></td></tr>
+<tr class="separator:aa895f8d9e3e741fba7b9b17abd9d3675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Manages entities in a space. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a255fa9aff3e6b208eea0c38d8caf08f8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">yage::EntityManager::EntityManager </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default instance of an <a class="el" href="classyage_1_1EntityManager.html" title="Manages entities in a space. ">EntityManager</a>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a0099fe0038967007891d2b7575090915"></a>
+<div class="textblock"><p>Has to keep track of all the different entities and their current state. </p>
+<p>The key actions on an Entity are: deleting, creating. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a134194877cce6003b2bd2245b78cd876"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">yage::EntityManager::EntityManager </td>
+          <td class="memname"><a class="el" href="classyage_1_1EntityManager.html">EntityManager</a> &amp; yage::EntityManager::add_component </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classyage_1_1Space.html">Space</a> *&#160;</td>
-          <td class="paramname"><em>space</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates an instance of the entity manager, which refers back to the space it was created in and belongs to. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">space</td><td>Current space that the <a class="el" href="classyage_1_1EntityManager.html" title="Manages entities in a space. ">EntityManager</a> belongs to. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="af1644095d96e43ac000375ba7f7ee021"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">yage::EntityManager::EntityManager </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classyage_1_1Space.html">Space</a> *&#160;</td>
-          <td class="paramname"><em>space</em>, </td>
+          <td class="paramtype"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a> *&#160;</td>
+          <td class="paramname"><em>component</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -195,24 +150,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an instance of the entitiy manager with an initial size. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">space</td><td>Current space that the <a class="el" href="classyage_1_1EntityManager.html" title="Manages entities in a space. ">EntityManager</a> belongs to. </td></tr>
-    <tr><td class="paramname">n</td><td>Initial size of the <a class="el" href="classyage_1_1EntityManager.html" title="Manages entities in a space. ">EntityManager</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a646cf1110abdc0a4398c994ead5f537d"></a>
+<a class="anchor" id="a5f804a6e96010891615f2a25c579d09a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> yage::EntityManager::createEntity </td>
+          <td class="memname"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> yage::EntityManager::create_entity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -220,17 +165,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an Entity and returns the handle to the entity, which can then be used by the user to do operations on it. </p>
-<dl class="section return"><dt>Returns</dt><dd>The handle to the entity that was created in the space. </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="a246e10663f55a9f4817cbde23a7a36c9"></a>
+<a class="anchor" id="a1a73fc2ccf0851d8f43a951db889cba9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void yage::EntityManager::deleteEntity </td>
+          <td class="memname"><a class="el" href="classyage_1_1EntityManager.html">EntityManager</a> &amp; yage::EntityManager::delete_entity </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>&#160;</td>
           <td class="paramname"><em>entity</em></td><td>)</td>
@@ -239,7 +181,58 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Delete an entity. </p>
+</div>
+</div>
+<a class="anchor" id="a7e89a1d61ff4cd047b41eb363839369f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool yage::EntityManager::is_valid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ae9c24dfd7dfc041454b6678dbddc55e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classyage_1_1ComponentGroup.html">ComponentGroup</a>&gt; yage::EntityManager::component_group_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a579c5e72ace05025af0b5beb24f6766b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespaceyage.html#a868aca3b92f2d669736ab696d2dc2847">ComponentMask</a>&gt; yage::EntityManager::component_masks_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa895f8d9e3e741fba7b9b17abd9d3675"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>&gt; yage::EntityManager::deleted_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -250,7 +243,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 2 2018 15:21:05 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 21 2018 23:12:55 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

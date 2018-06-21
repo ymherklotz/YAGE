@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['group',['Group',['../classyage_1_1BaseComponent.html#a55b026d7deb37888f67636ff22fc32c8',1,'yage::BaseComponent']]]
+  ['groupid',['GroupId',['../namespaceyage.html#ab24c66406a581b3a0a5ef1b06cd21100',1,'yage']]]
 ];
