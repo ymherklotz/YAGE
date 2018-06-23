@@ -90,7 +90,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classyage_1_1EntityManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">yage::EntityManager Class Reference</div>  </div>
@@ -110,23 +109,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1a73fc2ccf0851d8f43a951db889cba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e89a1d61ff4cd047b41eb363839369f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a7e89a1d61ff4cd047b41eb363839369f">is_valid</a> (<a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity) const </td></tr>
 <tr class="separator:a7e89a1d61ff4cd047b41eb363839369f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a134194877cce6003b2bd2245b78cd876"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1EntityManager.html">EntityManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a134194877cce6003b2bd2245b78cd876">add_component</a> (<a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity, <a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a> *component)</td></tr>
-<tr class="separator:a134194877cce6003b2bd2245b78cd876"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ae9c24dfd7dfc041454b6678dbddc55e2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classyage_1_1ComponentGroup.html">ComponentGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#ae9c24dfd7dfc041454b6678dbddc55e2">component_group_</a></td></tr>
-<tr class="separator:ae9c24dfd7dfc041454b6678dbddc55e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a579c5e72ace05025af0b5beb24f6766b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceyage.html#a868aca3b92f2d669736ab696d2dc2847">ComponentMask</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a579c5e72ace05025af0b5beb24f6766b">component_masks_</a></td></tr>
-<tr class="separator:a579c5e72ace05025af0b5beb24f6766b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa895f8d9e3e741fba7b9b17abd9d3675"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#aa895f8d9e3e741fba7b9b17abd9d3675">deleted_</a></td></tr>
-<tr class="separator:aa895f8d9e3e741fba7b9b17abd9d3675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a737b587e611002c8277923bd47ff3d4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1EntityManager.html">EntityManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#a737b587e611002c8277923bd47ff3d4a">add_component</a> (<a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a> entity, std::unique_ptr&lt; <a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a> &gt; &amp;&amp;component)</td></tr>
+<tr class="separator:a737b587e611002c8277923bd47ff3d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4aab6263a29bcb7655814594d3b647"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aab4aab6263a29bcb7655814594d3b647"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1EntityManager.html">EntityManager</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classyage_1_1EntityManager.html#aab4aab6263a29bcb7655814594d3b647">each</a> (std::function&lt; void(<a class="el" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;)&gt; update)</td></tr>
+<tr class="separator:aab4aab6263a29bcb7655814594d3b647"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Has to keep track of all the different entities and their current state. </p>
 <p>The key actions on an Entity are: deleting, creating. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a134194877cce6003b2bd2245b78cd876"></a>
+<a class="anchor" id="a737b587e611002c8277923bd47ff3d4a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -139,7 +132,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a> *&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a> &gt; &amp;&amp;&#160;</td>
           <td class="paramname"><em>component</em>&#160;</td>
         </tr>
         <tr>
@@ -183,6 +176,24 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aab4aab6263a29bcb7655814594d3b647"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classyage_1_1EntityManager.html">EntityManager</a> &amp; yage::EntityManager::each </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>update</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a7e89a1d61ff4cd047b41eb363839369f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -199,43 +210,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ae9c24dfd7dfc041454b6678dbddc55e2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classyage_1_1ComponentGroup.html">ComponentGroup</a>&gt; yage::EntityManager::component_group_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a579c5e72ace05025af0b5beb24f6766b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="namespaceyage.html#a868aca3b92f2d669736ab696d2dc2847">ComponentMask</a>&gt; yage::EntityManager::component_masks_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa895f8d9e3e741fba7b9b17abd9d3675"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="namespaceyage.html#aa8bc60c76b5240a55672ce5b8e288764">Entity</a>&gt; yage::EntityManager::deleted_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>yage/entity/<a class="el" href="entity_8h_source.html">entity.h</a></li>
 <li>yage/entity/<a class="el" href="entity_8cpp.html">entity.cpp</a></li>
@@ -243,7 +217,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 21 2018 23:16:49 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 23 2018 15:04:55 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

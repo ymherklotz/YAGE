@@ -89,7 +89,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classyage_1_1ComponentGroup-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">yage::ComponentGroup Class Reference</div>  </div>
@@ -98,32 +99,90 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="component_8h_source.html">component.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:abed4de09aa22a48680c52824029d7485"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr<br class="typebreak"/>
-&lt; <a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1ComponentGroup.html#abed4de09aa22a48680c52824029d7485">components_</a></td></tr>
-<tr class="separator:abed4de09aa22a48680c52824029d7485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1e6ba49ecdf3036ed46e1edbdeed0ae9"><td class="memItemLeft" align="right" valign="top">typedef std::vector<br class="typebreak"/>
+&lt; std::unique_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1ComponentGroup.html#a1e6ba49ecdf3036ed46e1edbdeed0ae9">Container</a></td></tr>
+<tr class="separator:a1e6ba49ecdf3036ed46e1edbdeed0ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a20a3d3f3b14f3a5183f354af101a1c17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classyage_1_1ComponentGroup.html">ComponentGroup</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1ComponentGroup.html#a20a3d3f3b14f3a5183f354af101a1c17">add</a> (std::unique_ptr&lt; <a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a> &gt; &amp;&amp;component)</td></tr>
+<tr class="separator:a20a3d3f3b14f3a5183f354af101a1c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17b5fda9fe84c93386b6f1a42a57cab"><td class="memItemLeft" align="right" valign="top">Container::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1ComponentGroup.html#ae17b5fda9fe84c93386b6f1a42a57cab">begin</a> ()</td></tr>
+<tr class="separator:ae17b5fda9fe84c93386b6f1a42a57cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec9d7151020dfe7304a68719a62e4eb"><td class="memItemLeft" align="right" valign="top">Container::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyage_1_1ComponentGroup.html#a6ec9d7151020dfe7304a68719a62e4eb">end</a> ()</td></tr>
+<tr class="separator:a6ec9d7151020dfe7304a68719a62e4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="abed4de09aa22a48680c52824029d7485"></a>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a1e6ba49ecdf3036ed46e1edbdeed0ae9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a>&gt; &gt; yage::ComponentGroup::components_</td>
+          <td class="memname">typedef std::vector&lt;std::unique_ptr&lt;<a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a>&gt; &gt; <a class="el" href="classyage_1_1ComponentGroup.html#a1e6ba49ecdf3036ed46e1edbdeed0ae9">yage::ComponentGroup::Container</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a20a3d3f3b14f3a5183f354af101a1c17"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classyage_1_1ComponentGroup.html">ComponentGroup</a> &amp; yage::ComponentGroup::add </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classyage_1_1BaseComponent.html">BaseComponent</a> &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae17b5fda9fe84c93386b6f1a42a57cab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ComponentGroup::Container::iterator yage::ComponentGroup::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6ec9d7151020dfe7304a68719a62e4eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ComponentGroup::Container::iterator yage::ComponentGroup::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>yage/entity/<a class="el" href="component_8h_source.html">component.h</a></li>
+<li>yage/entity/<a class="el" href="component_8cpp.html">component.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 21 2018 23:16:49 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 23 2018 15:04:55 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

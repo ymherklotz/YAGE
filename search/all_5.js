@@ -30,7 +30,7 @@ var searchData=
   ['fileloadexception',['FileLoadException',['../classyage_1_1FileLoadException.html#a5f04a1f30d26c3c96192a1c1de3a4f21',1,'yage::FileLoadException']]],
   ['fileloadexception',['FileLoadException',['../classyage_1_1FileLoadException.html',1,'yage']]],
   ['filename',['fileName',['../structyage_1_1LogMessage_1_1Meta.html#ae3ef1b01f47ef6254b8aa6fce13db7c4',1,'yage::LogMessage::Meta']]],
-  ['flush',['flush',['../classyage_1_1Logger.html#afe5dc1d30d3fd2599a119455672d6e00',1,'yage::Logger']]],
+  ['flush',['flush',['../classyage_1_1Logger.html#ac740d407531491f1b454cfcbac244d54',1,'yage::Logger']]],
   ['force_5f',['force_',['../classyage_1_1Body.html#a262c896b473d7672cde524145cd7981d',1,'yage::Body']]],
   ['fullscreen',['FULLSCREEN',['../namespaceyage.html#a09d41deeced5fca5df9dc680c9e77c38a409ae568f380139ffa38d7fffa5ffb2f',1,'yage']]]
 ];

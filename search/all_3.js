@@ -5,7 +5,6 @@ var searchData=
   ['debug',['DEBUG',['../namespaceyage.html#a4ac616fa26af17775ed558a4c08e4788adc30ec20708ef7b0f641ef78b7880a15',1,'yage']]],
   ['delete',['DELETE',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a32f68a60cef40faedbc6af20298c1a1e',1,'yage']]],
   ['delete_5fentity',['delete_entity',['../classyage_1_1EntityManager.html#a1a73fc2ccf0851d8f43a951db889cba9',1,'yage::EntityManager']]],
-  ['deleted_5f',['deleted_',['../classyage_1_1EntityManager.html#aa895f8d9e3e741fba7b9b17abd9d3675',1,'yage::EntityManager']]],
   ['depth',['depth',['../structyage_1_1details_1_1Glyph.html#ae5398583bd0b4c1d6b334bf3902903d9',1,'yage::details::Glyph']]],
   ['dot',['dot',['../namespaceyage_1_1matrix.html#ac4d2f55a5c3369ec42001776a582c30a',1,'yage::matrix']]],
   ['down',['DOWN',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822ac4e0e4e3118472beeb2ae75827450f1f',1,'yage']]],

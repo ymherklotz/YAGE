@@ -5,7 +5,7 @@ var searchData=
   ['backspace',['BACKSPACE',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822a6f5d8e41084b4d3d47fa621c459eede1',1,'yage']]],
   ['basecomponent',['BaseComponent',['../classyage_1_1BaseComponent.html',1,'yage']]],
   ['basesystem',['BaseSystem',['../classyage_1_1BaseSystem.html',1,'yage']]],
-  ['begin',['begin',['../classyage_1_1Matrix.html#a83d77d3a40ced5e2b703a6d66b6e6055',1,'yage::Matrix::begin()'],['../classyage_1_1SpriteBatch.html#af6293aac69e1124199297e5b921a4872',1,'yage::SpriteBatch::begin()']]],
+  ['begin',['begin',['../classyage_1_1ComponentGroup.html#ae17b5fda9fe84c93386b6f1a42a57cab',1,'yage::ComponentGroup::begin()'],['../classyage_1_1Matrix.html#a83d77d3a40ced5e2b703a6d66b6e6055',1,'yage::Matrix::begin()'],['../classyage_1_1SpriteBatch.html#af6293aac69e1124199297e5b921a4872',1,'yage::SpriteBatch::begin()']]],
   ['body',['Body',['../classyage_1_1Body.html#aeca769807d9b6f6fb3c9f61deaa83b86',1,'yage::Body']]],
   ['body',['Body',['../classyage_1_1Body.html',1,'yage']]],
   ['body_2ecpp',['body.cpp',['../body_8cpp.html',1,'']]],

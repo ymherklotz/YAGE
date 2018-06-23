@@ -4,7 +4,7 @@ var searchData=
   ['t',['T',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822ab9ece18c950afbfa6b0fdbfa4ff731d3',1,'yage']]],
   ['tab',['TAB',['../namespaceyage.html#ad5a9307442e5daa8810aff942564a822af684bf05fa3e81528c84d1d281d839f1',1,'yage']]],
   ['texture',['Texture',['../structyage_1_1Texture.html',1,'yage']]],
-  ['texture',['texture',['../structyage_1_1details_1_1RenderBatch.html#abf26b15420f34052270a1204d89ee687',1,'yage::details::RenderBatch::texture()'],['../structyage_1_1details_1_1Glyph.html#aba58f02d34ba363ab3435e2328e4bfcc',1,'yage::details::Glyph::texture()'],['../structyage_1_1Texture.html#a0cef080bceaaf5e702985f5494ea35d5',1,'yage::Texture::Texture()'],['../structyage_1_1Texture.html#af0a85aa4202d12fca9c1f52085d26850',1,'yage::Texture::Texture(GLuint id_i, int width_i, int height_i, int x_i=1, int y_i=1)']]],
+  ['texture',['Texture',['../structyage_1_1Texture.html#a0cef080bceaaf5e702985f5494ea35d5',1,'yage::Texture::Texture()'],['../structyage_1_1Texture.html#af0a85aa4202d12fca9c1f52085d26850',1,'yage::Texture::Texture(GLuint id_i, int width_i, int height_i, int x_i=1, int y_i=1)'],['../structyage_1_1details_1_1RenderBatch.html#abf26b15420f34052270a1204d89ee687',1,'yage::details::RenderBatch::texture()'],['../structyage_1_1details_1_1Glyph.html#aba58f02d34ba363ab3435e2328e4bfcc',1,'yage::details::Glyph::texture()']]],
   ['texture_2eh',['texture.h',['../texture_8h.html',1,'']]],
   ['texturecache',['TextureCache',['../classyage_1_1TextureCache.html',1,'yage']]],
   ['texturecache',['TextureCache',['../classyage_1_1TextureCache.html#a5f6af0bd513dd393061b2d9d18362692',1,'yage::TextureCache']]],
