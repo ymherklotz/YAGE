@@ -20,7 +20,7 @@ namespace yage
 class Shader
 {
 public:
-    Shader(const std::string &vertex_path, const std::string &fragment_path);
+    Shader(std::string const &vertex_path, std::string const &fragment_path);
     Shader(const Shader &) = delete;
     Shader(Shader &&)      = delete;
     ~Shader();
@@ -32,16 +32,16 @@ public:
     void use() const;
 
     /// set uniforms of different type
-    void setUniform(const std::string &name, int value) const;
-    void setUniform(const std::string &name, float value) const;
-    void setUniform(const std::string &name, const glm::mat4 &matrix) const;
+    void setUniform(std::string const &name, int value) const;
+    void setUniform(std::string const &name, float value) const;
+    void setUniform(std::string const &name, const glm::mat4 &matrix) const;
 
 private:
     /// compiled shader program id
     GLuint program_id_ = 0;
 
-    GLint getUniformLocation(const std::string &uniform_name) const;
-    void errorCheck(GLuint shader, const std::string &shader_type) const;
+    GLint getUniformLocation(std::string const &uniform_name) const;
+    void errorCheck(GLuint shader, std::string const &shader_type) const;
 };
 
 } // namespace yage

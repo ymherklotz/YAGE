@@ -1,9 +1,10 @@
 # Entity Component System (ECS)
 
-This ECS is heavily inspired from the [Entityx component system](__fix
-link__). It is a much simpler and less efficient implementation, as it does not
-support dedicated pools for the different components, and only stores them on
-the heap and are directed to by pointers.
+This ECS is heavily inspired from the [Entityx component
+system](https://github.com/alecthomas/entityx). It is a much simpler and less
+efficient implementation, as it does not support dedicated pools for the
+different components, and only stores them on the heap and are directed to by
+pointers.
 
 A future improvement would be to store the components in a contiguous area in
 memory, so that the iteration through them can be more efficient.

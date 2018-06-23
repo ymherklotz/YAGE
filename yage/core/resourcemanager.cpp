@@ -15,7 +15,7 @@ namespace yage
 
 TextureCache ResourceManager::texture_cache_;
 
-Texture ResourceManager::getTexture(const std::string &texture_path, int x,
+Texture ResourceManager::getTexture(std::string const &texture_path, int x,
                                     int y)
 {
     return texture_cache_.getTexture(texture_path, x, y);

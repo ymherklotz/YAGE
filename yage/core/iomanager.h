@@ -18,7 +18,7 @@ namespace yage
 namespace IoManager
 {
 
-extern bool readFileToBuffer(const std::string &file_path,
+extern bool readFileToBuffer(std::string const &file_path,
                              std::vector<unsigned char> &buffer);
 }
 

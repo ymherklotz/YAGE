@@ -64,13 +64,13 @@ class LogMessage
 public:
     ~LogMessage();
 
-    LogMessage(const LogMessage &msg) = delete;
+    LogMessage(LogMessage const &msg) = delete;
 
-    LogMessage &operator=(const LogMessage &msg) = delete;
+    LogMessage &operator=(LogMessage const &msg) = delete;
     LogMessage &operator=(LogMessage &&msg) = delete;
 
     template <typename T>
-    LogMessage &operator<<(const T &value);
+    LogMessage &operator<<(T const &value);
 
     LogMessage &operator<<(std::ostream &(*fn)(std::ostream &os));
 
@@ -87,7 +87,7 @@ private:
     Logger *owner_;
     LogMessage::Meta meta_;
 
-    LogMessage(Logger *owner, LogLevel level, const std::string &file_name,
+    LogMessage(Logger *owner, LogLevel level, std::string const &file_name,
                int line_num);
     LogMessage(LogMessage &&msg);
 };
@@ -98,22 +98,22 @@ public:
     template <typename T>
     LogSink(T impl);
 
-    LogSink(const LogSink &sink);
+    LogSink(LogSink const &sink);
     LogSink(LogSink &&sink);
 
-    LogSink &operator=(const LogSink &sink);
+    LogSink &operator=(LogSink const &sink);
     LogSink &operator=(LogSink &&sink);
-    bool operator==(const LogSink &sink);
+    bool operator==(LogSink const &sink);
 
-    void write(const LogMessage::Meta &meta, const std::string &msg) const;
+    void write(LogMessage::Meta const &meta, std::string const &msg) const;
 
 private:
     struct Concept {
         virtual ~Concept() = default;
 
         virtual Concept *clone() const                   = 0;
-        virtual void write(const LogMessage::Meta &meta,
-                           const std::string &msg) const = 0;
+        virtual void write(LogMessage::Meta const &meta,
+                           std::string const &msg) const = 0;
     };
 
     template <typename T>
@@ -121,7 +121,7 @@ private:
         Model(T impl_i);
         virtual Concept *clone() const override;
         virtual void write(const LogMessage::Meta &meta,
-                           const std::string &msg) const override;
+                           std::string const &msg) const override;
 
         T impl;
     };
@@ -133,16 +133,16 @@ class Logger
 {
 public:
     Logger();
-    explicit Logger(const std::string &file_path);
+    explicit Logger(std::string const &file_path);
     explicit Logger(LogLevel min_level);
-    Logger(LogLevel min_level, const std::string &file_path);
+    Logger(LogLevel min_level, std::string const &file_path);
 
     LogMessage operator()(LogLevel level              = LogLevel::INFO,
-                          const std::string &fileName = "", int lineNum = -1);
+                          std::string const &fileName = "", int lineNum = -1);
 
-    void flush(const LogMessage *msg);
-    void add(const LogSink &sink);
-    void remove(const LogSink &sink);
+    void flush(LogMessage const *msg);
+    void add(LogSink const &sink);
+    void remove(LogSink const &sink);
     void clear();
 
     static Logger &instance();
@@ -158,7 +158,7 @@ private:
 
 LogSink makeConsoleSink();
 
-LogSink makeFileSink(const std::string &filename);
+LogSink makeFileSink(std::string const &filename);
 LogSink makeFileSink(std::string &&filename);
 
 /* -----------------------------------------------------------------------------
@@ -183,14 +183,14 @@ LogSink::Concept *LogSink::Model<T>::clone() const
 }
 
 template <typename T>
-void LogSink::Model<T>::write(const LogMessage::Meta &meta,
-                              const std::string &msg) const
+void LogSink::Model<T>::write(LogMessage::Meta const &meta,
+                              std::string const &msg) const
 {
     impl(meta, msg);
 }
 
 template <typename T>
-LogMessage &LogMessage::operator<<(const T &value)
+LogMessage &LogMessage::operator<<(T const &value)
 {
     buffer_ << value;
     return *this;

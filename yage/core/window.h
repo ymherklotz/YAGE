@@ -35,12 +35,12 @@ private:
 
 public:
     Window()               = default;
-    Window(const Window &) = delete;
+    Window(Window const &) = delete;
     Window(Window &&)      = delete;
     /// destroys the window handle
     ~Window();
 
-    Window &operator=(const Window &) = delete;
+    Window &operator=(Window const &) = delete;
     Window &operator=(Window &&) = delete;
 
     /// create the window, initialize the handle and update the width and height

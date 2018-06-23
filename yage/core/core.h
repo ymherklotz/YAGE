@@ -20,7 +20,7 @@ namespace yage
 /**
  *
  */
-extern void glfwErrorCallback(int, const char *);
+extern void glfwErrorCallback(int, char const *);
 
 /**
  * Initializes YAGE.

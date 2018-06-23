@@ -3,6 +3,8 @@
 #include "component.h"
 
 #include <algorithm>
+#include <iostream>
+#include <memory>
 
 namespace yage
 {
@@ -29,12 +31,17 @@ bool EntityManager::is_valid(Entity entity) const
     return false;
 }
 
-EntityManager &EntityManager::add_component(Entity entity,
-                                            BaseComponent *component)
+EntityManager &
+EntityManager::add_component(Entity entity,
+                             std::unique_ptr<BaseComponent> &&component)
 {
     auto id = component->getGroup();
     component_masks_[entity] =
         component_masks_[entity] | ComponentMask(1 << id);
+    if (id+1 > component_group_.size()) {
+        component_group_.resize(id+1);
+    }
+    component_group_[id].add(std::move(component));
     return *this;
 }
 

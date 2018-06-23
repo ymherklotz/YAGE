@@ -19,7 +19,7 @@
 namespace yage
 {
 
-Texture ImageLoader::loadPng(const std::string &file_path)
+Texture ImageLoader::loadPng(std::string const &file_path)
 {
     int width, height, num_channels;
     yLogDebug << "Loading image from disk: " << file_path;

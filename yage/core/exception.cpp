@@ -22,7 +22,7 @@ FileLoadException::FileLoadException(std::string err)
     err_msg = msg.str();
 }
 
-const char *FileLoadException::what() const throw()
+char const *FileLoadException::what() const throw()
 {
     return err_msg.c_str();
 }

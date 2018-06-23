@@ -28,13 +28,21 @@ private:
 template <typename T>
 class Component : public BaseComponent
 {
+private:
     GroupId getGroup() override;
 };
 
 class ComponentGroup
 {
 public:
-    std::vector<std::unique_ptr<BaseComponent>> components_;
+    typedef std::vector<std::unique_ptr<BaseComponent>> Container;
+
+    ComponentGroup &add(std::unique_ptr<BaseComponent> &&component);
+    Container::iterator begin();
+    Container::iterator end();
+
+private:
+    Container components_;
 };
 
 template <typename T>

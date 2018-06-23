@@ -20,7 +20,7 @@ using std::runtime_error;
 namespace yage
 {
 
-Shader::Shader(const std::string &vertex_path, const std::string &fragment_path)
+Shader::Shader(std::string const &vertex_path, std::string const &fragment_path)
 {
     std::string vertex_source, fragment_source;
     std::ifstream vertex_file, fragment_file;
@@ -85,22 +85,22 @@ void Shader::use() const
     glUseProgram(program_id_);
 }
 
-void Shader::setUniform(const std::string &name, int value) const
+void Shader::setUniform(std::string const &name, int value) const
 {
     glUniform1i(getUniformLocation(name), static_cast<GLint>(value));
 }
 
-void Shader::setUniform(const std::string &name, float value) const
+void Shader::setUniform(std::string const &name, float value) const
 {
     glUniform1f(getUniformLocation(name), static_cast<GLfloat>(value));
 }
 
-void Shader::setUniform(const std::string &name, const glm::mat4 &matrix) const
+void Shader::setUniform(std::string const &name, const glm::mat4 &matrix) const
 {
     glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, &(matrix[0][0]));
 }
 
-GLint Shader::getUniformLocation(const std::string &uniform_name) const
+GLint Shader::getUniformLocation(std::string const &uniform_name) const
 {
     GLuint location = glGetUniformLocation(program_id_, uniform_name.c_str());
     if (location == GL_INVALID_INDEX) {
@@ -109,7 +109,7 @@ GLint Shader::getUniformLocation(const std::string &uniform_name) const
     return location;
 }
 
-void Shader::errorCheck(GLuint shader, const std::string &shader_type) const
+void Shader::errorCheck(GLuint shader, std::string const &shader_type) const
 {
     int success;
     char info_log[1024];

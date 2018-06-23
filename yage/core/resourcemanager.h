@@ -24,7 +24,7 @@ private:
     static TextureCache texture_cache_;
 
 public:
-    static Texture getTexture(const std::string &texture_path, int x = 1,
+    static Texture getTexture(std::string const &texture_path, int x = 1,
                               int y = 1);
 };
 
