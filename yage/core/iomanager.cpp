@@ -19,7 +19,7 @@ namespace yage
 namespace IoManager
 {
 
-bool readFileToBuffer(const std::string &file_path,
+bool readFileToBuffer(std::string const &file_path,
                       std::vector<unsigned char> &buffer)
 {
     std::ifstream file(file_path, std::ios::binary);

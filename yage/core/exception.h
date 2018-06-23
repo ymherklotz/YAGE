@@ -20,7 +20,7 @@ class FileLoadException : public std::runtime_error
 public:
     FileLoadException(std::string err);
 
-    virtual const char *what() const throw();
+    virtual char const *what() const throw();
 
 private:
     std::string err_msg;

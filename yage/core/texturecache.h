@@ -24,7 +24,7 @@ private:
 public:
     TextureCache() = default;
 
-    Texture getTexture(const std::string &texture_path, int x = 1, int y = 1);
+    Texture getTexture(std::string const &texture_path, int x = 1, int y = 1);
 };
 
 } // namespace yage

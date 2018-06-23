@@ -24,7 +24,7 @@ namespace yage
 {
 
 LogMessage::LogMessage(Logger *owner, LogLevel level,
-                       const std::string &file_name, int line_num)
+                       std::string const &file_name, int line_num)
     : owner_(owner), meta_({level, file_name, line_num})
 {
 }
@@ -44,11 +44,11 @@ LogMessage &LogMessage::operator<<(std::ostream &(*fn)(std::ostream &os))
     return *this;
 }
 
-LogSink::LogSink(const LogSink &sink) : wrapper_(sink.wrapper_->clone()) {}
+LogSink::LogSink(LogSink const &sink) : wrapper_(sink.wrapper_->clone()) {}
 
 LogSink::LogSink(LogSink &&sink) : wrapper_(std::move(sink.wrapper_)) {}
 
-LogSink &LogSink::operator=(const LogSink &sink)
+LogSink &LogSink::operator=(LogSink const &sink)
 {
     wrapper_.reset(sink.wrapper_->clone());
     return *this;
@@ -60,19 +60,19 @@ LogSink &LogSink::operator=(LogSink &&sink)
     return *this;
 }
 
-bool LogSink::operator==(const LogSink &sink)
+bool LogSink::operator==(LogSink const &sink)
 {
     return (wrapper_.get() == sink.wrapper_.get());
 }
 
-void LogSink::write(const LogMessage::Meta &meta, const std::string &msg) const
+void LogSink::write(LogMessage::Meta const &meta, std::string const &msg) const
 {
     wrapper_->write(meta, msg);
 }
 
 LogSink makeConsoleSink()
 {
-    return [](const LogMessage::Meta &meta, const std::string &msg) {
+    return [](LogMessage::Meta const &meta, std::string const &msg) {
         std::cout << msg << "\n";
     };
 }
@@ -91,7 +91,7 @@ public:
         }
     }
 
-    FileSink(const std::string filename)
+    FileSink(std::string const filename)
         : fileHandle_(std::make_shared<std::ofstream>(filename))
     {
         if (!fileHandle_->good()) {
@@ -101,7 +101,7 @@ public:
 
     ~FileSink() = default;
 
-    void operator()(const LogMessage::Meta &meta, const std::string &msg) const
+    void operator()(const LogMessage::Meta &meta, std::string const &msg) const
     {
         using namespace std::chrono;
 
@@ -148,7 +148,7 @@ private:
 
 } // namespace
 
-LogSink makeFileSink(const std::string &filename)
+LogSink makeFileSink(std::string const &filename)
 {
     return FileSink(filename);
 }
@@ -163,7 +163,7 @@ Logger::Logger() : active_(Active::create()), min_level_(LogLevel::INFO)
     add(makeConsoleSink());
 }
 
-Logger::Logger(const std::string &file_path)
+Logger::Logger(std::string const &file_path)
     : active_(Active::create()), min_level_(LogLevel::INFO)
 {
     add(makeConsoleSink());
@@ -176,14 +176,14 @@ Logger::Logger(LogLevel min_level)
     add(makeConsoleSink());
 }
 
-Logger::Logger(LogLevel min_level, const std::string &file_path)
+Logger::Logger(LogLevel min_level, std::string const &file_path)
     : active_(Active::create()), min_level_(min_level)
 {
     add(makeConsoleSink());
     add(makeFileSink(file_path));
 }
 
-LogMessage Logger::operator()(LogLevel level, const std::string &fileName,
+LogMessage Logger::operator()(LogLevel level, std::string const &fileName,
                               int lineNum)
 {
     return LogMessage(this, level, fileName, lineNum);
